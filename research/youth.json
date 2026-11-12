@@ -1,0 +1,7106 @@
+{
+  "season": 2026,
+  "verifiedAt": "2026-11-12",
+  "notes": "Convocatorias y formaciones públicas M19 y M17. La fecha knownFrom indica el primer registro en este conjunto. La posición queda vacía cuando la convocatoria o una formación vinculada no la acredita. Las convocatorias no acreditan contratos ni disponibilidad para pases. No se calculan edades reales cuando la convocatoria no publica fecha de nacimiento.",
+  "sources": [
+    {
+      "id": "uar-m19-dec2025",
+      "title": "UAR · Concentración Nacional M19 en Mar del Plata",
+      "url": "https://uar.com.ar/mar-del-plata-recibe-una-nueva-concentracion-nacional-m19/",
+      "publishedAt": "2025-12-09",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "uar-m19-sep2026",
+      "title": "UAR · Plantel M19 ante la Academia de Italia",
+      "url": "https://uar.com.ar/se-confirmo-el-plantel-m19-que-se-medira-ante-la-academia-de-italia/",
+      "publishedAt": "2026-09-10",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "uar-m19-oct2025",
+      "title": "UAR · Encuentro M19 en Carlos Paz",
+      "url": "https://uar.com.ar/encuentro-m19-en-carlos-paz/",
+      "publishedAt": "2025-10-31",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "uar-pampas-cebron",
+      "title": "UAR · Convocatoria de Pampas con Fabrizio Cebron",
+      "url": "https://uar.com.ar/pampas-viaja-a-montevideo-para-enfrentar-a-penarol/",
+      "publishedAt": "2026-06-04",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pampas-media-guide-2026",
+      "title": "Pampas/UAR · Media Guide 2026 (fechas de nacimiento; club de origen no acredita afiliación actual)",
+      "url": "https://dle22gvyr6oyt.cloudfront.net/media_guides/media_guide_2026_-_pampas.pdf",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "ovalados-m19-2026",
+      "title": "Ovalados · Plantel 2026 M19 (equipos A y B) en la ficha de cada club del Top 14; el puesto sale del dorsal de la formación publicada",
+      "url": "https://ovalados.com/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-11"
+    },
+    {
+      "id": "urba-m17-concentrado-2026",
+      "title": "URBA · Plantel M17 para el Concentrado de Tucumán 2026 (261029 URBA M17 - NFL.pdf)",
+      "url": "https://weburba48bc11f634.blob.core.windows.net/blobweburba48bc11f634/wp-content/uploads/2026/11/261029-urba-m17-nfl.pdf",
+      "publishedAt": "2026-11-10",
+      "verifiedAt": "2026-11-12",
+      "publicationUrl": "https://urba.org.ar/noticias/victoria-del-seleccionado-de-buenos-aires-m17-ante-tucuman-por-el-argentino-juvenil-m17"
+    },
+    {
+      "id": "urba-m17-concentrado-2026-article",
+      "title": "URBA · Publicación del plantel M17 para el Concentrado de Tucumán",
+      "url": "https://urba.org.ar/noticias/victoria-del-seleccionado-de-buenos-aires-m17-ante-tucuman-por-el-argentino-juvenil-m17",
+      "publishedAt": "2026-11-10",
+      "verifiedAt": "2026-11-12"
+    },
+    {
+      "id": "urba-m17-tucuman-2026",
+      "title": "URBA · Planilla M17 ante Tucumán, fecha 3 del Campeonato Argentino Juvenil",
+      "url": "https://weburba48bc11f634.blob.core.windows.net/blobweburba48bc11f634/wp-content/uploads/2026/10/261017-urba-m17-f03-tucuman-l.pdf",
+      "publishedAt": null,
+      "matchDate": "2026-10-17",
+      "verifiedAt": "2026-11-12",
+      "publicationUrl": "https://urba.org.ar/noticias/victoria-del-seleccionado-de-buenos-aires-m17-ante-tucuman-por-el-argentino-juvenil-m17"
+    }
+  ],
+  "players": [
+    {
+      "id": "martiniano-aime",
+      "name": "Martiniano Aime",
+      "club": "Atlético de Rosario",
+      "clubId": "atletico-del-rosario",
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Atlético de Rosario",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jeremy-annand",
+      "name": "Jeremy Annand",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Belgrano Athletic",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "luciano-avaca",
+      "name": "Luciano Avaca",
+      "club": "Tala RC",
+      "clubId": null,
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Tala RC",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-benavides",
+      "name": "Bautista Benavides",
+      "club": "Santa Fe RC",
+      "clubId": "santa-fe-rugby",
+      "union": "Santafesina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Santa Fe RC",
+          "union": "Santafesina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "franco-benitez",
+      "name": "Franco Benítez",
+      "club": "Club Tilcara",
+      "clubId": null,
+      "union": "Entrerriana",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Club Tilcara",
+          "union": "Entrerriana"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "nicolas-cambiasso",
+      "name": "Nicolás Cambiasso",
+      "club": "Buenos Aires",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Buenos Aires",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-canedo",
+      "name": "Tomás Canedo",
+      "club": "Mendoza RC",
+      "clubId": "mendoza-rc",
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Mendoza RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "basilio-canas",
+      "name": "Basilio Cañas",
+      "club": "CAE",
+      "clubId": "estudiantes-parana",
+      "union": "Entrerriana",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "CAE",
+          "union": "Entrerriana"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "fabrizio-cebron",
+      "name": "Fabrizio Cebrón",
+      "club": "Regatas BV",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "champagne-top14-date25"
+      ],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025",
+        "uar-m19-oct2025",
+        "uar-pampas-cebron"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Regatas BV",
+          "union": "URBA"
+        }
+      ],
+      "catalogPlayerId": "regatas-bella-vista-fabrizio-cebron",
+      "birthDate": "2006-10-09",
+      "birthDateSourceIds": [
+        "pampas-media-guide-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "julian-cossutta",
+      "name": "Julián Cossutta",
+      "club": "Mendoza RC",
+      "clubId": "mendoza-rc",
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Mendoza RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "prieto-croce",
+      "name": "Prieto Croce",
+      "club": "Cha Roga",
+      "clubId": null,
+      "union": "Santafesina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Cha Roga",
+          "union": "Santafesina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "manuel-cuneo",
+      "name": "Manuel Cuneo",
+      "club": "San Juan RC",
+      "clubId": null,
+      "union": "Sanjuanina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "San Juan RC",
+          "union": "Sanjuanina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "luca-dugo-vivanco",
+      "name": "Luca Dugo Vivanco",
+      "club": "La Tablada",
+      "clubId": "la-tablada",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "La Tablada",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benjamin-farias-cerioni",
+      "name": "Benjamín Farías Cerioni",
+      "club": "Universitario RC",
+      "clubId": null,
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Universitario RC",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ramon-fernandez-miranda",
+      "name": "Ramón Fernández Miranda",
+      "club": "Hindú",
+      "clubId": "hindu",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "apleno-top14-date1",
+        "champagne-top14-date25"
+      ],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Hindú",
+          "union": "URBA"
+        }
+      ],
+      "catalogPlayerId": "hindu-ramon-fernandez-miranda",
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-garcia-mortola",
+      "name": "Santino García Mortola",
+      "club": "Manuel Belgrano",
+      "clubId": "manuel-belgrano",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Manuel Belgrano",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "danilo-ghisolfi",
+      "name": "Danilo Ghisolfi",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "SIC",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "manuel-giannantonio",
+      "name": "Manuel Giannantonio",
+      "club": "Tala RC",
+      "clubId": null,
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Tala RC",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-guc",
+      "name": "Lucas Guc",
+      "club": "Natación y Gimnasia",
+      "clubId": null,
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Natación y Gimnasia",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "constantino-keller",
+      "name": "Constantino Keller",
+      "club": "Córdoba Athletic",
+      "clubId": "cordoba-athletic",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Córdoba Athletic",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "toribio-latorre",
+      "name": "Toribio Latorre",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "CUBA",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benjamin-ledesma-arocena",
+      "name": "Benjamín Ledesma Arocena",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025",
+        "uar-m19-sep2026",
+        "ovalados-m19-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "SIC",
+          "union": "URBA"
+        },
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "S.I.C.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "ovaladosTeam": "A"
+    },
+    {
+      "id": "francisco-lluch",
+      "name": "Francisco Lluch",
+      "club": "Jockey Club de Rosario",
+      "clubId": "jockey-rosario",
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Jockey Club de Rosario",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "mateo-longo",
+      "name": "Mateo Longo",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "SIC",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "franco-marizza",
+      "name": "Franco Marizza",
+      "club": "Paraná Rowing",
+      "clubId": null,
+      "union": "Entrerriana",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Paraná Rowing",
+          "union": "Entrerriana"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "baltazar-monforte",
+      "name": "Baltazar Monforte",
+      "club": "La Tablada",
+      "clubId": "la-tablada",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "La Tablada",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "federico-narvaez",
+      "name": "Federico Narvaez",
+      "club": "CRAR",
+      "clubId": null,
+      "union": "Santafesina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "CRAR",
+          "union": "Santafesina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jorge-onorato",
+      "name": "Jorge Onorato",
+      "club": "Universitario RC",
+      "clubId": null,
+      "union": "Santafesina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025",
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Universitario RC",
+          "union": "Santafesina"
+        },
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Universitario de Santa Fe",
+          "union": "Santafesina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benjamin-ordiz",
+      "name": "Benjamín Ordiz",
+      "club": "Los Caranchos",
+      "clubId": null,
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Los Caranchos",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tobias-peralta",
+      "name": "Tobías Peralta",
+      "club": "Hindú",
+      "clubId": "hindu",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025",
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Hindú",
+          "union": "URBA"
+        },
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Hindú",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "simon-pfister",
+      "name": "Simón Pfister",
+      "club": "Tucumán RC",
+      "clubId": "tucuman-rugby",
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Tucumán RC",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-poliche",
+      "name": "Joaquín Poliche",
+      "club": "Tucumán RC",
+      "clubId": "tucuman-rugby",
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Tucumán RC",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-ponzio",
+      "name": "Agustín Ponzio",
+      "club": "CRAI",
+      "clubId": null,
+      "union": "Santafesina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "CRAI",
+          "union": "Santafesina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-preumayr",
+      "name": "Juan Preumayr",
+      "club": "Jockey",
+      "clubId": "jockey-rosario",
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Jockey",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-manuel-rachid",
+      "name": "Juan Manuel Rachid",
+      "club": "Deportiva Francesa",
+      "clubId": "deportiva-francesa",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Deportiva Francesa",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "valentino-reggiardo",
+      "name": "Valentino Reggiardo",
+      "club": "Deportiva Francesa",
+      "clubId": "deportiva-francesa",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Deportiva Francesa",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tiziano-rocha",
+      "name": "Tiziano Rocha",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Alumni",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-salinas",
+      "name": "Bautista Salinas",
+      "club": "Los Tordos RC",
+      "clubId": null,
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Los Tordos RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "federico-serpa",
+      "name": "Federico Serpa",
+      "club": "Los Tordos RC",
+      "clubId": null,
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Los Tordos RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jeronimo-sorondo",
+      "name": "Jerónimo Sorondo",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Belgrano Athletic",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-ignacio-sporle",
+      "name": "Juan Ignacio Sporle",
+      "club": "Los Tordos RC",
+      "clubId": null,
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Los Tordos RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "mateo-tanoni",
+      "name": "Mateo Tanoni",
+      "club": "Jockey",
+      "clubId": "jockey-rosario",
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Jockey",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "federico-torre",
+      "name": "Federico Torre",
+      "club": "Córdoba Athletic",
+      "clubId": "cordoba-athletic",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Córdoba Athletic",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-vallejo",
+      "name": "Ignacio Vallejo",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "CUBA",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benjamin-vazquez-calcaterra",
+      "name": "Benjamín Vázquez Calcaterra",
+      "club": "San Martín RC",
+      "clubId": null,
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025",
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "San Martín RC",
+          "union": "Cordobesa"
+        },
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "San Martín RC",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-zabella",
+      "name": "Ignacio Zabella",
+      "club": "Universitario RC",
+      "clubId": null,
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2025-12-09",
+      "sourceIds": [
+        "uar-m19-dec2025"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-dec2025",
+          "announcedAt": "2025-12-09",
+          "club": "Universitario RC",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-aguilar",
+      "name": "Felipe Aguilar",
+      "club": "Tala RC",
+      "clubId": null,
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Tala RC",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "nicolas-allende",
+      "name": "Nicolás Allende",
+      "club": "Universitario",
+      "clubId": "universitario-cordoba",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Universitario",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-arrieta",
+      "name": "Lucas Arrieta",
+      "club": "Universitario",
+      "clubId": null,
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Universitario",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-binda",
+      "name": "Tomás Binda",
+      "club": "Jockey Club Córdoba",
+      "clubId": "jockey-cordoba",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Jockey Club Córdoba",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-brunetti",
+      "name": "Santino Brunetti",
+      "club": "Liceo RC",
+      "clubId": null,
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Liceo RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-cabello",
+      "name": "Santiago Cabello",
+      "club": "Urú Curé RC",
+      "clubId": "uru-cure",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Urú Curé RC",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-cocomarola",
+      "name": "Joaquín Cocomarola",
+      "club": "Aranduroga RC",
+      "clubId": null,
+      "union": "Nordeste",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Aranduroga RC",
+          "union": "Nordeste"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-dapas",
+      "name": "Santiago Dapas",
+      "club": "Mendoza RC",
+      "clubId": "mendoza-rc",
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Mendoza RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-domanico",
+      "name": "Bautista Dománico",
+      "club": "San Juan RC",
+      "clubId": null,
+      "union": "Sanjuanina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "San Juan RC",
+          "union": "Sanjuanina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lorenzo-egea",
+      "name": "Lorenzo Egea",
+      "club": "Santiago Lawn Tennis Club",
+      "clubId": null,
+      "union": "Santiagueña",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Santiago Lawn Tennis Club",
+          "union": "Santiagueña"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cristobal-ferreyra",
+      "name": "Cristóbal Ferreyra",
+      "club": "Córdoba Athletic Club",
+      "clubId": "cordoba-athletic",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Córdoba Athletic Club",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-garcia",
+      "name": "Agustín García",
+      "club": "Logaritmo RC",
+      "clubId": null,
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Logaritmo RC",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-gomez",
+      "name": "Ignacio Gómez",
+      "club": "Santa Fe RC",
+      "clubId": "santa-fe-rugby",
+      "union": "Santafesina",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Santa Fe RC",
+          "union": "Santafesina"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "leon-haschisch",
+      "name": "León Haschisch",
+      "club": "Palermo Bajo",
+      "clubId": null,
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Palermo Bajo",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "alejo-magliano",
+      "name": "Alejo Magliano",
+      "club": "C.P.B.M",
+      "clubId": null,
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "C.P.B.M",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-martos",
+      "name": "Santiago Martos",
+      "club": "Jockey Club de Salta",
+      "clubId": null,
+      "union": "Salta",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Jockey Club de Salta",
+          "union": "Salta"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "baltazar-morea",
+      "name": "Baltazar Morea",
+      "club": "Belgrano Athletic Club",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Belgrano Athletic Club",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "walter-ojeda",
+      "name": "Walter Ojeda",
+      "club": "Tucumán RC",
+      "clubId": "tucuman-rugby",
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Tucumán RC",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-otero",
+      "name": "Bautista Otero",
+      "club": "La Tablada",
+      "clubId": "la-tablada",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "La Tablada",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-pelourson",
+      "name": "Bautista Pelourson",
+      "club": "Jockey Club Venado Tuerto",
+      "clubId": null,
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Jockey Club Venado Tuerto",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "rafael-salas",
+      "name": "Rafael Salas",
+      "club": "Añatuya RC",
+      "clubId": null,
+      "union": "Santiagueña",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Añatuya RC",
+          "union": "Santiagueña"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-schiavi",
+      "name": "Lucas Schiavi",
+      "club": "Taraguy RC",
+      "clubId": null,
+      "union": "Nordeste",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Taraguy RC",
+          "union": "Nordeste"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "samuel-severine-luna",
+      "name": "Samuel Severine Luna",
+      "club": "La Tablada",
+      "clubId": "la-tablada",
+      "union": "Cordobesa",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "La Tablada",
+          "union": "Cordobesa"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "thiago-sosa",
+      "name": "Thiago Sosa",
+      "club": "Los Tordos RC",
+      "clubId": null,
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Los Tordos RC",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-pablo-zurita",
+      "name": "Juan Pablo Zurita",
+      "club": "Jockey Club de Tucumán",
+      "clubId": null,
+      "union": "Tucumán",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Jockey Club de Tucumán",
+          "union": "Tucumán"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "nicanor-acrich-peralta-alvear",
+      "name": "Nicanor Acrich Peralta Alvear",
+      "club": "C.U.B.A.",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "C.U.B.A.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benicio-aguilar-saucedo",
+      "name": "Benicio Aguilar Saucedo",
+      "club": "Universitario de Rosario",
+      "clubId": null,
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Universitario de Rosario",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-jesus-altamirano",
+      "name": "Agustín Jesús Altamirano",
+      "club": "Club Tilcara",
+      "clubId": null,
+      "union": "Entrerriana",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Club Tilcara",
+          "union": "Entrerriana"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "simon-casalins",
+      "name": "Simón Casalins",
+      "club": "S.I.C.",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026",
+        "ovalados-m19-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "S.I.C.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "ovaladosTeam": "A"
+    },
+    {
+      "id": "joaquin-daireaux",
+      "name": "Joaquín Daireaux",
+      "club": "S.I.C.",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026",
+        "ovalados-m19-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "S.I.C.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "ovaladosTeam": "A"
+    },
+    {
+      "id": "blas-de-carabassa",
+      "name": "Blas de Carabassa",
+      "club": "Hindú",
+      "clubId": "hindu",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Hindú",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "facundo-de-la-vega",
+      "name": "Facundo de la Vega",
+      "club": "Hindú",
+      "clubId": "hindu",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Hindú",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "nicolas-engelhard",
+      "name": "Nicolás Engelhard",
+      "club": "C.A.S.I.",
+      "clubId": "casi",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "C.A.S.I.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-cruz-estevez",
+      "name": "Juan Cruz Estévez",
+      "club": "Jockey Club de Rosario",
+      "clubId": "jockey-rosario",
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Jockey Club de Rosario",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "augusto-giachello",
+      "name": "Augusto Giachello",
+      "club": "Club Atlético Estudiantes",
+      "clubId": "estudiantes-parana",
+      "union": "Entrerriana",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Club Atlético Estudiantes",
+          "union": "Entrerriana"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-gibert",
+      "name": "Agustín Gibert",
+      "club": "San Luis",
+      "clubId": "san-luis",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "San Luis",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jeremias-godoy",
+      "name": "Jeremías Godoy",
+      "club": "Duendes R.C.",
+      "clubId": "duendes",
+      "union": "Rosario",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Duendes R.C.",
+          "union": "Rosario"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "federico-kantz",
+      "name": "Federico Kantz",
+      "club": "Hindú",
+      "clubId": "hindu",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Hindú",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-laborde",
+      "name": "Ignacio Laborde",
+      "club": "Marista R.C.",
+      "clubId": "marista",
+      "union": "Cuyo",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Marista R.C.",
+          "union": "Cuyo"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-lalor",
+      "name": "Tomás Lalor",
+      "club": "S.I.C.",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026",
+        "ovalados-m19-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "S.I.C.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "ovaladosTeam": "A"
+    },
+    {
+      "id": "juan-lanusse",
+      "name": "Juan Lanusse",
+      "club": "C.U.B.A.",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "C.U.B.A.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "simon-macadam",
+      "name": "Simón Macadam",
+      "club": "Universitario",
+      "clubId": null,
+      "union": "Mar del Plata",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Universitario",
+          "union": "Mar del Plata"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "franco-mariani",
+      "name": "Franco Mariani",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026",
+        "ovalados-m19-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Alumni",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "ovaladosTeam": "A"
+    },
+    {
+      "id": "bautista-quiroga-miguens",
+      "name": "Bautista Quiroga Miguens",
+      "club": "C.U.B.A.",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "C.U.B.A.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "teo-richmond",
+      "name": "Teo Richmond",
+      "club": "Pucará",
+      "clubId": "pucara",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Pucará",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "antonio-sagarna",
+      "name": "Antonio Sagarna",
+      "club": "S.I.C.",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026",
+        "ovalados-m19-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "S.I.C.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "ovaladosTeam": "A"
+    },
+    {
+      "id": "benjamin-schurlein",
+      "name": "Benjamín Schurlein",
+      "club": "C.U.B.A.",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "C.U.B.A.",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "pedro-wulf",
+      "name": "Pedro Wulf",
+      "club": "Pucará",
+      "clubId": "pucara",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "Pucará",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-valdes",
+      "name": "Joaquín Valdés",
+      "club": "La Plata",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": null,
+      "positionSourceIds": [],
+      "knownFrom": "2026-09-10",
+      "sourceIds": [
+        "uar-m19-sep2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "uar-m19-sep2026",
+          "announcedAt": "2026-09-10",
+          "club": "La Plata",
+          "union": "URBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "valentino-di-francesca-regatas-bella-vista",
+      "name": "Valentino Di Francesca",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-martin-bonetto-regatas-bella-vista",
+      "name": "Juan Martin Bonetto",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "alejo-drlje-regatas-bella-vista",
+      "name": "Alejo Drlje",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "valentin-bleif-regatas-bella-vista",
+      "name": "Valentin Bleif",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-bricio-salgado-folonier-regatas-bella-vista",
+      "name": "Santiago Bricio Salgado Folonier",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-bafundi-regatas-bella-vista",
+      "name": "Agustin Bafundi",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "simon-re-regatas-bella-vista",
+      "name": "Simon Re",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "inaki-mendez-chavarria-regatas-bella-vista",
+      "name": "Iñaki Méndez Chavarria",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-bazzini-regatas-bella-vista",
+      "name": "Francisco Bazzini",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-jose-medico-regatas-bella-vista",
+      "name": "Joaquín Jose Medico",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benicio-simoncini-regatas-bella-vista",
+      "name": "Benicio Simoncini",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-oddone-regatas-bella-vista",
+      "name": "Bautista Oddone",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-mendez-regatas-bella-vista",
+      "name": "Joaquin Mendez",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-fassetta-regatas-bella-vista",
+      "name": "Bautista Fassetta",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-lamas-regatas-bella-vista",
+      "name": "Francisco Lamas",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "kevin-canete-regatas-bella-vista",
+      "name": "Kevin Cañete",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-enzo-rosas-regatas-bella-vista",
+      "name": "Santiago Enzo Rosas",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "diego-enrique-regatas-bella-vista",
+      "name": "Diego Enrique",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "mateo-kindler-regatas-bella-vista",
+      "name": "Mateo Kindler",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "baltasar-nielsen-regatas-bella-vista",
+      "name": "Baltasar Nielsen",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cayetano-apesteguia-regatas-bella-vista",
+      "name": "Cayetano Apesteguia",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-roach-regatas-bella-vista",
+      "name": "Lucas Roach",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-flynn-regatas-bella-vista",
+      "name": "Lucas Flynn",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-pio-japas-regatas-bella-vista",
+      "name": "Ignacio Pio Japas",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-obligado-regatas-bella-vista",
+      "name": "Bautista Obligado",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-bleif-regatas-bella-vista",
+      "name": "Francisco Bleif",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benjamin-jose-camerlinckx-regatas-bella-vista",
+      "name": "Benjamín José Camerlinckx",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-cuitino-regatas-bella-vista",
+      "name": "Bautista Cuitiño",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-detzel-regatas-bella-vista",
+      "name": "Joaquin Detzel",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felix-jose-pilato-regatas-bella-vista",
+      "name": "Felix Jose Pilato",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-homero-palacios-sic",
+      "name": "Juan Homero Palacios",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "marcos-nolting-sic",
+      "name": "Marcos Nolting",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "marcos-sanchez-sorondo-sic",
+      "name": "Marcos Sanchez Sorondo",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-ignacio-villalba-sic",
+      "name": "Juan Ignacio Villalba",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "alejo-abaroa-sic",
+      "name": "Alejo Abaroa",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-ledesma-arocena-sic",
+      "name": "Joaquín Ledesma Arocena",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "nicolas-norris-sic",
+      "name": "Nicolas Norris",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "pablo-fernandez-montana-sic",
+      "name": "Pablo Fernandez Montaña",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-cruz-pinto-sic",
+      "name": "Juan Cruz Pinto",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-harms-sic",
+      "name": "Santiago Harms",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "filippo-bacci-balboni-alumni",
+      "name": "Filippo Bacci Balboni",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "franco-rapetti-alumni",
+      "name": "Franco Rapetti",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-braceras-alumni",
+      "name": "Felipe Braceras",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "manuel-cegobia-alumni",
+      "name": "Manuel Cegobia",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-hygonenq-alumni",
+      "name": "Felipe Hygonenq",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "facundo-ibarbia-alumni",
+      "name": "Facundo Ibarbia",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jose-campitelli-alumni",
+      "name": "José Campitelli",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-humphreys-alumni",
+      "name": "Lucas Humphreys",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "rufino-ardanaz-alumni",
+      "name": "Rufino Ardanaz",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "joaquin-vazquez-alumni",
+      "name": "Joaquin Vazquez",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "matias-merino-alumni",
+      "name": "Matias Merino",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "timoteo-medina-alumni",
+      "name": "Timoteo Medina",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-alonso-ramirez-alumni",
+      "name": "Francisco Alonso Ramirez",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-cabanillas-alumni",
+      "name": "Juan Cabanillas",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "marcos-raviele-alumni",
+      "name": "Marcos Raviele",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-minana-alumni",
+      "name": "Juan Miñana",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-galvez-alumni",
+      "name": "Bautista Gálvez",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "julian-abramovicz-alumni",
+      "name": "Julian Abramovicz",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "belisario-di-leo-lira-alumni",
+      "name": "Belisario Di Leo Lira",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "gaspar-nowak-alumni",
+      "name": "Gaspar Nowak",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benjamin-van-der-ghote-alumni",
+      "name": "Benjamin Van Der Ghote",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cruz-lamelas-alumni",
+      "name": "Cruz Lamelas",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "marcos-van-der-ghote-alumni",
+      "name": "Marcos Van Der Ghote",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tobias-schmidt-alumni",
+      "name": "Tobias Schmidt",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "teo-schmidt-alumni",
+      "name": "Teo Schmidt",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "salvador-bianchi-alumni",
+      "name": "Salvador Bianchi",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "devoto-simon-alumni",
+      "name": "Devoto Simon",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "salvador-bustos-alumni",
+      "name": "Salvador Bustos",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "geronimo-siritto-alumni",
+      "name": "Geronimo Siritto",
+      "club": "Alumni",
+      "clubId": "alumni",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-pregoni-belgrano-athletic",
+      "name": "Santino Pregoni",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-embon-belgrano-athletic",
+      "name": "Tomás Embon",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-wen-belgrano-athletic",
+      "name": "Juan Wen",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-martinez-baques-belgrano-athletic",
+      "name": "Ignacio Martínez Baques",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "salvador-cozzani-belgrano-athletic",
+      "name": "Salvador Cozzani",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "benicio-mendoza-belgrano-athletic",
+      "name": "Benicio Mendoza",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lorenzo-molinero-belgrano-athletic",
+      "name": "Lorenzo Molinero",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-doval-belgrano-athletic",
+      "name": "Santino Doval",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-forcaro-belgrano-athletic",
+      "name": "Tomás Forcaro",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "federico-d-andrea-belgrano-athletic",
+      "name": "Federico D’ Andrea",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "renzo-saglia-belgrano-athletic",
+      "name": "Renzo Saglia",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-garbalachis-belgrano-athletic",
+      "name": "Felipe Garbalachis",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-fossati-belgrano-athletic",
+      "name": "Felipe Fossati",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "vitorio-melograno-belgrano-athletic",
+      "name": "Vitorio Melograno",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-cristin-belgrano-athletic",
+      "name": "Tomás Cristin",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "mateo-sanabria-acquesta-la-plata",
+      "name": "Mateo Sanabria Acquesta",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cipriano-cervio-la-plata",
+      "name": "Cipriano Cervio",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "gaspar-krajzelman-la-plata",
+      "name": "Gaspar Krajzelman",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-pedersoli-la-plata",
+      "name": "Agustín Pedersoli",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lorenzo-carreon-la-plata",
+      "name": "Lorenzo Carreon",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "antonio-dagostino-la-plata",
+      "name": "Antonio Dagostino",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-kucic-la-plata",
+      "name": "Ignacio Kucic",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-bonilla-la-plata",
+      "name": "Lucas Bonilla",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-ridella-la-plata",
+      "name": "Francisco Ridella",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "gregorio-boffi-la-plata",
+      "name": "Gregorio Boffi",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "manuel-weilenmann-la-plata",
+      "name": "Manuel Weilenmann",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-ponce-la-plata",
+      "name": "Felipe Ponce",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "matteo-di-lucca-la-plata",
+      "name": "Matteo Di Lucca",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-nino-gomez-la-plata",
+      "name": "Tomas Niño Gómez",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-saad-la-plata",
+      "name": "Felipe Saad",
+      "club": "La Plata RC",
+      "clubId": "la-plata",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "pedro-de-olmos-champagnat",
+      "name": "Pedro De Olmos",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-lopez-castro-champagnat",
+      "name": "Ignacio Lopez Castro",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lisandro-renzulli-champagnat",
+      "name": "Lisandro Renzulli",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "rufino-ruiz-champagnat",
+      "name": "Rufino Ruiz",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ciro-hausvirth-champagnat",
+      "name": "Ciro Hausvirth",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cristobal-fernandez-sasso-champagnat",
+      "name": "Cristobal Fernandez Sasso",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-fitzgerald-champagnat",
+      "name": "Juan Fitzgerald",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-campos-champagnat",
+      "name": "Tomas Campos",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "borja-suarez-champagnat",
+      "name": "Borja Suarez",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-bottcher-champagnat",
+      "name": "Francisco Bottcher",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-manuel-paez-de-la-torre-champagnat",
+      "name": "Juan Manuel Páez De La Torre",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-romero-krause-champagnat",
+      "name": "Juan Romero Krause",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-sanclemente-champagnat",
+      "name": "Tomas Sanclemente",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "simon-pena-champagnat",
+      "name": "Simon Peña",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cruz-guiraldes-champagnat",
+      "name": "Cruz Guiraldes",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "lucas-welsh-champagnat",
+      "name": "Lucas Welsh",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "agustin-regairaz-champagnat",
+      "name": "Agustin Regairaz",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "roberto-ardisone-champagnat",
+      "name": "Roberto Ardisone",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "pedro-moralejo-champagnat",
+      "name": "Pedro Moralejo",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-lagos-marmol-champagnat",
+      "name": "Felipe Lagos Marmol",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "fermin-rapetti-champagnat",
+      "name": "Fermin Rapetti",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tiago-olavarria-champagnat",
+      "name": "Tiago Olavarria",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "maximo-tomaghelli-champagnat",
+      "name": "Maximo Tomaghelli",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bruno-figari-champagnat",
+      "name": "Bruno Figari",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "pedro-hansen-champagnat",
+      "name": "Pedro Hansen",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "valentino-simonatto-champagnat",
+      "name": "Valentino Simonatto",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-sanchez-zinny-champagnat",
+      "name": "Santino Sanchez Zinny",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "marcos-maciel-champagnat",
+      "name": "Marcos Maciel",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "facundo-juan-ruano-champagnat",
+      "name": "Facundo Juan Ruano",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jeronimo-garat-cordero-champagnat",
+      "name": "Jeronimo Garat Cordero",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "felipe-gallo-buenos-aires-crc",
+      "name": "Felipe Gallo",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-pablo-bruno-buenos-aires-crc",
+      "name": "Juan Pablo Bruno",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "geronimo-jose-avalos-cortese-buenos-aires-crc",
+      "name": "Geronimo Jose Avalos Cortese",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "tomas-naumann-buenos-aires-crc",
+      "name": "Tomas Naumann",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "manuel-baudino-buenos-aires-crc",
+      "name": "Manuel Baudino",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "angus-young-buenos-aires-crc",
+      "name": "Angus Young",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santiago-tanoni-buenos-aires-crc",
+      "name": "Santiago Tanoni",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-syriani-buenos-aires-crc",
+      "name": "Santino Syriani",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "pedro-almasque-buenos-aires-crc",
+      "name": "Pedro Almasque",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "cristobal-castro-feijoo-buenos-aires-crc",
+      "name": "Cristobal Castro Feijóo",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "mateo-eiras-buenos-aires-crc",
+      "name": "Mateo Eiras",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "juan-mosches-buenos-aires-crc",
+      "name": "Juan Mosches",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "mateo-sastre-buenos-aires-crc",
+      "name": "Mateo Sastre",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-jose-keser-buenos-aires-crc",
+      "name": "Francisco Jose Keser",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "nicolas-perez-ruiz-buenos-aires-crc",
+      "name": "Nicolas Perez Ruiz",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "A",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "francisco-nanni-buenos-aires-crc",
+      "name": "Francisco Nanni",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 1,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-vardaro-buenos-aires-crc",
+      "name": "Santino Vardaro",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 2,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-rovegno-buenos-aires-crc",
+      "name": "Bautista Rovegno",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 3,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "marco-ajler-buenos-aires-crc",
+      "name": "Marco Ajler",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 4,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "luciano-rodriguez-minola-buenos-aires-crc",
+      "name": "Luciano Rodriguez Minola",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 5,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "vito-bambozzi-buenos-aires-crc",
+      "name": "Vito Bambozzi",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 6,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-figueiras-buenos-aires-crc",
+      "name": "Bautista Figueiras",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 7,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "santino-lucio-miranda-buenos-aires-crc",
+      "name": "Santino Lucio Miranda",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Número 8",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 8,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "facundo-cabrera-buenos-aires-crc",
+      "name": "Facundo Cabrera",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 9,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "jaime-barna-buenos-aires-crc",
+      "name": "Jaime Barna",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 10,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "bautista-durand-buenos-aires-crc",
+      "name": "Bautista Durand",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 11,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-silva-buenos-aires-crc",
+      "name": "Ignacio Silva",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 12,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "luca-campochiaro-buenos-aires-crc",
+      "name": "Luca Campochiaro",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 13,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "vicente-manuel-quintana-buenos-aires-crc",
+      "name": "Vicente Manuel Quintana",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 14,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "ignacio-di-luzio-buenos-aires-crc",
+      "name": "Ignacio Di Luzio",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "knownFrom": "2026-11-11",
+      "sourceIds": [
+        "ovalados-m19-2026"
+      ],
+      "selections": [],
+      "ovaladosTeam": "B",
+      "number": 15,
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null
+    },
+    {
+      "id": "facundo-azurmendi-cuba",
+      "name": "Facundo Azurmendi",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 1,
+          "position": "Pilar izquierdo",
+          "role": "titular",
+          "sourceName": "AZURMENDI FACUNDO",
+          "sourceClub": "CUBA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 1,
+          "position": "Pilar izquierdo",
+          "sourceName": "AZURMENDI FACUNDO",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 1
+    },
+    {
+      "id": "tobias-diaz-saubidet-sic",
+      "name": "Tobias Diaz Saubidet",
+      "club": "SIC",
+      "clubId": "sic",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "SIC",
+          "union": "URBA",
+          "positionNumber": 1,
+          "position": "Pilar izquierdo",
+          "role": "suplente",
+          "sourceName": "DIAZ SAUBIDET TOBIAS",
+          "sourceClub": "SIC"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "SIC",
+          "union": "URBA",
+          "positionNumber": 1,
+          "position": "Pilar izquierdo",
+          "sourceName": "DIAZ SAUBIDET TOBIAS",
+          "sourceClub": "SIC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 1
+    },
+    {
+      "id": "baltazar-estrada-regatas-bella-vista",
+      "name": "Baltazar Estrada",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Pilar izquierdo",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 1,
+          "position": "Pilar izquierdo",
+          "sourceName": "ESTRADA BALTAZAR",
+          "sourceClub": "REGATAS BELLA VISTA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 1
+    },
+    {
+      "id": "facundo-moreira-regatas-bella-vista",
+      "name": "Facundo Moreira",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 2,
+          "position": "Hooker",
+          "role": "titular",
+          "sourceName": "MOREIRA FACUNDO",
+          "sourceClub": "REGATAS BELLA VISTA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 2,
+          "position": "Hooker",
+          "sourceName": "MOREIRA FACUNDO",
+          "sourceClub": "REGATAS BELLA VISTA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 2
+    },
+    {
+      "id": "pedro-palacios-champagnat",
+      "name": "Pedro Palacios",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Champagnat",
+          "union": "URBA",
+          "positionNumber": 2,
+          "position": "Hooker",
+          "sourceName": "PALACIOS PEDRO",
+          "sourceClub": "CHAMPAGNAT"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 2
+    },
+    {
+      "id": "francisco-solessi-belgrano-athletic",
+      "name": "Francisco Solessi",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Hooker",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Belgrano Athletic",
+          "union": "URBA",
+          "positionNumber": 2,
+          "position": "Hooker",
+          "role": "suplente",
+          "sourceName": "SOLESSI FRANCISCO",
+          "sourceClub": "BELGRANO ATHLETIC"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Belgrano Athletic",
+          "union": "URBA",
+          "positionNumber": 2,
+          "position": "Hooker",
+          "sourceName": "SOLESSI FRANCISCO",
+          "sourceClub": "BELGRANO ATHLETIC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 2
+    },
+    {
+      "id": "mateo-camba-casi",
+      "name": "Mateo Camba",
+      "club": "CASI",
+      "clubId": "casi",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "CASI",
+          "union": "URBA",
+          "positionNumber": 3,
+          "position": "Pilar derecho",
+          "role": "reserva",
+          "sourceName": "CAMBA MATEO",
+          "sourceClub": "CASI"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CASI",
+          "union": "URBA",
+          "positionNumber": 3,
+          "position": "Pilar derecho",
+          "sourceName": "CAMBA MATEO",
+          "sourceClub": "CASI"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 3
+    },
+    {
+      "id": "fermin-odriozola-cuba",
+      "name": "Fermín Odriozola",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Pilar derecho",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-concentrado-2026-article",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 3,
+          "position": "Pilar derecho",
+          "role": "titular",
+          "sourceName": "ODRIOZOLA FERMIN",
+          "sourceClub": "CUBA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 3,
+          "position": "Pilar derecho",
+          "sourceName": "ODRIOZOLA FERMIN",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 3
+    },
+    {
+      "id": "lucas-minicucci-manuel-belgrano",
+      "name": "Lucas Minicucci",
+      "club": "Manuel Belgrano",
+      "clubId": "manuel-belgrano",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Manuel Belgrano",
+          "union": "URBA",
+          "positionNumber": 4,
+          "position": "Segunda línea",
+          "role": "suplente",
+          "sourceName": "MINICUCCI LUCAS",
+          "sourceClub": "MANUEL BELGRANO"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Manuel Belgrano",
+          "union": "URBA",
+          "positionNumber": 4,
+          "position": "Segunda línea",
+          "sourceName": "MINICUCCI LUCAS",
+          "sourceClub": "MANUEL BELGRANO"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 4
+    },
+    {
+      "id": "julian-migra-dec-san-luis",
+      "name": "Julián Migra Dec",
+      "club": "San Luis",
+      "clubId": "san-luis",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-concentrado-2026-article",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "San Luis",
+          "union": "URBA",
+          "positionNumber": 5,
+          "position": "Segunda línea",
+          "role": "titular",
+          "sourceName": "MIGRA DEC JULIAN",
+          "sourceClub": "SAN LUIS"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "San Luis",
+          "union": "URBA",
+          "positionNumber": 5,
+          "position": "Segunda línea",
+          "sourceName": "MIGRA DEC JULIAN",
+          "sourceClub": "SAN LUIS"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 5
+    },
+    {
+      "id": "juan-pedro-sirota-los-tilos",
+      "name": "Juan Pedro Sirota",
+      "club": "Los Tilos",
+      "clubId": "los-tilos",
+      "union": "URBA",
+      "position": "Segunda línea",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Los Tilos",
+          "union": "URBA",
+          "positionNumber": 5,
+          "position": "Segunda línea",
+          "role": "titular",
+          "sourceName": "SIROTA JUAN PEDRO",
+          "sourceClub": "LOS TILOS"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Los Tilos",
+          "union": "URBA",
+          "positionNumber": 5,
+          "position": "Segunda línea",
+          "sourceName": "SIROTA JUAN PEDRO",
+          "sourceClub": "LOS TILOS"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 5
+    },
+    {
+      "id": "ramiro-santa-ana-regatas-bella-vista",
+      "name": "Ramiro Santa Ana",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 6,
+          "position": "Ala",
+          "role": "suplente",
+          "sourceName": "SANTA ANA RAMIRO",
+          "sourceClub": "REGATAS BELLA VISTA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 6,
+          "position": "Ala",
+          "sourceName": "SANTA ANA RAMIRO",
+          "sourceClub": "REGATAS BELLA VISTA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 6
+    },
+    {
+      "id": "juan-segundo-fresca-regatas-bella-vista",
+      "name": "Juan Segundo Fresca",
+      "club": "Regatas Bella Vista",
+      "clubId": "regatas-bella-vista",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 7,
+          "position": "Ala",
+          "role": "titular",
+          "sourceName": "FRESCA JUAN SEGUNDO",
+          "sourceClub": "REGATAS BELLA VISTA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Regatas Bella Vista",
+          "union": "URBA",
+          "positionNumber": 7,
+          "position": "Ala",
+          "sourceName": "FRESCA JUAN SEGUNDO",
+          "sourceClub": "REGATAS BELLA VISTA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 7
+    },
+    {
+      "id": "marcos-gorchs-casi",
+      "name": "Marcos Gorchs",
+      "club": "CASI",
+      "clubId": "casi",
+      "union": "URBA",
+      "position": "Ala",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "CASI",
+          "union": "URBA",
+          "positionNumber": 6,
+          "position": "Ala",
+          "role": "titular",
+          "sourceName": "GORCHS MARCOS",
+          "sourceClub": "CASI"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CASI",
+          "union": "URBA",
+          "positionNumber": 7,
+          "position": "Ala",
+          "sourceName": "GORCHS MARCOS",
+          "sourceClub": "CASI"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 7
+    },
+    {
+      "id": "joaquin-gonzalez-varcelo-buenos-aires-crc",
+      "name": "Joaquín González Varcelo",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Octavo",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-concentrado-2026-article",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Buenos Aires C&RC",
+          "union": "URBA",
+          "positionNumber": 8,
+          "position": "Octavo",
+          "role": "titular",
+          "sourceName": "GONZALEZ VARCELO JOAQUIN",
+          "sourceClub": "BACRC"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Buenos Aires C&RC",
+          "union": "URBA",
+          "positionNumber": 8,
+          "position": "Octavo",
+          "sourceName": "GONZALEZ VARCELO JOAQUIN",
+          "sourceClub": "BACRC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 8
+    },
+    {
+      "id": "cruz-quiroga-pucara",
+      "name": "Cruz Quiroga",
+      "club": "Pucará",
+      "clubId": "pucara",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Pucará",
+          "union": "URBA",
+          "positionNumber": 9,
+          "position": "Medio scrum",
+          "role": "titular",
+          "sourceName": "QUIROGA CRUZ",
+          "sourceClub": "PUCARA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Pucará",
+          "union": "URBA",
+          "positionNumber": 9,
+          "position": "Medio scrum",
+          "sourceName": "QUIROGA CRUZ",
+          "sourceClub": "PUCARA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 9
+    },
+    {
+      "id": "segundo-wust-cuba",
+      "name": "Segundo Wust",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Medio scrum",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 9,
+          "position": "Medio scrum",
+          "role": "reserva",
+          "sourceName": "WUST SEGUNDO",
+          "sourceClub": "CUBA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 9,
+          "position": "Medio scrum",
+          "sourceName": "WUST SEGUNDO",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 9
+    },
+    {
+      "id": "ramon-benedit-cuba",
+      "name": "Ramón Benedit",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-concentrado-2026-article"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 10,
+          "position": "Apertura",
+          "sourceName": "BENEDIT RAMON",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 10
+    },
+    {
+      "id": "jose-ticinese-buenos-aires-crc",
+      "name": "José Ticinese",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Apertura",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-concentrado-2026-article",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Buenos Aires C&RC",
+          "union": "URBA",
+          "positionNumber": 10,
+          "position": "Apertura",
+          "role": "titular",
+          "sourceName": "TICINESE JOSE",
+          "sourceClub": "BACRC"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Buenos Aires C&RC",
+          "union": "URBA",
+          "positionNumber": 10,
+          "position": "Apertura",
+          "sourceName": "TICINESE JOSE",
+          "sourceClub": "BACRC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 10
+    },
+    {
+      "id": "cruz-acuna-cuba",
+      "name": "Cruz Acuña",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 11,
+          "position": "Wing",
+          "sourceName": "ACUÑA CRUZ",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 11
+    },
+    {
+      "id": "santiago-borges-buenos-aires-crc",
+      "name": "Santiago Borges",
+      "club": "Buenos Aires C&RC",
+      "clubId": "buenos-aires-crc",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Buenos Aires C&RC",
+          "union": "URBA",
+          "positionNumber": 11,
+          "position": "Wing",
+          "role": "titular",
+          "sourceName": "BORGES SANTIAGO",
+          "sourceClub": "BACRC"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Buenos Aires C&RC",
+          "union": "URBA",
+          "positionNumber": 11,
+          "position": "Wing",
+          "sourceName": "BORGES SANTIAGO",
+          "sourceClub": "BACRC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 11
+    },
+    {
+      "id": "benicio-fernandez-maero-pucara",
+      "name": "Benicio Fernandez Maero",
+      "club": "Pucará",
+      "clubId": "pucara",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Pucará",
+          "union": "URBA",
+          "positionNumber": 12,
+          "position": "Centro",
+          "role": "titular",
+          "sourceName": "FERNANDEZ MAERO BENICIO",
+          "sourceClub": "PUCARA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Pucará",
+          "union": "URBA",
+          "positionNumber": 12,
+          "position": "Centro",
+          "sourceName": "FERNANDEZ MAERO BENICIO",
+          "sourceClub": "PUCARA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 12
+    },
+    {
+      "id": "santiago-abbondati-cuba",
+      "name": "Santiago Abbondati",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 13,
+          "position": "Centro",
+          "sourceName": "ABBONDATI SANTIAGO",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 13
+    },
+    {
+      "id": "francisco-diez-champagnat",
+      "name": "Francisco Diez",
+      "club": "Champagnat",
+      "clubId": "champagnat",
+      "union": "URBA",
+      "position": "Centro",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Champagnat",
+          "union": "URBA",
+          "positionNumber": 13,
+          "position": "Centro",
+          "role": "titular",
+          "sourceName": "DIEZ FRANCISCO",
+          "sourceClub": "CHAMPAGNAT"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Champagnat",
+          "union": "URBA",
+          "positionNumber": 13,
+          "position": "Centro",
+          "sourceName": "DIEZ FRANCISCO",
+          "sourceClub": "CHAMPAGNAT"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 13
+    },
+    {
+      "id": "federico-anderson-san-andres",
+      "name": "Federico Anderson",
+      "club": "San Andrés",
+      "clubId": "san-andres",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "San Andrés",
+          "union": "URBA",
+          "positionNumber": 14,
+          "position": "Wing",
+          "sourceName": "ANDERSON FEDERICO",
+          "sourceClub": "SAN ANDRES"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 14
+    },
+    {
+      "id": "tomas-arata-belgrano-athletic",
+      "name": "Tomas Arata",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Wing",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "Belgrano Athletic",
+          "union": "URBA",
+          "positionNumber": 14,
+          "position": "Wing",
+          "role": "titular",
+          "sourceName": "ARATA TOMAS",
+          "sourceClub": "BELGRANO ATHLETIC"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Belgrano Athletic",
+          "union": "URBA",
+          "positionNumber": 14,
+          "position": "Wing",
+          "sourceName": "ARATA TOMAS",
+          "sourceClub": "BELGRANO ATHLETIC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 14
+    },
+    {
+      "id": "benjamin-fossati-belgrano-athletic",
+      "name": "Benjamin Fossati",
+      "club": "Belgrano Athletic",
+      "clubId": "belgrano-athletic",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "knownFrom": "2026-11-10",
+      "sourceIds": [
+        "urba-m17-concentrado-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "Belgrano Athletic",
+          "union": "URBA",
+          "positionNumber": 15,
+          "position": "Fullback",
+          "sourceName": "FOSSATI BENJAMIN",
+          "sourceClub": "BELGRANO ATHLETIC"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 15
+    },
+    {
+      "id": "felipe-gramajo-cuba",
+      "name": "Felipe Gramajo",
+      "club": "CUBA",
+      "clubId": "cuba",
+      "union": "URBA",
+      "position": "Fullback",
+      "positionSourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "knownFrom": "2026-10-17",
+      "sourceIds": [
+        "urba-m17-concentrado-2026",
+        "urba-m17-tucuman-2026"
+      ],
+      "selections": [
+        {
+          "sourceId": "urba-m17-tucuman-2026",
+          "announcedAt": null,
+          "matchDate": "2026-10-17",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 15,
+          "position": "Fullback",
+          "role": "suplente",
+          "sourceName": "GRAMAJO FELIPE",
+          "sourceClub": "CUBA"
+        },
+        {
+          "sourceId": "urba-m17-concentrado-2026",
+          "announcedAt": "2026-11-10",
+          "season": 2026,
+          "category": "M17",
+          "club": "CUBA",
+          "union": "URBA",
+          "positionNumber": 15,
+          "position": "Fullback",
+          "sourceName": "GRAMAJO FELIPE",
+          "sourceClub": "CUBA"
+        }
+      ],
+      "birthDate": null,
+      "birthDateSourceIds": [],
+      "birthDateVerifiedAt": null,
+      "youthCategory": "M17",
+      "selectionLevel": "URBA M17",
+      "season": 2026,
+      "positionNumber": 15
+    }
+  ]
+}

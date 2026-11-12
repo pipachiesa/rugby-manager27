@@ -1,0 +1,6776 @@
+{
+ "generatedAt": "2026-11-11",
+ "division": "primera-a",
+ "description": "Formaciones publicadas (titulares y suplentes cuando la fuente los informa) de partidos de Primera A URBA 2019–2025. Mismo formato que urba-lineups.json más division, nombres de club del índice y marcador oficial. Todas las formaciones son de prensa (Rugby Champagne, anunciadas antes del partido). Los nombres se transcriben tal como los publica la fuente.",
+ "sourcesPolicy": {
+  "urbaApi": "Índice oficial de partidos: API pública del fixture de urba.org.ar (/api/fixture/menu y /api/fixture/championship). 2021–2026; 2019 y 2020 sin datos. Solo resultados, sin formaciones.",
+  "champagne": "Rugby Champagne: notas de formaciones anunciadas (prensa) de sus sitemaps de sección URBA. Única fuente con formaciones de Primera A/B encontrada; cobertura mínima.",
+  "surveyedWithoutLineups": [
+   "ESPN API (site.api.espn.com, liga 2009 «URBA Primera A»): temporadas hasta 2016 y partidos 2026/2027 sin jugar; 2016 trae 984 partidos de todas las divisiones URBA y los summaries no traen rosters. Sin 2017–2025.",
+   "ESPN/Datafactory (espn.datafactory.la, canales urbagrupo2 = Primera A, urbagrupo3 = Primera B): solo temporada 2026; fichas de partido con resultado y sin jugadores; página de planteles con equipos vacíos.",
+   "WordPress anterior de la URBA (urbaweb.azurewebsites.net/wp-json): sin notas de formaciones de Primera A/B entre 2016 y 2025."
+  ],
+  "excluded": [
+   "ovalados.com y aplenorugby.com.ar: excluidos por robots.txt",
+   "www.espn.com.ar: su robots.txt excluye agentes de IA; no se consultó (la ruta de Datafactory se obtuvo de espn.datafactory.la)"
+  ]
+ },
+ "coverage": {
+  "seasons": {
+   "2019": {
+    "indexedMatches": null,
+    "withBothSides": 8,
+    "withOneSide": 0,
+    "regularMatchesFromStandings": null,
+    "clubs": [],
+    "note": "Sin índice oficial (la API de urba.org.ar no tiene esta temporada); formaciones tomadas de la nota sin verificar fecha ni localía.",
+    "clubsNowInTop14": {
+     "los-tilos": {
+      "matches": null,
+      "withLineup": 1
+     },
+     "buenos-aires-crc": {
+      "matches": null,
+      "withLineup": 1
+     },
+     "champagnat": {
+      "matches": null,
+      "withLineup": 1
+     }
+    }
+   },
+   "2020": {
+    "note": "Sin torneo (pandemia)."
+   },
+   "2021": {
+    "indexedMatches": 94,
+    "withBothSides": 1,
+    "withOneSide": 0,
+    "regularMatchesFromStandings": 91,
+    "clubs": [
+     "atletico-del-rosario",
+     "champagnat",
+     "la-plata",
+     "los-matreros",
+     "mariano-moreno",
+     "banco-nacion",
+     "olivos",
+     "pueyrredon",
+     "deportiva-francesa",
+     "san-albano",
+     "lomas-athletic",
+     "san-patricio",
+     "san-carlos",
+     "curupayti"
+    ],
+    "pctWithLineup": 1.1,
+    "clubsNowInTop14": {
+     "atletico-del-rosario": {
+      "matches": 15,
+      "withLineup": 1
+     },
+     "champagnat": {
+      "matches": 14,
+      "withLineup": 0
+     },
+     "la-plata": {
+      "matches": 15,
+      "withLineup": 1
+     },
+     "los-matreros": {
+      "matches": 14,
+      "withLineup": 0
+     }
+    }
+   },
+   "2022": {
+    "indexedMatches": null,
+    "withBothSides": 0,
+    "withOneSide": 0,
+    "regularMatchesFromStandings": 182,
+    "clubs": [
+     "la-plata",
+     "champagnat",
+     "los-matreros",
+     "san-cirano",
+     "pueyrredon",
+     "deportiva-francesa",
+     "san-albano",
+     "mariano-moreno",
+     "curupayti",
+     "banco-nacion",
+     "lomas-athletic",
+     "olivos",
+     "san-carlos",
+     "san-patricio"
+    ],
+    "note": "La API de urba.org.ar publica la tabla pero no las fechas: no hay índice de partidos para asignar formaciones.",
+    "clubsNowInTop14": {
+     "la-plata": {
+      "matches": 26,
+      "withLineup": 0
+     },
+     "champagnat": {
+      "matches": 26,
+      "withLineup": 0
+     },
+     "los-matreros": {
+      "matches": 26,
+      "withLineup": 0
+     }
+    }
+   },
+   "2023": {
+    "indexedMatches": 182,
+    "withBothSides": 10,
+    "withOneSide": 2,
+    "regularMatchesFromStandings": 182,
+    "clubs": [
+     "regatas-bella-vista",
+     "los-matreros",
+     "champagnat",
+     "los-tilos",
+     "curupayti",
+     "lomas-athletic",
+     "deportiva-francesa",
+     "olivos",
+     "san-cirano",
+     "san-albano",
+     "san-martin",
+     "pueyrredon",
+     "mariano-moreno",
+     "banco-nacion"
+    ],
+    "pctWithLineup": 6.6,
+    "clubsNowInTop14": {
+     "regatas-bella-vista": {
+      "matches": 26,
+      "withLineup": 2
+     },
+     "los-matreros": {
+      "matches": 26,
+      "withLineup": 0
+     },
+     "champagnat": {
+      "matches": 26,
+      "withLineup": 2
+     },
+     "los-tilos": {
+      "matches": 26,
+      "withLineup": 2
+     }
+    }
+   },
+   "2024": {
+    "indexedMatches": 185,
+    "withBothSides": 0,
+    "withOneSide": 0,
+    "regularMatchesFromStandings": 182,
+    "clubs": [
+     "la-plata",
+     "los-tilos",
+     "los-matreros",
+     "deportiva-francesa",
+     "olivos",
+     "curupayti",
+     "pucara",
+     "san-cirano",
+     "lomas-athletic",
+     "hurling",
+     "pueyrredon",
+     "san-albano",
+     "san-patricio",
+     "san-martin"
+    ],
+    "pctWithLineup": 0,
+    "clubsNowInTop14": {
+     "la-plata": {
+      "matches": 26,
+      "withLineup": 0
+     },
+     "los-tilos": {
+      "matches": 28,
+      "withLineup": 0
+     },
+     "los-matreros": {
+      "matches": 27,
+      "withLineup": 0
+     }
+    }
+   },
+   "2025": {
+    "indexedMatches": 185,
+    "withBothSides": 1,
+    "withOneSide": 1,
+    "regularMatchesFromStandings": 182,
+    "clubs": [
+     "los-matreros",
+     "atletico-del-rosario",
+     "champagnat",
+     "pueyrredon",
+     "san-cirano",
+     "pucara",
+     "hurling",
+     "curupayti",
+     "san-andres",
+     "lomas-athletic",
+     "deportiva-francesa",
+     "olivos",
+     "universitario-la-plata",
+     "san-albano"
+    ],
+    "pctWithLineup": 0.5,
+    "clubsNowInTop14": {
+     "los-matreros": {
+      "matches": 26,
+      "withLineup": 0
+     },
+     "atletico-del-rosario": {
+      "matches": 26,
+      "withLineup": 0
+     },
+     "champagnat": {
+      "matches": 26,
+      "withLineup": 0
+     }
+    }
+   }
+  }
+ },
+ "matches": [
+  {
+   "matchId": "2019-primera-a-promocion-san-carlos-manuel-belgrano",
+   "season": 2019,
+   "division": "primera-a",
+   "round": null,
+   "stage": "promocion",
+   "date": null,
+   "homeId": "san-carlos",
+   "awayId": "manuel-belgrano",
+   "homeName": "San Carlos",
+   "awayName": "Manuel Belgrano",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "home": [
+    {
+     "number": 1,
+     "name": "Ferrero",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Ramos Campo",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 3,
+     "name": "Aquilano",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Brundi",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Álvarez",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Castro",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Yazlle",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Gauto",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Méndez",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Amestoy",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Castro",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Cuellas",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Irazoqui",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Pisano",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Piqueras",
+     "surnameOnly": true
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Bertola",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Lo Presti",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 3,
+     "name": "Ripani",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Llanpart",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Arriegue",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Tumulty",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Sargo",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Castelli",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "N. Aguirre Pini"
+    },
+    {
+     "number": 10,
+     "name": "Menéndez",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Crosignani",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "G. Aguirre Pini"
+    },
+    {
+     "number": 13,
+     "name": "Traibel",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Lagomarsino",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Ferrari",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-promocion-sitas-san-patricio",
+   "season": 2019,
+   "division": "primera-a",
+   "round": null,
+   "stage": "promocion",
+   "date": null,
+   "homeId": "sitas",
+   "awayId": "san-patricio",
+   "homeName": "SITAS",
+   "awayName": "San Patricio",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "home": [
+    {
+     "number": 1,
+     "name": "Candia",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Zapata",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Alfsono",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Ruíz",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Agosti",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Castañón",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Fernández",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Sotelo",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Osadczuk",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Folchi",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Chico",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Codermatz",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Balbuena",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Bruckner",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Pelassini",
+     "surnameOnly": true
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Lamas",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "M. Bodenlle"
+    },
+    {
+     "number": 3,
+     "name": "Canova",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Rigou",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Vila",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Iglesias",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Herrero",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "J. Bodenlle"
+    },
+    {
+     "number": 9,
+     "name": "Stempler",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Cacciabue",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Ruíz Guiñazú",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 12,
+     "name": "González",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "F. Noceda"
+    },
+    {
+     "number": 14,
+     "name": "Conesa",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "A. Noceda"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-r18-lomas-athletic-san-carlos",
+   "season": 2019,
+   "division": "primera-a",
+   "round": 18,
+   "stage": "regular",
+   "date": null,
+   "homeId": "lomas-athletic",
+   "awayId": "san-carlos",
+   "homeName": "Lomas",
+   "awayName": "San Carlos",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "home": [
+    {
+     "number": 1,
+     "name": "Ojeda Bertero",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 2,
+     "name": "Avila",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Favre",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Toth",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Weiss",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Kubar",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Campbell",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Menéndez",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Pentreath",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "L. Quercia"
+    },
+    {
+     "number": 11,
+     "name": "Couto",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Redruello",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Juárez",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Stroia",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "B. Quercia"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Ferrero",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Polivanoff",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Ramos Campo",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 4,
+     "name": "Cinque",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Álvarez",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Piccinini",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Yazzle",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "T. Castro Sugasti"
+    },
+    {
+     "number": 9,
+     "name": "Tossi",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Amestoy",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Lasarte",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Irazoqui",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "F. Castro Sugasti"
+    },
+    {
+     "number": 14,
+     "name": "Hernàndez",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Piqueras",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-r18-los-tilos-san-albano",
+   "season": 2019,
+   "division": "primera-a",
+   "round": 18,
+   "stage": "regular",
+   "date": null,
+   "homeId": "los-tilos",
+   "awayId": "san-albano",
+   "homeName": "Los Tilos",
+   "awayName": "San Albano",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "home": [
+    {
+     "number": 1,
+     "name": "Puertas",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Korenblit",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Leiger",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Alonso",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Broglia",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Castilla",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Santipolo",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Gatti",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Goñi",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Santamarina",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Fernández",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Assereto",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Curutchet",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Mendy",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Tuculet",
+     "surnameOnly": true
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Peroncello",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Losada",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Visser",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Balmaceda",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Bertoldi",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Irurzun",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Núñez",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Baloni",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Bravo",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "J. Mac Gaw"
+    },
+    {
+     "number": 11,
+     "name": "T. Mac Gaw"
+    },
+    {
+     "number": 12,
+     "name": "Gracia Costa",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 13,
+     "name": "Matlob",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Lualdi",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Busto",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-r18-pueyrredon-buenos-aires-crc",
+   "season": 2019,
+   "division": "primera-a",
+   "round": 18,
+   "stage": "regular",
+   "date": null,
+   "homeId": "pueyrredon",
+   "awayId": "buenos-aires-crc",
+   "homeName": "Pueyrredón",
+   "awayName": "Buenos Aires",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "home": [
+    {
+     "number": 1,
+     "name": "Stuchetti",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Repetti",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Gutiérrez",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Dasso",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Bobzin",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Alfonso",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Bustamante",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Romanelli",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Balbi",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Guzmán",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Mac Call",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 12,
+     "name": "Cassina",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Marsano",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Harvey",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Walter",
+     "surnameOnly": true
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Cambiasso",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Rosasco",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Farinelli",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Pomerantz",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Aguer",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Almasque",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Leoni Olivera",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 8,
+     "name": "Campbell",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Pellandini",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "F. Lamensa"
+    },
+    {
+     "number": 11,
+     "name": "Mascolo",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "A. Lamensa"
+    },
+    {
+     "number": 13,
+     "name": "Camacho",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Latorre",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Peirano",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-r18-san-fernando-olivos",
+   "season": 2019,
+   "division": "primera-a",
+   "round": 18,
+   "stage": "regular",
+   "date": null,
+   "homeId": "san-fernando",
+   "awayId": "olivos",
+   "homeName": "San Fernando",
+   "awayName": "Olivos",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "home": [
+    {
+     "number": 1,
+     "name": "Herrera",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Luna",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Maiola",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Feser",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Sanguinetti",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Huss",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Cerruti",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Abadie",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Desalvo",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Oneto",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Goicochea",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Mirani",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Correa",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Hanow",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Schenone",
+     "surnameOnly": true
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Ledesma",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "G. Demergasso"
+    },
+    {
+     "number": 3,
+     "name": "Ocello",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Juri",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "M. Laschera"
+    },
+    {
+     "number": 6,
+     "name": "Ledesma",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "F. Laschera"
+    },
+    {
+     "number": 8,
+     "name": "J. P. Demergasso"
+    },
+    {
+     "number": 9,
+     "name": "Silva",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Maggi",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Bia Palombo",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 12,
+     "name": "Pichler",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Trimboli",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Ehrman",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Crusellas",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-r18-san-martin-deportiva-francesa",
+   "season": 2019,
+   "division": "primera-a",
+   "round": 18,
+   "stage": "regular",
+   "date": null,
+   "homeId": "san-martin",
+   "awayId": "deportiva-francesa",
+   "homeName": "San Martín",
+   "awayName": "Deportiva",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "home": [
+    {
+     "number": 1,
+     "name": "Pompei",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Camaratta",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Tkachuk",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Caracciolo",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Arata",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Moyano",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Pezzuti",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Aguilera",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Schifino",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Bianco",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Bugge",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Puente",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Squillari",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Quintana",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "De Giovanni",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Santilli",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Pratti",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Corvalán",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Calvi",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Carluccio",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Glasberg",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Pérez Rachel",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 8,
+     "name": "D’Esposito",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Roca",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Chocobar",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Cruz",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Lorenzón",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Noailles",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Oberst",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Espinal",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "2019-primera-a-r18-sitas-champagnat",
+   "season": 2019,
+   "division": "primera-a",
+   "round": 18,
+   "stage": "regular",
+   "date": null,
+   "homeId": "sitas",
+   "awayId": "champagnat",
+   "homeName": "Sitas",
+   "awayName": "Champagnat",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "home": [
+    {
+     "number": 1,
+     "name": "Candia",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Zapata",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Reina",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Agosti",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Iturria",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Castañón",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Fernández",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Sotelo",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Osadczuk",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Folchi",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Chico",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Campassi",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Balbuena",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Bruckner",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Pelassini",
+     "surnameOnly": true
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Distel",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Dal Bianco",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 3,
+     "name": "Cobos",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Rivas Orozco",
+     "ambiguous": "apellido compuesto sin nombre de pila"
+    },
+    {
+     "number": 5,
+     "name": "Castelli",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Alonso",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "F. Vinent"
+    },
+    {
+     "number": 8,
+     "name": "L. Vinent"
+    },
+    {
+     "number": 9,
+     "name": "Graciarena",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "Ugarte",
+     "surnameOnly": true
+    },
+    {
+     "number": 11,
+     "name": "Montes",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "Imbrosciano",
+     "surnameOnly": true
+    },
+    {
+     "number": 13,
+     "name": "Cordeyro",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Echezarreta",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Aguilar",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-202111494",
+   "season": 2021,
+   "division": "primera-a",
+   "round": null,
+   "stage": "final",
+   "date": "2021-11-27",
+   "homeId": "atletico-del-rosario",
+   "awayId": "la-plata",
+   "homeName": "Atlético del Rosario",
+   "awayName": "La Plata",
+   "homeScore": 37,
+   "awayScore": 20,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2021114",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/formaciones-para-la-final-de-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/formaciones-para-la-final-de-primera-a",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/formaciones-para-la-final-de-primera-a",
+   "home": [
+    {
+     "number": 1,
+     "name": "Ezequiel Reyes"
+    },
+    {
+     "number": 2,
+     "name": "Jeremías Aime"
+    },
+    {
+     "number": 3,
+     "name": "Roberto Almeira"
+    },
+    {
+     "number": 4,
+     "name": "Matías Kremer"
+    },
+    {
+     "number": 5,
+     "name": "Octavio Capella"
+    },
+    {
+     "number": 6,
+     "name": "Santiago Casals"
+    },
+    {
+     "number": 7,
+     "name": "Lucas Malanos"
+    },
+    {
+     "number": 8,
+     "name": "Valentín Tumosa"
+    },
+    {
+     "number": 9,
+     "name": "Felipe Nogués"
+    },
+    {
+     "number": 10,
+     "name": "Manuel Nogués"
+    },
+    {
+     "number": 11,
+     "name": "Nicolás Casals"
+    },
+    {
+     "number": 12,
+     "name": "Bautista Estelles"
+    },
+    {
+     "number": 13,
+     "name": "Tomás Malanos"
+    },
+    {
+     "number": 14,
+     "name": "Pedro Bisio"
+    },
+    {
+     "number": 15,
+     "name": "Martín Elías"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Ariel Del Cerro"
+    },
+    {
+     "number": 2,
+     "name": "Ivan Turdó"
+    },
+    {
+     "number": 3,
+     "name": "Francisco Uriarte"
+    },
+    {
+     "number": 4,
+     "name": "Valentín Ozog"
+    },
+    {
+     "number": 5,
+     "name": "Guillermo Roan"
+    },
+    {
+     "number": 6,
+     "name": "Manuel Dacal"
+    },
+    {
+     "number": 7,
+     "name": "Carlos Mendieta"
+    },
+    {
+     "number": 8,
+     "name": "Francisco Suárez Folch"
+    },
+    {
+     "number": 9,
+     "name": "Homero Alegre"
+    },
+    {
+     "number": 10,
+     "name": "Tomás Suárez Folch"
+    },
+    {
+     "number": 11,
+     "name": "Facundo Panigatti"
+    },
+    {
+     "number": 12,
+     "name": "Antonio Boccadoro"
+    },
+    {
+     "number": 13,
+     "name": "Iván Albina"
+    },
+    {
+     "number": 14,
+     "name": "Valentino Cinti"
+    },
+    {
+     "number": 15,
+     "name": "Augusto García Larcher"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107064",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 10,
+   "stage": "regular",
+   "date": "2023-06-03",
+   "homeId": "lomas-athletic",
+   "awayId": "champagnat",
+   "homeName": "Lomas Athletic",
+   "awayName": "Champagnat",
+   "homeScore": 27,
+   "awayScore": 31,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "home": [
+    {
+     "number": 1,
+     "name": "Franco Scaramella"
+    },
+    {
+     "number": 2,
+     "name": "Santiago Molina"
+    },
+    {
+     "number": 3,
+     "name": "Santiago Souto"
+    },
+    {
+     "number": 4,
+     "name": "Ramiro Tallone"
+    },
+    {
+     "number": 5,
+     "name": "Agustín Toth"
+    },
+    {
+     "number": 6,
+     "name": "Nicolás Weiss"
+    },
+    {
+     "number": 7,
+     "name": "Alejo Kubar"
+    },
+    {
+     "number": 8,
+     "name": "Guilherme Haiyashi"
+    },
+    {
+     "number": 9,
+     "name": "Nicolás Pentreath"
+    },
+    {
+     "number": 10,
+     "name": "Federico Borda"
+    },
+    {
+     "number": 11,
+     "name": "Marco Frega"
+    },
+    {
+     "number": 12,
+     "name": "Lucio Quercia"
+    },
+    {
+     "number": 13,
+     "name": "Francisco Ferrari"
+    },
+    {
+     "number": 14,
+     "name": "Manuel Carrusca"
+    },
+    {
+     "number": 15,
+     "name": "Bruno Quercia"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Santiago Herrera"
+    },
+    {
+     "number": 2,
+     "name": "Fernando Rodríguez Pascarella"
+    },
+    {
+     "number": 3,
+     "name": "Martín Rinaldelli"
+    },
+    {
+     "number": 4,
+     "name": "Francisco Castelli"
+    },
+    {
+     "number": 5,
+     "name": "Santiago Escuti"
+    },
+    {
+     "number": 6,
+     "name": "Matías Alonso Boto"
+    },
+    {
+     "number": 7,
+     "name": "Josué del Río"
+    },
+    {
+     "number": 8,
+     "name": "Iñaki Ustariz"
+    },
+    {
+     "number": 9,
+     "name": "Martín Graciarena"
+    },
+    {
+     "number": 10,
+     "name": "Santos Panelo"
+    },
+    {
+     "number": 11,
+     "name": "Tomás Baca Castex"
+    },
+    {
+     "number": 12,
+     "name": "Tobías Imbrosciano"
+    },
+    {
+     "number": 13,
+     "name": "Tomás Cotter Daireaux"
+    },
+    {
+     "number": 14,
+     "name": "Martín Cordeyro"
+    },
+    {
+     "number": 15,
+     "name": "Gonzalo Costaguta"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107065",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 10,
+   "stage": "regular",
+   "date": "2023-06-03",
+   "homeId": "los-tilos",
+   "awayId": "regatas-bella-vista",
+   "homeName": "Los Tilos",
+   "awayName": "Regatas Bella Vista",
+   "homeScore": 18,
+   "awayScore": 50,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "home": [
+    {
+     "number": 1,
+     "name": "Máximo Laurin"
+    },
+    {
+     "number": 2,
+     "name": "Jerónimo Castro"
+    },
+    {
+     "number": 3,
+     "name": "Ramiro Berardi"
+    },
+    {
+     "number": 4,
+     "name": "Filippo Arrua"
+    },
+    {
+     "number": 5,
+     "name": "Martín Leiva"
+    },
+    {
+     "number": 6,
+     "name": "Joaquín Coria"
+    },
+    {
+     "number": 7,
+     "name": "Tomás Tarzian"
+    },
+    {
+     "number": 8,
+     "name": "Carlos Cabano Wall"
+    },
+    {
+     "number": 9,
+     "name": "Marcos Albina"
+    },
+    {
+     "number": 10,
+     "name": "Mateo Fernández Armendáriz"
+    },
+    {
+     "number": 11,
+     "name": "Andrés Rubio Garmendia"
+    },
+    {
+     "number": 12,
+     "name": "Tomás Fernández Armendáriz"
+    },
+    {
+     "number": 13,
+     "name": "Bautista Roberti"
+    },
+    {
+     "number": 14,
+     "name": "Juan Pedro Amand de Mendieta"
+    },
+    {
+     "number": 15,
+     "name": "Manuel Tuculet"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Tomás Barbaccia"
+    },
+    {
+     "number": 2,
+     "name": "Pedro García Colinas"
+    },
+    {
+     "number": 3,
+     "name": "Esteban Sciandro"
+    },
+    {
+     "number": 4,
+     "name": "Marcelo Toledo"
+    },
+    {
+     "number": 5,
+     "name": "Tomás Sanguinetti"
+    },
+    {
+     "number": 6,
+     "name": "Agustín Medrano"
+    },
+    {
+     "number": 7,
+     "name": "Lucas Gobet"
+    },
+    {
+     "number": 8,
+     "name": "Felipe Camerlinckx"
+    },
+    {
+     "number": 9,
+     "name": "Marcos Joseph"
+    },
+    {
+     "number": 10,
+     "name": "Mateo Camerlinckx"
+    },
+    {
+     "number": 11,
+     "name": "Enrique Camerlinckx"
+    },
+    {
+     "number": 12,
+     "name": "Ramiro Moadeb"
+    },
+    {
+     "number": 13,
+     "name": "Alejo Barrera"
+    },
+    {
+     "number": 14,
+     "name": "Francisco Pisani"
+    },
+    {
+     "number": 15,
+     "name": "Cruz Camerlinckx"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107066",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 10,
+   "stage": "regular",
+   "date": "2023-06-03",
+   "homeId": "curupayti",
+   "awayId": "deportiva-francesa",
+   "homeName": "Curupayti",
+   "awayName": "Deportiva Francesa",
+   "homeScore": 35,
+   "awayScore": 37,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "home": [
+    {
+     "number": 1,
+     "name": "Rodrigo Fellay"
+    },
+    {
+     "number": 2,
+     "name": "José de Ballay"
+    },
+    {
+     "number": 3,
+     "name": "Facundo Fellay"
+    },
+    {
+     "number": 4,
+     "name": "Joaquín Tomé"
+    },
+    {
+     "number": 5,
+     "name": "Lucas Traverso"
+    },
+    {
+     "number": 6,
+     "name": "Francisco de Badiola"
+    },
+    {
+     "number": 7,
+     "name": "Bautista Ortíz"
+    },
+    {
+     "number": 8,
+     "name": "Nicolás Pini"
+    },
+    {
+     "number": 9,
+     "name": "Ramiro Bournot"
+    },
+    {
+     "number": 11,
+     "name": "Lucas Dastugue"
+    },
+    {
+     "number": 12,
+     "name": "Damián Benítez"
+    },
+    {
+     "number": 13,
+     "name": "Simón Walker"
+    },
+    {
+     "number": 14,
+     "name": "Iñaki Vidaurre"
+    },
+    {
+     "number": 15,
+     "name": "Hernán Zurini"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Tomás Jumilla"
+    },
+    {
+     "number": 2,
+     "name": "Marcos Isella"
+    },
+    {
+     "number": 3,
+     "name": "Jonatan Perello"
+    },
+    {
+     "number": 4,
+     "name": "Francisco Balcarce"
+    },
+    {
+     "number": 5,
+     "name": "Agustín Calvi"
+    },
+    {
+     "number": 6,
+     "name": "Nicolás Spandre"
+    },
+    {
+     "number": 7,
+     "name": "Bautista Rivero"
+    },
+    {
+     "number": 8,
+     "name": "Blas González Bonorino"
+    },
+    {
+     "number": 9,
+     "name": "Tomás Di Biasi"
+    },
+    {
+     "number": 10,
+     "name": "Estanislao Renthel"
+    },
+    {
+     "number": 11,
+     "name": "Nicolás García Encina"
+    },
+    {
+     "number": 12,
+     "name": "Federico Zarza"
+    },
+    {
+     "number": 13,
+     "name": "Lautaro Chocobar"
+    },
+    {
+     "number": 14,
+     "name": "Juan Verger"
+    },
+    {
+     "number": 15,
+     "name": "Pedro Espinal"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107068",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 10,
+   "stage": "regular",
+   "date": "2023-06-03",
+   "homeId": "san-albano",
+   "awayId": "mariano-moreno",
+   "homeName": "San Albano",
+   "awayName": "Mariano Moreno",
+   "homeScore": 29,
+   "awayScore": 25,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "home": [
+    {
+     "number": 1,
+     "name": "K. Losada"
+    },
+    {
+     "number": 2,
+     "name": "F. Francomano"
+    },
+    {
+     "number": 3,
+     "name": "S. Estefan"
+    },
+    {
+     "number": 4,
+     "name": "A. Irurzun"
+    },
+    {
+     "number": 5,
+     "name": "F. Castellano"
+    },
+    {
+     "number": 6,
+     "name": "L. Ojeda"
+    },
+    {
+     "number": 7,
+     "name": "A. Bockett Pugh"
+    },
+    {
+     "number": 8,
+     "name": "D. Bravo"
+    },
+    {
+     "number": 9,
+     "name": "B. Bravo"
+    },
+    {
+     "number": 10,
+     "name": "J. Ormson"
+    },
+    {
+     "number": 11,
+     "name": "L. Lualdi"
+    },
+    {
+     "number": 12,
+     "name": "F. Suppanieto"
+    },
+    {
+     "number": 13,
+     "name": "T. Longhini"
+    },
+    {
+     "number": 14,
+     "name": "J. Mac Gaw"
+    },
+    {
+     "number": 15,
+     "name": "H. Matlob"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Jerónimo Toledo"
+    },
+    {
+     "number": 2,
+     "name": "Nicolás Marino"
+    },
+    {
+     "number": 3,
+     "name": "Franco Tannous"
+    },
+    {
+     "number": 4,
+     "name": "Agustín Noguera"
+    },
+    {
+     "number": 5,
+     "name": "Santiago Sarthou"
+    },
+    {
+     "number": 6,
+     "name": "Vito Dagostino"
+    },
+    {
+     "number": 7,
+     "name": "Felipe Arrillaga"
+    },
+    {
+     "number": 8,
+     "name": "Ignacio Papasidero"
+    },
+    {
+     "number": 9,
+     "name": "Tomás Petit"
+    },
+    {
+     "number": 10,
+     "name": "Agustín Beorlegui"
+    },
+    {
+     "number": 11,
+     "name": "Santiago Zanotto"
+    },
+    {
+     "number": 12,
+     "name": "Lucas Stancanelli"
+    },
+    {
+     "number": 13,
+     "name": "Juan Cruz Gonzales"
+    },
+    {
+     "number": 14,
+     "name": "Joaquín Cora"
+    },
+    {
+     "number": 15,
+     "name": "Franco Mangini"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107069",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 10,
+   "stage": "regular",
+   "date": "2023-06-03",
+   "homeId": "los-matreros",
+   "awayId": "pueyrredon",
+   "homeName": "Los Matreros",
+   "awayName": "Pueyrredon",
+   "homeScore": 33,
+   "awayScore": 28,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "homeSource": null,
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "home": [],
+   "away": [
+    {
+     "number": 1,
+     "name": "Manuel Stuchetti"
+    },
+    {
+     "number": 2,
+     "name": "Matías Stuchetti"
+    },
+    {
+     "number": 3,
+     "name": "Franco Bustos"
+    },
+    {
+     "number": 4,
+     "name": "Facundo Bocalandro"
+    },
+    {
+     "number": 5,
+     "name": "Bautista Ballatore"
+    },
+    {
+     "number": 6,
+     "name": "Lucas Gracia"
+    },
+    {
+     "number": 7,
+     "name": "Gonzalo Fichera"
+    },
+    {
+     "number": 8,
+     "name": "Nicolás Bustamante"
+    },
+    {
+     "number": 9,
+     "name": "Federico Iceta"
+    },
+    {
+     "number": 10,
+     "name": "Marco Nigro"
+    },
+    {
+     "number": 11,
+     "name": "Franco Auad"
+    },
+    {
+     "number": 12,
+     "name": "Nicolás Stuchetti"
+    },
+    {
+     "number": 13,
+     "name": "Joaquín Grandoli"
+    },
+    {
+     "number": 14,
+     "name": "Matías Fernández Prato"
+    },
+    {
+     "number": 15,
+     "name": "Diego Walter"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107070",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 10,
+   "stage": "regular",
+   "date": "2023-06-03",
+   "homeId": "olivos",
+   "awayId": "san-cirano",
+   "homeName": "Olivos",
+   "awayName": "San Cirano",
+   "homeScore": 11,
+   "awayScore": 20,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "home": [
+    {
+     "number": 1,
+     "name": "M. Grandinetti"
+    },
+    {
+     "number": 2,
+     "name": "M. Rebolledo"
+    },
+    {
+     "number": 3,
+     "name": "N. Ayub"
+    },
+    {
+     "number": 4,
+     "name": "F. Rollandi"
+    },
+    {
+     "number": 5,
+     "name": "M. Jeancon"
+    },
+    {
+     "number": 6,
+     "name": "P. Duran"
+    },
+    {
+     "number": 7,
+     "name": "F. Barri"
+    },
+    {
+     "number": 8,
+     "name": "B. Ledesma"
+    },
+    {
+     "number": 9,
+     "name": "A- Bisceglia"
+    },
+    {
+     "number": 10,
+     "name": "M. García Colombo"
+    },
+    {
+     "number": 11,
+     "name": "L. Ghiorzi"
+    },
+    {
+     "number": 12,
+     "name": "F. Ioppolo"
+    },
+    {
+     "number": 13,
+     "name": "F. Pichler"
+    },
+    {
+     "number": 14,
+     "name": "T. Clusellas"
+    },
+    {
+     "number": 15,
+     "name": "J. Ascencio"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Hervera",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Cefalo",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Liporaci",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Neme",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Bottino",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "De Genaro"
+    },
+    {
+     "number": 7,
+     "name": "Larocca",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Figueiras",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Lertora",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "N. Sánchez"
+    },
+    {
+     "number": 11,
+     "name": "Fasano",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "J. Sánchez"
+    },
+    {
+     "number": 13,
+     "name": "Torino",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Tantucci",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Calello",
+     "surnameOnly": true
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107071",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 11,
+   "stage": "regular",
+   "date": "2023-06-10",
+   "homeId": "pueyrredon",
+   "awayId": "san-albano",
+   "homeName": "Pueyrredon",
+   "awayName": "San Albano",
+   "homeScore": 35,
+   "awayScore": 28,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "home": [
+    {
+     "number": 1,
+     "name": "Manuel Stuchetti"
+    },
+    {
+     "number": 2,
+     "name": "Matías Stuchetti"
+    },
+    {
+     "number": 3,
+     "name": "Franco Bustos"
+    },
+    {
+     "number": 4,
+     "name": "Facundo Bocalandro"
+    },
+    {
+     "number": 5,
+     "name": "Bautista Ballatore"
+    },
+    {
+     "number": 6,
+     "name": "Lucas Gracia"
+    },
+    {
+     "number": 7,
+     "name": "Gonzalo Fichera"
+    },
+    {
+     "number": 8,
+     "name": "Nicolás Bustamante"
+    },
+    {
+     "number": 9,
+     "name": "Giuliano Balbi"
+    },
+    {
+     "number": 10,
+     "name": "Bautista Yanguela"
+    },
+    {
+     "number": 11,
+     "name": "Franco Auad"
+    },
+    {
+     "number": 12,
+     "name": "Marco Nigro"
+    },
+    {
+     "number": 13,
+     "name": "Joaquín Grandoli"
+    },
+    {
+     "number": 14,
+     "name": "Lucio Aued"
+    },
+    {
+     "number": 15,
+     "name": "Diego Walter"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "S. Estefan"
+    },
+    {
+     "number": 2,
+     "name": "F. Francomano"
+    },
+    {
+     "number": 3,
+     "name": "A. Maydana"
+    },
+    {
+     "number": 4,
+     "name": "A. Irurzun"
+    },
+    {
+     "number": 5,
+     "name": "F. Castellano"
+    },
+    {
+     "number": 6,
+     "name": "D. Bravo"
+    },
+    {
+     "number": 7,
+     "name": "A. Bockett Pugh"
+    },
+    {
+     "number": 8,
+     "name": "G. Matlob"
+    },
+    {
+     "number": 9,
+     "name": "B. Bravo"
+    },
+    {
+     "number": 10,
+     "name": "J. Ormson"
+    },
+    {
+     "number": 11,
+     "name": "L. Lualdi"
+    },
+    {
+     "number": 12,
+     "name": "F. Suppanieto"
+    },
+    {
+     "number": 13,
+     "name": "T. Longhini"
+    },
+    {
+     "number": 14,
+     "name": "J. Mac Gaw"
+    },
+    {
+     "number": 15,
+     "name": "H. Matlob"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107073",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 11,
+   "stage": "regular",
+   "date": "2023-06-10",
+   "homeId": "banco-nacion",
+   "awayId": "curupayti",
+   "homeName": "Banco Nacion",
+   "awayName": "Curupayti",
+   "homeScore": 30,
+   "awayScore": 41,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "home": [
+    {
+     "number": 1,
+     "name": "J. Torres Aguerd"
+    },
+    {
+     "number": 2,
+     "name": "F. Cotugno"
+    },
+    {
+     "number": 3,
+     "name": "Scavarelli",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "L. Celan"
+    },
+    {
+     "number": 5,
+     "name": "G. Portalupi"
+    },
+    {
+     "number": 6,
+     "name": "J. López Córdoba"
+    },
+    {
+     "number": 7,
+     "name": "P. Guerrero"
+    },
+    {
+     "number": 8,
+     "name": "F. Porzio"
+    },
+    {
+     "number": 9,
+     "name": "G. Leone"
+    },
+    {
+     "number": 10,
+     "name": "T. Burtin"
+    },
+    {
+     "number": 11,
+     "name": "M. Cereijo"
+    },
+    {
+     "number": 12,
+     "name": "M. Alfaro"
+    },
+    {
+     "number": 13,
+     "name": "JC. Picasso"
+    },
+    {
+     "number": 14,
+     "name": "F. Merlo"
+    },
+    {
+     "number": 15,
+     "name": "N. Picasso"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Rodrigo Fellay"
+    },
+    {
+     "number": 2,
+     "name": "José de Badiola"
+    },
+    {
+     "number": 3,
+     "name": "Patricio Cocchi"
+    },
+    {
+     "number": 4,
+     "name": "Joaquín Tomé"
+    },
+    {
+     "number": 5,
+     "name": "Lucas Traverso"
+    },
+    {
+     "number": 6,
+     "name": "Francisco de Badiola"
+    },
+    {
+     "number": 7,
+     "name": "Agustín Samper"
+    },
+    {
+     "number": 8,
+     "name": "Nicolás Pini"
+    },
+    {
+     "number": 9,
+     "name": "Ramiro Bournot"
+    },
+    {
+     "number": 11,
+     "name": "Ignacio Cáceres"
+    },
+    {
+     "number": 12,
+     "name": "Damián Benítez"
+    },
+    {
+     "number": 13,
+     "name": "Lucas Dastugue"
+    },
+    {
+     "number": 14,
+     "name": "Iñaki Vidaurre"
+    },
+    {
+     "number": 15,
+     "name": "Simón Walker"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107074",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 11,
+   "stage": "regular",
+   "date": "2023-06-10",
+   "homeId": "deportiva-francesa",
+   "awayId": "los-tilos",
+   "homeName": "Deportiva Francesa",
+   "awayName": "Los Tilos",
+   "homeScore": 21,
+   "awayScore": 22,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "home": [
+    {
+     "number": 1,
+     "name": "Tomás Jumilla"
+    },
+    {
+     "number": 2,
+     "name": "Marcos Isella"
+    },
+    {
+     "number": 3,
+     "name": "Jonatan Perello"
+    },
+    {
+     "number": 4,
+     "name": "Francisco Balcarce"
+    },
+    {
+     "number": 5,
+     "name": "Agustín Calvi"
+    },
+    {
+     "number": 6,
+     "name": "Nicolás Spandre"
+    },
+    {
+     "number": 7,
+     "name": "Bautista Rivero"
+    },
+    {
+     "number": 8,
+     "name": "Blas González Bonorino"
+    },
+    {
+     "number": 9,
+     "name": "Pedro Cascaron"
+    },
+    {
+     "number": 10,
+     "name": "Estanislao Renthel"
+    },
+    {
+     "number": 11,
+     "name": "Nicolás García Encina"
+    },
+    {
+     "number": 12,
+     "name": "Federico Zarza"
+    },
+    {
+     "number": 13,
+     "name": "Manuel Estrada"
+    },
+    {
+     "number": 14,
+     "name": "Juan Verger"
+    },
+    {
+     "number": 15,
+     "name": "Pedro Espinal"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Adriel Armenti"
+    },
+    {
+     "number": 2,
+     "name": "Cosme Carruccio"
+    },
+    {
+     "number": 3,
+     "name": "Ramiro Berardi"
+    },
+    {
+     "number": 4,
+     "name": "Martín Leiva"
+    },
+    {
+     "number": 5,
+     "name": "Carlos Cabano Wall"
+    },
+    {
+     "number": 6,
+     "name": "Joaquín Coria"
+    },
+    {
+     "number": 7,
+     "name": "Tomás Tarzian"
+    },
+    {
+     "number": 8,
+     "name": "Pedro Capoccetti"
+    },
+    {
+     "number": 9,
+     "name": "Marcos Albina"
+    },
+    {
+     "number": 10,
+     "name": "Mateo Fernández Armendáriz"
+    },
+    {
+     "number": 11,
+     "name": "Andrés Rubio Garmendia"
+    },
+    {
+     "number": 12,
+     "name": "Tomás Fernández Armendáriz"
+    },
+    {
+     "number": 13,
+     "name": "Bautista Roberti"
+    },
+    {
+     "number": 14,
+     "name": "Juan Pedro Amand de Mendieta"
+    },
+    {
+     "number": 15,
+     "name": "Manuel Tuculet"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107075",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 11,
+   "stage": "regular",
+   "date": "2023-06-10",
+   "homeId": "regatas-bella-vista",
+   "awayId": "lomas-athletic",
+   "homeName": "Regatas Bella Vista",
+   "awayName": "Lomas Athletic",
+   "homeScore": 38,
+   "awayScore": 25,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "home": [
+    {
+     "number": 1,
+     "name": "Román Caste"
+    },
+    {
+     "number": 2,
+     "name": "Pedro García Colinas"
+    },
+    {
+     "number": 3,
+     "name": "Esteban Sciandro"
+    },
+    {
+     "number": 4,
+     "name": "Marcelo Toledo"
+    },
+    {
+     "number": 5,
+     "name": "Tomás Sanguinetti"
+    },
+    {
+     "number": 6,
+     "name": "Agustín Medrano"
+    },
+    {
+     "number": 7,
+     "name": "Lucas Gobet"
+    },
+    {
+     "number": 8,
+     "name": "Felipe Camerlinckx"
+    },
+    {
+     "number": 9,
+     "name": "Marcos Joseph"
+    },
+    {
+     "number": 10,
+     "name": "Mateo Camerlinckx"
+    },
+    {
+     "number": 11,
+     "name": "Enrique Camerlinckx"
+    },
+    {
+     "number": 12,
+     "name": "Matías Fernández Gill"
+    },
+    {
+     "number": 13,
+     "name": "Alejo Barrera"
+    },
+    {
+     "number": 14,
+     "name": "Francisco Pisani"
+    },
+    {
+     "number": 15,
+     "name": "Cruz Camerlinckx"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Franco Scaramella"
+    },
+    {
+     "number": 2,
+     "name": "Ian Bogani"
+    },
+    {
+     "number": 3,
+     "name": "Santiago Souto"
+    },
+    {
+     "number": 4,
+     "name": "Ramiro Tallone"
+    },
+    {
+     "number": 5,
+     "name": "Agustín Toth"
+    },
+    {
+     "number": 6,
+     "name": "Nicolás Weiss"
+    },
+    {
+     "number": 7,
+     "name": "Alejo Kubar"
+    },
+    {
+     "number": 8,
+     "name": "Federico Masottai"
+    },
+    {
+     "number": 9,
+     "name": "Gonzalo Gómez"
+    },
+    {
+     "number": 10,
+     "name": "Federico Borda"
+    },
+    {
+     "number": 11,
+     "name": "Marco Frega"
+    },
+    {
+     "number": 12,
+     "name": "Lucio Quercia"
+    },
+    {
+     "number": 13,
+     "name": "Francisco Ferrari"
+    },
+    {
+     "number": 14,
+     "name": "Manuel Carrusca"
+    },
+    {
+     "number": 15,
+     "name": "Bruno Quercia"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107076",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 11,
+   "stage": "regular",
+   "date": "2023-06-10",
+   "homeId": "champagnat",
+   "awayId": "olivos",
+   "homeName": "Champagnat",
+   "awayName": "Olivos",
+   "homeScore": 24,
+   "awayScore": 22,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "home": [
+    {
+     "number": 1,
+     "name": "Horacio Basualdo Quintana"
+    },
+    {
+     "number": 2,
+     "name": "Fernando Rodríguez Pascarella"
+    },
+    {
+     "number": 3,
+     "name": "Alberto Adissi"
+    },
+    {
+     "number": 4,
+     "name": "Francisco Castelli"
+    },
+    {
+     "number": 5,
+     "name": "Santiago Escuti"
+    },
+    {
+     "number": 6,
+     "name": "Matías Alonso Boto"
+    },
+    {
+     "number": 7,
+     "name": "Antonio López Llovet"
+    },
+    {
+     "number": 8,
+     "name": "Iñaki Ustariz"
+    },
+    {
+     "number": 9,
+     "name": "Martín Graciarena"
+    },
+    {
+     "number": 10,
+     "name": "Santos Panelo"
+    },
+    {
+     "number": 11,
+     "name": "Tomás Baca Castex"
+    },
+    {
+     "number": 12,
+     "name": "Tobías Imbrosciano"
+    },
+    {
+     "number": 13,
+     "name": "Tomás Cotter Daireaux"
+    },
+    {
+     "number": 14,
+     "name": "Tadeo Ustariz"
+    },
+    {
+     "number": 15,
+     "name": "Gonzalo Costaguta"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "M. Grandinetti"
+    },
+    {
+     "number": 2,
+     "name": "N. Ocello"
+    },
+    {
+     "number": 3,
+     "name": "N. Ayub"
+    },
+    {
+     "number": 4,
+     "name": "F. Rollandi"
+    },
+    {
+     "number": 5,
+     "name": "F. Carossio"
+    },
+    {
+     "number": 6,
+     "name": "P. Duran"
+    },
+    {
+     "number": 7,
+     "name": "F. Barri"
+    },
+    {
+     "number": 8,
+     "name": "B. Ledesma"
+    },
+    {
+     "number": 9,
+     "name": "A- Bisceglia"
+    },
+    {
+     "number": 10,
+     "name": "M. García Colombo"
+    },
+    {
+     "number": 11,
+     "name": "T. Trimboli"
+    },
+    {
+     "number": 12,
+     "name": "F. Ioppolo"
+    },
+    {
+     "number": 13,
+     "name": "F. Pichler"
+    },
+    {
+     "number": 14,
+     "name": "T. Clusellas"
+    },
+    {
+     "number": 15,
+     "name": "L. Ghiorzi"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023107077",
+   "season": 2023,
+   "division": "primera-a",
+   "round": 11,
+   "stage": "regular",
+   "date": "2023-06-10",
+   "homeId": "san-cirano",
+   "awayId": "los-matreros",
+   "homeName": "San Cirano",
+   "awayName": "Los Matreros",
+   "homeScore": 34,
+   "awayScore": 27,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2023107",
+   "source": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "awaySource": null,
+   "home": [
+    {
+     "number": 1,
+     "name": "Hervera",
+     "surnameOnly": true
+    },
+    {
+     "number": 2,
+     "name": "Cefalo",
+     "surnameOnly": true
+    },
+    {
+     "number": 3,
+     "name": "Mantelli",
+     "surnameOnly": true
+    },
+    {
+     "number": 4,
+     "name": "Carrera",
+     "surnameOnly": true
+    },
+    {
+     "number": 5,
+     "name": "Bottino",
+     "surnameOnly": true
+    },
+    {
+     "number": 6,
+     "name": "Neme",
+     "surnameOnly": true
+    },
+    {
+     "number": 7,
+     "name": "Pyzynski",
+     "surnameOnly": true
+    },
+    {
+     "number": 8,
+     "name": "Figueiras",
+     "surnameOnly": true
+    },
+    {
+     "number": 9,
+     "name": "Lertora",
+     "surnameOnly": true
+    },
+    {
+     "number": 10,
+     "name": "N. Sánchez"
+    },
+    {
+     "number": 11,
+     "name": "Tantucci",
+     "surnameOnly": true
+    },
+    {
+     "number": 12,
+     "name": "J. Sánchez"
+    },
+    {
+     "number": 13,
+     "name": "Torino",
+     "surnameOnly": true
+    },
+    {
+     "number": 14,
+     "name": "Aruanno",
+     "surnameOnly": true
+    },
+    {
+     "number": 15,
+     "name": "Fasano",
+     "surnameOnly": true
+    }
+   ],
+   "away": [],
+   "otherSources": []
+  },
+  {
+   "matchId": "2025-promocion-top-san-luis-champagnat",
+   "season": 2025,
+   "division": "primera-a",
+   "round": null,
+   "stage": "promocion-top",
+   "date": null,
+   "homeId": "san-luis",
+   "awayId": "champagnat",
+   "homeName": "San Luis",
+   "awayName": "Champagnat",
+   "homeScore": null,
+   "awayScore": null,
+   "indexSource": null,
+   "unindexed": true,
+   "sideOrder": "orden de la nota (local/visitante no verificado)",
+   "source": "https://www.rugbychampagneweb.com/urba/las-formaciones-para-las-finales-de-los-playoffs-de-la-urba",
+   "homeSource": null,
+   "awaySource": "https://www.rugbychampagneweb.com/urba/las-formaciones-para-las-finales-de-los-playoffs-de-la-urba",
+   "home": [],
+   "away": [
+    {
+     "number": 1,
+     "name": "Basualdo Quintana Honorio"
+    },
+    {
+     "number": 2,
+     "name": "Rodríguez Pascarella Fernando"
+    },
+    {
+     "number": 3,
+     "name": "Magaro Marcos"
+    },
+    {
+     "number": 4,
+     "name": "Escuti Santiago"
+    },
+    {
+     "number": 5,
+     "name": "Rojo Bas Nicolás"
+    },
+    {
+     "number": 6,
+     "name": "Alonso Boto Matías"
+    },
+    {
+     "number": 7,
+     "name": "Muniagurria Matías"
+    },
+    {
+     "number": 8,
+     "name": "Moresco Lucas"
+    },
+    {
+     "number": 9,
+     "name": "Graciarena Martín"
+    },
+    {
+     "number": 10,
+     "name": "Panelo Santos"
+    },
+    {
+     "number": 11,
+     "name": "Baca Castex Tomás"
+    },
+    {
+     "number": 12,
+     "name": "Bottazzi Joaquín"
+    },
+    {
+     "number": 13,
+     "name": "Cotter Daireaux Tomás"
+    },
+    {
+     "number": 14,
+     "name": "Rufino Facundo"
+    },
+    {
+     "number": 15,
+     "name": "Rojo Bas Felipe"
+    }
+   ],
+   "otherSources": []
+  },
+  {
+   "matchId": "urba-2023127086",
+   "season": 2025,
+   "division": "primera-a",
+   "round": null,
+   "stage": "promocion-final",
+   "date": "2025-11-08",
+   "homeId": "san-albano",
+   "awayId": "cu-quilmes",
+   "homeName": "San Albano",
+   "awayName": "C.U. de Quilmes",
+   "homeScore": 34,
+   "awayScore": 29,
+   "indexSource": "https://urba.org.ar/api/fixture/championship/2025164",
+   "source": "https://www.rugbychampagneweb.com/urba/las-formaciones-para-las-finales-de-los-playoffs-de-la-urba",
+   "homeSource": "https://www.rugbychampagneweb.com/urba/las-formaciones-para-las-finales-de-los-playoffs-de-la-urba",
+   "awaySource": "https://www.rugbychampagneweb.com/urba/las-formaciones-para-las-finales-de-los-playoffs-de-la-urba",
+   "home": [
+    {
+     "number": 1,
+     "name": "Peroncello Facundo"
+    },
+    {
+     "number": 2,
+     "name": "Luna Federico"
+    },
+    {
+     "number": 3,
+     "name": "Estefan Sebastián"
+    },
+    {
+     "number": 4,
+     "name": "Daubenbager Francisco"
+    },
+    {
+     "number": 5,
+     "name": "Irurzun Agustín"
+    },
+    {
+     "number": 6,
+     "name": "Gallia Lucas"
+    },
+    {
+     "number": 7,
+     "name": "Pallas Lucas"
+    },
+    {
+     "number": 8,
+     "name": "Matlob Gastón"
+    },
+    {
+     "number": 9,
+     "name": "Bravo Bruno"
+    },
+    {
+     "number": 10,
+     "name": "Mac Gaw James"
+    },
+    {
+     "number": 11,
+     "name": "Longhini Tomás"
+    },
+    {
+     "number": 12,
+     "name": "Suppa Nieto Fernando"
+    },
+    {
+     "number": 13,
+     "name": "Ansaldo Félix"
+    },
+    {
+     "number": 14,
+     "name": "Severina Lautaro"
+    },
+    {
+     "number": 15,
+     "name": "Matlob Hernán"
+    }
+   ],
+   "away": [
+    {
+     "number": 1,
+     "name": "Sanabria Kevin"
+    },
+    {
+     "number": 2,
+     "name": "Celoria Tomás"
+    },
+    {
+     "number": 3,
+     "name": "Serpico Juan"
+    },
+    {
+     "number": 4,
+     "name": "Gauto Leandro"
+    },
+    {
+     "number": 5,
+     "name": "López Julian"
+    },
+    {
+     "number": 6,
+     "name": "Serwatka Santiago"
+    },
+    {
+     "number": 7,
+     "name": "Mititieri Ignacio"
+    },
+    {
+     "number": 8,
+     "name": "Formía Kevin"
+    },
+    {
+     "number": 9,
+     "name": "Paglia Alejo"
+    },
+    {
+     "number": 10,
+     "name": "Casado Leandro"
+    },
+    {
+     "number": 11,
+     "name": "Druventi Mauro"
+    },
+    {
+     "number": 12,
+     "name": "Bardini Luciano"
+    },
+    {
+     "number": 13,
+     "name": "Domínguez Sebastián"
+    },
+    {
+     "number": 14,
+     "name": "Domínguez Lautaro"
+    },
+    {
+     "number": 15,
+     "name": "Astorga Tomás"
+    }
+   ],
+   "otherSources": []
+  }
+ ],
+ "articles": [
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/formaciones-para-los-repechajes",
+   "date": "2019-11-16",
+   "title": "Formaciones para los repechajes",
+   "blocks": 13,
+   "placeholders": 1,
+   "assigned": 8,
+   "skippedTopSides": [
+    {
+     "clubId": "cuba",
+     "matchId": "2019-primera-a-promocion-top-cuba-olivos",
+     "reason": "club del máximo torneo esa temporada"
+    }
+   ],
+   "unassigned": [
+    {
+     "label": "Luján",
+     "clubId": "lujan",
+     "players": 15,
+     "reason": "fuera de Primera A/B (Repechaje Primera C: Luján vs Mercedes)"
+    },
+    {
+     "label": "Banco Hipotecario",
+     "clubId": "banco-hipotecario",
+     "players": 15,
+     "reason": "fuera de Primera A/B"
+    },
+    {
+     "label": "Atlético San Andrés",
+     "clubId": "san-andres",
+     "players": 15
+    }
+   ]
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/las-formaciones-para-las-finales-de-los-playoffs-de-la-urba",
+   "date": "2025-11-08",
+   "title": "LAS FORMACIONES PARA LAS FINALES DE LOS PLAYOFFS DE LA URBA",
+   "blocks": 7,
+   "placeholders": 0,
+   "assigned": 5,
+   "skippedTopSides": [
+    {
+     "clubId": "san-luis",
+     "matchId": "2025-promocion-top-san-luis-champagnat",
+     "reason": "club del máximo torneo esa temporada"
+    }
+   ],
+   "unassigned": [
+    {
+     "label": "Tigre",
+     "clubId": "tigre",
+     "players": 15,
+     "next": null
+    }
+   ]
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/primera-division-a/formaciones-para-la-final-de-primera-a",
+   "date": "2021-11-26",
+   "title": "Formaciones para la final de Primera A",
+   "blocks": 2,
+   "placeholders": 0,
+   "assigned": 2,
+   "skippedTopSides": [],
+   "unassigned": []
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a",
+   "date": "2023-06-10",
+   "title": "LAS FORMACIONES EN LA PRIMERA A",
+   "blocks": 14,
+   "placeholders": 3,
+   "assigned": 11,
+   "skippedTopSides": [],
+   "unassigned": []
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-en-la-primera-a-de-la-fecha-9",
+   "date": "2023-06-03",
+   "title": "LAS FORMACIONES EN LA PRIMERA A DE LA FECHA 9",
+   "blocks": 13,
+   "placeholders": 1,
+   "assigned": 11,
+   "skippedTopSides": [],
+   "unassigned": [
+    {
+     "label": "SAN MARTÍN",
+     "clubId": "san-martin",
+     "players": 30,
+     "next": "san-albano"
+    }
+   ]
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/primera-division-a/las-formaciones-que-saldran-a-la-cancha-en-la-fecha-18",
+   "date": "2019-08-23",
+   "title": "Las formaciones que saldrán a la cancha en la fecha 18",
+   "blocks": 12,
+   "placeholders": 0,
+   "assigned": 12,
+   "skippedTopSides": [],
+   "unassigned": []
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/primera-division-b/las-formaciones-en-la-primera-b",
+   "date": "2023-05-19",
+   "title": "LAS FORMACIONES EN LA PRIMERA B",
+   "blocks": 14,
+   "placeholders": 4,
+   "assigned": 10,
+   "skippedTopSides": [],
+   "unassigned": []
+  },
+  {
+   "source": "champagne",
+   "url": "https://www.rugbychampagneweb.com/urba/primera-division-b/las-formaciones-para-la-fecha-18-del-campeonato",
+   "date": "2019-08-23",
+   "title": "Las formaciones para la fecha 18 del campeonato",
+   "blocks": 11,
+   "placeholders": 0,
+   "assigned": 10,
+   "skippedTopSides": [],
+   "unassigned": [
+    {
+     "label": "U. de La Plata",
+     "clubId": "universitario-la-plata",
+     "players": 15
+    }
+   ]
+  }
+ ],
+ "catalogCrossmatch": [
+  {
+   "playerId": "atletico-del-rosario-bautista-estelles",
+   "name": "Bautista Estellés",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Bautista Estelles"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-ezequiel-reyes",
+   "name": "Ezequiel Reyes",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Ezequiel Reyes"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-felipe-nogues",
+   "name": "Felipe Nogués",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Felipe Nogués"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-lucas-malanos",
+   "name": "Lucas Malanos",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Lucas Malanos"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-manuel-nogues",
+   "name": "Manuel Nogués",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Manuel Nogués"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-martin-elias",
+   "name": "Martín Elías",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Martín Elías"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-nicolas-casals",
+   "name": "Nicolás Casals",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Nicolás Casals"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-octavio-capella",
+   "name": "Octavio Capella",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Octavio Capella"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-santiago-casals",
+   "name": "Santiago Casals",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Santiago Casals"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "atletico-del-rosario-tomas-malanos",
+   "name": "Tomás Malanos",
+   "clubId": "atletico-del-rosario",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "atletico-del-rosario"
+     ],
+     "matches": 1,
+     "names": [
+      "Tomás Malanos"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "banco-nacion-facundo-cotugno",
+   "name": "Facundo Cotugno",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "F. Cotugno"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-facundo-merlo",
+   "name": "Facundo Merlo",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "F. Merlo"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-francisco-porzio",
+   "name": "Francisco Porzio",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "F. Porzio"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-guido-portalupi",
+   "name": "Guido Portalupi",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "G. Portalupi"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-juan-torres",
+   "name": "Juan Torres",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "J. Torres Aguerd"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-lautaro-celan",
+   "name": "Lautaro Celan",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "L. Celan"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-manuel-cereijo",
+   "name": "Manuel Cereijo",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "M. Cereijo"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-nicolas-picasso",
+   "name": "Nicolas Picasso",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "N. Picasso"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "banco-nacion-tomas-burtin",
+   "name": "Tomas Burtin",
+   "clubId": "banco-nacion",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "banco-nacion"
+     ],
+     "matches": 1,
+     "names": [
+      "T. Burtin"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "buenos-aires-crc-agustin-lamensa",
+   "name": "Agustín Lamensa",
+   "clubId": "buenos-aires-crc",
+   "seasons": [
+    {
+     "season": 2019,
+     "division": "primera-a",
+     "clubs": [
+      "buenos-aires-crc"
+     ],
+     "matches": 1,
+     "names": [
+      "A. Lamensa"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2019
+   ]
+  },
+  {
+   "playerId": "champagnat-alberto-natan-adissi",
+   "name": "Alberto Natan Adissi",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Alberto Adissi"
+     ],
+     "strength": "subset",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "champagnat-facundo-rufino",
+   "name": "Facundo Rufino",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Rufino Facundo"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-felipe-rojo-bas",
+   "name": "Felipe Rojo Bas",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Rojo Bas Felipe"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-fernando-rodriguez-pascarella",
+   "name": "Fernando Rodríguez Pascarella",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Fernando Rodríguez Pascarella"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Rodríguez Pascarella Fernando"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-francisco-migi-castelli-azpiroz",
+   "name": "Francisco Migi Castelli Azpiroz",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Francisco Castelli"
+     ],
+     "strength": "subset",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "champagnat-gonzalo-costaguta",
+   "name": "Gonzalo Costaguta",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Gonzalo Costaguta"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "champagnat-honorio-basualdo",
+   "name": "Honorio Basualdo Quintana",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Basualdo Quintana Honorio"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-inaki-alberto-ustariz",
+   "name": "Iñaki Alberto Ustariz",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Iñaki Ustariz"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "champagnat-joaquin-bottazzi",
+   "name": "Joaquin Bottazzi",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Bottazzi Joaquín"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-lucas-moresco",
+   "name": "Lucas Moresco",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Moresco Lucas"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-marcos-magaro",
+   "name": "Marcos Magaro",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Magaro Marcos"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-matias-jesus-alonso-boto",
+   "name": "Matias Jesus Alonso Boto",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Matías Alonso Boto"
+     ],
+     "strength": "subset",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Alonso Boto Matías"
+     ],
+     "strength": "subset",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-nicolas-rojo",
+   "name": "Nicolás Rojo",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Rojo Bas Nicolás"
+     ],
+     "strength": "subset",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-santiago-escuti",
+   "name": "Santiago Escuti",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Santiago Escuti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Escuti Santiago"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-santos-panelo",
+   "name": "Santos Panelo",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Santos Panelo"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Panelo Santos"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-tomas-baca-castex",
+   "name": "Tomás Baca Castex",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Tomás Baca Castex"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Baca Castex Tomás"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "champagnat-tomas-cotter-daireaux",
+   "name": "Tomás Cotter Daireaux",
+   "clubId": "champagnat",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 2,
+     "names": [
+      "Tomás Cotter Daireaux"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "champagnat"
+     ],
+     "matches": 1,
+     "names": [
+      "Cotter Daireaux Tomás"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-juan-serpico",
+   "name": "Juan Sérpico",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Serpico Juan"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-kevin-formia",
+   "name": "Kevin Formía",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Formía Kevin"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-kevin-sanabria",
+   "name": "Kevin Sanabria",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Sanabria Kevin"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-lautaro-dominguez",
+   "name": "Lautaro Domínguez",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Domínguez Lautaro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-leandro-casado",
+   "name": "Leandro Casado",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Casado Leandro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-leandro-gauto",
+   "name": "Leandro Gauto",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Gauto Leandro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-luciano-bardini",
+   "name": "Luciano Bardini",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Bardini Luciano"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-mauro-druventi",
+   "name": "Mauro Druventi",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Druventi Mauro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-santiago-serwatka",
+   "name": "Santiago Serwatka",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Serwatka Santiago"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-tomas-astorga",
+   "name": "Tomás Astorga",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Astorga Tomás"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "cu-quilmes-tomas-celoria",
+   "name": "Tomás Celoria",
+   "clubId": "cu-quilmes",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "cu-quilmes"
+     ],
+     "matches": 1,
+     "names": [
+      "Celoria Tomás"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-agustin-calvi",
+   "name": "Agustín Calvi",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Agustín Calvi"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-blas-gonzalez-bonorino",
+   "name": "Blas González Bonorino",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Blas González Bonorino"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-estanislao-renthel",
+   "name": "Estanislao Renthel",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Estanislao Renthel"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-federico-zarza",
+   "name": "Federico Zarza",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Federico Zarza"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-marcos-isella",
+   "name": "Marcos Isella",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Marcos Isella"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-nicolas-garcia-encina",
+   "name": "Nicolás García Encina",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Nicolás García Encina"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-nicolas-spandre",
+   "name": "Nicolás Spandre",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Nicolás Spandre"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-tomas-di-biase",
+   "name": "Tomás Di Biase",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 1,
+     "names": [
+      "Tomás Di Biasi"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "deportiva-francesa-tomas-jumilla",
+   "name": "Tomás Jumilla",
+   "clubId": "deportiva-francesa",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "deportiva-francesa"
+     ],
+     "matches": 2,
+     "names": [
+      "Tomás Jumilla"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "la-plata-ariel-del-cerro",
+   "name": "Ariel Del Cerro",
+   "clubId": "la-plata",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "la-plata"
+     ],
+     "matches": 1,
+     "names": [
+      "Ariel Del Cerro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "la-plata-carlos-mendieta",
+   "name": "Carlos Mendieta",
+   "clubId": "la-plata",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "la-plata"
+     ],
+     "matches": 1,
+     "names": [
+      "Carlos Mendieta"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "la-plata-facundo-panigatti",
+   "name": "Facundo Panigatti",
+   "clubId": "la-plata",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "la-plata"
+     ],
+     "matches": 1,
+     "names": [
+      "Facundo Panigatti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "la-plata-tomas-suarez-folch",
+   "name": "Tomás Suárez Folch",
+   "clubId": "la-plata",
+   "seasons": [
+    {
+     "season": 2021,
+     "division": "primera-a",
+     "clubs": [
+      "la-plata"
+     ],
+     "matches": 1,
+     "names": [
+      "Tomás Suárez Folch"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2021
+   ]
+  },
+  {
+   "playerId": "los-tilos-adriel-armenti",
+   "name": "Adriel Armenti",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 1,
+     "names": [
+      "Adriel Armenti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-carlos-augusto-cabano-wall",
+   "name": "Carlos Augusto Cabano Wall",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 2,
+     "names": [
+      "Carlos Cabano Wall"
+     ],
+     "strength": "subset",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-cosme-carruccio",
+   "name": "Cosme Carruccio",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 1,
+     "names": [
+      "Cosme Carruccio"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-jeronimo-castro",
+   "name": "Jeronimo Castro",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 1,
+     "names": [
+      "Jerónimo Castro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-marcos-albina",
+   "name": "Marcos Albina",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 2,
+     "names": [
+      "Marcos Albina"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-martin-leiva",
+   "name": "Martin Leiva",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 2,
+     "names": [
+      "Martín Leiva"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-mateo-fernandez-armendariz",
+   "name": "Mateo Fernández Armendariz",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 2,
+     "names": [
+      "Mateo Fernández Armendáriz"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-maximo-laurin",
+   "name": "Maximo Laurin",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 1,
+     "names": [
+      "Máximo Laurin"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-ramiro-berardi",
+   "name": "Ramiro Berardi",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 2,
+     "names": [
+      "Ramiro Berardi"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "los-tilos-tomas-fernandez-armendariz",
+   "name": "Tomás Fernández Armendariz",
+   "clubId": "los-tilos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "los-tilos"
+     ],
+     "matches": 2,
+     "names": [
+      "Tomás Fernández Armendáriz"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-agustin-noguera",
+   "name": "Agustín Noguera",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Agustín Noguera"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-franco-tannous",
+   "name": "Franco Tannous",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Franco Tannous"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-ignacio-papasidero",
+   "name": "Ignacio Papasidero",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Ignacio Papasidero"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-juan-cruz-gonzalez",
+   "name": "Juan Cruz González",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Juan Cruz Gonzales"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-nicolas-marino",
+   "name": "Nicolás Marino",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Nicolás Marino"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-santiago-sarthou",
+   "name": "Santiago Sarthou",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Santiago Sarthou"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "mariano-moreno-vito-d-agostino",
+   "name": "Vito D’agostino",
+   "clubId": "mariano-moreno",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "mariano-moreno"
+     ],
+     "matches": 1,
+     "names": [
+      "Vito Dagostino"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-agustin-bisceglia",
+   "name": "Agustín Bisceglia",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "A- Bisceglia"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-facundo-barri",
+   "name": "Facundo Barri",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "F. Barri"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-facundo-rollandi",
+   "name": "Facundo Rollandi",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "F. Rollandi"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-federico-pichler",
+   "name": "Federico Pichler",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "F. Pichler"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-joaquin-asencio",
+   "name": "Joaquín Asencio",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 1,
+     "names": [
+      "J. Ascencio"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-mateo-garcia-colombo",
+   "name": "Mateo García Colombo",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "M. García Colombo"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-nicolas-ocello",
+   "name": "Nicolás Ocello",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 1,
+     "names": [
+      "N. Ocello"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-patricio-duran",
+   "name": "Patricio Durán",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "P. Duran"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "olivos-tadeo-clusellas",
+   "name": "Tadeo Clusellas",
+   "clubId": "olivos",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "olivos"
+     ],
+     "matches": 2,
+     "names": [
+      "T. Clusellas"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-bautista-ballatore",
+   "name": "Bautista Ballatore",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Bautista Ballatore"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-bautista-yanguela",
+   "name": "Bautista Yanguela",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 1,
+     "names": [
+      "Bautista Yanguela"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-diego-walter",
+   "name": "Diego Walter",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Diego Walter"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-facundo-bocalandro",
+   "name": "Facundo Bocalandro",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Facundo Bocalandro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-federico-iceta",
+   "name": "Federico Iceta",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 1,
+     "names": [
+      "Federico Iceta"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-franco-auad",
+   "name": "Franco Auad",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Franco Auad"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-lucio-auad",
+   "name": "Lucio Auad",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 1,
+     "names": [
+      "Lucio Aued"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-manuel-stuchetti",
+   "name": "Manuel Stuchetti",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Manuel Stuchetti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-matias-fernandez-prato",
+   "name": "Matías Fernández Prato",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 1,
+     "names": [
+      "Matías Fernández Prato"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-matias-stuchetti",
+   "name": "Matías Stuchetti",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Matías Stuchetti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-nicolas-bustamante",
+   "name": "Nicolás Bustamante",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Nicolás Bustamante"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "pueyrredon-nicolas-stuchetti",
+   "name": "Nicolás Stuchetti",
+   "clubId": "pueyrredon",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 1,
+     "names": [
+      "Nicolás Stuchetti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-alejo-barrera",
+   "name": "Alejo Barrera",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Alejo Barrera"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-cruz-camerlinckx",
+   "name": "Cruz Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Cruz Camerlinckx"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-enrique-camerlinckx",
+   "name": "Enrique Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Enrique Camerlinckx"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-felipe-camerlinckx",
+   "name": "Felipe Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Felipe Camerlinckx"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-francisco-pisani",
+   "name": "Francisco Pisani Caride",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Francisco Pisani"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-lucas-gobet",
+   "name": "Lucas Gobet",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Lucas Gobet"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-marcelo-toledo",
+   "name": "Marcelo Toledo",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Marcelo Toledo"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-marcos-joseph",
+   "name": "Marcos Joseph",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Marcos Joseph"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-mateo-camerlinckx",
+   "name": "Mateo Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Mateo Camerlinckx"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-pedro-garcia-colinas",
+   "name": "Pedro García Colinas",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Pedro García Colinas"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-ramiro-moadeb",
+   "name": "Ramiro Moadeb",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 1,
+     "names": [
+      "Ramiro Moadeb"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-tomas-barbaccia",
+   "name": "Tomás Barbaccia",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 1,
+     "names": [
+      "Tomás Barbaccia"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "regatas-bella-vista-tomas-sanguinetti",
+   "name": "Tomás Sanguinetti",
+   "clubId": "regatas-bella-vista",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "regatas-bella-vista"
+     ],
+     "matches": 2,
+     "names": [
+      "Tomás Sanguinetti"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "san-albano-agusin-irurzun",
+   "name": "Agusin Irurzun",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 2,
+     "names": [
+      "A. Irurzun"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Irurzun Agustín"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-bruno-bravo",
+   "name": "Bruno Bravo",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 2,
+     "names": [
+      "B. Bravo"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Bravo Bruno"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-daniel-bravo",
+   "name": "Daniel Bravo",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 2,
+     "names": [
+      "D. Bravo"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "san-albano-felix-ansaldo",
+   "name": "Felix Ansaldo",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Ansaldo Félix"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-fernando-suppa-nieto",
+   "name": "Fernando Suppa Nieto",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Suppa Nieto Fernando"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-francisco-castellano",
+   "name": "Francisco Castellano",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 2,
+     "names": [
+      "F. Castellano"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "san-albano-franco-bustos",
+   "name": "Franco Bustos",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "pueyrredon"
+     ],
+     "matches": 2,
+     "names": [
+      "Franco Bustos"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "san-albano-hernan-matlob",
+   "name": "Hernan Matlob",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 2,
+     "names": [
+      "H. Matlob"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    },
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Matlob Hernán"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023,
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-james-mac-gaw",
+   "name": "James Mac Gaw",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Mac Gaw James"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-kevin-losada",
+   "name": "Kevin Losada",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2023,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "K. Losada"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2023
+   ]
+  },
+  {
+   "playerId": "san-albano-lautaro-severina",
+   "name": "Lautaro Severina",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Severina Lautaro"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-lucas-gallia",
+   "name": "Lucas Gallia",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Gallia Lucas"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "san-albano-lucas-pallas",
+   "name": "Lucas Pallas",
+   "clubId": "san-albano",
+   "seasons": [
+    {
+     "season": 2025,
+     "division": "primera-a",
+     "clubs": [
+      "san-albano"
+     ],
+     "matches": 1,
+     "names": [
+      "Pallas Lucas"
+     ],
+     "strength": "exact",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2025
+   ]
+  },
+  {
+   "playerId": "san-patricio-joaquin-bodenlle",
+   "name": "Joaquin Bodenlle",
+   "clubId": "san-patricio",
+   "seasons": [
+    {
+     "season": 2019,
+     "division": "primera-a",
+     "clubs": [
+      "san-patricio"
+     ],
+     "matches": 2,
+     "names": [
+      "J. Bodenlle"
+     ],
+     "strength": "initial",
+     "alreadyInTopTrajectory": false
+    }
+   ],
+   "newSeasons": [
+    2019
+   ]
+  }
+ ]
+}

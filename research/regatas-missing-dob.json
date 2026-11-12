@@ -1,0 +1,167 @@
+[
+ {
+  "id": "regatas-bella-vista-tomas-barbaccia",
+  "name": "Tomás Barbaccia",
+  "position": "Pilar izquierdo",
+  "lastObservedAt": "2026-03-14"
+ },
+ {
+  "id": "regatas-bella-vista-valentin-sanguinetti",
+  "name": "Valentín Sanguinetti",
+  "position": "Segunda línea",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-tomas-sanguinetti",
+  "name": "Tomás Sanguinetti",
+  "position": "Segunda línea",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-marcos-ferro",
+  "name": "Marcos Ferro",
+  "position": "Ala",
+  "lastObservedAt": "2026-03-14"
+ },
+ {
+  "id": "regatas-bella-vista-santiago-ruiz",
+  "name": "Santiago Ruiz",
+  "position": "Ala",
+  "lastObservedAt": "2026-03-14"
+ },
+ {
+  "id": "regatas-bella-vista-felipe-camerlinckx",
+  "name": "Felipe Camerlinckx",
+  "position": "Octavo",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-marcos-joseph",
+  "name": "Marcos Joseph",
+  "position": "Medio scrum",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-justo-camerlinckx",
+  "name": "Justo Camerlinckx",
+  "position": "Apertura",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-enrique-camerlinckx",
+  "name": "Enrique Camerlinckx",
+  "position": "Wing",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-alejo-barrera",
+  "name": "Alejo Barrera",
+  "position": "Centro",
+  "lastObservedAt": "2026-03-14"
+ },
+ {
+  "id": "regatas-bella-vista-cruz-camerlinckx",
+  "name": "Cruz Camerlinckx",
+  "position": "Fullback",
+  "lastObservedAt": "2026-03-14"
+ },
+ {
+  "id": "regatas-bella-vista-beltran-landivar",
+  "name": "Beltrán Landívar",
+  "position": "Hooker",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-juan-manuel-gobet",
+  "name": "Juan Manuel Gobet",
+  "position": "Pilar derecho",
+  "lastObservedAt": "2026-10-10"
+ },
+ {
+  "id": "regatas-bella-vista-matias-pascuet",
+  "name": "Matías Pascuet",
+  "position": "Ala",
+  "lastObservedAt": "2026-10-10"
+ },
+ {
+  "id": "regatas-bella-vista-jose-de-la-torre",
+  "name": "José de la Torre",
+  "position": "Apertura",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-mateo-camerlinckx",
+  "name": "Mateo Camerlinckx",
+  "position": "Centro",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-francisco-pisani",
+  "name": "Francisco Pisani Caride",
+  "position": "Centro",
+  "lastObservedAt": "2026-10-10"
+ },
+ {
+  "id": "regatas-bella-vista-felipe-rugolo",
+  "name": "Felipe Rugolo",
+  "position": "Wing",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-felipe-galli",
+  "name": "Felipe Galli",
+  "position": "Pilar derecho",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-lucas-gobet",
+  "name": "Lucas Gobet",
+  "position": "Ala",
+  "lastObservedAt": "2026-10-17"
+ },
+ {
+  "id": "regatas-bella-vista-agustin-garcia-campos",
+  "name": "Agustín García Campos",
+  "position": "Ala"
+ },
+ {
+  "id": "regatas-bella-vista-esteban-de-la-torre",
+  "name": "Esteban de la Torre",
+  "position": "Medio scrum"
+ },
+ {
+  "id": "regatas-bella-vista-tobias-klappenbach",
+  "name": "Tobías Klappenbach",
+  "position": "Centro"
+ },
+ {
+  "id": "regatas-bella-vista-ramiro-moadeb",
+  "name": "Ramiro Moadeb",
+  "position": "Centro"
+ },
+ {
+  "id": "regatas-bella-vista-juan-molina-campos",
+  "name": "Juan Molina Campos",
+  "position": "Wing"
+ },
+ {
+  "id": "regatas-bella-vista-diego-torres-aguero",
+  "name": "Diego Torres Agüero",
+  "position": "Pilar izquierdo"
+ },
+ {
+  "id": "regatas-bella-vista-bautista-solveyra",
+  "name": "Bautista Solveyra",
+  "position": "Pilar derecho"
+ },
+ {
+  "id": "regatas-bella-vista-pedro-garcia-colinas",
+  "name": "Pedro García Colinas",
+  "position": "Sin confirmar"
+ },
+ {
+  "id": "regatas-bella-vista-rafael-santa-ana",
+  "name": "Rafael Santa Ana",
+  "position": "Sin confirmar"
+ }
+]

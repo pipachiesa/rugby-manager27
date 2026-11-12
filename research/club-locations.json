@@ -1,0 +1,300 @@
+{
+ "generatedAt": "2026-11-11",
+ "note": "Approximate, from general knowledge; not web-verified.",
+ "clubs": [
+  {
+   "id": "newman",
+   "lat": -34.405,
+   "lng": -58.714,
+   "place": "Benavídez",
+   "precision": "venue"
+  },
+  {
+   "id": "casi",
+   "lat": -34.476,
+   "lng": -58.513,
+   "place": "Acassuso",
+   "precision": "venue"
+  },
+  {
+   "id": "hindu",
+   "lat": -34.482,
+   "lng": -58.63,
+   "place": "Don Torcuato",
+   "precision": "venue"
+  },
+  {
+   "id": "alumni",
+   "lat": -34.47,
+   "lng": -58.77,
+   "place": "Tortuguitas",
+   "precision": "venue"
+  },
+  {
+   "id": "sic",
+   "lat": -34.503,
+   "lng": -58.567,
+   "place": "Boulogne",
+   "precision": "venue"
+  },
+  {
+   "id": "los-tilos",
+   "lat": -34.885,
+   "lng": -57.975,
+   "place": "Tolosa, La Plata",
+   "precision": "venue"
+  },
+  {
+   "id": "belgrano-athletic",
+   "lat": -34.563,
+   "lng": -58.463,
+   "place": "Belgrano, Buenos Aires",
+   "precision": "venue"
+  },
+  {
+   "id": "regatas-bella-vista",
+   "lat": -34.56,
+   "lng": -58.69,
+   "place": "Bella Vista",
+   "precision": "venue"
+  },
+  {
+   "id": "cuba",
+   "lat": -34.502,
+   "lng": -58.69,
+   "place": "Villa de Mayo",
+   "precision": "venue"
+  },
+  {
+   "id": "atletico-del-rosario",
+   "lat": -32.945,
+   "lng": -60.69,
+   "place": "Rosario",
+   "precision": "venue"
+  },
+  {
+   "id": "la-plata",
+   "lat": -34.88,
+   "lng": -58.02,
+   "place": "Manuel B. Gonnet",
+   "precision": "venue"
+  },
+  {
+   "id": "buenos-aires-crc",
+   "lat": -34.47,
+   "lng": -58.54,
+   "place": "Victoria, San Fernando",
+   "precision": "venue"
+  },
+  {
+   "id": "los-matreros",
+   "lat": -34.65,
+   "lng": -58.68,
+   "place": "Castelar",
+   "precision": "venue"
+  },
+  {
+   "id": "champagnat",
+   "lat": -34.44,
+   "lng": -58.88,
+   "place": "Estancias del Pilar",
+   "precision": "venue"
+  },
+  {
+   "id": "san-luis",
+   "lat": -34.921,
+   "lng": -57.954,
+   "place": "La Plata",
+   "precision": "locality"
+  },
+  {
+   "id": "san-cirano",
+   "lat": -34.7,
+   "lng": -58.49,
+   "place": "Villa Celina",
+   "precision": "locality"
+  },
+  {
+   "id": "lomas-athletic",
+   "lat": -34.865,
+   "lng": -58.39,
+   "place": "Longchamps",
+   "precision": "locality"
+  },
+  {
+   "id": "curupayti",
+   "lat": -34.589,
+   "lng": -58.637,
+   "place": "Hurlingham",
+   "precision": "locality"
+  },
+  {
+   "id": "san-fernando",
+   "lat": -34.442,
+   "lng": -58.558,
+   "place": "San Fernando",
+   "precision": "locality"
+  },
+  {
+   "id": "pucara",
+   "lat": -34.81,
+   "lng": -58.39,
+   "place": "Burzaco",
+   "precision": "locality"
+  },
+  {
+   "id": "geba",
+   "lat": -34.564,
+   "lng": -58.417,
+   "place": "Palermo, Buenos Aires",
+   "precision": "locality"
+  },
+  {
+   "id": "hurling",
+   "lat": -34.592,
+   "lng": -58.64,
+   "place": "Hurlingham",
+   "precision": "locality"
+  },
+  {
+   "id": "san-andres",
+   "lat": -34.41,
+   "lng": -58.7,
+   "place": "Benavídez",
+   "precision": "locality"
+  },
+  {
+   "id": "pueyrredon",
+   "lat": -34.505,
+   "lng": -58.56,
+   "place": "Boulogne",
+   "precision": "locality"
+  },
+  {
+   "id": "olivos",
+   "lat": -34.53,
+   "lng": -58.525,
+   "place": "Munro",
+   "precision": "locality"
+  },
+  {
+   "id": "deportiva-francesa",
+   "lat": -34.458,
+   "lng": -58.787,
+   "place": "Del Viso",
+   "precision": "locality"
+  },
+  {
+   "id": "san-albano",
+   "lat": -34.825,
+   "lng": -58.395,
+   "place": "Burzaco",
+   "precision": "locality"
+  },
+  {
+   "id": "universitario-la-plata",
+   "lat": -34.875,
+   "lng": -58.01,
+   "place": "Manuel B. Gonnet",
+   "precision": "locality"
+  },
+  {
+   "id": "banco-nacion",
+   "lat": -34.412,
+   "lng": -58.705,
+   "place": "Benavídez",
+   "precision": "locality"
+  },
+  {
+   "id": "cu-quilmes",
+   "lat": -34.705,
+   "lng": -58.28,
+   "place": "Bernal",
+   "precision": "locality"
+  },
+  {
+   "id": "liceo-naval",
+   "lat": -34.604,
+   "lng": -58.382,
+   "place": "Buenos Aires",
+   "precision": "locality"
+  },
+  {
+   "id": "don-bosco",
+   "lat": -34.71,
+   "lng": -58.285,
+   "place": "Bernal",
+   "precision": "locality"
+  },
+  {
+   "id": "manuel-belgrano",
+   "lat": -34.379,
+   "lng": -58.738,
+   "place": "Maschwitz",
+   "precision": "locality"
+  },
+  {
+   "id": "mariano-moreno",
+   "lat": -34.643,
+   "lng": -58.83,
+   "place": "La Reja",
+   "precision": "locality"
+  },
+  {
+   "id": "san-martin",
+   "lat": -34.603,
+   "lng": -58.528,
+   "place": "Sáenz Peña",
+   "precision": "locality"
+  },
+  {
+   "id": "san-patricio",
+   "lat": -34.458,
+   "lng": -58.914,
+   "place": "Pilar",
+   "precision": "locality"
+  },
+  {
+   "id": "italiano",
+   "lat": -34.643,
+   "lng": -58.451,
+   "place": "Bajo Flores",
+   "precision": "locality"
+  },
+  {
+   "id": "argentino",
+   "lat": -34.662,
+   "lng": -58.365,
+   "place": "Avellaneda",
+   "precision": "locality"
+  },
+  {
+   "id": "delta",
+   "lat": -34.385,
+   "lng": -58.735,
+   "place": "Ingeniero Maschwitz",
+   "precision": "locality"
+  },
+  {
+   "id": "monte-grande",
+   "lat": -34.889,
+   "lng": -58.52,
+   "place": "Canning",
+   "precision": "locality"
+  },
+  {
+   "id": "liceo-militar",
+   "lat": -34.595,
+   "lng": -58.587,
+   "place": "Loma Hermosa",
+   "precision": "locality"
+  },
+  {
+   "id": "vicentinos",
+   "lat": -34.57,
+   "lng": -58.68,
+   "place": "Bella Vista",
+   "precision": "locality"
+  }
+ ]
+}

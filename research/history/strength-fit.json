@@ -1,0 +1,399 @@
+{
+ "generatedAt": "2026-11-12T13:11:30.497Z",
+ "seasonsPerIteration": 40,
+ "R": 0.85,
+ "log": [
+  {
+   "iteration": 0,
+   "rmse": 7.7
+  },
+  {
+   "iteration": 1,
+   "rmse": 4.4
+  },
+  {
+   "iteration": 2,
+   "rmse": 2.6
+  }
+ ],
+ "clubs": [
+  {
+   "id": "newman",
+   "division": "top14",
+   "from": 89,
+   "to": 95,
+   "simPoints": 99.7,
+   "target": 102.8,
+   "real": 110
+  },
+  {
+   "id": "casi",
+   "division": "top14",
+   "from": 87,
+   "to": 91,
+   "simPoints": 81.9,
+   "target": 85.8,
+   "real": 90
+  },
+  {
+   "id": "hindu",
+   "division": "top14",
+   "from": 80,
+   "to": 83,
+   "simPoints": 83.1,
+   "target": 85,
+   "real": 89
+  },
+  {
+   "id": "alumni",
+   "division": "top14",
+   "from": 82,
+   "to": 84,
+   "simPoints": 79,
+   "target": 82.4,
+   "real": 86
+  },
+  {
+   "id": "sic",
+   "division": "top14",
+   "from": 82,
+   "to": 85,
+   "simPoints": 80.6,
+   "target": 82.4,
+   "real": 86
+  },
+  {
+   "id": "los-tilos",
+   "division": "top14",
+   "from": 78,
+   "to": 78,
+   "simPoints": 63.4,
+   "target": 68,
+   "real": 69
+  },
+  {
+   "id": "belgrano-athletic",
+   "division": "top14",
+   "from": 78,
+   "to": 70,
+   "simPoints": 58.1,
+   "target": 58.6,
+   "real": 58
+  },
+  {
+   "id": "regatas-bella-vista",
+   "division": "top14",
+   "from": 78,
+   "to": 78,
+   "simPoints": 57.3,
+   "target": 56.9,
+   "real": 56
+  },
+  {
+   "id": "cuba",
+   "division": "top14",
+   "from": 78,
+   "to": 76,
+   "simPoints": 51.9,
+   "target": 52.7,
+   "real": 51
+  },
+  {
+   "id": "atletico-del-rosario",
+   "division": "top14",
+   "from": 69,
+   "to": 72,
+   "simPoints": 42.8,
+   "target": 45.9,
+   "real": 43
+  },
+  {
+   "id": "la-plata",
+   "division": "top14",
+   "from": 76,
+   "to": 76,
+   "simPoints": 46.1,
+   "target": 45,
+   "real": 42
+  },
+  {
+   "id": "buenos-aires-crc",
+   "division": "top14",
+   "from": 77,
+   "to": 77,
+   "simPoints": 43.5,
+   "target": 43.3,
+   "real": 40
+  },
+  {
+   "id": "los-matreros",
+   "division": "top14",
+   "from": 68,
+   "to": 75,
+   "simPoints": 42,
+   "target": 39.9,
+   "real": 36
+  },
+  {
+   "id": "champagnat",
+   "division": "top14",
+   "from": 63,
+   "to": 61,
+   "simPoints": 17.7,
+   "target": 22.1,
+   "real": 15
+  },
+  {
+   "id": "san-luis",
+   "division": "primera-a",
+   "from": 83,
+   "to": 80,
+   "simPoints": 95.6,
+   "target": 98.6,
+   "real": 105
+  },
+  {
+   "id": "san-cirano",
+   "division": "primera-a",
+   "from": 77,
+   "to": 76,
+   "simPoints": 80.3,
+   "target": 84.1,
+   "real": 88
+  },
+  {
+   "id": "lomas-athletic",
+   "division": "primera-a",
+   "from": 76,
+   "to": 77,
+   "simPoints": 79.2,
+   "target": 81.6,
+   "real": 85
+  },
+  {
+   "id": "curupayti",
+   "division": "primera-a",
+   "from": 78,
+   "to": 76,
+   "simPoints": 79.7,
+   "target": 81.6,
+   "real": 85
+  },
+  {
+   "id": "san-fernando",
+   "division": "primera-a",
+   "from": 72,
+   "to": 74,
+   "simPoints": 69.3,
+   "target": 72.2,
+   "real": 74
+  },
+  {
+   "id": "pucara",
+   "division": "primera-a",
+   "from": 70,
+   "to": 74,
+   "simPoints": 66.3,
+   "target": 66.3,
+   "real": 67
+  },
+  {
+   "id": "geba",
+   "division": "primera-a",
+   "from": 69,
+   "to": 70,
+   "simPoints": 59,
+   "target": 61.2,
+   "real": 61
+  },
+  {
+   "id": "hurling",
+   "division": "primera-a",
+   "from": 67,
+   "to": 67,
+   "simPoints": 59.2,
+   "target": 60.3,
+   "real": 60
+  },
+  {
+   "id": "san-andres",
+   "division": "primera-a",
+   "from": 64,
+   "to": 65,
+   "simPoints": 55.1,
+   "target": 56.1,
+   "real": 55
+  },
+  {
+   "id": "pueyrredon",
+   "division": "primera-a",
+   "from": 63,
+   "to": 69,
+   "simPoints": 45.9,
+   "target": 50.1,
+   "real": 48
+  },
+  {
+   "id": "olivos",
+   "division": "primera-a",
+   "from": 60,
+   "to": 61,
+   "simPoints": 47.7,
+   "target": 44.2,
+   "real": 41
+  },
+  {
+   "id": "deportiva-francesa",
+   "division": "primera-a",
+   "from": 60,
+   "to": 53,
+   "simPoints": 40.3,
+   "target": 43.3,
+   "real": 40
+  },
+  {
+   "id": "san-albano",
+   "division": "primera-a",
+   "from": 58,
+   "to": 65,
+   "simPoints": 39.8,
+   "target": 39.9,
+   "real": 36
+  },
+  {
+   "id": "universitario-la-plata",
+   "division": "primera-a",
+   "from": 53,
+   "to": 59,
+   "simPoints": 27.5,
+   "target": 30.6,
+   "real": 25
+  },
+  {
+   "id": "banco-nacion",
+   "division": "primera-b",
+   "from": 75,
+   "to": 74,
+   "simPoints": 85.6,
+   "target": 88.2,
+   "real": 93
+  },
+  {
+   "id": "cu-quilmes",
+   "division": "primera-b",
+   "from": 70,
+   "to": 71,
+   "simPoints": 79.4,
+   "target": 80.6,
+   "real": 84
+  },
+  {
+   "id": "liceo-naval",
+   "division": "primera-b",
+   "from": 70,
+   "to": 68,
+   "simPoints": 79.1,
+   "target": 78.9,
+   "real": 82
+  },
+  {
+   "id": "don-bosco",
+   "division": "primera-b",
+   "from": 68,
+   "to": 68,
+   "simPoints": 76.6,
+   "target": 74.6,
+   "real": 77
+  },
+  {
+   "id": "manuel-belgrano",
+   "division": "primera-b",
+   "from": 68,
+   "to": 67,
+   "simPoints": 72,
+   "target": 72.9,
+   "real": 75
+  },
+  {
+   "id": "mariano-moreno",
+   "division": "primera-b",
+   "from": 65,
+   "to": 63,
+   "simPoints": 68.8,
+   "target": 70.4,
+   "real": 72
+  },
+  {
+   "id": "san-martin",
+   "division": "primera-b",
+   "from": 64,
+   "to": 65,
+   "simPoints": 59.3,
+   "target": 64.4,
+   "real": 65
+  },
+  {
+   "id": "san-patricio",
+   "division": "primera-b",
+   "from": 61,
+   "to": 62,
+   "simPoints": 63.3,
+   "target": 63.6,
+   "real": 64
+  },
+  {
+   "id": "italiano",
+   "division": "primera-b",
+   "from": 63,
+   "to": 61,
+   "simPoints": 61.6,
+   "target": 62.7,
+   "real": 63
+  },
+  {
+   "id": "argentino",
+   "division": "primera-b",
+   "from": 58,
+   "to": 59,
+   "simPoints": 46.4,
+   "target": 50.8,
+   "real": 49
+  },
+  {
+   "id": "delta",
+   "division": "primera-b",
+   "from": 57,
+   "to": 58,
+   "simPoints": 49.7,
+   "target": 50,
+   "real": 48
+  },
+  {
+   "id": "monte-grande",
+   "division": "primera-b",
+   "from": 56,
+   "to": 59,
+   "simPoints": 45.8,
+   "target": 45.7,
+   "real": 43
+  },
+  {
+   "id": "liceo-militar",
+   "division": "primera-b",
+   "from": 48,
+   "to": 49,
+   "simPoints": 32.6,
+   "target": 33,
+   "real": 28
+  },
+  {
+   "id": "vicentinos",
+   "division": "primera-b",
+   "from": 45,
+   "to": 48,
+   "simPoints": 22.9,
+   "target": 18.5,
+   "real": 11
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+[
+ {
+  "id": "regatas-bella-vista-agustin-garcia-campos",
+  "name": "Agustín García Campos",
+  "type": "birthDate",
+  "birthDate": "2005-04-27",
+  "statedAge": null,
+  "articleDate": "2025-06-24",
+  "birthDateRange": null,
+  "url": "https://resources.worldrugby-rims.pulselive.com/worldrugby/document/2025/06/25/29539f1b-c23c-492c-affa-ec87da55f89f/Media-Guide-Los-Pumitas-2025.pdf",
+  "publisher": "World Rugby (Media Guide U20 Championship 2025, Los Pumitas) - documento oficial de prensa, no nota de diario",
+  "quote": "GARCÍA CAMPOS, AGUSTÍN - Fecha de nacimiento: 27/04/2005 - Club: Regatas BV",
+  "identityMatch": "Misma persona: mismo nombre completo, club Regatas BV, puesto 'Tercera línea' (compatible con Ala). Además la nota de ESPN del 25/06/2025 lo lista como 'GARCÍA CAMPOS, AGUSTÍN (REGATAS BELLA VISTA – URBA)' en el plantel Pumitas del Mundial M20 (https://www.espn.com.ar/rugby/nota/_/id/15294796/rugby-argentina-plantel-los-pumitas-mundial-m20). La fecha proviene del media guide oficial, no de la nota de ESPN (que no da edad).",
+  "confidence": "alta"
+ },
+ {
+  "summary": {
+    "playersReviewed": 29,
+    "playersWithFinding": 1,
+    "withFinding": ["regatas-bella-vista-agustin-garcia-campos"],
+    "withoutAnything": [
+      "regatas-bella-vista-tomas-barbaccia",
+      "regatas-bella-vista-valentin-sanguinetti",
+      "regatas-bella-vista-tomas-sanguinetti",
+      "regatas-bella-vista-marcos-ferro",
+      "regatas-bella-vista-santiago-ruiz",
+      "regatas-bella-vista-felipe-camerlinckx",
+      "regatas-bella-vista-marcos-joseph",
+      "regatas-bella-vista-justo-camerlinckx",
+      "regatas-bella-vista-enrique-camerlinckx",
+      "regatas-bella-vista-alejo-barrera",
+      "regatas-bella-vista-cruz-camerlinckx",
+      "regatas-bella-vista-beltran-landivar",
+      "regatas-bella-vista-juan-manuel-gobet",
+      "regatas-bella-vista-matias-pascuet",
+      "regatas-bella-vista-jose-de-la-torre",
+      "regatas-bella-vista-mateo-camerlinckx",
+      "regatas-bella-vista-francisco-pisani",
+      "regatas-bella-vista-felipe-rugolo",
+      "regatas-bella-vista-felipe-galli",
+      "regatas-bella-vista-lucas-gobet",
+      "regatas-bella-vista-esteban-de-la-torre",
+      "regatas-bella-vista-tobias-klappenbach",
+      "regatas-bella-vista-ramiro-moadeb",
+      "regatas-bella-vista-juan-molina-campos",
+      "regatas-bella-vista-diego-torres-aguero",
+      "regatas-bella-vista-bautista-solveyra",
+      "regatas-bella-vista-pedro-garcia-colinas",
+      "regatas-bella-vista-rafael-santa-ana"
+    ],
+    "notes": [
+      "Las notas de prensa de Regatas (ESPN, La Nación, A Pleno Rugby, periodismo-rugby) solo traen alineaciones y crónicas, sin edades ni nacimientos de estos jugadores.",
+      "Marcos Camerlinckx (no está en la lista) figura con 19 años en ESPN 21/06/2023 y nacimiento 28/07/2004 en el Media Guide Pumitas 2023 (UAR); no se confundió con Justo/Mateo/Felipe/Enrique/Cruz.",
+      "Francisco Pisani Caride jugó el Mundial M20 con Los Pumitas según crónicas, pero no se encontró edad ni fecha explícita; jugar M20 no es evidencia de edad. Los plantel de ESPN 2024 no lo listan; falta localizar el media guide de su edición.",
+      "Aparecen fechas en sitios agregadores de estadísticas (surprisesports.com: Barbaccia, Landívar, Gobet J.M., Cruz Camerlinckx, Galli, Lucas Gobet, E. de la Torre, Torres Agüero, F. Caride) que NO son notas de prensa ni se verifican; no se incluyen. Algunas parecen inconsistentes (p. ej. Landívar como pilar #16 y Torres Agüero sin club).",
+      "El 'Enrique Camerlinckx' presidente del club (Wikipedia) es otra persona/rol; no hay evidencia para el wing.",
+      "Sin resultados de ningún tipo para Bautista Solveyra."
+    ]
+  }
+ }
+]

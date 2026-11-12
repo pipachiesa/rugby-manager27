@@ -1,0 +1,3597 @@
+{
+  "version": 1,
+  "season": 2026,
+  "verifiedAt": "2026-11-10",
+  "usage": "Solo para juveniles ficticios. Usar primero el fondo general y un peso local moderado. Los apellidos compartidos no implican parentesco ni reflejan una plantilla real.",
+  "firstNames": [
+    {
+      "name": "Tomás",
+      "weight": 31
+    },
+    {
+      "name": "Juan",
+      "weight": 29
+    },
+    {
+      "name": "Bautista",
+      "weight": 20
+    },
+    {
+      "name": "Santiago",
+      "weight": 19
+    },
+    {
+      "name": "Francisco",
+      "weight": 16
+    },
+    {
+      "name": "Ignacio",
+      "weight": 14
+    },
+    {
+      "name": "Felipe",
+      "weight": 13
+    },
+    {
+      "name": "Lucas",
+      "weight": 12
+    },
+    {
+      "name": "Nicolás",
+      "weight": 10
+    },
+    {
+      "name": "Agustín",
+      "weight": 9
+    },
+    {
+      "name": "Benjamín",
+      "weight": 9
+    },
+    {
+      "name": "Joaquín",
+      "weight": 9
+    },
+    {
+      "name": "Marcos",
+      "weight": 9
+    },
+    {
+      "name": "Federico",
+      "weight": 8
+    },
+    {
+      "name": "Franco",
+      "weight": 8
+    },
+    {
+      "name": "Mateo",
+      "weight": 8
+    },
+    {
+      "name": "Pedro",
+      "weight": 8
+    },
+    {
+      "name": "Matías",
+      "weight": 7
+    },
+    {
+      "name": "Ramiro",
+      "weight": 7
+    },
+    {
+      "name": "Facundo",
+      "weight": 6
+    },
+    {
+      "name": "Manuel",
+      "weight": 6
+    },
+    {
+      "name": "Martín",
+      "weight": 6
+    },
+    {
+      "name": "Santino",
+      "weight": 6
+    },
+    {
+      "name": "Jerónimo",
+      "weight": 5
+    },
+    {
+      "name": "Simón",
+      "weight": 5
+    },
+    {
+      "name": "Alejo",
+      "weight": 4
+    },
+    {
+      "name": "Carlos",
+      "weight": 4
+    },
+    {
+      "name": "Joaquin",
+      "weight": 4
+    },
+    {
+      "name": "Luciano",
+      "weight": 4
+    },
+    {
+      "name": "Segundo",
+      "weight": 4
+    },
+    {
+      "name": "Tobías",
+      "weight": 4
+    },
+    {
+      "name": "Eliseo",
+      "weight": 3
+    },
+    {
+      "name": "José",
+      "weight": 3
+    },
+    {
+      "name": "Julián",
+      "weight": 3
+    },
+    {
+      "name": "Rafael",
+      "weight": 3
+    },
+    {
+      "name": "Ramón",
+      "weight": 3
+    },
+    {
+      "name": "Santos",
+      "weight": 3
+    },
+    {
+      "name": "Augusto",
+      "weight": 2
+    },
+    {
+      "name": "Baltazar",
+      "weight": 2
+    },
+    {
+      "name": "Beltrán",
+      "weight": 2
+    },
+    {
+      "name": "Benito",
+      "weight": 2
+    },
+    {
+      "name": "Blas",
+      "weight": 2
+    },
+    {
+      "name": "Cruz",
+      "weight": 2
+    },
+    {
+      "name": "Esteban",
+      "weight": 2
+    },
+    {
+      "name": "Félix",
+      "weight": 2
+    },
+    {
+      "name": "Gastón",
+      "weight": 2
+    },
+    {
+      "name": "Gonzalo",
+      "weight": 2
+    },
+    {
+      "name": "Honorio",
+      "weight": 2
+    },
+    {
+      "name": "Iñaki",
+      "weight": 2
+    },
+    {
+      "name": "Justo",
+      "weight": 2
+    },
+    {
+      "name": "Lisandro",
+      "weight": 2
+    },
+    {
+      "name": "Luca",
+      "weight": 2
+    },
+    {
+      "name": "Matias",
+      "weight": 2
+    },
+    {
+      "name": "Pablo",
+      "weight": 2
+    },
+    {
+      "name": "Rodrigo",
+      "weight": 2
+    },
+    {
+      "name": "Sebastián",
+      "weight": 2
+    },
+    {
+      "name": "Thiago",
+      "weight": 2
+    },
+    {
+      "name": "Valentino",
+      "weight": 2
+    },
+    {
+      "name": "Valentín",
+      "weight": 2
+    },
+    {
+      "name": "Alberto",
+      "weight": 1
+    },
+    {
+      "name": "Alejandro",
+      "weight": 1
+    },
+    {
+      "name": "Alfonso",
+      "weight": 1
+    },
+    {
+      "name": "Andrea",
+      "weight": 1
+    },
+    {
+      "name": "Antonio",
+      "weight": 1
+    },
+    {
+      "name": "Aquiles",
+      "weight": 1
+    },
+    {
+      "name": "Ariel",
+      "weight": 1
+    },
+    {
+      "name": "Basilio",
+      "weight": 1
+    },
+    {
+      "name": "Benicio",
+      "weight": 1
+    },
+    {
+      "name": "Bernabé",
+      "weight": 1
+    },
+    {
+      "name": "Boris",
+      "weight": 1
+    },
+    {
+      "name": "Bruno",
+      "weight": 1
+    },
+    {
+      "name": "Ciro",
+      "weight": 1
+    },
+    {
+      "name": "Colin",
+      "weight": 1
+    },
+    {
+      "name": "Constantino",
+      "weight": 1
+    },
+    {
+      "name": "Cristóbal",
+      "weight": 1
+    },
+    {
+      "name": "Danilo",
+      "weight": 1
+    },
+    {
+      "name": "Diego",
+      "weight": 1
+    },
+    {
+      "name": "Elio",
+      "weight": 1
+    },
+    {
+      "name": "Elías",
+      "weight": 1
+    },
+    {
+      "name": "Enrique",
+      "weight": 1
+    },
+    {
+      "name": "Eugenio",
+      "weight": 1
+    },
+    {
+      "name": "Ezequiel",
+      "weight": 1
+    },
+    {
+      "name": "Fabrizio",
+      "weight": 1
+    },
+    {
+      "name": "Faustino",
+      "weight": 1
+    },
+    {
+      "name": "Fermin",
+      "weight": 1
+    },
+    {
+      "name": "Fermín",
+      "weight": 1
+    },
+    {
+      "name": "Fernando",
+      "weight": 1
+    },
+    {
+      "name": "Filippo",
+      "weight": 1
+    },
+    {
+      "name": "Florencio",
+      "weight": 1
+    },
+    {
+      "name": "Germán",
+      "weight": 1
+    },
+    {
+      "name": "Hipólito",
+      "weight": 1
+    },
+    {
+      "name": "Isidro",
+      "weight": 1
+    },
+    {
+      "name": "Iván",
+      "weight": 1
+    },
+    {
+      "name": "Jeremy",
+      "weight": 1
+    },
+    {
+      "name": "Jeremías",
+      "weight": 1
+    },
+    {
+      "name": "Jorge",
+      "weight": 1
+    },
+    {
+      "name": "Lautaro",
+      "weight": 1
+    },
+    {
+      "name": "Leo",
+      "weight": 1
+    },
+    {
+      "name": "León",
+      "weight": 1
+    },
+    {
+      "name": "Lorenzo",
+      "weight": 1
+    },
+    {
+      "name": "Luis",
+      "weight": 1
+    },
+    {
+      "name": "Marcelo",
+      "weight": 1
+    },
+    {
+      "name": "Martin",
+      "weight": 1
+    },
+    {
+      "name": "Martiniano",
+      "weight": 1
+    },
+    {
+      "name": "Maximo",
+      "weight": 1
+    },
+    {
+      "name": "Miguel",
+      "weight": 1
+    },
+    {
+      "name": "Mikael",
+      "weight": 1
+    },
+    {
+      "name": "Máximo",
+      "weight": 1
+    },
+    {
+      "name": "Nicanor",
+      "weight": 1
+    },
+    {
+      "name": "Nicolas",
+      "weight": 1
+    },
+    {
+      "name": "Octavio",
+      "weight": 1
+    },
+    {
+      "name": "Pascal",
+      "weight": 1
+    },
+    {
+      "name": "Patricio",
+      "weight": 1
+    },
+    {
+      "name": "Prieto",
+      "weight": 1
+    },
+    {
+      "name": "Renzo",
+      "weight": 1
+    },
+    {
+      "name": "Rocco",
+      "weight": 1
+    },
+    {
+      "name": "Samuel",
+      "weight": 1
+    },
+    {
+      "name": "Teo",
+      "weight": 1
+    },
+    {
+      "name": "Teófilo",
+      "weight": 1
+    },
+    {
+      "name": "Theo",
+      "weight": 1
+    },
+    {
+      "name": "Timoteo",
+      "weight": 1
+    },
+    {
+      "name": "Tiziano",
+      "weight": 1
+    },
+    {
+      "name": "Tobias",
+      "weight": 1
+    },
+    {
+      "name": "Tomas",
+      "weight": 1
+    },
+    {
+      "name": "Toribio",
+      "weight": 1
+    },
+    {
+      "name": "Walter",
+      "weight": 1
+    }
+  ],
+  "surnames": [
+    {
+      "name": "Camerlinckx",
+      "weight": 6
+    },
+    {
+      "name": "Daireaux",
+      "weight": 3
+    },
+    {
+      "name": "Etcheverry",
+      "weight": 3
+    },
+    {
+      "name": "Panelo",
+      "weight": 3
+    },
+    {
+      "name": "de la Vega",
+      "weight": 3
+    },
+    {
+      "name": "Amaya",
+      "weight": 2
+    },
+    {
+      "name": "Anderson",
+      "weight": 2
+    },
+    {
+      "name": "Arana",
+      "weight": 2
+    },
+    {
+      "name": "Basualdo",
+      "weight": 2
+    },
+    {
+      "name": "Bernasconi",
+      "weight": 2
+    },
+    {
+      "name": "Bosch",
+      "weight": 2
+    },
+    {
+      "name": "Bottoni",
+      "weight": 2
+    },
+    {
+      "name": "Cancelliere",
+      "weight": 2
+    },
+    {
+      "name": "Casals",
+      "weight": 2
+    },
+    {
+      "name": "Cordero",
+      "weight": 2
+    },
+    {
+      "name": "Cubilla",
+      "weight": 2
+    },
+    {
+      "name": "De la Torre",
+      "weight": 2
+    },
+    {
+      "name": "Fernández Miranda",
+      "weight": 2
+    },
+    {
+      "name": "Gobet",
+      "weight": 2
+    },
+    {
+      "name": "Graglia",
+      "weight": 2
+    },
+    {
+      "name": "Latorre",
+      "weight": 2
+    },
+    {
+      "name": "Leiva",
+      "weight": 2
+    },
+    {
+      "name": "Lucca",
+      "weight": 2
+    },
+    {
+      "name": "Malanos",
+      "weight": 2
+    },
+    {
+      "name": "Morales",
+      "weight": 2
+    },
+    {
+      "name": "Nogués",
+      "weight": 2
+    },
+    {
+      "name": "Prince",
+      "weight": 2
+    },
+    {
+      "name": "Rodríguez",
+      "weight": 2
+    },
+    {
+      "name": "Roger",
+      "weight": 2
+    },
+    {
+      "name": "Rubio",
+      "weight": 2
+    },
+    {
+      "name": "Ruiz",
+      "weight": 2
+    },
+    {
+      "name": "Salinas",
+      "weight": 2
+    },
+    {
+      "name": "Sanguinetti",
+      "weight": 2
+    },
+    {
+      "name": "Solveyra",
+      "weight": 2
+    },
+    {
+      "name": "Sosa",
+      "weight": 2
+    },
+    {
+      "name": "Testoni",
+      "weight": 2
+    },
+    {
+      "name": "Tuculet",
+      "weight": 2
+    },
+    {
+      "name": "Ulloa",
+      "weight": 2
+    },
+    {
+      "name": "Ustariz",
+      "weight": 2
+    },
+    {
+      "name": "Acrich Peralta Alvear",
+      "weight": 1
+    },
+    {
+      "name": "Addiechi",
+      "weight": 1
+    },
+    {
+      "name": "Adissi",
+      "weight": 1
+    },
+    {
+      "name": "Aguilar",
+      "weight": 1
+    },
+    {
+      "name": "Aime",
+      "weight": 1
+    },
+    {
+      "name": "Akemeier",
+      "weight": 1
+    },
+    {
+      "name": "Albanese",
+      "weight": 1
+    },
+    {
+      "name": "Albani",
+      "weight": 1
+    },
+    {
+      "name": "Albina",
+      "weight": 1
+    },
+    {
+      "name": "Alduncin",
+      "weight": 1
+    },
+    {
+      "name": "Allende",
+      "weight": 1
+    },
+    {
+      "name": "Alonso",
+      "weight": 1
+    },
+    {
+      "name": "Altamirano",
+      "weight": 1
+    },
+    {
+      "name": "Amher",
+      "weight": 1
+    },
+    {
+      "name": "Amorisa",
+      "weight": 1
+    },
+    {
+      "name": "Ana",
+      "weight": 1
+    },
+    {
+      "name": "Anderlic",
+      "weight": 1
+    },
+    {
+      "name": "Annand",
+      "weight": 1
+    },
+    {
+      "name": "Apricio",
+      "weight": 1
+    },
+    {
+      "name": "Aranoa",
+      "weight": 1
+    },
+    {
+      "name": "Armendariz",
+      "weight": 1
+    },
+    {
+      "name": "Arrieta",
+      "weight": 1
+    },
+    {
+      "name": "Avaca",
+      "weight": 1
+    },
+    {
+      "name": "Azpiroz",
+      "weight": 1
+    },
+    {
+      "name": "Banach",
+      "weight": 1
+    },
+    {
+      "name": "Barbaccia",
+      "weight": 1
+    },
+    {
+      "name": "Bares",
+      "weight": 1
+    },
+    {
+      "name": "Barrera",
+      "weight": 1
+    },
+    {
+      "name": "Bassagaisteguy",
+      "weight": 1
+    },
+    {
+      "name": "Belaga",
+      "weight": 1
+    },
+    {
+      "name": "Benavides",
+      "weight": 1
+    },
+    {
+      "name": "Benedit",
+      "weight": 1
+    },
+    {
+      "name": "Bensadon",
+      "weight": 1
+    },
+    {
+      "name": "Benítez",
+      "weight": 1
+    },
+    {
+      "name": "Berardi",
+      "weight": 1
+    },
+    {
+      "name": "Bernabé",
+      "weight": 1
+    },
+    {
+      "name": "Bertero",
+      "weight": 1
+    },
+    {
+      "name": "Binda",
+      "weight": 1
+    },
+    {
+      "name": "Bivort",
+      "weight": 1
+    },
+    {
+      "name": "Blacksley",
+      "weight": 1
+    },
+    {
+      "name": "Blaiotta",
+      "weight": 1
+    },
+    {
+      "name": "Bonasso",
+      "weight": 1
+    },
+    {
+      "name": "Bonnet",
+      "weight": 1
+    },
+    {
+      "name": "Borda",
+      "weight": 1
+    },
+    {
+      "name": "Borio",
+      "weight": 1
+    },
+    {
+      "name": "Boto",
+      "weight": 1
+    },
+    {
+      "name": "Bottazzi",
+      "weight": 1
+    },
+    {
+      "name": "Bottazzini",
+      "weight": 1
+    },
+    {
+      "name": "Bourdal",
+      "weight": 1
+    },
+    {
+      "name": "Briatore",
+      "weight": 1
+    },
+    {
+      "name": "Briozzo",
+      "weight": 1
+    },
+    {
+      "name": "Brunetti",
+      "weight": 1
+    },
+    {
+      "name": "Bunge",
+      "weight": 1
+    },
+    {
+      "name": "Bávaro",
+      "weight": 1
+    },
+    {
+      "name": "Cabello",
+      "weight": 1
+    },
+    {
+      "name": "Calandra",
+      "weight": 1
+    },
+    {
+      "name": "Cambiasso",
+      "weight": 1
+    },
+    {
+      "name": "Campbell",
+      "weight": 1
+    },
+    {
+      "name": "Campion",
+      "weight": 1
+    },
+    {
+      "name": "Campos",
+      "weight": 1
+    },
+    {
+      "name": "Canedo",
+      "weight": 1
+    },
+    {
+      "name": "Canzani",
+      "weight": 1
+    },
+    {
+      "name": "Capella",
+      "weight": 1
+    },
+    {
+      "name": "Capurro",
+      "weight": 1
+    },
+    {
+      "name": "Cardinal",
+      "weight": 1
+    },
+    {
+      "name": "Cardini",
+      "weight": 1
+    },
+    {
+      "name": "Carrara",
+      "weight": 1
+    },
+    {
+      "name": "Carril",
+      "weight": 1
+    },
+    {
+      "name": "Carro",
+      "weight": 1
+    },
+    {
+      "name": "Casalins",
+      "weight": 1
+    },
+    {
+      "name": "Castagna",
+      "weight": 1
+    },
+    {
+      "name": "Castanier",
+      "weight": 1
+    },
+    {
+      "name": "Castelli",
+      "weight": 1
+    },
+    {
+      "name": "Castex",
+      "weight": 1
+    },
+    {
+      "name": "Cayol",
+      "weight": 1
+    },
+    {
+      "name": "Cañas",
+      "weight": 1
+    },
+    {
+      "name": "Cebrón",
+      "weight": 1
+    },
+    {
+      "name": "Cec",
+      "weight": 1
+    },
+    {
+      "name": "Cejas",
+      "weight": 1
+    },
+    {
+      "name": "Cerioni",
+      "weight": 1
+    },
+    {
+      "name": "Ceñal",
+      "weight": 1
+    },
+    {
+      "name": "Chiappani",
+      "weight": 1
+    },
+    {
+      "name": "Chiappe",
+      "weight": 1
+    },
+    {
+      "name": "Chiavassa",
+      "weight": 1
+    },
+    {
+      "name": "Cocomarola",
+      "weight": 1
+    },
+    {
+      "name": "Comolli",
+      "weight": 1
+    },
+    {
+      "name": "Coria",
+      "weight": 1
+    },
+    {
+      "name": "Corleto",
+      "weight": 1
+    },
+    {
+      "name": "Cornejo",
+      "weight": 1
+    },
+    {
+      "name": "Corso",
+      "weight": 1
+    },
+    {
+      "name": "Cortopasso",
+      "weight": 1
+    },
+    {
+      "name": "Cossutta",
+      "weight": 1
+    },
+    {
+      "name": "Costa",
+      "weight": 1
+    },
+    {
+      "name": "Costaguta",
+      "weight": 1
+    },
+    {
+      "name": "Croce",
+      "weight": 1
+    },
+    {
+      "name": "Cuneo",
+      "weight": 1
+    },
+    {
+      "name": "Cáceres",
+      "weight": 1
+    },
+    {
+      "name": "D'Amorim",
+      "weight": 1
+    },
+    {
+      "name": "Dapas",
+      "weight": 1
+    },
+    {
+      "name": "David",
+      "weight": 1
+    },
+    {
+      "name": "De Carabassa",
+      "weight": 1
+    },
+    {
+      "name": "Del Cerro",
+      "weight": 1
+    },
+    {
+      "name": "Delger",
+      "weight": 1
+    },
+    {
+      "name": "Diviesti",
+      "weight": 1
+    },
+    {
+      "name": "Dománico",
+      "weight": 1
+    },
+    {
+      "name": "Domínguez Perdigón",
+      "weight": 1
+    },
+    {
+      "name": "Dragui",
+      "weight": 1
+    },
+    {
+      "name": "Duggan",
+      "weight": 1
+    },
+    {
+      "name": "Díaz",
+      "weight": 1
+    },
+    {
+      "name": "Díaz de Vivar",
+      "weight": 1
+    },
+    {
+      "name": "Echenique",
+      "weight": 1
+    },
+    {
+      "name": "Egea",
+      "weight": 1
+    },
+    {
+      "name": "Elicagaray",
+      "weight": 1
+    },
+    {
+      "name": "Elías",
+      "weight": 1
+    },
+    {
+      "name": "Engelhard",
+      "weight": 1
+    },
+    {
+      "name": "Escuti",
+      "weight": 1
+    },
+    {
+      "name": "Espina",
+      "weight": 1
+    },
+    {
+      "name": "Estellés",
+      "weight": 1
+    },
+    {
+      "name": "Estévez",
+      "weight": 1
+    },
+    {
+      "name": "Etchepare",
+      "weight": 1
+    },
+    {
+      "name": "Ezcurra",
+      "weight": 1
+    },
+    {
+      "name": "Farisé",
+      "weight": 1
+    },
+    {
+      "name": "Fauve",
+      "weight": 1
+    },
+    {
+      "name": "Fernández Criado",
+      "weight": 1
+    },
+    {
+      "name": "Ferreyra",
+      "weight": 1
+    },
+    {
+      "name": "Ferro",
+      "weight": 1
+    },
+    {
+      "name": "Ferronato",
+      "weight": 1
+    },
+    {
+      "name": "Folch",
+      "weight": 1
+    },
+    {
+      "name": "Fontán",
+      "weight": 1
+    },
+    {
+      "name": "Fraga",
+      "weight": 1
+    },
+    {
+      "name": "Franco",
+      "weight": 1
+    },
+    {
+      "name": "Freire",
+      "weight": 1
+    },
+    {
+      "name": "Fuentes",
+      "weight": 1
+    },
+    {
+      "name": "Gahan",
+      "weight": 1
+    },
+    {
+      "name": "Gallastegui",
+      "weight": 1
+    },
+    {
+      "name": "Galli",
+      "weight": 1
+    },
+    {
+      "name": "Gallo",
+      "weight": 1
+    },
+    {
+      "name": "García",
+      "weight": 1
+    },
+    {
+      "name": "García Campos",
+      "weight": 1
+    },
+    {
+      "name": "García Colinas",
+      "weight": 1
+    },
+    {
+      "name": "Garoby",
+      "weight": 1
+    },
+    {
+      "name": "Gasparotti",
+      "weight": 1
+    },
+    {
+      "name": "Gattas",
+      "weight": 1
+    },
+    {
+      "name": "Gatti",
+      "weight": 1
+    },
+    {
+      "name": "Ghisolfi",
+      "weight": 1
+    },
+    {
+      "name": "Giachello",
+      "weight": 1
+    },
+    {
+      "name": "Giannantonio",
+      "weight": 1
+    },
+    {
+      "name": "Gibert",
+      "weight": 1
+    },
+    {
+      "name": "Godoy",
+      "weight": 1
+    },
+    {
+      "name": "González Capdevila",
+      "weight": 1
+    },
+    {
+      "name": "González Iglesias",
+      "weight": 1
+    },
+    {
+      "name": "Guc",
+      "weight": 1
+    },
+    {
+      "name": "Guevara",
+      "weight": 1
+    },
+    {
+      "name": "Guichon",
+      "weight": 1
+    },
+    {
+      "name": "Gutiérrez Taboada",
+      "weight": 1
+    },
+    {
+      "name": "Gómez",
+      "weight": 1
+    },
+    {
+      "name": "Haschisch",
+      "weight": 1
+    },
+    {
+      "name": "Herrera",
+      "weight": 1
+    },
+    {
+      "name": "Hileman",
+      "weight": 1
+    },
+    {
+      "name": "Iribarne",
+      "weight": 1
+    },
+    {
+      "name": "Joseph",
+      "weight": 1
+    },
+    {
+      "name": "Juliano",
+      "weight": 1
+    },
+    {
+      "name": "Kantz",
+      "weight": 1
+    },
+    {
+      "name": "Keena",
+      "weight": 1
+    },
+    {
+      "name": "Keller",
+      "weight": 1
+    },
+    {
+      "name": "Klappenbach",
+      "weight": 1
+    },
+    {
+      "name": "Kucic",
+      "weight": 1
+    },
+    {
+      "name": "Laborde",
+      "weight": 1
+    },
+    {
+      "name": "Lago",
+      "weight": 1
+    },
+    {
+      "name": "Lalor",
+      "weight": 1
+    },
+    {
+      "name": "Lamelas",
+      "weight": 1
+    },
+    {
+      "name": "Lamensa",
+      "weight": 1
+    },
+    {
+      "name": "Lando",
+      "weight": 1
+    },
+    {
+      "name": "Landívar",
+      "weight": 1
+    },
+    {
+      "name": "Lanfranco",
+      "weight": 1
+    },
+    {
+      "name": "Lanusse",
+      "weight": 1
+    },
+    {
+      "name": "Larrague",
+      "weight": 1
+    },
+    {
+      "name": "Lascombes",
+      "weight": 1
+    },
+    {
+      "name": "Laurin",
+      "weight": 1
+    },
+    {
+      "name": "Ledesma Arocena",
+      "weight": 1
+    },
+    {
+      "name": "Leiro",
+      "weight": 1
+    },
+    {
+      "name": "Llerena",
+      "weight": 1
+    },
+    {
+      "name": "Lluch",
+      "weight": 1
+    },
+    {
+      "name": "Longo",
+      "weight": 1
+    },
+    {
+      "name": "Loza",
+      "weight": 1
+    },
+    {
+      "name": "Lozano",
+      "weight": 1
+    },
+    {
+      "name": "Lusarreta",
+      "weight": 1
+    },
+    {
+      "name": "López Fleming",
+      "weight": 1
+    },
+    {
+      "name": "Macadam",
+      "weight": 1
+    },
+    {
+      "name": "Mackinlay",
+      "weight": 1
+    },
+    {
+      "name": "Magaro",
+      "weight": 1
+    },
+    {
+      "name": "Magliano",
+      "weight": 1
+    },
+    {
+      "name": "Manuele",
+      "weight": 1
+    },
+    {
+      "name": "Marchetti",
+      "weight": 1
+    },
+    {
+      "name": "Marelli",
+      "weight": 1
+    },
+    {
+      "name": "Marguery",
+      "weight": 1
+    },
+    {
+      "name": "Mariani",
+      "weight": 1
+    },
+    {
+      "name": "Marizza",
+      "weight": 1
+    },
+    {
+      "name": "Marolda",
+      "weight": 1
+    },
+    {
+      "name": "Martinez",
+      "weight": 1
+    },
+    {
+      "name": "Martos",
+      "weight": 1
+    },
+    {
+      "name": "Martínez Salgado",
+      "weight": 1
+    },
+    {
+      "name": "Mastroizzi",
+      "weight": 1
+    },
+    {
+      "name": "Mazzini",
+      "weight": 1
+    },
+    {
+      "name": "McCormack",
+      "weight": 1
+    },
+    {
+      "name": "Medrano",
+      "weight": 1
+    },
+    {
+      "name": "Mendieta",
+      "weight": 1
+    },
+    {
+      "name": "Menendez",
+      "weight": 1
+    },
+    {
+      "name": "Meyrelles",
+      "weight": 1
+    },
+    {
+      "name": "Michero",
+      "weight": 1
+    },
+    {
+      "name": "Moadeb",
+      "weight": 1
+    },
+    {
+      "name": "Monforte",
+      "weight": 1
+    },
+    {
+      "name": "Montagner",
+      "weight": 1
+    },
+    {
+      "name": "Montenegro",
+      "weight": 1
+    },
+    {
+      "name": "Montoya",
+      "weight": 1
+    },
+    {
+      "name": "Mora",
+      "weight": 1
+    },
+    {
+      "name": "Morea",
+      "weight": 1
+    },
+    {
+      "name": "Moresco",
+      "weight": 1
+    },
+    {
+      "name": "Mortola",
+      "weight": 1
+    },
+    {
+      "name": "Musio",
+      "weight": 1
+    },
+    {
+      "name": "Narvaez",
+      "weight": 1
+    },
+    {
+      "name": "Nava",
+      "weight": 1
+    },
+    {
+      "name": "Navarro",
+      "weight": 1
+    },
+    {
+      "name": "Nevares",
+      "weight": 1
+    },
+    {
+      "name": "Neyra",
+      "weight": 1
+    },
+    {
+      "name": "Novo",
+      "weight": 1
+    },
+    {
+      "name": "Nuñez",
+      "weight": 1
+    },
+    {
+      "name": "Núñez",
+      "weight": 1
+    },
+    {
+      "name": "Ojeda",
+      "weight": 1
+    },
+    {
+      "name": "Oliveira",
+      "weight": 1
+    },
+    {
+      "name": "Onorato",
+      "weight": 1
+    },
+    {
+      "name": "Ordiz",
+      "weight": 1
+    },
+    {
+      "name": "Ormaechea",
+      "weight": 1
+    },
+    {
+      "name": "Orozco",
+      "weight": 1
+    },
+    {
+      "name": "Ortiz",
+      "weight": 1
+    },
+    {
+      "name": "Ortiz Basualdo",
+      "weight": 1
+    },
+    {
+      "name": "Otero",
+      "weight": 1
+    },
+    {
+      "name": "Ozog",
+      "weight": 1
+    },
+    {
+      "name": "Panigatti",
+      "weight": 1
+    },
+    {
+      "name": "Panzarini",
+      "weight": 1
+    },
+    {
+      "name": "Pascarella",
+      "weight": 1
+    },
+    {
+      "name": "Pascuet",
+      "weight": 1
+    },
+    {
+      "name": "Passaro",
+      "weight": 1
+    },
+    {
+      "name": "Passerotti",
+      "weight": 1
+    },
+    {
+      "name": "Patat",
+      "weight": 1
+    },
+    {
+      "name": "Pavlovsky",
+      "weight": 1
+    },
+    {
+      "name": "Paz Rizzoli",
+      "weight": 1
+    },
+    {
+      "name": "Pelourson",
+      "weight": 1
+    },
+    {
+      "name": "Peralta",
+      "weight": 1
+    },
+    {
+      "name": "Perdomo",
+      "weight": 1
+    },
+    {
+      "name": "Peres",
+      "weight": 1
+    },
+    {
+      "name": "Perkins",
+      "weight": 1
+    },
+    {
+      "name": "Pernas",
+      "weight": 1
+    },
+    {
+      "name": "Pfister",
+      "weight": 1
+    },
+    {
+      "name": "Phelan",
+      "weight": 1
+    },
+    {
+      "name": "Piccinini",
+      "weight": 1
+    },
+    {
+      "name": "Pietranera",
+      "weight": 1
+    },
+    {
+      "name": "Pineda",
+      "weight": 1
+    },
+    {
+      "name": "Pirán",
+      "weight": 1
+    },
+    {
+      "name": "Pisani",
+      "weight": 1
+    },
+    {
+      "name": "Pisani Caride",
+      "weight": 1
+    },
+    {
+      "name": "Pizzo",
+      "weight": 1
+    },
+    {
+      "name": "Plorutti",
+      "weight": 1
+    },
+    {
+      "name": "Poliche",
+      "weight": 1
+    },
+    {
+      "name": "Ponzio",
+      "weight": 1
+    },
+    {
+      "name": "Preumayr",
+      "weight": 1
+    },
+    {
+      "name": "Puertas",
+      "weight": 1
+    },
+    {
+      "name": "Puig",
+      "weight": 1
+    },
+    {
+      "name": "Quesada",
+      "weight": 1
+    },
+    {
+      "name": "Quetglas",
+      "weight": 1
+    },
+    {
+      "name": "Quintana",
+      "weight": 1
+    },
+    {
+      "name": "Quiroga Miguens",
+      "weight": 1
+    },
+    {
+      "name": "Rachid",
+      "weight": 1
+    },
+    {
+      "name": "Rebussone",
+      "weight": 1
+    },
+    {
+      "name": "Reggiardo",
+      "weight": 1
+    },
+    {
+      "name": "Repetto",
+      "weight": 1
+    },
+    {
+      "name": "Reyes",
+      "weight": 1
+    },
+    {
+      "name": "Richmond",
+      "weight": 1
+    },
+    {
+      "name": "Ringuelet",
+      "weight": 1
+    },
+    {
+      "name": "Rivademar",
+      "weight": 1
+    },
+    {
+      "name": "Rocha",
+      "weight": 1
+    },
+    {
+      "name": "Rodríguez Alcobendas",
+      "weight": 1
+    },
+    {
+      "name": "Rojo",
+      "weight": 1
+    },
+    {
+      "name": "Rosas",
+      "weight": 1
+    },
+    {
+      "name": "Rosasco",
+      "weight": 1
+    },
+    {
+      "name": "Rozas",
+      "weight": 1
+    },
+    {
+      "name": "Rufino",
+      "weight": 1
+    },
+    {
+      "name": "Rugolo",
+      "weight": 1
+    },
+    {
+      "name": "Sagarna",
+      "weight": 1
+    },
+    {
+      "name": "Salas",
+      "weight": 1
+    },
+    {
+      "name": "Salese",
+      "weight": 1
+    },
+    {
+      "name": "Santamarina",
+      "weight": 1
+    },
+    {
+      "name": "Santarelli",
+      "weight": 1
+    },
+    {
+      "name": "Santecchia",
+      "weight": 1
+    },
+    {
+      "name": "Sapino",
+      "weight": 1
+    },
+    {
+      "name": "Sartori",
+      "weight": 1
+    },
+    {
+      "name": "Saucedo",
+      "weight": 1
+    },
+    {
+      "name": "Scaiano",
+      "weight": 1
+    },
+    {
+      "name": "Scallan",
+      "weight": 1
+    },
+    {
+      "name": "Schiavi",
+      "weight": 1
+    },
+    {
+      "name": "Schurlein",
+      "weight": 1
+    },
+    {
+      "name": "Sebastián",
+      "weight": 1
+    },
+    {
+      "name": "Senillosa",
+      "weight": 1
+    },
+    {
+      "name": "Serpa",
+      "weight": 1
+    },
+    {
+      "name": "Severine Luna",
+      "weight": 1
+    },
+    {
+      "name": "Silva",
+      "weight": 1
+    },
+    {
+      "name": "Sluga",
+      "weight": 1
+    },
+    {
+      "name": "Soldati",
+      "weight": 1
+    },
+    {
+      "name": "Sommer",
+      "weight": 1
+    },
+    {
+      "name": "Sorondo",
+      "weight": 1
+    },
+    {
+      "name": "Sporle",
+      "weight": 1
+    },
+    {
+      "name": "Syriani",
+      "weight": 1
+    },
+    {
+      "name": "Sábato",
+      "weight": 1
+    },
+    {
+      "name": "Sáenz de Miera",
+      "weight": 1
+    },
+    {
+      "name": "Tanoni",
+      "weight": 1
+    },
+    {
+      "name": "Tecca",
+      "weight": 1
+    },
+    {
+      "name": "Toledo",
+      "weight": 1
+    },
+    {
+      "name": "Torboli",
+      "weight": 1
+    },
+    {
+      "name": "Torrado",
+      "weight": 1
+    },
+    {
+      "name": "Torre",
+      "weight": 1
+    },
+    {
+      "name": "Torres Agüero",
+      "weight": 1
+    },
+    {
+      "name": "Torres Obeid",
+      "weight": 1
+    },
+    {
+      "name": "Trivellini",
+      "weight": 1
+    },
+    {
+      "name": "Ureta",
+      "weight": 1
+    },
+    {
+      "name": "Uriarte",
+      "weight": 1
+    },
+    {
+      "name": "Urtubey",
+      "weight": 1
+    },
+    {
+      "name": "Vaccarino",
+      "weight": 1
+    },
+    {
+      "name": "Valdés",
+      "weight": 1
+    },
+    {
+      "name": "Vallejo",
+      "weight": 1
+    },
+    {
+      "name": "Vara",
+      "weight": 1
+    },
+    {
+      "name": "Vega",
+      "weight": 1
+    },
+    {
+      "name": "Vidal",
+      "weight": 1
+    },
+    {
+      "name": "Vieyra",
+      "weight": 1
+    },
+    {
+      "name": "Villafañe",
+      "weight": 1
+    },
+    {
+      "name": "Villarino",
+      "weight": 1
+    },
+    {
+      "name": "Vitola",
+      "weight": 1
+    },
+    {
+      "name": "Vivanco",
+      "weight": 1
+    },
+    {
+      "name": "Vázquez Calcaterra",
+      "weight": 1
+    },
+    {
+      "name": "Wulf",
+      "weight": 1
+    },
+    {
+      "name": "Yakiche",
+      "weight": 1
+    },
+    {
+      "name": "Yanzon",
+      "weight": 1
+    },
+    {
+      "name": "Zabella",
+      "weight": 1
+    },
+    {
+      "name": "Zanella",
+      "weight": 1
+    },
+    {
+      "name": "Zeiss",
+      "weight": 1
+    },
+    {
+      "name": "Zurita",
+      "weight": 1
+    },
+    {
+      "name": "de la Fuente",
+      "weight": 1
+    },
+    {
+      "name": "del Busto",
+      "weight": 1
+    }
+  ],
+  "byClub": {
+    "alumni": [
+      {
+        "name": "Anderson",
+        "weight": 2
+      },
+      {
+        "name": "Bottoni",
+        "weight": 2
+      },
+      {
+        "name": "Cubilla",
+        "weight": 2
+      },
+      {
+        "name": "Testoni",
+        "weight": 2
+      },
+      {
+        "name": "Alduncin",
+        "weight": 1
+      },
+      {
+        "name": "Bivort",
+        "weight": 1
+      },
+      {
+        "name": "Canzani",
+        "weight": 1
+      },
+      {
+        "name": "Castanier",
+        "weight": 1
+      },
+      {
+        "name": "Fauve",
+        "weight": 1
+      },
+      {
+        "name": "Franco",
+        "weight": 1
+      },
+      {
+        "name": "Fuentes",
+        "weight": 1
+      },
+      {
+        "name": "González Iglesias",
+        "weight": 1
+      },
+      {
+        "name": "Lamelas",
+        "weight": 1
+      },
+      {
+        "name": "Lucca",
+        "weight": 1
+      },
+      {
+        "name": "Mariani",
+        "weight": 1
+      },
+      {
+        "name": "Montagner",
+        "weight": 1
+      },
+      {
+        "name": "Mora",
+        "weight": 1
+      },
+      {
+        "name": "Neyra",
+        "weight": 1
+      },
+      {
+        "name": "Passerotti",
+        "weight": 1
+      },
+      {
+        "name": "Pernas",
+        "weight": 1
+      },
+      {
+        "name": "Rocha",
+        "weight": 1
+      },
+      {
+        "name": "Sábato",
+        "weight": 1
+      },
+      {
+        "name": "Vidal",
+        "weight": 1
+      },
+      {
+        "name": "Vieyra",
+        "weight": 1
+      }
+    ],
+    "atletico-del-rosario": [
+      {
+        "name": "Casals",
+        "weight": 2
+      },
+      {
+        "name": "Malanos",
+        "weight": 2
+      },
+      {
+        "name": "Nogués",
+        "weight": 2
+      },
+      {
+        "name": "Rubio",
+        "weight": 2
+      },
+      {
+        "name": "Aime",
+        "weight": 1
+      },
+      {
+        "name": "Bertero",
+        "weight": 1
+      },
+      {
+        "name": "Capella",
+        "weight": 1
+      },
+      {
+        "name": "Carro",
+        "weight": 1
+      },
+      {
+        "name": "Castagna",
+        "weight": 1
+      },
+      {
+        "name": "Cornejo",
+        "weight": 1
+      },
+      {
+        "name": "Cáceres",
+        "weight": 1
+      },
+      {
+        "name": "Echenique",
+        "weight": 1
+      },
+      {
+        "name": "Elías",
+        "weight": 1
+      },
+      {
+        "name": "Estellés",
+        "weight": 1
+      },
+      {
+        "name": "Etcheverry",
+        "weight": 1
+      },
+      {
+        "name": "Montenegro",
+        "weight": 1
+      },
+      {
+        "name": "Musio",
+        "weight": 1
+      },
+      {
+        "name": "Reyes",
+        "weight": 1
+      },
+      {
+        "name": "Sapino",
+        "weight": 1
+      },
+      {
+        "name": "Vara",
+        "weight": 1
+      },
+      {
+        "name": "Vitola",
+        "weight": 1
+      }
+    ],
+    "belgrano-athletic": [
+      {
+        "name": "Arana",
+        "weight": 2
+      },
+      {
+        "name": "Annand",
+        "weight": 1
+      },
+      {
+        "name": "Apricio",
+        "weight": 1
+      },
+      {
+        "name": "Bernabé",
+        "weight": 1
+      },
+      {
+        "name": "Blacksley",
+        "weight": 1
+      },
+      {
+        "name": "Ceñal",
+        "weight": 1
+      },
+      {
+        "name": "Dragui",
+        "weight": 1
+      },
+      {
+        "name": "Duggan",
+        "weight": 1
+      },
+      {
+        "name": "Díaz",
+        "weight": 1
+      },
+      {
+        "name": "Etchepare",
+        "weight": 1
+      },
+      {
+        "name": "Fernández Criado",
+        "weight": 1
+      },
+      {
+        "name": "Ferronato",
+        "weight": 1
+      },
+      {
+        "name": "Gasparotti",
+        "weight": 1
+      },
+      {
+        "name": "Lando",
+        "weight": 1
+      },
+      {
+        "name": "Leiro",
+        "weight": 1
+      },
+      {
+        "name": "Lusarreta",
+        "weight": 1
+      },
+      {
+        "name": "Marchetti",
+        "weight": 1
+      },
+      {
+        "name": "Morales",
+        "weight": 1
+      },
+      {
+        "name": "Morea",
+        "weight": 1
+      },
+      {
+        "name": "Quesada",
+        "weight": 1
+      },
+      {
+        "name": "Rebussone",
+        "weight": 1
+      },
+      {
+        "name": "Sorondo",
+        "weight": 1
+      },
+      {
+        "name": "Tecca",
+        "weight": 1
+      },
+      {
+        "name": "Vaccarino",
+        "weight": 1
+      },
+      {
+        "name": "Vega",
+        "weight": 1
+      }
+    ],
+    "buenos-aires-crc": [
+      {
+        "name": "Etcheverry",
+        "weight": 2
+      },
+      {
+        "name": "Bensadon",
+        "weight": 1
+      },
+      {
+        "name": "Bonnet",
+        "weight": 1
+      },
+      {
+        "name": "Borda",
+        "weight": 1
+      },
+      {
+        "name": "Bourdal",
+        "weight": 1
+      },
+      {
+        "name": "Bunge",
+        "weight": 1
+      },
+      {
+        "name": "Cambiasso",
+        "weight": 1
+      },
+      {
+        "name": "Campbell",
+        "weight": 1
+      },
+      {
+        "name": "Carril",
+        "weight": 1
+      },
+      {
+        "name": "Coria",
+        "weight": 1
+      },
+      {
+        "name": "Costa",
+        "weight": 1
+      },
+      {
+        "name": "Espina",
+        "weight": 1
+      },
+      {
+        "name": "Freire",
+        "weight": 1
+      },
+      {
+        "name": "Gallo",
+        "weight": 1
+      },
+      {
+        "name": "Lamensa",
+        "weight": 1
+      },
+      {
+        "name": "Latorre",
+        "weight": 1
+      },
+      {
+        "name": "Novo",
+        "weight": 1
+      },
+      {
+        "name": "Ortiz",
+        "weight": 1
+      },
+      {
+        "name": "Pizzo",
+        "weight": 1
+      },
+      {
+        "name": "Quetglas",
+        "weight": 1
+      },
+      {
+        "name": "Rosasco",
+        "weight": 1
+      },
+      {
+        "name": "Ruiz",
+        "weight": 1
+      },
+      {
+        "name": "Sluga",
+        "weight": 1
+      },
+      {
+        "name": "Syriani",
+        "weight": 1
+      },
+      {
+        "name": "Zanella",
+        "weight": 1
+      }
+    ],
+    "casi": [
+      {
+        "name": "Roger",
+        "weight": 2
+      },
+      {
+        "name": "Akemeier",
+        "weight": 1
+      },
+      {
+        "name": "Belaga",
+        "weight": 1
+      },
+      {
+        "name": "Briatore",
+        "weight": 1
+      },
+      {
+        "name": "David",
+        "weight": 1
+      },
+      {
+        "name": "Domínguez Perdigón",
+        "weight": 1
+      },
+      {
+        "name": "Engelhard",
+        "weight": 1
+      },
+      {
+        "name": "Hileman",
+        "weight": 1
+      },
+      {
+        "name": "Larrague",
+        "weight": 1
+      },
+      {
+        "name": "Mazzini",
+        "weight": 1
+      },
+      {
+        "name": "Phelan",
+        "weight": 1
+      },
+      {
+        "name": "Sartori",
+        "weight": 1
+      },
+      {
+        "name": "Scaiano",
+        "weight": 1
+      },
+      {
+        "name": "Solveyra",
+        "weight": 1
+      },
+      {
+        "name": "Sáenz de Miera",
+        "weight": 1
+      },
+      {
+        "name": "Torrado",
+        "weight": 1
+      },
+      {
+        "name": "Torres Obeid",
+        "weight": 1
+      }
+    ],
+    "champagnat": [
+      {
+        "name": "Panelo",
+        "weight": 3
+      },
+      {
+        "name": "Ustariz",
+        "weight": 2
+      },
+      {
+        "name": "Adissi",
+        "weight": 1
+      },
+      {
+        "name": "Alonso",
+        "weight": 1
+      },
+      {
+        "name": "Azpiroz",
+        "weight": 1
+      },
+      {
+        "name": "Basualdo",
+        "weight": 1
+      },
+      {
+        "name": "Boto",
+        "weight": 1
+      },
+      {
+        "name": "Bottazzi",
+        "weight": 1
+      },
+      {
+        "name": "Carrara",
+        "weight": 1
+      },
+      {
+        "name": "Castelli",
+        "weight": 1
+      },
+      {
+        "name": "Castex",
+        "weight": 1
+      },
+      {
+        "name": "Costaguta",
+        "weight": 1
+      },
+      {
+        "name": "Daireaux",
+        "weight": 1
+      },
+      {
+        "name": "Escuti",
+        "weight": 1
+      },
+      {
+        "name": "Magaro",
+        "weight": 1
+      },
+      {
+        "name": "Moresco",
+        "weight": 1
+      },
+      {
+        "name": "Navarro",
+        "weight": 1
+      },
+      {
+        "name": "Núñez",
+        "weight": 1
+      },
+      {
+        "name": "Orozco",
+        "weight": 1
+      },
+      {
+        "name": "Pascarella",
+        "weight": 1
+      },
+      {
+        "name": "Puig",
+        "weight": 1
+      },
+      {
+        "name": "Quintana",
+        "weight": 1
+      },
+      {
+        "name": "Rodríguez",
+        "weight": 1
+      },
+      {
+        "name": "Rojo",
+        "weight": 1
+      },
+      {
+        "name": "Rufino",
+        "weight": 1
+      },
+      {
+        "name": "Soldati",
+        "weight": 1
+      },
+      {
+        "name": "Yanzon",
+        "weight": 1
+      }
+    ],
+    "cordoba-athletic": [
+      {
+        "name": "Ferreyra",
+        "weight": 1
+      },
+      {
+        "name": "Keller",
+        "weight": 1
+      },
+      {
+        "name": "Torre",
+        "weight": 1
+      }
+    ],
+    "cuba": [
+      {
+        "name": "Acrich Peralta Alvear",
+        "weight": 1
+      },
+      {
+        "name": "Albani",
+        "weight": 1
+      },
+      {
+        "name": "Anderlic",
+        "weight": 1
+      },
+      {
+        "name": "Benedit",
+        "weight": 1
+      },
+      {
+        "name": "Campion",
+        "weight": 1
+      },
+      {
+        "name": "Cardini",
+        "weight": 1
+      },
+      {
+        "name": "Cayol",
+        "weight": 1
+      },
+      {
+        "name": "Corleto",
+        "weight": 1
+      },
+      {
+        "name": "Elicagaray",
+        "weight": 1
+      },
+      {
+        "name": "Fraga",
+        "weight": 1
+      },
+      {
+        "name": "Garoby",
+        "weight": 1
+      },
+      {
+        "name": "Iribarne",
+        "weight": 1
+      },
+      {
+        "name": "Lanusse",
+        "weight": 1
+      },
+      {
+        "name": "Latorre",
+        "weight": 1
+      },
+      {
+        "name": "Loza",
+        "weight": 1
+      },
+      {
+        "name": "Mastroizzi",
+        "weight": 1
+      },
+      {
+        "name": "Nevares",
+        "weight": 1
+      },
+      {
+        "name": "Passaro",
+        "weight": 1
+      },
+      {
+        "name": "Perdomo",
+        "weight": 1
+      },
+      {
+        "name": "Peres",
+        "weight": 1
+      },
+      {
+        "name": "Pisani",
+        "weight": 1
+      },
+      {
+        "name": "Quiroga Miguens",
+        "weight": 1
+      },
+      {
+        "name": "Rosas",
+        "weight": 1
+      },
+      {
+        "name": "Rozas",
+        "weight": 1
+      },
+      {
+        "name": "Schurlein",
+        "weight": 1
+      },
+      {
+        "name": "Uriarte",
+        "weight": 1
+      },
+      {
+        "name": "Vallejo",
+        "weight": 1
+      },
+      {
+        "name": "Yakiche",
+        "weight": 1
+      },
+      {
+        "name": "de la Vega",
+        "weight": 1
+      }
+    ],
+    "deportiva-francesa": [
+      {
+        "name": "Rachid",
+        "weight": 1
+      },
+      {
+        "name": "Reggiardo",
+        "weight": 1
+      }
+    ],
+    "duendes": [
+      {
+        "name": "Godoy",
+        "weight": 1
+      }
+    ],
+    "estudiantes-parana": [
+      {
+        "name": "Cañas",
+        "weight": 1
+      },
+      {
+        "name": "Giachello",
+        "weight": 1
+      }
+    ],
+    "hindu": [
+      {
+        "name": "Amaya",
+        "weight": 2
+      },
+      {
+        "name": "Cancelliere",
+        "weight": 2
+      },
+      {
+        "name": "Fernández Miranda",
+        "weight": 2
+      },
+      {
+        "name": "Graglia",
+        "weight": 2
+      },
+      {
+        "name": "Amher",
+        "weight": 1
+      },
+      {
+        "name": "Aranoa",
+        "weight": 1
+      },
+      {
+        "name": "Banach",
+        "weight": 1
+      },
+      {
+        "name": "Bávaro",
+        "weight": 1
+      },
+      {
+        "name": "Capurro",
+        "weight": 1
+      },
+      {
+        "name": "Comolli",
+        "weight": 1
+      },
+      {
+        "name": "D'Amorim",
+        "weight": 1
+      },
+      {
+        "name": "De Carabassa",
+        "weight": 1
+      },
+      {
+        "name": "Diviesti",
+        "weight": 1
+      },
+      {
+        "name": "Ezcurra",
+        "weight": 1
+      },
+      {
+        "name": "Farisé",
+        "weight": 1
+      },
+      {
+        "name": "Gattas",
+        "weight": 1
+      },
+      {
+        "name": "Herrera",
+        "weight": 1
+      },
+      {
+        "name": "Kantz",
+        "weight": 1
+      },
+      {
+        "name": "Leiva",
+        "weight": 1
+      },
+      {
+        "name": "Ormaechea",
+        "weight": 1
+      },
+      {
+        "name": "Peralta",
+        "weight": 1
+      },
+      {
+        "name": "Repetto",
+        "weight": 1
+      },
+      {
+        "name": "Rodríguez",
+        "weight": 1
+      },
+      {
+        "name": "Scallan",
+        "weight": 1
+      },
+      {
+        "name": "Senillosa",
+        "weight": 1
+      },
+      {
+        "name": "Sosa",
+        "weight": 1
+      },
+      {
+        "name": "Trivellini",
+        "weight": 1
+      },
+      {
+        "name": "de la Vega",
+        "weight": 1
+      }
+    ],
+    "jockey-cordoba": [
+      {
+        "name": "Binda",
+        "weight": 1
+      }
+    ],
+    "jockey-rosario": [
+      {
+        "name": "Estévez",
+        "weight": 1
+      },
+      {
+        "name": "Lluch",
+        "weight": 1
+      },
+      {
+        "name": "Preumayr",
+        "weight": 1
+      },
+      {
+        "name": "Tanoni",
+        "weight": 1
+      }
+    ],
+    "la-plata": [
+      {
+        "name": "Bernasconi",
+        "weight": 2
+      },
+      {
+        "name": "Addiechi",
+        "weight": 1
+      },
+      {
+        "name": "Cejas",
+        "weight": 1
+      },
+      {
+        "name": "Chiappani",
+        "weight": 1
+      },
+      {
+        "name": "Del Cerro",
+        "weight": 1
+      },
+      {
+        "name": "Folch",
+        "weight": 1
+      },
+      {
+        "name": "Fontán",
+        "weight": 1
+      },
+      {
+        "name": "Juliano",
+        "weight": 1
+      },
+      {
+        "name": "Kucic",
+        "weight": 1
+      },
+      {
+        "name": "Lucca",
+        "weight": 1
+      },
+      {
+        "name": "Manuele",
+        "weight": 1
+      },
+      {
+        "name": "Mendieta",
+        "weight": 1
+      },
+      {
+        "name": "Nuñez",
+        "weight": 1
+      },
+      {
+        "name": "Ozog",
+        "weight": 1
+      },
+      {
+        "name": "Panigatti",
+        "weight": 1
+      },
+      {
+        "name": "Patat",
+        "weight": 1
+      },
+      {
+        "name": "Paz Rizzoli",
+        "weight": 1
+      },
+      {
+        "name": "Pineda",
+        "weight": 1
+      },
+      {
+        "name": "Ringuelet",
+        "weight": 1
+      },
+      {
+        "name": "Rivademar",
+        "weight": 1
+      },
+      {
+        "name": "Valdés",
+        "weight": 1
+      },
+      {
+        "name": "de la Fuente",
+        "weight": 1
+      }
+    ],
+    "la-tablada": [
+      {
+        "name": "Monforte",
+        "weight": 1
+      },
+      {
+        "name": "Otero",
+        "weight": 1
+      },
+      {
+        "name": "Severine Luna",
+        "weight": 1
+      },
+      {
+        "name": "Vivanco",
+        "weight": 1
+      }
+    ],
+    "los-matreros": [
+      {
+        "name": "Amorisa",
+        "weight": 1
+      },
+      {
+        "name": "Cec",
+        "weight": 1
+      },
+      {
+        "name": "Gahan",
+        "weight": 1
+      },
+      {
+        "name": "Gallastegui",
+        "weight": 1
+      },
+      {
+        "name": "Guevara",
+        "weight": 1
+      },
+      {
+        "name": "Marelli",
+        "weight": 1
+      },
+      {
+        "name": "McCormack",
+        "weight": 1
+      },
+      {
+        "name": "Michero",
+        "weight": 1
+      },
+      {
+        "name": "Morales",
+        "weight": 1
+      },
+      {
+        "name": "Salinas",
+        "weight": 1
+      },
+      {
+        "name": "Santecchia",
+        "weight": 1
+      },
+      {
+        "name": "Villafañe",
+        "weight": 1
+      },
+      {
+        "name": "Villarino",
+        "weight": 1
+      },
+      {
+        "name": "Zeiss",
+        "weight": 1
+      },
+      {
+        "name": "del Busto",
+        "weight": 1
+      }
+    ],
+    "los-tilos": [
+      {
+        "name": "Tuculet",
+        "weight": 2
+      },
+      {
+        "name": "Albina",
+        "weight": 1
+      },
+      {
+        "name": "Armendariz",
+        "weight": 1
+      },
+      {
+        "name": "Bares",
+        "weight": 1
+      },
+      {
+        "name": "Bassagaisteguy",
+        "weight": 1
+      },
+      {
+        "name": "Basualdo",
+        "weight": 1
+      },
+      {
+        "name": "Berardi",
+        "weight": 1
+      },
+      {
+        "name": "Blaiotta",
+        "weight": 1
+      },
+      {
+        "name": "Briozzo",
+        "weight": 1
+      },
+      {
+        "name": "Chiavassa",
+        "weight": 1
+      },
+      {
+        "name": "Cordero",
+        "weight": 1
+      },
+      {
+        "name": "Cortopasso",
+        "weight": 1
+      },
+      {
+        "name": "Gatti",
+        "weight": 1
+      },
+      {
+        "name": "Guichon",
+        "weight": 1
+      },
+      {
+        "name": "Lago",
+        "weight": 1
+      },
+      {
+        "name": "Laurin",
+        "weight": 1
+      },
+      {
+        "name": "Leiva",
+        "weight": 1
+      },
+      {
+        "name": "Martinez",
+        "weight": 1
+      },
+      {
+        "name": "Martínez Salgado",
+        "weight": 1
+      },
+      {
+        "name": "Puertas",
+        "weight": 1
+      },
+      {
+        "name": "Rodríguez Alcobendas",
+        "weight": 1
+      },
+      {
+        "name": "Santamarina",
+        "weight": 1
+      },
+      {
+        "name": "Sebastián",
+        "weight": 1
+      },
+      {
+        "name": "Torboli",
+        "weight": 1
+      }
+    ],
+    "manuel-belgrano": [
+      {
+        "name": "Mortola",
+        "weight": 1
+      }
+    ],
+    "marista": [
+      {
+        "name": "Laborde",
+        "weight": 1
+      }
+    ],
+    "mendoza-rc": [
+      {
+        "name": "Canedo",
+        "weight": 1
+      },
+      {
+        "name": "Cossutta",
+        "weight": 1
+      },
+      {
+        "name": "Dapas",
+        "weight": 1
+      }
+    ],
+    "newman": [
+      {
+        "name": "Bosch",
+        "weight": 2
+      },
+      {
+        "name": "Prince",
+        "weight": 2
+      },
+      {
+        "name": "Ulloa",
+        "weight": 2
+      },
+      {
+        "name": "Bonasso",
+        "weight": 1
+      },
+      {
+        "name": "Borio",
+        "weight": 1
+      },
+      {
+        "name": "Cardinal",
+        "weight": 1
+      },
+      {
+        "name": "Daireaux",
+        "weight": 1
+      },
+      {
+        "name": "Díaz de Vivar",
+        "weight": 1
+      },
+      {
+        "name": "Gutiérrez Taboada",
+        "weight": 1
+      },
+      {
+        "name": "Keena",
+        "weight": 1
+      },
+      {
+        "name": "Lanfranco",
+        "weight": 1
+      },
+      {
+        "name": "Lascombes",
+        "weight": 1
+      },
+      {
+        "name": "Llerena",
+        "weight": 1
+      },
+      {
+        "name": "Lozano",
+        "weight": 1
+      },
+      {
+        "name": "Mackinlay",
+        "weight": 1
+      },
+      {
+        "name": "Marguery",
+        "weight": 1
+      },
+      {
+        "name": "Marolda",
+        "weight": 1
+      },
+      {
+        "name": "Menendez",
+        "weight": 1
+      },
+      {
+        "name": "Montoya",
+        "weight": 1
+      },
+      {
+        "name": "Nava",
+        "weight": 1
+      },
+      {
+        "name": "Ortiz Basualdo",
+        "weight": 1
+      },
+      {
+        "name": "Perkins",
+        "weight": 1
+      },
+      {
+        "name": "Salese",
+        "weight": 1
+      },
+      {
+        "name": "Santarelli",
+        "weight": 1
+      },
+      {
+        "name": "Ureta",
+        "weight": 1
+      },
+      {
+        "name": "Urtubey",
+        "weight": 1
+      },
+      {
+        "name": "de la Vega",
+        "weight": 1
+      }
+    ],
+    "pucara": [
+      {
+        "name": "Richmond",
+        "weight": 1
+      },
+      {
+        "name": "Wulf",
+        "weight": 1
+      }
+    ],
+    "regatas-bella-vista": [
+      {
+        "name": "Camerlinckx",
+        "weight": 4
+      },
+      {
+        "name": "De la Torre",
+        "weight": 2
+      },
+      {
+        "name": "Gobet",
+        "weight": 2
+      },
+      {
+        "name": "Sanguinetti",
+        "weight": 2
+      },
+      {
+        "name": "Ana",
+        "weight": 1
+      },
+      {
+        "name": "Barbaccia",
+        "weight": 1
+      },
+      {
+        "name": "Barrera",
+        "weight": 1
+      },
+      {
+        "name": "Campos",
+        "weight": 1
+      },
+      {
+        "name": "Cebrón",
+        "weight": 1
+      },
+      {
+        "name": "Cordero",
+        "weight": 1
+      },
+      {
+        "name": "Corso",
+        "weight": 1
+      },
+      {
+        "name": "Ferro",
+        "weight": 1
+      },
+      {
+        "name": "Galli",
+        "weight": 1
+      },
+      {
+        "name": "García Campos",
+        "weight": 1
+      },
+      {
+        "name": "García Colinas",
+        "weight": 1
+      },
+      {
+        "name": "Joseph",
+        "weight": 1
+      },
+      {
+        "name": "Klappenbach",
+        "weight": 1
+      },
+      {
+        "name": "Landívar",
+        "weight": 1
+      },
+      {
+        "name": "Medrano",
+        "weight": 1
+      },
+      {
+        "name": "Moadeb",
+        "weight": 1
+      },
+      {
+        "name": "Pascuet",
+        "weight": 1
+      },
+      {
+        "name": "Pisani Caride",
+        "weight": 1
+      },
+      {
+        "name": "Rugolo",
+        "weight": 1
+      },
+      {
+        "name": "Ruiz",
+        "weight": 1
+      },
+      {
+        "name": "Solveyra",
+        "weight": 1
+      },
+      {
+        "name": "Toledo",
+        "weight": 1
+      },
+      {
+        "name": "Torres Agüero",
+        "weight": 1
+      }
+    ],
+    "san-luis": [
+      {
+        "name": "Gibert",
+        "weight": 1
+      }
+    ],
+    "santa-fe-rugby": [
+      {
+        "name": "Benavides",
+        "weight": 1
+      },
+      {
+        "name": "Gómez",
+        "weight": 1
+      }
+    ],
+    "sic": [
+      {
+        "name": "Albanese",
+        "weight": 1
+      },
+      {
+        "name": "Bottazzini",
+        "weight": 1
+      },
+      {
+        "name": "Calandra",
+        "weight": 1
+      },
+      {
+        "name": "Casalins",
+        "weight": 1
+      },
+      {
+        "name": "Chiappe",
+        "weight": 1
+      },
+      {
+        "name": "Daireaux",
+        "weight": 1
+      },
+      {
+        "name": "Delger",
+        "weight": 1
+      },
+      {
+        "name": "Ghisolfi",
+        "weight": 1
+      },
+      {
+        "name": "González Capdevila",
+        "weight": 1
+      },
+      {
+        "name": "Lalor",
+        "weight": 1
+      },
+      {
+        "name": "Ledesma Arocena",
+        "weight": 1
+      },
+      {
+        "name": "Longo",
+        "weight": 1
+      },
+      {
+        "name": "López Fleming",
+        "weight": 1
+      },
+      {
+        "name": "Meyrelles",
+        "weight": 1
+      },
+      {
+        "name": "Oliveira",
+        "weight": 1
+      },
+      {
+        "name": "Panzarini",
+        "weight": 1
+      },
+      {
+        "name": "Pavlovsky",
+        "weight": 1
+      },
+      {
+        "name": "Piccinini",
+        "weight": 1
+      },
+      {
+        "name": "Pietranera",
+        "weight": 1
+      },
+      {
+        "name": "Pirán",
+        "weight": 1
+      },
+      {
+        "name": "Plorutti",
+        "weight": 1
+      },
+      {
+        "name": "Sagarna",
+        "weight": 1
+      },
+      {
+        "name": "Silva",
+        "weight": 1
+      },
+      {
+        "name": "Sommer",
+        "weight": 1
+      }
+    ],
+    "tucuman-rugby": [
+      {
+        "name": "Ojeda",
+        "weight": 1
+      },
+      {
+        "name": "Pfister",
+        "weight": 1
+      },
+      {
+        "name": "Poliche",
+        "weight": 1
+      }
+    ],
+    "universitario-cordoba": [
+      {
+        "name": "Allende",
+        "weight": 1
+      }
+    ],
+    "uru-cure": [
+      {
+        "name": "Cabello",
+        "weight": 1
+      }
+    ]
+  },
+  "mix": {
+    "clubSurnameChance": 0.3,
+    "globalSurnameChance": 0.7,
+    "maxSameSurnamePerIntake": 1
+  },
+  "sourceIds": [
+    "catalog.json:players",
+    "youth.json:players"
+  ]
+}

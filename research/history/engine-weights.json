@@ -1,0 +1,380 @@
+{
+ "generatedAt": "2026-11-12T03:54:39.773Z",
+ "n": 2000,
+ "constants": {
+  "HOME_EDGE": 0.62,
+  "DAY_FORM": 0.02,
+  "DIVISION_BASELINE": {
+   "Top 14": 10.9,
+   "Primera A": 10.15,
+   "Primera B": 9.2
+  },
+  "TACTIC_TUNING": {
+   "rushPenalty": 0.026,
+   "rushPenaltyPerIndiscipline": 0.012,
+   "rushPressureGain": 1.3,
+   "rushPressureError": 0.02,
+   "rushBreakBase": 0.03,
+   "rushBreakOpen": 0.025,
+   "conservativeKickDistance": 30,
+   "territorialKickDistance": 29,
+   "conservativeKickChance": 0,
+   "territorialKickChance": 0.075,
+   "fastBreak": 0.035,
+   "fastGain": 1.9,
+   "fastPassError": 0.018,
+   "fastRuckExposure": 0.042,
+   "attackingWide": 0.1,
+   "attackingKick": -0.05,
+   "attackingBreak": 0.018,
+   "attackingError": 0.007,
+   "defensiveWide": -0.1,
+   "defensiveKick": 0.06,
+   "defensiveBreak": -0.008,
+   "defensiveError": -0.012,
+   "postsFrom": 67,
+   "postsChance": 0.93,
+   "touchPointsChance": 0.65
+  }
+ },
+ "baseline": {
+  "homeAndForm": {
+   "margin": 3.14,
+   "deltaMargin": 0,
+   "winPct": 58.9,
+   "deltaWinPct": 0,
+   "sd": 16.9,
+   "se": 0.38
+  },
+  "noHome": {
+   "margin": 0.37,
+   "deltaMargin": -2.77,
+   "winPct": 50.7,
+   "deltaWinPct": -8.2,
+   "sd": 17.4,
+   "se": 0.39
+  },
+  "noForm": {
+   "margin": 2.77,
+   "deltaMargin": -0.37,
+   "winPct": 56.7,
+   "deltaWinPct": -2.1,
+   "sd": 17.1,
+   "se": 0.38
+  },
+  "neutralNoForm": {
+   "margin": 0.42,
+   "deltaMargin": -2.73,
+   "winPct": 51.4,
+   "deltaWinPct": -7.5,
+   "sd": 17.2,
+   "se": 0.38
+  }
+ },
+ "home": {
+  "pointsOfMargin": 2.77,
+  "winPctHome": 58.9,
+  "note": "club contra su clon: la localía es la diferencia con HOME_EDGE = 0"
+ },
+ "dayForm": {
+  "sdWith": 16.91,
+  "sdWithout": 17.08,
+  "sdOfDayFormComponent": 0,
+  "note": "el desvío de la forma del día es la raíz de la diferencia de varianzas de margen (σ² con − σ² sin DAY_FORM)"
+ },
+ "squadLevel": [
+  {
+   "attributeShift": -2,
+   "xvOverallDelta": -10.9,
+   "margin": -31.39,
+   "deltaMargin": -34.53,
+   "winPct": 2.9,
+   "deltaWinPct": -56,
+   "sd": 16.8,
+   "se": 0.38
+  },
+  {
+   "attributeShift": -1,
+   "xvOverallDelta": -5.5,
+   "margin": -14.94,
+   "deltaMargin": -18.08,
+   "winPct": 18,
+   "deltaWinPct": -40.9,
+   "sd": 16.6,
+   "se": 0.37
+  },
+  {
+   "attributeShift": 1,
+   "xvOverallDelta": 5,
+   "margin": 20.84,
+   "deltaMargin": 17.69,
+   "winPct": 88.8,
+   "deltaWinPct": 30,
+   "sd": 17.5,
+   "se": 0.39
+  },
+  {
+   "attributeShift": 2,
+   "xvOverallDelta": 10.2,
+   "margin": 39.17,
+   "deltaMargin": 36.03,
+   "winPct": 98.8,
+   "deltaWinPct": 40,
+   "sd": 17.4,
+   "se": 0.39
+  }
+ ],
+ "pointsPerOverall": 3.41,
+ "clubLevel": {
+  "best_vs_worst_top14": {
+   "a": "newman",
+   "b": "champagnat",
+   "xvOverallA": 68.7,
+   "xvOverallB": 58.7,
+   "margin": 28,
+   "winPctA": 95.2
+  },
+  "best_vs_median_top14": {
+   "a": "newman",
+   "b": "regatas-bella-vista",
+   "xvOverallA": 68.7,
+   "xvOverallB": 65.8,
+   "margin": 10.6,
+   "winPctA": 74
+  },
+  "median_top14_vs_median_primeraA": {
+   "a": "regatas-bella-vista",
+   "b": "hurling",
+   "xvOverallA": 65.8,
+   "xvOverallB": 56.7,
+   "margin": 25.1,
+   "winPctA": 93.5
+  },
+  "median_primeraA_vs_median_primeraB": {
+   "a": "hurling",
+   "b": "italiano",
+   "xvOverallA": 56.7,
+   "xvOverallB": 49.9,
+   "margin": 17.9,
+   "winPctA": 88.2
+  },
+  "median_top14_vs_median_primeraB": {
+   "a": "regatas-bella-vista",
+   "b": "italiano",
+   "xvOverallA": 65.8,
+   "xvOverallB": 49.9,
+   "margin": 44.8,
+   "winPctA": 99.8
+  },
+  "xvOverallByDivision": {
+   "Top 14": {
+    "min": 58.7,
+    "median": 65.8,
+    "max": 68.7
+   },
+   "Primera A": {
+    "min": 50.3,
+    "median": 56.7,
+    "max": 61.5
+   },
+   "Primera B": {
+    "min": 41.9,
+    "median": 49.9,
+    "max": 54
+   }
+  }
+ },
+ "tactics": {
+  "mentality=Ofensiva": {
+   "margin": 2.4,
+   "deltaMargin": -0.31,
+   "winPct": 55.7,
+   "deltaWinPct": -1.1,
+   "sd": 17.5,
+   "se": 0.28
+  },
+  "mentality=Defensiva": {
+   "margin": 3.41,
+   "deltaMargin": 0.69,
+   "winPct": 57.4,
+   "deltaWinPct": 0.5,
+   "sd": 17.2,
+   "se": 0.27
+  },
+  "penalty=Palos": {
+   "margin": 1.91,
+   "deltaMargin": -0.81,
+   "winPct": 54.9,
+   "deltaWinPct": -2,
+   "sd": 17.2,
+   "se": 0.27
+  },
+  "penalty=Touch": {
+   "margin": 3.59,
+   "deltaMargin": 0.87,
+   "winPct": 58.2,
+   "deltaWinPct": 1.3,
+   "sd": 17.5,
+   "se": 0.28
+  },
+  "attack=2-4-2": {
+   "margin": 3.42,
+   "deltaMargin": 0.71,
+   "winPct": 58.3,
+   "deltaWinPct": 1.4,
+   "sd": 17.2,
+   "se": 0.27
+  },
+  "defense=Rush": {
+   "margin": 4.75,
+   "deltaMargin": 2.03,
+   "winPct": 61.2,
+   "deltaWinPct": 4.3,
+   "sd": 16.9,
+   "se": 0.27
+  },
+  "scrum=Presión": {
+   "margin": 3.65,
+   "deltaMargin": 0.93,
+   "winPct": 58.7,
+   "deltaWinPct": 1.8,
+   "sd": 17,
+   "se": 0.27
+  },
+  "lineout=Competir": {
+   "margin": 3.95,
+   "deltaMargin": 1.23,
+   "winPct": 59.8,
+   "deltaWinPct": 2.9,
+   "sd": 17.2,
+   "se": 0.27
+  },
+  "maul=Evitar": {
+   "margin": 1.69,
+   "deltaMargin": -1.02,
+   "winPct": 53.7,
+   "deltaWinPct": -3.1,
+   "sd": 16.6,
+   "se": 0.26
+  },
+  "kicking=Conservador": {
+   "margin": 2.09,
+   "deltaMargin": -0.63,
+   "winPct": 54.1,
+   "deltaWinPct": -2.8,
+   "sd": 17.3,
+   "se": 0.27
+  },
+  "ruck=Rápido": {
+   "margin": 2.63,
+   "deltaMargin": -0.08,
+   "winPct": 56.1,
+   "deltaWinPct": -0.8,
+   "sd": 18,
+   "se": 0.29
+  }
+ },
+ "tacticsRandomPick": {
+  "sdOneSide": 1.66,
+  "sdBothSides": 2.35,
+  "maxAbsSingle": 2.03
+ },
+ "fitness": [
+  {
+   "fitness": 100,
+   "margin": 3.14,
+   "deltaMargin": 0,
+   "winPct": 58.9,
+   "deltaWinPct": 0,
+   "sd": 16.9,
+   "se": 0.38
+  },
+  {
+   "fitness": 92,
+   "margin": -1.76,
+   "deltaMargin": -4.91,
+   "winPct": 46.6,
+   "deltaWinPct": -12.3,
+   "sd": 17,
+   "se": 0.38
+  },
+  {
+   "fitness": 85,
+   "margin": -7.3,
+   "deltaMargin": -10.45,
+   "winPct": 33.6,
+   "deltaWinPct": -25.3,
+   "sd": 16.8,
+   "se": 0.38
+  },
+  {
+   "fitness": 70,
+   "margin": -16.58,
+   "deltaMargin": -19.73,
+   "winPct": 15.2,
+   "deltaWinPct": -43.7,
+   "sd": 16.4,
+   "se": 0.37
+  },
+  {
+   "fitness": 50,
+   "margin": -28.92,
+   "deltaMargin": -32.07,
+   "winPct": 4.6,
+   "deltaWinPct": -54.3,
+   "sd": 17.4,
+   "se": 0.39
+  }
+ ],
+ "fitnessBothTeams92": {
+  "margin": 2.19,
+  "deltaMargin": -0.95,
+  "winPct": 55.2,
+  "deltaWinPct": -3.7,
+  "sd": 16.7,
+  "se": 0.37
+ },
+ "injuries": {
+  "oneStarter": {
+   "mean": -2,
+   "worst": -6.19,
+   "best": 1.36
+  },
+  "3Starters": {
+   "mean": -5.61,
+   "sd": 3.16
+  },
+  "5Starters": {
+   "mean": -8.68,
+   "sd": 4.9
+  },
+  "starterGapToReplacement": 6.3
+ },
+ "variance": {
+  "matches": 5460,
+  "H": 2.31,
+  "sdTeamGap": 13.08,
+  "sdRatings": 9.25,
+  "marginSD": 21.09,
+  "residualSD": 16.54,
+  "residualSDNoDayForm": 16.49,
+  "ratingsVsXvOverall": {
+   "r": 0.95,
+   "r2": 0.89,
+   "slope": 2.89,
+   "sdXvOverall": 3.02
+  },
+  "shareOfMeanSquareMargin": {
+   "home": 1.2,
+   "teamQuality": 38,
+   "randomnessTotal": 60.8,
+   "ofWhichDayForm": 0.4,
+   "ofWhichMatchLuck": 60.4,
+   "tacticsExtraIfRandomPicks": 1.2
+  },
+  "explainedVarianceOfMargin": {
+   "teamQuality": 38.5,
+   "randomness": 61.5
+  }
+ }
+}

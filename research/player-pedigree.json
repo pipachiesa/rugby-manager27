@@ -1,0 +1,2950 @@
+{
+  "generatedAt": "2026-11-11",
+  "method": "Se cruzaron listas oficiales y de prensa especializada contra research/catalog.json (1.052 jugadores) por nombre completo normalizado (sin tildes, incluyendo nameAliases) y, cuando la fuente trae club, por club. Fuentes principales: archivo oficial de Los Pumas (lospumas.com.ar «Pumas para toda la vida», 914 debutantes hasta el 5/9/2026, con club de origen); página UAR de Los Pumitas (planteles 2008–2019 y 2023–2025) y notas UAR/super.rugby/Americas Rugby News (planteles M20 2024–2026 con clubes); Americas Rugby News (planteles Pampas 2024 y 2026 con clubes, Pampas 2025, Peñarol, Yacare, Capibaras, Selknam, Argentina XV 2025 y 2026, Pumas noviembre 2026); UAR/Infobae/Wikipedia (Pumas 7s 2014–2026); infobox de Wikipedia (carrera en Pampas XV, Jaguares, Europa, MLR, Japón) para los jugadores que figuran en las categorías de Wikipedia de Pumas, Pumas 7s, Jaguares, Pampas XV y argentinos en el exterior. Confianza «alta»: club de la fuente coincide con el catálogo, o la fecha de nacimiento acreditada es compatible con la categoría juvenil, o fuente oficial con club de origen. «Media»: nombre único en el catálogo pero la fuente no da club, o dato de Wikipedia sin actualización/partidos no verificados. Los casos con nombre ambiguo o club en conflicto están en «doubtful» y no figuran en «players». No se usaron ovalados /data/*.json, aplenorugby.com.ar ni www.espn.com.ar; no se consultaron perfiles privados. Se hicieron unas 60 consultas puntuales (páginas completas descargadas una vez, sin rastreo masivo). La búsqueda de carrera completa jugador por jugador no se hizo para los 1.052; las listas oficiales y las categorías de Wikipedia son el piso de la cobertura.",
+  "levels": {
+    "pumas": "Test caps de Los Pumas (archivo oficial lospumas.com.ar). Las convocatorias sin debut no cuentan.",
+    "pumas7": "Los Pumas 7s: circuito mundial (World Series / SVNS), Juegos Olímpicos y Mundial Seven.",
+    "argentina-xv": "Argentina XV, Argentina A y selecciones A equivalentes (Argentina Jaguars, Pampas XV de 2009–2015 previo a Jaguares). Los partidos de Argentina XV no son tests.",
+    "pampas": "Pampas XV / Los Pampas en Super Rugby Americas (2022–2026). Un plantel anunciado no prueba partidos jugados.",
+    "super-rugby-americas-other": "Otra franquicia de Super Rugby Americas (Dogos, Capibaras, Tarucas, Yacare, Peñarol, Selknam, Cobras, American Raptors) y también Jaguares XV / Ceibos (Súper Liga Americana 2019–2021).",
+    "jaguares": "Jaguares en Super Rugby 2016–2020 (plantel o partidos; el detalle lo indica).",
+    "europe": "Club profesional en Europa: Top 14 / Pro D2, Premiership / Championship, URC, Serie A Elite / Top10 italiano.",
+    "other-pro": "Major League Rugby, Japan Rugby League One y similares.",
+    "youth-national": "Los Pumitas (M20 / Mundial Juvenil) y Argentina M18/M19."
+  },
+  "players": {
+    "regatas-bella-vista-fabrizio-cebron": {
+      "name": "Fabrizio Cebrón",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pumitas Junior World Championship 2026 (Georgia) [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=120248",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "regatas-bella-vista-matias-medrano": {
+      "name": "Matías Medrano",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "europe",
+          "team": "Benetton Rugby (URC)",
+          "years": [
+            2026
+          ],
+          "detail": "Se incorporó a Benetton en 2026 desde la SRA; convocado sin debut a Los Pumas en noviembre 2026 (ARN). Coincide con research/returns.json.",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/11/09/four-players-join-pumas-roster-to-prepare-for-italy-test-match/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2023
+          ],
+          "detail": "Plantel Pumitas 2023 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "sic-ignacio-bottazzini": {
+      "name": "Ignacio Bottazzini",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "regatas-bella-vista-marcos-camerlinckx": {
+      "name": "Marcos Camerlinckx",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2023,
+            2024
+          ],
+          "detail": "Plantel Pumitas 2023 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "belgrano-athletic-francisco-lusarreta": {
+      "name": "Francisco Lusarreta",
+      "clubId": "belgrano-athletic",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [club de la fuente coincide con el club del catálogo (Belgrano)]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "san-andres-ezequiel-gomez-cofre": {
+      "name": "Ezequiel Gomez Cofre",
+      "clubId": "san-andres",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (San Andrés)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "belgrano-athletic-rodrigo-fernandez-criado": {
+      "name": "Rodrigo Fernández Criado",
+      "clubId": "belgrano-athletic",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV para el Americas Rugby Championship 2026 (no es test) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/08/25/reputable-argentina-xv-roster-for-americas-rugby-championship/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [la fuente indica club distinto (IPR Sporting)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "buenos-aires-crc-francisco-sluga": {
+      "name": "Francisco Sluga",
+      "clubId": "buenos-aires-crc",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (Buenos Aires)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV para el Americas Rugby Championship 2026 (no es test) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/08/25/reputable-argentina-xv-roster-for-americas-rugby-championship/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Buenos Aires)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "regatas-bella-vista-marcelo-toledo": {
+      "name": "Marcelo Toledo",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "belgrano-athletic-juan-penoucos": {
+      "name": "Juan Penoucos",
+      "clubId": "belgrano-athletic",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2026
+          ],
+          "detail": "Test cap: debut Nº910 de Los Pumas vs Sudáfrica el 8 de agosto de 2026; club de origen en el archivo oficial: Club de remo (Azul).",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "newman-faustino-santarelli": {
+      "name": "Faustino Santarelli",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (Newman)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Newman)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "la-plata-juan-pedro-bernasconi": {
+      "name": "Juan Pedro Bernasconi",
+      "clubId": "la-plata",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (La Plata)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV para el Americas Rugby Championship 2026 (no es test) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/08/25/reputable-argentina-xv-roster-for-americas-rugby-championship/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (La Plata)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "champagnat-lucas-moresco": {
+      "name": "Lucas Moresco",
+      "clubId": "champagnat",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Champagnat)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "belgrano-athletic-jeronimo-sorondo": {
+      "name": "Jerónimo Sorondo",
+      "clubId": "belgrano-athletic",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pumitas Junior World Championship 2026 (Georgia) [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=120248",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "newman-lucas-marguery": {
+      "name": "Lucas Marguery",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Newman)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "hindu-bautista-farise": {
+      "name": "Bautista Farisé",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Hindú)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Peñarol (Uruguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Peñarol 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/09/2025-penarol-roster-for-super-rugby-americas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "deportiva-francesa-estanislao-renthel": {
+      "name": "Estanislao Renthel",
+      "clubId": "deportiva-francesa",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Deportiva Francesa)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "regatas-bella-vista-juan-cruz-corso": {
+      "name": "Juan Cruz Corso",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV para el Americas Rugby Championship 2026 (no es test) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/08/25/reputable-argentina-xv-roster-for-americas-rugby-championship/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "sic-felipe-ledesma": {
+      "name": "Felipe Ledesma",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024,
+            2025
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "argentino-nahuel-clausen": {
+      "name": "Nahuel Clausen",
+      "clubId": "argentino",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Argentino)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "regatas-bella-vista-santiago-cordero": {
+      "name": "Santiago Cordero",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Pampas XV (pre-2016) / Argentina A",
+          "years": [
+            2013,
+            2014,
+            2015
+          ],
+          "detail": "Pampas XV 2013–2015; Argentina A 2015 (2 partidos), según el infobox de Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Exeter Chiefs (Premiership inglesa)",
+          "years": [
+            2017,
+            2018,
+            2019
+          ],
+          "detail": "Exeter Chiefs 2017–2019.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Bordeaux Bègles (Top 14 francés)",
+          "years": [
+            2019,
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "detail": "Bordeaux 2019–2023.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Connacht (URC)",
+          "years": [
+            2023,
+            2024,
+            2025
+          ],
+          "detail": "Connacht 2023–2025.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016,
+            2017
+          ],
+          "detail": "Jaguares 2016–2017.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Regatas Bella Vista)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2013
+          ],
+          "detail": "Test cap: debut Nº805 de Los Pumas vs Inglaterra el 9 de noviembre de 2013; club de origen en el archivo oficial: Regatas Bella Vista.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "detail": "56 caps (Wikipedia, actualizado 27/12/2025); debut vs Inglaterra el 9/11/2013; anunció su retiro de Los Pumas el 19/7/2025.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2012,
+            2013
+          ],
+          "detail": "Plantel Pumitas 2012 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Argentina M19 / M20",
+          "years": [
+            2012,
+            2013
+          ],
+          "detail": "Argentina U19 2012 (1 partido) y U20 2012–2013 (15 partidos), según Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Cordero",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "belgrano-athletic-ignacio-diaz": {
+      "name": "Ignacio Díaz",
+      "clubId": "belgrano-athletic",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "cuba-agustin-fraga": {
+      "name": "Agustín Fraga",
+      "clubId": "cuba",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (CUBA)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2022,
+            2023,
+            2024,
+            2025,
+            2026
+          ],
+          "detail": "Debut 2022; Mundial Seven 2022, Panamericanos 2023 (oro), Olímpicos París 2024.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Agust%C3%ADn_Fraga",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2023
+          ],
+          "detail": "Plantel SVNS 2023-24 (dic 2023) según Wikipedia [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Argentina_national_rugby_sevens_team",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Juegos Olímpicos París 2024 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://scrummage.co.ke/2024/06/28/argentina-7s-squad-for-paris-olympics/",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel SVNS 2024-25 (Dubai y Ciudad del Cabo) UAR [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/el-primer-plantel-de-la-temporada/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "buenos-aires-crc-alfonso-latorre": {
+      "name": "Alfonso Latorre",
+      "clubId": "buenos-aires-crc",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [club de la fuente coincide con el club del catálogo (BACRC)]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Buenos Aires)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "alumni-santiago-pernas": {
+      "name": "Santiago Pernas",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Alumni)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Alumni)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2025
+          ],
+          "detail": "Test cap: debut Nº903 de Los Pumas vs Uruguay el 19 de julio de 2025; club de origen en el archivo oficial: Alumni.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "newman-jeronimo-ulloa": {
+      "name": "Jerónimo Ulloa",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Newman)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Newman)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "alumni-tobias-wade": {
+      "name": "Tobías Wade",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "europe",
+          "team": "Zebre Parma (URC)",
+          "years": [
+            2026
+          ],
+          "detail": "Tras ganar Pampas la SRA 2026, firmó con Zebre Parma; en noviembre 2026 fue convocado a Los Pumas para la gira (sin debut registrado en el archivo oficial al 5/9/2026). Coincide con research/returns.json.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tob%C3%ADas_Wade",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pampas 2026 anunciado dic 2025 [club de la fuente coincide con el club del catálogo (Alumni)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=117850",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "detail": "SVNS desde 2022, Mundial Seven 2022, Juegos Panamericanos 2023, Olímpicos París 2024, SVNS 2024-25.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tob%C3%ADas_Wade",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2023
+          ],
+          "detail": "Plantel SVNS 2023-24 (dic 2023) según Wikipedia [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Argentina_national_rugby_sevens_team",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Juegos Olímpicos París 2024 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://scrummage.co.ke/2024/06/28/argentina-7s-squad-for-paris-olympics/",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel SVNS 2024-25 (Dubai y Ciudad del Cabo) UAR [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/el-primer-plantel-de-la-temporada/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "los-tilos-eliseo-chiavassa": {
+      "name": "Eliseo Chiavassa",
+      "clubId": "los-tilos",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Los Tilos)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2023
+          ],
+          "detail": "Plantel Pumitas 2023 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "hindu-nicolas-d-amorim": {
+      "name": "Nicolás D'Amorim",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (Hindú)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Hindú)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2025
+          ],
+          "detail": "Test cap: debut Nº905 de Los Pumas vs Uruguay el 19 de julio de 2025; club de origen en el archivo oficial: Hindú.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "la-plata-tomas-bernasconi": {
+      "name": "Tomás Bernasconi",
+      "clubId": "la-plata",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (La Plata)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "alumni-santiago-montagner": {
+      "name": "Santiago Montagner",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "europe",
+          "team": "Mont-de-Marsan (Pro D2) / Petrarca Padova (Top10 italiano)",
+          "years": [
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "detail": "Mont-de-Marsan 2020–2022; Petrarca Padova 2022–2023.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Montagner",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2018,
+            2019
+          ],
+          "detail": "Plantel Jaguares 2018–2019 con 0 partidos de Super Rugby según el infobox (actualizado el 3/1/2018).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Montagner",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Alumni)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2016
+          ],
+          "detail": "Test cap: debut Nº844 de Los Pumas vs Uruguay el 28 de mayo de 2016; club de origen en el archivo oficial: Alumni.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Jaguares XV",
+          "years": [
+            2019
+          ],
+          "detail": "Jaguares XV 2019.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Montagner",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Selknam (Chile)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Selknam 2026; la nota indica que Montagner llega desde Argentina con experiencia en Sudamérica y Europa [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/01/12/selknam-roster-for-super-rugby-americas-2026/",
+          "confidence": "media"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2014
+          ],
+          "detail": "Plantel Pumitas 2014 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-mateo-albanese": {
+      "name": "Mateo Albanese",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        }
+      ]
+    },
+    "olivos-ignacio-inchauspe": {
+      "name": "Ignacio Inchauspe",
+      "clubId": "olivos",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Olivos)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-manuel-nogues": {
+      "name": "Manuel Nogués",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (Atlético del Rosario)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2018
+          ],
+          "detail": "Plantel Pumitas 2018 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-bernabe-lopez-fleming": {
+      "name": "Bernabé López Fleming",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "cuba-marcos-elicagaray": {
+      "name": "Marcos Elicagaray",
+      "clubId": "cuba",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pampas 2024 [club de la fuente coincide con el club del catálogo (CUBA)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/02/exciting-pampas-roster-names-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "newman-bautista-bosch": {
+      "name": "Bautista Bosch",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [club de la fuente coincide con el club del catálogo (Newman)]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "delta-facundo-nigro": {
+      "name": "Facundo Nigro",
+      "clubId": "delta",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        }
+      ]
+    },
+    "casi-leo-mazzini": {
+      "name": "Leo Mazzini",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [club de la fuente coincide con el club del catálogo (CASI)]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "casi-jeronimo-solveyra": {
+      "name": "Jerónimo Solveyra",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-francisco-gonzalez-capdevila": {
+      "name": "Francisco González Capdevila",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "pampas",
+          "team": "Pampas (Super Rugby Americas)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pampas 2025 (clubes solo cuando la nota los indica) [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://americasrugbynews.com/?p=111659",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "atletico-del-rosario-bautista-estelles": {
+      "name": "Bautista Estellés",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV vs EE.UU. 15/8/2026 / Americas Rugby Championship [club de la fuente coincide con el club del catálogo (Atlético del Rosario)]",
+          "sourceUrl": "https://www.ellitoral.com/deportes/rugby-argentinaxv-amistoso-eeuu-capibaras-litoral_0_FhZfvoZpu1.amp.html",
+          "confidence": "alta"
+        },
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Argentina XV para el Americas Rugby Championship 2026 (no es test) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/08/25/reputable-argentina-xv-roster-for-americas-rugby-championship/",
+          "confidence": "media"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Capibaras XV (Litoral)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Capibaras 2026 (debutante en SRA) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/12/24/super-rugby-americas-newcomers-los-capibaras-name-exciting-roster/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "hindu-pascal-senillosa": {
+      "name": "Pascal Senillosa",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Pumitas Junior World Championship 2026 (Georgia) [club de la fuente coincide con el club del catálogo (Hindú)]",
+          "sourceUrl": "https://www.americasrugbynews.com/?p=120248",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "los-tilos-joaquin-tuculet": {
+      "name": "Joaquin Tuculet",
+      "clubId": "los-tilos",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Pampas XV / Argentina Jaguars",
+          "years": [
+            2009,
+            2010,
+            2011
+          ],
+          "detail": "Pampas XV 2011; Argentina Jaguars 2009–11 (12 partidos), según el infobox de Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Sale Sharks / Grenoble / Bordeaux Bègles / Cardiff Blues",
+          "years": [
+            2011,
+            2012,
+            2013,
+            2014,
+            2015
+          ],
+          "detail": "Sale Sharks 2011–12 (Premiership), Grenoble 2012–13 (Top 14), Bordeaux Bègles 2013–14 (Top 14), Cardiff Blues 2014–15 (Pro12), según Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "detail": "Jaguares 2016–2020.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "other-pro",
+          "team": "Toronto Arrows (Major League Rugby)",
+          "years": [
+            2021
+          ],
+          "detail": "Toronto Arrows desde 2021, según el infobox de Wikipedia (puede estar desactualizado).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Tuculet",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2012
+          ],
+          "detail": "Test cap: debut Nº777 de Los Pumas vs Italia el 9 de junio de 2012; club de origen en el archivo oficial: Los Tilos.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2010
+          ],
+          "detail": "Pumas Sevens 2010 (4 partidos), según el infobox de Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2008,
+            2009
+          ],
+          "detail": "Plantel Pumitas 2008 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "newman-luciano-borio": {
+      "name": "Luciano Borio",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2008
+          ],
+          "detail": "Plantel Pumitas 2008 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "pucara-brian-ormson": {
+      "name": "Brian Ormson",
+      "clubId": "pucara",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2010,
+            2011
+          ],
+          "detail": "Plantel Pumitas 2010 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "hindu-felipe-ezcurra": {
+      "name": "Felipe Ezcurra",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Pampas XV / Argentina XV",
+          "years": [
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "detail": "Argentina XV 2014–2019 (18 partidos); Pampas XV 2015, según Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Felipe_Ezcurra",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Leicester Tigers / Grenoble",
+          "years": [
+            2018,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "detail": "Leicester Tigers 2018 (Premiership); Grenoble desde 2021 (Pro D2), actualizado a 25/1/2024.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Felipe_Ezcurra",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "detail": "Figura en la categoría de Wikipedia «Jaguares (Super Rugby) players», pero el infobox solo registra Jaguares XV 2021; temporadas y partidos no verificados.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Felipe_Ezcurra",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2014
+          ],
+          "detail": "Test cap: debut Nº811 de Los Pumas vs Uruguay el 17 de mayo de 2014; club de origen en el archivo oficial: Hindú Club.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Jaguares XV",
+          "years": [
+            2021
+          ],
+          "detail": "Jaguares XV 2021.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Felipe_Ezcurra",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2012,
+            2013
+          ],
+          "detail": "Plantel Pumitas 2012 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "pucara-german-klubus": {
+      "name": "German Klubus",
+      "clubId": "pucara",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2012
+          ],
+          "detail": "Plantel Pumitas 2012 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "hindu-lautaro-bavaro": {
+      "name": "Lautaro Bávaro",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "detail": "Argentina XV 2016–2019, según el infobox de Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lautaro_Bavaro",
+          "confidence": "media"
+        },
+        {
+          "level": "other-pro",
+          "team": "Old Glory DC (Major League Rugby)",
+          "years": [
+            2023,
+            2024,
+            2025
+          ],
+          "detail": "Old Glory DC desde 2023, según Wikipedia (puede haber cambiado).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lautaro_Bavaro",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2016
+          ],
+          "detail": "Test cap: debut Nº827 de Los Pumas vs Uruguay el 28 de mayo de 2016; club de origen en el archivo oficial: Hindú Club.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Jaguares XV / Ceibos",
+          "years": [
+            2019,
+            2020,
+            2021
+          ],
+          "detail": "Jaguares XV 2019–2021; Ceibos 2019 (según el infobox).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lautaro_Bavaro",
+          "confidence": "media"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2013,
+            2014
+          ],
+          "detail": "Plantel Pumitas 2013 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "la-plata-ariel-del-cerro": {
+      "name": "Ariel Del Cerro",
+      "clubId": "la-plata",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2014
+          ],
+          "detail": "Plantel Pumitas 2014 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "casi-ignacio-larrague": {
+      "name": "Ignacio Larrague",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2016,
+            2017
+          ],
+          "detail": "Argentina XV 2016–17 (26 partidos).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ignacio_Larrague",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016,
+            2017
+          ],
+          "detail": "Jaguares 2016–2017.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ignacio_Larrague",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2016
+          ],
+          "detail": "Test cap: debut Nº834 de Los Pumas vs Uruguay el 28 de mayo de 2016; club de origen en el archivo oficial: CASI.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2014,
+            2015
+          ],
+          "detail": "Plantel Pumitas 2014 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "olivos-nicolas-ocello": {
+      "name": "Nicolás Ocello",
+      "clubId": "olivos",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2015
+          ],
+          "detail": "Plantel Pumitas 2015 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "casi-benito-paolucci": {
+      "name": "Benito Paolucci",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2015,
+            2016
+          ],
+          "detail": "Plantel Pumitas 2015 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-martin-elias": {
+      "name": "Martín Elías",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2016
+          ],
+          "detail": "Plantel Pumitas 2016 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-tomas-malanos": {
+      "name": "Tomás Malanos",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2016,
+            2017
+          ],
+          "detail": "Plantel Pumitas 2016 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "newman-juan-bautista-daireaux": {
+      "name": "Juan Bautista Daireaux",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2017,
+            2018
+          ],
+          "detail": "Plantel Pumitas 2017 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "regatas-bella-vista-santiago-ruiz": {
+      "name": "Santiago Ruiz",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Yacare 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/08/yacare-roster-for-super-rugby-americas-2025/",
+          "confidence": "media"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2017,
+            2018
+          ],
+          "detail": "Plantel Pumitas 2017 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "casi-salvador-ochoa": {
+      "name": "Salvador Ochoa",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2018
+          ],
+          "detail": "Plantel Pumitas 2018 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "buenos-aires-crc-tomas-acosta-pimentel": {
+      "name": "Tomás Acosta Pimentel",
+      "clubId": "buenos-aires-crc",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2019
+          ],
+          "detail": "Plantel Pumitas 2019 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-francisco-calandra": {
+      "name": "Francisco Calandra",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2019
+          ],
+          "detail": "Plantel Pumitas 2019 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-jeronimo-gomez-vara": {
+      "name": "Jerónimo Gómez Vara",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "other-pro",
+          "team": "Major League Rugby",
+          "years": [
+            2025
+          ],
+          "detail": "ARN (roster Capibaras 2026) lo cita como regresado desde la MLR; equipo y años no verificados.",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/12/24/super-rugby-americas-newcomers-los-capibaras-name-exciting-roster/",
+          "confidence": "media"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Capibaras XV (Litoral)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Capibaras 2026 (debutante en SRA) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/12/24/super-rugby-americas-newcomers-los-capibaras-name-exciting-roster/",
+          "confidence": "media"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2019
+          ],
+          "detail": "Plantel Pumitas 2019 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "los-tilos-felipe-bares": {
+      "name": "Felipe Bares",
+      "clubId": "los-tilos",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2023
+          ],
+          "detail": "Plantel Pumitas 2023 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "deportiva-francesa-tomas-di-biase": {
+      "name": "Tomás Di Biase",
+      "clubId": "deportiva-francesa",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Peñarol (Uruguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Peñarol 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/09/2025-penarol-roster-for-super-rugby-americas/",
+          "confidence": "media"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2023,
+            2024
+          ],
+          "detail": "Plantel Pumitas 2023 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "la-plata-santino-di-lucca": {
+      "name": "Santino Di Lucca",
+      "clubId": "la-plata",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-santos-fernandez-de-oliveira": {
+      "name": "Santos Fernández De Oliveira",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club; edad estimada compatible]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-timoteo-silva": {
+      "name": "Timoteo Silva",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel SVNS 2025-26 (Valladolid y Burdeos, mayo-jun 2026) [club de la fuente coincide con el club del catálogo (SIC)]",
+          "sourceUrl": "https://www.infobae.com/deportes/2026/05/20/los-pumas-7s-definen-su-plantel-para-las-ultimas-etapas-del-svns-world-championship-con-dos-debutantes/",
+          "confidence": "alta"
+        },
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024,
+            2025
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "casi-ignacio-torrado": {
+      "name": "Ignacio Torrado",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "cuba-joaquin-yakiche": {
+      "name": "Joaquín Yakiche",
+      "clubId": "cuba",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Pumitas 2024 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "cuba-rafael-benedit": {
+      "name": "Rafael Benedit",
+      "clubId": "cuba",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "los-tilos-matias-cordero": {
+      "name": "Matías Cordero",
+      "clubId": "los-tilos",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "cuba-felix-corleto": {
+      "name": "Félix Corleto",
+      "clubId": "cuba",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "hindu-ramon-fernandez-miranda": {
+      "name": "Ramón Fernández Miranda",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "mariano-moreno-valentino-freiria": {
+      "name": "Valentino Freiria",
+      "clubId": "mariano-moreno",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "regatas-bella-vista-agustin-garcia-campos": {
+      "name": "Agustín García Campos",
+      "clubId": "regatas-bella-vista",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "alumni-santiago-neyra": {
+      "name": "Santiago Neyra",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "alumni-aquiles-vieyra": {
+      "name": "Aquiles Vieyra",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "youth-national",
+          "team": "Los Pumitas (M20)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Pumitas 2025 según página oficial UAR de Los Pumitas (sin clubes) [fecha de nacimiento acreditada compatible con la categoría]",
+          "sourceUrl": "https://uar.com.ar/equipos-uar/los-pumitas/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "newman-gonzalo-gutierrez-taboada": {
+      "name": "Gonzalo Gutiérrez Taboada",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2016
+          ],
+          "detail": "Test cap: debut Nº847 de Los Pumas vs Chile el 4 de junio de 2016; club de origen en el archivo oficial: Newman.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2014
+          ],
+          "detail": "Plantel London Sevens 2014 (World Series) según Wikipedia [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Argentina_national_rugby_sevens_team",
+          "confidence": "media"
+        }
+      ]
+    },
+    "alumni-franco-sabato": {
+      "name": "Franco Sábato",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2016
+          ],
+          "detail": "Plantel Juegos Olímpicos Río 2016 según Wikipedia [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Argentina_national_rugby_sevens_team",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2016
+          ],
+          "detail": "Juegos Olímpicos Río 2016 (Wikipedia, «Franco Sábato»).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Franco_S%C3%A1bato",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "belgrano-athletic-mateo-fossati": {
+      "name": "Mateo Fossati",
+      "clubId": "belgrano-athletic",
+      "entries": [
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel SVNS 2025-26 (Valladolid y Burdeos, mayo-jun 2026) [club de la fuente coincide con el club del catálogo (Belgrano Athletic)]",
+          "sourceUrl": "https://www.infobae.com/deportes/2026/05/20/los-pumas-7s-definen-su-plantel-para-las-ultimas-etapas-del-svns-world-championship-con-dos-debutantes/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "atletico-del-rosario-pedro-de-haro": {
+      "name": "Pedro De Haro",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel SVNS 2025-26 (Valladolid y Burdeos, mayo-jun 2026) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.infobae.com/deportes/2026/05/20/los-pumas-7s-definen-su-plantel-para-las-ultimas-etapas-del-svns-world-championship-con-dos-debutantes/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "hurling-sebastian-dubuc": {
+      "name": "Sebastián Dubuc",
+      "clubId": "hurling",
+      "entries": [
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel SVNS 2025-26 (Dubai y Ciudad del Cabo, nov 2025) UAR [club de la fuente coincide con el club del catálogo (Hurling)]",
+          "sourceUrl": "https://uar.com.ar/el-primer-plantel-de-la-temporada-2025-2026/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "casi-benjamin-belaga": {
+      "name": "Benjamín Belaga",
+      "clubId": "casi",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania) [club de la fuente coincide con el club del catálogo (CASI)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "buenos-aires-crc-julian-quetglas": {
+      "name": "Julián Quetglas",
+      "clubId": "buenos-aires-crc",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Argentina XV julio 2025 (vs Brasil y Rumania)",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/06/25/argentina-xv-roster-in-super-rugby-americas-heavy-for-july/",
+          "confidence": "media"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Yacare 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/08/yacare-roster-for-super-rugby-americas-2025/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-ezequiel-reyes": {
+      "name": "Ezequiel Reyes",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Yacare 2024 (con club de origen) [club de la fuente coincide con el club del catálogo (Atlético del Rosario)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/18/new-look-yacare-roster-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Yacare 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/08/yacare-roster-for-super-rugby-americas-2025/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "sic-lucas-sommer": {
+      "name": "Lucas Sommer",
+      "clubId": "sic",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Yacare 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/08/yacare-roster-for-super-rugby-americas-2025/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "los-tilos-felipe-puertas": {
+      "name": "Felipe Puertas",
+      "clubId": "los-tilos",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2024
+          ],
+          "detail": "Plantel Yacare 2024 (con club de origen) [club de la fuente coincide con el club del catálogo (Los Tilos)]",
+          "sourceUrl": "https://www.americasrugbynews.com/2024/01/18/new-look-yacare-roster-for-super-rugby-americas-2024/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Yacare (Paraguay)",
+          "years": [
+            2025
+          ],
+          "detail": "Plantel Yacare 2025 [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/01/08/yacare-roster-for-super-rugby-americas-2025/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "newman-santiago-marolda": {
+      "name": "Santiago Marolda",
+      "clubId": "newman",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Peñarol (Uruguay)",
+          "years": [
+            2026
+          ],
+          "detail": "Figura en el plantel Peñarol SRA 2026 (zaguero) y en las alineaciones de la fecha 2 (camiseta 15) y de la fecha 9 (camiseta 11) de las guías ARN. Identificación por nombre único en el catálogo (Newman, wing nº 14 de la final URBA 2026); las notas ARN no dan club de origen.",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/01/15/three-time-sra-champions-penarol-confirm-2026-roster/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Peñarol (Uruguay)",
+          "years": [
+            2026
+          ],
+          "detail": "Alineación titular (camiseta 11) de Peñarol en la fecha 9 de la SRA 2026.",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/04/24/super-rugby-americas-2026-week-9-arn-guide/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "champagnat-tomas-baca-castex": {
+      "name": "Tomás Baca Castex",
+      "clubId": "champagnat",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Peñarol (Uruguay)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Peñarol 2026 (campeón 2025) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2026/01/15/three-time-sra-champions-penarol-confirm-2026-roster/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-lisandro-dipierri": {
+      "name": "Lisandro Dipierri",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Capibaras XV (Litoral)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Capibaras 2026 (debutante en SRA) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/12/24/super-rugby-americas-newcomers-los-capibaras-name-exciting-roster/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "atletico-del-rosario-santiago-vitola": {
+      "name": "Santiago Vitola",
+      "clubId": "atletico-del-rosario",
+      "entries": [
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Capibaras XV (Litoral)",
+          "years": [
+            2026
+          ],
+          "detail": "Plantel Capibaras 2026 (debutante en SRA) [coincidencia por nombre único en el catálogo; la fuente no indica club]",
+          "sourceUrl": "https://www.americasrugbynews.com/2025/12/24/super-rugby-americas-newcomers-los-capibaras-name-exciting-roster/",
+          "confidence": "media"
+        }
+      ]
+    },
+    "los-matreros-juan-pablo-zeiss": {
+      "name": "Juan Pablo Zeiss",
+      "clubId": "los-matreros",
+      "entries": [
+        {
+          "level": "other-pro",
+          "team": "Houston SaberCats / Dallas Jackals (Major League Rugby)",
+          "years": [
+            2022,
+            2023
+          ],
+          "detail": "Houston SaberCats 2022; Dallas Jackals 2023.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Juan_Pablo_Zeiss",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2018
+          ],
+          "detail": "Test cap: debut Nº859 de Los Pumas vs Nueva Zelanda el 8 de septiembre de 2018; club de origen en el archivo oficial: Los Matreros.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Jaguares XV / Ceibos",
+          "years": [
+            2020,
+            2021
+          ],
+          "detail": "Ceibos 2020 y Jaguares XV 2021, según el infobox de Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Juan_Pablo_Zeiss",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "los-tilos-segundo-tuculet": {
+      "name": "Segundo Tuculet",
+      "clubId": "los-tilos",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2016,
+            2017
+          ],
+          "detail": "Argentina XV 2016–2017 (11 partidos).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Segundo_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Narbonne / Ealing Trailfinders / I Medicei / Valence Romans",
+          "years": [
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "detail": "Narbonne 2017–18 (Pro D2), Ealing Trailfinders 2018–19 (Championship inglés), I Medicei 2019–20 (Italia), Valence Romans Drôme desde 2020 (Pro D2); el infobox se actualizó por última vez en 2016, por lo que su situación actual no está verificada.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Segundo_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016
+          ],
+          "detail": "Jaguares 2016.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Segundo_Tuculet",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2016
+          ],
+          "detail": "Test cap: debut Nº849 de Los Pumas vs Chile el 4 de junio de 2016; club de origen en el archivo oficial: Los Tilos.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas7",
+          "team": "Los Pumas 7s",
+          "years": [
+            2014,
+            2015,
+            2016,
+            2017
+          ],
+          "detail": "Argentina Sevens 2014–2017 (86 partidos), según Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Segundo_Tuculet",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "hindu-sebastian-cancelliere": {
+      "name": "Sebastián Cancelliere",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Argentina XV",
+          "years": [
+            2017
+          ],
+          "detail": "Argentina XV 2017 (8 partidos).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sebasti%C3%A1n_Cancelliere",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Glasgow Warriors (URC)",
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "detail": "Glasgow Warriors 2021–2025.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sebasti%C3%A1n_Cancelliere",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2018,
+            2019,
+            2020
+          ],
+          "detail": "Jaguares 2018–2020.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sebasti%C3%A1n_Cancelliere",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2016
+          ],
+          "detail": "Test cap: debut Nº831 de Los Pumas vs Uruguay el 28 de mayo de 2016; club de origen en el archivo oficial: Hindú Club.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        },
+        {
+          "level": "super-rugby-americas-other",
+          "team": "Jaguares XV",
+          "years": [
+            2021
+          ],
+          "detail": "Jaguares XV 2021.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sebasti%C3%A1n_Cancelliere",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "hindu-ramiro-herrera": {
+      "name": "Ramiro Herrera",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Pampas XV / Argentina Jaguars",
+          "years": [
+            2012,
+            2013
+          ],
+          "detail": "Pampas XV 2013; Argentina Jaguars 2012–13 (6 partidos).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ramiro_Herrera",
+          "confidence": "alta"
+        },
+        {
+          "level": "europe",
+          "team": "Castres / Stade Français (Top 14)",
+          "years": [
+            2014,
+            2015,
+            2017,
+            2018,
+            2019
+          ],
+          "detail": "Castres 2014–15; Stade Français 2017–19.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ramiro_Herrera",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016,
+            2017
+          ],
+          "detail": "Jaguares 2016–2017.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ramiro_Herrera",
+          "confidence": "alta"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2014
+          ],
+          "detail": "Test cap: debut Nº814 de Los Pumas vs Irlanda el 7 de junio de 2014; club de origen en el archivo oficial: Hindú Club.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "alumni-santiago-gonzalez-iglesias": {
+      "name": "Santiago González Iglesias",
+      "clubId": "alumni",
+      "entries": [
+        {
+          "level": "argentina-xv",
+          "team": "Pampas XV",
+          "years": [
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015
+          ],
+          "detail": "Pampas XV 2010–2015, según el infobox de Wikipedia.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Gonz%C3%A1lez_Iglesias",
+          "confidence": "alta"
+        },
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "detail": "Jaguares 2016–2019.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Gonz%C3%A1lez_Iglesias",
+          "confidence": "alta"
+        },
+        {
+          "level": "other-pro",
+          "team": "Munakata Sanix Blues (Japón) / San Diego Legion (MLR)",
+          "years": [
+            2020,
+            2021
+          ],
+          "detail": "Munakata Sanix Blues 2020; San Diego Legion desde 2021 (Wikipedia, sin actualización posterior).",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santiago_Gonz%C3%A1lez_Iglesias",
+          "confidence": "media"
+        },
+        {
+          "level": "pumas",
+          "team": "Los Pumas",
+          "years": [
+            2009
+          ],
+          "detail": "Test cap: debut Nº718 de Los Pumas vs Chile el 20 de mayo de 2009; club de origen en el archivo oficial: Alumni.",
+          "sourceUrl": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+          "confidence": "alta"
+        }
+      ]
+    },
+    "hindu-nicolas-leiva": {
+      "name": "Nicolás Leiva",
+      "clubId": "hindu",
+      "entries": [
+        {
+          "level": "jaguares",
+          "team": "Jaguares (Super Rugby)",
+          "years": [
+            2018
+          ],
+          "detail": "Nombrado en el plantel Jaguares 2018 (comunicado citado en Wikipedia); partidos no verificados. Wikipedia lo ubica en Hindú.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nicol%C3%A1s_Leiva",
+          "confidence": "media"
+        }
+      ]
+    }
+  },
+  "doubtful": [
+    {
+      "playerId": "delta-matias-diaz",
+      "name": "Matías Diaz",
+      "clubId": "delta",
+      "reason": "Nombre común. El archivo oficial de Los Pumas (cap 783, 27/4/2013 vs Uruguay) lo da con club de origen Teqüe RC (Mendoza), y las listas de Pampas XV / Pumitas 2012-13 no traen club; el catálogo lo tiene en Delta sin fecha de nacimiento. No se puede afirmar que sea la misma persona."
+    },
+    {
+      "playerId": "liceo-naval-francisco-moreno",
+      "name": "Francisco Moreno",
+      "clubId": "liceo-naval",
+      "reason": "Coincidencia de nombre con Francisco Moreno (Universitario de Tucumán; pilar derecho, nacido 31/1/2002; Pumas cap 909 el 8/8/2026, Tarucas 2025-26, Argentina XV 2025, Newcastle Red Bulls) que research/returns.json registra como jugador en el exterior. El club de origen no coincide con Liceo Naval."
+    },
+    {
+      "playerId": "buenos-aires-crc-renzo-zanella",
+      "name": "Renzo Zanella",
+      "clubId": "buenos-aires-crc",
+      "reason": "Pampas 2024 (ARN) lo lista como Renzo Zanella (Comercial) y Pumitas 2023 (UAR, sin club); el catálogo lo tiene en Buenos Aires CRC (nacido 23/5/2003, edad compatible con M20 2023). El club no coincide."
+    },
+    {
+      "playerId": "newman-joaquin-de-la-vega",
+      "name": "Joaquín de la Vega",
+      "clubId": "newman",
+      "reason": "El plantel Pumitas 2018 de la página UAR lista dos jugadores distintos, Joaquín de la Vega y Joaquín de la Vega Mendía (Hindú); no se puede asignar la entrada al jugador de Newman."
+    },
+    {
+      "playerId": "alumni-bautista-vidal",
+      "name": "Bautista Vidal",
+      "clubId": "alumni",
+      "reason": "Peñarol 2025 (ARN): prop «Bautista Vidal», llega de Argentina y jugó antes SRA con Cobras; sin club de origen. El catálogo tiene un Bautista Vidal en Alumni (nacimiento estimado 2002-09-06)."
+    },
+    {
+      "playerId": "san-albano-ignacio-torres",
+      "name": "Ignacio Torres",
+      "clubId": "san-albano",
+      "reason": "Peñarol 2025 (ARN): prop «Ignacio Torres» llega de NOA (norte argentino); el catálogo tiene un Ignacio Torres en San Albano (Buenos Aires). Nombre común y región distinta."
+    },
+    {
+      "playerId": "newman-gonzalo-gutierrez-taboada",
+      "name": "Gonzalo Gutiérrez Taboada",
+      "clubId": "newman",
+      "reason": "Fuentes que no pude usar por restricción (perfil de ESPN Scrum) lo listan además con Jaguares y Argentina XV; no encontré confirmación en fuentes permitidas (no figura en la categoría Jaguares de Wikipedia). No se registró."
+    },
+    {
+      "playerId": "regatas-bella-vista-santiago-ruiz",
+      "name": "Santiago Ruiz",
+      "clubId": "regatas-bella-vista",
+      "reason": "Registrado como media (Yacare 2025, Pumitas 2017–18): la nota de ARN lo describe como hermano del hooker de Los Pumas Ignacio Ruiz (origen Regatas Bella Vista en el archivo oficial), lo que apoya la identificación, pero ninguna fuente da su club directamente. Pasaría a alta con una fuente con club."
+    }
+  ],
+  "priorityChecks": {
+    "Santiago Cordero": "Catálogo: regatas-bella-vista-santiago-cordero (Regatas Bella Vista, nacido 1993-12-06). Pedigrí completo y de nivel máximo: Los Pumas 56 caps 2013–2025 (debut nº805 vs Inglaterra 9/11/2013; retiro anunciado 19/7/2025), Pampas XV 2013–2015 y Argentina A 2015, Jaguares 2016–2017, Exeter Chiefs 2017–2019, Bordeaux 2019–2023, Connacht 2023–2025, Pumitas 2012–2013 (U19 y U20), Pampas SRA 2026 (campeón) con Regatas Bella Vista. Fuentes: archivo Los Pumas, Wikipedia, ARN.",
+    "Wing nº 14 de Newman en la final URBA 2026": "Santiago Marolda (newman-santiago-marolda; Newman 33–32 Hindú, 7/11/2026; formación oficial URBA, camiseta 14; anotó dos tries según la crónica de la URBA). Pedigrí hallado: Peñarol (Uruguay) en Super Rugby Americas 2026 (plantel de enero 2026 y alineaciones en las fechas 2 y 9), fichaje argentino de 2026. No figura en el archivo de caps de Los Pumas; la prensa lo menciona como considerado para campamentos de Los Pumas 7s, pero no encontré convocatoria oficial verificable. En la misma final: Pablo Cardinal (try) y Juan Bautista Daireaux (Pumitas 2017–18, nombre único, media) también tienen pedigrí; ver players.",
+    "Gonzalo Gómez Taborda": "No existe «Gonzalo Gómez Taborda» en el catálogo (búsqueda por Taborda y por Gonzalo+Gómez sin resultados; los únicos Gómez son Ezequiel Gomez Cofre y Thiago Gomez). Se asumió que se trata de Gonzalo Gutiérrez Taboada (newman-gonzalo-gutierrez-taboada, apertura de Newman, 38 años): Los Pumas nº847 (fullback, debut vs Chile 4/6/2016, archivo oficial) y plantel Pumas 7s London Sevens 2014 (Wikipedia). No fue capitán en la final 2026: el capitán de Newman fue Alejandro Urtubey (formación URBA), por lo que la descripción «capitán» no se confirmó. Jaguares/Argentina XV según ESPN Scrum no se pudo confirmar en fuentes permitidas (ver doubtful)."
+  },
+  "coverageNotes": [
+    "Cobertura asimétrica: los jugadores con página en Wikipedia o en listas oficiales están bien documentados; un jugador joven sin esas presencias (p. ej. contratos a clubes europeos de segunda línea o academias) puede no figurar aunque tenga pedigrí.",
+    "Pumitas: la página de la UAR no publica 2020–2022 (ni clubes en ningún año); ese período queda sin cubrir. Para 2008–2019 solo hay nombres; las coincidencias se validaron por nombre único y edad estimada/acreditada compatible, por eso muchas son «media».",
+    "Pampas 2025: la nota de ARN da pocos clubes; Pampas 2022–2023 y Pampas XV anterior a 2016 solo aparecen por los infobox de Wikipedia.",
+    "No se barrieron los planteles Dogos, Tarucas, Cobras, Selknam 2024/2025 ni Peñarol/Yacare 2024 fuera de lo ya indicado (sí Dogos 2025–2026, Tarucas 2025–2026, Cobras 2025, Selknam 2024 y 2026, Yacare 2024–2026, Peñarol 2025–2026 y Capibaras 2026: solo se registran coincidencias con el catálogo). Capibaras 2026 incluye cuatro jugadores de Atlético del Rosario del catálogo (media: la nota no da clubes).",
+    "Pumas: el archivo oficial cubre todos los debutantes hasta el nº914 (5/9/2026). Convocatorias sin debut (p. ej. Alfonso Latorre y Justo Piccardo en julio 2025; Matías Medrano y Tobías Wade en noviembre 2026) no se registran como caps. Según un resumen de prensa no verificado con la nota original, Agustín Fraga y Juan Penoucos fueron convocados en junio 2026.",
+    "Pumas 7s: se cubrieron París 2024, SVNS 2023-24 (Wikipedia), 2024-25 (UAR) y 2025-26 (UAR e Infobae); no se obtuvieron planteles completos 2022-23 ni todas las etapas 2025-26, y varios nombres no figuran en el catálogo.",
+    "Europa, MLR y Japón: solo para jugadores con página en Wikipedia; los infobox pueden estar desactualizados (varios con «clubupdate» anterior a 2024). Marcados «media» cuando no hay confirmación 2025–2026.",
+    "Jaguares XV / Ceibos se ubican en «super-rugby-americas-other» porque compitieron en la Súper Liga Americana, no en Super Rugby.",
+    "Colisiones de nombre conocidas: Francisco Moreno (el catálogo lo tiene en Liceo Naval; el Pumas/Tarucas/Newcastle es otra persona listada en returns.json) y Matías Medrano (Regatas; research/returns.json lo marca como transferido a Benetton, aquí figura con Pampas y Benetton).",
+    "Edades: el archivo de Pumitas y las comprobaciones por edad usaron birthDate/estimatedBirthDate del catálogo; no se agregó ni modificó ningún dato de nacimiento."
+  ]
+}

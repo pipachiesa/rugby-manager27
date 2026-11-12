@@ -1,0 +1,2268 @@
+{
+ "source": {
+  "publisher": "Ovalados (ovalados.com), proyecto independiente no afiliado a la URBA",
+  "what": "Plantel 2026 · Top 14 de cada club, tal como se muestra en la página pública del club; el número es la camiseta con la que figura el jugador en la lista",
+  "retrievedAt": "2026-11-10",
+  "method": "Lectura manual de la página pública renderizada en el navegador, una visita por club. No se descargaron los archivos /data/*.json, que el robots.txt del sitio excluye.",
+  "limitations": [
+   "Solo temporada 2026: no hay historial por temporada.",
+   "Hay duplicados, nombres abreviados e invertidos; se conservan tal cual y se resuelven en scripts/import-ovalados-2026.mjs."
+  ]
+ },
+ "clubs": {
+  "regatas-bella-vista": {
+   "url": "https://ovalados.com/club-regatas.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Agüero, Diego Torres"
+    },
+    {
+     "number": 1,
+     "name": "Barbaccia, Tomás"
+    },
+    {
+     "number": 1,
+     "name": "Cebron, Fabrizio"
+    },
+    {
+     "number": 2,
+     "name": "Landivar, Beltrán"
+    },
+    {
+     "number": 3,
+     "name": "Camerlinckx, Marcos"
+    },
+    {
+     "number": 3,
+     "name": "Castro Feijoo, Tomas"
+    },
+    {
+     "number": 3,
+     "name": "Galli, Felipe"
+    },
+    {
+     "number": 3,
+     "name": "Gobet, Juan Manuel"
+    },
+    {
+     "number": 3,
+     "name": "Solveyra, Bautista"
+    },
+    {
+     "number": 4,
+     "name": "Sanguinetti, Valentín"
+    },
+    {
+     "number": 5,
+     "name": "López Mañan, Bautista"
+    },
+    {
+     "number": 5,
+     "name": "Toledo, Marcelo"
+    },
+    {
+     "number": 6,
+     "name": "Campos, A. García"
+    },
+    {
+     "number": 6,
+     "name": "García Campos, Agustín"
+    },
+    {
+     "number": 6,
+     "name": "Gobet, Agustín Lucas"
+    },
+    {
+     "number": 6,
+     "name": "Ruiz, Santiago"
+    },
+    {
+     "number": 6,
+     "name": "Sanguinetti, Tomás"
+    },
+    {
+     "number": 7,
+     "name": "Ferro, Marcos"
+    },
+    {
+     "number": 7,
+     "name": "Gobet, Lucas"
+    },
+    {
+     "number": 7,
+     "name": "Pascuet*, Matías"
+    },
+    {
+     "number": 8,
+     "name": "Camerlinckx, Felipe"
+    },
+    {
+     "number": 9,
+     "name": "De la Torre, Esteban"
+    },
+    {
+     "number": 9,
+     "name": "Joseph, Marcos"
+    },
+    {
+     "number": 10,
+     "name": "De la Torre, José"
+    },
+    {
+     "number": 11,
+     "name": "Camerlinckx, Enrique"
+    },
+    {
+     "number": 12,
+     "name": "Camerlinckx, Mateo"
+    },
+    {
+     "number": 12,
+     "name": "Klapenbach, Tobias"
+    },
+    {
+     "number": 12,
+     "name": "Moadeb, Ramiro"
+    },
+    {
+     "number": 13,
+     "name": "Corso, Juan Cruz"
+    },
+    {
+     "number": 13,
+     "name": "Pisani, Francisco"
+    },
+    {
+     "number": 14,
+     "name": "Molina Campos, Juan"
+    },
+    {
+     "number": 14,
+     "name": "Rugolo, Felipe"
+    },
+    {
+     "number": 14,
+     "name": "Santa Ana, Rafael"
+    },
+    {
+     "number": 14,
+     "name": "Terra, Felipe"
+    },
+    {
+     "number": 14,
+     "name": "Tommasini, Felipe"
+    },
+    {
+     "number": 15,
+     "name": "Camerlinkckx, Justo"
+    },
+    {
+     "number": 15,
+     "name": "Cordero, Santiago"
+    }
+   ]
+  },
+  "newman": {
+   "url": "https://ovalados.com/club-newman.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Bosch, Isidro"
+    },
+    {
+     "number": 1,
+     "name": "Prince, Miguel"
+    },
+    {
+     "number": 1,
+     "name": "Wright, James"
+    },
+    {
+     "number": 2,
+     "name": "Mackinlay, Teófilo"
+    },
+    {
+     "number": 2,
+     "name": "Perkins, Fermín"
+    },
+    {
+     "number": 2,
+     "name": "Salese, Beltrán"
+    },
+    {
+     "number": 3,
+     "name": "Borio, Luciano"
+    },
+    {
+     "number": 3,
+     "name": "Bosch, Bautista"
+    },
+    {
+     "number": 3,
+     "name": "Lozano, Manuel"
+    },
+    {
+     "number": 4,
+     "name": "Cardinal, Pablo"
+    },
+    {
+     "number": 4,
+     "name": "Garibaldi, Marcos"
+    },
+    {
+     "number": 4,
+     "name": "Ureta, Jerónimo"
+    },
+    {
+     "number": 5,
+     "name": "Fortín, Pablo"
+    },
+    {
+     "number": 5,
+     "name": "Lascombes, Francisco"
+    },
+    {
+     "number": 5,
+     "name": "Urtubey, Alejandro"
+    },
+    {
+     "number": 6,
+     "name": "Garay, Teófilo"
+    },
+    {
+     "number": 6,
+     "name": "Montoya, Mateo"
+    },
+    {
+     "number": 7,
+     "name": "Cardinal, Paul"
+    },
+    {
+     "number": 7,
+     "name": "De la Vega, Joaquín"
+    },
+    {
+     "number": 8,
+     "name": "Díaz de Vivar, Rodrigo"
+    },
+    {
+     "number": 8,
+     "name": "Santarelli, Faustino"
+    },
+    {
+     "number": 9,
+     "name": "Marguery, Lucas"
+    },
+    {
+     "number": 9,
+     "name": "Nava, Lucas"
+    },
+    {
+     "number": 9,
+     "name": "Torello, Facundo"
+    },
+    {
+     "number": 10,
+     "name": "Gutiérrez Taboada, Gonzalo"
+    },
+    {
+     "number": 10,
+     "name": "Llerena, Florencio"
+    },
+    {
+     "number": 11,
+     "name": "Longinotti, Franco"
+    },
+    {
+     "number": 11,
+     "name": "Ulloa, Jerónimo"
+    },
+    {
+     "number": 12,
+     "name": "Keena, Tomás"
+    },
+    {
+     "number": 12,
+     "name": "Lanfranco, Benjamín"
+    },
+    {
+     "number": 13,
+     "name": "Prince, Simón"
+    },
+    {
+     "number": 13,
+     "name": "Ulloa, Cruz"
+    },
+    {
+     "number": 14,
+     "name": "Marolda, Santiago"
+    },
+    {
+     "number": 14,
+     "name": "Ortiz Basualdo, Justo"
+    },
+    {
+     "number": 14,
+     "name": "Vela, Carlos"
+    },
+    {
+     "number": 15,
+     "name": "Daireaux, Juan Bautista"
+    },
+    {
+     "number": 15,
+     "name": "Menendez, Carlos Quinto"
+    },
+    {
+     "number": 20,
+     "name": "Bonasso, Bautista"
+    }
+   ]
+  },
+  "casi": {
+   "url": "https://ovalados.com/club-casi.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Britto, Joaquín"
+    },
+    {
+     "number": 1,
+     "name": "Scaiano, Facundo"
+    },
+    {
+     "number": 1,
+     "name": "Superior"
+    },
+    {
+     "number": 2,
+     "name": "Albareda, Juan"
+    },
+    {
+     "number": 2,
+     "name": "Torres Obeid, Bautista T."
+    },
+    {
+     "number": 2,
+     "name": "Torres Obeid, Juan"
+    },
+    {
+     "number": 3,
+     "name": "Domínguez Perdigón, Joaquín"
+    },
+    {
+     "number": 3,
+     "name": "Garcia Rafael, Hugo"
+    },
+    {
+     "number": 3,
+     "name": "Paolucci, Félix"
+    },
+    {
+     "number": 4,
+     "name": "Mazzini, Leo"
+    },
+    {
+     "number": 4,
+     "name": "Ochoa, Salvador"
+    },
+    {
+     "number": 4,
+     "name": "Torrado, Ignacio"
+    },
+    {
+     "number": 5,
+     "name": "Larrague, Ignacio"
+    },
+    {
+     "number": 6,
+     "name": "Paolucci, Benito"
+    },
+    {
+     "number": 6,
+     "name": "Sáenz de Miera, Joaquín"
+    },
+    {
+     "number": 7,
+     "name": "Sartori, Eugenio"
+    },
+    {
+     "number": 8,
+     "name": "Briatore, Luis"
+    },
+    {
+     "number": 8,
+     "name": "Rocca Rivarola, Benjamín"
+    },
+    {
+     "number": 9,
+     "name": "Roger, Eliseo"
+    },
+    {
+     "number": 9,
+     "name": "Sánchez, Joaquín"
+    },
+    {
+     "number": 10,
+     "name": "Hileman, Felipe"
+    },
+    {
+     "number": 10,
+     "name": "Roger, Martín"
+    },
+    {
+     "number": 11,
+     "name": "Lescano, Francisco"
+    },
+    {
+     "number": 11,
+     "name": "Phelan, Tomás"
+    },
+    {
+     "number": 11,
+     "name": "Repetto, Pedro"
+    },
+    {
+     "number": 12,
+     "name": "Belaga, Benjamín"
+    },
+    {
+     "number": 13,
+     "name": "Phelan, Matías"
+    },
+    {
+     "number": 13,
+     "name": "Solveyra, Jerónimo"
+    },
+    {
+     "number": 14,
+     "name": "Castillo, Ramón"
+    },
+    {
+     "number": 14,
+     "name": "David, Santiago"
+    },
+    {
+     "number": 14,
+     "name": "Tumbarello, Jeronimo"
+    },
+    {
+     "number": 15,
+     "name": "Akemeier, Juan"
+    }
+   ]
+  },
+  "sic": {
+   "url": "https://ovalados.com/club-sic.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Calandra, Francisco"
+    },
+    {
+     "number": 1,
+     "name": "Piccinini, Marcos"
+    },
+    {
+     "number": 2,
+     "name": "Bottazzini, Ignacio"
+    },
+    {
+     "number": 2,
+     "name": "Ledesma, Tadeo"
+    },
+    {
+     "number": 2,
+     "name": "Noel, Ignacio"
+    },
+    {
+     "number": 2,
+     "name": "Rocha, Lucas"
+    },
+    {
+     "number": 3,
+     "name": "Chiappe, Benjamín"
+    },
+    {
+     "number": 4,
+     "name": "Curuchaga, Manuel"
+    },
+    {
+     "number": 4,
+     "name": "Miguens, F."
+    },
+    {
+     "number": 4,
+     "name": "Sommer, Lucas"
+    },
+    {
+     "number": 5,
+     "name": "Longo, Tomás"
+    },
+    {
+     "number": 5,
+     "name": "Plorutti, Ciro"
+    },
+    {
+     "number": 5,
+     "name": "Viero, Bautista"
+    },
+    {
+     "number": 6,
+     "name": "Panzarini, Andrea"
+    },
+    {
+     "number": 7,
+     "name": "De Oliveira"
+    },
+    {
+     "number": 7,
+     "name": "Delger, Franco"
+    },
+    {
+     "number": 7,
+     "name": "Fernández de Oliveira, Santos"
+    },
+    {
+     "number": 7,
+     "name": "Oliveira, Santos Fernández de"
+    },
+    {
+     "number": 8,
+     "name": "Daireaux, Alejandro"
+    },
+    {
+     "number": 8,
+     "name": "Legarre Matera, T"
+    },
+    {
+     "number": 8,
+     "name": "Meyrelles, Tomás"
+    },
+    {
+     "number": 9,
+     "name": "Albanese, Mateo"
+    },
+    {
+     "number": 9,
+     "name": "Sascaro, Felipe"
+    },
+    {
+     "number": 10,
+     "name": "Pavlovsky, Santiago"
+    },
+    {
+     "number": 10,
+     "name": "Sascaro, Agustín"
+    },
+    {
+     "number": 11,
+     "name": "Garcia Herdt, A"
+    },
+    {
+     "number": 11,
+     "name": "López Fleming, Bernabé"
+    },
+    {
+     "number": 12,
+     "name": "Pietranera, Facundo"
+    },
+    {
+     "number": 12,
+     "name": "Pietranera, Ignacio"
+    },
+    {
+     "number": 12,
+     "name": "Rubio, Santos"
+    },
+    {
+     "number": 13,
+     "name": "Acosta, Nicanor"
+    },
+    {
+     "number": 13,
+     "name": "Ledesma, Felipe"
+    },
+    {
+     "number": 13,
+     "name": "Pirán, Carlos"
+    },
+    {
+     "number": 14,
+     "name": "Campbell, Jacinto"
+    },
+    {
+     "number": 14,
+     "name": "Salmain, Fermín"
+    },
+    {
+     "number": 14,
+     "name": "Silva, Timoteo"
+    },
+    {
+     "number": 15,
+     "name": "Fleming, Bernabé López"
+    },
+    {
+     "number": 15,
+     "name": "González Capdevilla, Francisco"
+    }
+   ]
+  },
+  "hindu": {
+   "url": "https://ovalados.com/club-hindu.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Diviesti, Franco"
+    },
+    {
+     "number": 1,
+     "name": "Martínez Sosa, Juan Ignacio"
+    },
+    {
+     "number": 1,
+     "name": "Martínez Sosa, Juan Manuel"
+    },
+    {
+     "number": 2,
+     "name": "Capurro, Agustín"
+    },
+    {
+     "number": 2,
+     "name": "Gattas, Facundo"
+    },
+    {
+     "number": 3,
+     "name": "Alanis, Juan Cruz"
+    },
+    {
+     "number": 3,
+     "name": "Herrera, Ramiro"
+    },
+    {
+     "number": 3,
+     "name": "Leiva, Nicolás"
+    },
+    {
+     "number": 3,
+     "name": "Levan, A."
+    },
+    {
+     "number": 4,
+     "name": "Repetto, Carlos"
+    },
+    {
+     "number": 4,
+     "name": "Scalianti"
+    },
+    {
+     "number": 4,
+     "name": "Scallan, Tomás"
+    },
+    {
+     "number": 4,
+     "name": "Ulibarri, J."
+    },
+    {
+     "number": 5,
+     "name": "Banach, Elías"
+    },
+    {
+     "number": 5,
+     "name": "Comolli, Juan"
+    },
+    {
+     "number": 6,
+     "name": "Amaya, Santino"
+    },
+    {
+     "number": 6,
+     "name": "D'Amorim, Nicolás"
+    },
+    {
+     "number": 7,
+     "name": "Bávaro, Lautaro"
+    },
+    {
+     "number": 7,
+     "name": "Caire, Gastón"
+    },
+    {
+     "number": 8,
+     "name": "Amaya, Nicolás"
+    },
+    {
+     "number": 8,
+     "name": "Guassardi, Roque"
+    },
+    {
+     "number": 9,
+     "name": "Ezcurra, Felipe"
+    },
+    {
+     "number": 10,
+     "name": "Fernández Miranda, Ramón"
+    },
+    {
+     "number": 10,
+     "name": "Ormaechea, Fermín"
+    },
+    {
+     "number": 11,
+     "name": "Amher, Tomás"
+    },
+    {
+     "number": 11,
+     "name": "Antonijevic, M"
+    },
+    {
+     "number": 11,
+     "name": "Cancelliere, Martín"
+    },
+    {
+     "number": 11,
+     "name": "Graglia, Facundo"
+    },
+    {
+     "number": 12,
+     "name": "Álvarez, Bautista"
+    },
+    {
+     "number": 12,
+     "name": "Farisé, Bautista"
+    },
+    {
+     "number": 12,
+     "name": "Fm, Ramón"
+    },
+    {
+     "number": 12,
+     "name": "Lopez Nobrega, J"
+    },
+    {
+     "number": 13,
+     "name": "Graglia, Federico"
+    },
+    {
+     "number": 13,
+     "name": "M. Ramon, I."
+    },
+    {
+     "number": 13,
+     "name": "Rodríguez, Lisandro"
+    },
+    {
+     "number": 13,
+     "name": "Trivellini, Santino"
+    },
+    {
+     "number": 14,
+     "name": "Cancelliere, Sebastián"
+    },
+    {
+     "number": 14,
+     "name": "Sulam, Martín"
+    },
+    {
+     "number": 15,
+     "name": "Aranoa, Juan"
+    },
+    {
+     "number": 15,
+     "name": "Senillosa, Pascal"
+    },
+    {
+     "number": 21,
+     "name": "Fernández Miranda, Lucas"
+    }
+   ]
+  },
+  "alumni": {
+   "url": "https://ovalados.com/club-alumni.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Bottoni, Juan Cruz"
+    },
+    {
+     "number": 1,
+     "name": "Castrillo, Máximo"
+    },
+    {
+     "number": 1,
+     "name": "Lucca, Federico"
+    },
+    {
+     "number": 2,
+     "name": "Bivort, Tomás"
+    },
+    {
+     "number": 2,
+     "name": "Lamelas, Máximo"
+    },
+    {
+     "number": 2,
+     "name": "Wagener, Antonio"
+    },
+    {
+     "number": 3,
+     "name": "Bottoni, Francisco"
+    },
+    {
+     "number": 3,
+     "name": "Cambareri, Guido"
+    },
+    {
+     "number": 3,
+     "name": "Cozzi, Franco"
+    },
+    {
+     "number": 3,
+     "name": "Vidal, Bautista"
+    },
+    {
+     "number": 4,
+     "name": "Fauve, Sebastián"
+    },
+    {
+     "number": 4,
+     "name": "Mora, Manuel"
+    },
+    {
+     "number": 5,
+     "name": "Alduncin, Santiago"
+    },
+    {
+     "number": 5,
+     "name": "Fauve, Santiago"
+    },
+    {
+     "number": 6,
+     "name": "Alvariñas, Juan Cruz"
+    },
+    {
+     "number": 6,
+     "name": "Cubilla, Ignacio"
+    },
+    {
+     "number": 6,
+     "name": "Neyra, Santiago"
+    },
+    {
+     "number": 7,
+     "name": "Anderson, Juan Patricio"
+    },
+    {
+     "number": 7,
+     "name": "Anderson, Patricio"
+    },
+    {
+     "number": 7,
+     "name": "Millou, Ignacio"
+    },
+    {
+     "number": 8,
+     "name": "Montagner, Santiago"
+    },
+    {
+     "number": 9,
+     "name": "Passerotti, Tomás"
+    },
+    {
+     "number": 9,
+     "name": "Testoni, Rocco"
+    },
+    {
+     "number": 9,
+     "name": "Zalazar, Ezequiel"
+    },
+    {
+     "number": 10,
+     "name": "Canzani, Bautista"
+    },
+    {
+     "number": 10,
+     "name": "García Belmonte, Fermín"
+    },
+    {
+     "number": 10,
+     "name": "Luzzi, Joaquín Díaz"
+    },
+    {
+     "number": 11,
+     "name": "Castanier, Mateo"
+    },
+    {
+     "number": 11,
+     "name": "Pernas, Santiago"
+    },
+    {
+     "number": 11,
+     "name": "Tapia, Gonzalo"
+    },
+    {
+     "number": 11,
+     "name": "Vieyra, Aquiles"
+    },
+    {
+     "number": 12,
+     "name": "González Iglesias, Santiago"
+    },
+    {
+     "number": 13,
+     "name": "Cubilla, Tomás"
+    },
+    {
+     "number": 13,
+     "name": "Sábato, Franco"
+    },
+    {
+     "number": 14,
+     "name": "Fuentes, Ramón"
+    },
+    {
+     "number": 15,
+     "name": "Del Franco, Matías"
+    },
+    {
+     "number": 15,
+     "name": "Maciel, Jacinto"
+    },
+    {
+     "number": 15,
+     "name": "Testoni, Filippo"
+    },
+    {
+     "number": 15,
+     "name": "Wade, Tobías"
+    }
+   ]
+  },
+  "cuba": {
+   "url": "https://ovalados.com/club-cuba.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Roque Pitt, Lucas"
+    },
+    {
+     "number": 1,
+     "name": "Yakiche, Joaquín"
+    },
+    {
+     "number": 2,
+     "name": "Anderlic, Tomás"
+    },
+    {
+     "number": 2,
+     "name": "Garoby, Juan Pablo"
+    },
+    {
+     "number": 2,
+     "name": "Garoby, Juan Pedro"
+    },
+    {
+     "number": 3,
+     "name": "Garoby, Francisco"
+    },
+    {
+     "number": 3,
+     "name": "Iribarne, Esteban"
+    },
+    {
+     "number": 4,
+     "name": "Cayol, Santos"
+    },
+    {
+     "number": 4,
+     "name": "Latorre, Toribio"
+    },
+    {
+     "number": 4,
+     "name": "Loza, Marcos"
+    },
+    {
+     "number": 5,
+     "name": "Uriarte, Santiago"
+    },
+    {
+     "number": 6,
+     "name": "Campion, Lucas"
+    },
+    {
+     "number": 6,
+     "name": "Capdepont, Juan"
+    },
+    {
+     "number": 6,
+     "name": "Cogorno, Bautista"
+    },
+    {
+     "number": 7,
+     "name": "Landau, Santiago"
+    },
+    {
+     "number": 7,
+     "name": "Pisani, Segundo"
+    },
+    {
+     "number": 8,
+     "name": "Ortiz de Rosas, Benito"
+    },
+    {
+     "number": 8,
+     "name": "Ortiz, De Rozas"
+    },
+    {
+     "number": 9,
+     "name": "Albani, Ignacio"
+    },
+    {
+     "number": 9,
+     "name": "Corleto, Félix"
+    },
+    {
+     "number": 10,
+     "name": "Figueroa Bunge, Francisco"
+    },
+    {
+     "number": 10,
+     "name": "Mastroizzi, Valentín"
+    },
+    {
+     "number": 10,
+     "name": "Peres, Agustín"
+    },
+    {
+     "number": 11,
+     "name": "Casaurrang, Bautista"
+    },
+    {
+     "number": 11,
+     "name": "Castro, Nevares"
+    },
+    {
+     "number": 11,
+     "name": "Fraga, Agustín"
+    },
+    {
+     "number": 12,
+     "name": "Beneditt, Rafael"
+    },
+    {
+     "number": 12,
+     "name": "Perdomo, Felipe"
+    },
+    {
+     "number": 12,
+     "name": "Quiroga, Tomás"
+    },
+    {
+     "number": 13,
+     "name": "De la Vega, Felipe"
+    },
+    {
+     "number": 13,
+     "name": "Young, Marcos"
+    },
+    {
+     "number": 14,
+     "name": "Cardini, Ramiro"
+    },
+    {
+     "number": 14,
+     "name": "Casaurrang"
+    },
+    {
+     "number": 14,
+     "name": "Castro Nevares, Pedro"
+    },
+    {
+     "number": 14,
+     "name": "Ezcurra, Joaquín"
+    },
+    {
+     "number": 14,
+     "name": "Irigaray, Iñaki"
+    },
+    {
+     "number": 14,
+     "name": "Passaro, Tomás"
+    },
+    {
+     "number": 15,
+     "name": "Elizagaray, Marcos"
+    },
+    {
+     "number": 15,
+     "name": "Moroni, Marcos"
+    }
+   ]
+  },
+  "los-tilos": {
+   "url": "https://ovalados.com/club-los-tilos.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Basualdo, Elio"
+    },
+    {
+     "number": 1,
+     "name": "Briozzo, Joaquin"
+    },
+    {
+     "number": 1,
+     "name": "Puertas, Manuel"
+    },
+    {
+     "number": 2,
+     "name": "Carruccio, Cosme"
+    },
+    {
+     "number": 2,
+     "name": "Castro, Jeronimo"
+    },
+    {
+     "number": 2,
+     "name": "San Sebastián, Hipólito"
+    },
+    {
+     "number": 3,
+     "name": "Armenti, Adriel"
+    },
+    {
+     "number": 3,
+     "name": "Berardi, Ramiro"
+    },
+    {
+     "number": 3,
+     "name": "Laurin, Maximo"
+    },
+    {
+     "number": 3,
+     "name": "Maffei, Facundo"
+    },
+    {
+     "number": 4,
+     "name": "Blaiotta Lago, Juan"
+    },
+    {
+     "number": 4,
+     "name": "Lago, Juan Blaiotta"
+    },
+    {
+     "number": 4,
+     "name": "Madrussan, Mateo"
+    },
+    {
+     "number": 5,
+     "name": "Broglia, Gianluca"
+    },
+    {
+     "number": 5,
+     "name": "Gatti, Bautista"
+    },
+    {
+     "number": 5,
+     "name": "Leiva, Martín"
+    },
+    {
+     "number": 5,
+     "name": "Torboli, Luciano"
+    },
+    {
+     "number": 6,
+     "name": "Chiavassa, Eliseo"
+    },
+    {
+     "number": 6,
+     "name": "Cortopasso, Valentino"
+    },
+    {
+     "number": 7,
+     "name": "Cabano Wall, C. Augusto"
+    },
+    {
+     "number": 7,
+     "name": "Cordero, Juan Pedro"
+    },
+    {
+     "number": 7,
+     "name": "Puertas, Felipe"
+    },
+    {
+     "number": 7,
+     "name": "Wall, Carlos Augusto Cabano"
+    },
+    {
+     "number": 8,
+     "name": "Bares, Felipe"
+    },
+    {
+     "number": 8,
+     "name": "Korneblit, Ivan"
+    },
+    {
+     "number": 9,
+     "name": "Albina, Marcos"
+    },
+    {
+     "number": 9,
+     "name": "Rodríguez Alcobendas, Pedro"
+    },
+    {
+     "number": 9,
+     "name": "Varde, Tomás"
+    },
+    {
+     "number": 10,
+     "name": "Cordero, Matías"
+    },
+    {
+     "number": 10,
+     "name": "Tuculet, Joaquín"
+    },
+    {
+     "number": 11,
+     "name": "Cortés, Isidro"
+    },
+    {
+     "number": 11,
+     "name": "Fernández Vega, Nicolás"
+    },
+    {
+     "number": 11,
+     "name": "Martínez Salgado, Gastón"
+    },
+    {
+     "number": 11,
+     "name": "Picone, Lisandro"
+    },
+    {
+     "number": 12,
+     "name": "Bassagaisteguy, Thiago"
+    },
+    {
+     "number": 12,
+     "name": "Dubarry, Juan"
+    },
+    {
+     "number": 12,
+     "name": "Fernández Armendariz, Tomás"
+    },
+    {
+     "number": 12,
+     "name": "Tomás Fernández, A."
+    },
+    {
+     "number": 13,
+     "name": "Bassagastegui, Thiago"
+    },
+    {
+     "number": 13,
+     "name": "Fernández Armendariz, Mateo"
+    },
+    {
+     "number": 13,
+     "name": "López Feybli, Alfonso"
+    },
+    {
+     "number": 13,
+     "name": "Raimundi, Bautista"
+    },
+    {
+     "number": 13,
+     "name": "Tuculet, Segundo"
+    },
+    {
+     "number": 14,
+     "name": "Guichon, Ignacio"
+    },
+    {
+     "number": 15,
+     "name": "Fernandez, Vega Nicolas"
+    },
+    {
+     "number": 15,
+     "name": "Santamarina, Bautista"
+    }
+   ]
+  },
+  "belgrano-athletic": {
+   "url": "https://ovalados.com/club-belgrano-athletic.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Etchecoin, Mateo"
+    },
+    {
+     "number": 1,
+     "name": "Ferronato, Francisco"
+    },
+    {
+     "number": 2,
+     "name": "De Siena, Ignacio"
+    },
+    {
+     "number": 2,
+     "name": "Lusarreta, Francisco"
+    },
+    {
+     "number": 2,
+     "name": "Villegas, Santiago"
+    },
+    {
+     "number": 3,
+     "name": "García Dragui, Lisandro"
+    },
+    {
+     "number": 3,
+     "name": "Marchetti, Eliseo"
+    },
+    {
+     "number": 3,
+     "name": "Morales, Franco"
+    },
+    {
+     "number": 4,
+     "name": "Fernández Criado, Rodrigo"
+    },
+    {
+     "number": 4,
+     "name": "Navarro, Mateo"
+    },
+    {
+     "number": 4,
+     "name": "Tecca, Luciano"
+    },
+    {
+     "number": 5,
+     "name": "Bloom, Mikael"
+    },
+    {
+     "number": 5,
+     "name": "Duggan, Ramón"
+    },
+    {
+     "number": 5,
+     "name": "Rebussone, Mauro"
+    },
+    {
+     "number": 6,
+     "name": "Gasparotti, Mateo"
+    },
+    {
+     "number": 6,
+     "name": "Gradin, Francisco"
+    },
+    {
+     "number": 6,
+     "name": "Penoucos, Juan"
+    },
+    {
+     "number": 7,
+     "name": "Rebussone, Julián"
+    },
+    {
+     "number": 8,
+     "name": "Sorondo, Jerónimo"
+    },
+    {
+     "number": 8,
+     "name": "Vaccarino, Augusto"
+    },
+    {
+     "number": 8,
+     "name": "Vega, Franco"
+    },
+    {
+     "number": 9,
+     "name": "Blacksley, Theo"
+    },
+    {
+     "number": 9,
+     "name": "Echeverría, Justo"
+    },
+    {
+     "number": 10,
+     "name": "Aparicio, Juan"
+    },
+    {
+     "number": 10,
+     "name": "Fossati, Mateo"
+    },
+    {
+     "number": 10,
+     "name": "Landó, Juan"
+    },
+    {
+     "number": 11,
+     "name": "Carroll, Octavio"
+    },
+    {
+     "number": 11,
+     "name": "Ceñal, Félix"
+    },
+    {
+     "number": 11,
+     "name": "Fossati, Bautista"
+    },
+    {
+     "number": 12,
+     "name": "Arana, Martín"
+    },
+    {
+     "number": 12,
+     "name": "Brescia, Juan"
+    },
+    {
+     "number": 12,
+     "name": "Tramezzani, Pedro"
+    },
+    {
+     "number": 13,
+     "name": "Etchepare, Tomás"
+    },
+    {
+     "number": 14,
+     "name": "Bernabé, Tobías"
+    },
+    {
+     "number": 14,
+     "name": "Díaz, Ignacio"
+    },
+    {
+     "number": 15,
+     "name": "Arana, Pedro"
+    },
+    {
+     "number": 15,
+     "name": "Spinelli, Nicolás"
+    }
+   ]
+  },
+  "la-plata": {
+   "url": "https://ovalados.com/club-la-plata.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Casin, Mirko"
+    },
+    {
+     "number": 1,
+     "name": "Del Cerro, Ariel"
+    },
+    {
+     "number": 2,
+     "name": "Erriest, Bautista"
+    },
+    {
+     "number": 2,
+     "name": "Fontán, J. M."
+    },
+    {
+     "number": 2,
+     "name": "Fontán, Juan Martín"
+    },
+    {
+     "number": 2,
+     "name": "Fontán, Martín"
+    },
+    {
+     "number": 2,
+     "name": "Núñez, Joaquín"
+    },
+    {
+     "number": 3,
+     "name": "Luna, Ignacio"
+    },
+    {
+     "number": 3,
+     "name": "Patat, Martín"
+    },
+    {
+     "number": 3,
+     "name": "Prati, M."
+    },
+    {
+     "number": 4,
+     "name": "Kuich, A."
+    },
+    {
+     "number": 4,
+     "name": "Nucci, A."
+    },
+    {
+     "number": 4,
+     "name": "Ozog, Bautista"
+    },
+    {
+     "number": 4,
+     "name": "Vicucic, I."
+    },
+    {
+     "number": 5,
+     "name": "Barreiro, Valentino"
+    },
+    {
+     "number": 5,
+     "name": "Kucic, Iván"
+    },
+    {
+     "number": 5,
+     "name": "Rivera, Máximo"
+    },
+    {
+     "number": 6,
+     "name": "Mendieta, Carlos"
+    },
+    {
+     "number": 6,
+     "name": "Ringuelet, Pedro"
+    },
+    {
+     "number": 7,
+     "name": "Cervio, Santino"
+    },
+    {
+     "number": 7,
+     "name": "Chaparini, N."
+    },
+    {
+     "number": 7,
+     "name": "Chiappani, Nicolás"
+    },
+    {
+     "number": 7,
+     "name": "Finquellet, F."
+    },
+    {
+     "number": 7,
+     "name": "Pineda, Segundo"
+    },
+    {
+     "number": 7,
+     "name": "Ringuelet, Francisco"
+    },
+    {
+     "number": 8,
+     "name": "Bernasconi, J. P."
+    },
+    {
+     "number": 8,
+     "name": "Bernasconi, Juan Pablo"
+    },
+    {
+     "number": 8,
+     "name": "Bernasconi, Juan Pedro"
+    },
+    {
+     "number": 8,
+     "name": "Bernasconi, Tomás"
+    },
+    {
+     "number": 9,
+     "name": "De la Fuente, Manuel"
+    },
+    {
+     "number": 9,
+     "name": "Nanni, Martín"
+    },
+    {
+     "number": 10,
+     "name": "Crettino, F."
+    },
+    {
+     "number": 10,
+     "name": "Defelitto, Facundo"
+    },
+    {
+     "number": 10,
+     "name": "Di Lucca, J."
+    },
+    {
+     "number": 10,
+     "name": "Di Lucca, Santino"
+    },
+    {
+     "number": 11,
+     "name": "Addiechi, Pedro"
+    },
+    {
+     "number": 11,
+     "name": "Festa, Gino"
+    },
+    {
+     "number": 12,
+     "name": "Parizzoli, F."
+    },
+    {
+     "number": 12,
+     "name": "Paz Rizzoli, Francisco"
+    },
+    {
+     "number": 12,
+     "name": "Pazzizoli, F."
+    },
+    {
+     "number": 12,
+     "name": "Soto, Juan Francisco"
+    },
+    {
+     "number": 13,
+     "name": "Juliano, J."
+    },
+    {
+     "number": 13,
+     "name": "Juliano, Luca"
+    },
+    {
+     "number": 13,
+     "name": "Loustau, J."
+    },
+    {
+     "number": 13,
+     "name": "Soto, E."
+    },
+    {
+     "number": 14,
+     "name": "Adoech, P."
+    },
+    {
+     "number": 14,
+     "name": "Arteche, Manuel"
+    },
+    {
+     "number": 14,
+     "name": "Carassale, Mateo"
+    },
+    {
+     "number": 14,
+     "name": "Cejas, Francisco"
+    },
+    {
+     "number": 14,
+     "name": "Panigatti, Facundo"
+    },
+    {
+     "number": 14,
+     "name": "Radulovich, P."
+    },
+    {
+     "number": 14,
+     "name": "Rivademar, Matías"
+    },
+    {
+     "number": 14,
+     "name": "Rodechi, A."
+    },
+    {
+     "number": 15,
+     "name": "Annecchini, Francisco"
+    },
+    {
+     "number": 15,
+     "name": "Sica Manuele, Federico"
+    },
+    {
+     "number": 15,
+     "name": "Suarez Folch, I."
+    },
+    {
+     "number": 15,
+     "name": "Suárez Folch, Tomás"
+    },
+    {
+     "number": 15,
+     "name": "Surget Zloch, S."
+    }
+   ]
+  },
+  "atletico-del-rosario": {
+   "url": "https://ovalados.com/club-atletico-del-rosario.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Carro, José"
+    },
+    {
+     "number": 1,
+     "name": "Fernandez, Agustin"
+    },
+    {
+     "number": 1,
+     "name": "Reyes, Ezequiel"
+    },
+    {
+     "number": 1,
+     "name": "Rubio, Felipe"
+    },
+    {
+     "number": 2,
+     "name": "Malanos, Matías"
+    },
+    {
+     "number": 2,
+     "name": "Marcialli, Valentino"
+    },
+    {
+     "number": 2,
+     "name": "Rubio, Ramiro"
+    },
+    {
+     "number": 3,
+     "name": "Dipierri, Lisandro"
+    },
+    {
+     "number": 3,
+     "name": "Montenegro, Bruno"
+    },
+    {
+     "number": 4,
+     "name": "Cáceres, José"
+    },
+    {
+     "number": 5,
+     "name": "Capella, Octavio"
+    },
+    {
+     "number": 5,
+     "name": "Gómez Vara, Jerónimo"
+    },
+    {
+     "number": 6,
+     "name": "Etcheverry, Federico"
+    },
+    {
+     "number": 7,
+     "name": "Andornil, Mateo"
+    },
+    {
+     "number": 7,
+     "name": "Echenique, Francisco"
+    },
+    {
+     "number": 7,
+     "name": "Sapino, Ignacio"
+    },
+    {
+     "number": 8,
+     "name": "Casals, Santiago"
+    },
+    {
+     "number": 8,
+     "name": "Malanos, Lucas"
+    },
+    {
+     "number": 9,
+     "name": "Castagna, Benjamín"
+    },
+    {
+     "number": 9,
+     "name": "Cornejo, Tomás"
+    },
+    {
+     "number": 9,
+     "name": "Nogues, Felipe"
+    },
+    {
+     "number": 10,
+     "name": "Nogués, Manuel"
+    },
+    {
+     "number": 11,
+     "name": "Casals, Nicolás"
+    },
+    {
+     "number": 12,
+     "name": "Deharo, Pedro"
+    },
+    {
+     "number": 12,
+     "name": "Haro, Pedro De"
+    },
+    {
+     "number": 12,
+     "name": "Malanos, Tomás"
+    },
+    {
+     "number": 12,
+     "name": "Mustio, Ramiro"
+    },
+    {
+     "number": 12,
+     "name": "Vitola, Santiago"
+    },
+    {
+     "number": 13,
+     "name": "Estellés, Bautista"
+    },
+    {
+     "number": 14,
+     "name": "Bertero, Juan Cruz"
+    },
+    {
+     "number": 15,
+     "name": "Elías, Martín"
+    }
+   ]
+  },
+  "los-matreros": {
+   "url": "https://ovalados.com/club-los-matreros.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Nodar, Gonzalo"
+    },
+    {
+     "number": 1,
+     "name": "Salinas, Matías"
+    },
+    {
+     "number": 1,
+     "name": "Sánchez, Tomás"
+    },
+    {
+     "number": 2,
+     "name": "Cec, Boris"
+    },
+    {
+     "number": 3,
+     "name": "De Muria, Facundo"
+    },
+    {
+     "number": 3,
+     "name": "Hardt, Valentín"
+    },
+    {
+     "number": 3,
+     "name": "Zeiss, Juan Pablo"
+    },
+    {
+     "number": 4,
+     "name": "Gahan, Tomás"
+    },
+    {
+     "number": 5,
+     "name": "Genoud, Augusto"
+    },
+    {
+     "number": 5,
+     "name": "Villafañe, Alejo"
+    },
+    {
+     "number": 6,
+     "name": "Cirelli, Mateo"
+    },
+    {
+     "number": 6,
+     "name": "Córdoba, Agustín"
+    },
+    {
+     "number": 6,
+     "name": "Corvalan, Thiago"
+    },
+    {
+     "number": 6,
+     "name": "Mc Corman, Colin"
+    },
+    {
+     "number": 6,
+     "name": "Mccormack, Colin"
+    },
+    {
+     "number": 7,
+     "name": "Antfar, Agustín"
+    },
+    {
+     "number": 7,
+     "name": "Guevara, Juan Pablo"
+    },
+    {
+     "number": 8,
+     "name": "Stark, Tomás"
+    },
+    {
+     "number": 8,
+     "name": "Villarino, Santiago"
+    },
+    {
+     "number": 9,
+     "name": "Amorisa, Marcos"
+    },
+    {
+     "number": 9,
+     "name": "Romanatto, Martín"
+    },
+    {
+     "number": 10,
+     "name": "Morales, Juan Francisco"
+    },
+    {
+     "number": 10,
+     "name": "Urbina, Germán"
+    },
+    {
+     "number": 11,
+     "name": "Biudes, Marko"
+    },
+    {
+     "number": 11,
+     "name": "Marelli, Santiago"
+    },
+    {
+     "number": 12,
+     "name": "Bendini, Rocco"
+    },
+    {
+     "number": 12,
+     "name": "Del Busto, Pedro"
+    },
+    {
+     "number": 13,
+     "name": "Santecchia, Nicolás"
+    },
+    {
+     "number": 14,
+     "name": "Gallasategui, Germán"
+    },
+    {
+     "number": 15,
+     "name": "García Michero, Juan Pablo"
+    },
+    {
+     "number": 15,
+     "name": "Michero, Juan P. Garcia"
+    },
+    {
+     "number": 15,
+     "name": "Plaza, Juan Segundo"
+    }
+   ]
+  },
+  "champagnat": {
+   "url": "https://ovalados.com/club-champagnat.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Adissi, Alberto"
+    },
+    {
+     "number": 1,
+     "name": "Basualdo Quintana, Honorio"
+    },
+    {
+     "number": 2,
+     "name": "Panelo, Simón"
+    },
+    {
+     "number": 2,
+     "name": "Rodríguez Pascarella, Fernando"
+    },
+    {
+     "number": 3,
+     "name": "Magaro, Marcos"
+    },
+    {
+     "number": 3,
+     "name": "Yanzon, Tomás"
+    },
+    {
+     "number": 4,
+     "name": "Ustariz, Iñaki Alberto"
+    },
+    {
+     "number": 5,
+     "name": "Escuti, Santiago"
+    },
+    {
+     "number": 6,
+     "name": "Alonso Boto, Matías Jesús"
+    },
+    {
+     "number": 6,
+     "name": "Boto, Matías J. Alonso"
+    },
+    {
+     "number": 6,
+     "name": "De Gregorio, Francisco"
+    },
+    {
+     "number": 6,
+     "name": "Olavarría, Lucas"
+    },
+    {
+     "number": 6,
+     "name": "Rivas Orozco, Tobías"
+    },
+    {
+     "number": 6,
+     "name": "Sierra, Conrado (debut)"
+    },
+    {
+     "number": 7,
+     "name": "Castelli, Francisco"
+    },
+    {
+     "number": 7,
+     "name": "Rojo, Nicolás"
+    },
+    {
+     "number": 8,
+     "name": "Alonso Boto, Tomás"
+    },
+    {
+     "number": 8,
+     "name": "Moresco, Lucas"
+    },
+    {
+     "number": 9,
+     "name": "Del Piano, Pedro"
+    },
+    {
+     "number": 9,
+     "name": "Panelo, Juan Segundo"
+    },
+    {
+     "number": 10,
+     "name": "De Olmos, Simón"
+    },
+    {
+     "number": 10,
+     "name": "Luchia Puig, Tomás"
+    },
+    {
+     "number": 10,
+     "name": "Panelo, Santos"
+    },
+    {
+     "number": 10,
+     "name": "Roquette, Pedro (debut)"
+    },
+    {
+     "number": 11,
+     "name": "Baca Castex, Tomás"
+    },
+    {
+     "number": 11,
+     "name": "Soldati, Felipe Ortiz"
+    },
+    {
+     "number": 12,
+     "name": "Bottazzi, Joaquín"
+    },
+    {
+     "number": 12,
+     "name": "Carrara, Santino"
+    },
+    {
+     "number": 12,
+     "name": "Villanueva, Simón"
+    },
+    {
+     "number": 13,
+     "name": "Cotter Daireaux, Tomás"
+    },
+    {
+     "number": 14,
+     "name": "Aldanondo, Fermín"
+    },
+    {
+     "number": 14,
+     "name": "Rodríguez Navarro, Bautista"
+    },
+    {
+     "number": 14,
+     "name": "Rufino, Facundo"
+    },
+    {
+     "number": 14,
+     "name": "Zappella, Simón"
+    },
+    {
+     "number": 15,
+     "name": "Costaguta, Gonzalo"
+    },
+    {
+     "number": 15,
+     "name": "Núñez, Joaquín"
+    },
+    {
+     "number": 15,
+     "name": "Rojo Bas, Felipe"
+    }
+   ]
+  },
+  "buenos-aires-crc": {
+   "url": "https://ovalados.com/club-buenos-aires-crc.html",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Chajchir, Kael"
+    },
+    {
+     "number": 1,
+     "name": "Gallo, Tomás"
+    },
+    {
+     "number": 1,
+     "name": "Herrador, Tomás"
+    },
+    {
+     "number": 2,
+     "name": "Rosasco, Tomás"
+    },
+    {
+     "number": 2,
+     "name": "Ruiz, Tomás"
+    },
+    {
+     "number": 3,
+     "name": "Coria, Blas"
+    },
+    {
+     "number": 3,
+     "name": "Zanella, Renzo"
+    },
+    {
+     "number": 4,
+     "name": "Del Carril, Pedro"
+    },
+    {
+     "number": 4,
+     "name": "Durañona, Bautista"
+    },
+    {
+     "number": 5,
+     "name": "Syriani, Francisco"
+    },
+    {
+     "number": 6,
+     "name": "Bartolome, Octavio"
+    },
+    {
+     "number": 6,
+     "name": "Espina, Matías"
+    },
+    {
+     "number": 6,
+     "name": "Etcheverry, Lucas"
+    },
+    {
+     "number": 6,
+     "name": "Ibarra, Francisco"
+    },
+    {
+     "number": 6,
+     "name": "Saint Bonnet, Bautista"
+    },
+    {
+     "number": 7,
+     "name": "Álvarez Bayón, Tomás"
+    },
+    {
+     "number": 7,
+     "name": "Bourdal, Pablo"
+    },
+    {
+     "number": 7,
+     "name": "Freire, Tomás"
+    },
+    {
+     "number": 7,
+     "name": "Mimessi, Simón"
+    },
+    {
+     "number": 8,
+     "name": "Campbell, Juan Segundo"
+    },
+    {
+     "number": 8,
+     "name": "Carricart, Santiago"
+    },
+    {
+     "number": 8,
+     "name": "Etcheverry, Tomás"
+    },
+    {
+     "number": 8,
+     "name": "Sluga, Francisco"
+    },
+    {
+     "number": 9,
+     "name": "Del Campo, Nicolás"
+    },
+    {
+     "number": 9,
+     "name": "Freire, Mateo"
+    },
+    {
+     "number": 10,
+     "name": "Bunge, Tomás"
+    },
+    {
+     "number": 10,
+     "name": "Capalbo, Mateo"
+    },
+    {
+     "number": 11,
+     "name": "Bensadon, Ignacio"
+    },
+    {
+     "number": 11,
+     "name": "Handley, Benjamín"
+    },
+    {
+     "number": 11,
+     "name": "Latorre, Alfonso"
+    },
+    {
+     "number": 11,
+     "name": "Mascolo, Felipe"
+    },
+    {
+     "number": 11,
+     "name": "Ortiz, Segundo"
+    },
+    {
+     "number": 12,
+     "name": "Deges, Marcos"
+    },
+    {
+     "number": 12,
+     "name": "Lamensa, Agustín"
+    },
+    {
+     "number": 13,
+     "name": "Acosta Pimentel, Tomás"
+    },
+    {
+     "number": 13,
+     "name": "Costa, Ramiro"
+    },
+    {
+     "number": 13,
+     "name": "Díaz Borda, Tobías"
+    },
+    {
+     "number": 13,
+     "name": "Prieto Martínez, Luis"
+    },
+    {
+     "number": 14,
+     "name": "Quetglas, Julián"
+    },
+    {
+     "number": 15,
+     "name": "Novo, Alejo"
+    },
+    {
+     "number": 15,
+     "name": "Pizzo, Nicolás"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,273 @@
+{
+ "generatedAt": "2026-11-10T23:03:28.058Z",
+ "engine": {
+  "HOME_EDGE": 0.62,
+  "DAY_FORM": 0.02
+ },
+ "seeds": 20,
+ "pairSeeds": 1000,
+ "empirical": {
+  "homeWinDrawLoss": [
+   53.1,
+   2.7,
+   44.3
+  ],
+  "H": "2.0-2.8",
+  "sigma": 14.3,
+  "ratingSD": 8.1,
+  "within7": 41.9,
+  "over35": 6.5,
+  "points": 52.6,
+  "tries": 7.21,
+  "pairs": {
+   "newman-casi": "62-80 %, +5 a +6",
+   "newman-regatas-bella-vista": "82-96 %",
+   "newman-hindu": "63-81 %",
+   "casi-regatas-bella-vista": "74-88 %",
+   "sic-casi": "43-56 %",
+   "newman-champagnat": "97-99 %"
+  }
+ },
+ "current": {
+  "strengths": {
+   "newman": 91,
+   "casi": 88,
+   "hindu": 81,
+   "alumni": 83,
+   "sic": 87,
+   "los-tilos": 77,
+   "belgrano-athletic": 81,
+   "regatas-bella-vista": 76,
+   "cuba": 77,
+   "atletico-del-rosario": 69,
+   "la-plata": 72,
+   "buenos-aires-crc": 72,
+   "los-matreros": 61,
+   "champagnat": 61
+  },
+  "summary": {
+   "matches": 3640,
+   "homeWinPct": 53.3,
+   "drawPct": 2.1,
+   "awayWinPct": 44.6,
+   "homeWinCI95": [
+    51.6,
+    54.9
+   ],
+   "homePointsShare": 54.3,
+   "meanHomeMargin": 2.23,
+   "marginSD": 20.21,
+   "marginQuantiles": {
+    "p5": -30,
+    "p10": -24,
+    "p25": -12,
+    "p50": 2,
+    "p75": 16,
+    "p90": 28,
+    "p95": 36
+   },
+   "absMarginMean": 16.2,
+   "absMarginMedian": 14,
+   "closeGamesPct": {
+    "le3": 14,
+    "le7": 29.3,
+    "ge21": 31.8,
+    "ge35": 8.6
+   },
+   "meanHomePoints": 23.3,
+   "meanAwayPoints": 21.1,
+   "meanTotalPoints": 44.4,
+   "totalPointsSD": 13,
+   "tries": {
+    "matches": 3640,
+    "meanTotal": 6.11,
+    "meanHome": 3.22,
+    "meanAway": 2.9
+   }
+  },
+  "model": {
+   "H": 2.23,
+   "sigma": 16.2,
+   "ratingSD": 8.6,
+   "ratingRMSE": 1.63,
+   "ratings": {
+    "newman": {
+     "sim": 11.2,
+     "target": 12.5
+    },
+    "casi": {
+     "sim": 9.9,
+     "target": 10.2
+    },
+    "hindu": {
+     "sim": 5.2,
+     "target": 7.6
+    },
+    "alumni": {
+     "sim": 5.6,
+     "target": 9.4
+    },
+    "sic": {
+     "sim": 9.9,
+     "target": 9.7
+    },
+    "los-tilos": {
+     "sim": 0.5,
+     "target": 1.4
+    },
+    "belgrano-athletic": {
+     "sim": 2.5,
+     "target": 4.2
+    },
+    "regatas-bella-vista": {
+     "sim": 2.2,
+     "target": 0.3
+    },
+    "cuba": {
+     "sim": 3,
+     "target": 1.5
+    },
+    "atletico-del-rosario": {
+     "sim": -8,
+     "target": -8.5
+    },
+    "la-plata": {
+     "sim": -8.3,
+     "target": -7
+    },
+    "buenos-aires-crc": {
+     "sim": -5.4,
+     "target": -6.6
+    },
+    "los-matreros": {
+     "sim": -12.7,
+     "target": -13.7
+    },
+    "champagnat": {
+     "sim": -15.5,
+     "target": -16.9
+    }
+   }
+  },
+  "xvMeanOverall": {
+   "newman": 66.7,
+   "casi": 65.7,
+   "hindu": 63.6,
+   "alumni": 64.9,
+   "sic": 66,
+   "los-tilos": 61.7,
+   "belgrano-athletic": 63.7,
+   "regatas-bella-vista": 61.5,
+   "cuba": 61.6,
+   "atletico-del-rosario": 59.7,
+   "la-plata": 60.5,
+   "buenos-aires-crc": 60.5,
+   "los-matreros": 55.8,
+   "champagnat": 56
+  },
+  "pairs": {
+   "newman-clone": {
+    "homeWinPct": 55.7,
+    "ci95": [
+     52.6,
+     58.8
+    ],
+    "drawPct": 3,
+    "meanMargin": 2.5
+   },
+   "newman-casi": {
+    "homeWinPct": 58.4,
+    "ci95": [
+     55.3,
+     61.4
+    ],
+    "drawPct": 3.8,
+    "meanMargin": 4.8
+   },
+   "newman-regatas-bella-vista": {
+    "homeWinPct": 75.4,
+    "ci95": [
+     72.6,
+     78
+    ],
+    "drawPct": 3,
+    "meanMargin": 11.7
+   },
+   "newman-hindu": {
+    "homeWinPct": 68.9,
+    "ci95": [
+     66,
+     71.7
+    ],
+    "drawPct": 2.8,
+    "meanMargin": 8.1
+   },
+   "casi-regatas-bella-vista": {
+    "homeWinPct": 69.3,
+    "ci95": [
+     66.4,
+     72.1
+    ],
+    "drawPct": 3.3,
+    "meanMargin": 9
+   },
+   "sic-casi": {
+    "homeWinPct": 57.6,
+    "ci95": [
+     54.5,
+     60.6
+    ],
+    "drawPct": 2.6,
+    "meanMargin": 3
+   },
+   "newman-champagnat": {
+    "homeWinPct": 96.3,
+    "ci95": [
+     94.9,
+     97.3
+    ],
+    "drawPct": 0.3,
+    "meanMargin": 30.2
+   }
+  },
+  "tactics": {
+   "attack 2-4-2": {
+    "deltaWinPct": 0.1,
+    "deltaMargin": 0.6
+   },
+   "defense Rush": {
+    "deltaWinPct": 6,
+    "deltaMargin": 2.7
+   },
+   "scrum Presión": {
+    "deltaWinPct": -0.4,
+    "deltaMargin": 0.9
+   },
+   "lineout Competir": {
+    "deltaWinPct": 0,
+    "deltaMargin": 0.7
+   },
+   "maul Evitar": {
+    "deltaWinPct": -2.6,
+    "deltaMargin": -1
+   },
+   "kicking Conservador": {
+    "deltaWinPct": -0.7,
+    "deltaMargin": 0.3
+   },
+   "ruck Rápido": {
+    "deltaWinPct": 0.3,
+    "deltaMargin": 0.7
+   },
+   "defaults": {
+    "attack": "1-3-3-1",
+    "defense": "Drift",
+    "scrum": "Estable",
+    "lineout": "Seguro",
+    "maul": "Usar",
+    "kicking": "Territorial",
+    "ruck": "Asegurar"
+   }
+  }
+ }
+}

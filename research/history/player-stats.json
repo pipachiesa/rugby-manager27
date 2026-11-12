@@ -1,0 +1,7442 @@
+{
+ "generatedAt": "2026-11-11",
+ "description": "Eventos por jugador del Top 12/14 URBA 2023-2025 (resúmenes de partido de la API de ESPN ya guardados en caché): tries, conversiones, penales, drops y tarjetas. ESPN solo publica patadas convertidas: sirven para saber quién patea, no su efectividad.",
+ "coverage": {
+  "games": 256,
+  "events": 4134,
+  "linkedEvents": 3229,
+  "unmatchedEvents": 858
+ },
+ "players": {
+  "los-tilos-bautista-santamarina": {
+   "name": "Bautista Santamarina",
+   "clubId": "los-tilos",
+   "tries": 0,
+   "conversions": 17,
+   "penalties": 18,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 17,
+     "penalties": 18,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-felipe-camerlinckx": {
+   "name": "Felipe Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-justo-camerlinckx": {
+   "name": "Justo Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "tries": 4,
+   "conversions": 11,
+   "penalties": 24,
+   "drops": 1,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 1,
+     "penalties": 4,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 10,
+     "penalties": 20,
+     "drops": 1,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-enrique-camerlinckx": {
+   "name": "Enrique Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "tries": 13,
+   "conversions": 2,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 8,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 7,
+     "conversions": 2,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 5,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-bautista-gatti": {
+   "name": "Bautista Gatti",
+   "clubId": "los-tilos",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "hindu-nicolas-amaya": {
+   "name": "Nicolás Amaya",
+   "clubId": "hindu",
+   "tries": 7,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 5,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 1
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 4,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-valentino-quattrocchi": {
+   "name": "Valentino Quattrocchi",
+   "clubId": "san-luis",
+   "tries": 9,
+   "conversions": 24,
+   "penalties": 36,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 6,
+     "penalties": 4,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 18,
+     "penalties": 32,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-mateo-calistro": {
+   "name": "Mateo Calistro",
+   "clubId": "san-luis",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "hindu-martin-sulam": {
+   "name": "Martín Sulam",
+   "clubId": "hindu",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-tomas-malanos": {
+   "name": "Tomás Malanos",
+   "clubId": "atletico-del-rosario",
+   "tries": 10,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 10,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-mateo-camerlinckx": {
+   "name": "Mateo Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 42,
+   "penalties": 61,
+   "drops": 1,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 20,
+     "penalties": 37,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 22,
+     "penalties": 24,
+     "drops": 1,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-juan-manuel-gobet": {
+   "name": "Juan Manuel Gobet",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-lucas-gobet": {
+   "name": "Lucas Gobet",
+   "clubId": "regatas-bella-vista",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-matias-malanos": {
+   "name": "Matías Malanos",
+   "clubId": "atletico-del-rosario",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 5,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 5,
+     "red": 0
+    }
+   }
+  },
+  "sic-andrea-panzarini": {
+   "name": "Andrea Panzarini",
+   "clubId": "sic",
+   "tries": 16,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 9,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-santiago-pavlovsky": {
+   "name": "Santiago Pavlovsky",
+   "clubId": "sic",
+   "tries": 3,
+   "conversions": 81,
+   "penalties": 73,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 50,
+     "penalties": 50,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 31,
+     "penalties": 23,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-joaquin-diaz-luzzi": {
+   "name": "Joaquín Díaz Luzzi",
+   "clubId": "alumni",
+   "tries": 8,
+   "conversions": 49,
+   "penalties": 49,
+   "drops": 1,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 34,
+     "penalties": 37,
+     "drops": 1,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 15,
+     "penalties": 12,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "sic-mateo-albanese": {
+   "name": "Mateo Albanese",
+   "clubId": "sic",
+   "tries": 8,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "alumni-ramon-fuentes": {
+   "name": "Ramón Fuentes",
+   "clubId": "alumni",
+   "tries": 24,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 10,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 14,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-jacinto-campbell": {
+   "name": "Jacinto Campbell",
+   "clubId": "sic",
+   "tries": 11,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-tomas-bivort": {
+   "name": "Tomás Bivort",
+   "clubId": "alumni",
+   "tries": 17,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 10,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-alfonso-latorre": {
+   "name": "Alfonso Latorre",
+   "clubId": "buenos-aires-crc",
+   "tries": 17,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 11,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-bunge": {
+   "name": "Tomás Bunge",
+   "clubId": "buenos-aires-crc",
+   "tries": 4,
+   "conversions": 30,
+   "penalties": 33,
+   "drops": 1,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 19,
+     "penalties": 23,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 11,
+     "penalties": 10,
+     "drops": 1,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-matias-espina": {
+   "name": "Matías Espina",
+   "clubId": "buenos-aires-crc",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-franco-vega": {
+   "name": "Franco Vega",
+   "clubId": "belgrano-athletic",
+   "tries": 10,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-juan-lando": {
+   "name": "Juan Lando",
+   "clubId": "belgrano-athletic",
+   "tries": 11,
+   "conversions": 136,
+   "penalties": 84,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 65,
+     "penalties": 55,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 71,
+     "penalties": 29,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-francisco-lusarreta": {
+   "name": "Francisco Lusarreta",
+   "clubId": "belgrano-athletic",
+   "tries": 10,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-mateo-gasparotti": {
+   "name": "Mateo Gasparotti",
+   "clubId": "belgrano-athletic",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-lisandro-garcia-dragui": {
+   "name": "Lisandro García Dragui",
+   "clubId": "belgrano-athletic",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 6,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 4,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-mateo-capalbo": {
+   "name": "Mateo Capalbo",
+   "clubId": "buenos-aires-crc",
+   "tries": 3,
+   "conversions": 26,
+   "penalties": 17,
+   "drops": 0,
+   "yellow": 0,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 12,
+     "penalties": 8,
+     "drops": 0,
+     "yellow": 0,
+     "red": 1
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 14,
+     "penalties": 9,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-jose-caceres": {
+   "name": "José Cáceres",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 1
+    }
+   }
+  },
+  "sic-carlos-piran": {
+   "name": "Carlos Pirán",
+   "clubId": "sic",
+   "tries": 5,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 5,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-franco-delger": {
+   "name": "Franco Delger",
+   "clubId": "sic",
+   "tries": 8,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-francisco-paz-rizzoli": {
+   "name": "Francisco Paz Rizzoli",
+   "clubId": "la-plata",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 3,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 3,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-juan-pedro-bernasconi": {
+   "name": "Juan Pedro Bernasconi",
+   "clubId": "la-plata",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-ivan-kucic": {
+   "name": "Iván Kucic",
+   "clubId": "la-plata",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-ignacio-bottazzini": {
+   "name": "Ignacio Bottazzini",
+   "clubId": "sic",
+   "tries": 18,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 16,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-timoteo-silva": {
+   "name": "Timoteo Silva",
+   "clubId": "sic",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-hipolito-san-sebastian": {
+   "name": "Hipólito San Sebastián",
+   "clubId": "los-tilos",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "casi-juan-torres-obeid": {
+   "name": "Juan Torres Obeid",
+   "clubId": "casi",
+   "tries": 25,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 12,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 13,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "casi-juan-akemeier": {
+   "name": "Juan Akemeier",
+   "clubId": "casi",
+   "tries": 10,
+   "conversions": 107,
+   "penalties": 84,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 64,
+     "penalties": 36,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 8,
+     "conversions": 43,
+     "penalties": 48,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-luis-briatore": {
+   "name": "Luis Briatore",
+   "clubId": "casi",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "casi-ignacio-larrague": {
+   "name": "Ignacio Larrague",
+   "clubId": "casi",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-federico-sica-manuele": {
+   "name": "Federico Sica Manuele",
+   "clubId": "la-plata",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-santino-di-lucca": {
+   "name": "Santino Di Lucca",
+   "clubId": "la-plata",
+   "tries": 0,
+   "conversions": 6,
+   "penalties": 10,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 6,
+     "penalties": 10,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-federico-graglia": {
+   "name": "Federico Graglia",
+   "clubId": "hindu",
+   "tries": 9,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "hindu-pascal-senillosa": {
+   "name": "Pascal Senillosa",
+   "clubId": "hindu",
+   "tries": 5,
+   "conversions": 6,
+   "penalties": 4,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 5,
+     "conversions": 6,
+     "penalties": 4,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-gonzalo-gutierrez-taboada": {
+   "name": "Gonzalo Gutiérrez Taboada",
+   "clubId": "newman",
+   "tries": 8,
+   "conversions": 100,
+   "penalties": 71,
+   "drops": 8,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 61,
+     "penalties": 41,
+     "drops": 3,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 39,
+     "penalties": 30,
+     "drops": 5,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-faustino-santarelli": {
+   "name": "Faustino Santarelli",
+   "clubId": "newman",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 1
+    }
+   }
+  },
+  "buenos-aires-crc-renzo-zanella": {
+   "name": "Renzo Zanella",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "newman-justo-ortiz-basualdo": {
+   "name": "Justo Ortiz Basualdo",
+   "clubId": "newman",
+   "tries": 14,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 8,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-bautista-bosch": {
+   "name": "Bautista Bosch",
+   "clubId": "newman",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-jeronimo-ureta": {
+   "name": "Jerónimo Ureta",
+   "clubId": "newman",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-santiago-marolda": {
+   "name": "Santiago Marolda",
+   "clubId": "newman",
+   "tries": 16,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 9,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-francisco-sluga": {
+   "name": "Francisco Sluga",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "alumni-santiago-pernas": {
+   "name": "Santiago Pernas",
+   "clubId": "alumni",
+   "tries": 11,
+   "conversions": 5,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 7,
+     "conversions": 5,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-juan-patricio-anderson": {
+   "name": "Juan Patricio Anderson",
+   "clubId": "alumni",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-leo-mazzini": {
+   "name": "Leo Mazzini",
+   "clubId": "casi",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 1
+    }
+   }
+  },
+  "casi-felipe-hileman": {
+   "name": "Felipe Hileman",
+   "clubId": "casi",
+   "tries": 7,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "alumni-santiago-alduncin": {
+   "name": "Santiago Alduncin",
+   "clubId": "alumni",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "casi-hugo-garcia-rafael": {
+   "name": "Hugo Garcia Rafael",
+   "clubId": "casi",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-santiago-montagner": {
+   "name": "Santiago Montagner",
+   "clubId": "alumni",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 6,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "casi-jeronimo-tumbarello": {
+   "name": "Jeronimo Tumbarello",
+   "clubId": "casi",
+   "tries": 17,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 11,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-santiago-david": {
+   "name": "Santiago David",
+   "clubId": "casi",
+   "tries": 12,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 12,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-ignacio-torrado": {
+   "name": "Ignacio Torrado",
+   "clubId": "casi",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-rafael-santa-ana": {
+   "name": "Rafael Santa Ana",
+   "clubId": "regatas-bella-vista",
+   "tries": 8,
+   "conversions": 5,
+   "penalties": 6,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 5,
+     "penalties": 6,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-tomas-barbaccia": {
+   "name": "Tomás Barbaccia",
+   "clubId": "regatas-bella-vista",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-jeronimo-solveyra": {
+   "name": "Jerónimo Solveyra",
+   "clubId": "casi",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-joaquin-britto": {
+   "name": "Joaquín Britto",
+   "clubId": "casi",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-octavio-capella": {
+   "name": "Octavio Capella",
+   "clubId": "atletico-del-rosario",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-manuel-nogues": {
+   "name": "Manuel Nogués",
+   "clubId": "atletico-del-rosario",
+   "tries": 3,
+   "conversions": 13,
+   "penalties": 2,
+   "drops": 0,
+   "yellow": 1,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 13,
+     "penalties": 2,
+     "drops": 0,
+     "yellow": 1,
+     "red": 1
+    }
+   }
+  },
+  "atletico-del-rosario-nicolas-casals": {
+   "name": "Nicolás Casals",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-jeronimo-ulloa": {
+   "name": "Jerónimo Ulloa",
+   "clubId": "newman",
+   "tries": 8,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-benjamin-lanfranco": {
+   "name": "Benjamín Lanfranco",
+   "clubId": "newman",
+   "tries": 9,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-miguel-prince": {
+   "name": "Miguel Prince",
+   "clubId": "newman",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-agustin-fernandez": {
+   "name": "Agustin Fernandez",
+   "clubId": "atletico-del-rosario",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-tomas-passerotti": {
+   "name": "Tomás Passerotti",
+   "clubId": "alumni",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-pedro-de-haro": {
+   "name": "Pedro De Haro",
+   "clubId": "atletico-del-rosario",
+   "tries": 3,
+   "conversions": 6,
+   "penalties": 5,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 6,
+     "penalties": 5,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "cuba-marcos-moroni": {
+   "name": "Marcos Moroni",
+   "clubId": "cuba",
+   "tries": 4,
+   "conversions": 19,
+   "penalties": 22,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 17,
+     "penalties": 13,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 2,
+     "penalties": 9,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-benito-ortiz-de-rozas": {
+   "name": "Benito Ortiz de Rozas",
+   "clubId": "cuba",
+   "tries": 16,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 10,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 1
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-rosasco": {
+   "name": "Tomás Rosasco",
+   "clubId": "buenos-aires-crc",
+   "tries": 11,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 8,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "cuba-marcos-elicagaray": {
+   "name": "Marcos Elicagaray",
+   "clubId": "cuba",
+   "tries": 5,
+   "conversions": 15,
+   "penalties": 7,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 15,
+     "penalties": 7,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-herrador": {
+   "name": "Tomás Herrador",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 2,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 1
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 1
+    }
+   }
+  },
+  "cuba-valentin-mastroizzi": {
+   "name": "Valentín Mastroizzi",
+   "clubId": "cuba",
+   "tries": 5,
+   "conversions": 11,
+   "penalties": 9,
+   "drops": 2,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 8,
+     "penalties": 6,
+     "drops": 2,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 3,
+     "penalties": 3,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-bautista-duranona": {
+   "name": "Bautista Durañona",
+   "clubId": "buenos-aires-crc",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tobias-diaz-borda": {
+   "name": "Tobías Díaz Borda",
+   "clubId": "buenos-aires-crc",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-benjamin-handley": {
+   "name": "Benjamín Handley",
+   "clubId": "buenos-aires-crc",
+   "tries": 7,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-benjamin-chiappe": {
+   "name": "Benjamín Chiappe",
+   "clubId": "sic",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-mateo-montoya": {
+   "name": "Mateo Montoya",
+   "clubId": "newman",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 1
+    }
+   }
+  },
+  "alumni-franco-sabato": {
+   "name": "Franco Sábato",
+   "clubId": "alumni",
+   "tries": 9,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 9,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-alejo-garcia": {
+   "name": "Alejo García",
+   "clubId": "san-luis",
+   "tries": 3,
+   "conversions": 1,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 1,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-martin-aereboe": {
+   "name": "Martín Aereboe",
+   "clubId": "san-luis",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-manuel-arteche": {
+   "name": "Manuel Arteche",
+   "clubId": "la-plata",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-tomas-bernasconi": {
+   "name": "Tomás Bernasconi",
+   "clubId": "la-plata",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-felipe-hernandez": {
+   "name": "Felipe Hernández",
+   "clubId": "san-luis",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-santiago-canal": {
+   "name": "Santiago Canal",
+   "clubId": "san-luis",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-thiago-bassagaisteguy": {
+   "name": "Thiago Bassagaisteguy",
+   "clubId": "los-tilos",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-felipe-crispo": {
+   "name": "Felipe Crispo",
+   "clubId": "san-luis",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 3,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 3,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-theo-blacksley": {
+   "name": "Theo Blacksley",
+   "clubId": "belgrano-athletic",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 1,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 1,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-bautista-ozog": {
+   "name": "Bautista Ozog",
+   "clubId": "la-plata",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-martin-arana": {
+   "name": "Martín Arana",
+   "clubId": "belgrano-athletic",
+   "tries": 17,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 11,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-cruz-ulloa": {
+   "name": "Cruz Ulloa",
+   "clubId": "newman",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-francisco-annecchini": {
+   "name": "Francisco Annecchini",
+   "clubId": "la-plata",
+   "tries": 0,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-martin-nanni": {
+   "name": "Martín Nanni",
+   "clubId": "la-plata",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-nicolas-chiappani": {
+   "name": "Nicolas Chiappani",
+   "clubId": "la-plata",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-gallo": {
+   "name": "Tomás Gallo",
+   "clubId": "buenos-aires-crc",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 2,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 2
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-felipe-sascaro": {
+   "name": "Felipe Sascaro",
+   "clubId": "sic",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-segundo-blanco-fresco": {
+   "name": "Segundo Blanco Fresco",
+   "clubId": "san-luis",
+   "tries": 0,
+   "conversions": 31,
+   "penalties": 31,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 31,
+     "penalties": 31,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-bautista-viero": {
+   "name": "Bautista Viero",
+   "clubId": "sic",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 4,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-nahuel-curti": {
+   "name": "Nahuel Curti",
+   "clubId": "san-luis",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-nicanor-acosta": {
+   "name": "Nicanor Acosta",
+   "clubId": "sic",
+   "tries": 14,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 8,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-tomas-meyrelles": {
+   "name": "Tomás Meyrelles",
+   "clubId": "sic",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-marcos-joseph": {
+   "name": "Marcos Joseph",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "casi-joaquin-sanchez": {
+   "name": "Joaquín Sánchez",
+   "clubId": "casi",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "hindu-lisandro-rodriguez": {
+   "name": "Lisandro Rodríguez",
+   "clubId": "hindu",
+   "tries": 19,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 13,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-agustin-capurro": {
+   "name": "Agustín Capurro",
+   "clubId": "hindu",
+   "tries": 10,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-marcos-camerlinckx": {
+   "name": "Marcos Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-franco-gnecco": {
+   "name": "Franco Gnecco",
+   "clubId": "san-luis",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-santiago-bonavento": {
+   "name": "Santiago Bonavento",
+   "clubId": "san-luis",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-ignacio-bensadon": {
+   "name": "Ignacio Bensadon",
+   "clubId": "buenos-aires-crc",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-etcheverry": {
+   "name": "Tomás Etcheverry",
+   "clubId": "buenos-aires-crc",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-ignacio-cubilla": {
+   "name": "Ignacio Cubilla",
+   "clubId": "alumni",
+   "tries": 7,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-bautista-canzani": {
+   "name": "Bautista Canzani",
+   "clubId": "alumni",
+   "tries": 0,
+   "conversions": 17,
+   "penalties": 16,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 17,
+     "penalties": 16,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-ramon-duggan": {
+   "name": "Ramón Duggan",
+   "clubId": "belgrano-athletic",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 4,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-ignacio-diaz": {
+   "name": "Ignacio Díaz",
+   "clubId": "belgrano-athletic",
+   "tries": 24,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 10,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 14,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-pedro-arana": {
+   "name": "Pedro Arana",
+   "clubId": "belgrano-athletic",
+   "tries": 15,
+   "conversions": 1,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 8,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 7,
+     "conversions": 1,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-alejo-novo": {
+   "name": "Alejo Novo",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 8,
+   "penalties": 12,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 8,
+     "penalties": 12,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-rafael-benedit": {
+   "name": "Rafael Benedit",
+   "clubId": "cuba",
+   "tries": 1,
+   "conversions": 10,
+   "penalties": 2,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 10,
+     "penalties": 2,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "cuba-agustin-fraga": {
+   "name": "Agustín Fraga",
+   "clubId": "cuba",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-pedro-castro-nevares": {
+   "name": "Pedro Castro Nevares",
+   "clubId": "cuba",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-ramiro-costa": {
+   "name": "Ramiro Costa",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-lucas-marguery": {
+   "name": "Lucas Marguery",
+   "clubId": "newman",
+   "tries": 12,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 5,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "newman-joaquin-de-la-vega": {
+   "name": "Joaquín de la Vega",
+   "clubId": "newman",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-marcos-piccinini": {
+   "name": "Marcos Piccinini",
+   "clubId": "sic",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-matias-perissinotto": {
+   "name": "Matías Perissinotto",
+   "clubId": "san-luis",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 1,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 1
+    }
+   }
+  },
+  "belgrano-athletic-juan-apricio": {
+   "name": "Juan Apricio",
+   "clubId": "belgrano-athletic",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "casi-tomas-phelan": {
+   "name": "Tomás Phelan",
+   "clubId": "casi",
+   "tries": 7,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "cuba-bautista-casaurrang": {
+   "name": "Bautista Casaurrang",
+   "clubId": "cuba",
+   "tries": 9,
+   "conversions": 7,
+   "penalties": 14,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 7,
+     "conversions": 7,
+     "penalties": 14,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-santiago-uriarte": {
+   "name": "Santiago Uriarte",
+   "clubId": "cuba",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-segundo-pisani": {
+   "name": "Segundo Pisani",
+   "clubId": "cuba",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-gonzalo-costaguta": {
+   "name": "Gonzalo Costaguta",
+   "clubId": "champagnat",
+   "tries": 0,
+   "conversions": 15,
+   "penalties": 17,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 15,
+     "penalties": 17,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-facundo-rufino": {
+   "name": "Facundo Rufino",
+   "clubId": "champagnat",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-santos-panelo": {
+   "name": "Santos Panelo",
+   "clubId": "champagnat",
+   "tries": 0,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-inaki-alberto-ustariz": {
+   "name": "Iñaki Alberto Ustariz",
+   "clubId": "champagnat",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-pedro-del-piano": {
+   "name": "Pedro Del Piano",
+   "clubId": "champagnat",
+   "tries": 1,
+   "conversions": 4,
+   "penalties": 4,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 4,
+     "penalties": 4,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-tomas-alonso-boto": {
+   "name": "Tomás Alonso Boto",
+   "clubId": "champagnat",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-tomas-anderlic": {
+   "name": "Tomás Anderlic",
+   "clubId": "cuba",
+   "tries": 8,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-matias-jesus-alonso-boto": {
+   "name": "Matias Jesus Alonso Boto",
+   "clubId": "champagnat",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 1
+    }
+   }
+  },
+  "buenos-aires-crc-julian-quetglas": {
+   "name": "Julián Quetglas",
+   "clubId": "buenos-aires-crc",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-agustin-lamensa": {
+   "name": "Agustín Lamensa",
+   "clubId": "buenos-aires-crc",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-mateo-fernandez-armendariz": {
+   "name": "Mateo Fernández Armendariz",
+   "clubId": "los-tilos",
+   "tries": 5,
+   "conversions": 11,
+   "penalties": 8,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 5,
+     "conversions": 11,
+     "penalties": 8,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-tomas-keena": {
+   "name": "Tomás Keena",
+   "clubId": "newman",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-carlos-menendez": {
+   "name": "Carlos Menendez",
+   "clubId": "newman",
+   "tries": 1,
+   "conversions": 12,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 4,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 8,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-gaston-martinez-salgado": {
+   "name": "Gastón Martínez Salgado",
+   "clubId": "los-tilos",
+   "tries": 8,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 8,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-felipe-bares": {
+   "name": "Felipe Bares",
+   "clubId": "los-tilos",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-augusto-vaccarino": {
+   "name": "Augusto Vaccarino",
+   "clubId": "belgrano-athletic",
+   "tries": 15,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 9,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-carlos-augusto-cabano-wall": {
+   "name": "Carlos Augusto Cabano Wall",
+   "clubId": "los-tilos",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-matias-cordero": {
+   "name": "Matías Cordero",
+   "clubId": "los-tilos",
+   "tries": 0,
+   "conversions": 5,
+   "penalties": 2,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 5,
+     "penalties": 2,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-bautista-farise": {
+   "name": "Bautista Farisé",
+   "clubId": "hindu",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-pablo-bourdal": {
+   "name": "Pablo Bourdal",
+   "clubId": "buenos-aires-crc",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-santiago-ruiz": {
+   "name": "Santiago Ruiz",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-marcos-ferro": {
+   "name": "Marcos Ferro",
+   "clubId": "regatas-bella-vista",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-cruz-camerlinckx": {
+   "name": "Cruz Camerlinckx",
+   "clubId": "regatas-bella-vista",
+   "tries": 7,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-juan-cruz-corso": {
+   "name": "Juan Cruz Corso",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-filippo-testoni": {
+   "name": "Filippo Testoni",
+   "clubId": "alumni",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-lucas-malanos": {
+   "name": "Lucas Malanos",
+   "clubId": "atletico-del-rosario",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "casi-eugenio-sartori": {
+   "name": "Eugenio Sartori",
+   "clubId": "casi",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 1,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 1
+    }
+   }
+  },
+  "hindu-nicolas-d-amorim": {
+   "name": "Nicolás D'Amorim",
+   "clubId": "hindu",
+   "tries": 9,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-sebastian-cancelliere": {
+   "name": "Sebastián Cancelliere",
+   "clubId": "hindu",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-juan-comolli": {
+   "name": "Juan Comolli",
+   "clubId": "hindu",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-tomas-suarez-folch": {
+   "name": "Tomás Suárez Folch",
+   "clubId": "la-plata",
+   "tries": 2,
+   "conversions": 5,
+   "penalties": 18,
+   "drops": 1,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 5,
+     "penalties": 18,
+     "drops": 1,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-luciano-tecca": {
+   "name": "Luciano Tecca",
+   "clubId": "belgrano-athletic",
+   "tries": 4,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-santiago-gonzalez-iglesias": {
+   "name": "Santiago González Iglesias",
+   "clubId": "alumni",
+   "tries": 6,
+   "conversions": 14,
+   "penalties": 9,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 7,
+     "penalties": 9,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 7,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-martin-fontan": {
+   "name": "Martín Fontán",
+   "clubId": "la-plata",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-ariel-del-cerro": {
+   "name": "Ariel Del Cerro",
+   "clubId": "la-plata",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-pedro-addiechi": {
+   "name": "Pedro Addiechi",
+   "clubId": "la-plata",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-beltran-landivar": {
+   "name": "Beltrán Landívar",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-nicolas-leiva": {
+   "name": "Nicolás Leiva",
+   "clubId": "hindu",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-fermin-perkins": {
+   "name": "Fermín Perkins",
+   "clubId": "newman",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-rodrigo-diaz-de-vivar": {
+   "name": "Rodrigo Díaz de Vivar",
+   "clubId": "newman",
+   "tries": 10,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "newman-luciano-borio": {
+   "name": "Luciano Borio",
+   "clubId": "newman",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-vega-nicolas-fernandez": {
+   "name": "Vega Nicolas Fernandez",
+   "clubId": "los-tilos",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-santino-amaya": {
+   "name": "Santino Amaya",
+   "clubId": "hindu",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-agustin-sascaro": {
+   "name": "Agustín Sascaro",
+   "clubId": "sic",
+   "tries": 0,
+   "conversions": 13,
+   "penalties": 14,
+   "drops": 1,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 13,
+     "penalties": 14,
+     "drops": 1,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-felipe-ezcurra": {
+   "name": "Felipe Ezcurra",
+   "clubId": "hindu",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-lucas-rocha": {
+   "name": "Lucas Rocha",
+   "clubId": "sic",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 5,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "alumni-bautista-vidal": {
+   "name": "Bautista Vidal",
+   "clubId": "alumni",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-juan-lago-blaiotta": {
+   "name": "Juan Lago Blaiotta",
+   "clubId": "los-tilos",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-adriel-armenti": {
+   "name": "Adriel Armenti",
+   "clubId": "los-tilos",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-benjamin-belaga": {
+   "name": "Benjamín Belaga",
+   "clubId": "casi",
+   "tries": 11,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 9,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "cuba-felipe-de-la-vega": {
+   "name": "Felipe de la Vega",
+   "clubId": "cuba",
+   "tries": 3,
+   "conversions": 7,
+   "penalties": 6,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 7,
+     "penalties": 6,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-santiago-landau": {
+   "name": "Santiago Landau",
+   "clubId": "cuba",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-martin-leiva": {
+   "name": "Martin Leiva",
+   "clubId": "los-tilos",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-bernabe-lopez-fleming": {
+   "name": "Bernabé López Fleming",
+   "clubId": "sic",
+   "tries": 5,
+   "conversions": 1,
+   "penalties": 2,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 4,
+     "conversions": 1,
+     "penalties": 2,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-simon-mimessi": {
+   "name": "Simón Mimessi",
+   "clubId": "buenos-aires-crc",
+   "tries": 2,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-francisco-garoby": {
+   "name": "Francisco Garoby",
+   "clubId": "cuba",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "cuba-lucas-campion": {
+   "name": "Lucas Campion",
+   "clubId": "cuba",
+   "tries": 7,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-lahuen-argemi": {
+   "name": "Lahuen Argemi",
+   "clubId": "san-luis",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-simon-zappella": {
+   "name": "Simón Zappella",
+   "clubId": "champagnat",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-tomas-baca-castex": {
+   "name": "Tomás Baca Castex",
+   "clubId": "champagnat",
+   "tries": 13,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 13,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-lucas-sommer": {
+   "name": "Lucas Sommer",
+   "clubId": "sic",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-felipe-nogues": {
+   "name": "Felipe Nogués",
+   "clubId": "atletico-del-rosario",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-ramiro-rubio": {
+   "name": "Ramiro Rubio",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-ignacio-guichon": {
+   "name": "Ignacio Guichon",
+   "clubId": "los-tilos",
+   "tries": 2,
+   "conversions": 6,
+   "penalties": 4,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 6,
+     "penalties": 4,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-beltran-salese": {
+   "name": "Beltrán Salese",
+   "clubId": "newman",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-benjamin-marban": {
+   "name": "Benjamín Marban",
+   "clubId": "san-luis",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-santiago-gibert": {
+   "name": "Santiago Gibert",
+   "clubId": "san-luis",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-maximo-castrillo": {
+   "name": "Máximo Castrillo",
+   "clubId": "alumni",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-lautaro-grys-arana": {
+   "name": "Lautaro Grys Arana",
+   "clubId": "san-luis",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-facundo-scaiano": {
+   "name": "Facundo Scaiano",
+   "clubId": "casi",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-tomas-etchepare": {
+   "name": "Tomás Etchepare",
+   "clubId": "belgrano-athletic",
+   "tries": 12,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 7,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-eliseo-chiavassa": {
+   "name": "Eliseo Chiavassa",
+   "clubId": "los-tilos",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-bautista-estelles": {
+   "name": "Bautista Estellés",
+   "clubId": "atletico-del-rosario",
+   "tries": 4,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-bruno-montenegro": {
+   "name": "Bruno Montenegro",
+   "clubId": "atletico-del-rosario",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "hindu-tomas-amher": {
+   "name": "Tomás Amher",
+   "clubId": "hindu",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-juan-martinez-sosa": {
+   "name": "Juan Martínez Sosa",
+   "clubId": "hindu",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-tomas-sanguinetti": {
+   "name": "Tomás Sanguinetti",
+   "clubId": "regatas-bella-vista",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-juan-penoucos": {
+   "name": "Juan Penoucos",
+   "clubId": "belgrano-athletic",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-pedro-garcia-colinas": {
+   "name": "Pedro García Colinas",
+   "clubId": "regatas-bella-vista",
+   "tries": 5,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-franco-diviesti": {
+   "name": "Franco Diviesti",
+   "clubId": "hindu",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-facundo-maffei": {
+   "name": "Facundo Maffei",
+   "clubId": "los-tilos",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-juan-albareda": {
+   "name": "Juan Albareda",
+   "clubId": "casi",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "sic-ciro-plorutti": {
+   "name": "Ciro Plorutti",
+   "clubId": "sic",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "hindu-lucas-fernandez-miranda": {
+   "name": "Lucas Fernández Miranda",
+   "clubId": "hindu",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-agustin-garcia-campos": {
+   "name": "Agustín García Campos",
+   "clubId": "regatas-bella-vista",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-salvador-ochoa": {
+   "name": "Salvador Ochoa",
+   "clubId": "casi",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-acosta-pimentel": {
+   "name": "Tomás Acosta Pimentel",
+   "clubId": "buenos-aires-crc",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-pablo-cardinal": {
+   "name": "Pablo Cardinal",
+   "clubId": "newman",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-francisco-pisani": {
+   "name": "Francisco Pisani Caride",
+   "clubId": "regatas-bella-vista",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-james-wright": {
+   "name": "James Wright",
+   "clubId": "newman",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-esteban-de-la-torre": {
+   "name": "Esteban de la Torre",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-tomas-cotter-daireaux": {
+   "name": "Tomás Cotter Daireaux",
+   "clubId": "champagnat",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "hindu-carlos-repetto": {
+   "name": "Carlos Repetto",
+   "clubId": "hindu",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-fernando-rodriguez-pascarella": {
+   "name": "Fernando Rodríguez Pascarella",
+   "clubId": "champagnat",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-alberto-natan-adissi": {
+   "name": "Alberto Natan Adissi",
+   "clubId": "champagnat",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 4,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 4,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-tomas-alvarez-bayon": {
+   "name": "Tomás Álvarez Bayón",
+   "clubId": "buenos-aires-crc",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-felipe-rojo-bas": {
+   "name": "Felipe Rojo Bas",
+   "clubId": "champagnat",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-francisco-gonzalez-capdevila": {
+   "name": "Francisco González Capdevila",
+   "clubId": "sic",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-matias-medrano": {
+   "name": "Matías Medrano",
+   "clubId": "regatas-bella-vista",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "newman-juan-bautista-daireaux": {
+   "name": "Juan Bautista Daireaux",
+   "clubId": "newman",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-manuel-lozano": {
+   "name": "Manuel Lozano",
+   "clubId": "newman",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "hindu-fermin-ormaechea": {
+   "name": "Fermin Ormaechea",
+   "clubId": "hindu",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-juan-brescia": {
+   "name": "Juan Brescia",
+   "clubId": "belgrano-athletic",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "san-luis-facundo-gibert": {
+   "name": "Facundo Gibert",
+   "clubId": "san-luis",
+   "tries": 0,
+   "conversions": 1,
+   "penalties": 2,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 1,
+     "penalties": 2,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-ramon-fernandez-miranda": {
+   "name": "Ramón Fernández Miranda",
+   "clubId": "hindu",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-martin-patat": {
+   "name": "Martín Patat",
+   "clubId": "la-plata",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-felipe-rugolo": {
+   "name": "Felipe Rugolo",
+   "clubId": "regatas-bella-vista",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-esteban-iribarne": {
+   "name": "Esteban Iribarne",
+   "clubId": "cuba",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-tobias-bernabe": {
+   "name": "Tobias Bernabé",
+   "clubId": "belgrano-athletic",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 6,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-mateo-freire": {
+   "name": "Mateo Freire",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-joaquin-briozzo": {
+   "name": "Joaquin Briozzo",
+   "clubId": "los-tilos",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-tomas-fernandez-armendariz": {
+   "name": "Tomás Fernández Armendariz",
+   "clubId": "los-tilos",
+   "tries": 4,
+   "conversions": 2,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 4,
+     "conversions": 2,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-kael-chajchir": {
+   "name": "Kael Chajchir",
+   "clubId": "buenos-aires-crc",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-bautista-lopez-manan": {
+   "name": "Bautista López Mañan",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-alejandro-urtubey": {
+   "name": "Alejandro Urtubey",
+   "clubId": "newman",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 3,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-lucas-moresco": {
+   "name": "Lucas Moresco",
+   "clubId": "champagnat",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-maximo-lamelas": {
+   "name": "Máximo Lamelas",
+   "clubId": "alumni",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-ignacio-luna": {
+   "name": "Ignacio Luna",
+   "clubId": "la-plata",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-tomas-cubilla": {
+   "name": "Tomás Cubilla",
+   "clubId": "alumni",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-tobias-wade": {
+   "name": "Tobías Wade",
+   "clubId": "alumni",
+   "tries": 6,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 5,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-marcos-young": {
+   "name": "Marcos Young",
+   "clubId": "cuba",
+   "tries": 4,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-ezequiel-reyes": {
+   "name": "Ezequiel Reyes",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-francisco-gradin": {
+   "name": "Francisco Gradin",
+   "clubId": "belgrano-athletic",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-octavio-carroll": {
+   "name": "Octavio Carroll",
+   "clubId": "belgrano-athletic",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-joaquin-yakiche": {
+   "name": "Joaquín Yakiche",
+   "clubId": "cuba",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "hindu-lautaro-bavaro": {
+   "name": "Lautaro Bávaro",
+   "clubId": "hindu",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-santiago-casals": {
+   "name": "Santiago Casals",
+   "clubId": "atletico-del-rosario",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-gonzalo-tapia": {
+   "name": "Gonzalo Tapia",
+   "clubId": "alumni",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 1,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-manuel-puertas": {
+   "name": "Manuel Puertas",
+   "clubId": "los-tilos",
+   "tries": 3,
+   "conversions": 1,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 1,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-felipe-perdomo": {
+   "name": "Felipe Perdomo",
+   "clubId": "cuba",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-alejo-barrera": {
+   "name": "Alejo Barrera",
+   "clubId": "regatas-bella-vista",
+   "tries": 12,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 4,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 8,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "los-tilos-alfonso-lopez-feybli": {
+   "name": "Alfonso López Feybli",
+   "clubId": "los-tilos",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 3,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-tobias-rivas-orozco": {
+   "name": "Tobías Rivas Orozco",
+   "clubId": "champagnat",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-ramiro-musio": {
+   "name": "Ramiro Musio",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-juan-cruz-alvarinas": {
+   "name": "Juan Cruz Alvariñas",
+   "clubId": "alumni",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "cuba-ignacio-albani": {
+   "name": "Ignacio Albani",
+   "clubId": "cuba",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-francisco-echenique": {
+   "name": "Francisco Echenique",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-francisco-ferronato": {
+   "name": "Francisco Ferronato",
+   "clubId": "belgrano-athletic",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-santos-rubio": {
+   "name": "Santos Rubio",
+   "clubId": "sic",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "la-plata-luca-juliano": {
+   "name": "Luca Juliano",
+   "clubId": "la-plata",
+   "tries": 2,
+   "conversions": 1,
+   "penalties": 3,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 2,
+     "conversions": 1,
+     "penalties": 3,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-teofilo-garay": {
+   "name": "Teófilo Garay",
+   "clubId": "newman",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-florencio-llerena": {
+   "name": "Florencio Llerena",
+   "clubId": "newman",
+   "tries": 0,
+   "conversions": 6,
+   "penalties": 3,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 3,
+     "penalties": 2,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 3,
+     "penalties": 1,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-francisco-lascombes": {
+   "name": "Francisco Lascombes",
+   "clubId": "newman",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-manuel-mora": {
+   "name": "Manuel Mora",
+   "clubId": "alumni",
+   "tries": 3,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "newman-lucas-nava": {
+   "name": "Lucas Nava",
+   "clubId": "newman",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "casi-joaquin-saenz-de-miera": {
+   "name": "Joaquín Sáenz de Miera",
+   "clubId": "casi",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 2,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "sic-ignacio-pietranera": {
+   "name": "Ignacio Pietranera",
+   "clubId": "sic",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-eliseo-marchetti": {
+   "name": "Eliseo Marchetti",
+   "clubId": "belgrano-athletic",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "casi-benjamin-rocca-rivarola": {
+   "name": "Benjamín Rocca Rivarola",
+   "clubId": "casi",
+   "tries": 2,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    },
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-mateo-andornil": {
+   "name": "Mateo Andornil",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "atletico-del-rosario-lisandro-dipierri": {
+   "name": "Lisandro Dipierri",
+   "clubId": "atletico-del-rosario",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "hindu-elias-banach": {
+   "name": "Elías Banach",
+   "clubId": "hindu",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-valentin-sanguinetti": {
+   "name": "Valentín Sanguinetti",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "regatas-bella-vista-felipe-galli": {
+   "name": "Felipe Galli",
+   "clubId": "regatas-bella-vista",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "cuba-juan-pedro-garoby": {
+   "name": "Juan Pedro Garoby",
+   "clubId": "cuba",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-federico-lucca": {
+   "name": "Federico Lucca",
+   "clubId": "alumni",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "alumni-francisco-bottoni": {
+   "name": "Francisco Bottoni",
+   "clubId": "alumni",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 3,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 2,
+     "red": 0
+    }
+   }
+  },
+  "hindu-tomas-scallan": {
+   "name": "Tomás Scallan",
+   "clubId": "hindu",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "belgrano-athletic-mauro-rebussone": {
+   "name": "Mauro Rebussone",
+   "clubId": "belgrano-athletic",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "buenos-aires-crc-pedro-del-carril": {
+   "name": "Pedro Del Carril",
+   "clubId": "buenos-aires-crc",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 2,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    },
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "sic-francisco-calandra": {
+   "name": "Francisco Calandra",
+   "clubId": "sic",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  },
+  "alumni-matias-del-franco": {
+   "name": "Matías Del Franco",
+   "clubId": "alumni",
+   "tries": 1,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 0,
+   "red": 0,
+   "bySeason": {
+    "2025": {
+     "tries": 1,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 0,
+     "red": 0
+    }
+   }
+  },
+  "champagnat-francisco-migi-castelli-azpiroz": {
+   "name": "Francisco Migi Castelli Azpiroz",
+   "clubId": "champagnat",
+   "tries": 0,
+   "conversions": 0,
+   "penalties": 0,
+   "drops": 0,
+   "yellow": 1,
+   "red": 0,
+   "bySeason": {
+    "2024": {
+     "tries": 0,
+     "conversions": 0,
+     "penalties": 0,
+     "drops": 0,
+     "yellow": 1,
+     "red": 0
+    }
+   }
+  }
+ },
+ "unmatched": [
+  {
+   "key": "hindu|Joaquin Diaz Bonilla",
+   "events": 78
+  },
+  {
+   "key": "hindu|Santiago Fernandez",
+   "events": 64
+  },
+  {
+   "key": "champagnat|Tobias Imbrosciano",
+   "events": 43
+  },
+  {
+   "key": "atletico-del-rosario|Pedro Bisio",
+   "events": 36
+  },
+  {
+   "key": "cuba|Benjamin Gutierrez Meabe",
+   "events": 33
+  },
+  {
+   "key": "newman|Marcelo Brandi",
+   "events": 23
+  },
+  {
+   "key": "cuba|Enrique Devoto",
+   "events": 18
+  },
+  {
+   "key": "san-luis|Eduardo Ruesta",
+   "events": 16
+  },
+  {
+   "key": "buenos-aires-crc|Francisco Lamensa",
+   "events": 16
+  },
+  {
+   "key": "san-luis|Agustin Torello",
+   "events": 14
+  },
+  {
+   "key": "casi|Bruno Devoto",
+   "events": 12
+  },
+  {
+   "key": "belgrano-athletic|Joaquin Mihura",
+   "events": 11
+  },
+  {
+   "key": "hindu|Ivo Markvart",
+   "events": 10
+  },
+  {
+   "key": "alumni|Juan Marcos Berreta",
+   "events": 10
+  },
+  {
+   "key": "la-plata|Pedro Mercerat",
+   "events": 8
+  },
+  {
+   "key": "atletico-del-rosario|Facundo Gerosa",
+   "events": 8
+  },
+  {
+   "key": "san-luis|Isidro Lazzarini",
+   "events": 8
+  },
+  {
+   "key": "champagnat|Martin Graciarena",
+   "events": 8
+  },
+  {
+   "key": "sic|Alejo Daireaux",
+   "events": 7
+  },
+  {
+   "key": "belgrano-athletic|Joaquin de la Serna",
+   "events": 7
+  },
+  {
+   "key": "atletico-del-rosario|*Carwyn *Williams",
+   "events": 6
+  },
+  {
+   "key": "san-luis|Felipe Campodonico",
+   "events": 6
+  },
+  {
+   "key": "san-luis|Franco Cantalupo",
+   "events": 6
+  },
+  {
+   "key": "casi|Luca Canzani",
+   "events": 6
+  },
+  {
+   "key": "newman|Silvestre Casa",
+   "events": 6
+  },
+  {
+   "key": "casi|Matias Dirube",
+   "events": 6
+  },
+  {
+   "key": "atletico-del-rosario|Jeremias Aime",
+   "events": 5
+  },
+  {
+   "key": "alumni|Alejo Chavez",
+   "events": 5
+  },
+  {
+   "key": "alumni|Franco Battezzati",
+   "events": 5
+  },
+  {
+   "key": "belgrano-athletic|Ignacio Marino",
+   "events": 5
+  },
+  {
+   "key": "cuba|Rafael Iriarte",
+   "events": 5
+  },
+  {
+   "key": "cuba|Pedro Mesones",
+   "events": 5
+  },
+  {
+   "key": "sic|Justo Piccardo",
+   "events": 5
+  },
+  {
+   "key": "san-luis|Wilmer Ramirez",
+   "events": 5
+  },
+  {
+   "key": "newman|Leandro Leivas",
+   "events": 5
+  },
+  {
+   "key": "cuba|Benjamin Urdapilleta",
+   "events": 5
+  },
+  {
+   "key": "hindu|Ramon Fernandez de Caleya",
+   "events": 5
+  },
+  {
+   "key": "hindu|Belisario Agulla",
+   "events": 4
+  },
+  {
+   "key": "la-plata|Facundo Scarpinelli",
+   "events": 4
+  },
+  {
+   "key": "la-plata|Away Team 22",
+   "events": 4
+  },
+  {
+   "key": "la-plata|Francisco Suarez Folch",
+   "events": 4
+  },
+  {
+   "key": "san-luis|Facundo Alvarez Amado",
+   "events": 4
+  },
+  {
+   "key": "san-luis|Ramiro Bruni",
+   "events": 4
+  },
+  {
+   "key": "belgrano-athletic|Santiago Ruzzante",
+   "events": 4
+  },
+  {
+   "key": "cuba|Facundo Fontan",
+   "events": 4
+  },
+  {
+   "key": "belgrano-athletic|Home Team 23",
+   "events": 4
+  },
+  {
+   "key": "san-luis|Manuel Gnecco",
+   "events": 4
+  },
+  {
+   "key": "regatas-bella-vista|Juan Otsubo",
+   "events": 4
+  },
+  {
+   "key": "newman|Juan Billote",
+   "events": 4
+  },
+  {
+   "key": "cuba|Simon Benitez Cruz",
+   "events": 4
+  },
+  {
+   "key": "belgrano-athletic|Tomas Cubelli",
+   "events": 4
+  },
+  {
+   "key": "cuba|Manuel Castro Madero",
+   "events": 4
+  },
+  {
+   "key": "casi|Felipe Probaos",
+   "events": 4
+  },
+  {
+   "key": "buenos-aires-crc|Pablo Gaston Vaca",
+   "events": 3
+  },
+  {
+   "key": "buenos-aires-crc|Valentin Arauz",
+   "events": 3
+  },
+  {
+   "key": "los-tilos|Away Team 17",
+   "events": 3
+  },
+  {
+   "key": "hindu|Gaspar Jeckeln",
+   "events": 3
+  },
+  {
+   "key": "alumni|Luca Sabato",
+   "events": 3
+  },
+  {
+   "key": "alumni|Cruz Gonzalez",
+   "events": 3
+  },
+  {
+   "key": "buenos-aires-crc|Juan Pablo Barzi",
+   "events": 3
+  },
+  {
+   "key": "san-luis|Felipe Piatti",
+   "events": 3
+  },
+  {
+   "key": "san-luis|Agustin Fitzsimons Herrera",
+   "events": 3
+  },
+  {
+   "key": "newman|Francisco Ulloa",
+   "events": 3
+  },
+  {
+   "key": "los-tilos|Home Team 17",
+   "events": 3
+  },
+  {
+   "key": "sic|Home Team 20",
+   "events": 3
+  },
+  {
+   "key": "san-luis|Alexis Uvieda",
+   "events": 3
+  },
+  {
+   "key": "cuba|Francisco Patrono",
+   "events": 3
+  },
+  {
+   "key": "cuba|Santiago Cardini",
+   "events": 3
+  },
+  {
+   "key": "buenos-aires-crc|Valentino Minoyetti",
+   "events": 3
+  },
+  {
+   "key": "regatas-bella-vista|Pedro Vega",
+   "events": 3
+  },
+  {
+   "key": "champagnat|Benjamin Panelo",
+   "events": 3
+  },
+  {
+   "key": "cuba|Home Team 16",
+   "events": 3
+  },
+  {
+   "key": "cuba|Francisco Sied",
+   "events": 3
+  },
+  {
+   "key": "champagnat|Manuel Mauvecin",
+   "events": 3
+  },
+  {
+   "key": "alumni|Home Team 23",
+   "events": 3
+  },
+  {
+   "key": "san-luis|Lucas Funaro",
+   "events": 3
+  },
+  {
+   "key": "atletico-del-rosario|Pablo Martinez",
+   "events": 2
+  },
+  {
+   "key": "atletico-del-rosario|Matias Kremer",
+   "events": 2
+  },
+  {
+   "key": "atletico-del-rosario|Nicolas Cripovich",
+   "events": 2
+  },
+  {
+   "key": "casi|Home Team 23",
+   "events": 2
+  }
+ ]
+}

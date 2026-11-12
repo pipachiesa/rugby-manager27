@@ -1,0 +1,1928 @@
+{
+  "season": 2026,
+  "verifiedAt": "2026-11-10",
+  "notes": "Jugadores argentinos reales con afiliación en el exterior documentada al corte de la base. El mercado es una simulación y no implica disponibilidad contractual. Si los documentos no permiten verificar una fecha exacta de nacimiento, el dato queda vacío.",
+  "sources": [
+    {
+      "id": "pumas-archive",
+      "title": "Los Pumas · Archivo histórico y clubes de origen",
+      "url": "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-montoya",
+      "title": "Los Pumas · Julián Montoya",
+      "url": "https://www.lospumas.com.ar/jugadores/montoya-julian-c/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-matera",
+      "title": "Los Pumas · Pablo Matera",
+      "url": "https://www.lospumas.com.ar/jugadores/matera-pablo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-isgro",
+      "title": "Los Pumas · Rodrigo Isgró",
+      "url": "https://www.lospumas.com.ar/jugadores/isgro-rodrigo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-moroni",
+      "title": "Los Pumas · Matías Moroni",
+      "url": "https://www.lospumas.com.ar/jugadores/moroni-matias/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pau-montoya",
+      "title": "Section Paloise · Julián Montoya",
+      "url": "https://www.section-paloise.com/joueurs-de-la-section/julian-montoya",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "honda-matera",
+      "title": "Tochigi Honda Heat · Pablo Matera, plantilla 2026/27",
+      "url": "https://www.honda-heat.jp/member/2026/8764/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "jrl-matera-2025-26",
+      "title": "Japan Rugby League One · Mie Honda Heat 2025/26",
+      "url": "https://league-one.jp/en/team/105",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-de-la-fuente",
+      "title": "LNR · Jerónimo de la Fuente en Perpignan",
+      "url": "https://top14.lnr.fr/joueur/1958-jeronimo-de-la-fuente",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "eurosport-de-la-fuente",
+      "title": "Eurosport · Ficha biográfica de Jerónimo de la Fuente",
+      "url": "https://espanol.eurosport.com/rugby/jeronimo-de-la-fuente_prs390277/person.shtml",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "quins-isgro",
+      "title": "Harlequins · Rodrigo Isgró",
+      "url": "https://www.quins.co.uk/profile/rodrigo-isgro",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-delguy",
+      "title": "LNR · Bautista Delguy en Clermont",
+      "url": "https://top14.lnr.fr/joueur/712-bautista-delguy",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lequipe-delguy",
+      "title": "L’Équipe · Ficha biográfica de Bautista Delguy",
+      "url": "https://www.lequipe.fr/fiche/bautista-delguy/252525",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "bbc-moroni-bristol",
+      "title": "BBC Sport · Recontratación de Matías Moroni en Bristol Bears",
+      "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cq60qnp4ye7o",
+      "publishedAt": "2025-12-16",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "planet-prem-rosters",
+      "title": "Planet Rugby · Planteles de Premiership 2026/27",
+      "url": "https://www.planetrugby.com/news/prem-rugby-2026-27-squads-fixtures-venues-and-how-to-watch-confirmed",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "uar-cordero-pampas",
+      "title": "UAR · Debut de Santiago Cordero en Pampas",
+      "url": "https://uar.com.ar/enfrentamiento-inedito-en-san-isidro-con-un-debut-especial/",
+      "publishedAt": "2026-03-05",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "espn-cordero-regatas",
+      "title": "ESPN · Regreso de Santiago Cordero a Regatas Bella Vista",
+      "url": "https://www.espn.com.ve/rugby/nota/_/id/15544996/rugby-argentina-santiago-cordero-vuelta-regatas-bella-vista-cuba-fecha-16-urba-top-12-buenos-aires",
+      "publishedAt": "2025-08-16",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "uar-guide-2024",
+      "title": "UAR · Guía del partido Argentina–Francia",
+      "url": "https://uar.com.ar/wp-content/uploads/2024/programa_lospumas_vs_francia.pdf",
+      "publishedAt": "2024-07-06",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "espn-returns-2025",
+      "title": "ESPN · Regresos al rugby de clubes en 2025",
+      "url": "https://espndeportes.espn.com/rugby/nota/_/id/16052051/rugby-2025-retornos-jugadores-urba-interior-creevy-imhoff-sanchez-tuculet-urdapilleta",
+      "publishedAt": "2025-12-29",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "jrfu-birthdates",
+      "title": "Japan Rugby Football Union · Planilla Japón–Argentina",
+      "url": "https://en.rugby-japan.jp/2016/11/06/result-for-japan-v-argentina/?amp=1",
+      "publishedAt": "2016-11-06",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "arn-pumas-nov09-2026",
+      "title": "Americas Rugby News · Plantel argentino y clubes, 9 de noviembre de 2026",
+      "url": "https://www.americasrugbynews.com/2026/11/09/four-players-join-pumas-roster-to-prepare-for-italy-test-match/",
+      "publishedAt": "2026-11-09",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "oyonnax",
+      "title": "Oyonnax Rugby · Mayco Vivas",
+      "url": "https://oyonnaxrugby.com/player/vivas-mayco",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "quins-2627",
+      "title": "Harlequins · Plantel oficial 2026/27",
+      "url": "https://www.quins.co.uk/article/mens-squad-confirmed-ahead-of-2026-27-season?dm_i=1FOI%2C9AVKG%2CW6FFJ%2C133F35%2C1%2C0%2C0%2C0",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "benetton-camp",
+      "title": "Benetton Rugby · Plantel profesional 2026/27",
+      "url": "https://benettonrugby.it/i-leoni-pronti-al-ritiro-di-calalzo-di-cadore/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "benetton-matias",
+      "title": "Benetton Rugby · Incorporación de Matías Medrano",
+      "url": "https://benettonrugby.it/matias-medrano-si-unira-alla-corte-dei-leoni/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "benetton-nov09",
+      "title": "Benetton Rugby · Convocatoria de Bernasconi y Medrano",
+      "url": "https://benettonrugby.it/bernasconi-e-medrano-convocati-dai-pumas/",
+      "publishedAt": "2026-11-09",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "bayonne",
+      "title": "LNR · Plantel de Aviron Bayonnais 2026/27",
+      "url": "https://top14.lnr.fr/club/bayonne/effectif-staff",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "uar-rumania-2021",
+      "title": "UAR · Guía Rumania–Argentina 2021, biografías",
+      "url": "https://uar.com.ar/wp-content/uploads/2021/07/programa_vs_rumania.pdf",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "force-leonel",
+      "title": "Western Force · Leonel Oviedo",
+      "url": "https://westernforce.rugby/players/leonel-oviedo/2799",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "force-moyano",
+      "title": "Western Force · Agustín Moyano",
+      "url": "https://westernforce.rugby/players/agustin-moyano/2737",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "force-2027",
+      "title": "Rugby Australia · Plantel de Western Force 2027",
+      "url": "https://www.rugby.com.au/news/force-squad-2027-super-rugby-season-20261028",
+      "publishedAt": "2026-10-28",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "force-medrano",
+      "title": "Western Force · Ficha histórica de Santiago Medrano",
+      "url": "https://westernforce.rugby/players/santiago-medrano/976",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lyon-j8",
+      "title": "LNR · Planilla oficial LOU Rugby–RC Vannes, 2026/27",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j8/11871-lyon-vannes/compositions",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lyon-gallo",
+      "title": "LOU Rugby · Thomas Gallo",
+      "url": "https://m.lourugby.fr/equipe/thomas-gallo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "toulouse-2627",
+      "title": "La Dépêche · Argentinos en Toulouse en octubre de 2026",
+      "url": "https://www.ladepeche.fr/2026/10/10/stade-toulousain-le-papa-cest-juanchi-moi-je-suis-un-peu-le-tonton-santiago-chocobares-raconte-comment-il-encadre-avec-juan-cruz-mallia-les-jeunes-13593004.php",
+      "publishedAt": "2026-10-10",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "highlanders",
+      "title": "Highlanders · Tomás Lavanini",
+      "url": "https://thehighlanders.co.nz/our-teams/highlanders-super-rugby/tomas-lavanini/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "saracens-gonzalez",
+      "title": "Saracens · Juan Martín González",
+      "url": "https://saracens.com/squads/juan-martin-gonzalez/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "saracens-cinti",
+      "title": "Saracens · Lucio Cinti",
+      "url": "https://saracens.com/squads/lucio-cinti/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "prem-leicester",
+      "title": "Premiership Rugby · Plantel Leicester Tigers",
+      "url": "https://www.premrugby.com/clubs/leicester-tigers/squad",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pau-2627",
+      "title": "LNR · Plantel Section Paloise 2026/27",
+      "url": "https://top14.lnr.fr/club/pau/effectif-staff",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-clermont",
+      "title": "LNR · Planilla oficial Vannes–Clermont",
+      "url": "https://top14.lnr.fr/feuille-de-match/2026-2027/j7/11862-vannes-clermont/compositions",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-scelzo",
+      "title": "LNR · Juan Martín Scelzo",
+      "url": "https://top14.lnr.fr/joueur/1752-juan-martin-scelzo",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "scelzo-dob",
+      "title": "L’Équipe · Ficha biográfica de Juan Martín Scelzo",
+      "url": "https://www.lequipe.fr/fiche/juan-martin-scelzo/249649",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "racing-prisciantelli",
+      "title": "Racing 92 · Gerónimo Prisciantelli en la convocatoria de octubre",
+      "url": "https://www.racing92.fr/article/geronimo-prisciantelli-appele-par-les-pumas-pour-preparer-novembre/66490/",
+      "publishedAt": "2026-10-22",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-toulon",
+      "title": "LNR · Plantel RC Toulon",
+      "url": "https://top14.lnr.fr/club/toulon/effectif-staff",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "mhr-piccardo",
+      "title": "Montpellier Hérault Rugby · Justo Piccardo",
+      "url": "https://www.montpellier-rugby.com/equipes/equipe-pro/joueurs/justo-piccardo",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "zebre-wade",
+      "title": "Zebre Parma · Anuncio y biografía de Tobías Wade",
+      "url": "https://www.zebreparma.it/it-it/tobias-wade-e-un-nuovo-giocatore-delle-zebre-parma.aspx",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "bath-carreras",
+      "title": "Bath Rugby · Santiago Carreras",
+      "url": "https://www.bathrugby.com/teams/men/player/santi-carreras",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-ignacio-ruiz",
+      "title": "LNR · Ignacio Ruiz",
+      "url": "https://top14.lnr.fr/joueur/11989-ignacio-ruiz",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-joaquin-oviedo",
+      "title": "LNR · Joaquín Oviedo",
+      "url": "https://top14.lnr.fr/joueur/1955-joaquin-oviedo",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pau-grondona",
+      "title": "Entre Palos Rugby · Fichajes de García y Grondona por Pau",
+      "url": "https://entrepalosrugby.com.ar/destino-francia/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "statbunker-grondona",
+      "title": "Statbunker · Fecha de nacimiento de Benjamín Grondona",
+      "url": "https://rugby.statbunker.com/competitions/YoungestAppearances?club_id=10&comp_id=769",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "jockey-wenger",
+      "title": "Puntal Villa María · Boris Wenger, nacido en Villa María",
+      "url": "https://www.puntalvillamaria.com.ar/rugby/boris-wenger-fue-presentado-el-harlequins-ingles-n241655",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "moreno-newcastle",
+      "title": "Ultimate Rugby · Incorporación de Francisco Moreno a Newcastle",
+      "url": "https://www.ultimaterugby.com/app/public/index.php/news/argentina-prop-francisco-moreno-joins-newcastle-red-bulls/666604",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-mayco-vivas",
+      "title": "Los Pumas · Mayco Vivas",
+      "url": "https://www.lospumas.com.ar/jugadores/vivas-mayco/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-bautista-bernasconi",
+      "title": "Los Pumas · Bautista Bernasconi",
+      "url": "https://www.lospumas.com.ar/jugadores/bernasconi-bautista/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-leonel-oviedo",
+      "title": "Los Pumas · Leonel Oviedo",
+      "url": "https://www.lospumas.com.ar/jugadores/oviedo-leonel/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-francisco-moreno",
+      "title": "Los Pumas · Francisco Moreno",
+      "url": "https://www.lospumas.com.ar/jugadores/moreno-francisco/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-tomas-rapetti",
+      "title": "Los Pumas · Tomás Rapetti",
+      "url": "https://www.lospumas.com.ar/jugadores/rapetti-tomas/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-joel-sclavi",
+      "title": "Los Pumas · Joel Sclavi",
+      "url": "https://www.lospumas.com.ar/jugadores/sclavi-joel/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-efrain-elias",
+      "title": "Los Pumas · Efraín Elías",
+      "url": "https://www.lospumas.com.ar/jugadores/elias-efrain/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-guido-petti",
+      "title": "Los Pumas · Guido Petti",
+      "url": "https://www.lospumas.com.ar/jugadores/petti-guido/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-tomas-lavanini",
+      "title": "Los Pumas · Tomás Lavanini",
+      "url": "https://www.lospumas.com.ar/jugadores/lavanini-tomas/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-pedro-rubiolo",
+      "title": "Los Pumas · Pedro Rubiolo",
+      "url": "https://www.lospumas.com.ar/jugadores/rubiolo-pedro/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-juan-martin-gonzalez",
+      "title": "Los Pumas · Juan Martín González",
+      "url": "https://www.lospumas.com.ar/jugadores/gonzalez-juan-martin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-marcos-kremer",
+      "title": "Los Pumas · Marcos Kremer",
+      "url": "https://www.lospumas.com.ar/jugadores/kremer-marcos/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-facundo-isa",
+      "title": "Los Pumas · Facundo Isa",
+      "url": "https://www.lospumas.com.ar/jugadores/isa-facundo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-joaquin-moro",
+      "title": "Los Pumas · Joaquín Moro",
+      "url": "https://www.lospumas.com.ar/jugadores/moro-joaquin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-juan-martin-scelzo",
+      "title": "Los Pumas · Juan Martín Scelzo",
+      "url": "https://www.lospumas.com.ar/jugadores/scelzo-juan-martin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-simon-benitez-cruz",
+      "title": "Los Pumas · Simón Benítez Cruz",
+      "url": "https://www.lospumas.com.ar/jugadores/benitez-cruz-simon/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-gonzalo-garcia",
+      "title": "Los Pumas · Gonzalo García",
+      "url": "https://www.lospumas.com.ar/jugadores/garcia-gonzalo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-agustin-moyano",
+      "title": "Los Pumas · Agustín Moyano",
+      "url": "https://www.lospumas.com.ar/jugadores/moyano-agustin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-tomas-albornoz",
+      "title": "Los Pumas · Tomás Albornoz",
+      "url": "https://www.lospumas.com.ar/jugadores/albornoz-tomas/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-geronimo-prisciantelli",
+      "title": "Los Pumas · Gerónimo Prisciantelli",
+      "url": "https://www.lospumas.com.ar/jugadores/prisciantelli-geronimo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-santiago-chocobares",
+      "title": "Los Pumas · Santiago Chocobares",
+      "url": "https://www.lospumas.com.ar/jugadores/chocobares-santiago/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-lucio-cinti",
+      "title": "Los Pumas · Lucio Cinti",
+      "url": "https://www.lospumas.com.ar/jugadores/cinti-lucio/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-justo-piccardo",
+      "title": "Los Pumas · Justo Piccardo",
+      "url": "https://www.lospumas.com.ar/jugadores/piccardo-justo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-mateo-carreras",
+      "title": "Los Pumas · Mateo Carreras",
+      "url": "https://www.lospumas.com.ar/jugadores/carreras-mateo/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-ignacio-mendy",
+      "title": "Los Pumas · Ignacio Mendy",
+      "url": "https://www.lospumas.com.ar/jugadores/mendy-ignacio/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-thomas-gallo",
+      "title": "Los Pumas · Thomas Gallo",
+      "url": "https://www.lospumas.com.ar/jugadores/gallo-thomas/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-benjamin-elizalde",
+      "title": "Los Pumas · Benjamín Elizalde",
+      "url": "https://www.lospumas.com.ar/jugadores/elizalde-benjamin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-ignacio-ruiz",
+      "title": "Los Pumas · Ignacio Ruiz",
+      "url": "https://www.lospumas.com.ar/jugadores/ruiz-ignacio/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-santiago-grondona",
+      "title": "Los Pumas · Santiago Grondona",
+      "url": "https://www.lospumas.com.ar/jugadores/grondona-santiago/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-benjamin-grondona",
+      "title": "Los Pumas · Benjamín Grondona",
+      "url": "https://www.lospumas.com.ar/jugadores/grondona-benjamin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-franco-molina",
+      "title": "Los Pumas · Franco Molina",
+      "url": "https://www.lospumas.com.ar/jugadores/molina-franco/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "prem-newcastle-2627",
+      "title": "Premiership Rugby · Plantel de Newcastle Red Bulls",
+      "url": "https://www.premrugby.com/clubs/newcastle-redbulls/squad",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lnr-toulouse-2627",
+      "title": "LNR · Plantel Stade Toulousain 2026/27",
+      "url": "https://top14.lnr.fr/club/toulouse/effectif-staff",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pau-recruit-2627",
+      "title": "Section Paloise · Incorporaciones de García y Grondona para 2026/27",
+      "url": "https://www.section-paloise.com/actualites/saison-2026-2027-les-informations-recrutement-organisation-sportive-calendrier",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pau-grondona-profile",
+      "title": "Section Paloise · Ficha de Santiago Grondona",
+      "url": "https://www.section-paloise.com/joueurs-de-la-section/santiago-grondona",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "tnt-bristol-oct30",
+      "title": "TNT Sports · Planilla Bristol–Leicester, 30 de octubre de 2026",
+      "url": "https://www.tntsports.co.uk/rugby/prem/2026-2027/team-news-freddie-steward-bristol-bears-leicester-tigers_sto23350557/story.shtml",
+      "publishedAt": "2026-10-30",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-joaquin-oviedo",
+      "title": "Los Pumas · Joaquín Oviedo",
+      "url": "https://www.lospumas.com.ar/jugadores/oviedo-joaquin/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pumas-pedro-delgado",
+      "title": "Los Pumas · Pedro Delgado",
+      "url": "https://www.lospumas.com.ar/jugadores/delgado-pedro/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10"
+    }
+  ],
+  "players": [
+    {
+      "id": "julian-montoya",
+      "name": "Julián Montoya",
+      "birthDate": "1993-10-29",
+      "position": "Hooker",
+      "originClubId": "newman",
+      "originClub": "Club Newman",
+      "currentClub": "Section Paloise",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-montoya",
+        "pau-montoya"
+      ],
+      "birthDateSourceIds": [
+        "pumas-montoya",
+        "pau-montoya"
+      ],
+      "birthDateVerifiedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "pau-montoya"
+      ],
+      "currentClubEvidenceDate": "2026-11-10"
+    },
+    {
+      "id": "pablo-matera",
+      "name": "Pablo Matera",
+      "birthDate": "1993-07-18",
+      "position": "Tercera línea",
+      "originClubId": "alumni",
+      "originClub": "Asociación Alumni",
+      "currentClub": "Honda Heat",
+      "currentCountry": "Japón",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-matera",
+        "jrl-matera-2025-26",
+        "honda-matera"
+      ],
+      "birthDateSourceIds": [
+        "pumas-matera",
+        "jrl-matera-2025-26"
+      ],
+      "birthDateVerifiedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "honda-matera"
+      ],
+      "currentClubEvidenceDate": "2026-11-10"
+    },
+    {
+      "id": "jeronimo-de-la-fuente",
+      "name": "Jerónimo de la Fuente",
+      "birthDate": "1991-02-24",
+      "position": "Centro",
+      "originClubId": "duendes",
+      "originClub": "Duendes RC",
+      "currentClub": "USA Perpignan",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-archive",
+        "lnr-de-la-fuente",
+        "eurosport-de-la-fuente"
+      ],
+      "birthDateSourceIds": [
+        "eurosport-de-la-fuente"
+      ],
+      "birthDateVerifiedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-de-la-fuente"
+      ],
+      "currentClubEvidenceDate": "2026-11-10"
+    },
+    {
+      "id": "rodrigo-isgro",
+      "name": "Rodrigo Isgró",
+      "birthDate": "1999-03-24",
+      "position": "Wing",
+      "originClubId": "mendoza-rc",
+      "originClub": "Mendoza RC",
+      "currentClub": "Harlequins",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-isgro",
+        "quins-isgro"
+      ],
+      "birthDateSourceIds": [
+        "pumas-isgro",
+        "quins-isgro"
+      ],
+      "birthDateVerifiedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "quins-isgro"
+      ],
+      "currentClubEvidenceDate": "2026-11-10"
+    },
+    {
+      "id": "bautista-delguy",
+      "name": "Bautista Delguy",
+      "birthDate": "1997-04-22",
+      "position": "Wing",
+      "originClubId": "pucara",
+      "originClub": "Pucará",
+      "currentClub": "ASM Clermont Auvergne",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-archive",
+        "lnr-delguy",
+        "lequipe-delguy"
+      ],
+      "birthDateSourceIds": [
+        "lequipe-delguy"
+      ],
+      "birthDateVerifiedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-delguy"
+      ],
+      "currentClubEvidenceDate": "2026-11-10"
+    },
+    {
+      "id": "matias-moroni",
+      "name": "Matías Moroni",
+      "birthDate": "1991-03-29",
+      "position": "Centro",
+      "originClubId": "cuba",
+      "originClub": "CUBA",
+      "currentClub": "Bristol Bears",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-moroni",
+        "bbc-moroni-bristol",
+        "planet-prem-rosters",
+        "tnt-bristol-oct30"
+      ],
+      "currentClubSourceIds": [
+        "tnt-bristol-oct30"
+      ],
+      "currentClubEvidenceDate": "2026-10-30",
+      "birthDateSourceIds": [
+        "pumas-moroni"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "santiago-cordero",
+      "name": "Santiago Cordero",
+      "birthDate": "1993-12-06",
+      "position": "Wing",
+      "originClubId": "regatas-bella-vista",
+      "originClub": "Regatas Bella Vista",
+      "currentClub": "Regatas Bella Vista / Pampas",
+      "currentCountry": "Argentina",
+      "status": "returned",
+      "eligibleForGameMarket": false,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "uar-guide-2024",
+        "uar-cordero-pampas",
+        "espn-cordero-regatas"
+      ],
+      "returnedDate": "2025-08-16",
+      "birthDateSourceIds": [
+        "uar-guide-2024"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "agustin-creevy",
+      "name": "Agustín Creevy",
+      "birthDate": "1985-03-15",
+      "position": "Hooker",
+      "originClubId": "san-luis",
+      "originClub": "San Luis",
+      "currentClub": null,
+      "currentCountry": null,
+      "status": "retired",
+      "eligibleForGameMarket": false,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "pumas-archive",
+        "espn-returns-2025",
+        "jrfu-birthdates"
+      ],
+      "returnedDate": "2025-08-16",
+      "birthDateSourceIds": [
+        "jrfu-birthdates"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "nicolas-sanchez",
+      "name": "Nicolás Sánchez",
+      "birthDate": "1988-10-26",
+      "position": "Apertura",
+      "originClubId": null,
+      "originClub": "Tucumán Lawn Tennis",
+      "currentClub": null,
+      "currentCountry": null,
+      "status": "historical",
+      "eligibleForGameMarket": false,
+      "observedAt": "2026-11-10",
+      "sourceIds": [
+        "espn-returns-2025",
+        "jrfu-birthdates"
+      ],
+      "returnedDate": "2025-10-25",
+      "birthDateSourceIds": [
+        "jrfu-birthdates"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "mayco-vivas",
+      "name": "Mayco Vivas",
+      "birthDate": "1998-06-02",
+      "birthDateSourceIds": [
+        "pumas-mayco-vivas"
+      ],
+      "position": "Pilar izquierdo",
+      "originClubId": null,
+      "originClub": "Círculo Rafaelino de Rugby",
+      "currentClub": "Oyonnax Rugby",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "oyonnax"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-mayco-vivas",
+        "oyonnax",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "boris-wenger",
+      "name": "Boris Wenger",
+      "birthDate": "2002-07-01",
+      "birthDateSourceIds": [
+        "jockey-wenger"
+      ],
+      "position": "Pilar izquierdo",
+      "originClubId": null,
+      "originClub": "Jockey Club de Villa María",
+      "currentClub": "Harlequins",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "quins-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "quins-2627",
+        "jockey-wenger",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "bautista-bernasconi",
+      "name": "Bautista Bernasconi",
+      "birthDate": "2001-09-14",
+      "birthDateSourceIds": [
+        "pumas-bautista-bernasconi"
+      ],
+      "position": "Hooker",
+      "originClubId": "casi",
+      "originClub": "CASI",
+      "currentClub": "Benetton Rugby",
+      "currentCountry": "Italia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "benetton-nov09"
+      ],
+      "currentClubEvidenceDate": "2026-11-09",
+      "sourceIds": [
+        "pumas-bautista-bernasconi",
+        "benetton-nov09",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "facundo-bosch",
+      "name": "Facundo Bosch",
+      "birthDate": "1991-08-08",
+      "birthDateSourceIds": [
+        "uar-rumania-2021"
+      ],
+      "position": "Hooker",
+      "originClubId": "cuba",
+      "originClub": "CUBA",
+      "currentClub": "Aviron Bayonnais",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "bayonne"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "bayonne",
+        "uar-rumania-2021",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "leonel-oviedo",
+      "name": "Leonel Oviedo",
+      "birthDate": "1998-02-16",
+      "birthDateSourceIds": [
+        "force-leonel"
+      ],
+      "position": "Hooker",
+      "originClubId": "cordoba-athletic",
+      "originClub": "Córdoba Athletic Club",
+      "currentClub": "Western Force",
+      "currentCountry": "Australia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "force-leonel"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-leonel-oviedo",
+        "force-leonel",
+        "force-2027",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "francisco-moreno",
+      "name": "Francisco Moreno",
+      "birthDate": "2002-01-31",
+      "birthDateSourceIds": [
+        "moreno-newcastle"
+      ],
+      "position": "Pilar derecho",
+      "originClubId": null,
+      "originClub": "Universitario de Tucumán",
+      "currentClub": "Newcastle Red Bulls",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "prem-newcastle-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-francisco-moreno",
+        "moreno-newcastle",
+        "arn-pumas-nov09-2026",
+        "prem-newcastle-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "tomas-rapetti",
+      "name": "Tomás Rapetti",
+      "birthDate": "2005-03-04",
+      "birthDateSourceIds": [
+        "pumas-tomas-rapetti"
+      ],
+      "position": "Pilar derecho",
+      "originClubId": "alumni",
+      "originClub": "Asociación Alumni",
+      "currentClub": "Stade Toulousain",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-toulouse-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-tomas-rapetti",
+        "toulouse-2627",
+        "arn-pumas-nov09-2026",
+        "lnr-toulouse-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "joel-sclavi",
+      "name": "Joel Sclavi",
+      "birthDate": "1994-06-25",
+      "birthDateSourceIds": [
+        "pumas-joel-sclavi"
+      ],
+      "position": "Pilar derecho",
+      "originClubId": null,
+      "originClub": "Pueyrredón RC (Mar del Plata)",
+      "currentClub": "Leicester Tigers",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "prem-leicester"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-joel-sclavi",
+        "prem-leicester",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "efrain-elias",
+      "name": "Efraín Elías",
+      "birthDate": "2004-04-30",
+      "birthDateSourceIds": [
+        "pumas-efrain-elias"
+      ],
+      "position": "Segunda línea",
+      "originClubId": "jockey-cordoba",
+      "originClub": "Jockey Club de Córdoba",
+      "currentClub": "Stade Toulousain",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-toulouse-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-efrain-elias",
+        "toulouse-2627",
+        "arn-pumas-nov09-2026",
+        "lnr-toulouse-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "guido-petti",
+      "name": "Guido Petti",
+      "birthDate": "1994-11-17",
+      "birthDateSourceIds": [
+        "pumas-guido-petti"
+      ],
+      "position": "Segunda línea",
+      "originClubId": "sic",
+      "originClub": "San Isidro Club",
+      "currentClub": "Harlequins",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "quins-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-guido-petti",
+        "quins-2627",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "tomas-lavanini",
+      "name": "Tomás Lavanini",
+      "birthDate": "1993-01-22",
+      "birthDateSourceIds": [
+        "pumas-tomas-lavanini"
+      ],
+      "position": "Segunda línea",
+      "originClubId": "hindu",
+      "originClub": "Hindú Club",
+      "currentClub": "Highlanders",
+      "currentCountry": "Nueva Zelanda",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "highlanders"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-tomas-lavanini",
+        "highlanders",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pedro-rubiolo",
+      "name": "Pedro Rubiolo",
+      "birthDate": "2002-12-12",
+      "birthDateSourceIds": [
+        "pumas-pedro-rubiolo"
+      ],
+      "position": "Segunda línea",
+      "originClubId": "duendes",
+      "originClub": "Círculo Rafaelino de Rugby / Duendes RC",
+      "currentClub": "Bristol Bears",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "tnt-bristol-oct30"
+      ],
+      "currentClubEvidenceDate": "2026-10-30",
+      "sourceIds": [
+        "pumas-pedro-rubiolo",
+        "planet-prem-rosters",
+        "arn-pumas-nov09-2026",
+        "tnt-bristol-oct30"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "juan-martin-gonzalez",
+      "name": "Juan Martín González",
+      "birthDate": "2000-11-14",
+      "birthDateSourceIds": [
+        "pumas-juan-martin-gonzalez",
+        "saracens-gonzalez"
+      ],
+      "position": "Tercera línea",
+      "originClubId": "marista",
+      "originClub": "Marista RC",
+      "currentClub": "Saracens",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "saracens-gonzalez"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-juan-martin-gonzalez",
+        "saracens-gonzalez",
+        "uar-rumania-2021",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateNote": "La ficha actual de Los Pumas y Saracens coinciden en el 14. Una guía UAR de 2021 consignaba el 11.",
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "marcos-kremer",
+      "name": "Marcos Kremer",
+      "birthDate": "1997-07-30",
+      "birthDateSourceIds": [
+        "pumas-marcos-kremer"
+      ],
+      "position": "Tercera línea",
+      "originClubId": null,
+      "originClub": "Club Salto Grande / Los Espinillos de Concordia",
+      "currentClub": "ASM Clermont Auvergne",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-clermont"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-marcos-kremer",
+        "lnr-clermont",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "facundo-isa",
+      "name": "Facundo Isa",
+      "birthDate": "1993-09-21",
+      "birthDateSourceIds": [
+        "pumas-facundo-isa"
+      ],
+      "position": "Octavo",
+      "originClubId": null,
+      "originClub": "Santiago Lawn Tennis Club",
+      "currentClub": "Section Paloise",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "pau-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-facundo-isa",
+        "pau-2627",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "joaquin-moro",
+      "name": "Joaquín Moro",
+      "birthDate": "2001-01-24",
+      "birthDateSourceIds": [
+        "pumas-joaquin-moro"
+      ],
+      "position": "Octavo",
+      "originClubId": null,
+      "originClub": "Argentino de Bahía Blanca",
+      "currentClub": "Leicester Tigers",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "prem-leicester"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-joaquin-moro",
+        "prem-leicester",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "juan-martin-scelzo",
+      "name": "Juan Martín Scelzo",
+      "birthDate": "2002-02-12",
+      "birthDateSourceIds": [
+        "scelzo-dob"
+      ],
+      "position": "Tercera línea",
+      "originClubId": null,
+      "originClub": "Saint-Genès-Champanelle / Del Sur",
+      "currentClub": "Stade Français Paris",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-scelzo"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-juan-martin-scelzo",
+        "lnr-scelzo",
+        "scelzo-dob",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "simon-benitez-cruz",
+      "name": "Simón Benítez Cruz",
+      "birthDate": "1999-09-06",
+      "birthDateSourceIds": [
+        "pumas-simon-benitez-cruz"
+      ],
+      "position": "Medio scrum",
+      "originClubId": "cuba",
+      "originClub": "CUBA",
+      "currentClub": "Newcastle Red Bulls",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "prem-newcastle-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-simon-benitez-cruz",
+        "planet-prem-rosters",
+        "arn-pumas-nov09-2026",
+        "prem-newcastle-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "gonzalo-garcia",
+      "name": "Gonzalo García",
+      "birthDate": "1999-03-05",
+      "birthDateSourceIds": [
+        "pumas-gonzalo-garcia"
+      ],
+      "position": "Medio scrum",
+      "originClubId": null,
+      "originClub": "Natación y Gimnasia (Tucumán)",
+      "currentClub": "Section Paloise",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "pau-recruit-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-gonzalo-garcia",
+        "pau-2627",
+        "arn-pumas-nov09-2026",
+        "pau-recruit-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "agustin-moyano",
+      "name": "Agustín Moyano",
+      "birthDate": "2003-06-12",
+      "birthDateSourceIds": [
+        "pumas-agustin-moyano"
+      ],
+      "position": "Medio scrum",
+      "originClubId": "cordoba-athletic",
+      "originClub": "Córdoba Athletic",
+      "currentClub": "Western Force",
+      "currentCountry": "Australia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "force-moyano"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-agustin-moyano",
+        "force-moyano",
+        "force-2027",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "tomas-albornoz",
+      "name": "Tomás Albornoz",
+      "birthDate": "1997-09-17",
+      "birthDateSourceIds": [
+        "pumas-tomas-albornoz"
+      ],
+      "position": "Apertura",
+      "originClubId": "tucuman-rugby",
+      "originClub": "Tucumán Rugby",
+      "currentClub": "RC Toulon",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-toulon"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-tomas-albornoz",
+        "lnr-toulon",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "geronimo-prisciantelli",
+      "name": "Gerónimo Prisciantelli",
+      "birthDate": "1999-08-23",
+      "birthDateSourceIds": [
+        "pumas-geronimo-prisciantelli"
+      ],
+      "position": "Apertura",
+      "originClubId": "casi",
+      "originClub": "CASI",
+      "currentClub": "Racing 92",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "racing-prisciantelli"
+      ],
+      "currentClubEvidenceDate": "2026-10-22",
+      "sourceIds": [
+        "pumas-geronimo-prisciantelli",
+        "racing-prisciantelli",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "santiago-chocobares",
+      "name": "Santiago Chocobares",
+      "birthDate": "1999-03-31",
+      "birthDateSourceIds": [
+        "pumas-santiago-chocobares"
+      ],
+      "position": "Centro",
+      "originClubId": "duendes",
+      "originClub": "Pampas de Rufino / Duendes RC",
+      "currentClub": "Stade Toulousain",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-toulouse-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-santiago-chocobares",
+        "toulouse-2627",
+        "arn-pumas-nov09-2026",
+        "lnr-toulouse-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "lucio-cinti",
+      "name": "Lucio Cinti",
+      "birthDate": "2000-03-23",
+      "birthDateSourceIds": [
+        "pumas-lucio-cinti"
+      ],
+      "position": "Centro",
+      "originClubId": "la-plata",
+      "originClub": "La Plata Rugby Club",
+      "currentClub": "Saracens",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "saracens-cinti"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-lucio-cinti",
+        "saracens-cinti",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "justo-piccardo",
+      "name": "Justo Piccardo",
+      "birthDate": "2002-03-25",
+      "birthDateSourceIds": [
+        "pumas-justo-piccardo"
+      ],
+      "position": "Centro",
+      "originClubId": "sic",
+      "originClub": "SIC",
+      "currentClub": "Montpellier Hérault Rugby",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "mhr-piccardo"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-justo-piccardo",
+        "mhr-piccardo",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "mateo-carreras",
+      "name": "Mateo Carreras",
+      "birthDate": "1999-12-17",
+      "birthDateSourceIds": [
+        "pumas-mateo-carreras"
+      ],
+      "position": "Wing",
+      "originClubId": null,
+      "originClub": "Los Tarcos RC",
+      "currentClub": "Aviron Bayonnais",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "bayonne"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-mateo-carreras",
+        "bayonne",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "ignacio-mendy",
+      "name": "Ignacio Mendy",
+      "birthDate": "2000-06-29",
+      "birthDateSourceIds": [
+        "pumas-ignacio-mendy"
+      ],
+      "position": "Wing",
+      "originClubId": "los-tilos",
+      "originClub": "Los Tilos (La Plata)",
+      "currentClub": "Benetton Rugby",
+      "currentCountry": "Italia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "benetton-camp"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-ignacio-mendy",
+        "benetton-camp",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "juan-cruz-mallia",
+      "name": "Juan Cruz Mallía",
+      "birthDate": "1996-09-11",
+      "birthDateSourceIds": [
+        "uar-rumania-2021"
+      ],
+      "position": "Fullback",
+      "originClubId": "jockey-cordoba",
+      "originClub": "Jockey Club de Córdoba",
+      "currentClub": "Stade Toulousain",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-toulouse-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "toulouse-2627",
+        "uar-rumania-2021",
+        "lnr-toulouse-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "santiago-carreras",
+      "name": "Santiago Carreras",
+      "birthDate": "1998-03-30",
+      "birthDateSourceIds": [
+        "uar-rumania-2021"
+      ],
+      "position": "Fullback",
+      "originClubId": "cordoba-athletic",
+      "originClub": "Córdoba Athletic",
+      "currentClub": "Bath Rugby",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "bath-carreras"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "bath-carreras",
+        "uar-rumania-2021"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "thomas-gallo",
+      "name": "Thomas Gallo",
+      "birthDate": "1999-04-30",
+      "birthDateSourceIds": [
+        "pumas-thomas-gallo"
+      ],
+      "position": "Pilar izquierdo",
+      "originClubId": null,
+      "originClub": "Universitario de Tucumán",
+      "currentClub": "LOU Rugby",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lyon-gallo"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-thomas-gallo",
+        "lyon-gallo"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "benjamin-elizalde",
+      "name": "Benjamín Elizalde",
+      "birthDate": "2004-06-14",
+      "birthDateSourceIds": [
+        "pumas-benjamin-elizalde"
+      ],
+      "position": "Fullback",
+      "originClubId": null,
+      "originClub": "Tigres RC",
+      "currentClub": "Newcastle Red Bulls",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "prem-newcastle-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-benjamin-elizalde",
+        "planet-prem-rosters",
+        "prem-newcastle-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "ignacio-ruiz",
+      "name": "Ignacio Ruiz",
+      "birthDate": "2001-01-03",
+      "birthDateSourceIds": [
+        "pumas-ignacio-ruiz"
+      ],
+      "position": "Hooker",
+      "originClubId": "regatas-bella-vista",
+      "originClub": "Regatas Bella Vista",
+      "currentClub": "USA Perpignan",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-ignacio-ruiz"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-ignacio-ruiz",
+        "lnr-ignacio-ruiz"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "santiago-grondona",
+      "name": "Santiago Grondona",
+      "birthDate": "1998-07-25",
+      "birthDateSourceIds": [
+        "pumas-santiago-grondona",
+        "pau-grondona-profile"
+      ],
+      "position": "Tercera línea",
+      "originClubId": "champagnat",
+      "originClub": "Champagnat",
+      "currentClub": "Section Paloise",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "pau-recruit-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-santiago-grondona",
+        "pau-2627",
+        "pau-grondona",
+        "pau-recruit-2627",
+        "pau-grondona-profile"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "benjamin-grondona",
+      "name": "Benjamín Grondona",
+      "birthDate": "2003-10-19",
+      "birthDateSourceIds": [
+        "statbunker-grondona"
+      ],
+      "position": "Tercera línea",
+      "originClubId": "champagnat",
+      "originClub": "Champagnat",
+      "currentClub": "Bristol Bears",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "planet-prem-rosters"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-benjamin-grondona",
+        "planet-prem-rosters",
+        "statbunker-grondona"
+      ],
+      "birthDateNote": "Se usa el registro deportivo de Premiership. La ficha de Los Pumas muestra otro año.",
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "matias-medrano",
+      "name": "Matías Medrano",
+      "birthDate": "2003-12-19",
+      "birthDateSourceIds": [
+        "benetton-matias"
+      ],
+      "position": "Pilar izquierdo",
+      "originClubId": "regatas-bella-vista",
+      "originClub": "Regatas Bella Vista",
+      "currentClub": "Benetton Rugby",
+      "currentCountry": "Italia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "benetton-nov09"
+      ],
+      "currentClubEvidenceDate": "2026-11-09",
+      "sourceIds": [
+        "benetton-nov09",
+        "benetton-matias",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "tobias-wade",
+      "name": "Tobías Wade",
+      "birthDate": "1999-08-06",
+      "birthDateSourceIds": [
+        "zebre-wade"
+      ],
+      "position": "Fullback",
+      "originClubId": "alumni",
+      "originClub": "Asociación Alumni",
+      "currentClub": "Zebre Parma",
+      "currentCountry": "Italia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "zebre-wade"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "zebre-wade",
+        "arn-pumas-nov09-2026"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "santiago-medrano",
+      "name": "Santiago Medrano",
+      "birthDate": "1996-05-06",
+      "birthDateSourceIds": [
+        "force-medrano"
+      ],
+      "position": "Pilar derecho",
+      "originClubId": "regatas-bella-vista",
+      "originClub": "Regatas Bella Vista",
+      "currentClub": "LOU Rugby",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lyon-j8"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "lyon-j8",
+        "force-medrano"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "franco-molina",
+      "name": "Franco Molina",
+      "birthDate": "1997-08-28",
+      "birthDateSourceIds": [
+        "pumas-franco-molina"
+      ],
+      "position": "Segunda línea",
+      "originClubId": "jockey-cordoba",
+      "originClub": "Jockey Club de Córdoba",
+      "currentClub": "Newcastle Red Bulls",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "prem-newcastle-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-franco-molina",
+        "prem-newcastle-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "joaquin-oviedo",
+      "name": "Joaquín Oviedo",
+      "birthDate": "2001-07-16",
+      "birthDateSourceIds": [
+        "pumas-joaquin-oviedo"
+      ],
+      "position": "Octavo",
+      "originClubId": "cordoba-athletic",
+      "originClub": "Córdoba Athletic",
+      "currentClub": "USA Perpignan",
+      "currentCountry": "Francia",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "lnr-joaquin-oviedo"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-joaquin-oviedo",
+        "lnr-joaquin-oviedo"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    },
+    {
+      "id": "pedro-delgado",
+      "name": "Pedro Delgado",
+      "birthDate": "1997-09-01",
+      "birthDateSourceIds": [
+        "pumas-pedro-delgado"
+      ],
+      "position": "Pilar derecho",
+      "originClubId": null,
+      "originClub": "Old Lions (Santiago del Estero)",
+      "currentClub": "Harlequins",
+      "currentCountry": "Inglaterra",
+      "status": "exterior",
+      "eligibleForGameMarket": true,
+      "observedAt": "2026-11-10",
+      "currentClubSourceIds": [
+        "quins-2627"
+      ],
+      "currentClubEvidenceDate": "2026-11-10",
+      "sourceIds": [
+        "pumas-pedro-delgado",
+        "quins-2627"
+      ],
+      "birthDateVerifiedAt": "2026-11-10"
+    }
+  ]
+}

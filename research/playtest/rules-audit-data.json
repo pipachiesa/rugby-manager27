@@ -1,0 +1,8499 @@
+[
+ {
+  "seed": 101,
+  "managed": [
+   "regatas-bella-vista",
+   "lomas-athletic",
+   "delta"
+  ],
+  "seasons": [
+   {
+    "season": 2026,
+    "sizes": {
+     "start": 3.39,
+     "mid": 6.64,
+     "afterRegular": 9.63,
+     "end": 9.76,
+     "parts": {
+      "clubs": 3.69,
+      "fixtures": 5.19,
+      "news": 0.26,
+      "playerStats": 0.46,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 419,
+     "seasonMs": 18737,
+     "avgRoundMs": 311,
+     "maxRoundMs": 391
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 60,
+       "max": 153,
+       "mean": 77.7
+      },
+      "Primera": {
+       "min": 21,
+       "max": 23,
+       "mean": 22.9
+      },
+      "Intermedia": {
+       "min": 13,
+       "max": 56,
+       "mean": 20.4
+      },
+      "Pre A": {
+       "min": 6,
+       "max": 45,
+       "mean": 18.1
+      },
+      "Pre B": {
+       "min": 8,
+       "max": 38,
+       "mean": 16.3
+      },
+      "M19": {
+       "min": 15,
+       "max": 30,
+       "mean": 16.4
+      },
+      "M17": {
+       "min": 15,
+       "max": 15,
+       "mean": 15
+      },
+      "injured": {
+       "min": 0,
+       "max": 0,
+       "mean": 0
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 3,
+      "outOfPos": 3,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre B": {
+        "noOne": 3,
+        "outOfPos": 3,
+        "clubsWithGap": 2
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 84,
+      "outOfPos": 96,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 5,
+        "clubsWithGap": 5
+       },
+       "Pre B": {
+        "noOne": 78,
+        "outOfPos": 69,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 6,
+        "outOfPos": 22,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 75,
+      "outOfPos": 86,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 2,
+        "clubsWithGap": 2
+       },
+       "Pre B": {
+        "noOne": 65,
+        "outOfPos": 64,
+        "clubsWithGap": 27
+       },
+       "M19": {
+        "noOne": 10,
+        "outOfPos": 20,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 4584,
+    "biggestSquads": [
+     "alumni:153",
+     "buenos-aires-crc:148",
+     "atletico-del-rosario:133"
+    ],
+    "smallestSquads": [
+     "liceo-militar:60",
+     "vicentinos:60"
+    ],
+    "clubsOverLimit": 3,
+    "attrAbovePotentialAtStart": 307,
+    "strengthVsXV": {
+     "Top 14": 0.82,
+     "Primera A": 0.94,
+     "Primera B": 0.98
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "hindu",
+      "los-tilos"
+     ],
+     "Primera A": [
+      "san-luis",
+      "lomas-athletic",
+      "curupayti"
+     ],
+     "Primera B": [
+      "liceo-naval",
+      "cu-quilmes",
+      "banco-nacion"
+     ]
+    },
+    "news": 1404,
+    "playoffs": {
+     "tieSeen": 1,
+     "Top 14": {
+      "table": [
+       "newman",
+       "hindu",
+       "los-tilos",
+       "casi",
+       "cuba",
+       "alumni",
+       "belgrano-athletic",
+       "sic",
+       "buenos-aires-crc",
+       "la-plata",
+       "atletico-del-rosario",
+       "regatas-bella-vista",
+       "los-matreros",
+       "champagnat"
+      ],
+      "seeds": [
+       "newman",
+       "hindu",
+       "los-tilos",
+       "casi"
+      ],
+      "champion": "newman",
+      "final": "newman 35-35 los-tilos"
+     },
+     "Primera A": {
+      "table": [
+       "san-luis",
+       "lomas-athletic",
+       "curupayti",
+       "hurling",
+       "san-cirano",
+       "deportiva-francesa",
+       "geba",
+       "pucara",
+       "san-andres",
+       "san-fernando",
+       "pueyrredon",
+       "olivos",
+       "san-albano",
+       "universitario-la-plata"
+      ],
+      "seeds": [
+       "lomas-athletic",
+       "curupayti",
+       "hurling",
+       "san-cirano"
+      ],
+      "champion": "curupayti",
+      "final": "lomas-athletic 11-20 curupayti"
+     },
+     "Primera B": {
+      "table": [
+       "liceo-naval",
+       "cu-quilmes",
+       "banco-nacion",
+       "don-bosco",
+       "san-patricio",
+       "italiano",
+       "mariano-moreno",
+       "argentino",
+       "manuel-belgrano",
+       "san-martin",
+       "monte-grande",
+       "liceo-militar",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "cu-quilmes",
+       "banco-nacion",
+       "don-bosco",
+       "san-patricio"
+      ],
+      "champion": "cu-quilmes",
+      "final": "cu-quilmes 19-5 banco-nacion"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "los-matreros→Primera A",
+     "champagnat→Primera A",
+     "san-luis→Top 14",
+     "curupayti→Top 14",
+     "san-albano→Primera B",
+     "universitario-la-plata→Primera B",
+     "liceo-naval→Primera A",
+     "cu-quilmes→Primera A"
+    ],
+    "ages": {
+     "both": 4424,
+     "knownPlus1": 118,
+     "knownOther": 0,
+     "unknownStays": 2146,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2160,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 4424,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 112,
+     "attrsDown": 349,
+     "playersWithAttrAbovePotential": 345,
+     "of": 4424
+    },
+    "turnover": {
+     "gone": 160,
+     "abroad": 4,
+     "retiredOrDropped": 156,
+     "news": 160,
+     "newPlayers": 730,
+     "kept": 4424
+    },
+    "newIdSamples": [
+     "newman-academy-2027-m17-intake-0",
+     "newman-academy-2027-m17-intake-1",
+     "newman-academy-2027-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 20,
+     "refusedPairs": 31,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "los-matreros",
+      "division": "Primera A",
+      "strength": 11.3,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "champagnat",
+      "division": "Primera A",
+      "strength": 10.3,
+      "rankByStrength": 6,
+      "rankByXV": 4,
+      "objective": "Media"
+     },
+     {
+      "id": "san-luis",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "curupayti",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera B",
+      "strength": 9.8,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera B",
+      "strength": 9.4,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "cu-quilmes",
+      "division": "Primera A",
+      "strength": 9.3,
+      "rankByStrength": 12,
+      "rankByXV": 13,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 96,
+    "injuredMax": 118,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#12",
+     "lomas-athletic:Primera A#2",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "curupayti",
+     "Primera B": "cu-quilmes"
+    },
+    "market": {
+     "contacts": 51,
+     "accepted": 20,
+     "refused": 31,
+     "violations": 0,
+     "blockedOk": 102,
+     "groupsReshuffled": 114
+    }
+   },
+   {
+    "season": 2027,
+    "sizes": {
+     "start": 5.06,
+     "mid": 8.11,
+     "afterRegular": 10.96,
+     "end": 11.07,
+     "parts": {
+      "clubs": 4.51,
+      "fixtures": 5.13,
+      "news": 0.37,
+      "playerStats": 0.89,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 506,
+     "seasonMs": 24400,
+     "avgRoundMs": 411,
+     "maxRoundMs": 680
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 59,
+       "max": 148,
+       "mean": 80.1
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 12,
+       "max": 42,
+       "mean": 19.4
+      },
+      "Pre A": {
+       "min": 12,
+       "max": 42,
+       "mean": 19.4
+      },
+      "Pre B": {
+       "min": 12,
+       "max": 41,
+       "mean": 18.3
+      },
+      "M19": {
+       "min": 15,
+       "max": 40,
+       "mean": 20
+      },
+      "M17": {
+       "min": 20,
+       "max": 26,
+       "mean": 22.6
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.1
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 11,
+      "outOfPos": 45,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 2,
+        "clubsWithGap": 2
+       },
+       "Pre B": {
+        "noOne": 11,
+        "outOfPos": 43,
+        "clubsWithGap": 20
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 51,
+      "outOfPos": 92,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 7,
+        "clubsWithGap": 7
+       },
+       "Pre B": {
+        "noOne": 49,
+        "outOfPos": 77,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 2,
+        "outOfPos": 8,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 38,
+      "outOfPos": 79,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 1,
+        "outOfPos": 5,
+        "clubsWithGap": 6
+       },
+       "Pre B": {
+        "noOne": 31,
+        "outOfPos": 65,
+        "clubsWithGap": 25
+       },
+       "M19": {
+        "noOne": 6,
+        "outOfPos": 9,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "migrateV15": {
+     "dataVersion": 18,
+     "players": 5154,
+     "before": 5154
+    },
+    "totalPlayers": 5154,
+    "biggestSquads": [
+     "alumni:148",
+     "buenos-aires-crc:148",
+     "atletico-del-rosario:132"
+    ],
+    "smallestSquads": [
+     "geba:62",
+     "sic:59"
+    ],
+    "clubsOverLimit": 3,
+    "attrAbovePotentialAtStart": 345,
+    "strengthVsXV": {
+     "Top 14": 0.92,
+     "Primera A": 0.92,
+     "Primera B": 0.98
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "sic",
+      "hindu",
+      "alumni"
+     ],
+     "Primera A": [
+      "los-matreros",
+      "lomas-athletic",
+      "san-cirano"
+     ],
+     "Primera B": [
+      "don-bosco",
+      "banco-nacion",
+      "san-albano"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "sic",
+       "hindu",
+       "alumni",
+       "casi",
+       "cuba",
+       "newman",
+       "los-tilos",
+       "atletico-del-rosario",
+       "la-plata",
+       "regatas-bella-vista",
+       "belgrano-athletic",
+       "san-luis",
+       "buenos-aires-crc",
+       "curupayti"
+      ],
+      "seeds": [
+       "sic",
+       "hindu",
+       "alumni",
+       "casi"
+      ],
+      "champion": "alumni",
+      "final": "alumni 20-7 casi"
+     },
+     "Primera A": {
+      "table": [
+       "los-matreros",
+       "lomas-athletic",
+       "san-cirano",
+       "pucara",
+       "geba",
+       "san-andres",
+       "champagnat",
+       "pueyrredon",
+       "san-fernando",
+       "hurling",
+       "olivos",
+       "deportiva-francesa",
+       "liceo-naval",
+       "cu-quilmes"
+      ],
+      "seeds": [
+       "lomas-athletic",
+       "san-cirano",
+       "pucara",
+       "geba"
+      ],
+      "champion": "san-cirano",
+      "final": "lomas-athletic 14-31 san-cirano"
+     },
+     "Primera B": {
+      "table": [
+       "don-bosco",
+       "banco-nacion",
+       "san-albano",
+       "universitario-la-plata",
+       "san-martin",
+       "manuel-belgrano",
+       "argentino",
+       "italiano",
+       "mariano-moreno",
+       "san-patricio",
+       "monte-grande",
+       "delta",
+       "liceo-militar",
+       "vicentinos"
+      ],
+      "seeds": [
+       "banco-nacion",
+       "san-albano",
+       "universitario-la-plata",
+       "san-martin"
+      ],
+      "champion": "universitario-la-plata",
+      "final": "banco-nacion 21-27 universitario-la-plata"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "buenos-aires-crc→Primera A",
+     "curupayti→Primera A",
+     "los-matreros→Top 14",
+     "san-cirano→Top 14",
+     "liceo-naval→Primera B",
+     "cu-quilmes→Primera B",
+     "don-bosco→Primera A",
+     "universitario-la-plata→Primera A"
+    ],
+    "ages": {
+     "both": 4762,
+     "knownPlus1": 105,
+     "knownOther": 0,
+     "unknownStays": 2143,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2514,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 4762,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 104,
+     "attrsDown": 402,
+     "playersWithAttrAbovePotential": 490,
+     "of": 4762
+    },
+    "turnover": {
+     "gone": 392,
+     "abroad": 4,
+     "retiredOrDropped": 388,
+     "news": 392,
+     "newPlayers": 630,
+     "kept": 4762
+    },
+    "newIdSamples": [
+     "newman-academy-2028-m17-intake-0",
+     "newman-academy-2028-m17-intake-1",
+     "newman-academy-2028-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 38,
+     "refusedPairs": 49,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "buenos-aires-crc",
+      "division": "Primera A",
+      "strength": 11.4,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "curupayti",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 3,
+      "rankByXV": 2,
+      "objective": "Alta"
+     },
+     {
+      "id": "los-matreros",
+      "division": "Top 14",
+      "strength": 11.3,
+      "rankByStrength": 10,
+      "rankByXV": 11,
+      "objective": "Media"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 4,
+      "rankByXV": 5,
+      "objective": "Alta"
+     },
+     {
+      "id": "cu-quilmes",
+      "division": "Primera B",
+      "strength": 9.3,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "don-bosco",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera A",
+      "strength": 9.4,
+      "rankByStrength": 12,
+      "rankByXV": 13,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 96.6,
+    "injuredMax": 127,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#10",
+     "lomas-athletic:Primera A#2",
+     "delta:Primera B#12"
+    ],
+    "champions": {
+     "Top 14": "alumni",
+     "Primera A": "san-cirano",
+     "Primera B": "universitario-la-plata"
+    },
+    "market": {
+     "contacts": 87,
+     "accepted": 38,
+     "refused": 49,
+     "violations": 0,
+     "blockedOk": 174,
+     "groupsReshuffled": 195
+    }
+   },
+   {
+    "season": 2028,
+    "sizes": {
+     "start": 5.91,
+     "mid": 8.88,
+     "afterRegular": 11.73,
+     "end": 11.81,
+     "parts": {
+      "clubs": 4.83,
+      "fixtures": 5.1,
+      "news": 0.36,
+      "playerStats": 1.33,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 594,
+     "seasonMs": 27731,
+     "avgRoundMs": 454,
+     "maxRoundMs": 556
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 177,
+       "mean": 83.4
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.4
+      },
+      "M19": {
+       "min": 15,
+       "max": 15,
+       "mean": 15
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 19,
+      "outOfPos": 58,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre B": {
+        "noOne": 19,
+        "outOfPos": 58,
+        "clubsWithGap": 26
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 62,
+      "outOfPos": 141,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 14,
+        "clubsWithGap": 11
+       },
+       "Pre B": {
+        "noOne": 53,
+        "outOfPos": 93,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 9,
+        "outOfPos": 33,
+        "clubsWithGap": 3
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 52,
+      "outOfPos": 104,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 2,
+        "clubsWithGap": 2
+       },
+       "Pre B": {
+        "noOne": 37,
+        "outOfPos": 72,
+        "clubsWithGap": 27
+       },
+       "M19": {
+        "noOne": 15,
+        "outOfPos": 30,
+        "clubsWithGap": 3
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 5392,
+    "biggestSquads": [
+     "buenos-aires-crc:177",
+     "alumni:176",
+     "champagnat:159"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 6,
+    "attrAbovePotentialAtStart": 490,
+    "strengthVsXV": {
+     "Top 14": 0.96,
+     "Primera A": 0.93,
+     "Primera B": 0.98
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "casi",
+      "newman",
+      "alumni"
+     ],
+     "Primera A": [
+      "buenos-aires-crc",
+      "lomas-athletic",
+      "curupayti"
+     ],
+     "Primera B": [
+      "san-albano",
+      "liceo-naval",
+      "banco-nacion"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "casi",
+       "newman",
+       "alumni",
+       "sic",
+       "cuba",
+       "los-tilos",
+       "hindu",
+       "atletico-del-rosario",
+       "los-matreros",
+       "san-luis",
+       "la-plata",
+       "belgrano-athletic",
+       "regatas-bella-vista",
+       "san-cirano"
+      ],
+      "seeds": [
+       "casi",
+       "newman",
+       "alumni",
+       "sic"
+      ],
+      "champion": "casi",
+      "final": "casi 32-31 newman"
+     },
+     "Primera A": {
+      "table": [
+       "buenos-aires-crc",
+       "lomas-athletic",
+       "curupayti",
+       "champagnat",
+       "pucara",
+       "geba",
+       "hurling",
+       "san-fernando",
+       "pueyrredon",
+       "san-andres",
+       "deportiva-francesa",
+       "olivos",
+       "universitario-la-plata",
+       "don-bosco"
+      ],
+      "seeds": [
+       "lomas-athletic",
+       "curupayti",
+       "champagnat",
+       "pucara"
+      ],
+      "champion": "pucara",
+      "final": "champagnat 13-14 pucara"
+     },
+     "Primera B": {
+      "table": [
+       "san-albano",
+       "liceo-naval",
+       "banco-nacion",
+       "cu-quilmes",
+       "italiano",
+       "delta",
+       "san-patricio",
+       "argentino",
+       "san-martin",
+       "manuel-belgrano",
+       "liceo-militar",
+       "mariano-moreno",
+       "monte-grande",
+       "vicentinos"
+      ],
+      "seeds": [
+       "liceo-naval",
+       "banco-nacion",
+       "cu-quilmes",
+       "italiano"
+      ],
+      "champion": "liceo-naval",
+      "final": "liceo-naval 32-11 banco-nacion"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "regatas-bella-vista→Primera A",
+     "san-cirano→Primera A",
+     "buenos-aires-crc→Top 14",
+     "pucara→Top 14",
+     "universitario-la-plata→Primera B",
+     "don-bosco→Primera B",
+     "san-albano→Primera A",
+     "liceo-naval→Primera A"
+    ],
+    "ages": {
+     "both": 5067,
+     "knownPlus1": 99,
+     "knownOther": 0,
+     "unknownStays": 2138,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2830,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5067,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 89,
+     "attrsDown": 494,
+     "playersWithAttrAbovePotential": 831,
+     "of": 5067
+    },
+    "turnover": {
+     "gone": 325,
+     "abroad": 0,
+     "retiredOrDropped": 325,
+     "news": 325,
+     "newPlayers": 630,
+     "kept": 5067
+    },
+    "newIdSamples": [
+     "newman-academy-2029-m17-intake-0",
+     "newman-academy-2029-m17-intake-1",
+     "newman-academy-2029-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 54,
+     "refusedPairs": 69,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "regatas-bella-vista",
+      "division": "Primera A",
+      "strength": 11.5,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "buenos-aires-crc",
+      "division": "Top 14",
+      "strength": 11.4,
+      "rankByStrength": 7,
+      "rankByXV": 6,
+      "objective": "Media"
+     },
+     {
+      "id": "pucara",
+      "division": "Top 14",
+      "strength": 10.4,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera B",
+      "strength": 9.4,
+      "rankByStrength": 2,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "don-bosco",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 4,
+      "rankByXV": 5,
+      "objective": "Alta"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera A",
+      "strength": 9.8,
+      "rankByStrength": 11,
+      "rankByXV": 11,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 99.4,
+    "injuredMax": 115,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#13",
+     "lomas-athletic:Primera A#2",
+     "delta:Primera B#6"
+    ],
+    "champions": {
+     "Top 14": "casi",
+     "Primera A": "pucara",
+     "Primera B": "liceo-naval"
+    },
+    "market": {
+     "contacts": 123,
+     "accepted": 54,
+     "refused": 69,
+     "violations": 0,
+     "blockedOk": 246,
+     "groupsReshuffled": 262
+    }
+   },
+   {
+    "season": 2029,
+    "sizes": {
+     "start": 6.68,
+     "mid": 9.63,
+     "afterRegular": 12.46,
+     "end": 12.51,
+     "parts": {
+      "clubs": 5.19,
+      "fixtures": 5,
+      "news": 0.36,
+      "playerStats": 1.76,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 588,
+     "seasonMs": 29722,
+     "avgRoundMs": 496,
+     "maxRoundMs": 788
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 178,
+       "mean": 83.2
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.4
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.4
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.4
+      },
+      "M19": {
+       "min": 19,
+       "max": 26,
+       "mean": 22.5
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.3
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 24,
+      "outOfPos": 67,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 3,
+        "clubsWithGap": 3
+       },
+       "Pre B": {
+        "noOne": 24,
+        "outOfPos": 64,
+        "clubsWithGap": 27
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 53,
+      "outOfPos": 99,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 11,
+        "clubsWithGap": 9
+       },
+       "Pre B": {
+        "noOne": 53,
+        "outOfPos": 88,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 41,
+      "outOfPos": 98,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 5,
+        "clubsWithGap": 5
+       },
+       "Pre B": {
+        "noOne": 40,
+        "outOfPos": 84,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 1,
+        "outOfPos": 9,
+        "clubsWithGap": 1
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 5697,
+    "biggestSquads": [
+     "buenos-aires-crc:178",
+     "alumni:173",
+     "champagnat:159"
+    ],
+    "smallestSquads": [
+     "monte-grande:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 831,
+    "strengthVsXV": {
+     "Top 14": 0.94,
+     "Primera A": 0.95,
+     "Primera B": 0.97
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "alumni",
+      "casi"
+     ],
+     "Primera A": [
+      "regatas-bella-vista",
+      "curupayti",
+      "champagnat"
+     ],
+     "Primera B": [
+      "cu-quilmes",
+      "banco-nacion",
+      "universitario-la-plata"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "alumni",
+       "casi",
+       "los-tilos",
+       "sic",
+       "cuba",
+       "belgrano-athletic",
+       "hindu",
+       "la-plata",
+       "buenos-aires-crc",
+       "atletico-del-rosario",
+       "los-matreros",
+       "san-luis",
+       "pucara"
+      ],
+      "seeds": [
+       "newman",
+       "alumni",
+       "casi",
+       "los-tilos"
+      ],
+      "champion": "alumni",
+      "final": "newman 12-21 alumni"
+     },
+     "Primera A": {
+      "table": [
+       "regatas-bella-vista",
+       "curupayti",
+       "champagnat",
+       "san-cirano",
+       "san-andres",
+       "pueyrredon",
+       "hurling",
+       "olivos",
+       "geba",
+       "san-fernando",
+       "deportiva-francesa",
+       "lomas-athletic",
+       "liceo-naval",
+       "san-albano"
+      ],
+      "seeds": [
+       "curupayti",
+       "champagnat",
+       "san-cirano",
+       "san-andres"
+      ],
+      "champion": "san-cirano",
+      "final": "san-cirano 32-31 san-andres"
+     },
+     "Primera B": {
+      "table": [
+       "cu-quilmes",
+       "banco-nacion",
+       "universitario-la-plata",
+       "italiano",
+       "mariano-moreno",
+       "manuel-belgrano",
+       "don-bosco",
+       "san-patricio",
+       "san-martin",
+       "argentino",
+       "liceo-militar",
+       "monte-grande",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "banco-nacion",
+       "universitario-la-plata",
+       "italiano",
+       "mariano-moreno"
+      ],
+      "champion": "banco-nacion",
+      "final": "banco-nacion 25-19 universitario-la-plata"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "san-luis→Primera A",
+     "pucara→Primera A",
+     "regatas-bella-vista→Top 14",
+     "san-cirano→Top 14",
+     "liceo-naval→Primera B",
+     "san-albano→Primera B",
+     "cu-quilmes→Primera A",
+     "banco-nacion→Primera A"
+    ],
+    "ages": {
+     "both": 5385,
+     "knownPlus1": 89,
+     "knownOther": 0,
+     "unknownStays": 2122,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3174,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5385,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 80,
+     "attrsDown": 591,
+     "playersWithAttrAbovePotential": 1226,
+     "of": 5385
+    },
+    "turnover": {
+     "gone": 312,
+     "abroad": 1,
+     "retiredOrDropped": 311,
+     "news": 312,
+     "newPlayers": 630,
+     "kept": 5385
+    },
+    "newIdSamples": [
+     "newman-academy-2030-m17-intake-0",
+     "newman-academy-2030-m17-intake-1",
+     "newman-academy-2030-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 68,
+     "refusedPairs": 90,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "san-luis",
+      "division": "Primera A",
+      "strength": 10.9,
+      "rankByStrength": 1,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "pucara",
+      "division": "Primera A",
+      "strength": 10.4,
+      "rankByStrength": 5,
+      "rankByXV": 6,
+      "objective": "Alta"
+     },
+     {
+      "id": "regatas-bella-vista",
+      "division": "Top 14",
+      "strength": 11.5,
+      "rankByStrength": 7,
+      "rankByXV": 9,
+      "objective": "Media"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 3,
+      "rankByXV": 4,
+      "objective": "Alta"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera B",
+      "strength": 9.8,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "cu-quilmes",
+      "division": "Primera A",
+      "strength": 9.3,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera A",
+      "strength": 9.5,
+      "rankByStrength": 12,
+      "rankByXV": 12,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 93.5,
+    "injuredMax": 112,
+    "keepClubs": [
+     "regatas-bella-vista:Primera A#1",
+     "lomas-athletic:Primera A#12",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "alumni",
+     "Primera A": "san-cirano",
+     "Primera B": "banco-nacion"
+    },
+    "market": {
+     "contacts": 158,
+     "accepted": 68,
+     "refused": 90,
+     "violations": 0,
+     "blockedOk": 316,
+     "groupsReshuffled": 325
+    }
+   },
+   {
+    "season": 2030,
+    "sizes": {
+     "start": 7.44,
+     "mid": 10.46,
+     "afterRegular": 13.38,
+     "end": 13.51,
+     "parts": {
+      "clubs": 5.54,
+      "fixtures": 5.2,
+      "news": 0.36,
+      "playerStats": 2.2,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 644,
+     "seasonMs": 33049,
+     "avgRoundMs": 536,
+     "maxRoundMs": 727
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 179,
+       "mean": 83.2
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.4
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.4
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 52,
+       "mean": 19.4
+      },
+      "M19": {
+       "min": 29,
+       "max": 30,
+       "mean": 30
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Media": 5,
+      "Máxima": 2,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 25,
+      "outOfPos": 60,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 7,
+        "clubsWithGap": 7
+       },
+       "Pre B": {
+        "noOne": 25,
+        "outOfPos": 53,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 60,
+      "outOfPos": 92,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 13,
+        "clubsWithGap": 8
+       },
+       "Pre B": {
+        "noOne": 60,
+        "outOfPos": 79,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 46,
+      "outOfPos": 73,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 11,
+        "clubsWithGap": 8
+       },
+       "Pre B": {
+        "noOne": 46,
+        "outOfPos": 62,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "migrateV15": {
+     "dataVersion": 18,
+     "players": 6015,
+     "before": 6015
+    },
+    "totalPlayers": 6015,
+    "biggestSquads": [
+     "buenos-aires-crc:179",
+     "alumni:169",
+     "champagnat:160"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 1226,
+    "strengthVsXV": {
+     "Top 14": 0.9,
+     "Primera A": 0.89,
+     "Primera B": 0.91
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "casi",
+      "hindu",
+      "newman"
+     ],
+     "Primera A": [
+      "san-andres",
+      "curupayti",
+      "san-luis"
+     ],
+     "Primera B": [
+      "san-albano",
+      "universitario-la-plata",
+      "liceo-naval"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "casi",
+       "hindu",
+       "newman",
+       "los-tilos",
+       "alumni",
+       "sic",
+       "buenos-aires-crc",
+       "belgrano-athletic",
+       "la-plata",
+       "los-matreros",
+       "atletico-del-rosario",
+       "regatas-bella-vista",
+       "cuba",
+       "san-cirano"
+      ],
+      "seeds": [
+       "casi",
+       "hindu",
+       "newman",
+       "los-tilos"
+      ],
+      "champion": "hindu",
+      "final": "casi 10-21 hindu"
+     },
+     "Primera A": {
+      "table": [
+       "san-andres",
+       "curupayti",
+       "san-luis",
+       "lomas-athletic",
+       "hurling",
+       "san-fernando",
+       "champagnat",
+       "geba",
+       "pucara",
+       "olivos",
+       "deportiva-francesa",
+       "pueyrredon",
+       "banco-nacion",
+       "cu-quilmes"
+      ],
+      "seeds": [
+       "curupayti",
+       "san-luis",
+       "lomas-athletic",
+       "hurling"
+      ],
+      "champion": "curupayti",
+      "final": "curupayti 46-8 lomas-athletic"
+     },
+     "Primera B": {
+      "table": [
+       "san-albano",
+       "universitario-la-plata",
+       "liceo-naval",
+       "don-bosco",
+       "italiano",
+       "manuel-belgrano",
+       "mariano-moreno",
+       "san-patricio",
+       "argentino",
+       "san-martin",
+       "liceo-militar",
+       "monte-grande",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "universitario-la-plata",
+       "liceo-naval",
+       "don-bosco",
+       "italiano"
+      ],
+      "champion": "liceo-naval",
+      "final": "universitario-la-plata 15-24 liceo-naval"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "cuba→Primera A",
+     "san-cirano→Primera A",
+     "san-andres→Top 14",
+     "curupayti→Top 14",
+     "banco-nacion→Primera B",
+     "cu-quilmes→Primera B",
+     "san-albano→Primera A",
+     "liceo-naval→Primera A"
+    ],
+    "ages": {
+     "both": 5405,
+     "knownPlus1": 83,
+     "knownOther": 0,
+     "unknownStays": 2101,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3221,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5405,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 94,
+     "attrsDown": 700,
+     "playersWithAttrAbovePotential": 1560,
+     "of": 5405
+    },
+    "turnover": {
+     "gone": 610,
+     "abroad": 1,
+     "retiredOrDropped": 609,
+     "news": 610,
+     "newPlayers": 630,
+     "kept": 5405
+    },
+    "newIdSamples": [
+     "newman-academy-2031-m17-intake-0",
+     "newman-academy-2031-m17-intake-1",
+     "newman-academy-2031-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 82,
+     "refusedPairs": 109,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "cuba",
+      "division": "Primera A",
+      "strength": 11.3,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 4,
+      "rankByXV": 2,
+      "objective": "Alta"
+     },
+     {
+      "id": "san-andres",
+      "division": "Top 14",
+      "strength": 9.8,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "curupayti",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 13,
+      "rankByXV": 10,
+      "objective": "Baja"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera B",
+      "strength": 9.5,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "cu-quilmes",
+      "division": "Primera B",
+      "strength": 9.3,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera A",
+      "strength": 9.8,
+      "rankByStrength": 11,
+      "rankByXV": 11,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 98.2,
+    "injuredMax": 120,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#12",
+     "lomas-athletic:Primera A#4",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "hindu",
+     "Primera A": "curupayti",
+     "Primera B": "liceo-naval"
+    },
+    "market": {
+     "contacts": 191,
+     "accepted": 82,
+     "refused": 109,
+     "violations": 0,
+     "blockedOk": 382,
+     "groupsReshuffled": 378
+    }
+   },
+   {
+    "season": 2031,
+    "sizes": {
+     "start": 7.97,
+     "mid": 11.03,
+     "afterRegular": 13.97,
+     "end": 14.05,
+     "parts": {
+      "clubs": 5.64,
+      "fixtures": 5.21,
+      "news": 0.35,
+      "playerStats": 2.65,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 731,
+     "seasonMs": 35660,
+     "avgRoundMs": 550,
+     "maxRoundMs": 695
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 178,
+       "mean": 83.7
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.6
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.6
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.5
+      },
+      "M19": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 34,
+      "outOfPos": 64,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 13,
+        "clubsWithGap": 10
+       },
+       "Pre B": {
+        "noOne": 34,
+        "outOfPos": 51,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 74,
+      "outOfPos": 112,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 20,
+        "clubsWithGap": 16
+       },
+       "Pre B": {
+        "noOne": 74,
+        "outOfPos": 92,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 60,
+      "outOfPos": 82,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 15,
+        "clubsWithGap": 11
+       },
+       "Pre B": {
+        "noOne": 60,
+        "outOfPos": 67,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 6035,
+    "biggestSquads": [
+     "buenos-aires-crc:178",
+     "alumni:172",
+     "champagnat:159"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 6,
+    "attrAbovePotentialAtStart": 1560,
+    "strengthVsXV": {
+     "Top 14": 0.87,
+     "Primera A": 0.84,
+     "Primera B": 0.96
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "casi",
+      "los-tilos"
+     ],
+     "Primera A": [
+      "cuba",
+      "champagnat",
+      "geba"
+     ],
+     "Primera B": [
+      "don-bosco",
+      "cu-quilmes",
+      "mariano-moreno"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "casi",
+       "los-tilos",
+       "la-plata",
+       "los-matreros",
+       "hindu",
+       "sic",
+       "belgrano-athletic",
+       "alumni",
+       "atletico-del-rosario",
+       "buenos-aires-crc",
+       "curupayti",
+       "regatas-bella-vista",
+       "san-andres"
+      ],
+      "seeds": [
+       "newman",
+       "casi",
+       "los-tilos",
+       "la-plata"
+      ],
+      "champion": "newman",
+      "final": "newman 18-7 casi"
+     },
+     "Primera A": {
+      "table": [
+       "cuba",
+       "champagnat",
+       "geba",
+       "san-cirano",
+       "lomas-athletic",
+       "hurling",
+       "san-luis",
+       "pueyrredon",
+       "san-fernando",
+       "olivos",
+       "pucara",
+       "san-albano",
+       "deportiva-francesa",
+       "liceo-naval"
+      ],
+      "seeds": [
+       "champagnat",
+       "geba",
+       "san-cirano",
+       "lomas-athletic"
+      ],
+      "champion": "champagnat",
+      "final": "champagnat 36-17 san-cirano"
+     },
+     "Primera B": {
+      "table": [
+       "don-bosco",
+       "cu-quilmes",
+       "mariano-moreno",
+       "universitario-la-plata",
+       "banco-nacion",
+       "italiano",
+       "argentino",
+       "manuel-belgrano",
+       "san-martin",
+       "san-patricio",
+       "liceo-militar",
+       "monte-grande",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "cu-quilmes",
+       "mariano-moreno",
+       "universitario-la-plata",
+       "banco-nacion"
+      ],
+      "champion": "universitario-la-plata",
+      "final": "cu-quilmes 3-25 universitario-la-plata"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "regatas-bella-vista→Primera A",
+     "san-andres→Primera A",
+     "cuba→Top 14",
+     "champagnat→Top 14",
+     "deportiva-francesa→Primera B",
+     "liceo-naval→Primera B",
+     "don-bosco→Primera A",
+     "universitario-la-plata→Primera A"
+    ],
+    "ages": {
+     "both": 5413,
+     "knownPlus1": 75,
+     "knownOther": 0,
+     "unknownStays": 2079,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3259,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5413,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 161,
+     "attrsDown": 1166,
+     "playersWithAttrAbovePotential": 1723,
+     "of": 5413
+    },
+    "turnover": {
+     "gone": 622,
+     "abroad": 3,
+     "retiredOrDropped": 619,
+     "news": 622,
+     "newPlayers": 630,
+     "kept": 5413
+    },
+    "newIdSamples": [
+     "newman-academy-2032-m17-intake-0",
+     "newman-academy-2032-m17-intake-1",
+     "newman-academy-2032-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 103,
+     "refusedPairs": 129,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "regatas-bella-vista",
+      "division": "Primera A",
+      "strength": 11.5,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-andres",
+      "division": "Primera A",
+      "strength": 9.8,
+      "rankByStrength": 10,
+      "rankByXV": 9,
+      "objective": "Media"
+     },
+     {
+      "id": "cuba",
+      "division": "Top 14",
+      "strength": 11.3,
+      "rankByStrength": 8,
+      "rankByXV": 8,
+      "objective": "Media"
+     },
+     {
+      "id": "champagnat",
+      "division": "Top 14",
+      "strength": 10.3,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "deportiva-francesa",
+      "division": "Primera B",
+      "strength": 8.9,
+      "rankByStrength": 5,
+      "rankByXV": 2,
+      "objective": "Alta"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 3,
+      "rankByXV": 5,
+      "objective": "Alta"
+     },
+     {
+      "id": "don-bosco",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera A",
+      "strength": 9.4,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 103.2,
+    "injuredMax": 124,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#13",
+     "lomas-athletic:Primera A#5",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "champagnat",
+     "Primera B": "universitario-la-plata"
+    },
+    "market": {
+     "contacts": 232,
+     "accepted": 103,
+     "refused": 129,
+     "violations": 0,
+     "blockedOk": 464,
+     "groupsReshuffled": 470
+    }
+   }
+  ],
+  "notes": [],
+  "timing": [],
+  "initMs": 515,
+  "actions": {
+   "ok": {
+    "tactics": 72,
+    "youth-training": 72,
+    "training": 72,
+    "lineup": 126,
+    "train-player": 468,
+    "retrain": 90,
+    "promote": 90,
+    "assign-senior": 90
+   },
+   "err": {
+    "contact-player: Tu plantel superior está completo (130).": 92,
+    "contact-player: Ya hiciste un contacto en esta fecha.": 3
+   }
+  },
+  "totalMs": 169815,
+  "violations": [
+   {
+    "sev": "broken",
+    "code": "contacto-rechazado-por-un-contacto-de-la-temporada-anterior",
+    "fn": "contactPlayer (transfers.contacts no se reinicia al cambiar de temporada)",
+    "count": 3,
+    "first": {
+     "seed": 101,
+     "season": 2028,
+     "round": 7,
+     "msg": "regatas-bella-vista en la fecha 7 de 2028: transfers.contacts={\"regatas-bella-vista\":7,\"lomas-athletic\":6,\"delta\":6}"
+    }
+   },
+   {
+    "sev": "broken",
+    "code": "xv-fuera-de-puesto",
+    "fn": "effectiveLineup/autoLineup",
+    "count": 1,
+    "first": {
+     "seed": 101,
+     "season": 2031,
+     "round": 16,
+     "msg": "vicentinos dorsal 13 Centro: Sebastián Ortiz Basualdo (Medio scrum/undefined) (fecha 16)"
+    }
+   },
+   {
+    "sev": "broken",
+    "code": "titular-fuera-de-puesto",
+    "fn": "simulateFixture/effectiveLineup (selection: relleno con cualquiera si no queda nadie del puesto)",
+    "count": 1,
+    "first": {
+     "seed": 101,
+     "season": 2031,
+     "round": 17,
+     "msg": "primera-b-17-san-patricio-vicentinos V dorsal 13 Centro: Sebastián Ortiz Basualdo (Medio scrum/undefined); en el club juegan ese puesto 5 (disponibles 1), lesionados del plantel 8, XV guardado=true"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-con-menos-de-15",
+    "fn": "assignSeniorGroups/addAcademyIntake",
+    "count": 1430,
+    "first": {
+     "seed": 101,
+     "season": 2026,
+     "round": 0,
+     "msg": "hindu Pre A: grupo propio de 6 (inicio 2026)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-no-puede-armar-equipo",
+    "fn": "categoryTeams/playParallelRound",
+    "count": 496,
+    "first": {
+     "seed": 101,
+     "season": 2026,
+     "round": 0,
+     "msg": "sic Pre B: 1 puestos sin jugador (inicio 2026)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-prometida-no-se-respeta-tras-traspaso",
+    "fn": "contactPlayer (assignSeniorGroups reasigna todo el plantel del comprador)",
+    "count": 97,
+    "first": {
+     "seed": 101,
+     "season": 2026,
+     "round": 1,
+     "msg": "regatas-bella-vista ← vicentinos-s-48 (vicentinos): prometido XV, queda en Pre B"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "fichaje-reasigna-las-categorias-de-todo-el-plantel",
+    "fn": "contactPlayer/assignSeniorGroups",
+    "count": 90,
+    "first": {
+     "seed": 101,
+     "season": 2026,
+     "round": 1,
+     "msg": "regatas-bella-vista ← vicentinos-s-48 (vicentinos): 33 jugadores cambiaron de categoría (incluye asignaciones manuales)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "plantel-superior-supera-SQUAD_LIMIT",
+    "fn": "squadTurnover/contactPlayer",
+    "count": 28,
+    "first": {
+     "seed": 101,
+     "season": 2026,
+     "round": 0,
+     "msg": "alumni 153"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "atributo-por-encima-del-potencial",
+    "fn": "developPlayer/reviewDevelopment",
+    "count": 6,
+    "first": {
+     "seed": 101,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "345 de 4424 jugadores"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "vetos-de-mercado-no-se-limpian-al-cambiar-de-temporada",
+    "fn": "advanceSeasonWorld (transfers.refused persiste)",
+    "count": 6,
+    "first": {
+     "seed": 101,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "31 pares siguen vetados"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "contacts-de-mercado-persisten-entre-temporadas",
+    "fn": "contactPlayer/advanceSeasonWorld",
+    "count": 6,
+    "first": {
+     "seed": 101,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "{\"regatas-bella-vista\":17,\"lomas-athletic\":26,\"delta\":25} (un número de fecha viejo puede bloquear el primer contacto de la fecha igual)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "banco-con-hueco-sin-suplente-de-ese-puesto",
+    "fn": "simulateFixture (bench = [slot 0, slot 3] por puesto)",
+    "count": 5,
+    "first": {
+     "seed": 101,
+     "season": 2027,
+     "round": 26,
+     "msg": "top-14-26-hindu-curupayti V banco[0] vacío (no hay otro jugador disponible de Pilar izquierdo); disponibles del club=58"
+    }
+   }
+  ],
+  "finalSize": 8.49
+ },
+ {
+  "seed": 202,
+  "managed": [
+   "regatas-bella-vista",
+   "lomas-athletic",
+   "delta"
+  ],
+  "seasons": [
+   {
+    "season": 2026,
+    "sizes": {
+     "start": 3.39,
+     "mid": 6.62,
+     "afterRegular": 9.6,
+     "end": 9.7,
+     "parts": {
+      "clubs": 3.7,
+      "fixtures": 5.11,
+      "news": 0.27,
+      "playerStats": 0.46,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 421,
+     "seasonMs": 18909,
+     "avgRoundMs": 316,
+     "maxRoundMs": 397
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 60,
+       "max": 153,
+       "mean": 77.7
+      },
+      "Primera": {
+       "min": 22,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 13,
+       "max": 56,
+       "mean": 20.4
+      },
+      "Pre A": {
+       "min": 5,
+       "max": 45,
+       "mean": 18.1
+      },
+      "Pre B": {
+       "min": 8,
+       "max": 38,
+       "mean": 16.3
+      },
+      "M19": {
+       "min": 15,
+       "max": 30,
+       "mean": 16.4
+      },
+      "M17": {
+       "min": 15,
+       "max": 15,
+       "mean": 15
+      },
+      "injured": {
+       "min": 0,
+       "max": 0,
+       "mean": 0
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 2,
+      "outOfPos": 4,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre B": {
+        "noOne": 2,
+        "outOfPos": 4,
+        "clubsWithGap": 2
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 102,
+      "outOfPos": 127,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 6,
+        "clubsWithGap": 4
+       },
+       "Pre B": {
+        "noOne": 96,
+        "outOfPos": 99,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 6,
+        "outOfPos": 22,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 76,
+      "outOfPos": 114,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre B": {
+        "noOne": 66,
+        "outOfPos": 93,
+        "clubsWithGap": 27
+       },
+       "M19": {
+        "noOne": 10,
+        "outOfPos": 20,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 4584,
+    "biggestSquads": [
+     "alumni:153",
+     "buenos-aires-crc:148",
+     "atletico-del-rosario:133"
+    ],
+    "smallestSquads": [
+     "liceo-militar:60",
+     "vicentinos:60"
+    ],
+    "clubsOverLimit": 3,
+    "attrAbovePotentialAtStart": 332,
+    "strengthVsXV": {
+     "Top 14": 0.82,
+     "Primera A": 0.96,
+     "Primera B": 0.99
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "casi",
+      "alumni"
+     ],
+     "Primera A": [
+      "san-luis",
+      "curupayti",
+      "san-fernando"
+     ],
+     "Primera B": [
+      "banco-nacion",
+      "cu-quilmes",
+      "italiano"
+     ]
+    },
+    "news": 1422,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "casi",
+       "alumni",
+       "hindu",
+       "sic",
+       "cuba",
+       "regatas-bella-vista",
+       "los-tilos",
+       "los-matreros",
+       "belgrano-athletic",
+       "la-plata",
+       "atletico-del-rosario",
+       "buenos-aires-crc",
+       "champagnat"
+      ],
+      "seeds": [
+       "newman",
+       "casi",
+       "alumni",
+       "hindu"
+      ],
+      "champion": "newman",
+      "final": "newman 14-7 alumni"
+     },
+     "Primera A": {
+      "table": [
+       "san-luis",
+       "curupayti",
+       "san-fernando",
+       "pucara",
+       "lomas-athletic",
+       "san-andres",
+       "geba",
+       "san-cirano",
+       "olivos",
+       "hurling",
+       "san-albano",
+       "pueyrredon",
+       "deportiva-francesa",
+       "universitario-la-plata"
+      ],
+      "seeds": [
+       "curupayti",
+       "san-fernando",
+       "pucara",
+       "lomas-athletic"
+      ],
+      "champion": "san-fernando",
+      "final": "curupayti 25-31 san-fernando"
+     },
+     "Primera B": {
+      "table": [
+       "banco-nacion",
+       "cu-quilmes",
+       "italiano",
+       "liceo-naval",
+       "manuel-belgrano",
+       "don-bosco",
+       "san-martin",
+       "mariano-moreno",
+       "monte-grande",
+       "san-patricio",
+       "argentino",
+       "delta",
+       "vicentinos",
+       "liceo-militar"
+      ],
+      "seeds": [
+       "cu-quilmes",
+       "italiano",
+       "liceo-naval",
+       "manuel-belgrano"
+      ],
+      "champion": "liceo-naval",
+      "final": "liceo-naval 31-17 manuel-belgrano"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "buenos-aires-crc→Primera A",
+     "champagnat→Primera A",
+     "san-luis→Top 14",
+     "san-fernando→Top 14",
+     "deportiva-francesa→Primera B",
+     "universitario-la-plata→Primera B",
+     "banco-nacion→Primera A",
+     "liceo-naval→Primera A"
+    ],
+    "ages": {
+     "both": 4408,
+     "knownPlus1": 120,
+     "knownOther": 0,
+     "unknownStays": 2146,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2142,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 4408,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 102,
+     "attrsDown": 335,
+     "playersWithAttrAbovePotential": 371,
+     "of": 4408
+    },
+    "turnover": {
+     "gone": 176,
+     "abroad": 1,
+     "retiredOrDropped": 175,
+     "news": 176,
+     "newPlayers": 761,
+     "kept": 4408
+    },
+    "newIdSamples": [
+     "newman-academy-2027-m17-intake-0",
+     "newman-academy-2027-m17-intake-1",
+     "newman-academy-2027-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 20,
+     "refusedPairs": 31,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "buenos-aires-crc",
+      "division": "Primera A",
+      "strength": 11.4,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "champagnat",
+      "division": "Primera A",
+      "strength": 10.3,
+      "rankByStrength": 6,
+      "rankByXV": 6,
+      "objective": "Media"
+     },
+     {
+      "id": "san-luis",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "san-fernando",
+      "division": "Top 14",
+      "strength": 10.4,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "deportiva-francesa",
+      "division": "Primera B",
+      "strength": 8.9,
+      "rankByStrength": 5,
+      "rankByXV": 1,
+      "objective": "Alta"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera B",
+      "strength": 9.4,
+      "rankByStrength": 1,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera A",
+      "strength": 9.5,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 101.3,
+    "injuredMax": 134,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#7",
+     "lomas-athletic:Primera A#5",
+     "delta:Primera B#12"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "san-fernando",
+     "Primera B": "liceo-naval"
+    },
+    "market": {
+     "contacts": 51,
+     "accepted": 20,
+     "refused": 31,
+     "violations": 0,
+     "blockedOk": 102,
+     "groupsReshuffled": 107
+    }
+   },
+   {
+    "season": 2027,
+    "sizes": {
+     "start": 5.07,
+     "mid": 8.13,
+     "afterRegular": 10.97,
+     "end": 11.02,
+     "parts": {
+      "clubs": 4.53,
+      "fixtures": 5.06,
+      "news": 0.37,
+      "playerStats": 0.89,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 519,
+     "seasonMs": 24874,
+     "avgRoundMs": 411,
+     "maxRoundMs": 592
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 59,
+       "max": 149,
+       "mean": 80.4
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 12,
+       "max": 42,
+       "mean": 19.5
+      },
+      "Pre A": {
+       "min": 12,
+       "max": 42,
+       "mean": 19.5
+      },
+      "Pre B": {
+       "min": 12,
+       "max": 42,
+       "mean": 18.4
+      },
+      "M19": {
+       "min": 15,
+       "max": 38,
+       "mean": 19.9
+      },
+      "M17": {
+       "min": 19,
+       "max": 27,
+       "mean": 22.7
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Alta": 3,
+      "Máxima": 2,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 8,
+      "outOfPos": 36,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre B": {
+        "noOne": 8,
+        "outOfPos": 36,
+        "clubsWithGap": 21
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 34,
+      "outOfPos": 96,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 8,
+        "clubsWithGap": 7
+       },
+       "Pre B": {
+        "noOne": 32,
+        "outOfPos": 83,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 2,
+        "outOfPos": 5,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 41,
+      "outOfPos": 86,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 5,
+        "clubsWithGap": 4
+       },
+       "Pre B": {
+        "noOne": 35,
+        "outOfPos": 69,
+        "clubsWithGap": 27
+       },
+       "M19": {
+        "noOne": 6,
+        "outOfPos": 12,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "migrateV15": {
+     "dataVersion": 18,
+     "players": 5169,
+     "before": 5169
+    },
+    "totalPlayers": 5169,
+    "biggestSquads": [
+     "alumni:149",
+     "buenos-aires-crc:147",
+     "atletico-del-rosario:131"
+    ],
+    "smallestSquads": [
+     "liceo-militar:62",
+     "sic:59"
+    ],
+    "clubsOverLimit": 3,
+    "attrAbovePotentialAtStart": 371,
+    "strengthVsXV": {
+     "Top 14": 0.92,
+     "Primera A": 0.97,
+     "Primera B": 0.93
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "casi",
+      "alumni"
+     ],
+     "Primera A": [
+      "buenos-aires-crc",
+      "champagnat",
+      "pucara"
+     ],
+     "Primera B": [
+      "deportiva-francesa",
+      "don-bosco",
+      "cu-quilmes"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "casi",
+       "alumni",
+       "hindu",
+       "los-tilos",
+       "la-plata",
+       "sic",
+       "regatas-bella-vista",
+       "cuba",
+       "san-luis",
+       "atletico-del-rosario",
+       "los-matreros",
+       "belgrano-athletic",
+       "san-fernando"
+      ],
+      "seeds": [
+       "newman",
+       "casi",
+       "alumni",
+       "hindu"
+      ],
+      "champion": "alumni",
+      "final": "alumni 27-23 hindu"
+     },
+     "Primera A": {
+      "table": [
+       "buenos-aires-crc",
+       "champagnat",
+       "pucara",
+       "curupayti",
+       "geba",
+       "lomas-athletic",
+       "san-cirano",
+       "hurling",
+       "san-andres",
+       "olivos",
+       "pueyrredon",
+       "liceo-naval",
+       "banco-nacion",
+       "san-albano"
+      ],
+      "seeds": [
+       "champagnat",
+       "pucara",
+       "curupayti",
+       "geba"
+      ],
+      "champion": "curupayti",
+      "final": "champagnat 30-32 curupayti"
+     },
+     "Primera B": {
+      "table": [
+       "deportiva-francesa",
+       "don-bosco",
+       "cu-quilmes",
+       "universitario-la-plata",
+       "manuel-belgrano",
+       "italiano",
+       "san-patricio",
+       "mariano-moreno",
+       "argentino",
+       "delta",
+       "monte-grande",
+       "san-martin",
+       "vicentinos",
+       "liceo-militar"
+      ],
+      "seeds": [
+       "don-bosco",
+       "cu-quilmes",
+       "universitario-la-plata",
+       "manuel-belgrano"
+      ],
+      "champion": "universitario-la-plata",
+      "final": "don-bosco 10-19 universitario-la-plata"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "belgrano-athletic→Primera A",
+     "san-fernando→Primera A",
+     "buenos-aires-crc→Top 14",
+     "curupayti→Top 14",
+     "banco-nacion→Primera B",
+     "san-albano→Primera B",
+     "deportiva-francesa→Primera A",
+     "universitario-la-plata→Primera A"
+    ],
+    "ages": {
+     "both": 4761,
+     "knownPlus1": 110,
+     "knownOther": 0,
+     "unknownStays": 2143,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2508,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 4761,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 109,
+     "attrsDown": 424,
+     "playersWithAttrAbovePotential": 528,
+     "of": 4761
+    },
+    "turnover": {
+     "gone": 408,
+     "abroad": 3,
+     "retiredOrDropped": 405,
+     "news": 408,
+     "newPlayers": 631,
+     "kept": 4761
+    },
+    "newIdSamples": [
+     "newman-academy-2028-m17-intake-0",
+     "newman-academy-2028-m17-intake-1",
+     "newman-academy-2028-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 41,
+     "refusedPairs": 59,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "belgrano-athletic",
+      "division": "Primera A",
+      "strength": 10.9,
+      "rankByStrength": 1,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-fernando",
+      "division": "Primera A",
+      "strength": 10.4,
+      "rankByStrength": 4,
+      "rankByXV": 4,
+      "objective": "Alta"
+     },
+     {
+      "id": "buenos-aires-crc",
+      "division": "Top 14",
+      "strength": 11.4,
+      "rankByStrength": 8,
+      "rankByXV": 6,
+      "objective": "Media"
+     },
+     {
+      "id": "curupayti",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera B",
+      "strength": 9.5,
+      "rankByStrength": 2,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera B",
+      "strength": 9.8,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "deportiva-francesa",
+      "division": "Primera A",
+      "strength": 8.9,
+      "rankByStrength": 14,
+      "rankByXV": 12,
+      "objective": "Baja"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera A",
+      "strength": 9.4,
+      "rankByStrength": 12,
+      "rankByXV": 13,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 103.1,
+    "injuredMax": 132,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#8",
+     "lomas-athletic:Primera A#6",
+     "delta:Primera B#10"
+    ],
+    "champions": {
+     "Top 14": "alumni",
+     "Primera A": "curupayti",
+     "Primera B": "universitario-la-plata"
+    },
+    "market": {
+     "contacts": 100,
+     "accepted": 41,
+     "refused": 59,
+     "violations": 0,
+     "blockedOk": 200,
+     "groupsReshuffled": 190
+    }
+   },
+   {
+    "season": 2028,
+    "sizes": {
+     "start": 5.91,
+     "mid": 8.89,
+     "afterRegular": 11.73,
+     "end": 11.86,
+     "parts": {
+      "clubs": 4.84,
+      "fixtures": 5.15,
+      "news": 0.36,
+      "playerStats": 1.33,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 545,
+     "seasonMs": 27797,
+     "avgRoundMs": 464,
+     "maxRoundMs": 623
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 177,
+       "mean": 83.4
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 50,
+       "mean": 19.4
+      },
+      "M19": {
+       "min": 15,
+       "max": 15,
+       "mean": 15
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.1
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 16,
+      "outOfPos": 55,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre B": {
+        "noOne": 16,
+        "outOfPos": 54,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 47,
+      "outOfPos": 135,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 5,
+        "clubsWithGap": 5
+       },
+       "Pre B": {
+        "noOne": 38,
+        "outOfPos": 98,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 9,
+        "outOfPos": 32,
+        "clubsWithGap": 3
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 47,
+      "outOfPos": 119,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 4,
+        "clubsWithGap": 4
+       },
+       "Pre B": {
+        "noOne": 32,
+        "outOfPos": 86,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 15,
+        "outOfPos": 29,
+        "clubsWithGap": 3
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 5392,
+    "biggestSquads": [
+     "buenos-aires-crc:177",
+     "alumni:174",
+     "champagnat:160"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 528,
+    "strengthVsXV": {
+     "Top 14": 0.95,
+     "Primera A": 0.96,
+     "Primera B": 0.94
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "sic",
+      "newman",
+      "hindu"
+     ],
+     "Primera A": [
+      "belgrano-athletic",
+      "lomas-athletic",
+      "pucara"
+     ],
+     "Primera B": [
+      "san-albano",
+      "banco-nacion",
+      "manuel-belgrano"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "sic",
+       "newman",
+       "hindu",
+       "casi",
+       "alumni",
+       "cuba",
+       "los-tilos",
+       "la-plata",
+       "atletico-del-rosario",
+       "san-luis",
+       "buenos-aires-crc",
+       "los-matreros",
+       "regatas-bella-vista",
+       "curupayti"
+      ],
+      "seeds": [
+       "sic",
+       "newman",
+       "hindu",
+       "casi"
+      ],
+      "champion": "hindu",
+      "final": "hindu 34-21 casi"
+     },
+     "Primera A": {
+      "table": [
+       "belgrano-athletic",
+       "lomas-athletic",
+       "pucara",
+       "san-fernando",
+       "san-cirano",
+       "geba",
+       "champagnat",
+       "san-andres",
+       "hurling",
+       "olivos",
+       "liceo-naval",
+       "deportiva-francesa",
+       "universitario-la-plata",
+       "pueyrredon"
+      ],
+      "seeds": [
+       "lomas-athletic",
+       "pucara",
+       "san-fernando",
+       "san-cirano"
+      ],
+      "champion": "pucara",
+      "final": "lomas-athletic 26-31 pucara"
+     },
+     "Primera B": {
+      "table": [
+       "san-albano",
+       "banco-nacion",
+       "manuel-belgrano",
+       "don-bosco",
+       "italiano",
+       "cu-quilmes",
+       "san-martin",
+       "san-patricio",
+       "mariano-moreno",
+       "argentino",
+       "monte-grande",
+       "liceo-militar",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "banco-nacion",
+       "manuel-belgrano",
+       "don-bosco",
+       "italiano"
+      ],
+      "champion": "italiano",
+      "final": "don-bosco 14-17 italiano"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "regatas-bella-vista→Primera A",
+     "curupayti→Primera A",
+     "belgrano-athletic→Top 14",
+     "pucara→Top 14",
+     "universitario-la-plata→Primera B",
+     "pueyrredon→Primera B",
+     "san-albano→Primera A",
+     "italiano→Primera A"
+    ],
+    "ages": {
+     "both": 5078,
+     "knownPlus1": 106,
+     "knownOther": 0,
+     "unknownStays": 2137,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2835,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5078,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 90,
+     "attrsDown": 530,
+     "playersWithAttrAbovePotential": 844,
+     "of": 5078
+    },
+    "turnover": {
+     "gone": 314,
+     "abroad": 0,
+     "retiredOrDropped": 314,
+     "news": 314,
+     "newPlayers": 630,
+     "kept": 5078
+    },
+    "newIdSamples": [
+     "newman-academy-2029-m17-intake-0",
+     "newman-academy-2029-m17-intake-1",
+     "newman-academy-2029-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 58,
+     "refusedPairs": 78,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "regatas-bella-vista",
+      "division": "Primera A",
+      "strength": 11.5,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "curupayti",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 4,
+      "rankByXV": 8,
+      "objective": "Alta"
+     },
+     {
+      "id": "belgrano-athletic",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 12,
+      "rankByXV": 11,
+      "objective": "Baja"
+     },
+     {
+      "id": "pucara",
+      "division": "Top 14",
+      "strength": 10.4,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera B",
+      "strength": 9.4,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "pueyrredon",
+      "division": "Primera B",
+      "strength": 10.1,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera A",
+      "strength": 9.8,
+      "rankByStrength": 10,
+      "rankByXV": 10,
+      "objective": "Media"
+     },
+     {
+      "id": "italiano",
+      "division": "Primera A",
+      "strength": 8.6,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 98.2,
+    "injuredMax": 122,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#13",
+     "lomas-athletic:Primera A#2",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "hindu",
+     "Primera A": "pucara",
+     "Primera B": "italiano"
+    },
+    "market": {
+     "contacts": 136,
+     "accepted": 58,
+     "refused": 78,
+     "violations": 0,
+     "blockedOk": 272,
+     "groupsReshuffled": 256
+    }
+   },
+   {
+    "season": 2029,
+    "sizes": {
+     "start": 6.68,
+     "mid": 9.65,
+     "afterRegular": 12.48,
+     "end": 12.6,
+     "parts": {
+      "clubs": 5.21,
+      "fixtures": 5.08,
+      "news": 0.36,
+      "playerStats": 1.76,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 616,
+     "seasonMs": 29960,
+     "avgRoundMs": 494,
+     "maxRoundMs": 765
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 176,
+       "mean": 83.3
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 51,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 51,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.4
+      },
+      "M19": {
+       "min": 18,
+       "max": 27,
+       "mean": 22.6
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 14,
+      "outOfPos": 57,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 2,
+        "clubsWithGap": 2
+       },
+       "Pre B": {
+        "noOne": 14,
+        "outOfPos": 55,
+        "clubsWithGap": 25
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 44,
+      "outOfPos": 104,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 9,
+        "clubsWithGap": 7
+       },
+       "Pre B": {
+        "noOne": 44,
+        "outOfPos": 94,
+        "clubsWithGap": 32
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 42,
+      "outOfPos": 96,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 8,
+        "clubsWithGap": 7
+       },
+       "Pre B": {
+        "noOne": 40,
+        "outOfPos": 77,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 2,
+        "outOfPos": 11,
+        "clubsWithGap": 1
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 5708,
+    "biggestSquads": [
+     "buenos-aires-crc:176",
+     "alumni:171",
+     "champagnat:160"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 844,
+    "strengthVsXV": {
+     "Top 14": 0.98,
+     "Primera A": 0.92,
+     "Primera B": 0.98
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "sic",
+      "newman",
+      "los-tilos"
+     ],
+     "Primera A": [
+      "lomas-athletic",
+      "regatas-bella-vista",
+      "champagnat"
+     ],
+     "Primera B": [
+      "banco-nacion",
+      "pueyrredon",
+      "cu-quilmes"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "sic",
+       "newman",
+       "los-tilos",
+       "hindu",
+       "alumni",
+       "casi",
+       "cuba",
+       "la-plata",
+       "buenos-aires-crc",
+       "los-matreros",
+       "san-luis",
+       "belgrano-athletic",
+       "atletico-del-rosario",
+       "pucara"
+      ],
+      "seeds": [
+       "sic",
+       "newman",
+       "los-tilos",
+       "hindu"
+      ],
+      "champion": "sic",
+      "final": "sic 24-19 newman"
+     },
+     "Primera A": {
+      "table": [
+       "lomas-athletic",
+       "regatas-bella-vista",
+       "champagnat",
+       "san-cirano",
+       "curupayti",
+       "geba",
+       "san-fernando",
+       "deportiva-francesa",
+       "hurling",
+       "olivos",
+       "liceo-naval",
+       "san-andres",
+       "san-albano",
+       "italiano"
+      ],
+      "seeds": [
+       "regatas-bella-vista",
+       "champagnat",
+       "san-cirano",
+       "curupayti"
+      ],
+      "champion": "regatas-bella-vista",
+      "final": "regatas-bella-vista 30-17 champagnat"
+     },
+     "Primera B": {
+      "table": [
+       "banco-nacion",
+       "pueyrredon",
+       "cu-quilmes",
+       "don-bosco",
+       "mariano-moreno",
+       "manuel-belgrano",
+       "san-patricio",
+       "universitario-la-plata",
+       "delta",
+       "monte-grande",
+       "argentino",
+       "san-martin",
+       "liceo-militar",
+       "vicentinos"
+      ],
+      "seeds": [
+       "pueyrredon",
+       "cu-quilmes",
+       "don-bosco",
+       "mariano-moreno"
+      ],
+      "champion": "pueyrredon",
+      "final": "pueyrredon 26-19 cu-quilmes"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "atletico-del-rosario→Primera A",
+     "pucara→Primera A",
+     "lomas-athletic→Top 14",
+     "regatas-bella-vista→Top 14",
+     "san-albano→Primera B",
+     "italiano→Primera B",
+     "banco-nacion→Primera A",
+     "pueyrredon→Primera A"
+    ],
+    "ages": {
+     "both": 5385,
+     "knownPlus1": 95,
+     "knownOther": 0,
+     "unknownStays": 2131,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3159,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5385,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 81,
+     "attrsDown": 639,
+     "playersWithAttrAbovePotential": 1270,
+     "of": 5385
+    },
+    "turnover": {
+     "gone": 323,
+     "abroad": 3,
+     "retiredOrDropped": 320,
+     "news": 323,
+     "newPlayers": 630,
+     "kept": 5385
+    },
+    "newIdSamples": [
+     "newman-academy-2030-m17-intake-0",
+     "newman-academy-2030-m17-intake-1",
+     "newman-academy-2030-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 72,
+     "refusedPairs": 100,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "atletico-del-rosario",
+      "division": "Primera A",
+      "strength": 11,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "pucara",
+      "division": "Primera A",
+      "strength": 10.4,
+      "rankByStrength": 5,
+      "rankByXV": 5,
+      "objective": "Alta"
+     },
+     {
+      "id": "lomas-athletic",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 11,
+      "objective": "Baja"
+     },
+     {
+      "id": "regatas-bella-vista",
+      "division": "Top 14",
+      "strength": 11.5,
+      "rankByStrength": 7,
+      "rankByXV": 8,
+      "objective": "Media"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera B",
+      "strength": 9.8,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "italiano",
+      "division": "Primera B",
+      "strength": 8.6,
+      "rankByStrength": 9,
+      "rankByXV": 5,
+      "objective": "Media"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera A",
+      "strength": 9.5,
+      "rankByStrength": 12,
+      "rankByXV": 12,
+      "objective": "Baja"
+     },
+     {
+      "id": "pueyrredon",
+      "division": "Primera A",
+      "strength": 10.1,
+      "rankByStrength": 8,
+      "rankByXV": 9,
+      "objective": "Media"
+     }
+    ],
+    "injuredAvg": 99.5,
+    "injuredMax": 132,
+    "keepClubs": [
+     "regatas-bella-vista:Primera A#2",
+     "lomas-athletic:Primera A#1",
+     "delta:Primera B#9"
+    ],
+    "champions": {
+     "Top 14": "sic",
+     "Primera A": "regatas-bella-vista",
+     "Primera B": "pueyrredon"
+    },
+    "market": {
+     "contacts": 172,
+     "accepted": 72,
+     "refused": 100,
+     "violations": 0,
+     "blockedOk": 344,
+     "groupsReshuffled": 329
+    }
+   },
+   {
+    "season": 2030,
+    "sizes": {
+     "start": 7.45,
+     "mid": 10.43,
+     "afterRegular": 13.23,
+     "end": 13.28,
+     "parts": {
+      "clubs": 5.56,
+      "fixtures": 4.96,
+      "news": 0.36,
+      "playerStats": 2.2,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 758,
+     "seasonMs": 32830,
+     "avgRoundMs": 537,
+     "maxRoundMs": 712
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 177,
+       "mean": 83.3
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 50,
+       "mean": 19.4
+      },
+      "M19": {
+       "min": 28,
+       "max": 30,
+       "mean": 30
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 17,
+      "outOfPos": 69,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 6,
+        "clubsWithGap": 5
+       },
+       "Pre B": {
+        "noOne": 17,
+        "outOfPos": 63,
+        "clubsWithGap": 25
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 49,
+      "outOfPos": 108,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 1,
+        "outOfPos": 17,
+        "clubsWithGap": 14
+       },
+       "Pre B": {
+        "noOne": 48,
+        "outOfPos": 91,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 51,
+      "outOfPos": 96,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 14,
+        "clubsWithGap": 10
+       },
+       "Pre B": {
+        "noOne": 51,
+        "outOfPos": 82,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "migrateV15": {
+     "dataVersion": 18,
+     "players": 6015,
+     "before": 6015
+    },
+    "totalPlayers": 6015,
+    "biggestSquads": [
+     "buenos-aires-crc:177",
+     "alumni:169",
+     "champagnat:160"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 1270,
+    "strengthVsXV": {
+     "Top 14": 0.92,
+     "Primera A": 0.84,
+     "Primera B": 0.86
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "sic",
+      "newman",
+      "los-tilos"
+     ],
+     "Primera A": [
+      "san-cirano",
+      "atletico-del-rosario",
+      "hurling"
+     ],
+     "Primera B": [
+      "san-albano",
+      "universitario-la-plata",
+      "don-bosco"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "sic",
+       "newman",
+       "los-tilos",
+       "hindu",
+       "buenos-aires-crc",
+       "casi",
+       "alumni",
+       "los-matreros",
+       "la-plata",
+       "cuba",
+       "san-luis",
+       "regatas-bella-vista",
+       "lomas-athletic",
+       "belgrano-athletic"
+      ],
+      "seeds": [
+       "sic",
+       "newman",
+       "los-tilos",
+       "hindu"
+      ],
+      "champion": "sic",
+      "final": "sic 35-14 newman"
+     },
+     "Primera A": {
+      "table": [
+       "san-cirano",
+       "atletico-del-rosario",
+       "hurling",
+       "geba",
+       "pucara",
+       "san-andres",
+       "san-fernando",
+       "curupayti",
+       "deportiva-francesa",
+       "pueyrredon",
+       "banco-nacion",
+       "liceo-naval",
+       "olivos",
+       "champagnat"
+      ],
+      "seeds": [
+       "atletico-del-rosario",
+       "hurling",
+       "geba",
+       "pucara"
+      ],
+      "champion": "hurling",
+      "final": "atletico-del-rosario 23-27 hurling"
+     },
+     "Primera B": {
+      "table": [
+       "san-albano",
+       "universitario-la-plata",
+       "don-bosco",
+       "manuel-belgrano",
+       "cu-quilmes",
+       "italiano",
+       "mariano-moreno",
+       "san-patricio",
+       "san-martin",
+       "delta",
+       "argentino",
+       "monte-grande",
+       "liceo-militar",
+       "vicentinos"
+      ],
+      "seeds": [
+       "universitario-la-plata",
+       "don-bosco",
+       "manuel-belgrano",
+       "cu-quilmes"
+      ],
+      "champion": "don-bosco",
+      "final": "don-bosco 30-12 cu-quilmes"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "lomas-athletic→Primera A",
+     "belgrano-athletic→Primera A",
+     "san-cirano→Top 14",
+     "hurling→Top 14",
+     "olivos→Primera B",
+     "champagnat→Primera B",
+     "san-albano→Primera A",
+     "don-bosco→Primera A"
+    ],
+    "ages": {
+     "both": 5419,
+     "knownPlus1": 87,
+     "knownOther": 0,
+     "unknownStays": 2113,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3219,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5419,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 95,
+     "attrsDown": 705,
+     "playersWithAttrAbovePotential": 1557,
+     "of": 5419
+    },
+    "turnover": {
+     "gone": 596,
+     "abroad": 1,
+     "retiredOrDropped": 595,
+     "news": 596,
+     "newPlayers": 630,
+     "kept": 5419
+    },
+    "newIdSamples": [
+     "newman-academy-2031-m17-intake-0",
+     "newman-academy-2031-m17-intake-1",
+     "newman-academy-2031-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 91,
+     "refusedPairs": 119,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "lomas-athletic",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "belgrano-athletic",
+      "division": "Primera A",
+      "strength": 10.9,
+      "rankByStrength": 2,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "hurling",
+      "division": "Top 14",
+      "strength": 9.9,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "olivos",
+      "division": "Primera B",
+      "strength": 9.5,
+      "rankByStrength": 2,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "champagnat",
+      "division": "Primera B",
+      "strength": 10.3,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera A",
+      "strength": 9.8,
+      "rankByStrength": 10,
+      "rankByXV": 10,
+      "objective": "Media"
+     },
+     {
+      "id": "don-bosco",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 103.3,
+    "injuredMax": 123,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#12",
+     "lomas-athletic:Top 14#13",
+     "delta:Primera B#10"
+    ],
+    "champions": {
+     "Top 14": "sic",
+     "Primera A": "hurling",
+     "Primera B": "don-bosco"
+    },
+    "market": {
+     "contacts": 210,
+     "accepted": 91,
+     "refused": 119,
+     "violations": 0,
+     "blockedOk": 420,
+     "groupsReshuffled": 408
+    }
+   },
+   {
+    "season": 2031,
+    "sizes": {
+     "start": 8,
+     "mid": 11.06,
+     "afterRegular": 13.98,
+     "end": 14.03,
+     "parts": {
+      "clubs": 5.66,
+      "fixtures": 5.16,
+      "news": 0.36,
+      "playerStats": 2.65,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 663,
+     "seasonMs": 35963,
+     "avgRoundMs": 571,
+     "maxRoundMs": 780
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 179,
+       "mean": 84
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.7
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.7
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 52,
+       "mean": 19.7
+      },
+      "M19": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 43,
+      "outOfPos": 73,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 13,
+        "clubsWithGap": 9
+       },
+       "Pre B": {
+        "noOne": 43,
+        "outOfPos": 60,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 85,
+      "outOfPos": 91,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre A": {
+        "noOne": 2,
+        "outOfPos": 17,
+        "clubsWithGap": 12
+       },
+       "Pre B": {
+        "noOne": 83,
+        "outOfPos": 73,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 70,
+      "outOfPos": 84,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 15,
+        "clubsWithGap": 11
+       },
+       "Pre B": {
+        "noOne": 70,
+        "outOfPos": 68,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 6049,
+    "biggestSquads": [
+     "buenos-aires-crc:179",
+     "alumni:175",
+     "champagnat:164"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 6,
+    "attrAbovePotentialAtStart": 1557,
+    "strengthVsXV": {
+     "Top 14": 0.83,
+     "Primera A": 0.96,
+     "Primera B": 0.9
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "sic",
+      "los-tilos"
+     ],
+     "Primera A": [
+      "lomas-athletic",
+      "atletico-del-rosario",
+      "belgrano-athletic"
+     ],
+     "Primera B": [
+      "champagnat",
+      "olivos",
+      "universitario-la-plata"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "sic",
+       "los-tilos",
+       "alumni",
+       "cuba",
+       "buenos-aires-crc",
+       "la-plata",
+       "casi",
+       "hindu",
+       "los-matreros",
+       "san-luis",
+       "regatas-bella-vista",
+       "hurling",
+       "san-cirano"
+      ],
+      "seeds": [
+       "newman",
+       "sic",
+       "los-tilos",
+       "alumni"
+      ],
+      "champion": "newman",
+      "final": "newman 34-28 los-tilos"
+     },
+     "Primera A": {
+      "table": [
+       "lomas-athletic",
+       "atletico-del-rosario",
+       "belgrano-athletic",
+       "pucara",
+       "san-fernando",
+       "san-andres",
+       "geba",
+       "curupayti",
+       "liceo-naval",
+       "pueyrredon",
+       "don-bosco",
+       "banco-nacion",
+       "san-albano",
+       "deportiva-francesa"
+      ],
+      "seeds": [
+       "atletico-del-rosario",
+       "belgrano-athletic",
+       "pucara",
+       "san-fernando"
+      ],
+      "champion": "atletico-del-rosario",
+      "final": "atletico-del-rosario 21-13 pucara"
+     },
+     "Primera B": {
+      "table": [
+       "champagnat",
+       "olivos",
+       "universitario-la-plata",
+       "cu-quilmes",
+       "manuel-belgrano",
+       "argentino",
+       "san-martin",
+       "italiano",
+       "mariano-moreno",
+       "san-patricio",
+       "delta",
+       "monte-grande",
+       "vicentinos",
+       "liceo-militar"
+      ],
+      "seeds": [
+       "olivos",
+       "universitario-la-plata",
+       "cu-quilmes",
+       "manuel-belgrano"
+      ],
+      "champion": "olivos",
+      "final": "olivos 52-7 universitario-la-plata"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "hurling→Primera A",
+     "san-cirano→Primera A",
+     "lomas-athletic→Top 14",
+     "atletico-del-rosario→Top 14",
+     "san-albano→Primera B",
+     "deportiva-francesa→Primera B",
+     "champagnat→Primera A",
+     "olivos→Primera A"
+    ],
+    "ages": {
+     "both": 5422,
+     "knownPlus1": 75,
+     "knownOther": 0,
+     "unknownStays": 2092,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3255,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5422,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 188,
+     "attrsDown": 1153,
+     "playersWithAttrAbovePotential": 1799,
+     "of": 5422
+    },
+    "turnover": {
+     "gone": 627,
+     "abroad": 1,
+     "retiredOrDropped": 626,
+     "news": 627,
+     "newPlayers": 630,
+     "kept": 5422
+    },
+    "newIdSamples": [
+     "newman-academy-2032-m17-intake-0",
+     "newman-academy-2032-m17-intake-1",
+     "newman-academy-2032-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 107,
+     "refusedPairs": 141,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "hurling",
+      "division": "Primera A",
+      "strength": 9.9,
+      "rankByStrength": 9,
+      "rankByXV": 4,
+      "objective": "Media"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 2,
+      "rankByXV": 3,
+      "objective": "Máxima"
+     },
+     {
+      "id": "lomas-athletic",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 12,
+      "objective": "Baja"
+     },
+     {
+      "id": "atletico-del-rosario",
+      "division": "Top 14",
+      "strength": 11,
+      "rankByStrength": 12,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera B",
+      "strength": 9.8,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "deportiva-francesa",
+      "division": "Primera B",
+      "strength": 8.9,
+      "rankByStrength": 5,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "champagnat",
+      "division": "Primera A",
+      "strength": 10.3,
+      "rankByStrength": 6,
+      "rankByXV": 10,
+      "objective": "Media"
+     },
+     {
+      "id": "olivos",
+      "division": "Primera A",
+      "strength": 9.5,
+      "rankByStrength": 11,
+      "rankByXV": 11,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 103.1,
+    "injuredMax": 123,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#12",
+     "lomas-athletic:Primera A#1",
+     "delta:Primera B#11"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "atletico-del-rosario",
+     "Primera B": "olivos"
+    },
+    "market": {
+     "contacts": 248,
+     "accepted": 107,
+     "refused": 141,
+     "violations": 0,
+     "blockedOk": 496,
+     "groupsReshuffled": 498
+    }
+   }
+  ],
+  "notes": [],
+  "timing": [],
+  "initMs": 492,
+  "actions": {
+   "ok": {
+    "tactics": 72,
+    "youth-training": 72,
+    "training": 72,
+    "lineup": 126,
+    "train-player": 468,
+    "retrain": 90,
+    "promote": 90,
+    "assign-senior": 90
+   },
+   "err": {
+    "contact-player: Tu plantel superior está completo (130).": 82,
+    "contact-player: Ya hiciste un contacto en esta fecha.": 3
+   }
+  },
+  "totalMs": 170829,
+  "violations": [
+   {
+    "sev": "broken",
+    "code": "contacto-rechazado-por-un-contacto-de-la-temporada-anterior",
+    "fn": "contactPlayer (transfers.contacts no se reinicia al cambiar de temporada)",
+    "count": 3,
+    "first": {
+     "seed": 202,
+     "season": 2028,
+     "round": 13,
+     "msg": "regatas-bella-vista en la fecha 13 de 2028: transfers.contacts={\"lomas-athletic\":12,\"regatas-bella-vista\":13,\"delta\":12}"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-con-menos-de-15",
+    "fn": "assignSeniorGroups/addAcademyIntake",
+    "count": 1402,
+    "first": {
+     "seed": 202,
+     "season": 2026,
+     "round": 0,
+     "msg": "hindu Pre A: grupo propio de 5 (inicio 2026)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-no-puede-armar-equipo",
+    "fn": "categoryTeams/playParallelRound",
+    "count": 503,
+    "first": {
+     "seed": 202,
+     "season": 2026,
+     "round": 0,
+     "msg": "cuba Pre B: 2 puestos sin jugador (inicio 2026)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "fichaje-reasigna-las-categorias-de-todo-el-plantel",
+    "fn": "contactPlayer/assignSeniorGroups",
+    "count": 98,
+    "first": {
+     "seed": 202,
+     "season": 2026,
+     "round": 3,
+     "msg": "regatas-bella-vista ← olivos-s-38 (olivos): 34 jugadores cambiaron de categoría (incluye asignaciones manuales)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-prometida-no-se-respeta-tras-traspaso",
+    "fn": "contactPlayer (assignSeniorGroups reasigna todo el plantel del comprador)",
+    "count": 96,
+    "first": {
+     "seed": 202,
+     "season": 2026,
+     "round": 1,
+     "msg": "lomas-athletic ← italiano-s-47 (italiano): prometido XV, queda en Pre B"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "plantel-superior-supera-SQUAD_LIMIT",
+    "fn": "squadTurnover/contactPlayer",
+    "count": 27,
+    "first": {
+     "seed": 202,
+     "season": 2026,
+     "round": 0,
+     "msg": "alumni 153"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "atributo-por-encima-del-potencial",
+    "fn": "developPlayer/reviewDevelopment",
+    "count": 6,
+    "first": {
+     "seed": 202,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "371 de 4408 jugadores"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "vetos-de-mercado-no-se-limpian-al-cambiar-de-temporada",
+    "fn": "advanceSeasonWorld (transfers.refused persiste)",
+    "count": 6,
+    "first": {
+     "seed": 202,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "31 pares siguen vetados"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "contacts-de-mercado-persisten-entre-temporadas",
+    "fn": "contactPlayer/advanceSeasonWorld",
+    "count": 6,
+    "first": {
+     "seed": 202,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "{\"lomas-athletic\":25,\"regatas-bella-vista\":23,\"delta\":23} (un número de fecha viejo puede bloquear el primer contacto de la fecha igual)"
+    }
+   }
+  ],
+  "finalSize": 8.5
+ },
+ {
+  "seed": 303,
+  "managed": [
+   "regatas-bella-vista",
+   "lomas-athletic",
+   "delta"
+  ],
+  "seasons": [
+   {
+    "season": 2026,
+    "sizes": {
+     "start": 3.39,
+     "mid": 6.63,
+     "afterRegular": 9.63,
+     "end": 9.77,
+     "parts": {
+      "clubs": 3.7,
+      "fixtures": 5.18,
+      "news": 0.28,
+      "playerStats": 0.45,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 398,
+     "seasonMs": 18828,
+     "avgRoundMs": 313,
+     "maxRoundMs": 391
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 60,
+       "max": 153,
+       "mean": 77.7
+      },
+      "Primera": {
+       "min": 22,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 13,
+       "max": 56,
+       "mean": 20.4
+      },
+      "Pre A": {
+       "min": 7,
+       "max": 45,
+       "mean": 18.2
+      },
+      "Pre B": {
+       "min": 7,
+       "max": 38,
+       "mean": 16.2
+      },
+      "M19": {
+       "min": 15,
+       "max": 30,
+       "mean": 16.4
+      },
+      "M17": {
+       "min": 15,
+       "max": 15,
+       "mean": 15
+      },
+      "injured": {
+       "min": 0,
+       "max": 0,
+       "mean": 0
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 2,
+      "outOfPos": 4,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre B": {
+        "noOne": 2,
+        "outOfPos": 4,
+        "clubsWithGap": 2
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 90,
+      "outOfPos": 111,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 4,
+        "clubsWithGap": 4
+       },
+       "Pre B": {
+        "noOne": 84,
+        "outOfPos": 85,
+        "clubsWithGap": 32
+       },
+       "M19": {
+        "noOne": 6,
+        "outOfPos": 22,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 71,
+      "outOfPos": 85,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 1,
+        "outOfPos": 3,
+        "clubsWithGap": 2
+       },
+       "Pre B": {
+        "noOne": 60,
+        "outOfPos": 62,
+        "clubsWithGap": 26
+       },
+       "M19": {
+        "noOne": 10,
+        "outOfPos": 20,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 4584,
+    "biggestSquads": [
+     "alumni:153",
+     "buenos-aires-crc:148",
+     "atletico-del-rosario:133"
+    ],
+    "smallestSquads": [
+     "liceo-militar:60",
+     "vicentinos:60"
+    ],
+    "clubsOverLimit": 3,
+    "attrAbovePotentialAtStart": 298,
+    "strengthVsXV": {
+     "Top 14": 0.82,
+     "Primera A": 0.96,
+     "Primera B": 0.98
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "casi",
+      "sic"
+     ],
+     "Primera A": [
+      "san-luis",
+      "lomas-athletic",
+      "curupayti"
+     ],
+     "Primera B": [
+      "liceo-naval",
+      "manuel-belgrano",
+      "banco-nacion"
+     ]
+    },
+    "news": 1457,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "casi",
+       "sic",
+       "hindu",
+       "alumni",
+       "regatas-bella-vista",
+       "la-plata",
+       "buenos-aires-crc",
+       "belgrano-athletic",
+       "los-tilos",
+       "atletico-del-rosario",
+       "los-matreros",
+       "cuba",
+       "champagnat"
+      ],
+      "seeds": [
+       "newman",
+       "casi",
+       "sic",
+       "hindu"
+      ],
+      "champion": "newman",
+      "final": "newman 37-12 casi"
+     },
+     "Primera A": {
+      "table": [
+       "san-luis",
+       "lomas-athletic",
+       "curupayti",
+       "san-cirano",
+       "san-fernando",
+       "pucara",
+       "hurling",
+       "san-andres",
+       "geba",
+       "san-albano",
+       "olivos",
+       "pueyrredon",
+       "universitario-la-plata",
+       "deportiva-francesa"
+      ],
+      "seeds": [
+       "lomas-athletic",
+       "curupayti",
+       "san-cirano",
+       "san-fernando"
+      ],
+      "champion": "lomas-athletic",
+      "final": "lomas-athletic 32-7 san-cirano"
+     },
+     "tieSeen": 1,
+     "Primera B": {
+      "table": [
+       "liceo-naval",
+       "manuel-belgrano",
+       "banco-nacion",
+       "don-bosco",
+       "cu-quilmes",
+       "mariano-moreno",
+       "san-martin",
+       "italiano",
+       "san-patricio",
+       "argentino",
+       "liceo-militar",
+       "delta",
+       "monte-grande",
+       "vicentinos"
+      ],
+      "seeds": [
+       "manuel-belgrano",
+       "banco-nacion",
+       "don-bosco",
+       "cu-quilmes"
+      ],
+      "champion": "manuel-belgrano",
+      "final": "manuel-belgrano 13-13 banco-nacion"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "cuba→Primera A",
+     "champagnat→Primera A",
+     "san-luis→Top 14",
+     "lomas-athletic→Top 14",
+     "universitario-la-plata→Primera B",
+     "deportiva-francesa→Primera B",
+     "liceo-naval→Primera A",
+     "manuel-belgrano→Primera A"
+    ],
+    "ages": {
+     "both": 4405,
+     "knownPlus1": 121,
+     "knownOther": 0,
+     "unknownStays": 2146,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2138,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 4405,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 105,
+     "attrsDown": 347,
+     "playersWithAttrAbovePotential": 331,
+     "of": 4405
+    },
+    "turnover": {
+     "gone": 179,
+     "abroad": 2,
+     "retiredOrDropped": 177,
+     "news": 179,
+     "newPlayers": 762,
+     "kept": 4405
+    },
+    "newIdSamples": [
+     "newman-academy-2027-m17-intake-0",
+     "newman-academy-2027-m17-intake-1",
+     "newman-academy-2027-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 17,
+     "refusedPairs": 34,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "cuba",
+      "division": "Primera A",
+      "strength": 11.3,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "champagnat",
+      "division": "Primera A",
+      "strength": 10.3,
+      "rankByStrength": 6,
+      "rankByXV": 4,
+      "objective": "Media"
+     },
+     {
+      "id": "san-luis",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 13,
+      "rankByXV": 12,
+      "objective": "Baja"
+     },
+     {
+      "id": "lomas-athletic",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera B",
+      "strength": 9.4,
+      "rankByStrength": 2,
+      "rankByXV": 3,
+      "objective": "Máxima"
+     },
+     {
+      "id": "deportiva-francesa",
+      "division": "Primera B",
+      "strength": 8.9,
+      "rankByStrength": 5,
+      "rankByXV": 1,
+      "objective": "Alta"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "manuel-belgrano",
+      "division": "Primera A",
+      "strength": 9,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 101.7,
+    "injuredMax": 135,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#6",
+     "lomas-athletic:Primera A#2",
+     "delta:Primera B#12"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "lomas-athletic",
+     "Primera B": "manuel-belgrano"
+    },
+    "market": {
+     "contacts": 51,
+     "accepted": 17,
+     "refused": 34,
+     "violations": 0,
+     "blockedOk": 102,
+     "groupsReshuffled": 99
+    }
+   },
+   {
+    "season": 2027,
+    "sizes": {
+     "start": 5.08,
+     "mid": 8.1,
+     "afterRegular": 10.95,
+     "end": 11,
+     "parts": {
+      "clubs": 4.53,
+      "fixtures": 5.04,
+      "news": 0.37,
+      "playerStats": 0.89,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 509,
+     "seasonMs": 24318,
+     "avgRoundMs": 398,
+     "maxRoundMs": 644
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 60,
+       "max": 149,
+       "mean": 80.3
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 13,
+       "max": 42,
+       "mean": 19.5
+      },
+      "Pre A": {
+       "min": 13,
+       "max": 42,
+       "mean": 19.5
+      },
+      "Pre B": {
+       "min": 11,
+       "max": 42,
+       "mean": 18.3
+      },
+      "M19": {
+       "min": 16,
+       "max": 38,
+       "mean": 19.4
+      },
+      "M17": {
+       "min": 19,
+       "max": 26,
+       "mean": 23.3
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.3
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Alta": 3,
+      "Máxima": 2,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 8,
+      "outOfPos": 43,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre B": {
+        "noOne": 8,
+        "outOfPos": 42,
+        "clubsWithGap": 25
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 53,
+      "outOfPos": 95,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 3,
+        "clubsWithGap": 3
+       },
+       "Pre B": {
+        "noOne": 50,
+        "outOfPos": 87,
+        "clubsWithGap": 32
+       },
+       "M19": {
+        "noOne": 3,
+        "outOfPos": 5,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 36,
+      "outOfPos": 83,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre B": {
+        "noOne": 29,
+        "outOfPos": 71,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 7,
+        "outOfPos": 11,
+        "clubsWithGap": 2
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "migrateV15": {
+     "dataVersion": 18,
+     "players": 5167,
+     "before": 5167
+    },
+    "totalPlayers": 5167,
+    "biggestSquads": [
+     "alumni:149",
+     "buenos-aires-crc:148",
+     "atletico-del-rosario:133"
+    ],
+    "smallestSquads": [
+     "argentino:63",
+     "sic:60"
+    ],
+    "clubsOverLimit": 3,
+    "attrAbovePotentialAtStart": 331,
+    "strengthVsXV": {
+     "Top 14": 0.93,
+     "Primera A": 0.93,
+     "Primera B": 0.9
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "hindu",
+      "sic"
+     ],
+     "Primera A": [
+      "cuba",
+      "san-fernando",
+      "champagnat"
+     ],
+     "Primera B": [
+      "deportiva-francesa",
+      "banco-nacion",
+      "universitario-la-plata"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "tieSeen": 1,
+     "Top 14": {
+      "table": [
+       "newman",
+       "hindu",
+       "sic",
+       "alumni",
+       "casi",
+       "los-tilos",
+       "regatas-bella-vista",
+       "los-matreros",
+       "la-plata",
+       "atletico-del-rosario",
+       "buenos-aires-crc",
+       "san-luis",
+       "belgrano-athletic",
+       "lomas-athletic"
+      ],
+      "seeds": [
+       "newman",
+       "hindu",
+       "sic",
+       "alumni"
+      ],
+      "champion": "newman",
+      "final": "newman 42-10 sic"
+     },
+     "Primera A": {
+      "table": [
+       "cuba",
+       "san-fernando",
+       "champagnat",
+       "curupayti",
+       "geba",
+       "san-cirano",
+       "hurling",
+       "pucara",
+       "pueyrredon",
+       "olivos",
+       "san-andres",
+       "san-albano",
+       "manuel-belgrano",
+       "liceo-naval"
+      ],
+      "seeds": [
+       "san-fernando",
+       "champagnat",
+       "curupayti",
+       "geba"
+      ],
+      "champion": "champagnat",
+      "final": "san-fernando 25-26 champagnat"
+     },
+     "Primera B": {
+      "table": [
+       "deportiva-francesa",
+       "banco-nacion",
+       "universitario-la-plata",
+       "cu-quilmes",
+       "san-martin",
+       "don-bosco",
+       "mariano-moreno",
+       "italiano",
+       "san-patricio",
+       "argentino",
+       "monte-grande",
+       "delta",
+       "liceo-militar",
+       "vicentinos"
+      ],
+      "seeds": [
+       "banco-nacion",
+       "universitario-la-plata",
+       "cu-quilmes",
+       "san-martin"
+      ],
+      "champion": "banco-nacion",
+      "final": "banco-nacion 32-19 cu-quilmes"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "belgrano-athletic→Primera A",
+     "lomas-athletic→Primera A",
+     "cuba→Top 14",
+     "champagnat→Top 14",
+     "manuel-belgrano→Primera B",
+     "liceo-naval→Primera B",
+     "deportiva-francesa→Primera A",
+     "banco-nacion→Primera A"
+    ],
+    "ages": {
+     "both": 4768,
+     "knownPlus1": 114,
+     "knownOther": 0,
+     "unknownStays": 2143,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2511,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 4768,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 102,
+     "attrsDown": 417,
+     "playersWithAttrAbovePotential": 478,
+     "of": 4768
+    },
+    "turnover": {
+     "gone": 399,
+     "abroad": 3,
+     "retiredOrDropped": 396,
+     "news": 399,
+     "newPlayers": 631,
+     "kept": 4768
+    },
+    "newIdSamples": [
+     "newman-academy-2028-m17-intake-0",
+     "newman-academy-2028-m17-intake-1",
+     "newman-academy-2028-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 35,
+     "refusedPairs": 61,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "belgrano-athletic",
+      "division": "Primera A",
+      "strength": 10.9,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "lomas-athletic",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 2,
+      "rankByXV": 4,
+      "objective": "Máxima"
+     },
+     {
+      "id": "cuba",
+      "division": "Top 14",
+      "strength": 11.3,
+      "rankByStrength": 9,
+      "rankByXV": 9,
+      "objective": "Media"
+     },
+     {
+      "id": "champagnat",
+      "division": "Top 14",
+      "strength": 10.3,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "manuel-belgrano",
+      "division": "Primera B",
+      "strength": 9,
+      "rankByStrength": 5,
+      "rankByXV": 6,
+      "objective": "Alta"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "deportiva-francesa",
+      "division": "Primera A",
+      "strength": 8.9,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera A",
+      "strength": 9.5,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 107.8,
+    "injuredMax": 133,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#7",
+     "lomas-athletic:Top 14#14",
+     "delta:Primera B#12"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "champagnat",
+     "Primera B": "banco-nacion"
+    },
+    "market": {
+     "contacts": 96,
+     "accepted": 35,
+     "refused": 61,
+     "violations": 0,
+     "blockedOk": 192,
+     "groupsReshuffled": 177
+    }
+   },
+   {
+    "season": 2028,
+    "sizes": {
+     "start": 5.93,
+     "mid": 8.9,
+     "afterRegular": 11.73,
+     "end": 11.78,
+     "parts": {
+      "clubs": 4.86,
+      "fixtures": 5.05,
+      "news": 0.36,
+      "playerStats": 1.33,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 586,
+     "seasonMs": 27719,
+     "avgRoundMs": 454,
+     "maxRoundMs": 573
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 178,
+       "mean": 83.5
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.5
+      },
+      "M19": {
+       "min": 15,
+       "max": 15,
+       "mean": 15
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.1
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 10,
+      "outOfPos": 57,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre B": {
+        "noOne": 10,
+        "outOfPos": 56,
+        "clubsWithGap": 26
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 49,
+      "outOfPos": 128,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 7,
+        "clubsWithGap": 6
+       },
+       "Pre B": {
+        "noOne": 40,
+        "outOfPos": 89,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 9,
+        "outOfPos": 32,
+        "clubsWithGap": 3
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 51,
+      "outOfPos": 114,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 5,
+        "clubsWithGap": 4
+       },
+       "Pre B": {
+        "noOne": 36,
+        "outOfPos": 80,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 15,
+        "outOfPos": 29,
+        "clubsWithGap": 3
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 5399,
+    "biggestSquads": [
+     "buenos-aires-crc:178",
+     "alumni:177",
+     "champagnat:159"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 6,
+    "attrAbovePotentialAtStart": 478,
+    "strengthVsXV": {
+     "Top 14": 0.85,
+     "Primera A": 0.95,
+     "Primera B": 0.96
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "sic",
+      "casi"
+     ],
+     "Primera A": [
+      "belgrano-athletic",
+      "san-cirano",
+      "hurling"
+     ],
+     "Primera B": [
+      "universitario-la-plata",
+      "don-bosco",
+      "san-martin"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "tieSeen": 1,
+     "Top 14": {
+      "table": [
+       "newman",
+       "sic",
+       "casi",
+       "alumni",
+       "los-tilos",
+       "buenos-aires-crc",
+       "hindu",
+       "cuba",
+       "la-plata",
+       "regatas-bella-vista",
+       "los-matreros",
+       "atletico-del-rosario",
+       "san-luis",
+       "champagnat"
+      ],
+      "seeds": [
+       "newman",
+       "sic",
+       "casi",
+       "alumni"
+      ],
+      "champion": "newman",
+      "final": "newman 37-15 casi"
+     },
+     "Primera A": {
+      "table": [
+       "belgrano-athletic",
+       "san-cirano",
+       "hurling",
+       "san-fernando",
+       "pucara",
+       "curupayti",
+       "lomas-athletic",
+       "deportiva-francesa",
+       "san-andres",
+       "olivos",
+       "geba",
+       "pueyrredon",
+       "san-albano",
+       "banco-nacion"
+      ],
+      "seeds": [
+       "san-cirano",
+       "hurling",
+       "san-fernando",
+       "pucara"
+      ],
+      "champion": "san-cirano",
+      "final": "san-cirano 28-17 hurling"
+     },
+     "Primera B": {
+      "table": [
+       "universitario-la-plata",
+       "don-bosco",
+       "san-martin",
+       "liceo-naval",
+       "italiano",
+       "mariano-moreno",
+       "manuel-belgrano",
+       "cu-quilmes",
+       "san-patricio",
+       "delta",
+       "argentino",
+       "monte-grande",
+       "liceo-militar",
+       "vicentinos"
+      ],
+      "seeds": [
+       "don-bosco",
+       "san-martin",
+       "liceo-naval",
+       "italiano"
+      ],
+      "champion": "liceo-naval",
+      "final": "liceo-naval 32-0 italiano"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "san-luis→Primera A",
+     "champagnat→Primera A",
+     "belgrano-athletic→Top 14",
+     "san-cirano→Top 14",
+     "san-albano→Primera B",
+     "banco-nacion→Primera B",
+     "universitario-la-plata→Primera A",
+     "liceo-naval→Primera A"
+    ],
+    "ages": {
+     "both": 5095,
+     "knownPlus1": 107,
+     "knownOther": 0,
+     "unknownStays": 2131,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 2857,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5095,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 95,
+     "attrsDown": 486,
+     "playersWithAttrAbovePotential": 809,
+     "of": 5095
+    },
+    "turnover": {
+     "gone": 304,
+     "abroad": 0,
+     "retiredOrDropped": 304,
+     "news": 304,
+     "newPlayers": 630,
+     "kept": 5095
+    },
+    "newIdSamples": [
+     "newman-academy-2029-m17-intake-0",
+     "newman-academy-2029-m17-intake-1",
+     "newman-academy-2029-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 48,
+     "refusedPairs": 83,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "san-luis",
+      "division": "Primera A",
+      "strength": 10.9,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "champagnat",
+      "division": "Primera A",
+      "strength": 10.3,
+      "rankByStrength": 6,
+      "rankByXV": 6,
+      "objective": "Media"
+     },
+     {
+      "id": "belgrano-athletic",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 13,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 12,
+      "objective": "Baja"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera B",
+      "strength": 9.8,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "banco-nacion",
+      "division": "Primera B",
+      "strength": 9.5,
+      "rankByStrength": 2,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera A",
+      "strength": 9.4,
+      "rankByStrength": 12,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 99.1,
+    "injuredMax": 124,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#10",
+     "lomas-athletic:Primera A#7",
+     "delta:Primera B#10"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "san-cirano",
+     "Primera B": "liceo-naval"
+    },
+    "market": {
+     "contacts": 131,
+     "accepted": 48,
+     "refused": 83,
+     "violations": 0,
+     "blockedOk": 262,
+     "groupsReshuffled": 225
+    }
+   },
+   {
+    "season": 2029,
+    "sizes": {
+     "start": 6.7,
+     "mid": 9.74,
+     "afterRegular": 12.58,
+     "end": 12.71,
+     "parts": {
+      "clubs": 5.24,
+      "fixtures": 5.16,
+      "news": 0.36,
+      "playerStats": 1.76,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 607,
+     "seasonMs": 30209,
+     "avgRoundMs": 502,
+     "maxRoundMs": 707
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 178,
+       "mean": 83.2
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.3
+      },
+      "M19": {
+       "min": 19,
+       "max": 26,
+       "mean": 23.1
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.3
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Media": 5,
+      "Máxima": 2,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 13,
+      "outOfPos": 69,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 2,
+        "clubsWithGap": 2
+       },
+       "Pre B": {
+        "noOne": 13,
+        "outOfPos": 67,
+        "clubsWithGap": 28
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 39,
+      "outOfPos": 110,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 12,
+        "clubsWithGap": 11
+       },
+       "Pre B": {
+        "noOne": 39,
+        "outOfPos": 98,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 45,
+      "outOfPos": 110,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 6,
+        "clubsWithGap": 5
+       },
+       "Pre B": {
+        "noOne": 44,
+        "outOfPos": 95,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 1,
+        "outOfPos": 9,
+        "clubsWithGap": 1
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 5725,
+    "biggestSquads": [
+     "buenos-aires-crc:178",
+     "alumni:173",
+     "champagnat:159"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 809,
+    "strengthVsXV": {
+     "Top 14": 0.79,
+     "Primera A": 0.97,
+     "Primera B": 0.96
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "newman",
+      "sic",
+      "los-tilos"
+     ],
+     "Primera A": [
+      "san-luis",
+      "curupayti",
+      "champagnat"
+     ],
+     "Primera B": [
+      "san-albano",
+      "banco-nacion",
+      "manuel-belgrano"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "newman",
+       "sic",
+       "los-tilos",
+       "alumni",
+       "los-matreros",
+       "la-plata",
+       "cuba",
+       "hindu",
+       "buenos-aires-crc",
+       "regatas-bella-vista",
+       "casi",
+       "belgrano-athletic",
+       "san-cirano",
+       "atletico-del-rosario"
+      ],
+      "seeds": [
+       "newman",
+       "sic",
+       "los-tilos",
+       "alumni"
+      ],
+      "champion": "newman",
+      "final": "newman 43-15 sic"
+     },
+     "Primera A": {
+      "table": [
+       "san-luis",
+       "curupayti",
+       "champagnat",
+       "geba",
+       "lomas-athletic",
+       "san-fernando",
+       "san-andres",
+       "pucara",
+       "olivos",
+       "pueyrredon",
+       "deportiva-francesa",
+       "liceo-naval",
+       "hurling",
+       "universitario-la-plata"
+      ],
+      "seeds": [
+       "curupayti",
+       "champagnat",
+       "geba",
+       "lomas-athletic"
+      ],
+      "champion": "lomas-athletic",
+      "final": "champagnat 3-26 lomas-athletic"
+     },
+     "Primera B": {
+      "table": [
+       "san-albano",
+       "banco-nacion",
+       "manuel-belgrano",
+       "cu-quilmes",
+       "don-bosco",
+       "san-martin",
+       "mariano-moreno",
+       "monte-grande",
+       "italiano",
+       "liceo-militar",
+       "san-patricio",
+       "argentino",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "banco-nacion",
+       "manuel-belgrano",
+       "cu-quilmes",
+       "don-bosco"
+      ],
+      "champion": "cu-quilmes",
+      "final": "banco-nacion 16-26 cu-quilmes"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "san-cirano→Primera A",
+     "atletico-del-rosario→Primera A",
+     "san-luis→Top 14",
+     "lomas-athletic→Top 14",
+     "hurling→Primera B",
+     "universitario-la-plata→Primera B",
+     "san-albano→Primera A",
+     "cu-quilmes→Primera A"
+    ],
+    "ages": {
+     "both": 5383,
+     "knownPlus1": 97,
+     "knownOther": 0,
+     "unknownStays": 2120,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3166,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5383,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 88,
+     "attrsDown": 567,
+     "playersWithAttrAbovePotential": 1253,
+     "of": 5383
+    },
+    "turnover": {
+     "gone": 342,
+     "abroad": 1,
+     "retiredOrDropped": 341,
+     "news": 342,
+     "newPlayers": 630,
+     "kept": 5383
+    },
+    "newIdSamples": [
+     "newman-academy-2030-m17-intake-0",
+     "newman-academy-2030-m17-intake-1",
+     "newman-academy-2030-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 63,
+     "refusedPairs": 105,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "san-cirano",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 2,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "atletico-del-rosario",
+      "division": "Primera A",
+      "strength": 11,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-luis",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 13,
+      "rankByXV": 11,
+      "objective": "Baja"
+     },
+     {
+      "id": "lomas-athletic",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "hurling",
+      "division": "Primera B",
+      "strength": 9.9,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera B",
+      "strength": 9.4,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "san-albano",
+      "division": "Primera A",
+      "strength": 9.8,
+      "rankByStrength": 10,
+      "rankByXV": 10,
+      "objective": "Media"
+     },
+     {
+      "id": "cu-quilmes",
+      "division": "Primera A",
+      "strength": 9.3,
+      "rankByStrength": 12,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 105.3,
+    "injuredMax": 128,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#10",
+     "lomas-athletic:Primera A#5",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "newman",
+     "Primera A": "lomas-athletic",
+     "Primera B": "cu-quilmes"
+    },
+    "market": {
+     "contacts": 168,
+     "accepted": 63,
+     "refused": 105,
+     "violations": 0,
+     "blockedOk": 336,
+     "groupsReshuffled": 289
+    }
+   },
+   {
+    "season": 2030,
+    "sizes": {
+     "start": 7.45,
+     "mid": 10.48,
+     "afterRegular": 13.33,
+     "end": 13.38,
+     "parts": {
+      "clubs": 5.56,
+      "fixtures": 5.07,
+      "news": 0.36,
+      "playerStats": 2.2,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 743,
+     "seasonMs": 33244,
+     "avgRoundMs": 527,
+     "maxRoundMs": 657
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 179,
+       "mean": 83.2
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 52,
+       "mean": 20.5
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 52,
+       "mean": 19.3
+      },
+      "M19": {
+       "min": 29,
+       "max": 30,
+       "mean": 30
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 1,
+       "mean": 0.1
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 15,
+      "outOfPos": 70,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 7,
+        "clubsWithGap": 6
+       },
+       "Pre B": {
+        "noOne": 15,
+        "outOfPos": 63,
+        "clubsWithGap": 27
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 46,
+      "outOfPos": 104,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 16,
+        "clubsWithGap": 12
+       },
+       "Pre B": {
+        "noOne": 46,
+        "outOfPos": 87,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 41,
+      "outOfPos": 94,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 1,
+        "clubsWithGap": 1
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 13,
+        "clubsWithGap": 10
+       },
+       "Pre B": {
+        "noOne": 41,
+        "outOfPos": 80,
+        "clubsWithGap": 29
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "migrateV15": {
+     "dataVersion": 18,
+     "players": 6013,
+     "before": 6013
+    },
+    "totalPlayers": 6013,
+    "biggestSquads": [
+     "buenos-aires-crc:179",
+     "alumni:172",
+     "champagnat:159"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 5,
+    "attrAbovePotentialAtStart": 1253,
+    "strengthVsXV": {
+     "Top 14": 0.63,
+     "Primera A": 0.96,
+     "Primera B": 0.97
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "sic",
+      "newman",
+      "buenos-aires-crc"
+     ],
+     "Primera A": [
+      "san-cirano",
+      "atletico-del-rosario",
+      "curupayti"
+     ],
+     "Primera B": [
+      "hurling",
+      "universitario-la-plata",
+      "banco-nacion"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "sic",
+       "newman",
+       "buenos-aires-crc",
+       "los-tilos",
+       "alumni",
+       "regatas-bella-vista",
+       "hindu",
+       "belgrano-athletic",
+       "la-plata",
+       "cuba",
+       "los-matreros",
+       "lomas-athletic",
+       "san-luis",
+       "casi"
+      ],
+      "seeds": [
+       "sic",
+       "newman",
+       "buenos-aires-crc",
+       "los-tilos"
+      ],
+      "champion": "los-tilos",
+      "final": "buenos-aires-crc 14-24 los-tilos"
+     },
+     "Primera A": {
+      "table": [
+       "san-cirano",
+       "atletico-del-rosario",
+       "curupayti",
+       "champagnat",
+       "san-fernando",
+       "pucara",
+       "geba",
+       "san-andres",
+       "deportiva-francesa",
+       "san-albano",
+       "olivos",
+       "liceo-naval",
+       "pueyrredon",
+       "cu-quilmes"
+      ],
+      "seeds": [
+       "atletico-del-rosario",
+       "curupayti",
+       "champagnat",
+       "san-fernando"
+      ],
+      "champion": "atletico-del-rosario",
+      "final": "atletico-del-rosario 20-10 curupayti"
+     },
+     "Primera B": {
+      "table": [
+       "hurling",
+       "universitario-la-plata",
+       "banco-nacion",
+       "don-bosco",
+       "san-patricio",
+       "san-martin",
+       "mariano-moreno",
+       "manuel-belgrano",
+       "italiano",
+       "liceo-militar",
+       "argentino",
+       "vicentinos",
+       "delta",
+       "monte-grande"
+      ],
+      "seeds": [
+       "universitario-la-plata",
+       "banco-nacion",
+       "don-bosco",
+       "san-patricio"
+      ],
+      "champion": "don-bosco",
+      "final": "universitario-la-plata 17-27 don-bosco"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "san-luis→Primera A",
+     "casi→Primera A",
+     "san-cirano→Top 14",
+     "atletico-del-rosario→Top 14",
+     "pueyrredon→Primera B",
+     "cu-quilmes→Primera B",
+     "hurling→Primera A",
+     "don-bosco→Primera A"
+    ],
+    "ages": {
+     "both": 5415,
+     "knownPlus1": 86,
+     "knownOther": 0,
+     "unknownStays": 2106,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3223,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5415,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 111,
+     "attrsDown": 667,
+     "playersWithAttrAbovePotential": 1541,
+     "of": 5415
+    },
+    "turnover": {
+     "gone": 598,
+     "abroad": 2,
+     "retiredOrDropped": 596,
+     "news": 598,
+     "newPlayers": 630,
+     "kept": 5415
+    },
+    "newIdSamples": [
+     "newman-academy-2031-m17-intake-0",
+     "newman-academy-2031-m17-intake-1",
+     "newman-academy-2031-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 77,
+     "refusedPairs": 126,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "san-luis",
+      "division": "Primera A",
+      "strength": 10.9,
+      "rankByStrength": 2,
+      "rankByXV": 3,
+      "objective": "Máxima"
+     },
+     {
+      "id": "casi",
+      "division": "Primera A",
+      "strength": 12.4,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Top 14",
+      "strength": 10.6,
+      "rankByStrength": 14,
+      "rankByXV": 11,
+      "objective": "Baja"
+     },
+     {
+      "id": "atletico-del-rosario",
+      "division": "Top 14",
+      "strength": 11,
+      "rankByStrength": 11,
+      "rankByXV": 13,
+      "objective": "Baja"
+     },
+     {
+      "id": "pueyrredon",
+      "division": "Primera B",
+      "strength": 10.1,
+      "rankByStrength": 1,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "cu-quilmes",
+      "division": "Primera B",
+      "strength": 9.3,
+      "rankByStrength": 4,
+      "rankByXV": 5,
+      "objective": "Alta"
+     },
+     {
+      "id": "hurling",
+      "division": "Primera A",
+      "strength": 9.9,
+      "rankByStrength": 8,
+      "rankByXV": 7,
+      "objective": "Media"
+     },
+     {
+      "id": "don-bosco",
+      "division": "Primera A",
+      "strength": 9.1,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     }
+    ],
+    "injuredAvg": 87.2,
+    "injuredMax": 106,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#6",
+     "lomas-athletic:Top 14#12",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "los-tilos",
+     "Primera A": "atletico-del-rosario",
+     "Primera B": "don-bosco"
+    },
+    "market": {
+     "contacts": 203,
+     "accepted": 77,
+     "refused": 126,
+     "violations": 0,
+     "blockedOk": 406,
+     "groupsReshuffled": 358
+    }
+   },
+   {
+    "season": 2031,
+    "sizes": {
+     "start": 7.99,
+     "mid": 11.06,
+     "afterRegular": 13.99,
+     "end": 14.04,
+     "parts": {
+      "clubs": 5.66,
+      "fixtures": 5.17,
+      "news": 0.35,
+      "playerStats": 2.65,
+      "parallel": 0.08
+     }
+    },
+    "timing": {
+     "rolloverMs": 687,
+     "seasonMs": 35637,
+     "avgRoundMs": 580,
+     "maxRoundMs": 975
+    },
+    "squads": {
+     "start": {
+      "senior": {
+       "min": 64,
+       "max": 180,
+       "mean": 83.9
+      },
+      "Primera": {
+       "min": 23,
+       "max": 23,
+       "mean": 23
+      },
+      "Intermedia": {
+       "min": 14,
+       "max": 53,
+       "mean": 20.7
+      },
+      "Pre A": {
+       "min": 14,
+       "max": 53,
+       "mean": 20.7
+      },
+      "Pre B": {
+       "min": 13,
+       "max": 51,
+       "mean": 19.6
+      },
+      "M19": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "M17": {
+       "min": 30,
+       "max": 30,
+       "mean": 30
+      },
+      "injured": {
+       "min": 0,
+       "max": 2,
+       "mean": 0.2
+      }
+     }
+    },
+    "objectives": {
+     "Top 14": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Baja": 4,
+      "Media": 5
+     },
+     "Primera A": {
+      "Máxima": 2,
+      "Media": 5,
+      "Alta": 3,
+      "Baja": 4
+     },
+     "Primera B": {
+      "Máxima": 2,
+      "Alta": 3,
+      "Media": 5,
+      "Baja": 4
+     }
+    },
+    "fieldable": {
+     "start": {
+      "noOne": 34,
+      "outOfPos": 71,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 10,
+        "clubsWithGap": 6
+       },
+       "Pre B": {
+        "noOne": 34,
+        "outOfPos": 61,
+        "clubsWithGap": 30
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "mid": {
+      "noOne": 65,
+      "outOfPos": 94,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "Pre A": {
+        "noOne": 1,
+        "outOfPos": 15,
+        "clubsWithGap": 10
+       },
+       "Pre B": {
+        "noOne": 64,
+        "outOfPos": 79,
+        "clubsWithGap": 31
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     },
+     "end": {
+      "noOne": 69,
+      "outOfPos": 99,
+      "teams": 210,
+      "byCat": {
+       "Intermedia": {
+        "noOne": 0,
+        "outOfPos": 2,
+        "clubsWithGap": 2
+       },
+       "Pre A": {
+        "noOne": 0,
+        "outOfPos": 16,
+        "clubsWithGap": 10
+       },
+       "Pre B": {
+        "noOne": 69,
+        "outOfPos": 81,
+        "clubsWithGap": 32
+       },
+       "M19": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       },
+       "M17": {
+        "noOne": 0,
+        "outOfPos": 0,
+        "clubsWithGap": 0
+       }
+      }
+     }
+    },
+    "totalPlayers": 6045,
+    "biggestSquads": [
+     "buenos-aires-crc:180",
+     "alumni:174",
+     "champagnat:161"
+    ],
+    "smallestSquads": [
+     "liceo-militar:64",
+     "vicentinos:64"
+    ],
+    "clubsOverLimit": 7,
+    "attrAbovePotentialAtStart": 1541,
+    "strengthVsXV": {
+     "Top 14": 0.85,
+     "Primera A": 0.95,
+     "Primera B": 0.91
+    },
+    "benchSizes": {
+     "17": 1110
+    },
+    "regular": {
+     "Top 14": [
+      "los-tilos",
+      "sic",
+      "newman"
+     ],
+     "Primera A": [
+      "casi",
+      "curupayti",
+      "san-luis"
+     ],
+     "Primera B": [
+      "universitario-la-plata",
+      "banco-nacion",
+      "pueyrredon"
+     ]
+    },
+    "news": 2000,
+    "playoffs": {
+     "Top 14": {
+      "table": [
+       "los-tilos",
+       "sic",
+       "newman",
+       "la-plata",
+       "alumni",
+       "hindu",
+       "cuba",
+       "los-matreros",
+       "buenos-aires-crc",
+       "regatas-bella-vista",
+       "belgrano-athletic",
+       "atletico-del-rosario",
+       "lomas-athletic",
+       "san-cirano"
+      ],
+      "seeds": [
+       "los-tilos",
+       "sic",
+       "newman",
+       "la-plata"
+      ],
+      "champion": "los-tilos",
+      "final": "los-tilos 26-24 sic"
+     },
+     "Primera A": {
+      "table": [
+       "casi",
+       "curupayti",
+       "san-luis",
+       "geba",
+       "champagnat",
+       "san-fernando",
+       "pucara",
+       "san-andres",
+       "olivos",
+       "hurling",
+       "san-albano",
+       "deportiva-francesa",
+       "liceo-naval",
+       "don-bosco"
+      ],
+      "seeds": [
+       "curupayti",
+       "san-luis",
+       "geba",
+       "champagnat"
+      ],
+      "champion": "san-luis",
+      "final": "curupayti 17-36 san-luis"
+     },
+     "Primera B": {
+      "table": [
+       "universitario-la-plata",
+       "banco-nacion",
+       "pueyrredon",
+       "manuel-belgrano",
+       "italiano",
+       "cu-quilmes",
+       "argentino",
+       "mariano-moreno",
+       "san-patricio",
+       "san-martin",
+       "monte-grande",
+       "liceo-militar",
+       "delta",
+       "vicentinos"
+      ],
+      "seeds": [
+       "banco-nacion",
+       "pueyrredon",
+       "manuel-belgrano",
+       "italiano"
+      ],
+      "champion": "pueyrredon",
+      "final": "banco-nacion 17-32 pueyrredon"
+     }
+    },
+    "nonFinite": [],
+    "moves": [
+     "lomas-athletic→Primera A",
+     "san-cirano→Primera A",
+     "casi→Top 14",
+     "san-luis→Top 14",
+     "liceo-naval→Primera B",
+     "don-bosco→Primera B",
+     "universitario-la-plata→Primera A",
+     "pueyrredon→Primera A"
+    ],
+    "ages": {
+     "both": 5414,
+     "knownPlus1": 74,
+     "knownOther": 0,
+     "unknownStays": 2092,
+     "unknownBecame": 0,
+     "estimatedChanged": 0,
+     "nullAgeButEstimated": 0,
+     "fictionalAge": {
+      "plus1": 3248,
+      "other": 0,
+      "examples": []
+     },
+     "knownOtherExamples": [],
+     "unknownBecameExamples": []
+    },
+    "potential": {
+     "same": 5414,
+     "up": 0,
+     "down": 0,
+     "downExamples": [],
+     "attrsUp": 176,
+     "attrsDown": 1106,
+     "playersWithAttrAbovePotential": 1707,
+     "of": 5414
+    },
+    "turnover": {
+     "gone": 631,
+     "abroad": 1,
+     "retiredOrDropped": 630,
+     "news": 631,
+     "newPlayers": 630,
+     "kept": 5414
+    },
+    "newIdSamples": [
+     "newman-academy-2032-m17-intake-0",
+     "newman-academy-2032-m17-intake-1",
+     "newman-academy-2032-m17-intake-2"
+    ],
+    "carry": {
+     "transfersLog": 89,
+     "refusedPairs": 147,
+     "contacts": 3,
+     "trainingRounds": 0
+    },
+    "movedStrength": [
+     {
+      "id": "lomas-athletic",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 1,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-cirano",
+      "division": "Primera A",
+      "strength": 10.6,
+      "rankByStrength": 2,
+      "rankByXV": 1,
+      "objective": "Máxima"
+     },
+     {
+      "id": "casi",
+      "division": "Top 14",
+      "strength": 12.4,
+      "rankByStrength": 2,
+      "rankByXV": 2,
+      "objective": "Máxima"
+     },
+     {
+      "id": "san-luis",
+      "division": "Top 14",
+      "strength": 10.9,
+      "rankByStrength": 14,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "liceo-naval",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 3,
+      "rankByXV": 3,
+      "objective": "Alta"
+     },
+     {
+      "id": "don-bosco",
+      "division": "Primera B",
+      "strength": 9.1,
+      "rankByStrength": 4,
+      "rankByXV": 2,
+      "objective": "Alta"
+     },
+     {
+      "id": "universitario-la-plata",
+      "division": "Primera A",
+      "strength": 9.4,
+      "rankByStrength": 13,
+      "rankByXV": 14,
+      "objective": "Baja"
+     },
+     {
+      "id": "pueyrredon",
+      "division": "Primera A",
+      "strength": 10.1,
+      "rankByStrength": 8,
+      "rankByXV": 7,
+      "objective": "Media"
+     }
+    ],
+    "injuredAvg": 99.6,
+    "injuredMax": 134,
+    "keepClubs": [
+     "regatas-bella-vista:Top 14#10",
+     "lomas-athletic:Top 14#13",
+     "delta:Primera B#13"
+    ],
+    "champions": {
+     "Top 14": "los-tilos",
+     "Primera A": "san-luis",
+     "Primera B": "pueyrredon"
+    },
+    "market": {
+     "contacts": 236,
+     "accepted": 89,
+     "refused": 147,
+     "violations": 0,
+     "blockedOk": 472,
+     "groupsReshuffled": 409
+    }
+   }
+  ],
+  "notes": [],
+  "timing": [],
+  "initMs": 499,
+  "actions": {
+   "ok": {
+    "tactics": 72,
+    "youth-training": 72,
+    "training": 72,
+    "lineup": 126,
+    "train-player": 468,
+    "retrain": 90,
+    "promote": 90,
+    "assign-senior": 90
+   },
+   "err": {
+    "contact-player: Tu plantel superior está completo (130).": 79,
+    "contact-player: Ya hiciste un contacto en esta fecha.": 3
+   }
+  },
+  "totalMs": 170459,
+  "violations": [
+   {
+    "sev": "broken",
+    "code": "contacto-rechazado-por-un-contacto-de-la-temporada-anterior",
+    "fn": "contactPlayer (transfers.contacts no se reinicia al cambiar de temporada)",
+    "count": 3,
+    "first": {
+     "seed": 303,
+     "season": 2028,
+     "round": 12,
+     "msg": "regatas-bella-vista en la fecha 12 de 2028: transfers.contacts={\"lomas-athletic\":10,\"delta\":11,\"regatas-bella-vista\":12}"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-con-menos-de-15",
+    "fn": "assignSeniorGroups/addAcademyIntake",
+    "count": 1424,
+    "first": {
+     "seed": 303,
+     "season": 2026,
+     "round": 0,
+     "msg": "hindu Pre A: grupo propio de 7 (inicio 2026)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-no-puede-armar-equipo",
+    "fn": "categoryTeams/playParallelRound",
+    "count": 491,
+    "first": {
+     "seed": 303,
+     "season": 2026,
+     "round": 0,
+     "msg": "cuba Pre B: 2 puestos sin jugador (inicio 2026)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "categoria-prometida-no-se-respeta-tras-traspaso",
+    "fn": "contactPlayer (assignSeniorGroups reasigna todo el plantel del comprador)",
+    "count": 82,
+    "first": {
+     "seed": 303,
+     "season": 2026,
+     "round": 2,
+     "msg": "lomas-athletic ← don-bosco-s-51 (don-bosco): prometido XV, queda en Pre B"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "fichaje-reasigna-las-categorias-de-todo-el-plantel",
+    "fn": "contactPlayer/assignSeniorGroups",
+    "count": 81,
+    "first": {
+     "seed": 303,
+     "season": 2026,
+     "round": 5,
+     "msg": "regatas-bella-vista ← argentino-s-58 (argentino): 39 jugadores cambiaron de categoría (incluye asignaciones manuales)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "plantel-superior-supera-SQUAD_LIMIT",
+    "fn": "squadTurnover/contactPlayer",
+    "count": 29,
+    "first": {
+     "seed": 303,
+     "season": 2026,
+     "round": 0,
+     "msg": "alumni 153"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "atributo-por-encima-del-potencial",
+    "fn": "developPlayer/reviewDevelopment",
+    "count": 6,
+    "first": {
+     "seed": 303,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "331 de 4405 jugadores"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "vetos-de-mercado-no-se-limpian-al-cambiar-de-temporada",
+    "fn": "advanceSeasonWorld (transfers.refused persiste)",
+    "count": 6,
+    "first": {
+     "seed": 303,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "34 pares siguen vetados"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "contacts-de-mercado-persisten-entre-temporadas",
+    "fn": "contactPlayer/advanceSeasonWorld",
+    "count": 6,
+    "first": {
+     "seed": 303,
+     "season": 2027,
+     "round": "inicio",
+     "msg": "{\"lomas-athletic\":25,\"delta\":26,\"regatas-bella-vista\":23} (un número de fecha viejo puede bloquear el primer contacto de la fecha igual)"
+    }
+   },
+   {
+    "sev": "suspicious",
+    "code": "banco-con-hueco-sin-suplente-de-ese-puesto",
+    "fn": "simulateFixture (bench = [slot 0, slot 3] por puesto)",
+    "count": 1,
+    "first": {
+     "seed": 303,
+     "season": 2029,
+     "round": 3,
+     "msg": "primera-a-3-champagnat-deportiva-francesa V banco[0] vacío (no hay otro jugador disponible de Pilar izquierdo); disponibles del club=61"
+    }
+   }
+  ],
+  "finalSize": 8.51
+ }
+]

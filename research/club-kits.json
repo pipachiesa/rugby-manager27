@@ -1,0 +1,1111 @@
+{
+ "generatedAt": "2026-11-11",
+ "clubs": [
+  {
+   "id": "newman",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#790c31"
+    ],
+    "collar": "#ff842f",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#790c31",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "confidence": "high",
+   "notes": "URBA: bordeaux, cuello/puños naranjas; medias verdes con rayas naranjas (simplificado)."
+  },
+  {
+   "id": "casi",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#f5f5f5",
+     "#191919"
+    ],
+    "collar": "#191919",
+    "shorts": "#ffffff",
+    "socks": "#191919"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#191919"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#191919"
+   },
+   "confidence": "high",
+   "notes": "Descripcion URBA: blanco y negro a rayas horizontales."
+  },
+  {
+   "id": "hindu",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#81c9e5",
+     "#f5cf3b"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#81c9e5"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#f5cf3b",
+    "shorts": "#ffffff",
+    "socks": "#81c9e5"
+   },
+   "confidence": "high",
+   "notes": null
+  },
+  {
+   "id": "alumni",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#bf2027",
+     "#ffffff"
+    ],
+    "collar": "#bf2027",
+    "shorts": "#ffffff",
+    "socks": "#bf2027"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#bf2027"
+   },
+   "confidence": "high",
+   "notes": null
+  },
+  {
+   "id": "sic",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#ffffff",
+     "#80c7e6",
+     "#222222"
+    ],
+    "collar": "#222222",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: blanca con rayas celestes y negras; los 3 colores van en ese orden."
+  },
+  {
+   "id": "los-tilos",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#197143"
+    ],
+    "collar": "#e8d254",
+    "shorts": "#ffffff",
+    "socks": "#197143"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#197143",
+    "shorts": "#ffffff",
+    "socks": "#197143"
+   },
+   "confidence": "high",
+   "notes": null
+  },
+  {
+   "id": "belgrano-athletic",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#6c3925",
+     "#e9b944"
+    ],
+    "collar": "#6c3925",
+    "shorts": "#ffffff",
+    "socks": "#6c3925"
+   },
+   "away": {
+    "pattern": "stripes",
+    "colors": [
+     "#1f7a3a",
+     "#bf2027",
+     "#ffffff"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1f7a3a"
+   },
+   "confidence": "high",
+   "notes": "Away: verde, roja y blanca verticales."
+  },
+  {
+   "id": "regatas-bella-vista",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#f0c72c",
+     "#174983"
+    ],
+    "collar": "#174983",
+    "shorts": "#174983",
+    "socks": "#174983"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#174983",
+    "shorts": "#174983",
+    "socks": "#174983"
+   },
+   "confidence": "high",
+   "notes": "Away blanca con vivos azul y amarillo."
+  },
+  {
+   "id": "cuba",
+   "home": {
+    "pattern": "quarters",
+    "colors": [
+     "#1a8cd8",
+     "#111111"
+    ],
+    "collar": "#111111",
+    "shorts": "#111111",
+    "socks": "#111111"
+   },
+   "away": null,
+   "confidence": "medium",
+   "notes": "Estatuto del club y en.wikipedia: azul y negro en cuarteles (1.º y 4.º azules, 2.º y 3.º negros) desde 1930; pantalon y medias negros (infobox). Tono de azul aproximado; sin dato de la alterna."
+  },
+  {
+   "id": "atletico-del-rosario",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#8cc9e6",
+     "#b0344f"
+    ],
+    "collar": "#b0344f",
+    "shorts": "#ffffff",
+    "socks": "#b0344f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#8cc9e6",
+    "shorts": "#ffffff",
+    "socks": "#b0344f"
+   },
+   "confidence": "high",
+   "notes": "Away: blanca con mangas celestes y colorado (mangas no representables)."
+  },
+  {
+   "id": "la-plata",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#e7b71e"
+    ],
+    "collar": "#152f51",
+    "shorts": "#152f51",
+    "socks": "#152f51"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#e7b71e",
+    "shorts": "#152f51",
+    "socks": "#152f51"
+   },
+   "confidence": "high",
+   "notes": null
+  },
+  {
+   "id": "buenos-aires-crc",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#1a2d69"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1a2d69"
+   },
+   "away": null,
+   "confidence": "medium",
+   "notes": "Infobox en.wikipedia: camiseta, pantalon azul marino (#1a2d69) con cuello blanco; medias rojas. URBA no publica colores; sin datos de la alterna."
+  },
+  {
+   "id": "los-matreros",
+   "home": {
+    "pattern": "quarters",
+    "colors": [
+     "#c92c37",
+     "#ffffff"
+    ],
+    "collar": "#c92c37",
+    "shorts": "#ffffff",
+    "socks": "#c92c37"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#c92c37"
+   },
+   "confidence": "high",
+   "notes": "Cuarteles rojos y blancos."
+  },
+  {
+   "id": "champagnat",
+   "home": {
+    "pattern": "halves",
+    "colors": [
+     "#1c559a",
+     "#ffffff"
+    ],
+    "collar": "#1c559a",
+    "shorts": "#ffffff",
+    "socks": "#1c559a"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#e8a0b8"
+    ],
+    "collar": "#1c559a",
+    "shorts": "#ffffff",
+    "socks": "#1c559a"
+   },
+   "confidence": "high",
+   "notes": "Mitades diagonales; away rosa con mangas azules."
+  },
+  {
+   "id": "san-luis",
+   "home": {
+    "pattern": "halves",
+    "colors": [
+     "#1c3f8f",
+     "#bf2027"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#bf2027"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#bf2027",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "medium",
+   "notes": "URBA: camiseta azul y rojo (disposicion no indicada, se dibuja a mitades), cuello y puños blancos; medias rojas. Alt: blanca con parte superior roja y azul."
+  },
+  {
+   "id": "san-cirano",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#1c3f8f",
+     "#1f6b3a"
+    ],
+    "collar": "#1f6b3a",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1f6b3a",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: rayas horizontales azules y verdes de 3 cm; pantalon blanco; medias verdes."
+  },
+  {
+   "id": "lomas-athletic",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#1f6b3a",
+     "#bf2027",
+     "#e8c21a"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1f6b3a",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: franjas horizontales verde, roja y amarilla, cuello blanco; medias verdes con vivos."
+  },
+  {
+   "id": "curupayti",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#14213d",
+     "#a4161a"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#14213d"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: azul marino y rojo sangre a franjas horizontales; medias iguales."
+  },
+  {
+   "id": "san-fernando",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#ffffff",
+     "#1c3f8f",
+     "#1f6b3a"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#1c3f8f",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: blanca con rayas horizontales azules y verdes; pantalon y medias azules. Alt: azul, pantalon blanco, medias verdes."
+  },
+  {
+   "id": "pucara",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#d31f26"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#d31f26"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: roja escarlata con cuello azul; pantalon azul; medias azules con puño rojo."
+  },
+  {
+   "id": "geba",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#ffffff",
+     "#8cc9e6"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: blanca con una franja horizontal celeste; medias azules con puño blanco. Alt: azul."
+  },
+  {
+   "id": "hurling",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#1f6b3a"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "away": {
+    "pattern": "hoops",
+    "colors": [
+     "#ffffff",
+     "#1f6b3a",
+     "#e8803a"
+    ],
+    "collar": "#1f6b3a",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "confidence": "high",
+   "notes": "URBA: verde con cuello y puños blancos; alt blanca, verde y naranja a rayas."
+  },
+  {
+   "id": "san-andres",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#14213d"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#14213d"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: azul marino con cuello y puños blancos; alt blanca con rayas finas (1 cm) azules, no dibujadas."
+  },
+  {
+   "id": "pueyrredon",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: blanca; pantalon azul; medias rojas. Alt: azul."
+  },
+  {
+   "id": "olivos",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#f28c28",
+     "#111111"
+    ],
+    "collar": "#111111",
+    "shorts": "#ffffff",
+    "socks": "#111111"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#111111"
+    ],
+    "collar": "#f28c28",
+    "shorts": "#ffffff",
+    "socks": "#111111"
+   },
+   "confidence": "high",
+   "notes": "URBA: naranja y negro a franjas horizontales; medias negras con vivos naranjas."
+  },
+  {
+   "id": "deportiva-francesa",
+   "home": {
+    "pattern": "halves",
+    "colors": [
+     "#1c3f8f",
+     "#bf2027"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "medium",
+   "notes": "URBA: azul y roja, cuello y puños blancos (disposicion no indicada, se dibuja a mitades); medias azules con vivos rojos."
+  },
+  {
+   "id": "san-albano",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#f0c72c",
+     "#8cc9e6",
+     "#1c3f8f"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: franjas horizontales amarillo, celeste y azul; medias azules."
+  },
+  {
+   "id": "universitario-la-plata",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#111111"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#111111"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#111111",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: negra con puños y cuello blancos; medias negras con puño blanco."
+  },
+  {
+   "id": "banco-nacion",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#ffffff",
+     "#1c3f8f"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#1c3f8f",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: blanca con rayas horizontales azules; pantalon y medias azules."
+  },
+  {
+   "id": "cu-quilmes",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#8cc9e6"
+    ],
+    "collar": "#14213d",
+    "shorts": "#14213d",
+    "socks": "#14213d"
+   },
+   "away": null,
+   "confidence": "medium",
+   "notes": "Infobox en.wikipedia: camiseta celeste, cuello y puños marinos, pantalon y medias marinos (medias con aros celestes). URBA no publica colores."
+  },
+  {
+   "id": "liceo-naval",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#111111",
+     "#8cc9e6"
+    ],
+    "collar": "#111111",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: franjas horizontales negras y celestes separadas por rayas blancas; medias azules."
+  },
+  {
+   "id": "don-bosco",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#14213d"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#14213d"
+   },
+   "away": null,
+   "confidence": "medium",
+   "notes": "Infobox en.wikipedia: camiseta azul marino con diseño propio, pantalon blanco, medias rojas. URBA no publica colores."
+  },
+  {
+   "id": "manuel-belgrano",
+   "home": {
+    "pattern": "halves",
+    "colors": [
+     "#c8202f",
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#c8202f",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: colorada y azul en diagonal (mitades diagonales); medias azules con puño colorado."
+  },
+  {
+   "id": "mariano-moreno",
+   "home": {
+    "pattern": "halves",
+    "colors": [
+     "#ffffff",
+     "#c8202f"
+    ],
+    "collar": "#c8202f",
+    "shorts": "#ffffff",
+    "socks": "#c8202f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: blanca y roja a mitades diagonales; medias rojas. Alt: azul."
+  },
+  {
+   "id": "san-martin",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#1c3f8f",
+     "#1f6b3a",
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#1f6b3a"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#1c3f8f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "medium",
+   "notes": "URBA: azul, verde y blanca (disposicion no indicada, se dibuja a franjas); medias verdes con puño azul y blanco."
+  },
+  {
+   "id": "san-patricio",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#8cc9e6"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#8cc9e6"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#c8202f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#c8202f"
+   },
+   "confidence": "high",
+   "notes": "URBA: celeste con cuello y puños blancos; medias coloradas. Alt: colorada."
+  },
+  {
+   "id": "italiano",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#c8202f"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#c8202f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#2a52be"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#2a52be"
+   },
+   "confidence": "high",
+   "notes": "URBA: roja con cuello y puños blancos; medias verdes. Alt: azul Francia."
+  },
+  {
+   "id": "argentino",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#14213d",
+     "#8cc9e6",
+     "#ffffff"
+    ],
+    "collar": "#8cc9e6",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#c8202f"
+    ],
+    "collar": "#14213d",
+    "shorts": "#ffffff",
+    "socks": "#c8202f"
+   },
+   "confidence": "high",
+   "notes": "URBA: parte superior 1/4 azul naval, medio 1/4 celeste, inferior 1/2 blanca; medias azules con puño celeste. Alt: roja con franja marino y celeste."
+  },
+  {
+   "id": "delta",
+   "home": {
+    "pattern": "plain",
+    "colors": [
+     "#cc0000"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#cc0000"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#cc0000",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "medium",
+   "notes": "Infobox en.wikipedia: camiseta roja con diseño propio, pantalon blanco, medias blancas (aros negros y rojos); alt blanca. URBA no publica colores."
+  },
+  {
+   "id": "monte-grande",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#111111",
+     "#bf2027",
+     "#ffffff"
+    ],
+    "collar": "#111111",
+    "shorts": "#111111",
+    "socks": "#bf2027"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#111111",
+    "shorts": "#ffffff",
+    "socks": "#ffffff"
+   },
+   "confidence": "high",
+   "notes": "URBA: franjas horizontales negras, rojas y blancas; pantalon negro; medias rojas, negras y blancas."
+  },
+  {
+   "id": "liceo-militar",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#1c3f8f",
+     "#d4a017",
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "hoops",
+    "colors": [
+     "#ffffff",
+     "#1c3f8f",
+     "#d4a017"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "high",
+   "notes": "URBA: franjas azules de 11 cm y amarillo oro de 2 cm separadas por rayas blancas; medias azules con rayas oro y blancas."
+  },
+  {
+   "id": "vicentinos",
+   "home": {
+    "pattern": "hoops",
+    "colors": [
+     "#1c3f8f",
+     "#ffffff"
+    ],
+    "collar": "#ffffff",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "away": {
+    "pattern": "plain",
+    "colors": [
+     "#ffffff"
+    ],
+    "collar": "#1c3f8f",
+    "shorts": "#ffffff",
+    "socks": "#1c3f8f"
+   },
+   "confidence": "low",
+   "notes": "Sin colores publicados: la ficha URBA no los lista, no hay pagina en Wikipedia y clubvicentinos.com.ar no respondio (503). Se conserva una estimacion."
+  }
+ ],
+ "sources": [
+  {
+   "title": "URBA fichas de club (descripciones de camisetas, via catalog.json)",
+   "url": "https://urba.org.ar/clubes"
+  },
+  {
+   "title": "In Goal, camisetas Regatas Bella Vista (via catalog.json)",
+   "url": "https://urba.org.ar/clubes/regatas-bella-vista"
+  },
+  {
+   "title": "URBA · Ficha de club (san-luis-2)",
+   "url": "https://urba.org.ar/clubes/san-luis-2"
+  },
+  {
+   "title": "URBA · Ficha de club (san-cirano)",
+   "url": "https://urba.org.ar/clubes/san-cirano"
+  },
+  {
+   "title": "URBA · Ficha de club (lomas-athletic)",
+   "url": "https://urba.org.ar/clubes/lomas-athletic"
+  },
+  {
+   "title": "URBA · Ficha de club (curupayti)",
+   "url": "https://urba.org.ar/clubes/curupayti"
+  },
+  {
+   "title": "URBA · Ficha de club (san-fernando)",
+   "url": "https://urba.org.ar/clubes/san-fernando"
+  },
+  {
+   "title": "URBA · Ficha de club (pucara)",
+   "url": "https://urba.org.ar/clubes/pucara"
+  },
+  {
+   "title": "URBA · Ficha de club (gimnasia-y-esgrima)",
+   "url": "https://urba.org.ar/clubes/gimnasia-y-esgrima"
+  },
+  {
+   "title": "URBA · Ficha de club (hurling)",
+   "url": "https://urba.org.ar/clubes/hurling"
+  },
+  {
+   "title": "URBA · Ficha de club (san-andres)",
+   "url": "https://urba.org.ar/clubes/san-andres"
+  },
+  {
+   "title": "URBA · Ficha de club (pueyrredon)",
+   "url": "https://urba.org.ar/clubes/pueyrredon"
+  },
+  {
+   "title": "URBA · Ficha de club (olivos)",
+   "url": "https://urba.org.ar/clubes/olivos"
+  },
+  {
+   "title": "URBA · Ficha de club (deportiva-francesa)",
+   "url": "https://urba.org.ar/clubes/deportiva-francesa"
+  },
+  {
+   "title": "URBA · Ficha de club (san-albano)",
+   "url": "https://urba.org.ar/clubes/san-albano"
+  },
+  {
+   "title": "URBA · Ficha de club (universitario-de-la-plata)",
+   "url": "https://urba.org.ar/clubes/universitario-de-la-plata"
+  },
+  {
+   "title": "URBA · Ficha de club (banco-de-la-nacion-argentina-club-atletico)",
+   "url": "https://urba.org.ar/clubes/banco-de-la-nacion-argentina-club-atletico"
+  },
+  {
+   "title": "URBA · Ficha de club (liceo-naval)",
+   "url": "https://urba.org.ar/clubes/liceo-naval"
+  },
+  {
+   "title": "URBA · Ficha de club (manuel-belgrano-club)",
+   "url": "https://urba.org.ar/clubes/manuel-belgrano-club"
+  },
+  {
+   "title": "URBA · Ficha de club (mariano-moreno)",
+   "url": "https://urba.org.ar/clubes/mariano-moreno"
+  },
+  {
+   "title": "URBA · Ficha de club (san-martin)",
+   "url": "https://urba.org.ar/clubes/san-martin"
+  },
+  {
+   "title": "URBA · Ficha de club (san-patricio)",
+   "url": "https://urba.org.ar/clubes/san-patricio"
+  },
+  {
+   "title": "URBA · Ficha de club (italiano)",
+   "url": "https://urba.org.ar/clubes/italiano"
+  },
+  {
+   "title": "URBA · Ficha de club (argentino)",
+   "url": "https://urba.org.ar/clubes/argentino"
+  },
+  {
+   "title": "URBA · Ficha de club (monte-grande)",
+   "url": "https://urba.org.ar/clubes/monte-grande"
+  },
+  {
+   "title": "URBA · Ficha de club (liceo-militar)",
+   "url": "https://urba.org.ar/clubes/liceo-militar"
+  },
+  {
+   "title": "Wikipedia (en) · Buenos Aires Cricket & Rugby Club (infobox)",
+   "url": "https://en.wikipedia.org/wiki/Buenos_Aires_Cricket_%26_Rugby_Club"
+  },
+  {
+   "title": "Wikipedia (en) · Club Universitario de Buenos Aires",
+   "url": "https://en.wikipedia.org/wiki/Club_Universitario_de_Buenos_Aires"
+  },
+  {
+   "title": "Estatuto social CUBA (colores y cuarteles)",
+   "url": "https://cuba.org.ar/sites/default/files/download/transcripcion_del_texto_ordenado_del_estatuto_social_0.pdf"
+  },
+  {
+   "title": "Wikipedia (en) · Círculo Universitario de Quilmes (infobox)",
+   "url": "https://en.wikipedia.org/wiki/C%C3%ADrculo_Universitario_de_Quilmes"
+  },
+  {
+   "title": "Wikipedia (en) · Ateneo Cultural y Deportivo Don Bosco (infobox)",
+   "url": "https://en.wikipedia.org/wiki/Ateneo_Cultural_y_Deportivo_Don_Bosco"
+  },
+  {
+   "title": "Wikipedia (en) · Delta Rugby Club (infobox)",
+   "url": "https://en.wikipedia.org/wiki/Delta_Rugby_Club"
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+[
+ {
+  "id": "newman",
+  "name": "Newman",
+  "division": "top14",
+  "city": "Benavídez",
+  "address": "Av. de los Constituyentes 7245, Benavídez"
+ },
+ {
+  "id": "casi",
+  "name": "CASI",
+  "division": "top14",
+  "city": "Acassuso",
+  "address": "Roque Sáenz Peña 499, Acassuso"
+ },
+ {
+  "id": "hindu",
+  "name": "Hindú Club",
+  "division": "top14",
+  "city": "Don Torcuato",
+  "address": "Ruta 202 y Av. del Golf, Don Torcuato"
+ },
+ {
+  "id": "alumni",
+  "name": "Alumni",
+  "division": "top14",
+  "city": "Tortuguitas",
+  "address": "Directorio 1155, Tortuguitas"
+ },
+ {
+  "id": "sic",
+  "name": "SIC",
+  "division": "top14",
+  "city": "Boulogne",
+  "address": "Av. Blanco Encalada 404, San Isidro"
+ },
+ {
+  "id": "los-tilos",
+  "name": "Los Tilos",
+  "division": "top14",
+  "city": "Tolosa",
+  "address": "Calle 21 y 522, La Plata"
+ },
+ {
+  "id": "belgrano-athletic",
+  "name": "Belgrano Athletic",
+  "division": "top14",
+  "city": "Buenos Aires",
+  "address": "Virrey del Pino 3456, Buenos Aires"
+ },
+ {
+  "id": "regatas-bella-vista",
+  "name": "Regatas Bella Vista",
+  "division": "top14",
+  "city": "Bella Vista",
+  "address": "Av. Francia 1956, Bella Vista"
+ },
+ {
+  "id": "cuba",
+  "name": "CUBA",
+  "division": "top14",
+  "city": "Villa de Mayo",
+  "address": null
+ },
+ {
+  "id": "atletico-del-rosario",
+  "name": "Atlético del Rosario",
+  "division": "top14",
+  "city": "Rosario",
+  "address": "Pasaje Gould 865, Rosario"
+ },
+ {
+  "id": "la-plata",
+  "name": "La Plata RC",
+  "division": "top14",
+  "city": "Manuel B. Gonnet",
+  "address": "Camino Parque Centenario entre 495 y 496, Gonnet"
+ },
+ {
+  "id": "buenos-aires-crc",
+  "name": "Buenos Aires C&RC",
+  "division": "top14",
+  "city": "Victoria",
+  "address": "Dr. René Favaloro 2500, Victoria"
+ },
+ {
+  "id": "los-matreros",
+  "name": "Los Matreros",
+  "division": "top14",
+  "city": "Castelar",
+  "address": "Coronel Arena entre Arturo Capdevila y Estanislao López, Castelar"
+ },
+ {
+  "id": "champagnat",
+  "name": "Champagnat",
+  "division": "top14",
+  "city": "Pilar",
+  "address": "Panamericana km 56,5, Estancias del Pilar"
+ },
+ {
+  "id": "san-luis",
+  "name": "San Luis",
+  "division": "primera-a",
+  "city": "La Plata",
+  "address": null
+ },
+ {
+  "id": "san-cirano",
+  "name": "San Cirano",
+  "division": "primera-a",
+  "city": "Villa Celina",
+  "address": null
+ },
+ {
+  "id": "lomas-athletic",
+  "name": "Lomas Athletic",
+  "division": "primera-a",
+  "city": "Longchamps",
+  "address": null
+ },
+ {
+  "id": "curupayti",
+  "name": "Curupaytí",
+  "division": "primera-a",
+  "city": "Hurlingham",
+  "address": null
+ },
+ {
+  "id": "san-fernando",
+  "name": "San Fernando",
+  "division": "primera-a",
+  "city": "San Fernando",
+  "address": null
+ },
+ {
+  "id": "pucara",
+  "name": "Pucará",
+  "division": "primera-a",
+  "city": "Burzaco",
+  "address": null
+ },
+ {
+  "id": "geba",
+  "name": "Gimnasia y Esgrima (GEBA)",
+  "division": "primera-a",
+  "city": "Buenos Aires",
+  "address": null
+ },
+ {
+  "id": "hurling",
+  "name": "Hurling",
+  "division": "primera-a",
+  "city": "Hurlingham",
+  "address": null
+ },
+ {
+  "id": "san-andres",
+  "name": "San Andrés",
+  "division": "primera-a",
+  "city": "Benavídez",
+  "address": null
+ },
+ {
+  "id": "pueyrredon",
+  "name": "Pueyrredón",
+  "division": "primera-a",
+  "city": "Boulogne",
+  "address": null
+ },
+ {
+  "id": "olivos",
+  "name": "Olivos",
+  "division": "primera-a",
+  "city": "Munro",
+  "address": null
+ },
+ {
+  "id": "deportiva-francesa",
+  "name": "Deportiva Francesa",
+  "division": "primera-a",
+  "city": "Del Viso",
+  "address": null
+ },
+ {
+  "id": "san-albano",
+  "name": "San Albano",
+  "division": "primera-a",
+  "city": "Burzaco",
+  "address": null
+ },
+ {
+  "id": "universitario-la-plata",
+  "name": "Universitario de La Plata",
+  "division": "primera-a",
+  "city": "Manuel B. Gonnet",
+  "address": null
+ },
+ {
+  "id": "banco-nacion",
+  "name": "Banco Nación",
+  "division": "primera-b",
+  "city": "Benavídez",
+  "address": null
+ },
+ {
+  "id": "cu-quilmes",
+  "name": "C.U. de Quilmes",
+  "division": "primera-b",
+  "city": "Bernal",
+  "address": null
+ },
+ {
+  "id": "liceo-naval",
+  "name": "Liceo Naval",
+  "division": "primera-b",
+  "city": "Buenos Aires",
+  "address": null
+ },
+ {
+  "id": "don-bosco",
+  "name": "Don Bosco",
+  "division": "primera-b",
+  "city": "Bernal",
+  "address": null
+ },
+ {
+  "id": "manuel-belgrano",
+  "name": "Manuel Belgrano",
+  "division": "primera-b",
+  "city": "Maschwitz",
+  "address": null
+ },
+ {
+  "id": "mariano-moreno",
+  "name": "Mariano Moreno",
+  "division": "primera-b",
+  "city": "La Reja",
+  "address": null
+ },
+ {
+  "id": "san-martin",
+  "name": "San Martín",
+  "division": "primera-b",
+  "city": "Sáenz Peña",
+  "address": null
+ },
+ {
+  "id": "san-patricio",
+  "name": "San Patricio",
+  "division": "primera-b",
+  "city": "Pilar",
+  "address": null
+ },
+ {
+  "id": "italiano",
+  "name": "Italiano",
+  "division": "primera-b",
+  "city": "Bajo Flores",
+  "address": null
+ },
+ {
+  "id": "argentino",
+  "name": "Argentino de Rugby",
+  "division": "primera-b",
+  "city": "Avellaneda",
+  "address": null
+ },
+ {
+  "id": "delta",
+  "name": "Delta RC",
+  "division": "primera-b",
+  "city": "Ingeniero Maschwitz",
+  "address": null
+ },
+ {
+  "id": "monte-grande",
+  "name": "Monte Grande",
+  "division": "primera-b",
+  "city": "Canning",
+  "address": null
+ },
+ {
+  "id": "liceo-militar",
+  "name": "Liceo Militar",
+  "division": "primera-b",
+  "city": "Loma Hermosa",
+  "address": null
+ },
+ {
+  "id": "vicentinos",
+  "name": "Vicentinos",
+  "division": "primera-b",
+  "city": "Bella Vista",
+  "address": null
+ }
+]

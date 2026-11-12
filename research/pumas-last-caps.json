@@ -1,0 +1,221 @@
+{
+  "generatedAt": "2026-11-11",
+  "players": {
+    "regatas-bella-vista-santiago-cordero": {
+      "name": "Santiago Cordero",
+      "lastTestDate": "2025-07-19",
+      "lastTestOpponent": "Uruguay (Salta)",
+      "lastSquadYear": 2025,
+      "caps": 56,
+      "injury": {
+        "type": "Fractura de tibia segun reportes iniciales (una nota posterior de ESPN habla de tobillo izquierdo; diagnostico definitivo no confirmado), sufrida jugando para Regatas vs Los Tilos",
+        "from": "2025-10-11",
+        "to": "2026-02 (aprox., tras unos 4,5 meses; vuelta con Pampas vs Capibaras XV en Super Rugby Americas, fecha 3)",
+        "playedSince": true
+      },
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://www.americasrugbynews.com/2025/07/18/santiago-cordero-announces-his-retirement-from-los-pumas/",
+        "https://en.wikipedia.org/wiki/Santiago_Cordero",
+        "https://www.espn.co.cr/rugby/nota/_/id/15801570/rugby-argentina-urba-top-12-santiago-cordero-regatas-los-tilos-lesion-fractura-tibia",
+        "https://www.espn.com.gt/rugby/nota/_/id/16401030/rugby-argentina-sra-super-rugby-americas-pampas-capibaras-xv-fecha-3-debut-santiago-cordero-los-pumas",
+        "https://www.lanacion.com.ar/deportes/rugby/top-12-de-urba-san-luis-termino-ultimo-y-jugara-el-repechaje-casi-y-sic-se-cruzaran-en-las-nid11102025/"
+      ],
+      "notes": "Se retiro de Los Pumas tras el test vs Uruguay (anuncio 18-19/7/2025). La afirmacion \"casi un ano afuera\" NO se verifico: las fuentes indican ~4,5 meses de inactividad (oct 2025 a feb 2026). Fecha 2025-10-11 inferida de la ultima fecha de la fase regular del Top 12 (La Nacion, nid11102025); fecha exacta de la vuelta no confirmada. Las notas ESPN solo aparecieron como resultados de busqueda (no se abrieron). Tambien tuvo una lesion de rodilla en Connacht (2023-25) segun Wikipedia es."
+    },
+    "belgrano-athletic-juan-penoucos": {
+      "name": "Juan Penoucos",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": 2026,
+      "caps": 2,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Juan_Penoucos",
+        "https://www.diarioeltiempo.com.ar/nota-juan-penoucos--ante-la-posibilidad-de-volver-a-vestir-la-camiseta-de-los-pumas-frente-a-australia-210018"
+      ],
+      "notes": "Debut 8/8/2026 vs Sudafrica (Velez). Wikipedia indica 2 caps; segundo test probable vs Australia (Jujuy, 29/8/2026, banco) pero no confirmado; tambien convocado para Mendoza 5/9/2026 sin resultado hallado."
+    },
+    "alumni-santiago-pernas": {
+      "name": "Santiago Pernas",
+      "lastTestDate": "2025-07-19",
+      "lastTestOpponent": "Uruguay",
+      "lastSquadYear": 2025,
+      "caps": 1,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Santiago_Pernas"
+      ],
+      "notes": "Unico cap segun Wikipedia (al 21/12/2025): debut vs Uruguay, 19/7/2025 por el archivo oficial. Sin convocatoria 2026 verificada."
+    },
+    "hindu-nicolas-d-amorim": {
+      "name": "Nicolas D'Amorim",
+      "lastTestDate": "2025-07-19",
+      "lastTestOpponent": "Uruguay",
+      "lastSquadYear": 2025,
+      "caps": 1,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Nicol%C3%A1s_D%27Amorim"
+      ],
+      "notes": "Unico cap segun Wikipedia (al 21/12/2025). Sin convocatoria 2026 verificada."
+    },
+    "alumni-santiago-montagner": {
+      "name": "Santiago Montagner",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Santiago_Montagner"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Debut Nº844 vs Uruguay 28/5/2016 (posible partido de Argentina XV; no se confirmo como test)."
+    },
+    "los-tilos-joaquin-tuculet": {
+      "name": "Joaquin Tuculet",
+      "lastTestDate": "2019-10 (dia exacto no confirmado)",
+      "lastTestOpponent": "Estados Unidos (Kumagaya)",
+      "lastSquadYear": 2019,
+      "caps": 56,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "http://www.americasrugbynews.com/2020/09/04/joaquin-tuculet-retires-from-los-pumas/",
+        "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Tuculet"
+      ],
+      "notes": "Se retiro de Los Pumas en sept 2020; retirado del rugby en 2022 y volvio a Los Tilos en 2025. Lesion larga 2025-26 no investigada."
+    },
+    "hindu-felipe-ezcurra": {
+      "name": "Felipe Ezcurra",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Felipe_Ezcurra"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Wikipedia (al 2019) menciona 2 caps en 2014 para el Sudamericano y que fue convocado en 2015 sin jugar."
+    },
+    "hindu-lautaro-bavaro": {
+      "name": "Lautaro Bavaro",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Lautaro_B%C3%A1varo"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Wikipedia lo describe como capitan de Argentina XV (ARC); jugo en Old Glory DC (MLR)."
+    },
+    "casi-ignacio-larrague": {
+      "name": "Ignacio Larrague",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://en.wikipedia.org/wiki/Ignacio_Larrague"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Wikipedia (al 21/8/2016): 2 caps, 5 puntos."
+    },
+    "los-tilos-matias-cordero": {
+      "name": "Matias Cordero",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/"
+      ],
+      "notes": "Su entrada en player-pedigree.json no tiene registros de nivel pumas; no se investigo. Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). "
+    },
+    "newman-gonzalo-gutierrez-taboada": {
+      "name": "Gonzalo Gutierrez Taboada",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://www.lanacion.com.ar/deportes/rugby/newman-hindu-la-final-del-top-14-de-urba-nid07112026/"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Debut Nº847 vs Chile 4/6/2016. Sigue jugando en Newman (campeon Top 14 2026)."
+    },
+    "los-matreros-juan-pablo-zeiss": {
+      "name": "Juan Pablo Zeiss",
+      "lastTestDate": "2020 (fecha exacta no confirmada)",
+      "lastTestOpponent": "Australia (empate 16-16, Tri Nations 2020)",
+      "lastSquadYear": 2020,
+      "caps": 7,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "https://www.americasrugbynews.com/2022/01/06/puma-juan-pablo-zeiss-to-join-houston-sabercats/",
+        "https://www.anbariloche.com.ar/noticias/2020/11/14/77844-alento-sufrio-disfruto-y-metio-a-bariloche-en-la-historia-del-rugby-argentino"
+      ],
+      "notes": "Datos de una busqueda con resumen (7 caps, ultimo en el empate vs Wallabies 2020); no se abrio la fuente primaria. Debut 8/9/2018 vs Nueva Zelanda."
+    },
+    "los-tilos-segundo-tuculet": {
+      "name": "Segundo Tuculet",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/",
+        "http://www.americasrugbynews.com/2020/09/04/joaquin-tuculet-retires-from-los-pumas/"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Debut Nº849 vs Chile 4/6/2016 (probable Argentina XV); carrera en Pumas 7s y Argentina XV; sin test oficiales confirmados."
+    },
+    "hindu-sebastian-cancelliere": {
+      "name": "Sebastian Cancelliere",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Debut Nº831 vs Uruguay 28/5/2016 (probable Argentina XV)."
+    },
+    "hindu-ramiro-herrera": {
+      "name": "Ramiro Herrera",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Debut Nº814 vs Irlanda 7/6/2014."
+    },
+    "alumni-santiago-gonzalez-iglesias": {
+      "name": "Santiago Gonzalez Iglesias",
+      "lastTestDate": null,
+      "lastTestOpponent": null,
+      "lastSquadYear": null,
+      "caps": null,
+      "injury": null,
+      "sources": [
+        "https://www.lospumas.com.ar/pumas-para-toda-la-vida/"
+      ],
+      "notes": "Sin dato verificable de ultimo test en las fuentes permitidas consultadas (el archivo oficial lista solo debuts). Debut Nº718 vs Chile 20/5/2009."
+    }
+  }
+}

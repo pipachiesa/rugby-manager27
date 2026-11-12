@@ -1,0 +1,265 @@
+{
+ "generatedAt": "2026-11-11",
+ "competition": "Torneo de la URBA (primera división)",
+ "clubs": [
+  {
+   "id": "newman",
+   "urbaTitles": 1,
+   "lastTitle": 2025,
+   "notes": "2025 dentro del rango; Wikipedia también lista 2026 (fuera del rango pedido)."
+  },
+  {
+   "id": "casi",
+   "urbaTitles": 33,
+   "lastTitle": 2005,
+   "notes": "Incluye compartidos 1921 y 1967, 1949."
+  },
+  {
+   "id": "hindu",
+   "urbaTitles": 11,
+   "lastTitle": 2022,
+   "notes": "Incluye 1996 compartido con Atlético del Rosario."
+  },
+  {
+   "id": "alumni",
+   "urbaTitles": 7,
+   "lastTitle": 2024,
+   "notes": "Incluye 1989 compartido con Banco Nación; 2001 sin final (temporada regular)."
+  },
+  {
+   "id": "sic",
+   "urbaTitles": 27,
+   "lastTitle": 2023,
+   "notes": "Incluye compartidos 1939, 1970 y 1986."
+  },
+  {
+   "id": "los-tilos",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "belgrano-athletic",
+   "urbaTitles": 11,
+   "lastTitle": 2016,
+   "notes": "Incluye compartidos 1921, 1940, 1967 y 1968."
+  },
+  {
+   "id": "regatas-bella-vista",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "cuba",
+   "urbaTitles": 15,
+   "lastTitle": 2021,
+   "notes": "Incluye títulos compartidos 1949, 1950, 1968 y 1970."
+  },
+  {
+   "id": "atletico-del-rosario",
+   "urbaTitles": 5,
+   "lastTitle": 2000,
+   "notes": "Incluye 1996 compartido con Hindú."
+  },
+  {
+   "id": "la-plata",
+   "urbaTitles": 1,
+   "lastTitle": 1995,
+   "notes": null
+  },
+  {
+   "id": "buenos-aires-crc",
+   "urbaTitles": 10,
+   "lastTitle": 1959,
+   "notes": "Incluye 1900-1915 como Buenos Aires Football Club (luego fusionado con el Cricket Club), según Wikipedia."
+  },
+  {
+   "id": "los-matreros",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "champagnat",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-luis",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-cirano",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "lomas-athletic",
+   "urbaTitles": 2,
+   "lastTitle": 1913,
+   "notes": "Títulos 1899 y 1913."
+  },
+  {
+   "id": "curupayti",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-fernando",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "pucara",
+   "urbaTitles": 2,
+   "lastTitle": 1950,
+   "notes": "1950 compartido con CUBA."
+  },
+  {
+   "id": "geba",
+   "urbaTitles": 4,
+   "lastTitle": 1939,
+   "notes": "Incluye 1939 compartido con Old Georgian y SIC."
+  },
+  {
+   "id": "hurling",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-andres",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "pueyrredon",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "olivos",
+   "urbaTitles": 1,
+   "lastTitle": 1940,
+   "notes": "Título compartido 1940 con Belgrano Athletic."
+  },
+  {
+   "id": "deportiva-francesa",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-albano",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "universitario-la-plata",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "banco-nacion",
+   "urbaTitles": 2,
+   "lastTitle": 1989,
+   "notes": "Ambos títulos compartidos (1986 con SIC, 1989 con Alumni)."
+  },
+  {
+   "id": "cu-quilmes",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "liceo-naval",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "don-bosco",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "manuel-belgrano",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "mariano-moreno",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-martin",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "san-patricio",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "italiano",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "argentino",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "delta",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "monte-grande",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "liceo-militar",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  },
+  {
+   "id": "vicentinos",
+   "urbaTitles": 0,
+   "lastTitle": null,
+   "notes": null
+  }
+ ],
+ "note": "Datos de Wikipedia leídos mediante resumen automático; verificar recuento exacto de compartidos (p. ej. CASI 33 y Hindú/Rosario 1996). Old Georgian (3), Obras Sanitarias (1) no están entre los 42 clubes.",
+ "sources": [
+  {
+   "title": "Wikipedia: Top 14 de la URBA (Torneo de la URBA)",
+   "url": "https://es.wikipedia.org/wiki/Torneo_de_la_URBA"
+  }
+ ]
+}

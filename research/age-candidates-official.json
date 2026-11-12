@@ -1,0 +1,123 @@
+{
+  "asOf": "2026-11-10",
+  "scope": "Regatas Bella Vista: 29 jugadores del catálogo sin fecha de nacimiento acreditada (ver regatas-missing-dob.json).",
+  "method": "Búsqueda en fuentes oficiales o perfiles deportivos: UAR, URBA, World Rugby, Super Rugby Americas y SANZAAR. Candidatos verificados por el coordinador pendientes de revisión: no se incorporaron todavía a catalog.json ni a age-verification.json.",
+  "candidates": [
+    {
+      "id": "regatas-bella-vista-agustin-garcia-campos",
+      "name": "Agustín García Campos",
+      "birthDate": "2005-04-27",
+      "sources": [
+        {
+          "url": "https://resources.worldrugby-rims.pulselive.com/worldrugby/document/2025/06/25/29539f1b-c23c-492c-affa-ec87da55f89f/Media-Guide-Los-Pumitas-2025.pdf",
+          "publisher": "World Rugby / UAR · Media Guide Los Pumitas, Mundial U20 2025 (24/06/2025)",
+          "kind": "documento oficial de prensa",
+          "evidence": "Ficha: Tercera línea; Fecha de nacimiento: 27/04/2005; Club: Regatas BV. Verificado leyendo el PDF."
+        },
+        {
+          "url": "https://campaigns.supersport.com/rugby/players/2edaea21-eee0-465a-bb25-6c85e609bc31",
+          "publisher": "SuperSport · perfil de jugador (Argentina U20)",
+          "kind": "perfil deportivo de proveedor de datos, no oficial de la UAR",
+          "evidence": "DOB 27/04/2005, 192 cm; visto solo en el resumen del buscador (fetch 403)"
+        },
+        {
+          "url": "https://surprisesports.com/scores/rugby/player/agustin-garcia-campos-306938/",
+          "publisher": "Surprise Sports · agregador",
+          "kind": "agregador, solo corroborante",
+          "evidence": "Misma fecha según el resumen del buscador"
+        }
+      ],
+      "identitySupport": [
+        "World Rugby U20 Championship 2025: Argentina U20, forward n.º 8, 'Agustín Garcia campos Fiszman' (https://www.world.rugby/u20/en/teams/2748/squad, sin fecha de nacimiento)",
+        "Convocatoria Pumitas para el Rugby Championship M20 2025: 'GARCIA CAMPOS, AGUSTÍN (REGATAS BELLA VISTA – URBA)'"
+      ],
+      "confidence": "alta",
+      "openIssues": [
+        "Surprise Sports (agregador) lo ubicaría en Los Matreros en 2026; el catálogo lo observó por última vez en Regatas el 2026-09-05. La fecha de nacimiento no depende de esto, pero conviene revisar la afiliación."
+      ],
+      "status": "incorporado 2026-11-10 a catalog.json (fuente pumitas-media-guide-2025) y age-verification.json"
+    }
+  ],
+  "noOfficialSourceFound": [
+    "Tomás Barbaccia",
+    "Valentín Sanguinetti",
+    "Tomás Sanguinetti",
+    "Marcos Ferro",
+    "Santiago Ruiz",
+    "Felipe Camerlinckx",
+    "Marcos Joseph",
+    "Justo Camerlinckx",
+    "Enrique Camerlinckx",
+    "Alejo Barrera",
+    "Cruz Camerlinckx",
+    "Beltrán Landívar",
+    "Juan Manuel Gobet",
+    "Matías Pascuet",
+    "José de la Torre",
+    "Mateo Camerlinckx",
+    "Francisco Pisani Caride",
+    "Felipe Rugolo",
+    "Felipe Galli",
+    "Lucas Gobet",
+    "Esteban de la Torre",
+    "Tobías Klappenbach",
+    "Ramiro Moadeb",
+    "Juan Molina Campos",
+    "Diego Torres Agüero",
+    "Bautista Solveyra",
+    "Pedro García Colinas",
+    "Rafael Santa Ana"
+  ],
+  "sourcesChecked": [
+    "Guía/plantel Pampas 2026 (ya usada: cubre a los 6 de Regatas con fecha)",
+    "URBA · Plantel Buenos Aires M17, Torneo Argentino Juvenil 2023 (solo Cebrón, ya acreditado, y Cruz Barla, que no está en el catálogo)",
+    "World Rugby · plantel Argentina U20 2025 (sin fechas)",
+    "Convocatorias Pumitas 2024–2026 (solo García Campos, Marcos Camerlinckx, Cebrón y Medrano entre los de Regatas)"
+  ],
+  "pressAgentReport": "research/age-candidates-press.json: 0 hallazgos nuevos en prensa, aparte del mismo Media Guide.",
+  "unaccreditedLeads": {
+    "source": "surprisesports.com (agregador; no cumple los criterios del proyecto, solo sirve como pista)",
+    "items": {
+      "Tomás Barbaccia": "1990-03-18",
+      "Beltrán Landívar": "2002-02-14 (puesto no coincide)",
+      "Juan Manuel Gobet": "1996-09-14",
+      "Cruz Camerlinckx": "1997-04-28",
+      "Felipe Galli": "2000-12-19",
+      "Lucas Gobet": "2003-04-04",
+      "Esteban de la Torre": "2003-01-21",
+      "Diego Torres Agüero": "1998-10-21 (sin club)",
+      "Francisco Pisani Caride": "2001-05-15 (identidad dudosa: figura como Francisco Caride)"
+    }
+  },
+  "secondPass": {
+    "date": "2026-11-10",
+    "sourcesChecked": [
+      "UAR Media Guide Pumitas 2023",
+      "World Rugby/UAR Media Guide Los Pumitas 2025",
+      "Pampas Media Guide 2026",
+      "URBA Plantel Buenos Aires M17 2023 (con fechas)",
+      "URBA Buenos Aires M17 2022, M18 2019, M17 2015 y Juvenil 2017 (sin fechas)"
+    ],
+    "notAvailable": [
+      "Media Guide Pumitas 2022 y 2024 (no encontrados)",
+      "Media Guide Pampas 2024/2025 (403)",
+      "Media Guide Dogos XV 2026 (PDF de imágenes, sin texto; requiere OCR)",
+      "Planteles URBA M18/M19 2024–2025 (las páginas no exponen PDF)"
+    ],
+    "incorporated": [
+      "hindu-ramon-fernandez-miranda",
+      "los-tilos-eliseo-chiavassa",
+      "los-tilos-felipe-bares",
+      "alumni-santiago-neyra",
+      "alumni-aquiles-vieyra",
+      "cuba-rafael-benedit",
+      "buenos-aires-crc-renzo-zanella",
+      "hindu-pascal-senillosa",
+      "cuba-felix-corleto",
+      "sic-timoteo-silva",
+      "los-tilos-matias-cordero",
+      "los-matreros-nicolas-santecchia"
+    ],
+    "aggregatorLeadsConfirmed": 0
+  }
+}

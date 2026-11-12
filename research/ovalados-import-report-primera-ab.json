@@ -1,0 +1,4443 @@
+{
+ "merged": [],
+ "added": [
+  {
+   "clubId": "san-luis",
+   "name": "Alejo García",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Joaquín Napolitano",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Santiago Bonavento",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Mateo Caffaro",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Samuel Juarez",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Mateo Calistro",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Facundo Suárez",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Lahuen Argemi",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Fernando Ibañez",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Santiago Canal",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Nahuel Curti",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Franco Gnecco",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Matías Perissinotto",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Martín Etchanchu",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Agustín Febrero",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Santiago Gibert",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Martín Aereboe",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Luka Gullo",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Juan Cruz Vaca",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Ignacio Quattrocchi",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Valentino Quattrocchi",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Lautaro Grys Arana",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Felipe Hernández",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Segundo Blanco Fresco",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Benjamín Marban",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Facundo Gibert",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Facundo Cuculo",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Facundo De Landaburu",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Benjamín Galán",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-luis",
+   "name": "Felipe Crispo",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "lomas-athletic",
+   "name": "Boulan Perez",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "lomas-athletic",
+   "name": "Neves Das",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Vicente Cabrio",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Nicolás Carballo",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Cruz Rios Sundberg",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Guido Magrini",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Luca Mirani",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Facundo Morales",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Tomás Bruno",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Joaquín Morales",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Francisco Salse",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Luca Bruno",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Iván Lemonnier",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-fernando",
+   "name": "Pedro Presaras",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Felipe F. Kalysz",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Kevin Piazza",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Santiago Nardone",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Juan Segundo Romero",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Aaron Norro",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Hans Eichel",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Jeremías Gonzalez S.",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Agustín Patti",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Felipe Amado",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Javier Mainero",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Tiago Calogero",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Valentín Hernán",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "pucara",
+   "name": "German Klubus",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Santiago Cid",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Martiniano Forgia",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Ramiro Gonzalez Moran",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Manuel Rosato",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Mariano Navarro",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Brian Ormson",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Joaquín Jorge",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Juan Resua",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pucara",
+   "name": "Julen Fourcade",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "geba",
+   "name": "Alejandro Acosta",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "geba",
+   "name": "Tomás Peláez",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "geba",
+   "name": "Nazareno Sánchez",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "geba",
+   "name": "Martin Fiorio",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "geba",
+   "name": "Javier Yaber",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "geba",
+   "name": "Teodoro Nigro",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "geba",
+   "name": "Ian Rodríguez",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "geba",
+   "name": "Mateo Silva",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "geba",
+   "name": "Juan Martín Stratiotis",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "geba",
+   "name": "Nahuel Goldstein",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "geba",
+   "name": "Juan Ignacio Russo",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "geba",
+   "name": "Santiago Vera",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "geba",
+   "name": "Valentín Karpowicz",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "geba",
+   "name": "Octavio Peyrot",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "geba",
+   "name": "Manuel Ramallo",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "geba",
+   "name": "Santiago Viejo",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "geba",
+   "name": "Ignacio Pussi",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "geba",
+   "name": "Gonzalo Rodríguez Caputo",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "geba",
+   "name": "Felipe Karpowicz",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "geba",
+   "name": "Juan Ara Yavicoli",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "geba",
+   "name": "Pedro Bello",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "geba",
+   "name": "Ramiro Waisberg",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "geba",
+   "name": "Ryan Itzcovitz",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "geba",
+   "name": "Juan Moravich",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "geba",
+   "name": "Agustín Morelli",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "geba",
+   "name": "Santino Pantanali",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "geba",
+   "name": "Lucas Cristeff",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "geba",
+   "name": "Pedro Mazzoni",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "geba",
+   "name": "Tadeo Colomb",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "geba",
+   "name": "Lucas Jeckeln",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "geba",
+   "name": "Facundo Maggi",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "geba",
+   "name": "Felipe Ortiz",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "geba",
+   "name": "Juan Pedro Ramognino",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Juan Manuel Blanco",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Matías Sotelo",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Joaquín Testa",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Mateo López",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Patricio Braida Propato",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Diego Pareda",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Pablo Pareda",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Sebastián Dubuc",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Juan Pareda",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "hurling",
+   "name": "Franco Quinn",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Lucas Kexel",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Cole Stoeppelworth",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Guillermo Vallejo",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Thomas Aladio",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Santiago Almaraz",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Viken Gedikian",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Ezequiel Gomez Cofre",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Ivan Beneditt",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Agustín Socorro",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Germán De Elizalde",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Marcos Tauszig",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Ignacio Crescencio Tomas",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Santiago Zweegman",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Luis Giebert",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Max Keller",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Agustín Lovaglio",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Timoteo Masic",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Felipe Córdoba",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Agustín Sosa",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Gaspar Werthein",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Benjamín Beyer",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Pedro Colombo",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Nicholas Macdonald",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Juan Cruz Massun",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Federico Pizarro",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Nicolás Hogg",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Agustín Gavito",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Lautaro Soto",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Timoteo Clutterbuck",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Axel Fritz",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Franco Girasolli",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-andres",
+   "name": "Mateo Usoz",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Ayrton Arroyo",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Tomás Giusiano",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Ignacio Gonzalez Arguello",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Mateo Folino",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Santiago Gonzalez",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Lucio Maslat",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Manuel Stuchetti",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Matías Stuchetti",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Omar Alfonso López",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Juan Arnaldo",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Tomás Cobo",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Ciro Sverdlik",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Bautista Ballatore",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Félix Balogh Kovacs",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Juan Fernández Agüera",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Martin Willnecker",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Facundo Bocalandro",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Ignacio Bobzin",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Francisco Grandoli",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Mateo Yanguela",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Bautista Bocalandro",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Juan Ignacio Ettoli",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Nicolás Bustamante",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Tomas De Lorenzo",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Federico Iceta",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Ramón Lachavanne",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Matías Fernández Prato",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Bautista Yanguela",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Franco Auad",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Martin Paternostro",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Franco Signorelli",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Juan Cassina",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Valentino Ettoli",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Nicolás Stuchetti",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "León Bakchellian",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Juan Marsano",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Agustín Rodríguez Chirillo",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Lucio Auad",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Agustín Angelini",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Matías Tricerri",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "pueyrredon",
+   "name": "Diego Walter",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Franco Mandri",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Facundo Sánchez Botta",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Franco Ocello",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Rodrigo Palacios",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Nahuel Ayub",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Tomás Derito",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Nicolás Ocello",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Tobías Irigoin",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Fermín Porro",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Tomás De Cos",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Facundo Dos Santos",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Patricio Durán",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Franco Palmieri",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Facundo Rollandi",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Facundo Barri",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Facundo Gorlero",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Franco Orellana",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Agustín Bisceglia",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Mateo García Colombo",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Ignacio Inchauspe",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Ignacio Silva Frere",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Felipe Martín",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Valentino Rebuffi",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Francesco Scaglioni",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Juan Cruz Vexina",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Francisco Mazza",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Francisco Rizzo",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Rodrigo Trimboli",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Federico Pichler",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Gastón Pichler",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Juan Abbate",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Joaquín Asencio",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "olivos",
+   "name": "Tadeo Clusellas",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Marcos Fariña",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Tomás Jumilla",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Lucio Cruz",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Marcos Isella",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Bautista Seco",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Francisco Ehrman",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Nazareno Fariña",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Agustín Calvi",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Alejandro Carluccio",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Nicolás Oroño",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Clementino Giménez",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Federico Valdez Pichi",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Nicolás Spandre",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Luca D'esposito",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Blas González Bonorino",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Thiago Zuccolin",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Tomás Di Biase",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Estanislao Renthel",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Pedro Roca",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Manuel Menéndez",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Ignacio González Clua",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Juan Cruz Saliba",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Ian Schmale",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Federico Zarza",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Santiago Diez",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Thiago Malnero",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "deportiva-francesa",
+   "name": "Nicolás García Encina",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Agustin Acinapura",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Kevin Losada",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Joaquin Mercuri",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Manuel Ojam",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Diego Sosa",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Francisco Castellano",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Franco Bustos",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Agusin Irurzun",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Lucas Gallia",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Lucas Pallas",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Ignacio Franco Romero",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Agustin Toriano",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Daniel Bravo",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Agustin Ochoa",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Benjamin Schettino",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Bruno Bravo",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "James Mac Gaw",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Santiago Macieri",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Tomas Mac Gaw",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Lautaro Severina",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Felix Ansaldo",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Ignacio Torres",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Juan Maria Luchetti",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Fernando Suppa Nieto",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Felipe Busto",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Nicolas Vibart",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-albano",
+   "name": "Hernan Matlob",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Bruno Garay",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Gerónimo Lagana",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Manuel Urban",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Lisandro Urréjola",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Bautista Damioli",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Emiliano German",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Juan Herrero Ducloux",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Jerónimo Almeida",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Benjamín Herrera",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Esteban Olivero",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Joaquín Herrera",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Bautista Herrera",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Sebastián Portunato",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Moreno Leandro",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Blas Rivera Cano",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Fermín Esquerre",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Santiago Pereyra",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Grassi Ato",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Santiago Orrico",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Patricio Cachaza",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Lorenzo Donofrio",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Felipe Suárez",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Valentino Arturi",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Fernández Fernando",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Renato Grassi",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Francisco Lombardo",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Alejo Vergel",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Mateo Cechi",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "name": "Federico Espinosa",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Patricio Hernandez",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Facundo Cotugno",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Octavio Barnes",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Juan Torres",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Lautaro Celan",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Guido Portalupi",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Francisco Porzio",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Vittorio Ligatto",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Roger Morales",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Manuel Castellano",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Dante Oppedisano",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Felipe Oviedo",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Thiago Oviedo",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Facundo Merlo",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Tomas Burtin",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Felipe Gamboa",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Nicolas Picasso",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Gonzalo Picasso",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "banco-nacion",
+   "name": "Manuel Cereijo",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Kevin Sanabria",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Nicolás Rodríguez",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Tomás Celoria",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Juan Sérpico",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Augusto Stagnaro",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Felipe Arena",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Leandro Gauto",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Santiago Serwatka",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Dante Marulla",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Kevin Formía",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Lautaro Cabral",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Juan Vatano",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Mauro Druventi",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Santiago Domínguez",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Lautaro Domínguez",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Ivo Schocron",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Leandro Casado",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Luciano Bardini",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Manuel Astorga",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Joaquin Morra",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Lucas La Torre",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "cu-quilmes",
+   "name": "Tomás Astorga",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Francisco Angiolucci",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Alejandro Cabeza",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Tomás Oriolo",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Nicolás Booth",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Tomás Rizzone",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Belisario Plaza",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Joaquín Alonso",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Ignacio Barber",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Octavio Márquez",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Santiago Cors Losada",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Luciano Bellicoso",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Tomás Martinsen",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Santino Buffa",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Joaquín Eisenstein",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Francisco Codino",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Francisco Moreno",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Hernán Elisei",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Bautista Teran Door",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "liceo-naval",
+   "name": "Paco Martinsen",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Joaquín Salguero",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Pablo De Crecchio",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Fernando Gabba",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Xavier Villalba",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Mauro Ferradas",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Guido Goyak",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Mariano Duarte",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Thomas Raitano",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Julián Carmona",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Tomás Gori",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Mariano Biondo",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Tomás Rodriguez",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Lisandro Bigliardi",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Máximo Marra",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Franco Villano",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Agustín Miguez",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Santiago De Elorduy",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Juan Berutti",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Gonzalo Gadano",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Joaquín Sempe",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Teo Gonzalez Bigliardi",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "don-bosco",
+   "name": "Joaquín Vilar",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Javier Irala",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Nicolás Marino",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Franco Tannous",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Luciano Ortiz",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Valentino Freiria",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Santiago Sarthou",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Facundo Marino",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Agustín Noguera",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Ignacio Papasidero",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Vito D’agostino",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Lautaro Marino",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Bruno Fedele",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Leandro Pomares",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Mariano Carrasco",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Tomás Sarthou",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Agustín Oros",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Santiago Casalis",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "mariano-moreno",
+   "name": "Juan Cruz González",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Román Osella",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Franco Cammarata",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Federico Alvarez",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Julián Papa",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Diego Lorenzo",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Iván Ferenczik",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Tomás Alonso",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Gianluca Gianoli",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Tomás Aguirre",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Agustín Ferraro",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Lucca Santero",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Santiago Aguilera",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Bruno Zurniewicz",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Manuel Bianco Druetta",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Santiago Speroni",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Juan Cruz Prokopic",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Ian Verba",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Santiago Berdomas",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Tomás Lemes",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Juan Francisco Bugge",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Thiago Panes",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Juan Francisco Almandoz",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-martin",
+   "name": "Juan Pollet Lo Cane",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Facundo Lamas",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Tiziano Monaco",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Matias Baima",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Facundo Fylyma",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Agustin Baima",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Joaquin Bodenlle",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Manuel Rigou",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Tomas Rigou",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Andres Sanchez",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Nicolas Mckay",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Pedro Lafforgue",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Gonzalo Mckay",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Rodrigo Amaya",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Agustin Conesa",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Nazareno Toppazzini",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Federico Cacciabue",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Santiago Romero",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Bautista Fernandes",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Emiliano Fara",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Ian Prieto",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Tiago Pugliese",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Sebastian Romero",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Juan Ignacio Martinez",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "san-patricio",
+   "name": "Marcos Ruiz Guiñazu",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Alejandro Rios",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Tomás Bernardin",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Tomás Molinas",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Franco Chattah",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Luca Canzonieri",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Vitto Curotto",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Ramiro Albarracín",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Agustín Sommer",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Tomás Torno",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Alejo Corcoba",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Manuel Lo Coco",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Ulises Oubiña",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Martin Ciaffone",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Franco Lepera",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Joaquin Lascano",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Francisco Benitez",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Franco Segovia",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Manuel Benitez",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Tomas De Cillis",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "italiano",
+   "name": "Santiago Monaldi",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Facundo Angeletti",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Santiago Mendiburu",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Tobias Delmastro",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Juan Ignacio Duarte",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Federico Chapela",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Franco Ercolano",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Martín Devita",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Cristóbal Carbone",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Danilo Midón",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Gaspar Siepe",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Alex Constenla",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Lisandro Carbone",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Joaquín López",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Leonardo Gallardo",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Tomás Corrochano",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Lucas Almeida",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Ramiro Ursino",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Caio López",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Nahuel Clausen",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "argentino",
+   "name": "Jerónimo Iglesias",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "delta",
+   "name": "Bautista Nadal",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "delta",
+   "name": "Juan Garzon",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "delta",
+   "name": "Gonzalo Grijalba",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "delta",
+   "name": "Marco Marcovecchio",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "delta",
+   "name": "Facundo Nigro",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "delta",
+   "name": "Matías Diaz",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "delta",
+   "name": "Pedro Caimi",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "delta",
+   "name": "Pedro Coronel",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "delta",
+   "name": "Octavio Coltrinari",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "delta",
+   "name": "Pedro Griffa",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "delta",
+   "name": "Federico Martini",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "delta",
+   "name": "Juan Pedro Cacciola",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "delta",
+   "name": "Bautista Boniface",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "delta",
+   "name": "Bautista Carranza",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "delta",
+   "name": "Francisco Santillan",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "delta",
+   "name": "Ciro Gonzalez Venzano",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "delta",
+   "name": "Facundo Bermejo",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "delta",
+   "name": "Tomás Nucifora",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "delta",
+   "name": "Agustín Salado Castro",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "delta",
+   "name": "Juan Forrester",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "delta",
+   "name": "Nicolás Schenone",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "delta",
+   "name": "Santiago Salado Castro",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "delta",
+   "name": "Gonzalo Bermejo",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Fernando Cabrera",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Federico Blanco",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Alexander Medina",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Iván Piak",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Diego Alzogaray",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Santiago Prieto",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Bruno Mantovini",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Francisco Cocca",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Alan Tarraf",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Gonzalo Fernandez Figarola",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Joel Casa",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Bautista Terrera",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Matias Condurso",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Sebastián Campagna",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Juan Domingo",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Julian De La Vega",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Bautista Uribe",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Martín Fernandez",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Leandro Schmidt",
+   "number": 14,
+   "position": "Wing"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Dante Fongi",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "liceo-militar",
+   "name": "Ezequiel Krogslund",
+   "number": 15,
+   "position": "Fullback"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Jorge Benitez",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Juan Matias Traynor",
+   "number": 1,
+   "position": "Pilar izquierdo"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Thiago Gomez",
+   "number": 2,
+   "position": "Hooker"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Emilio Chaves",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Gabriel Rubira",
+   "number": 3,
+   "position": "Pilar derecho"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Francisco Comabella",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Pedro Montenegro",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Rodrigo Rios",
+   "number": 4,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Juan Martin Turkowsky",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Juan Pablo Gauto",
+   "number": 5,
+   "position": "Segunda línea"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Mariano Livachoff",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Rodrigo Esmayel",
+   "number": 6,
+   "position": "Ala"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Matias Aguerrondo",
+   "number": 7,
+   "position": "Ala"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Tobias Lucero",
+   "number": 8,
+   "position": "Octavo"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Francisco Occhiuzzi",
+   "number": 9,
+   "position": "Medio scrum"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Ramiro Occhiuzzi",
+   "number": 10,
+   "position": "Apertura"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Alejo Balbi",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Juan Pablo Occhiuzzi",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Santino Gerez",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Tomas Parra",
+   "number": 11,
+   "position": "Wing"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Santiago Traynor",
+   "number": 12,
+   "position": "Centro"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Enzo Corsi",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Ignacio Torres Ciutat",
+   "number": 13,
+   "position": "Centro"
+  },
+  {
+   "clubId": "vicentinos",
+   "name": "Mariano Traynor",
+   "number": 14,
+   "position": "Wing"
+  }
+ ],
+ "linked": 1,
+ "skipped": [
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Hervera"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Monin"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Lazarte"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Aznar"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Cuello"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Neme"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Oliva"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Huberman"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Larocca"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Ramírez"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Cocaro"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Rocca"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Taborda"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Sanchez"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Romano"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Crovella"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Gordillo"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Brex"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Liporaci"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Fasano"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Lertora"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Torino"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Borasi"
+   ]
+  },
+  {
+   "clubId": "san-cirano",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Calello"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Scaramella"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Toth"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Bogani"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Robledo"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Souto"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Ehgartner"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Tallone"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "De, Zerbi"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Kubar"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Masotta"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Gomez"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Hardy"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Borda"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Fadul"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Juarez"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Carrusca"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Schmidt"
+   ]
+  },
+  {
+   "clubId": "lomas-athletic",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "García, J."
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Maiola, Santiago"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Dublo, Joaquín"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Herrera, Ramiro"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Gazul, Mariano"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Milan, Nahuel"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Dublo, Agustín"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Sanguinetti, Tomás"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Sanguinetti, Agustín"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Desalvo, Nahuel"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Correa, Franco"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Godoy, Juan"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Correa, Román"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Leonelli, Tomás"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Paterno, Mateo"
+   ]
+  },
+  {
+   "clubId": "curupayti",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Gregnanin, Juan"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Maiola, Santiago"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Dublo, Joaquín"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Herrera, Ramiro"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Gazul, Mariano"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Milan, Nahuel"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Dublo, Agustín"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Sanguinetti, Tomás"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Sanguinetti, Agustín"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Desalvo, Nahuel"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Franco, Correa"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Gregnanin, Juan"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Godoy, Juan"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Correa, Román"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Leonelli, Tomás"
+   ]
+  },
+  {
+   "clubId": "san-fernando",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Paterno, Mateo"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Cisco"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Stagno"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Chimenti"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Otero"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Coppola"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Indomito"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Costa"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Ferreiro"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Gesso, Del"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Lacal"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Marelli"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Calvo"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Domínguez"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Prebble"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Delguy"
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Sapuppo, G."
+   ]
+  },
+  {
+   "clubId": "pucara",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Coppola, A."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Argenio, V."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Martínez, F."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Lovatto, S."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Maldonado, M."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Patarca, P."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Morrow, F."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Podestá, F."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Cáceres, E."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Scrivano, V."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Jaure, B."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Pereiro, J."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Quinn, I."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Morrow, M."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Said, B."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Wade, A."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Pereiro, L."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Vázquez Moltedo, C."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Parareda, D."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Quevedo, J. M."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Parareda, P.",
+    "Parareda, J."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Salvagni, L."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Sánchez Rizzi, B."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Fernandes, F.",
+    "Fernandes, I."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Arrigoni, M."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Doherty, P."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Montes, I."
+   ]
+  },
+  {
+   "clubId": "hurling",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Schinocca, F."
+   ]
+  },
+  {
+   "clubId": "san-andres",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "Sanguinetti, Tomas"
+   ]
+  },
+  {
+   "clubId": "olivos",
+   "reason": "no identifica a un jugador",
+   "names": [
+    "Tedesco"
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Silva, A."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Federici, X."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Daubenbager, F."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Juañuk, G."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Torres, J."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Longhini, T."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Ruiz, V."
+   ]
+  },
+  {
+   "clubId": "san-albano",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Laurora, M."
+   ]
+  },
+  {
+   "clubId": "universitario-la-plata",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Barbagelata, Juan F."
+   ]
+  },
+  {
+   "clubId": "cu-quilmes",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "López, Julián"
+   ]
+  },
+  {
+   "clubId": "mariano-moreno",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "López, Julián"
+   ]
+  },
+  {
+   "clubId": "san-martin",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "González, Mateo"
+   ]
+  },
+  {
+   "clubId": "argentino",
+   "reason": "figura en el plantel de dos clubes",
+   "names": [
+    "González, Mateo"
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Ferreyra, M."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Labale, F."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Echeverria, G."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Kolarik, I."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Benitez, W."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Battafarano, F."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Budelli, F."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Michel, J."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Vazquez, I."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Rivarola, R."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Di Gangi, S."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Blanco, A."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Geminiani, J."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Frattiani, B."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "D'Alessandro, G."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Guatri, T."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Cabanas, M."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Courtinade, I."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Pattacini, L."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Citrinovitz, M."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Maya, V."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Naranjo Sosa, M."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Puerto, F."
+   ]
+  },
+  {
+   "clubId": "monte-grande",
+   "reason": "nombre abreviado o incompleto",
+   "names": [
+    "Blanco, M."
+   ]
+  }
+ ],
+ "notOnOvalados": {
+  "san-luis": [],
+  "san-cirano": [],
+  "lomas-athletic": [],
+  "curupayti": [],
+  "san-fernando": [],
+  "pucara": [],
+  "geba": [],
+  "hurling": [],
+  "san-andres": [],
+  "pueyrredon": [],
+  "olivos": [],
+  "deportiva-francesa": [],
+  "san-albano": [],
+  "universitario-la-plata": [],
+  "banco-nacion": [],
+  "cu-quilmes": [],
+  "liceo-naval": [],
+  "don-bosco": [],
+  "mariano-moreno": [],
+  "san-martin": [],
+  "san-patricio": [],
+  "italiano": [],
+  "argentino": [],
+  "delta": [],
+  "monte-grande": [],
+  "liceo-militar": [],
+  "vicentinos": []
+ },
+ "departed": []
+}

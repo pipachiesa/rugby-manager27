@@ -1,0 +1,1371 @@
+{
+ "generatedAt": "2026-11-12",
+ "sources": [
+  {
+   "title": "URBA fixture API (JSON public usado por urba.org.ar/fixture): Menores de 17 y 19, Primera y Segunda Rueda 2026",
+   "url": "https://urba.org.ar/api/fixture/championship/2025283"
+  },
+  {
+   "title": "URBA fixtures juveniles 2026 (PDF primera rueda con zonas)",
+   "url": "https://urba.org.ar/urba/fixtures-de-los-torneos-de-divisiones-juveniles-temporada-2026"
+  },
+  {
+   "title": "URBA fechas de las finales (Seven juveniles M17 22/11, M19 28/11)",
+   "url": "https://urba.org.ar/noticias/fechas-de-las-finales-de-todos-los-torneos-urba-y-seven-2026"
+  },
+  {
+   "title": "Regatas Bella Vista: M17 A y B campeones tras vencer a BACRC",
+   "url": "https://www.regatasbellavista.com.ar/"
+  }
+ ],
+ "M17": {
+  "champion": "regatas-bella-vista",
+  "runnerUp": "cuba",
+  "notes": "Campeonato de 15 jugadores 2026, equipos A, Grupo II Nivel 1 (Top 14 y varios de Primera A/B). Primera rueda en dos zonas de 12 (abril-julio); segunda rueda desde el 9/8: los 6 mejores de cada zona juegan todos contra todos en G2 Ganadores (11 fechas, hasta el 1/11) y los otros 6 en G2 Intermedia. Regatas A terminó 1º de Ganadores (10 victorias en 11, 47 pts) delante de CUBA A (45) y CASI A (40); el sitio del club confirma M17 A y B campeones. No se halló una final aparte: campeón tomado como líder de la tabla final (inferido, confianza alta). Los equipos B tienen tablas propias (no incluidas). rank agrupa Ganadores 1-12, Intermedia 13-24, Desarrollo 25+. points = puntos de la segunda rueda. Seven M17: finales el 22/11 (sin jugar).",
+  "clubs": [
+   {
+    "id": "regatas-bella-vista",
+    "rank": 1,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 47,
+    "stage": "campeón",
+    "secondRound": {
+     "position": 1,
+     "played": 11,
+     "won": 10,
+     "lost": 1,
+     "pf": 484,
+     "pa": 199
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 2,
+     "points": 48
+    }
+   },
+   {
+    "id": "cuba",
+    "rank": 2,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 45,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 11,
+     "won": 9,
+     "lost": 2,
+     "pf": 489,
+     "pa": 231
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 1,
+     "points": 53
+    }
+   },
+   {
+    "id": "casi",
+    "rank": 3,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 40,
+    "stage": "zona",
+    "secondRound": {
+     "position": 3,
+     "played": 11,
+     "won": 8,
+     "lost": 3,
+     "pf": 419,
+     "pa": 272
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 1,
+     "points": 48
+    }
+   },
+   {
+    "id": "buenos-aires-crc",
+    "rank": 4,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 34,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 11,
+     "won": 8,
+     "lost": 3,
+     "pf": 298,
+     "pa": 258
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 3,
+     "points": 41
+    }
+   },
+   {
+    "id": "pucara",
+    "rank": 5,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 33,
+    "stage": "zona",
+    "secondRound": {
+     "position": 5,
+     "played": 11,
+     "won": 7,
+     "lost": 4,
+     "pf": 345,
+     "pa": 329
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 3,
+     "points": 36
+    }
+   },
+   {
+    "id": "belgrano-athletic",
+    "rank": 6,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 30,
+    "stage": "zona",
+    "secondRound": {
+     "position": 6,
+     "played": 11,
+     "won": 6,
+     "lost": 5,
+     "pf": 400,
+     "pa": 323
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 2,
+     "points": 45
+    }
+   },
+   {
+    "id": "sic",
+    "rank": 7,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 28,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 11,
+     "won": 6,
+     "lost": 5,
+     "pf": 325,
+     "pa": 284
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 5,
+     "points": 32
+    }
+   },
+   {
+    "id": "champagnat",
+    "rank": 8,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 21,
+    "stage": "zona",
+    "secondRound": {
+     "position": 8,
+     "played": 11,
+     "won": 4,
+     "lost": 7,
+     "pf": 274,
+     "pa": 318
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 5,
+     "points": 34
+    }
+   },
+   {
+    "id": "san-luis",
+    "rank": 9,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 12,
+    "stage": "zona",
+    "secondRound": {
+     "position": 9,
+     "played": 11,
+     "won": 2,
+     "lost": 8,
+     "pf": 292,
+     "pa": 476
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 4,
+     "points": 35
+    }
+   },
+   {
+    "id": "alumni",
+    "rank": 10,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 11,
+    "stage": "zona",
+    "secondRound": {
+     "position": 10,
+     "played": 11,
+     "won": 2,
+     "lost": 9,
+     "pf": 277,
+     "pa": 436
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 6,
+     "points": 29
+    }
+   },
+   {
+    "id": "san-cirano",
+    "rank": 11,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 9,
+    "stage": "zona",
+    "secondRound": {
+     "position": 11,
+     "played": 11,
+     "won": 2,
+     "lost": 9,
+     "pf": 210,
+     "pa": 461
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 7,
+     "points": 32
+    }
+   },
+   {
+    "id": "la-plata",
+    "rank": 12,
+    "zone": "Segunda rueda G2 Ganadores",
+    "points": 6,
+    "stage": "zona",
+    "secondRound": {
+     "position": 12,
+     "played": 11,
+     "won": 1,
+     "lost": 9,
+     "pf": 237,
+     "pa": 463
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 4,
+     "points": 34
+    }
+   },
+   {
+    "id": "san-andres",
+    "rank": 13,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 44,
+    "stage": "zona",
+    "secondRound": {
+     "position": 1,
+     "played": 11,
+     "won": 9,
+     "lost": 2,
+     "pf": 541,
+     "pa": 196
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 8,
+     "points": 25
+    }
+   },
+   {
+    "id": "newman",
+    "rank": 14,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 44,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 11,
+     "won": 9,
+     "lost": 2,
+     "pf": 495,
+     "pa": 210
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 6,
+     "points": 32
+    }
+   },
+   {
+    "id": "hindu",
+    "rank": 15,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 37,
+    "stage": "zona",
+    "secondRound": {
+     "position": 3,
+     "played": 11,
+     "won": 8,
+     "lost": 2,
+     "pf": 346,
+     "pa": 258
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 7,
+     "points": 28
+    }
+   },
+   {
+    "id": "deportiva-francesa",
+    "rank": 16,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 35,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 11,
+     "won": 7,
+     "lost": 4,
+     "pf": 403,
+     "pa": 281
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 10,
+     "points": 11
+    }
+   },
+   {
+    "id": "los-matreros",
+    "rank": 18,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 32,
+    "stage": "zona",
+    "secondRound": {
+     "position": 6,
+     "played": 11,
+     "won": 7,
+     "lost": 4,
+     "pf": 314,
+     "pa": 307
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 9,
+     "points": 18
+    }
+   },
+   {
+    "id": "olivos",
+    "rank": 19,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 25,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 11,
+     "won": 5,
+     "lost": 6,
+     "pf": 373,
+     "pa": 355
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 1,
+     "points": 41
+    }
+   },
+   {
+    "id": "los-tilos",
+    "rank": 20,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 25,
+    "stage": "zona",
+    "secondRound": {
+     "position": 8,
+     "played": 11,
+     "won": 5,
+     "lost": 5,
+     "pf": 296,
+     "pa": 367
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 8,
+     "points": 18
+    }
+   },
+   {
+    "id": "san-martin",
+    "rank": 21,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 14,
+    "stage": "zona",
+    "secondRound": {
+     "position": 9,
+     "played": 11,
+     "won": 2,
+     "lost": 8,
+     "pf": 222,
+     "pa": 384
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 3,
+     "points": 38
+    }
+   },
+   {
+    "id": "lomas-athletic",
+    "rank": 22,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 12,
+    "stage": "zona",
+    "secondRound": {
+     "position": 10,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 180,
+     "pa": 431
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 10,
+     "points": 12
+    }
+   },
+   {
+    "id": "liceo-naval",
+    "rank": 23,
+    "zone": "Segunda rueda G2 Intermedia",
+    "points": 6,
+    "stage": "zona",
+    "secondRound": {
+     "position": 11,
+     "played": 11,
+     "won": 1,
+     "lost": 10,
+     "pf": 182,
+     "pa": 397
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 9,
+     "points": 14
+    }
+   },
+   {
+    "id": "pueyrredon",
+    "rank": 25,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 48,
+    "stage": "zona",
+    "secondRound": {
+     "position": 1,
+     "played": 10,
+     "won": 10,
+     "lost": 0,
+     "pf": 485,
+     "pa": 137
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 12,
+     "points": 3
+    }
+   },
+   {
+    "id": "curupayti",
+    "rank": 26,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 33,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 9,
+     "won": 7,
+     "lost": 2,
+     "pf": 330,
+     "pa": 160
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 4,
+     "points": 33
+    }
+   },
+   {
+    "id": "geba",
+    "rank": 27,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 33,
+    "stage": "zona",
+    "secondRound": {
+     "position": 3,
+     "played": 9,
+     "won": 7,
+     "lost": 1,
+     "pf": 312,
+     "pa": 188
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 11,
+     "points": 6
+    }
+   },
+   {
+    "id": "hurling",
+    "rank": 28,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 30,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 9,
+     "won": 6,
+     "lost": 3,
+     "pf": 350,
+     "pa": 190
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 5,
+     "points": 28
+    }
+   },
+   {
+    "id": "san-albano",
+    "rank": 29,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 26,
+    "stage": "zona",
+    "secondRound": {
+     "position": 5,
+     "played": 10,
+     "won": 5,
+     "lost": 4,
+     "pf": 332,
+     "pa": 255
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 9,
+     "points": 18
+    }
+   },
+   {
+    "id": "universitario-la-plata",
+    "rank": 30,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 25,
+    "stage": "zona",
+    "secondRound": {
+     "position": 6,
+     "played": 9,
+     "won": 5,
+     "lost": 4,
+     "pf": 234,
+     "pa": 191
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 7,
+     "points": 20
+    }
+   },
+   {
+    "id": "manuel-belgrano",
+    "rank": 31,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 24,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 9,
+     "won": 5,
+     "lost": 4,
+     "pf": 266,
+     "pa": 218
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 6,
+     "points": 21
+    }
+   },
+   {
+    "id": "mariano-moreno",
+    "rank": 33,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 17,
+    "stage": "zona",
+    "secondRound": {
+     "position": 9,
+     "played": 9,
+     "won": 3,
+     "lost": 6,
+     "pf": 254,
+     "pa": 317
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 8,
+     "points": 19
+    }
+   },
+   {
+    "id": "vicentinos",
+    "rank": 34,
+    "zone": "Segunda rueda G2 Desarrollo",
+    "points": 15,
+    "stage": "zona",
+    "secondRound": {
+     "position": 10,
+     "played": 10,
+     "won": 3,
+     "lost": 7,
+     "pf": 215,
+     "pa": 427
+    },
+    "firstRound": null
+   }
+  ]
+ },
+ "M19": {
+  "champion": "newman",
+  "runnerUp": "sic",
+  "notes": "Misma estructura (G2 Nivel 1; segunda rueda terminada el 1/11). Newman A 1º de Ganadores con 48 pts (10 victorias), SIC A 2º con 46, Belgrano Athletic A 3º con 41 y Hindú A 4º. Campeón inferido como líder de la tabla final (no se halló comunicado ni final aparte; confianza media). rank agrupa Nivel 1 Ganadores 1-12, Nivel 1 Intermedia 13-24, Nivel 2 Ganadores 25-36, Nivel 2 Intermedia 37-48, Desarrollo 49+. Regatas fue 10º de Ganadores. Seven M19: finales el 28/11 (sin jugar).",
+  "clubs": [
+   {
+    "id": "newman",
+    "rank": 1,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 48,
+    "stage": "campeón",
+    "secondRound": {
+     "position": 1,
+     "played": 11,
+     "won": 10,
+     "lost": 1,
+     "pf": 436,
+     "pa": 220
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 4,
+     "points": 42
+    }
+   },
+   {
+    "id": "sic",
+    "rank": 2,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 46,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 11,
+     "won": 10,
+     "lost": 1,
+     "pf": 489,
+     "pa": 207
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 1,
+     "points": 48
+    }
+   },
+   {
+    "id": "belgrano-athletic",
+    "rank": 3,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 41,
+    "stage": "zona",
+    "secondRound": {
+     "position": 3,
+     "played": 11,
+     "won": 9,
+     "lost": 2,
+     "pf": 384,
+     "pa": 282
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 3,
+     "points": 44
+    }
+   },
+   {
+    "id": "hindu",
+    "rank": 4,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 34,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 11,
+     "won": 6,
+     "lost": 5,
+     "pf": 452,
+     "pa": 298
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 6,
+     "points": 32
+    }
+   },
+   {
+    "id": "pucara",
+    "rank": 5,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 32,
+    "stage": "zona",
+    "secondRound": {
+     "position": 5,
+     "played": 11,
+     "won": 7,
+     "lost": 4,
+     "pf": 314,
+     "pa": 276
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 14,
+     "points": 6
+    }
+   },
+   {
+    "id": "cuba",
+    "rank": 6,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 29,
+    "stage": "zona",
+    "secondRound": {
+     "position": 6,
+     "played": 11,
+     "won": 6,
+     "lost": 5,
+     "pf": 297,
+     "pa": 307
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 2,
+     "points": 45
+    }
+   },
+   {
+    "id": "san-luis",
+    "rank": 7,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 19,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 11,
+     "won": 4,
+     "lost": 7,
+     "pf": 284,
+     "pa": 310
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 4,
+     "points": 36
+    }
+   },
+   {
+    "id": "champagnat",
+    "rank": 8,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 16,
+    "stage": "zona",
+    "secondRound": {
+     "position": 8,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 307,
+     "pa": 375
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 7,
+     "points": 30
+    }
+   },
+   {
+    "id": "alumni",
+    "rank": 9,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 16,
+    "stage": "zona",
+    "secondRound": {
+     "position": 9,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 240,
+     "pa": 332
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 11,
+     "points": 14
+    }
+   },
+   {
+    "id": "regatas-bella-vista",
+    "rank": 10,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 13,
+    "stage": "zona",
+    "secondRound": {
+     "position": 10,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 226,
+     "pa": 415
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 8,
+     "points": 21
+    }
+   },
+   {
+    "id": "buenos-aires-crc",
+    "rank": 11,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 12,
+    "stage": "zona",
+    "secondRound": {
+     "position": 11,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 261,
+     "pa": 496
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 5,
+     "points": 33
+    }
+   },
+   {
+    "id": "la-plata",
+    "rank": 12,
+    "zone": "Segunda rueda G2 Nivel 1 Ganadores",
+    "points": 11,
+    "stage": "zona",
+    "secondRound": {
+     "position": 12,
+     "played": 11,
+     "won": 2,
+     "lost": 9,
+     "pf": 233,
+     "pa": 405
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 13,
+     "points": 6
+    }
+   },
+   {
+    "id": "san-martin",
+    "rank": 13,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 47,
+    "stage": "zona",
+    "secondRound": {
+     "position": 1,
+     "played": 11,
+     "won": 10,
+     "lost": 1,
+     "pf": 403,
+     "pa": 209
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 9,
+     "points": 18
+    }
+   },
+   {
+    "id": "casi",
+    "rank": 14,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 46,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 11,
+     "won": 10,
+     "lost": 1,
+     "pf": 428,
+     "pa": 263
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 10,
+     "points": 16
+    }
+   },
+   {
+    "id": "pueyrredon",
+    "rank": 15,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 34,
+    "stage": "zona",
+    "secondRound": {
+     "position": 3,
+     "played": 11,
+     "won": 7,
+     "lost": 3,
+     "pf": 272,
+     "pa": 227
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 8,
+     "points": 20
+    }
+   },
+   {
+    "id": "san-andres",
+    "rank": 16,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 28,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 11,
+     "won": 6,
+     "lost": 5,
+     "pf": 268,
+     "pa": 257
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 7,
+     "points": 23
+    }
+   },
+   {
+    "id": "san-cirano",
+    "rank": 17,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 27,
+    "stage": "zona",
+    "secondRound": {
+     "position": 5,
+     "played": 11,
+     "won": 5,
+     "lost": 6,
+     "pf": 259,
+     "pa": 246
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 10,
+     "points": 14
+    }
+   },
+   {
+    "id": "los-tilos",
+    "rank": 19,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 24,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 11,
+     "won": 5,
+     "lost": 5,
+     "pf": 301,
+     "pa": 348
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 Desarrollo",
+     "position": 12,
+     "points": 11
+    }
+   },
+   {
+    "id": "lomas-athletic",
+    "rank": 20,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 22,
+    "stage": "zona",
+    "secondRound": {
+     "position": 8,
+     "played": 11,
+     "won": 4,
+     "lost": 6,
+     "pf": 308,
+     "pa": 300
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 9,
+     "points": 19
+    }
+   },
+   {
+    "id": "mariano-moreno",
+    "rank": 21,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 21,
+    "stage": "zona",
+    "secondRound": {
+     "position": 9,
+     "played": 11,
+     "won": 4,
+     "lost": 7,
+     "pf": 245,
+     "pa": 274
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 D",
+     "position": 1,
+     "points": 52
+    }
+   },
+   {
+    "id": "curupayti",
+    "rank": 22,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 20,
+    "stage": "zona",
+    "secondRound": {
+     "position": 10,
+     "played": 11,
+     "won": 4,
+     "lost": 6,
+     "pf": 307,
+     "pa": 375
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 D",
+     "position": 2,
+     "points": 47
+    }
+   },
+   {
+    "id": "hurling",
+    "rank": 23,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 14,
+    "stage": "zona",
+    "secondRound": {
+     "position": 11,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 284,
+     "pa": 423
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 10,
+     "points": 12
+    }
+   },
+   {
+    "id": "san-fernando",
+    "rank": 24,
+    "zone": "Segunda rueda G2 Nivel 1 Intermedia",
+    "points": 7,
+    "stage": "zona",
+    "secondRound": {
+     "position": 12,
+     "played": 11,
+     "won": 1,
+     "lost": 10,
+     "pf": 192,
+     "pa": 356
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 1,
+     "points": 44
+    }
+   },
+   {
+    "id": "geba",
+    "rank": 25,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 47,
+    "stage": "zona",
+    "secondRound": {
+     "position": 1,
+     "played": 11,
+     "won": 10,
+     "lost": 1,
+     "pf": 465,
+     "pa": 164
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 12,
+     "points": 0
+    }
+   },
+   {
+    "id": "olivos",
+    "rank": 26,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 42,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 11,
+     "won": 8,
+     "lost": 3,
+     "pf": 444,
+     "pa": 153
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 B",
+     "position": 11,
+     "points": 6
+    }
+   },
+   {
+    "id": "deportiva-francesa",
+    "rank": 27,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 41,
+    "stage": "zona",
+    "secondRound": {
+     "position": 3,
+     "played": 11,
+     "won": 9,
+     "lost": 2,
+     "pf": 374,
+     "pa": 175
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 11,
+     "points": 10
+    }
+   },
+   {
+    "id": "liceo-naval",
+    "rank": 28,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 40,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 11,
+     "won": 9,
+     "lost": 2,
+     "pf": 301,
+     "pa": 220
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 1 A",
+     "position": 12,
+     "points": 4
+    }
+   },
+   {
+    "id": "los-matreros",
+    "rank": 29,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 31,
+    "stage": "zona",
+    "secondRound": {
+     "position": 5,
+     "played": 11,
+     "won": 6,
+     "lost": 5,
+     "pf": 319,
+     "pa": 276
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 D",
+     "position": 4,
+     "points": 34
+    }
+   },
+   {
+    "id": "manuel-belgrano",
+    "rank": 31,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 22,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 11,
+     "won": 5,
+     "lost": 6,
+     "pf": 253,
+     "pa": 276
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 3,
+     "points": 34
+    }
+   },
+   {
+    "id": "san-patricio",
+    "rank": 33,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 17,
+    "stage": "zona",
+    "secondRound": {
+     "position": 9,
+     "played": 11,
+     "won": 4,
+     "lost": 7,
+     "pf": 203,
+     "pa": 352
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 4,
+     "points": 32
+    }
+   },
+   {
+    "id": "san-albano",
+    "rank": 34,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 15,
+    "stage": "zona",
+    "secondRound": {
+     "position": 10,
+     "played": 11,
+     "won": 3,
+     "lost": 8,
+     "pf": 273,
+     "pa": 439
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 6,
+     "points": 28
+    }
+   },
+   {
+    "id": "cu-quilmes",
+    "rank": 35,
+    "zone": "Segunda rueda G2 Nivel 2 Ganadores",
+    "points": 12,
+    "stage": "zona",
+    "secondRound": {
+     "position": 11,
+     "played": 11,
+     "won": 2,
+     "lost": 9,
+     "pf": 191,
+     "pa": 329
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 D",
+     "position": 7,
+     "points": 25
+    }
+   },
+   {
+    "id": "universitario-la-plata",
+    "rank": 38,
+    "zone": "Segunda rueda G2 Nivel 2 Intermedia",
+    "points": 39,
+    "stage": "zona",
+    "secondRound": {
+     "position": 2,
+     "played": 10,
+     "won": 8,
+     "lost": 2,
+     "pf": 325,
+     "pa": 138
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 7,
+     "points": 24
+    }
+   },
+   {
+    "id": "monte-grande",
+    "rank": 40,
+    "zone": "Segunda rueda G2 Nivel 2 Intermedia",
+    "points": 34,
+    "stage": "zona",
+    "secondRound": {
+     "position": 4,
+     "played": 10,
+     "won": 7,
+     "lost": 3,
+     "pf": 404,
+     "pa": 260
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 D",
+     "position": 8,
+     "points": 23
+    }
+   },
+   {
+    "id": "italiano",
+    "rank": 43,
+    "zone": "Segunda rueda G2 Nivel 2 Intermedia",
+    "points": 21,
+    "stage": "zona",
+    "secondRound": {
+     "position": 7,
+     "played": 10,
+     "won": 4,
+     "lost": 5,
+     "pf": 260,
+     "pa": 271
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 C",
+     "position": 8,
+     "points": 16
+    }
+   },
+   {
+    "id": "banco-nacion",
+    "rank": 47,
+    "zone": "Segunda rueda G2 Nivel 2 Intermedia",
+    "points": 13,
+    "stage": "zona",
+    "secondRound": {
+     "position": 11,
+     "played": 10,
+     "won": 2,
+     "lost": 7,
+     "pf": 268,
+     "pa": 376
+    },
+    "firstRound": {
+     "zone": "Primera rueda G2 Nivel 2 D",
+     "position": 11,
+     "points": 12
+    }
+   }
+  ]
+ }
+}

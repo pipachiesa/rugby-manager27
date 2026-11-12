@@ -1,0 +1,3103 @@
+{
+ "source": {
+  "publisher": "Ovalados (ovalados.com), proyecto independiente no afiliado a la URBA",
+  "what": "Plantel 2026 · Primera A y Primera B de cada club, tal como se muestra en la página pública del club (sección «PLANTEL 2026 · PRIMERA A/B»); el número es la camiseta con la que figura el jugador en la lista",
+  "retrievedAt": "2026-11-11",
+  "method": "Lectura de la página pública renderizada en el navegador, una visita por club (más una visita adicional a algunas direcciones que resultaron 404 hasta dar con la correcta). No se descargaron los archivos /data/*.json, que el robots.txt del sitio excluye.",
+  "limitations": [
+   "Solo temporada 2026: no hay historial por temporada.",
+   "Hay duplicados, nombres abreviados, invertidos y con errores tipográficos; se conservan tal cual.",
+   "Las páginas de club no enlazan desde el índice; las URL se dedujeron del patrón club-<slug>.html y se comprobó el título de cada página.",
+   "Las listas de Curupaytí y San Fernando comparten muchos nombres (p. ej. Maiola, Dublo, Sanguinetti); se transcribieron tal como figuran en cada página."
+  ]
+ },
+ "clubs": {
+  "san-luis": {
+   "url": "https://ovalados.com/club-san-luis.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "García, Alejo"
+    },
+    {
+     "number": 1,
+     "name": "Napolitano, Joaquín"
+    },
+    {
+     "number": 2,
+     "name": "Bonavento, Santiago"
+    },
+    {
+     "number": 2,
+     "name": "Caffaro, Mateo"
+    },
+    {
+     "number": 2,
+     "name": "Juarez, Samuel"
+    },
+    {
+     "number": 3,
+     "name": "Calistro, Mateo"
+    },
+    {
+     "number": 3,
+     "name": "Suárez, Facundo"
+    },
+    {
+     "number": 4,
+     "name": "Argemi, Lahuen"
+    },
+    {
+     "number": 4,
+     "name": "Ibañez, Fernando"
+    },
+    {
+     "number": 5,
+     "name": "Canal, Santiago"
+    },
+    {
+     "number": 6,
+     "name": "Curti, Nahuel"
+    },
+    {
+     "number": 7,
+     "name": "Gnecco, Franco"
+    },
+    {
+     "number": 7,
+     "name": "Perissinotto, Matías"
+    },
+    {
+     "number": 8,
+     "name": "Etchanchu, Martín"
+    },
+    {
+     "number": 8,
+     "name": "Febrero, Agustín"
+    },
+    {
+     "number": 8,
+     "name": "Gibert, Santiago"
+    },
+    {
+     "number": 9,
+     "name": "Aereboe, Martín"
+    },
+    {
+     "number": 9,
+     "name": "Gullo, Luka"
+    },
+    {
+     "number": 9,
+     "name": "Vaca, Juan Cruz"
+    },
+    {
+     "number": 10,
+     "name": "Quattrocchi, Ignacio"
+    },
+    {
+     "number": 10,
+     "name": "Quattrocchi, Valentino"
+    },
+    {
+     "number": 11,
+     "name": "Grys Arana, Lautaro"
+    },
+    {
+     "number": 11,
+     "name": "Hernández, Felipe"
+    },
+    {
+     "number": 12,
+     "name": "Blanco Fresco, Segundo"
+    },
+    {
+     "number": 12,
+     "name": "Marban, Benjamín"
+    },
+    {
+     "number": 13,
+     "name": "Gibert, Facundo"
+    },
+    {
+     "number": 14,
+     "name": "Cuculo, Facundo"
+    },
+    {
+     "number": 14,
+     "name": "De Landaburu, Facundo"
+    },
+    {
+     "number": 14,
+     "name": "Galán, Benjamín"
+    },
+    {
+     "number": 15,
+     "name": "Crispo, Felipe"
+    }
+   ]
+  },
+  "san-cirano": {
+   "url": "https://ovalados.com/club-san-cirano.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Hervera"
+    },
+    {
+     "number": 1,
+     "name": "Monin"
+    },
+    {
+     "number": 2,
+     "name": "Lazarte"
+    },
+    {
+     "number": 3,
+     "name": "Aznar"
+    },
+    {
+     "number": 4,
+     "name": "Cuello"
+    },
+    {
+     "number": 4,
+     "name": "Neme"
+    },
+    {
+     "number": 4,
+     "name": "Oliva"
+    },
+    {
+     "number": 5,
+     "name": "Huberman"
+    },
+    {
+     "number": 6,
+     "name": "Larocca"
+    },
+    {
+     "number": 7,
+     "name": "Ramírez"
+    },
+    {
+     "number": 8,
+     "name": "Cocaro"
+    },
+    {
+     "number": 8,
+     "name": "Rocca"
+    },
+    {
+     "number": 9,
+     "name": "Taborda"
+    },
+    {
+     "number": 10,
+     "name": "Sanchez"
+    },
+    {
+     "number": 11,
+     "name": "Romano"
+    },
+    {
+     "number": 12,
+     "name": "Crovella"
+    },
+    {
+     "number": 12,
+     "name": "Gordillo"
+    },
+    {
+     "number": 13,
+     "name": "Brex"
+    },
+    {
+     "number": 13,
+     "name": "Liporaci"
+    },
+    {
+     "number": 14,
+     "name": "Fasano"
+    },
+    {
+     "number": 14,
+     "name": "Lertora"
+    },
+    {
+     "number": 14,
+     "name": "Torino"
+    },
+    {
+     "number": 15,
+     "name": "Borasi"
+    },
+    {
+     "number": 15,
+     "name": "Calello"
+    }
+   ]
+  },
+  "lomas-athletic": {
+   "url": "https://ovalados.com/club-lomas-athletic.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Scaramella"
+    },
+    {
+     "number": 1,
+     "name": "Toth"
+    },
+    {
+     "number": 2,
+     "name": "Bogani"
+    },
+    {
+     "number": 2,
+     "name": "Robledo"
+    },
+    {
+     "number": 3,
+     "name": "Souto"
+    },
+    {
+     "number": 4,
+     "name": "Ehgartner"
+    },
+    {
+     "number": 5,
+     "name": "Tallone"
+    },
+    {
+     "number": 6,
+     "name": "De, Zerbi"
+    },
+    {
+     "number": 7,
+     "name": "Kubar"
+    },
+    {
+     "number": 7,
+     "name": "Masotta"
+    },
+    {
+     "number": 8,
+     "name": "Perez, Boulan"
+    },
+    {
+     "number": 9,
+     "name": "Gomez"
+    },
+    {
+     "number": 9,
+     "name": "Hardy"
+    },
+    {
+     "number": 10,
+     "name": "Borda"
+    },
+    {
+     "number": 10,
+     "name": "Das, Neves"
+    },
+    {
+     "number": 11,
+     "name": "Fadul"
+    },
+    {
+     "number": 12,
+     "name": "García, J."
+    },
+    {
+     "number": 13,
+     "name": "Juarez"
+    },
+    {
+     "number": 14,
+     "name": "Carrusca"
+    },
+    {
+     "number": 15,
+     "name": "Schmidt"
+    }
+   ]
+  },
+  "curupayti": {
+   "url": "https://ovalados.com/club-curupayti.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Maiola, Santiago"
+    },
+    {
+     "number": 2,
+     "name": "Dublo, Joaquín"
+    },
+    {
+     "number": 3,
+     "name": "Herrera, Ramiro"
+    },
+    {
+     "number": 4,
+     "name": "Gazul, Mariano"
+    },
+    {
+     "number": 5,
+     "name": "Milan, Nahuel"
+    },
+    {
+     "number": 6,
+     "name": "Dublo, Agustín"
+    },
+    {
+     "number": 7,
+     "name": "Sanguinetti, Tomás"
+    },
+    {
+     "number": 8,
+     "name": "Sanguinetti, Agustín"
+    },
+    {
+     "number": 9,
+     "name": "Desalvo, Nahuel"
+    },
+    {
+     "number": 10,
+     "name": "Correa, Franco"
+    },
+    {
+     "number": 11,
+     "name": "Godoy, Juan"
+    },
+    {
+     "number": 12,
+     "name": "Correa, Román"
+    },
+    {
+     "number": 13,
+     "name": "Leonelli, Tomás"
+    },
+    {
+     "number": 14,
+     "name": "Paterno, Mateo"
+    },
+    {
+     "number": 15,
+     "name": "Gregnanin, Juan"
+    }
+   ]
+  },
+  "san-fernando": {
+   "url": "https://ovalados.com/club-san-fernando.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Cabrio, Vicente"
+    },
+    {
+     "number": 1,
+     "name": "Maiola, Santiago"
+    },
+    {
+     "number": 2,
+     "name": "Dublo, Joaquín"
+    },
+    {
+     "number": 3,
+     "name": "Carballo, Nicolás"
+    },
+    {
+     "number": 3,
+     "name": "Herrera, Ramiro"
+    },
+    {
+     "number": 4,
+     "name": "Gazul, Mariano"
+    },
+    {
+     "number": 4,
+     "name": "Rios Sundberg, Cruz"
+    },
+    {
+     "number": 5,
+     "name": "Magrini, Guido"
+    },
+    {
+     "number": 5,
+     "name": "Milan, Nahuel"
+    },
+    {
+     "number": 6,
+     "name": "Dublo, Agustín"
+    },
+    {
+     "number": 7,
+     "name": "Mirani, Luca"
+    },
+    {
+     "number": 7,
+     "name": "Sanguinetti, Tomás"
+    },
+    {
+     "number": 8,
+     "name": "Sanguinetti, Agustín"
+    },
+    {
+     "number": 9,
+     "name": "Desalvo, Nahuel"
+    },
+    {
+     "number": 9,
+     "name": "Morales, Facundo"
+    },
+    {
+     "number": 10,
+     "name": "Franco, Correa"
+    },
+    {
+     "number": 10,
+     "name": "Gregnanin, Juan"
+    },
+    {
+     "number": 11,
+     "name": "Bruno, Tomás"
+    },
+    {
+     "number": 11,
+     "name": "Godoy, Juan"
+    },
+    {
+     "number": 12,
+     "name": "Correa, Román"
+    },
+    {
+     "number": 12,
+     "name": "Morales, Joaquín"
+    },
+    {
+     "number": 12,
+     "name": "Salse, Francisco"
+    },
+    {
+     "number": 13,
+     "name": "Leonelli, Tomás"
+    },
+    {
+     "number": 14,
+     "name": "Paterno, Mateo"
+    },
+    {
+     "number": 15,
+     "name": "Bruno, Luca"
+    },
+    {
+     "number": 15,
+     "name": "Lemonnier, Iván"
+    },
+    {
+     "number": 15,
+     "name": "Presaras, Pedro"
+    }
+   ]
+  },
+  "pucara": {
+   "url": "https://ovalados.com/club-pucara.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Cisco"
+    },
+    {
+     "number": 1,
+     "name": "F. Kalysz, Felipe"
+    },
+    {
+     "number": 1,
+     "name": "Piazza, Kevin"
+    },
+    {
+     "number": 1,
+     "name": "Stagno"
+    },
+    {
+     "number": 2,
+     "name": "Chimenti"
+    },
+    {
+     "number": 2,
+     "name": "Nardone, Santiago"
+    },
+    {
+     "number": 2,
+     "name": "Romero, Juan Segundo"
+    },
+    {
+     "number": 3,
+     "name": "Norro, Aaron"
+    },
+    {
+     "number": 3,
+     "name": "Otero"
+    },
+    {
+     "number": 4,
+     "name": "Coppola"
+    },
+    {
+     "number": 4,
+     "name": "Eichel, Hans"
+    },
+    {
+     "number": 4,
+     "name": "Gonzalez Jeremías, S."
+    },
+    {
+     "number": 4,
+     "name": "Gonzalez S., Jeremías"
+    },
+    {
+     "number": 4,
+     "name": "Sapuppo, G."
+    },
+    {
+     "number": 5,
+     "name": "Indomito"
+    },
+    {
+     "number": 5,
+     "name": "Patti, Agustín"
+    },
+    {
+     "number": 6,
+     "name": "Amado, Felipe"
+    },
+    {
+     "number": 6,
+     "name": "Costa"
+    },
+    {
+     "number": 7,
+     "name": "Ferreiro"
+    },
+    {
+     "number": 7,
+     "name": "Gesso, Del"
+    },
+    {
+     "number": 7,
+     "name": "Mainero, Javier"
+    },
+    {
+     "number": 8,
+     "name": "Calogero, Tiago"
+    },
+    {
+     "number": 8,
+     "name": "Lacal"
+    },
+    {
+     "number": 9,
+     "name": "Hernán, Valentín"
+    },
+    {
+     "number": 9,
+     "name": "Klubus, German"
+    },
+    {
+     "number": 9,
+     "name": "Marelli"
+    },
+    {
+     "number": 10,
+     "name": "Calvo"
+    },
+    {
+     "number": 10,
+     "name": "Cid, Santiago"
+    },
+    {
+     "number": 10,
+     "name": "Coppola, A."
+    },
+    {
+     "number": 11,
+     "name": "Domínguez"
+    },
+    {
+     "number": 11,
+     "name": "Forgia, Martiniano"
+    },
+    {
+     "number": 11,
+     "name": "Gonzalez Moran, Ramiro"
+    },
+    {
+     "number": 11,
+     "name": "Rosato, Manuel"
+    },
+    {
+     "number": 12,
+     "name": "Navarro, Mariano"
+    },
+    {
+     "number": 12,
+     "name": "Ormson, Brian"
+    },
+    {
+     "number": 13,
+     "name": "Jorge, Joaquín"
+    },
+    {
+     "number": 13,
+     "name": "Prebble"
+    },
+    {
+     "number": 13,
+     "name": "Resua, Juan"
+    },
+    {
+     "number": 14,
+     "name": "Delguy"
+    },
+    {
+     "number": 14,
+     "name": "Fourcade, Julen"
+    },
+    {
+     "number": 14,
+     "name": "Gonzalez, M. Jerónimo"
+    },
+    {
+     "number": 15,
+     "name": "Gonzalez Moran, Jerónimo"
+    },
+    {
+     "number": 15,
+     "name": "Gonzalez, M. Ramiro"
+    },
+    {
+     "number": 15,
+     "name": "Morán, G."
+    }
+   ]
+  },
+  "geba": {
+   "url": "https://ovalados.com/club-gimnasia-y-esgrima.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Acosta, Alejandro"
+    },
+    {
+     "number": 1,
+     "name": "Peláez, Tomás"
+    },
+    {
+     "number": 1,
+     "name": "Sánchez, Nazareno"
+    },
+    {
+     "number": 2,
+     "name": "Fiorio, Martin"
+    },
+    {
+     "number": 2,
+     "name": "Yaber, Javier"
+    },
+    {
+     "number": 3,
+     "name": "Nigro, Teodoro"
+    },
+    {
+     "number": 3,
+     "name": "Rodríguez, Ian"
+    },
+    {
+     "number": 3,
+     "name": "Silva, Mateo"
+    },
+    {
+     "number": 4,
+     "name": "Stratiotis, Juan Martín"
+    },
+    {
+     "number": 5,
+     "name": "Goldstein, Nahuel"
+    },
+    {
+     "number": 5,
+     "name": "Russo, Juan Ignacio"
+    },
+    {
+     "number": 5,
+     "name": "Vera, Santiago"
+    },
+    {
+     "number": 6,
+     "name": "Karpowicz, Valentín"
+    },
+    {
+     "number": 6,
+     "name": "Peyrot, Octavio"
+    },
+    {
+     "number": 6,
+     "name": "Ramallo, Manuel"
+    },
+    {
+     "number": 6,
+     "name": "Viejo, Santiago"
+    },
+    {
+     "number": 7,
+     "name": "Pussi, Ignacio"
+    },
+    {
+     "number": 7,
+     "name": "Rodríguez Caputo, Gonzalo"
+    },
+    {
+     "number": 8,
+     "name": "Karpowicz, Felipe"
+    },
+    {
+     "number": 9,
+     "name": "Ara Yavicoli, Juan"
+    },
+    {
+     "number": 9,
+     "name": "Bello, Pedro"
+    },
+    {
+     "number": 10,
+     "name": "Waisberg, Ramiro"
+    },
+    {
+     "number": 11,
+     "name": "Itzcovitz, Ryan"
+    },
+    {
+     "number": 12,
+     "name": "Moravich, Juan"
+    },
+    {
+     "number": 12,
+     "name": "Morelli, Agustín"
+    },
+    {
+     "number": 12,
+     "name": "Pantanali, Santino"
+    },
+    {
+     "number": 13,
+     "name": "Cristeff, Lucas"
+    },
+    {
+     "number": 13,
+     "name": "Mazzoni, Pedro"
+    },
+    {
+     "number": 14,
+     "name": "Colomb, Tadeo"
+    },
+    {
+     "number": 14,
+     "name": "Jeckeln, Lucas"
+    },
+    {
+     "number": 15,
+     "name": "Maggi, Facundo"
+    },
+    {
+     "number": 15,
+     "name": "Ortiz, Felipe"
+    },
+    {
+     "number": 15,
+     "name": "Ramognino, Juan Pedro"
+    }
+   ]
+  },
+  "hurling": {
+   "url": "https://ovalados.com/club-hurling.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Argenio, V."
+    },
+    {
+     "number": 1,
+     "name": "Martínez, F."
+    },
+    {
+     "number": 2,
+     "name": "Blanco, J.m."
+    },
+    {
+     "number": 2,
+     "name": "Blanco, Juan Manuel"
+    },
+    {
+     "number": 2,
+     "name": "J.m., Blanco"
+    },
+    {
+     "number": 2,
+     "name": "Lovatto, S."
+    },
+    {
+     "number": 2,
+     "name": "Sotelo, Matías"
+    },
+    {
+     "number": 3,
+     "name": "Maldonado, M."
+    },
+    {
+     "number": 3,
+     "name": "Patarca, P."
+    },
+    {
+     "number": 3,
+     "name": "Testa, Joaquín"
+    },
+    {
+     "number": 4,
+     "name": "Morrow, F."
+    },
+    {
+     "number": 4,
+     "name": "Podestá, F."
+    },
+    {
+     "number": 5,
+     "name": "Cáceres, E."
+    },
+    {
+     "number": 5,
+     "name": "López, Mateo"
+    },
+    {
+     "number": 5,
+     "name": "Scrivano, V."
+    },
+    {
+     "number": 6,
+     "name": "Jaure, B."
+    },
+    {
+     "number": 6,
+     "name": "López, M.f."
+    },
+    {
+     "number": 6,
+     "name": "Pereiro, J."
+    },
+    {
+     "number": 6,
+     "name": "Quinn, I."
+    },
+    {
+     "number": 7,
+     "name": "Morrow, M."
+    },
+    {
+     "number": 7,
+     "name": "Said, B."
+    },
+    {
+     "number": 8,
+     "name": "Wade, A."
+    },
+    {
+     "number": 9,
+     "name": "Braida Propato, P."
+    },
+    {
+     "number": 9,
+     "name": "Braida Propato, Patricio"
+    },
+    {
+     "number": 9,
+     "name": "Pereiro, L."
+    },
+    {
+     "number": 9,
+     "name": "Vázquez Moltedo, C."
+    },
+    {
+     "number": 10,
+     "name": "Parareda, D."
+    },
+    {
+     "number": 10,
+     "name": "Pareda, Diego"
+    },
+    {
+     "number": 10,
+     "name": "Quevedo, J. M."
+    },
+    {
+     "number": 11,
+     "name": "Parareda, P."
+    },
+    {
+     "number": 11,
+     "name": "Pareda, Pablo"
+    },
+    {
+     "number": 11,
+     "name": "Salvagni, L."
+    },
+    {
+     "number": 12,
+     "name": "Dubuc, Sebastián"
+    },
+    {
+     "number": 12,
+     "name": "Sánchez Rizzi, B."
+    },
+    {
+     "number": 13,
+     "name": "Fernandes, F."
+    },
+    {
+     "number": 13,
+     "name": "Pareda, Juan"
+    },
+    {
+     "number": 14,
+     "name": "Arrigoni, M."
+    },
+    {
+     "number": 14,
+     "name": "Doherty, P."
+    },
+    {
+     "number": 14,
+     "name": "Fernandes, I."
+    },
+    {
+     "number": 14,
+     "name": "Montes, I."
+    },
+    {
+     "number": 14,
+     "name": "Schinocca, F."
+    },
+    {
+     "number": 15,
+     "name": "Parareda, J."
+    },
+    {
+     "number": 15,
+     "name": "Quinn, F."
+    },
+    {
+     "number": 15,
+     "name": "Quinn, Franco"
+    }
+   ]
+  },
+  "san-andres": {
+   "url": "https://ovalados.com/club-san-andres.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Kexel, Lucas"
+    },
+    {
+     "number": 1,
+     "name": "Stoeppelworth, Cole"
+    },
+    {
+     "number": 1,
+     "name": "Vallejo, Guillermo"
+    },
+    {
+     "number": 2,
+     "name": "Aladio, Thomas"
+    },
+    {
+     "number": 2,
+     "name": "Almaraz, Santiago"
+    },
+    {
+     "number": 2,
+     "name": "Gedikian, Viken"
+    },
+    {
+     "number": 3,
+     "name": "Gomez Cofre, Ezequiel"
+    },
+    {
+     "number": 4,
+     "name": "Beneditt, Ivan"
+    },
+    {
+     "number": 4,
+     "name": "Socorro, Agustín"
+    },
+    {
+     "number": 5,
+     "name": "De Elizalde, Germán"
+    },
+    {
+     "number": 5,
+     "name": "Tauszig, Marcos"
+    },
+    {
+     "number": 6,
+     "name": "Crescencio Tomas, Ignacio"
+    },
+    {
+     "number": 6,
+     "name": "Zweegman, Santiago"
+    },
+    {
+     "number": 7,
+     "name": "Giebert, Luis"
+    },
+    {
+     "number": 7,
+     "name": "Keller, Max"
+    },
+    {
+     "number": 7,
+     "name": "Lovaglio, Agustín"
+    },
+    {
+     "number": 7,
+     "name": "Masic, Timoteo"
+    },
+    {
+     "number": 8,
+     "name": "Sanguinetti, Tomas"
+    },
+    {
+     "number": 9,
+     "name": "Córdoba, Felipe"
+    },
+    {
+     "number": 9,
+     "name": "Sosa, Agustín"
+    },
+    {
+     "number": 9,
+     "name": "Werthein, Gaspar"
+    },
+    {
+     "number": 10,
+     "name": "Beyer, Benjamín"
+    },
+    {
+     "number": 10,
+     "name": "Colombo, Pedro"
+    },
+    {
+     "number": 11,
+     "name": "Macdonald, Nicholas"
+    },
+    {
+     "number": 11,
+     "name": "Massun, Juan Cruz"
+    },
+    {
+     "number": 11,
+     "name": "Pizarro, Federico"
+    },
+    {
+     "number": 12,
+     "name": "Hogg, Nicolás"
+    },
+    {
+     "number": 13,
+     "name": "Gavito, Agustín"
+    },
+    {
+     "number": 13,
+     "name": "Soto, Lautaro"
+    },
+    {
+     "number": 14,
+     "name": "Clutterbuck, Timoteo"
+    },
+    {
+     "number": 14,
+     "name": "Fritz, Axel"
+    },
+    {
+     "number": 15,
+     "name": "Girasolli, Franco"
+    },
+    {
+     "number": 15,
+     "name": "Usoz, Mateo"
+    }
+   ]
+  },
+  "pueyrredon": {
+   "url": "https://ovalados.com/club-pueyrredon.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Arroyo, Ayrton"
+    },
+    {
+     "number": 1,
+     "name": "Giusiano, Tomás"
+    },
+    {
+     "number": 1,
+     "name": "Gonzalez Arguello, Ignacio"
+    },
+    {
+     "number": 2,
+     "name": "Folino, Mateo"
+    },
+    {
+     "number": 2,
+     "name": "Gonzalez, Santiago"
+    },
+    {
+     "number": 2,
+     "name": "Maslat, Lucio"
+    },
+    {
+     "number": 2,
+     "name": "Stuchetti, Manuel"
+    },
+    {
+     "number": 2,
+     "name": "Stuchetti, Matías"
+    },
+    {
+     "number": 3,
+     "name": "Alfonso López, Omar"
+    },
+    {
+     "number": 3,
+     "name": "Arnaldo, Juan"
+    },
+    {
+     "number": 3,
+     "name": "Cobo, Tomás"
+    },
+    {
+     "number": 3,
+     "name": "Sverdlik, Ciro"
+    },
+    {
+     "number": 4,
+     "name": "Ballatore, Bautista"
+    },
+    {
+     "number": 4,
+     "name": "Balogh Kovacs, Félix"
+    },
+    {
+     "number": 4,
+     "name": "Fernández Agüera, Juan"
+    },
+    {
+     "number": 4,
+     "name": "Willnecker, Martin"
+    },
+    {
+     "number": 5,
+     "name": "Bocalandro, Facundo"
+    },
+    {
+     "number": 6,
+     "name": "Bobzin, Ignacio"
+    },
+    {
+     "number": 6,
+     "name": "Grandoli, Francisco"
+    },
+    {
+     "number": 6,
+     "name": "Yanguela, Mateo"
+    },
+    {
+     "number": 7,
+     "name": "Bocalandro, Bautista"
+    },
+    {
+     "number": 7,
+     "name": "Ettoli, Juan Ignacio"
+    },
+    {
+     "number": 8,
+     "name": "Bustamante, Nicolás"
+    },
+    {
+     "number": 9,
+     "name": "De Lorenzo, Tomas"
+    },
+    {
+     "number": 9,
+     "name": "Iceta, Federico"
+    },
+    {
+     "number": 9,
+     "name": "Lachavanne, Ramón"
+    },
+    {
+     "number": 10,
+     "name": "Fernández Prato, Matías"
+    },
+    {
+     "number": 10,
+     "name": "Yanguela, Bautista"
+    },
+    {
+     "number": 11,
+     "name": "Auad, Franco"
+    },
+    {
+     "number": 11,
+     "name": "Paternostro, Martin"
+    },
+    {
+     "number": 11,
+     "name": "Signorelli, Franco"
+    },
+    {
+     "number": 12,
+     "name": "Cassina, Juan"
+    },
+    {
+     "number": 12,
+     "name": "Ettoli, Valentino"
+    },
+    {
+     "number": 12,
+     "name": "Stuchetti, Nicolás"
+    },
+    {
+     "number": 13,
+     "name": "Bakchellian, León"
+    },
+    {
+     "number": 13,
+     "name": "Marsano, Juan"
+    },
+    {
+     "number": 13,
+     "name": "Rodríguez Chirillo, Agustín"
+    },
+    {
+     "number": 14,
+     "name": "Auad, Lucio"
+    },
+    {
+     "number": 15,
+     "name": "Angelini, Agustín"
+    },
+    {
+     "number": 15,
+     "name": "Tricerri, Matías"
+    },
+    {
+     "number": 15,
+     "name": "Walter, Diego"
+    }
+   ]
+  },
+  "olivos": {
+   "url": "https://ovalados.com/club-olivos.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Mandri, Franco"
+    },
+    {
+     "number": 1,
+     "name": "Sánchez Botta, Facundo"
+    },
+    {
+     "number": 2,
+     "name": "Ocello, Franco"
+    },
+    {
+     "number": 2,
+     "name": "Palacios, Rodrigo"
+    },
+    {
+     "number": 2,
+     "name": "Tedesco"
+    },
+    {
+     "number": 3,
+     "name": "Ayub, Nahuel"
+    },
+    {
+     "number": 3,
+     "name": "Derito, Tomás"
+    },
+    {
+     "number": 3,
+     "name": "Ocello, Nicolás"
+    },
+    {
+     "number": 4,
+     "name": "Irigoin, Tobías"
+    },
+    {
+     "number": 5,
+     "name": "Porro, Fermín"
+    },
+    {
+     "number": 6,
+     "name": "De Cos, Tomás"
+    },
+    {
+     "number": 6,
+     "name": "Dos Santos, Facundo"
+    },
+    {
+     "number": 7,
+     "name": "Dos, Santos"
+    },
+    {
+     "number": 7,
+     "name": "Durán, Patricio"
+    },
+    {
+     "number": 7,
+     "name": "Palmieri, Franco"
+    },
+    {
+     "number": 7,
+     "name": "Rollandi, Facundo"
+    },
+    {
+     "number": 8,
+     "name": "Barri, Facundo"
+    },
+    {
+     "number": 8,
+     "name": "Gorlero, Facundo"
+    },
+    {
+     "number": 8,
+     "name": "Orellana, Franco"
+    },
+    {
+     "number": 9,
+     "name": "Bisceglia, Agustín"
+    },
+    {
+     "number": 10,
+     "name": "Colombo, G."
+    },
+    {
+     "number": 10,
+     "name": "García Colombo, Mateo"
+    },
+    {
+     "number": 10,
+     "name": "Inchauspe, Ignacio"
+    },
+    {
+     "number": 10,
+     "name": "Silva Frere, Ignacio"
+    },
+    {
+     "number": 11,
+     "name": "Martín, Felipe"
+    },
+    {
+     "number": 11,
+     "name": "Rebuffi, Valentino"
+    },
+    {
+     "number": 11,
+     "name": "Scaglioni, Francesco"
+    },
+    {
+     "number": 11,
+     "name": "Vexina, Juan Cruz"
+    },
+    {
+     "number": 12,
+     "name": "Mazza, Francisco"
+    },
+    {
+     "number": 12,
+     "name": "Rizzo, Francisco"
+    },
+    {
+     "number": 13,
+     "name": "Trimboli, Rodrigo"
+    },
+    {
+     "number": 14,
+     "name": "Pichler, Federico"
+    },
+    {
+     "number": 14,
+     "name": "Pichler, Gastón"
+    },
+    {
+     "number": 15,
+     "name": "Abbate, Juan"
+    },
+    {
+     "number": 15,
+     "name": "Asencio, Joaquín"
+    },
+    {
+     "number": 15,
+     "name": "Clusellas, Tadeo"
+    }
+   ]
+  },
+  "deportiva-francesa": {
+   "url": "https://ovalados.com/club-deportiva-francesa.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Fariña, Marcos"
+    },
+    {
+     "number": 1,
+     "name": "Jumilla, Tomás"
+    },
+    {
+     "number": 2,
+     "name": "Cruz, Lucio"
+    },
+    {
+     "number": 2,
+     "name": "Isella, Marcos"
+    },
+    {
+     "number": 2,
+     "name": "Seco, Bautista"
+    },
+    {
+     "number": 3,
+     "name": "Ehrman, Francisco"
+    },
+    {
+     "number": 3,
+     "name": "Fariña, Nazareno"
+    },
+    {
+     "number": 4,
+     "name": "Calvi, Agustín"
+    },
+    {
+     "number": 5,
+     "name": "Carluccio, Alejandro"
+    },
+    {
+     "number": 5,
+     "name": "Oroño, Nicolás"
+    },
+    {
+     "number": 6,
+     "name": "Giménez, Clementino"
+    },
+    {
+     "number": 6,
+     "name": "Valdez Pichi, Federico"
+    },
+    {
+     "number": 7,
+     "name": "Spandre, Nicolás"
+    },
+    {
+     "number": 8,
+     "name": "D'esposito, Luca"
+    },
+    {
+     "number": 8,
+     "name": "González Bonorino, Blas"
+    },
+    {
+     "number": 8,
+     "name": "Zuccolin, Thiago"
+    },
+    {
+     "number": 9,
+     "name": "Di Biase, Tomás"
+    },
+    {
+     "number": 10,
+     "name": "Renthel, Estanislao"
+    },
+    {
+     "number": 10,
+     "name": "Roca, Pedro"
+    },
+    {
+     "number": 11,
+     "name": "Menéndez, Manuel"
+    },
+    {
+     "number": 12,
+     "name": "González Clua, Ignacio"
+    },
+    {
+     "number": 13,
+     "name": "Saliba, Juan Cruz"
+    },
+    {
+     "number": 13,
+     "name": "Schmale, Ian"
+    },
+    {
+     "number": 13,
+     "name": "Zarza, Federico"
+    },
+    {
+     "number": 14,
+     "name": "Diez, Santiago"
+    },
+    {
+     "number": 14,
+     "name": "Malnero, Thiago"
+    },
+    {
+     "number": 15,
+     "name": "García Encina, Nicolás"
+    }
+   ]
+  },
+  "san-albano": {
+   "url": "https://ovalados.com/club-san-albano.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Acinapura, Agustin"
+    },
+    {
+     "number": 1,
+     "name": "Losada, Kevin"
+    },
+    {
+     "number": 2,
+     "name": "Mercuri, Joaquin"
+    },
+    {
+     "number": 2,
+     "name": "Ojam, Manuel"
+    },
+    {
+     "number": 3,
+     "name": "Silva, A."
+    },
+    {
+     "number": 3,
+     "name": "Sosa, Diego"
+    },
+    {
+     "number": 4,
+     "name": "Castellano, Francisco"
+    },
+    {
+     "number": 4,
+     "name": "Federici, X."
+    },
+    {
+     "number": 5,
+     "name": "Bustos, Franco"
+    },
+    {
+     "number": 5,
+     "name": "Daubenbager, F."
+    },
+    {
+     "number": 5,
+     "name": "Irurzun, Agusin"
+    },
+    {
+     "number": 6,
+     "name": "Gallia, Lucas"
+    },
+    {
+     "number": 6,
+     "name": "Pallas, Lucas"
+    },
+    {
+     "number": 7,
+     "name": "Franco Romero, Ignacio"
+    },
+    {
+     "number": 7,
+     "name": "Toriano, Agustin"
+    },
+    {
+     "number": 8,
+     "name": "Bravo, Daniel"
+    },
+    {
+     "number": 8,
+     "name": "Juañuk, G."
+    },
+    {
+     "number": 8,
+     "name": "Ochoa, Agustin"
+    },
+    {
+     "number": 8,
+     "name": "Schettino, Benjamin"
+    },
+    {
+     "number": 9,
+     "name": "Bravo, Bruno"
+    },
+    {
+     "number": 9,
+     "name": "Mac Gaw, James"
+    },
+    {
+     "number": 10,
+     "name": "Macieri, Santiago"
+    },
+    {
+     "number": 11,
+     "name": "Mac Gaw, Tomas"
+    },
+    {
+     "number": 11,
+     "name": "Severina, Lautaro"
+    },
+    {
+     "number": 12,
+     "name": "Ansaldo, Felix"
+    },
+    {
+     "number": 12,
+     "name": "Torres, Ignacio"
+    },
+    {
+     "number": 12,
+     "name": "Torres, J."
+    },
+    {
+     "number": 13,
+     "name": "Longhini, T."
+    },
+    {
+     "number": 13,
+     "name": "Luchetti, Juan Maria"
+    },
+    {
+     "number": 13,
+     "name": "Suppa Nieto, Fernando"
+    },
+    {
+     "number": 14,
+     "name": "Busto, Felipe"
+    },
+    {
+     "number": 14,
+     "name": "Ruiz, V."
+    },
+    {
+     "number": 14,
+     "name": "Vibart, Nicolas"
+    },
+    {
+     "number": 15,
+     "name": "Laurora, M."
+    },
+    {
+     "number": 15,
+     "name": "Matlob, Hernan"
+    }
+   ]
+  },
+  "universitario-la-plata": {
+   "url": "https://ovalados.com/club-universitario-de-la-plata.html",
+   "division": "primera-a",
+   "squadLabel": "Plantel 2026 · Primera A",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Barbagelata, Juan F."
+    },
+    {
+     "number": 1,
+     "name": "Garay, Bruno"
+    },
+    {
+     "number": 1,
+     "name": "Lagana, Gerónimo"
+    },
+    {
+     "number": 2,
+     "name": "Urban, Manuel"
+    },
+    {
+     "number": 3,
+     "name": "Urréjola, Lisandro"
+    },
+    {
+     "number": 4,
+     "name": "Damioli, Bautista"
+    },
+    {
+     "number": 5,
+     "name": "German, Emiliano"
+    },
+    {
+     "number": 5,
+     "name": "Herrero Ducloux, Juan"
+    },
+    {
+     "number": 6,
+     "name": "Almeida, Jerónimo"
+    },
+    {
+     "number": 6,
+     "name": "Herrera, Benjamín"
+    },
+    {
+     "number": 6,
+     "name": "Olivero, Esteban"
+    },
+    {
+     "number": 7,
+     "name": "Herrera, Joaquín"
+    },
+    {
+     "number": 8,
+     "name": "Herrera, Bautista"
+    },
+    {
+     "number": 8,
+     "name": "Portunato, Sebastián"
+    },
+    {
+     "number": 9,
+     "name": "Leandro, Moreno"
+    },
+    {
+     "number": 9,
+     "name": "Rivera Cano, Blas"
+    },
+    {
+     "number": 10,
+     "name": "Esquerre, Fermín"
+    },
+    {
+     "number": 10,
+     "name": "Pereyra, Santiago"
+    },
+    {
+     "number": 11,
+     "name": "Ato, Grassi"
+    },
+    {
+     "number": 11,
+     "name": "Orrico, Santiago"
+    },
+    {
+     "number": 12,
+     "name": "Cachaza, Patricio"
+    },
+    {
+     "number": 12,
+     "name": "Donofrio, Lorenzo"
+    },
+    {
+     "number": 12,
+     "name": "Suárez, Felipe"
+    },
+    {
+     "number": 13,
+     "name": "Arturi, Valentino"
+    },
+    {
+     "number": 13,
+     "name": "Fernando, Fernández"
+    },
+    {
+     "number": 14,
+     "name": "Grassi, Renato"
+    },
+    {
+     "number": 14,
+     "name": "Lombardo, Francisco"
+    },
+    {
+     "number": 14,
+     "name": "Vergel, Alejo"
+    },
+    {
+     "number": 15,
+     "name": "Cechi, Mateo"
+    },
+    {
+     "number": 15,
+     "name": "Espinosa, Federico"
+    }
+   ]
+  },
+  "banco-nacion": {
+   "url": "https://ovalados.com/club-banco-nacion.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Patricio HERNANDEZ"
+    },
+    {
+     "number": 2,
+     "name": "Facundo COTUGNO"
+    },
+    {
+     "number": 2,
+     "name": "Octavio BARNES"
+    },
+    {
+     "number": 3,
+     "name": "Juan TORRES"
+    },
+    {
+     "number": 4,
+     "name": "Lautaro CELAN"
+    },
+    {
+     "number": 5,
+     "name": "Guido PORTALUPI"
+    },
+    {
+     "number": 6,
+     "name": "Francisco PORZIO"
+    },
+    {
+     "number": 6,
+     "name": "Vittorio LIGATTO"
+    },
+    {
+     "number": 7,
+     "name": "Roger MORALES"
+    },
+    {
+     "number": 8,
+     "name": "Manuel CASTELLANO"
+    },
+    {
+     "number": 9,
+     "name": "Dante OPPEDISANO"
+    },
+    {
+     "number": 9,
+     "name": "Felipe OVIEDO"
+    },
+    {
+     "number": 10,
+     "name": "Thiago OVIEDO"
+    },
+    {
+     "number": 11,
+     "name": "Facundo MERLO"
+    },
+    {
+     "number": 11,
+     "name": "Tomas BURTIN"
+    },
+    {
+     "number": 12,
+     "name": "Felipe GAMBOA"
+    },
+    {
+     "number": 13,
+     "name": "Nicolas PICASSO"
+    },
+    {
+     "number": 14,
+     "name": "Gonzalo PICASSO"
+    },
+    {
+     "number": 15,
+     "name": "Manuel CEREIJO"
+    }
+   ]
+  },
+  "cu-quilmes": {
+   "url": "https://ovalados.com/club-cu-de-quilmes.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Kevin SANABRIA"
+    },
+    {
+     "number": 1,
+     "name": "Nicolás RODRÍGUEZ"
+    },
+    {
+     "number": 2,
+     "name": "Tomás CELORIA"
+    },
+    {
+     "number": 3,
+     "name": "Juan SÉRPICO"
+    },
+    {
+     "number": 4,
+     "name": "Augusto STAGNARO"
+    },
+    {
+     "number": 4,
+     "name": "Felipe ARENA"
+    },
+    {
+     "number": 4,
+     "name": "Leandro GAUTO"
+    },
+    {
+     "number": 5,
+     "name": "Julián LÓPEZ"
+    },
+    {
+     "number": 5,
+     "name": "Santiago SERWATKA"
+    },
+    {
+     "number": 6,
+     "name": "Dante MARULLA"
+    },
+    {
+     "number": 7,
+     "name": "Kevin FORMÍA"
+    },
+    {
+     "number": 7,
+     "name": "Lautaro CABRAL"
+    },
+    {
+     "number": 8,
+     "name": "Juan VATANO"
+    },
+    {
+     "number": 9,
+     "name": "Mauro DRUVENTI"
+    },
+    {
+     "number": 10,
+     "name": "Santiago DOMÍNGUEZ"
+    },
+    {
+     "number": 11,
+     "name": "Lautaro DOMÍNGUEZ"
+    },
+    {
+     "number": 12,
+     "name": "Ivo SCHOCRON"
+    },
+    {
+     "number": 12,
+     "name": "Leandro CASADO"
+    },
+    {
+     "number": 13,
+     "name": "Luciano BARDINI"
+    },
+    {
+     "number": 13,
+     "name": "Manuel ASTORGA"
+    },
+    {
+     "number": 14,
+     "name": "Joaquin MORRA"
+    },
+    {
+     "number": 14,
+     "name": "Lucas LA TORRE"
+    },
+    {
+     "number": 15,
+     "name": "Tomás ASTORGA"
+    }
+   ]
+  },
+  "liceo-naval": {
+   "url": "https://ovalados.com/club-liceo-naval.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Francisco ANGIOLUCCI"
+    },
+    {
+     "number": 2,
+     "name": "Alejandro CABEZA"
+    },
+    {
+     "number": 3,
+     "name": "Tomás ORIOLO"
+    },
+    {
+     "number": 4,
+     "name": "Nicolás BOOTH"
+    },
+    {
+     "number": 4,
+     "name": "Tomás RIZZONE"
+    },
+    {
+     "number": 5,
+     "name": "Belisario PLAZA"
+    },
+    {
+     "number": 6,
+     "name": "Joaquín ALONSO"
+    },
+    {
+     "number": 7,
+     "name": "Ignacio BARBER"
+    },
+    {
+     "number": 7,
+     "name": "Octavio MÁRQUEZ"
+    },
+    {
+     "number": 7,
+     "name": "Santiago CORS LOSADA"
+    },
+    {
+     "number": 8,
+     "name": "Luciano BELLICOSO"
+    },
+    {
+     "number": 9,
+     "name": "Tomás MARTINSEN"
+    },
+    {
+     "number": 10,
+     "name": "Santino BUFFA"
+    },
+    {
+     "number": 11,
+     "name": "Joaquín EISENSTEIN"
+    },
+    {
+     "number": 12,
+     "name": "Francisco CODINO"
+    },
+    {
+     "number": 12,
+     "name": "Francisco MORENO"
+    },
+    {
+     "number": 13,
+     "name": "Hernán ELISEI"
+    },
+    {
+     "number": 14,
+     "name": "Bautista TERAN DOOR"
+    },
+    {
+     "number": 15,
+     "name": "Paco MARTINSEN"
+    }
+   ]
+  },
+  "don-bosco": {
+   "url": "https://ovalados.com/club-don-bosco.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Joaquín SALGUERO"
+    },
+    {
+     "number": 1,
+     "name": "Pablo DE CRECCHIO"
+    },
+    {
+     "number": 2,
+     "name": "Fernando GABBA"
+    },
+    {
+     "number": 3,
+     "name": "Xavier VILLALBA"
+    },
+    {
+     "number": 4,
+     "name": "Mauro FERRADAS"
+    },
+    {
+     "number": 5,
+     "name": "Guido GOYAK"
+    },
+    {
+     "number": 5,
+     "name": "Mariano DUARTE"
+    },
+    {
+     "number": 5,
+     "name": "Thomas RAITANO"
+    },
+    {
+     "number": 6,
+     "name": "Julián CARMONA"
+    },
+    {
+     "number": 6,
+     "name": "Tomás GORI"
+    },
+    {
+     "number": 7,
+     "name": "Mariano BIONDO"
+    },
+    {
+     "number": 7,
+     "name": "Tomás RODRIGUEZ"
+    },
+    {
+     "number": 9,
+     "name": "Lisandro BIGLIARDI"
+    },
+    {
+     "number": 9,
+     "name": "Máximo MARRA"
+    },
+    {
+     "number": 10,
+     "name": "Franco VILLANO"
+    },
+    {
+     "number": 11,
+     "name": "Agustín MIGUEZ"
+    },
+    {
+     "number": 11,
+     "name": "Santiago DE ELORDUY"
+    },
+    {
+     "number": 12,
+     "name": "Juan BERUTTI"
+    },
+    {
+     "number": 13,
+     "name": "Gonzalo GADANO"
+    },
+    {
+     "number": 14,
+     "name": "Joaquín SEMPE"
+    },
+    {
+     "number": 14,
+     "name": "Teo GONZALEZ BIGLIARDI"
+    },
+    {
+     "number": 15,
+     "name": "Joaquín VILAR"
+    }
+   ]
+  },
+  "mariano-moreno": {
+   "url": "https://ovalados.com/club-mariano-moreno.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Javier IRALA"
+    },
+    {
+     "number": 2,
+     "name": "Nicolás MARINO"
+    },
+    {
+     "number": 3,
+     "name": "Franco TANNOUS"
+    },
+    {
+     "number": 3,
+     "name": "Luciano ORTIZ"
+    },
+    {
+     "number": 4,
+     "name": "Valentino FREIRIA"
+    },
+    {
+     "number": 5,
+     "name": "Santiago SARTHOU"
+    },
+    {
+     "number": 6,
+     "name": "Facundo MARINO"
+    },
+    {
+     "number": 7,
+     "name": "Agustín NOGUERA"
+    },
+    {
+     "number": 8,
+     "name": "Ignacio PAPASIDERO"
+    },
+    {
+     "number": 8,
+     "name": "Vito D’AGOSTINO"
+    },
+    {
+     "number": 9,
+     "name": "Julián LÓPEZ"
+    },
+    {
+     "number": 10,
+     "name": "Lautaro MARINO"
+    },
+    {
+     "number": 11,
+     "name": "Bruno FEDELE"
+    },
+    {
+     "number": 12,
+     "name": "Leandro POMARES"
+    },
+    {
+     "number": 13,
+     "name": "Mariano CARRASCO"
+    },
+    {
+     "number": 13,
+     "name": "Tomás SARTHOU"
+    },
+    {
+     "number": 14,
+     "name": "Agustín OROS"
+    },
+    {
+     "number": 14,
+     "name": "Santiago CASALIS"
+    },
+    {
+     "number": 15,
+     "name": "Juan Cruz GONZÁLEZ"
+    }
+   ]
+  },
+  "san-martin": {
+   "url": "https://ovalados.com/club-san-martin.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Román OSELLA"
+    },
+    {
+     "number": 2,
+     "name": "Franco CAMMARATA"
+    },
+    {
+     "number": 3,
+     "name": "Federico ALVAREZ"
+    },
+    {
+     "number": 3,
+     "name": "Julián PAPA"
+    },
+    {
+     "number": 4,
+     "name": "Diego LORENZO"
+    },
+    {
+     "number": 4,
+     "name": "Iván FERENCZIK"
+    },
+    {
+     "number": 4,
+     "name": "Tomás ALONSO"
+    },
+    {
+     "number": 5,
+     "name": "Gianluca GIANOLI"
+    },
+    {
+     "number": 6,
+     "name": "Tomás AGUIRRE"
+    },
+    {
+     "number": 7,
+     "name": "Agustín FERRARO"
+    },
+    {
+     "number": 7,
+     "name": "Lucca SANTERO"
+    },
+    {
+     "number": 7,
+     "name": "Santiago AGUILERA"
+    },
+    {
+     "number": 8,
+     "name": "Mateo GONZÁLEZ"
+    },
+    {
+     "number": 9,
+     "name": "Bruno ZURNIEWICZ"
+    },
+    {
+     "number": 10,
+     "name": "Manuel BIANCO DRUETTA"
+    },
+    {
+     "number": 10,
+     "name": "Santiago SPERONI"
+    },
+    {
+     "number": 11,
+     "name": "Juan Cruz PROKOPIC"
+    },
+    {
+     "number": 12,
+     "name": "Ian VERBA"
+    },
+    {
+     "number": 13,
+     "name": "Santiago BERDOMAS"
+    },
+    {
+     "number": 13,
+     "name": "Tomás LEMES"
+    },
+    {
+     "number": 14,
+     "name": "Juan Francisco BUGGE"
+    },
+    {
+     "number": 14,
+     "name": "Thiago PANES"
+    },
+    {
+     "number": 15,
+     "name": "Juan Francisco ALMANDOZ"
+    },
+    {
+     "number": 15,
+     "name": "Juan POLLET LO CANE"
+    }
+   ]
+  },
+  "san-patricio": {
+   "url": "https://ovalados.com/club-san-patricio.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Facundo LAMAS"
+    },
+    {
+     "number": 1,
+     "name": "Tiziano MONACO"
+    },
+    {
+     "number": 2,
+     "name": "Matias BAIMA"
+    },
+    {
+     "number": 3,
+     "name": "Facundo FYLYMA"
+    },
+    {
+     "number": 4,
+     "name": "Agustin BAIMA"
+    },
+    {
+     "number": 4,
+     "name": "Joaquin BODENLLE"
+    },
+    {
+     "number": 4,
+     "name": "Manuel RIGOU"
+    },
+    {
+     "number": 4,
+     "name": "Tomas RIGOU"
+    },
+    {
+     "number": 5,
+     "name": "Andres SANCHEZ"
+    },
+    {
+     "number": 5,
+     "name": "Nicolas MCKAY"
+    },
+    {
+     "number": 5,
+     "name": "Pedro LAFFORGUE"
+    },
+    {
+     "number": 6,
+     "name": "Gonzalo MCKAY"
+    },
+    {
+     "number": 6,
+     "name": "Rodrigo AMAYA"
+    },
+    {
+     "number": 7,
+     "name": "Agustin CONESA"
+    },
+    {
+     "number": 8,
+     "name": "Nazareno TOPPAZZINI"
+    },
+    {
+     "number": 9,
+     "name": "Federico CACCIABUE"
+    },
+    {
+     "number": 9,
+     "name": "Santiago ROMERO"
+    },
+    {
+     "number": 10,
+     "name": "Bautista FERNANDES"
+    },
+    {
+     "number": 11,
+     "name": "Emiliano FARA"
+    },
+    {
+     "number": 11,
+     "name": "Ian PRIETO"
+    },
+    {
+     "number": 11,
+     "name": "Tiago PUGLIESE"
+    },
+    {
+     "number": 12,
+     "name": "Sebastian ROMERO"
+    },
+    {
+     "number": 13,
+     "name": "Juan IGNACIO MARTINEZ"
+    },
+    {
+     "number": 13,
+     "name": "Marcos RUIZ GUIÑAZU"
+    }
+   ]
+  },
+  "italiano": {
+   "url": "https://ovalados.com/club-italiano.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Alejandro RIOS"
+    },
+    {
+     "number": 2,
+     "name": "Tomás BERNARDIN"
+    },
+    {
+     "number": 2,
+     "name": "Tomás MOLINAS"
+    },
+    {
+     "number": 3,
+     "name": "Franco CHATTAH"
+    },
+    {
+     "number": 4,
+     "name": "Luca CANZONIERI"
+    },
+    {
+     "number": 4,
+     "name": "Vitto CUROTTO"
+    },
+    {
+     "number": 5,
+     "name": "Ramiro ALBARRACÍN"
+    },
+    {
+     "number": 6,
+     "name": "Agustín SOMMER"
+    },
+    {
+     "number": 7,
+     "name": "Tomás TORNO"
+    },
+    {
+     "number": 8,
+     "name": "Alejo CORCOBA"
+    },
+    {
+     "number": 9,
+     "name": "Manuel LO COCO"
+    },
+    {
+     "number": 9,
+     "name": "Ulises OUBIÑA"
+    },
+    {
+     "number": 10,
+     "name": "Martin CIAFFONE"
+    },
+    {
+     "number": 11,
+     "name": "Franco LEPERA"
+    },
+    {
+     "number": 11,
+     "name": "Joaquin LASCANO"
+    },
+    {
+     "number": 12,
+     "name": "Francisco BENITEZ"
+    },
+    {
+     "number": 13,
+     "name": "Franco SEGOVIA"
+    },
+    {
+     "number": 13,
+     "name": "Manuel BENITEZ"
+    },
+    {
+     "number": 14,
+     "name": "Tomas DE CILLIS"
+    },
+    {
+     "number": 15,
+     "name": "Santiago MONALDI"
+    }
+   ]
+  },
+  "argentino": {
+   "url": "https://ovalados.com/club-argentino.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Facundo ANGELETTI"
+    },
+    {
+     "number": 2,
+     "name": "Santiago MENDIBURU"
+    },
+    {
+     "number": 3,
+     "name": "Tobias DELMASTRO"
+    },
+    {
+     "number": 4,
+     "name": "Juan Ignacio DUARTE"
+    },
+    {
+     "number": 5,
+     "name": "Federico CHAPELA"
+    },
+    {
+     "number": 5,
+     "name": "Franco ERCOLANO"
+    },
+    {
+     "number": 5,
+     "name": "Martín DEVITA"
+    },
+    {
+     "number": 6,
+     "name": "Cristóbal CARBONE"
+    },
+    {
+     "number": 7,
+     "name": "Danilo MIDÓN"
+    },
+    {
+     "number": 8,
+     "name": "Gaspar SIEPE"
+    },
+    {
+     "number": 9,
+     "name": "Alex CONSTENLA"
+    },
+    {
+     "number": 9,
+     "name": "Mateo GONZÁLEZ"
+    },
+    {
+     "number": 10,
+     "name": "Lisandro CARBONE"
+    },
+    {
+     "number": 11,
+     "name": "Joaquín LÓPEZ"
+    },
+    {
+     "number": 12,
+     "name": "Leonardo GALLARDO"
+    },
+    {
+     "number": 12,
+     "name": "Tomás CORROCHANO"
+    },
+    {
+     "number": 13,
+     "name": "Lucas ALMEIDA"
+    },
+    {
+     "number": 13,
+     "name": "Ramiro URSINO"
+    },
+    {
+     "number": 14,
+     "name": "Caio LÓPEZ"
+    },
+    {
+     "number": 14,
+     "name": "Nahuel CLAUSEN"
+    },
+    {
+     "number": 15,
+     "name": "Jerónimo IGLESIAS"
+    }
+   ]
+  },
+  "delta": {
+   "url": "https://ovalados.com/club-delta.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Bautista NADAL"
+    },
+    {
+     "number": 1,
+     "name": "Juan GARZON"
+    },
+    {
+     "number": 2,
+     "name": "Gonzalo GRIJALBA"
+    },
+    {
+     "number": 2,
+     "name": "Marco MARCOVECCHIO"
+    },
+    {
+     "number": 3,
+     "name": "Facundo NIGRO"
+    },
+    {
+     "number": 4,
+     "name": "Matías DIAZ"
+    },
+    {
+     "number": 4,
+     "name": "Pedro CAIMI"
+    },
+    {
+     "number": 5,
+     "name": "Pedro CORONEL"
+    },
+    {
+     "number": 6,
+     "name": "Octavio COLTRINARI"
+    },
+    {
+     "number": 6,
+     "name": "Pedro GRIFFA"
+    },
+    {
+     "number": 7,
+     "name": "Federico MARTINI"
+    },
+    {
+     "number": 7,
+     "name": "Juan Pedro CACCIOLA"
+    },
+    {
+     "number": 9,
+     "name": "Bautista BONIFACE"
+    },
+    {
+     "number": 9,
+     "name": "Bautista CARRANZA"
+    },
+    {
+     "number": 10,
+     "name": "Francisco SANTILLAN"
+    },
+    {
+     "number": 11,
+     "name": "Ciro GONZALEZ VENZANO"
+    },
+    {
+     "number": 11,
+     "name": "Facundo BERMEJO"
+    },
+    {
+     "number": 11,
+     "name": "Tomás NUCIFORA"
+    },
+    {
+     "number": 12,
+     "name": "Agustín SALADO CASTRO"
+    },
+    {
+     "number": 13,
+     "name": "Juan FORRESTER"
+    },
+    {
+     "number": 13,
+     "name": "Nicolás SCHENONE"
+    },
+    {
+     "number": 13,
+     "name": "Santiago SALADO CASTRO"
+    },
+    {
+     "number": 14,
+     "name": "Gonzalo BERMEJO"
+    }
+   ]
+  },
+  "monte-grande": {
+   "url": "https://ovalados.com/club-monte-grande.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "M. FERREYRA"
+    },
+    {
+     "number": 2,
+     "name": "F. LABALE"
+    },
+    {
+     "number": 2,
+     "name": "G. ECHEVERRIA"
+    },
+    {
+     "number": 3,
+     "name": "I. KOLARIK"
+    },
+    {
+     "number": 3,
+     "name": "W. BENITEZ"
+    },
+    {
+     "number": 4,
+     "name": "F. BATTAFARANO"
+    },
+    {
+     "number": 4,
+     "name": "F. BUDELLI"
+    },
+    {
+     "number": 4,
+     "name": "J. MICHEL"
+    },
+    {
+     "number": 5,
+     "name": "I. VAZQUEZ"
+    },
+    {
+     "number": 5,
+     "name": "R. RIVAROLA"
+    },
+    {
+     "number": 5,
+     "name": "S. DI GANGI"
+    },
+    {
+     "number": 6,
+     "name": "A. BLANCO"
+    },
+    {
+     "number": 7,
+     "name": "J. GEMINIANI"
+    },
+    {
+     "number": 8,
+     "name": "B. FRATTIANI"
+    },
+    {
+     "number": 8,
+     "name": "G. D'ALESSANDRO"
+    },
+    {
+     "number": 9,
+     "name": "T. GUATRI"
+    },
+    {
+     "number": 10,
+     "name": "M. CABANAS"
+    },
+    {
+     "number": 11,
+     "name": "I. COURTINADE"
+    },
+    {
+     "number": 12,
+     "name": "L. PATTACINI"
+    },
+    {
+     "number": 12,
+     "name": "M. CITRINOVITZ"
+    },
+    {
+     "number": 12,
+     "name": "V. MAYA"
+    },
+    {
+     "number": 13,
+     "name": "M. NARANJO SOSA"
+    },
+    {
+     "number": 14,
+     "name": "F. PUERTO"
+    },
+    {
+     "number": 15,
+     "name": "M. BLANCO"
+    }
+   ]
+  },
+  "liceo-militar": {
+   "url": "https://ovalados.com/club-liceo-militar.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Fernando CABRERA"
+    },
+    {
+     "number": 2,
+     "name": "Federico BLANCO"
+    },
+    {
+     "number": 3,
+     "name": "Alexander MEDINA"
+    },
+    {
+     "number": 3,
+     "name": "Iván PIAK"
+    },
+    {
+     "number": 4,
+     "name": "Diego ALZOGARAY"
+    },
+    {
+     "number": 5,
+     "name": "Santiago PRIETO"
+    },
+    {
+     "number": 6,
+     "name": "Bruno MANTOVINI"
+    },
+    {
+     "number": 7,
+     "name": "Frnacisco COCCA"
+    },
+    {
+     "number": 8,
+     "name": "Alan TARRAF"
+    },
+    {
+     "number": 8,
+     "name": "Gonzalo FERNANDEZ FIGAROLA"
+    },
+    {
+     "number": 8,
+     "name": "Joel CASA"
+    },
+    {
+     "number": 9,
+     "name": "Bautista TERRERA"
+    },
+    {
+     "number": 10,
+     "name": "Matias CONDURSO"
+    },
+    {
+     "number": 10,
+     "name": "Sebastián CAMPAGNA"
+    },
+    {
+     "number": 11,
+     "name": "Juan DOMINGO"
+    },
+    {
+     "number": 11,
+     "name": "Julian DE LA VEGA"
+    },
+    {
+     "number": 12,
+     "name": "Bautista URIBE"
+    },
+    {
+     "number": 13,
+     "name": "Martín FERNANDEZ"
+    },
+    {
+     "number": 14,
+     "name": "Leandro SCHMIDT"
+    },
+    {
+     "number": 15,
+     "name": "Dante FONGI"
+    },
+    {
+     "number": 15,
+     "name": "Ezequiel KROGSLUND"
+    }
+   ]
+  },
+  "vicentinos": {
+   "url": "https://ovalados.com/club-vicentinos.html",
+   "division": "primera-b",
+   "squadLabel": "Plantel 2026 · Primera B",
+   "entries": [
+    {
+     "number": 1,
+     "name": "Jorge BENITEZ"
+    },
+    {
+     "number": 1,
+     "name": "Matias TRAYNOR"
+    },
+    {
+     "number": 2,
+     "name": "Thiago GOMEZ"
+    },
+    {
+     "number": 3,
+     "name": "Emilio CHAVES"
+    },
+    {
+     "number": 3,
+     "name": "Gabriel RUBIRA"
+    },
+    {
+     "number": 4,
+     "name": "Francisco COMABELLA"
+    },
+    {
+     "number": 4,
+     "name": "Pedro MONTENEGRO"
+    },
+    {
+     "number": 4,
+     "name": "Rodrigo RIOS"
+    },
+    {
+     "number": 5,
+     "name": "Juan Martin TURKOWSKY"
+    },
+    {
+     "number": 5,
+     "name": "Juan Pablo GAUTO"
+    },
+    {
+     "number": 6,
+     "name": "Mariano LIVACHOFF"
+    },
+    {
+     "number": 6,
+     "name": "Rodrigo ESMAYEL"
+    },
+    {
+     "number": 7,
+     "name": "Matias AGUERRONDO"
+    },
+    {
+     "number": 8,
+     "name": "Tobias LUCERO"
+    },
+    {
+     "number": 9,
+     "name": "Francisco OCCHIUZZI"
+    },
+    {
+     "number": 10,
+     "name": "Juan Matias TRAYNOR"
+    },
+    {
+     "number": 10,
+     "name": "Ramiro OCCHIUZZI"
+    },
+    {
+     "number": 11,
+     "name": "Alejo BALBI"
+    },
+    {
+     "number": 11,
+     "name": "Juan Pablo OCCHIUZZI"
+    },
+    {
+     "number": 11,
+     "name": "Santino GEREZ"
+    },
+    {
+     "number": 11,
+     "name": "Tomas PARRA"
+    },
+    {
+     "number": 12,
+     "name": "Santiago TRAYNOR"
+    },
+    {
+     "number": 13,
+     "name": "Enzo CORSI"
+    },
+    {
+     "number": 13,
+     "name": "Ignacio TORRES CIUTAT"
+    },
+    {
+     "number": 14,
+     "name": "Mariano TRAYNOR"
+    }
+   ]
+  }
+ },
+ "missing": [
+  {
+   "clubId": "manuel-belgrano",
+   "reason": "La página club-manuel-belgrano.html existe pero indica «Sin jugadores registrados para Manuel Belgrano en Primera B este 2026»."
+  }
+ ]
+}

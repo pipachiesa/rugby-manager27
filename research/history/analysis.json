@@ -1,0 +1,1482 @@
+{
+ "generatedAt": "2026-11-10",
+ "input": {
+  "file": "research/history/urba-results.json",
+  "matches": 1347,
+  "regularNonNeutral": 1315,
+  "playoffs": 32,
+  "seasons": [
+   2016,
+   2017,
+   2018,
+   2019,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ]
+ },
+ "homeAdvantage": {
+  "pooled": {
+   "homeWinPct": 53.1,
+   "drawPct": 2.7,
+   "awayWinPct": 44.3,
+   "ci95": [
+    50.4,
+    55.8
+   ],
+   "meanHomeMargin": 2.18
+  },
+  "rawMeanMargin": 2.18,
+  "modelHBySeason": {
+   "2016": 3.67,
+   "2017": 1.83,
+   "2018": -0.95,
+   "2019": 1.11,
+   "2021": 1,
+   "2022": 3.58,
+   "2023": 1.15,
+   "2024": 3.7,
+   "2025": 3.75,
+   "2026": 2.11
+  },
+  "modelHPooledMean": 2.1,
+  "sigmaBySeason": {
+   "2016": 13.4,
+   "2017": 14.7,
+   "2018": 15.1,
+   "2019": 14.8,
+   "2021": 14,
+   "2022": 14.1,
+   "2023": 12.6,
+   "2024": 13,
+   "2025": 12.5,
+   "2026": 15.5
+  },
+  "ratingSDBySeason": {
+   "2016": 8,
+   "2017": 5.2,
+   "2018": 9.3,
+   "2019": 6.6,
+   "2021": 9.6,
+   "2022": 7.1,
+   "2023": 7.8,
+   "2024": 7.7,
+   "2025": 5.4,
+   "2026": 9.2
+  },
+  "doubleRoundPairs": {
+   "pairs": 563,
+   "meanH": 2.04,
+   "se": 0.44
+  }
+ },
+ "regularSeason": {
+  "pooled": {
+   "matches": 1315,
+   "homeWinPct": 53.1,
+   "drawPct": 2.7,
+   "awayWinPct": 44.3,
+   "homeWinCI95": [
+    50.4,
+    55.8
+   ],
+   "homePointsShare": 54.4,
+   "meanHomeMargin": 2.18,
+   "marginSD": 17.92,
+   "marginQuantiles": {
+    "p5": -26,
+    "p10": -21,
+    "p25": -7,
+    "p50": 1,
+    "p75": 12,
+    "p90": 25,
+    "p95": 33
+   },
+   "absMarginMean": 13.5,
+   "absMarginMedian": 10,
+   "closeGamesPct": {
+    "le3": 21.9,
+    "le7": 41.9,
+    "ge21": 24.6,
+    "ge35": 6.5
+   },
+   "meanHomePoints": 27.4,
+   "meanAwayPoints": 25.2,
+   "meanTotalPoints": 52.6,
+   "totalPointsSD": 15.6,
+   "tries": {
+    "matches": 198,
+    "meanTotal": 7.21,
+    "meanHome": 3.79,
+    "meanAway": 3.41
+   }
+  },
+  "since2022": {
+   "matches": 733,
+   "homeWinPct": 55.5,
+   "drawPct": 2.3,
+   "awayWinPct": 42.2,
+   "homeWinCI95": [
+    51.9,
+    59.1
+   ],
+   "homePointsShare": 56.7,
+   "meanHomeMargin": 2.81,
+   "marginSD": 17.55,
+   "marginQuantiles": {
+    "p5": -25.4,
+    "p10": -19.8,
+    "p25": -7,
+    "p50": 2,
+    "p75": 12,
+    "p90": 25,
+    "p95": 34
+   },
+   "absMarginMean": 13.2,
+   "absMarginMedian": 10,
+   "closeGamesPct": {
+    "le3": 22.9,
+    "le7": 42.4,
+    "ge21": 24.1,
+    "ge35": 6.8
+   },
+   "meanHomePoints": 28.6,
+   "meanAwayPoints": 25.7,
+   "meanTotalPoints": 54.3,
+   "totalPointsSD": 15.4,
+   "tries": {
+    "matches": 198,
+    "meanTotal": 7.21,
+    "meanHome": 3.79,
+    "meanAway": 3.41
+   }
+  },
+  "bySeason": {
+   "2016": {
+    "matches": 91,
+    "homeWinPct": 56,
+    "drawPct": 3.3,
+    "awayWinPct": 40.7,
+    "homeWinCI95": [
+     45.8,
+     65.8
+    ],
+    "homePointsShare": 57.7,
+    "meanHomeMargin": 4.03,
+    "marginSD": 17.8,
+    "marginQuantiles": {
+     "p5": -24.5,
+     "p10": -19,
+     "p25": -7.5,
+     "p50": 4,
+     "p75": 14,
+     "p90": 31,
+     "p95": 33.5
+    },
+    "absMarginMean": 14.3,
+    "absMarginMedian": 12,
+    "closeGamesPct": {
+     "le3": 16.5,
+     "le7": 36.3,
+     "ge21": 26.4,
+     "ge35": 5.5
+    },
+    "meanHomePoints": 25.4,
+    "meanAwayPoints": 21.4,
+    "meanTotalPoints": 46.8,
+    "totalPointsSD": 15.3,
+    "tries": null
+   },
+   "2017": {
+    "matches": 131,
+    "homeWinPct": 51.1,
+    "drawPct": 4.6,
+    "awayWinPct": 44.3,
+    "homeWinCI95": [
+     42.7,
+     59.5
+    ],
+    "homePointsShare": 53.4,
+    "meanHomeMargin": 1.76,
+    "marginSD": 16.1,
+    "marginQuantiles": {
+     "p5": -22.5,
+     "p10": -18,
+     "p25": -7,
+     "p50": 1,
+     "p75": 12,
+     "p90": 20,
+     "p95": 27
+    },
+    "absMarginMean": 11.9,
+    "absMarginMedian": 9,
+    "closeGamesPct": {
+     "le3": 26,
+     "le7": 45,
+     "ge21": 15.3,
+     "ge35": 3.1
+    },
+    "meanHomePoints": 26.1,
+    "meanAwayPoints": 24.3,
+    "meanTotalPoints": 50.4,
+    "totalPointsSD": 15.5,
+    "tries": null
+   },
+   "2018": {
+    "matches": 132,
+    "homeWinPct": 45.5,
+    "drawPct": 2.3,
+    "awayWinPct": 52.3,
+    "homeWinCI95": [
+     37.2,
+     54
+    ],
+    "homePointsShare": 46.6,
+    "meanHomeMargin": -0.95,
+    "marginSD": 20.29,
+    "marginQuantiles": {
+     "p5": -32,
+     "p10": -24,
+     "p25": -15,
+     "p50": -1,
+     "p75": 7,
+     "p90": 25,
+     "p95": 30.9
+    },
+    "absMarginMean": 14.9,
+    "absMarginMedian": 10,
+    "closeGamesPct": {
+     "le3": 22.7,
+     "le7": 43.2,
+     "ge21": 30.3,
+     "ge35": 8.3
+    },
+    "meanHomePoints": 24.7,
+    "meanAwayPoints": 25.7,
+    "meanTotalPoints": 50.4,
+    "totalPointsSD": 16.3,
+    "tries": null
+   },
+   "2019": {
+    "matches": 132,
+    "homeWinPct": 47.7,
+    "drawPct": 3.8,
+    "awayWinPct": 48.5,
+    "homeWinCI95": [
+     39.4,
+     56.2
+    ],
+    "homePointsShare": 49.6,
+    "meanHomeMargin": 1.11,
+    "marginSD": 17.42,
+    "marginQuantiles": {
+     "p5": -27.4,
+     "p10": -21,
+     "p25": -8,
+     "p50": 0,
+     "p75": 10,
+     "p90": 24.8,
+     "p95": 30.3
+    },
+    "absMarginMean": 13,
+    "absMarginMedian": 9,
+    "closeGamesPct": {
+     "le3": 20.5,
+     "le7": 44.7,
+     "ge21": 25,
+     "ge35": 5.3
+    },
+    "meanHomePoints": 26,
+    "meanAwayPoints": 24.9,
+    "meanTotalPoints": 50.9,
+    "totalPointsSD": 14.4,
+    "tries": null
+   },
+   "2021": {
+    "matches": 96,
+    "homeWinPct": 52.1,
+    "drawPct": 1,
+    "awayWinPct": 46.9,
+    "homeWinCI95": [
+     42.2,
+     61.8
+    ],
+    "homePointsShare": 52.6,
+    "meanHomeMargin": 1.94,
+    "marginSD": 20.14,
+    "marginQuantiles": {
+     "p5": -34.7,
+     "p10": -24,
+     "p25": -9.2,
+     "p50": 1.5,
+     "p75": 16,
+     "p90": 23,
+     "p95": 32.5
+    },
+    "absMarginMean": 15.8,
+    "absMarginMedian": 14.5,
+    "closeGamesPct": {
+     "le3": 14.6,
+     "le7": 33.3,
+     "ge21": 31.3,
+     "ge35": 9.4
+    },
+    "meanHomePoints": 27.8,
+    "meanAwayPoints": 25.9,
+    "meanTotalPoints": 53.7,
+    "totalPointsSD": 16.4,
+    "tries": null
+   },
+   "2022": {
+    "matches": 156,
+    "homeWinPct": 58.3,
+    "drawPct": 3.2,
+    "awayWinPct": 38.5,
+    "homeWinCI95": [
+     50.5,
+     65.8
+    ],
+    "homePointsShare": 59.9,
+    "meanHomeMargin": 3.58,
+    "marginSD": 17.27,
+    "marginQuantiles": {
+     "p5": -21.5,
+     "p10": -16.5,
+     "p25": -6.2,
+     "p50": 3,
+     "p75": 13.3,
+     "p90": 24.5,
+     "p95": 31.8
+    },
+    "absMarginMean": 13.2,
+    "absMarginMedian": 11,
+    "closeGamesPct": {
+     "le3": 24.4,
+     "le7": 39.1,
+     "ge21": 22.4,
+     "ge35": 7.7
+    },
+    "meanHomePoints": 27.6,
+    "meanAwayPoints": 24,
+    "meanTotalPoints": 51.7,
+    "totalPointsSD": 14.5,
+    "tries": null
+   },
+   "2023": {
+    "matches": 132,
+    "homeWinPct": 50,
+    "drawPct": 3,
+    "awayWinPct": 47,
+    "homeWinCI95": [
+     41.6,
+     58.4
+    ],
+    "homePointsShare": 51.5,
+    "meanHomeMargin": 1.15,
+    "marginSD": 16.97,
+    "marginQuantiles": {
+     "p5": -26,
+     "p10": -22.8,
+     "p25": -6,
+     "p50": 0.5,
+     "p75": 9.3,
+     "p90": 21.9,
+     "p95": 28
+    },
+    "absMarginMean": 12.6,
+    "absMarginMedian": 9,
+    "closeGamesPct": {
+     "le3": 25,
+     "le7": 44.7,
+     "ge21": 24.2,
+     "ge35": 5.3
+    },
+    "meanHomePoints": 27.6,
+    "meanAwayPoints": 26.4,
+    "meanTotalPoints": 54,
+    "totalPointsSD": 12.6,
+    "tries": null
+   },
+   "2024": {
+    "matches": 131,
+    "homeWinPct": 58,
+    "drawPct": 3.8,
+    "awayWinPct": 38.2,
+    "homeWinCI95": [
+     49.5,
+     66.1
+    ],
+    "homePointsShare": 59.9,
+    "meanHomeMargin": 3.6,
+    "marginSD": 17.12,
+    "marginQuantiles": {
+     "p5": -26.5,
+     "p10": -17,
+     "p25": -5.5,
+     "p50": 3,
+     "p75": 11,
+     "p90": 26,
+     "p95": 35.5
+    },
+    "absMarginMean": 13.1,
+    "absMarginMedian": 9,
+    "closeGamesPct": {
+     "le3": 24.4,
+     "le7": 43.5,
+     "ge21": 26,
+     "ge35": 6.9
+    },
+    "meanHomePoints": 28.3,
+    "meanAwayPoints": 24.7,
+    "meanTotalPoints": 53,
+    "totalPointsSD": 15.7,
+    "tries": {
+     "matches": 52,
+     "meanTotal": 6.13,
+     "meanHome": 3.35,
+     "meanAway": 2.79
+    }
+   },
+   "2025": {
+    "matches": 132,
+    "homeWinPct": 62.1,
+    "drawPct": 0.8,
+    "awayWinPct": 37.1,
+    "homeWinCI95": [
+     53.6,
+     69.9
+    ],
+    "homePointsShare": 62.5,
+    "meanHomeMargin": 3.75,
+    "marginSD": 14.5,
+    "marginQuantiles": {
+     "p5": -20,
+     "p10": -12.9,
+     "p25": -4,
+     "p50": 3,
+     "p75": 10,
+     "p90": 23.9,
+     "p95": 29.9
+    },
+    "absMarginMean": 10.9,
+    "absMarginMedian": 7,
+    "closeGamesPct": {
+     "le3": 22.7,
+     "le7": 51.5,
+     "ge21": 16.7,
+     "ge35": 4.5
+    },
+    "meanHomePoints": 27.5,
+    "meanAwayPoints": 23.8,
+    "meanTotalPoints": 51.3,
+    "totalPointsSD": 15.1,
+    "tries": null
+   },
+   "2026": {
+    "matches": 182,
+    "homeWinPct": 50.5,
+    "drawPct": 1.1,
+    "awayWinPct": 48.4,
+    "homeWinCI95": [
+     43.3,
+     57.7
+    ],
+    "homePointsShare": 51.1,
+    "meanHomeMargin": 2.11,
+    "marginSD": 20.39,
+    "marginQuantiles": {
+     "p5": -26.9,
+     "p10": -22.9,
+     "p25": -10,
+     "p50": 1,
+     "p75": 15,
+     "p90": 29.9,
+     "p95": 35.9
+    },
+    "absMarginMean": 15.4,
+    "absMarginMedian": 10.5,
+    "closeGamesPct": {
+     "le3": 19.2,
+     "le7": 36.3,
+     "ge21": 29.7,
+     "ge35": 8.8
+    },
+    "meanHomePoints": 31,
+    "meanAwayPoints": 28.9,
+    "meanTotalPoints": 59.9,
+    "totalPointsSD": 16.8,
+    "tries": {
+     "matches": 146,
+     "meanTotal": 7.59,
+     "meanHome": 3.95,
+     "meanAway": 3.64
+    }
+   }
+  },
+  "marginHistogram": {
+   "0": 2.7,
+   "≤−36": 2,
+   "−35…−29": 2,
+   "−28…−22": 5.2,
+   "−21…−15": 6.9,
+   "−14…−8": 8.7,
+   "−7…−1": 19.4,
+   "+1…+7": 19.8,
+   "+8…+14": 11.1,
+   "+15…+21": 9.3,
+   "+22…+28": 5.4,
+   "+29…+35": 3.8,
+   "≥+36": 3.7
+  }
+ },
+ "playoffs": {
+  "matches": 32,
+  "homeWinPct": 50,
+  "drawPct": 3.1,
+  "awayWinPct": 46.9,
+  "homeWinCI95": [
+   33.6,
+   66.4
+  ],
+  "homePointsShare": 51.6,
+  "meanHomeMargin": -0.91,
+  "marginSD": 12.28,
+  "marginQuantiles": {
+   "p5": -15.9,
+   "p10": -9,
+   "p25": -4.2,
+   "p50": 0.5,
+   "p75": 3.5,
+   "p90": 6.9,
+   "p95": 13.3
+  },
+  "absMarginMean": 7.3,
+  "absMarginMedian": 4.5,
+  "closeGamesPct": {
+   "le3": 43.8,
+   "le7": 75,
+   "ge21": 6.3,
+   "ge35": 3.1
+  },
+  "meanHomePoints": 21.2,
+  "meanAwayPoints": 22.1,
+  "meanTotalPoints": 43.3,
+  "totalPointsSD": 12.4,
+  "tries": {
+   "matches": 1,
+   "meanTotal": 1,
+   "meanHome": 0,
+   "meanAway": 1
+  },
+  "note": "Semifinales y finales: varias en cancha neutral (CASI); no se usan para localía."
+ },
+ "surprises": {
+  "byFinalTable": {
+   "decisiveMatches": 1280,
+   "lowerRankedWins": 297,
+   "pct": 23.2,
+   "rankGapLt6": 30.2,
+   "rankGapGe6": 9.5
+  },
+  "byInSampleMarginModel": {
+   "pct": 24.7,
+   "note": "Favorito según el modelo de margen de la misma temporada (conoce el resultado final): cota inferior de la tasa de sorpresas."
+  },
+  "byPreMatchElo": {
+   "decisiveMatches": 1280,
+   "underdogWins": 375,
+   "pct": 29.3,
+   "calibration": [
+    {
+     "band": "0–60 %",
+     "matches": 358,
+     "predicted": 54.9,
+     "observed": 52.9
+    },
+    {
+     "band": "60–70 %",
+     "matches": 339,
+     "predicted": 64.9,
+     "observed": 68.4
+    },
+    {
+     "band": "70–80 %",
+     "matches": 309,
+     "predicted": 74.8,
+     "observed": 77.7
+    },
+    {
+     "band": "80–90 %",
+     "matches": 223,
+     "predicted": 84.6,
+     "observed": 82.3
+    },
+    {
+     "band": "90–100 %",
+     "matches": 86,
+     "predicted": 92.7,
+     "observed": 90.1
+    }
+   ]
+  }
+ },
+ "elo": {
+  "params": {
+   "K": 24,
+   "home": 40,
+   "carry": 0.8,
+   "logLoss": 0.5775656965775268,
+   "brier": 0.18985757803865166
+  },
+  "logLoss": 0.578,
+  "brier": 0.19,
+  "baselineLogLossHomeRate": 0.69
+ },
+ "ratings": {
+  "asOf": "2026-11-10",
+  "note": "margin2026: puntos de margen esperados frente a un rival medio en cancha neutral (modelo normal, ridge λ=2, Σ=0). Blended: 2026 peso 1, 2025 0,5, 2024 0,25 (Los Matreros sin datos previos). Elo: K, localía y arrastre elegidos por log-loss.",
+  "expectedVsActual2026": {
+   "la-plata": {
+    "expectedWins": 9.1,
+    "actualWins": 8
+   },
+   "atletico-del-rosario": {
+    "expectedWins": 8.8,
+    "actualWins": 9
+   },
+   "hindu": {
+    "expectedWins": 18.3,
+    "actualWins": 19
+   },
+   "los-tilos": {
+    "expectedWins": 12.8,
+    "actualWins": 15.5
+   },
+   "champagnat": {
+    "expectedWins": 4,
+    "actualWins": 3
+   },
+   "casi": {
+    "expectedWins": 17.9,
+    "actualWins": 20
+   },
+   "alumni": {
+    "expectedWins": 19.5,
+    "actualWins": 17
+   },
+   "cuba": {
+    "expectedWins": 13.3,
+    "actualWins": 9.5
+   },
+   "newman": {
+    "expectedWins": 20.1,
+    "actualWins": 24.5
+   },
+   "buenos-aires-crc": {
+    "expectedWins": 8.7,
+    "actualWins": 8
+   },
+   "sic": {
+    "expectedWins": 18.3,
+    "actualWins": 18
+   },
+   "belgrano-athletic": {
+    "expectedWins": 12.9,
+    "actualWins": 11.5
+   },
+   "los-matreros": {
+    "expectedWins": 5.7,
+    "actualWins": 8
+   },
+   "regatas-bella-vista": {
+    "expectedWins": 12.8,
+    "actualWins": 11
+   }
+  },
+  "logistic2026": {
+   "homeLogit": 0.06,
+   "cloneHomeWinPct": 51.5
+  },
+  "model2026": {
+   "H": 2.11,
+   "sigma": 15.5,
+   "ratingSD": 9.2
+  },
+  "modelBlended": {
+   "H": 2.68,
+   "sigma": 14.3,
+   "ratingSD": 8.1
+  },
+  "table": [
+   {
+    "id": "newman",
+    "margin2026": 12.5,
+    "marginBlended2024to2026": 11.1,
+    "elo": 1912
+   },
+   {
+    "id": "alumni",
+    "margin2026": 11.3,
+    "marginBlended2024to2026": 8.3,
+    "elo": 1689
+   },
+   {
+    "id": "hindu",
+    "margin2026": 9,
+    "marginBlended2024to2026": 6.7,
+    "elo": 1703
+   },
+   {
+    "id": "sic",
+    "margin2026": 9,
+    "marginBlended2024to2026": 8.6,
+    "elo": 1699
+   },
+   {
+    "id": "casi",
+    "margin2026": 8.3,
+    "marginBlended2024to2026": 9,
+    "elo": 1715
+   },
+   {
+    "id": "cuba",
+    "margin2026": 0.5,
+    "marginBlended2024to2026": 1.3,
+    "elo": 1441
+   },
+   {
+    "id": "belgrano-athletic",
+    "margin2026": -0.1,
+    "marginBlended2024to2026": 3.7,
+    "elo": 1508
+   },
+   {
+    "id": "los-tilos",
+    "margin2026": -0.3,
+    "marginBlended2024to2026": 1.2,
+    "elo": 1600
+   },
+   {
+    "id": "regatas-bella-vista",
+    "margin2026": -0.3,
+    "marginBlended2024to2026": 0.3,
+    "elo": 1403
+   },
+   {
+    "id": "la-plata",
+    "margin2026": -6.5,
+    "marginBlended2024to2026": -6.2,
+    "elo": 1381
+   },
+   {
+    "id": "atletico-del-rosario",
+    "margin2026": -6.9,
+    "marginBlended2024to2026": -7.5,
+    "elo": 1348
+   },
+   {
+    "id": "buenos-aires-crc",
+    "margin2026": -7.2,
+    "marginBlended2024to2026": -5.8,
+    "elo": 1389
+   },
+   {
+    "id": "los-matreros",
+    "margin2026": -12.7,
+    "marginBlended2024to2026": -12.1,
+    "elo": 1317
+   },
+   {
+    "id": "champagnat",
+    "margin2026": -16.7,
+    "marginBlended2024to2026": -15,
+    "elo": 1134
+   }
+  ],
+  "eloBySeasonEnd": {
+   "2016": {
+    "regatas-bella-vista": 1546,
+    "alumni": 1380,
+    "los-tilos": 1278,
+    "belgrano-athletic": 1678,
+    "hindu": 1638,
+    "newman": 1559,
+    "sic": 1497,
+    "atletico-del-rosario": 1317,
+    "san-luis": 1526,
+    "pucara": 1369,
+    "cuba": 1505,
+    "mariano-moreno": 1164,
+    "casi": 1481,
+    "la-plata": 1361
+   },
+   "2017": {
+    "regatas-bella-vista": 1427,
+    "alumni": 1622,
+    "belgrano-athletic": 1482,
+    "hindu": 1716,
+    "newman": 1466,
+    "sic": 1605,
+    "atletico-del-rosario": 1222,
+    "san-luis": 1489,
+    "pucara": 1595,
+    "cuba": 1479,
+    "casi": 1433,
+    "la-plata": 1351
+   },
+   "2018": {
+    "regatas-bella-vista": 1465,
+    "alumni": 1676,
+    "belgrano-athletic": 1601,
+    "hindu": 1588,
+    "newman": 1534,
+    "sic": 1603,
+    "san-luis": 1612,
+    "pucara": 1585,
+    "cuba": 1531,
+    "casi": 1532,
+    "lomas-athletic": 1210,
+    "san-martin": 1215
+   },
+   "2019": {
+    "regatas-bella-vista": 1399,
+    "alumni": 1549,
+    "belgrano-athletic": 1731,
+    "hindu": 1652,
+    "newman": 1665,
+    "sic": 1711,
+    "atletico-del-rosario": 1265,
+    "san-luis": 1429,
+    "pucara": 1589,
+    "cuba": 1427,
+    "casi": 1464,
+    "la-plata": 1427
+   },
+   "2021": {
+    "regatas-bella-vista": 1343,
+    "alumni": 1480,
+    "los-tilos": 1325,
+    "belgrano-athletic": 1685,
+    "hindu": 1660,
+    "newman": 1788,
+    "sic": 1767,
+    "san-luis": 1335,
+    "pucara": 1539,
+    "cuba": 1666,
+    "casi": 1463,
+    "buenos-aires-crc": 1302
+   },
+   "2022": {
+    "regatas-bella-vista": 1415,
+    "alumni": 1578,
+    "los-tilos": 1256,
+    "belgrano-athletic": 1555,
+    "hindu": 1867,
+    "newman": 1702,
+    "sic": 1686,
+    "atletico-del-rosario": 1501,
+    "san-luis": 1382,
+    "pucara": 1372,
+    "cuba": 1579,
+    "casi": 1297,
+    "buenos-aires-crc": 1442
+   },
+   "2023": {
+    "alumni": 1637,
+    "belgrano-athletic": 1531,
+    "hindu": 1712,
+    "newman": 1716,
+    "sic": 1752,
+    "atletico-del-rosario": 1454,
+    "san-luis": 1484,
+    "pucara": 1151,
+    "cuba": 1613,
+    "casi": 1470,
+    "la-plata": 1439,
+    "buenos-aires-crc": 1373
+   },
+   "2024": {
+    "regatas-bella-vista": 1505,
+    "alumni": 1734,
+    "belgrano-athletic": 1644,
+    "hindu": 1511,
+    "newman": 1780,
+    "sic": 1725,
+    "atletico-del-rosario": 1340,
+    "san-luis": 1459,
+    "cuba": 1519,
+    "casi": 1616,
+    "buenos-aires-crc": 1389,
+    "champagnat": 1266
+   },
+   "2025": {
+    "regatas-bella-vista": 1487,
+    "alumni": 1535,
+    "los-tilos": 1562,
+    "belgrano-athletic": 1642,
+    "hindu": 1561,
+    "newman": 1819,
+    "sic": 1706,
+    "san-luis": 1365,
+    "cuba": 1496,
+    "casi": 1669,
+    "la-plata": 1327,
+    "buenos-aires-crc": 1374
+   },
+   "2026": {
+    "regatas-bella-vista": 1403,
+    "alumni": 1689,
+    "los-tilos": 1600,
+    "belgrano-athletic": 1508,
+    "hindu": 1703,
+    "newman": 1912,
+    "sic": 1699,
+    "atletico-del-rosario": 1348,
+    "cuba": 1441,
+    "casi": 1715,
+    "la-plata": 1381,
+    "buenos-aires-crc": 1389,
+    "champagnat": 1134,
+    "los-matreros": 1317
+   }
+  },
+  "marginBySeason": {
+   "2016": {
+    "belgrano-athletic": 11,
+    "hindu": 8,
+    "regatas-bella-vista": 5.9,
+    "san-luis": 4.9,
+    "newman": 4,
+    "casi": 3.3,
+    "cuba": 2.5,
+    "sic": 2,
+    "alumni": -0.1,
+    "pucara": -2.3,
+    "la-plata": -2.4,
+    "atletico-del-rosario": -7.3,
+    "los-tilos": -10,
+    "mariano-moreno": -19.5
+   },
+   "2017": {
+    "sic": 6.9,
+    "pucara": 4.9,
+    "cuba": 4.8,
+    "alumni": 4.3,
+    "hindu": 2.7,
+    "san-luis": 0.5,
+    "newman": -0.8,
+    "belgrano-athletic": -1.1,
+    "casi": -2,
+    "regatas-bella-vista": -3.4,
+    "la-plata": -6.1,
+    "atletico-del-rosario": -10.8
+   },
+   "2018": {
+    "san-luis": 9.2,
+    "belgrano-athletic": 8.8,
+    "pucara": 5.9,
+    "sic": 5.2,
+    "hindu": 3.8,
+    "alumni": 3.5,
+    "casi": 2.3,
+    "newman": 1.4,
+    "cuba": -0.7,
+    "regatas-bella-vista": -1.9,
+    "san-martin": -17.7,
+    "lomas-athletic": -19.6
+   },
+   "2019": {
+    "belgrano-athletic": 8.9,
+    "sic": 8.2,
+    "newman": 7.7,
+    "pucara": 4.3,
+    "hindu": 3,
+    "alumni": 1.7,
+    "san-luis": -2.2,
+    "cuba": -4,
+    "regatas-bella-vista": -4.2,
+    "casi": -5.5,
+    "la-plata": -6,
+    "atletico-del-rosario": -11.9
+   },
+   "2021": {
+    "newman": 16.7,
+    "sic": 13,
+    "hindu": 9.2,
+    "belgrano-athletic": 5.4,
+    "cuba": 5,
+    "casi": -2.5,
+    "alumni": -3,
+    "pucara": -5,
+    "san-luis": -7.4,
+    "regatas-bella-vista": -8.8,
+    "buenos-aires-crc": -11.3,
+    "los-tilos": -11.3
+   },
+   "2022": {
+    "hindu": 9.8,
+    "newman": 9.3,
+    "sic": 6.3,
+    "belgrano-athletic": 5.1,
+    "cuba": 4.9,
+    "alumni": 4.5,
+    "atletico-del-rosario": 0.2,
+    "buenos-aires-crc": -3.4,
+    "pucara": -6,
+    "casi": -6.1,
+    "san-luis": -6.1,
+    "regatas-bella-vista": -6.3,
+    "los-tilos": -12.2
+   },
+   "2023": {
+    "sic": 9.6,
+    "hindu": 8.9,
+    "newman": 6.4,
+    "alumni": 4.5,
+    "cuba": 4,
+    "belgrano-athletic": 1.7,
+    "casi": -1,
+    "buenos-aires-crc": -3.1,
+    "san-luis": -3.9,
+    "la-plata": -4,
+    "atletico-del-rosario": -4.1,
+    "pucara": -19.1
+   },
+   "2024": {
+    "newman": 9.5,
+    "casi": 8.4,
+    "sic": 8.2,
+    "belgrano-athletic": 7,
+    "alumni": 4.8,
+    "cuba": 1.2,
+    "regatas-bella-vista": -2.4,
+    "san-luis": -3.3,
+    "hindu": -4.3,
+    "buenos-aires-crc": -5,
+    "champagnat": -10.8,
+    "atletico-del-rosario": -13.3
+   },
+   "2025": {
+    "belgrano-athletic": 6.8,
+    "casi": 6.8,
+    "newman": 4.4,
+    "sic": 3.6,
+    "hindu": 2.5,
+    "los-tilos": 1.4,
+    "cuba": -0.6,
+    "alumni": -0.8,
+    "regatas-bella-vista": -0.8,
+    "buenos-aires-crc": -6.9,
+    "san-luis": -7.6,
+    "la-plata": -8.8
+   },
+   "2026": {
+    "newman": 12.5,
+    "alumni": 11.3,
+    "hindu": 9,
+    "sic": 9,
+    "casi": 8.3,
+    "cuba": 0.5,
+    "belgrano-athletic": -0.1,
+    "los-tilos": -0.3,
+    "regatas-bella-vista": -0.3,
+    "la-plata": -6.5,
+    "atletico-del-rosario": -6.9,
+    "buenos-aires-crc": -7.2,
+    "los-matreros": -12.7,
+    "champagnat": -16.7
+   }
+  }
+ },
+ "pairs": [
+  {
+   "pair": "newman (local) – casi",
+   "headToHead2016to2026": {
+    "matches": 18,
+    "aWins": 15,
+    "draws": 0,
+    "bWins": 3,
+    "list": [
+     "2016 regular casi 21-22 newman",
+     "2017 regular newman 23-18 casi",
+     "2017 regular casi 25-19 newman",
+     "2018 regular casi 26-28 newman",
+     "2018 regular newman 42-21 casi",
+     "2019 regular newman 39-14 casi",
+     "2019 regular casi 8-29 newman",
+     "2021 regular newman 34-21 casi",
+     "2022 regular newman 28-3 casi",
+     "2022 regular casi 37-36 newman",
+     "2023 regular casi 17-33 newman",
+     "2023 regular newman 41-33 casi",
+     "2024 regular newman 37-14 casi",
+     "2024 regular casi 21-24 newman",
+     "2025 regular newman 22-8 casi",
+     "2025 regular casi 26-16 newman",
+     "2026 regular newman 37-28 casi",
+     "2026 regular casi 27-37 newman"
+    ]
+   },
+   "aAtHome": {
+    "matches": 9,
+    "aWins": 9
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": 3.7,
+    "aBetterIn": 12
+   },
+   "model2026": {
+    "expectedMargin": 6.3,
+    "pHomeWin": 64.7,
+    "pDraw": 2.4,
+    "pAwayWin": 32.9
+   },
+   "modelBlended": {
+    "expectedMargin": 4.8,
+    "pHomeWin": 61.7
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 79.6
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 72
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 68.7
+   }
+  },
+  {
+   "pair": "newman (local) – regatas-bella-vista",
+   "headToHead2016to2026": {
+    "matches": 18,
+    "aWins": 12,
+    "draws": 1,
+    "bWins": 5,
+    "list": [
+     "2016 regular regatas-bella-vista 20-24 newman",
+     "2016 quarterfinal newman 27-26 regatas-bella-vista",
+     "2017 regular regatas-bella-vista 29-28 newman",
+     "2017 regular newman 18-24 regatas-bella-vista",
+     "2018 regular newman 27-27 regatas-bella-vista",
+     "2018 regular regatas-bella-vista 25-24 newman",
+     "2019 regular regatas-bella-vista 13-16 newman",
+     "2019 regular newman 64-8 regatas-bella-vista",
+     "2021 regular newman 42-20 regatas-bella-vista",
+     "2021 second-phase newman 37-21 regatas-bella-vista",
+     "2022 regular regatas-bella-vista 20-21 newman",
+     "2022 regular newman 25-19 regatas-bella-vista",
+     "2024 regular regatas-bella-vista 18-35 newman",
+     "2024 regular newman 33-37 regatas-bella-vista",
+     "2025 regular newman 26-27 regatas-bella-vista",
+     "2025 regular regatas-bella-vista 24-26 newman",
+     "2026 regular regatas-bella-vista 21-36 newman",
+     "2026 regular newman 40-17 regatas-bella-vista"
+    ]
+   },
+   "aAtHome": {
+    "matches": 9,
+    "aWins": 5
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": 12.8,
+    "aBetterIn": 15
+   },
+   "model2026": {
+    "expectedMargin": 14.9,
+    "pHomeWin": 82.3,
+    "pDraw": 1.6,
+    "pAwayWin": 16.1
+   },
+   "modelBlended": {
+    "expectedMargin": 13.4,
+    "pHomeWin": 81.7
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 95.9
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 91
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 89.8
+   }
+  },
+  {
+   "pair": "newman (local) – hindu",
+   "headToHead2016to2026": {
+    "matches": 21,
+    "aWins": 13,
+    "draws": 0,
+    "bWins": 8,
+    "list": [
+     "2016 regular hindu 25-15 newman",
+     "2016 semifinal hindu 25-24 newman",
+     "2017 regular newman 34-17 hindu",
+     "2017 regular hindu 26-35 newman",
+     "2018 regular newman 9-26 hindu",
+     "2018 regular hindu 26-46 newman",
+     "2019 regular hindu 27-15 newman",
+     "2019 regular newman 23-7 hindu",
+     "2021 regular newman 51-15 hindu",
+     "2021 second-phase newman 31-15 hindu",
+     "2022 regular newman 19-38 hindu",
+     "2022 regular hindu 35-29 newman",
+     "2023 regular hindu 29-34 newman",
+     "2023 regular newman 18-34 hindu",
+     "2024 regular hindu 22-40 newman",
+     "2024 regular newman 40-7 hindu",
+     "2025 regular hindu 20-14 newman",
+     "2025 regular newman 34-17 hindu",
+     "2026 regular hindu 25-26 newman",
+     "2026 regular newman 40-20 hindu",
+     "2026 final newman 33-32 hindu"
+    ]
+   },
+   "aAtHome": {
+    "matches": 10,
+    "aWins": 7
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": 2.6,
+    "aBetterIn": 12
+   },
+   "model2026": {
+    "expectedMargin": 5.6,
+    "pHomeWin": 62.8,
+    "pDraw": 2.4,
+    "pAwayWin": 34.7
+   },
+   "modelBlended": {
+    "expectedMargin": 7.1,
+    "pHomeWin": 67.8
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 80.7
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 75.2
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 80.6
+   }
+  },
+  {
+   "pair": "newman (local) – champagnat",
+   "headToHead2016to2026": {
+    "matches": 4,
+    "aWins": 3,
+    "draws": 0,
+    "bWins": 1,
+    "list": [
+     "2024 regular champagnat 27-22 newman",
+     "2024 regular newman 39-20 champagnat",
+     "2026 regular newman 47-8 champagnat",
+     "2026 regular champagnat 21-41 newman"
+    ]
+   },
+   "aAtHome": {
+    "matches": 2,
+    "aWins": 2
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": 31.6,
+    "aBetterIn": 23
+   },
+   "model2026": {
+    "expectedMargin": 31.3,
+    "pHomeWin": 97.7,
+    "pDraw": 0.3,
+    "pAwayWin": 2
+   },
+   "modelBlended": {
+    "expectedMargin": 28.8,
+    "pHomeWin": 97.6
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 99.1
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 97.4
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 97.3
+   }
+  },
+  {
+   "pair": "casi (local) – regatas-bella-vista",
+   "headToHead2016to2026": {
+    "matches": 16,
+    "aWins": 10,
+    "draws": 0,
+    "bWins": 6,
+    "list": [
+     "2016 regular regatas-bella-vista 24-20 casi",
+     "2017 regular regatas-bella-vista 34-39 casi",
+     "2017 regular casi 25-23 regatas-bella-vista",
+     "2018 regular casi 39-20 regatas-bella-vista",
+     "2018 regular regatas-bella-vista 24-45 casi",
+     "2019 regular casi 3-31 regatas-bella-vista",
+     "2019 regular regatas-bella-vista 27-17 casi",
+     "2021 regular casi 16-20 regatas-bella-vista",
+     "2022 regular casi 44-25 regatas-bella-vista",
+     "2022 regular regatas-bella-vista 30-16 casi",
+     "2024 regular casi 41-18 regatas-bella-vista",
+     "2024 regular regatas-bella-vista 30-24 casi",
+     "2025 regular casi 47-23 regatas-bella-vista",
+     "2025 regular regatas-bella-vista 23-27 casi",
+     "2026 regular casi 38-14 regatas-bella-vista",
+     "2026 regular regatas-bella-vista 27-31 casi"
+    ]
+   },
+   "aAtHome": {
+    "matches": 8,
+    "aWins": 6
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": 8.3,
+    "aBetterIn": 17
+   },
+   "model2026": {
+    "expectedMargin": 10.6,
+    "pHomeWin": 74.4,
+    "pDraw": 2,
+    "pAwayWin": 23.6
+   },
+   "modelBlended": {
+    "expectedMargin": 11.4,
+    "pHomeWin": 77.6
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 88.3
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 80.6
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 83.9
+   }
+  },
+  {
+   "pair": "sic (local) – casi",
+   "headToHead2016to2026": {
+    "matches": 20,
+    "aWins": 13,
+    "draws": 0,
+    "bWins": 7,
+    "list": [
+     "2016 regular sic 24-12 casi",
+     "2017 regular casi 0-14 sic",
+     "2017 regular sic 31-30 casi",
+     "2018 regular casi 10-16 sic",
+     "2018 regular sic 20-19 casi",
+     "2019 regular sic 22-29 casi",
+     "2019 regular casi 16-9 sic",
+     "2021 regular sic 41-15 casi",
+     "2021 second-phase casi 13-35 sic",
+     "2022 regular casi 23-25 sic",
+     "2022 regular sic 28-29 casi",
+     "2023 regular sic 25-36 casi",
+     "2023 regular casi 31-36 sic",
+     "2024 regular casi 39-29 sic",
+     "2024 regular sic 27-26 casi",
+     "2025 regular sic 16-13 casi",
+     "2025 regular casi 33-29 sic",
+     "2025 semifinal casi 9-13 sic",
+     "2026 regular casi 23-26 sic",
+     "2026 regular sic 13-18 casi"
+    ]
+   },
+   "aAtHome": {
+    "matches": 10,
+    "aWins": 6
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": 1.1,
+    "aBetterIn": 14
+   },
+   "model2026": {
+    "expectedMargin": 2.9,
+    "pHomeWin": 56.1,
+    "pDraw": 2.5,
+    "pAwayWin": 41.4
+   },
+   "modelBlended": {
+    "expectedMargin": 2.3,
+    "pHomeWin": 54.9
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 53.4
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 43.4
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 49.8
+   }
+  },
+  {
+   "pair": "regatas-bella-vista (local) – cuba",
+   "headToHead2016to2026": {
+    "matches": 16,
+    "aWins": 10,
+    "draws": 0,
+    "bWins": 6,
+    "list": [
+     "2016 regular regatas-bella-vista 23-16 cuba",
+     "2017 regular regatas-bella-vista 10-23 cuba",
+     "2017 regular cuba 27-30 regatas-bella-vista",
+     "2018 regular cuba 17-37 regatas-bella-vista",
+     "2018 regular regatas-bella-vista 34-9 cuba",
+     "2019 regular regatas-bella-vista 20-19 cuba",
+     "2019 regular cuba 17-29 regatas-bella-vista",
+     "2021 regular regatas-bella-vista 3-35 cuba",
+     "2022 regular cuba 40-14 regatas-bella-vista",
+     "2022 regular regatas-bella-vista 36-7 cuba",
+     "2024 regular regatas-bella-vista 35-27 cuba",
+     "2024 regular cuba 28-23 regatas-bella-vista",
+     "2025 regular cuba 33-9 regatas-bella-vista",
+     "2025 regular regatas-bella-vista 25-22 cuba",
+     "2026 regular regatas-bella-vista 26-23 cuba",
+     "2026 regular cuba 19-10 regatas-bella-vista"
+    ]
+   },
+   "aAtHome": {
+    "matches": 9,
+    "aWins": 7
+   },
+   "commonOpponents2026": {
+    "comparisons": 24,
+    "meanMarginDiff": -0.5,
+    "aBetterIn": 12
+   },
+   "model2026": {
+    "expectedMargin": 1.3,
+    "pHomeWin": 52.1,
+    "pDraw": 2.6,
+    "pAwayWin": 45.4
+   },
+   "modelBlended": {
+    "expectedMargin": 1.7,
+    "pHomeWin": 53.3
+   },
+   "elo": {
+    "pHomeWinOrHalfDraw": 50.2
+   },
+   "logistic2026": {
+    "pHomeWinOrHalfDraw": 57
+   },
+   "logisticBlended": {
+    "pHomeWinOrHalfDraw": 61.1
+   }
+  }
+ ]
+}
