@@ -895,22 +895,75 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 
 .modern-manager .contact-footer{display:flex;justify-content:flex-end;margin-top:28px;padding:12px 0 4px;border-top:1px solid var(--line);font-size:13px}
 .modern-manager .contact-footer a{text-decoration:underline;text-underline-offset:3px}
-.modern-manager .entry-content{max-width:900px;padding-top:36px}
-.entry-brand{font:700 27px/1 'Barlow Condensed',sans-serif;letter-spacing:.3px}
-.modern-manager.entry-shell .clubbar-row{justify-content:space-between}
-.entry-content .page-intro{align-items:center;margin-bottom:15px}
-.entry-content .entry-auth{max-width:430px}
-.entry-content .entry-auth .tabs{margin-bottom:10px}
-.entry-content .panel-body .btn{margin-top:10px}
-.entry-content .entry-modes .panel-body p{min-height:3em}
-.entry-content .entry-modes .panel-body{display:grid;justify-items:start}
-.entry-content .member-row{min-height:51px}
-@media(max-width:760px){
-  .modern-manager .entry-content{padding-top:22px;padding-bottom:30px}
-  .entry-content .page-intro{align-items:flex-start;gap:10px}
-  .entry-content .page-intro h1{font-size:25px}
-  .entry-content .two-col{grid-template-columns:minmax(0,1fr)}
-  .entry-content .entry-modes .panel-body p{min-height:0}
-  .entry-content .btn,.entry-content input,.entry-content select,.entry-content .tab{min-height:44px}
-  .entry-content .btn{white-space:normal}
+
+/* ==================== Start screen (RM27) ====================
+   A pitch seen from above on the left (mown stripes, touch and 22 lines), the RM27 badge, a short pitch for the game
+   and the real Top 14 crests; the current step on the right, in the same cards and fields as the game. */
+.entry-shell{--brand:#1f6b45;--brand-deep:#0b2318;--cream:#f3ecd9;--gold:#c19a4b;min-height:100vh;display:flex;flex-direction:column;background:var(--page)}
+.entry-theme{position:fixed;top:14px;right:14px;z-index:5;background:color-mix(in srgb,var(--surface) 70%,transparent);border:1px solid var(--line)}
+.entry-layout{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);min-height:calc(100vh - 52px)}
+.entry-hero{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:56px clamp(28px,5vw,72px);color:var(--cream);
+  background:
+    linear-gradient(90deg,transparent calc(12% - 1px),#ffffff70 12%,transparent calc(12% + 2px)),
+    linear-gradient(90deg,transparent calc(38% - 1px),#ffffff40 38%,transparent calc(38% + 1px)),
+    linear-gradient(90deg,transparent calc(64% - 1px),#ffffff40 64%,transparent calc(64% + 1px)),
+    linear-gradient(90deg,transparent calc(90% - 1px),#ffffff70 90%,transparent calc(90% + 2px)),
+    repeating-linear-gradient(90deg,#2a7a4e 0 8.33%,#256f47 8.33% 16.66%),var(--brand-deep);
+  box-shadow:inset -40px 0 80px -40px #0008}
+.entry-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0b231833,transparent 30%,transparent 60%,#0b2318aa),radial-gradient(ellipse at 25% 45%,transparent 45%,#0b231866 100%);pointer-events:none}
+.entry-hero>*{position:relative;z-index:1}
+.entry-logo{width:min(360px,70%);height:auto;filter:drop-shadow(0 10px 24px #0007)}
+.entry-tagline{font:700 clamp(34px,4.2vw,56px)/1 'Barlow Condensed',sans-serif;letter-spacing:.5px;color:var(--cream);text-shadow:0 2px 12px #0006}
+.entry-lead{max-width:46ch;font-size:15px;line-height:1.55;color:#f3ecd9d9}
+.entry-facts{display:flex;gap:28px;list-style:none;margin:4px 0 0;padding:0}
+.entry-facts li{display:flex;flex-direction:column;gap:2px;padding-left:12px;border-left:2px solid var(--gold)}
+.entry-facts b{font:700 28px/1 'Barlow Condensed',sans-serif;color:#fff}
+.entry-facts span{font-size:12px;color:#f3ecd9b3}
+.entry-crests{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;max-width:600px}
+.entry-crests .crest,.entry-crests .crest-fallback{width:30px;height:32px;filter:drop-shadow(0 2px 4px #0006);opacity:.92}
+.entry-panel{display:flex;flex-direction:column;justify-content:center;gap:16px;padding:56px clamp(24px,4vw,64px);max-width:640px;width:100%;margin:0 auto}
+.entry-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.entry-head small{display:block;font-size:12px;font-weight:600;letter-spacing:.3px;color:var(--gold);margin-bottom:4px}
+.entry-head h1{font-size:34px}
+.entry-auth{display:grid;gap:12px}
+.entry-auth .tabs{margin:0}
+.entry-panel .panel-body .btn[type=submit]{width:100%;min-height:42px;margin-top:4px}
+.entry-panel .field input,.entry-panel .field select{min-height:42px}
+.entry-modes{display:grid;gap:12px}
+.entry-choice{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;width:100%;padding:18px;text-align:left;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);transition:border-color .15s,transform .15s,background .15s}
+.entry-choice:hover:not(:disabled){border-color:var(--brand);background:color-mix(in srgb,var(--brand) 8%,var(--surface));transform:translateY(-1px)}
+.entry-choice-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:color-mix(in srgb,var(--brand) 22%,transparent);color:#7fd1a2}
+:root[data-theme="light"] .entry-choice-icon{color:var(--brand)}
+.entry-choice-icon svg{width:22px;height:22px}
+.entry-choice-text strong{display:block;font-size:17px;font-weight:700}
+.entry-choice-text small{display:block;margin-top:3px;font-size:13px;line-height:1.4;color:var(--ink-2)}
+.entry-choice-cta{display:flex;align-items:center;gap:4px;font-weight:700;font-size:13px;color:var(--ink-2);white-space:nowrap}
+.entry-choice:hover .entry-choice-cta{color:var(--ink)}
+.entry-choice-cta svg{width:15px;height:15px}
+.entry-shell .contact-footer{display:flex;justify-content:flex-end;padding:14px clamp(24px,4vw,64px);font-size:12px;color:var(--ink-3);border-top:1px solid var(--line)}
+.entry-shell .contact-footer a{color:var(--ink-2)}
+/* Wide steps (leagues): the pitch becomes a header band with the badge and the crests */
+.entry-wide .entry-layout{grid-template-columns:1fr;min-height:0}
+.entry-wide .entry-hero{flex-direction:row;align-items:center;justify-content:space-between;padding:18px clamp(20px,4vw,56px);gap:24px}
+.entry-wide .entry-logo{width:150px}
+.entry-wide .entry-crests{margin:0;justify-content:flex-end}
+.entry-wide .entry-panel{max-width:1100px;justify-content:flex-start;padding-top:28px}
+@media(max-width:900px){
+  .entry-layout{grid-template-columns:1fr;min-height:0}
+  .entry-hero{padding:40px 22px 28px;gap:14px}
+  .entry-logo{width:200px}
+  .entry-crests{display:none}
+  .entry-panel{padding:24px 18px 32px}
+  .entry-wide .entry-hero{padding:14px 18px}
+  .entry-wide .entry-logo{width:110px}
 }
+@media(max-width:520px){
+  .entry-facts{gap:16px}
+  .entry-facts b{font-size:22px}
+  .entry-head{flex-wrap:wrap;align-items:flex-start}
+  .entry-head h1{font-size:28px}
+  .entry-choice{grid-template-columns:auto 1fr;padding:14px}
+  .entry-choice-cta{grid-column:2}
+}
+.entry-wide .entry-crests{flex-wrap:nowrap;overflow:hidden;padding-right:48px;max-width:none}
+.entry-wide .entry-crests .crest,.entry-wide .entry-crests .crest-fallback{width:26px;height:28px}

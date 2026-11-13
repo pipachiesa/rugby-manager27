@@ -22,7 +22,7 @@ assets['/returns.json']={type:types['.json'],body:JSON.stringify(returns)};
 assets['/youth.json']={type:types['.json'],body:JSON.stringify(youth)};
 assets['/names.json']={type:types['.json'],body:JSON.stringify(names)};
 assets['/favicon.svg']={type:types['.svg'],body:await readFile('public/favicon.svg','utf8')};
-assets['/brand/rm27.png']={type:'image/png',encoding:'base64',body:await readFile('public/brand/rm27.png','base64')};
+for (const f of ['rm27-720.png','rm27-64.png']) assets['/brand/'+f]={type:'image/png',encoding:'base64',body:await readFile('public/brand/'+f,'base64')};
 // PNGs are binary; keep them encoded in the Worker bundle and decode on request.
 for (const file of await readdir('public/crests').catch(()=>[])) if (file.endsWith('.png')) assets['/crests/'+file]={type:'image/png',encoding:'base64',body:await readFile('public/crests/'+file,'base64')};
 for (const file of await readdir('public/kits-web').catch(()=>[])) {

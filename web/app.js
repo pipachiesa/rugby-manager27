@@ -949,13 +949,14 @@ function entryScreen() {
       panel(authKind==='login'?'Ingresá a tu cuenta':'Registrá tu cuenta',authForm(authKind))+'</div>';
   } else if (entryStage==='mode') {
     title='Elegí cómo jugar';
-    body='<div class="two-col entry-modes">'+
-      panel('Modo offline','<div class="panel-body prose"><p>'+(hasDemoSave?'Tu partida guardada · '+demoDescription()+'.':'Dirigí un club en una partida que se guarda en este navegador.')+'</p>'+
-      button(hasDemoSave?'Continuar partida':'Jugar offline','entry-offline','','primary','play',busy)+'</div>')+
-      panel('Liga con amigos','<div class="panel-body prose"><p>'+(offline?'Las ligas están disponibles en la versión web con servidor.':'Creá una liga privada, unite con un código o retomá una liga existente.')+'</p>'+
-      (offline?'':button('Abrir ligas','entry-online','','primary','team',busy))+'</div>')+'</div>';
+    const card = (action, glyph, heading, text, cta, disabled=false) => '<button type="button" class="entry-choice" data-do="'+action+'"'+(disabled||busy?' disabled':'')+'>'+
+      '<span class="entry-choice-icon">'+icon(glyph)+'</span><span class="entry-choice-text"><strong>'+heading+'</strong><small>'+text+'</small></span><span class="entry-choice-cta">'+cta+icon('right')+'</span></button>';
+    body='<div class="entry-modes">'+
+      card('entry-offline','shield',hasDemoSave?'Seguir mi partida':'Partida individual',hasDemoSave?esc(demoDescription())+'. Se guarda en este navegador.':'Elegí un club y jugá a tu ritmo. Se guarda en este navegador.',hasDemoSave?'Continuar':'Empezar')+
+      card('entry-online','team','Liga con amigos',offline?'Disponible en la versión con servidor.':'Cada uno dirige su club. La fecha se juega cuando todos están listos.','Abrir ligas',offline)+
+      '</div>';
   } else if (entryStage==='offline') {
-    title='Prepará tu partida offline';
+    title='Elegí tu club';
     body=panel('Mánager y club','<form class="panel-body" id="offline-setup"><div class="field"><label for="offline-name">Nombre del mánager</label><input id="offline-name" name="nickname" maxlength="32" value="'+esc((demoManager||me.name||localProfile()||'').slice(0,32))+'" required></div><div class="field"><label for="offline-club">Club</label><select id="offline-club" name="clubId">'+availableClubOptions(demoClubId)+'</select></div><button type="submit" class="btn primary">Entrar al menú</button></form>');
   } else {
     title='Liga con amigos';
@@ -963,10 +964,21 @@ function entryScreen() {
   }
   const controls = entryStage==='auth'?'':entryStage==='mode'?
     button(offline?'Cambiar perfil':'Cerrar sesión',offline?'reset-local-profile':'logout','','ghost small','close',busy):
-    button('Volver a los modos','entry-mode','','ghost small','return',busy);
-  return '<div class="app-shell modern-manager entry-shell"><header class="clubbar"><div class="clubbar-row"><strong class="entry-brand">Rugby Manager 27</strong>'+
-    '<button class="icon-btn theme-toggle" type="button" data-do="theme" aria-label="Cambiar tema">'+icon(theme()==='dark'?'sun':'moon')+'</button></div></header>'+
-    '<main class="content entry-content"><header class="page-intro"><h1 tabindex="-1" id="entry-title">'+title+'</h1>'+controls+'</header>'+body+contactFooter()+'</main></div>';
+    button('Volver','entry-mode','','ghost small','return',busy);
+  const step = {auth:'Paso 1 de 2 · Tu cuenta',mode:'Paso 2 de 2 · Cómo jugar',offline:'Partida individual',online:'Liga con amigos'}[entryStage] ?? '';
+  const wide = entryStage!=='auth'&&entryStage!=='mode'&&entryStage!=='offline';
+  // Start screen in the game's own language: a pitch seen from above (stripes and lines), the RM27 badge and the real
+  // URBA crests, with the current step on the right. Wide steps (leagues) drop the hero to a header band.
+  const crestIds = (catalog?.clubs ?? []).filter(c=>c.competitionId==='top14').map(c=>c.id);
+  const hero = '<section class="entry-hero" aria-label="Rugby Manager 27">'+
+    '<img class="entry-logo" src="/brand/rm27-720.png" alt="Rugby Manager 27" width="360" height="245">'+
+    (wide?'':'<h2 class="entry-tagline">Rugby Manager 27</h2>')+
+    '<div class="entry-crests" aria-hidden="true">'+crestIds.map(id=>crest(id)).join('')+'</div></section>';
+  return '<div class="app-shell entry-shell'+(wide?' entry-wide':'')+'" style="--club:#1f6b45;--club-ink:#ffffff">'+
+    '<button class="icon-btn theme-toggle entry-theme" type="button" data-do="theme" aria-label="Cambiar tema">'+icon(theme()==='dark'?'sun':'moon')+'</button>'+
+    '<div class="entry-layout">'+hero+
+      '<main class="entry-panel" id="main-content"><header class="entry-head"><div><small>'+step+'</small><h1 tabindex="-1" id="entry-title">'+title+'</h1></div>'+controls+'</header>'+body+'</main>'+
+    '</div>'+contactFooter()+'</div>';
 }
 function leaguePage() {
   if (league) {

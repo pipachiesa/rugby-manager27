@@ -18,8 +18,8 @@ if(!domainImport)throw new Error('No se encontró el contrato de importación de
 const domainBindings=domainImport[1].replace(/\s+as\s+/g,':');
 const domain=domainSource.replace(/^import .*;\n/gm,'').replace(/export /g,'');
 const statsExports=[...statsSource.matchAll(/export (?:const|function) (\w+)/g)].map(x=>x[1]);
-const logo='data:image/png;base64,'+(await readFile('public/brand/rm27.png')).toString('base64');
-const app=appSource.replace(/^import .*;\n/gm,'').replaceAll('/brand/rm27.png',logo);
+const logo='data:image/png;base64,'+(await readFile('public/brand/rm27-720.png')).toString('base64');
+const app=appSource.replace(/^import .*;\n/gm,'').replaceAll('/brand/rm27-720.png',logo);
 const source=`window.__RM_CATALOG=${JSON.stringify(catalog)};\nwindow.__RM_RETURNS=${returnsText};\nwindow.__RM_YOUTH=${youthText};\nwindow.__RM_NAMES=${namesText};\nconst engine=(()=>{${engine.replace(/export /g,'')}\nreturn {${exports.join(',')}}})();\nconst E=engine;\nconst Stats=(()=>{${statsSource.replace(/export /g,'')}return {${statsExports.join(',')}};})();\nconst {${statsExports.join(',')}}=Stats;\nconst Domain=(()=>{${domain}\nreturn {${domainExports.join(',')}};})();\nconst {${domainBindings}}=Domain;\n${app}`.replaceAll('</script','<\\/script');
 const output=html.replace(/<link rel="icon"[^>]*>/,'').replace(/<link rel="stylesheet"[^>]*>/,`<style>${css.replaceAll('</style','<\\/style')}</style>`).replace(/<script type="module" src="\/app.js"><\/script>/,`<script type="module">${source}</script>`);
 const path=process.argv[2]??'/tmp/Tercer-Tiempo-web.html';await writeFile(path,output);console.log(`Standalone: ${path} (${Buffer.byteLength(output)} bytes)`);
