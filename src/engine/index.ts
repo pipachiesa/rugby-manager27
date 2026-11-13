@@ -5,7 +5,7 @@ export const ATTRIBUTE_LABELS = {
   goalKicking: 'Patadas a los palos', tackling: 'Tackle', positioning: 'Ubicación', breakdown: 'Ruck',
   scrummaging: 'Scrum', lineout: 'Lineout', jumping: 'Salto', maul: 'Maul', carrying: 'Acarreo',
   evasion: 'Evasión', offload: 'Offload', discipline: 'Disciplina', leadership: 'Liderazgo',
-  workRate: 'Trabajo', technique: 'Técnica', composure: 'Temple',
+  workRate: 'Trabajo', technique: 'Técnica', composure: 'Temple', aerial: 'Juego aéreo',
 } as const;
 export type Attribute = keyof typeof ATTRIBUTE_LABELS;
 export type Attributes = Record<Attribute, number>;
@@ -60,9 +60,9 @@ export const ratingWeights: Record<Position, Profile> = {
   'Número 8': { carrying: 4, strength: 3, tackling: 3, workRate: 2, breakdown: 2, stamina: 2, handling: 2, offload: 1, decisions: 1 },
   'Medio scrum': { passing: 5, decisions: 4, handling: 3, kicking: 2, vision: 2, workRate: 1, acceleration: 1, positioning: 1, composure: 1 },
   Apertura: { decisions: 4, passing: 3, vision: 3, kicking: 3, goalKicking: 2, composure: 2, handling: 2, positioning: 1 },
-  Wing: { pace: 4, acceleration: 3, evasion: 3, handling: 2, agility: 2, positioning: 2, tackling: 2, carrying: 1, decisions: 1 },
+  Wing: { pace: 4, acceleration: 3, evasion: 3, handling: 2, agility: 2, positioning: 2, tackling: 2, aerial: 2, carrying: 1, decisions: 1 },
   Centro: { tackling: 3, carrying: 3, handling: 3, passing: 2, evasion: 2, decisions: 2, positioning: 2, strength: 1, pace: 1, offload: 1 },
-  Fullback: { positioning: 4, handling: 3, kicking: 3, pace: 2, tackling: 2, decisions: 2, acceleration: 1, composure: 1, jumping: 1, evasion: 1 },
+  Fullback: { positioning: 4, handling: 3, aerial: 3, kicking: 3, pace: 2, tackling: 2, decisions: 2, acceleration: 1, composure: 1, evasion: 1 },
 };
 export const HOME_EDGE = .62;
 export const DAY_FORM = .02;
@@ -76,7 +76,9 @@ export const TACTIC_TUNING = {
   // for Newman after the strength refit); now about +1 against an equal side.
   rushPenalty: .026, rushPenaltyPerIndiscipline: .012, rushPressureGain: .9, rushPressureError: .014, rushBreakBase: .03, rushBreakOpen: .025,
   // Conservador kicks less often but long into the field; Territorial looks for touch. Both within ±0.5 points.
-  conservativeKickDistance: 30, territorialKickDistance: 29, conservativeKickChance: 0, territorialKickChance: .075,
+  // Juego aéreo: base rates for a kick into the field between equal players, moved by the aerial gap per point.
+  aerialDrop: .035, kickRegain: .025, restartRegain: .12, aerialSlope: .008,
+    conservativeKickDistance: 30, territorialKickDistance: 29, conservativeKickChance: 0, territorialKickChance: .075,
   // Ruck Rápido: more line breaks and metres, more turnovers at the breakdown.
   fastBreak: .035, fastGain: 1.9, fastPassError: .018, fastRuckExposure: .042,
   // Mentality. Ofensiva keeps the ball in hand and goes wide: more breaks, more handling errors. Defensiva kicks for
@@ -92,7 +94,8 @@ export function overall(player: Pick<Player, 'position' | 'attributes'>): number
   let total = 0, weight = 0;
   for (const attr of attributes) {
     const w = weights[attr] ?? 0;
-    total += player.attributes[attr] * w;
+    if (!w) continue;
+    total += (player.attributes[attr] ?? aerialFrom(player.position, player.attributes)) * w;
     weight += w;
   }
   return clamp(Math.round((total / weight - 1) * 100 / 19), 0, 100);
@@ -258,7 +261,17 @@ const role: Record<Position, Profile> = {
 };
 function createAttributes(position: Position, base: number, rng: () => number): Attributes {
   const group = POSITIONS.indexOf(position) < 8 ? forwards : backs;
-  return Object.fromEntries(attributes.map(attr => [attr, clamp(Math.round(base + (group[attr] ?? 0) + (role[position][attr] ?? 0) + (rng() + rng() - 1) * 2.7), 1, 20)])) as Attributes;
+  const generated = Object.fromEntries(attributes.filter(attr => attr !== 'aerial').map(attr => [attr, clamp(Math.round(base + (group[attr] ?? 0) + (role[position][attr] ?? 0) + (rng() + rng() - 1) * 2.7), 1, 20)])) as Attributes;
+  return { ...generated, aerial: aerialFrom(position, generated) };
+}
+/**
+ * Juego aéreo (catching and contesting high balls), added on 12/11/2026. It draws no random number of its own, so
+ * every other attribute generates exactly as before: it comes from jumping, handling and positioning, with a lift
+ * for the back three, who live under the high ball. The data migration (v21) uses the same formula.
+ */
+export function aerialFrom(position: Position, a: Partial<Attributes>): number {
+  const lift = position === 'Fullback' ? 1.5 : position === 'Wing' ? 1 : 0;
+  return clamp(Math.round((a.jumping ?? 10) * .35 + (a.handling ?? 10) * .35 + (a.positioning ?? 10) * .3 + lift), 1, 20);
 }
 /** Overall of a player with no individual or attribute noise: what a club's tier promises for this position. */
 export function expectedOverall(position: Position, base: number): number {
@@ -604,7 +617,9 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     ball = { x: 50, y: 35 };
     nextPhase = 'ruck';
     moment(at, 'restart');
-    fly(at + 2, 7, { x: coord(receiving, 23 + rng() * 10), y: 19 + rng() * 32 }, actor(receiving, [3, 4, 5, 7, 14], at + 9), 'kick', receiving, 13);
+    const catcher = actor(receiving, [3, 4, 5, 7, 14], at + 9);
+    fly(at + 2, 7, { x: coord(receiving, 23 + rng() * 10), y: 19 + rng() * 32 }, catcher, 'kick', receiving, 13);
+    aerialContest(at + 9, other(receiving), receiving, catcher, true);
   }
   function turnover(at: number, winner: Team, description: string) {
     team = winner;
@@ -612,6 +627,34 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     winner.analysis.turnoversWon++;
     record(at, 'turnover', winner, description, carrier);
     moment(at, 'ruck');
+  }
+  /**
+   * A kick into the field is contested in the air: the receiver (Juego aéreo) against the best-placed chaser.
+   * Clean catch, knock-on (scrum to the kicking side) or the kicking side wins it back. Restarts are short and
+   * contested by the forwards, so they are won back more often than long kicks.
+   */
+  function aerialContest(at: number, kicking: Team, receiving: Team, receiver: Player | undefined, restartKick: boolean) {
+    if (!receiver) return;
+    const chaser = actor(kicking, restartKick ? jumpers : [10, 11, 12, 13, 14], at);
+    const homeEdge = (side: Team) => side === home && !neutral ? HOME_EDGE : 0;
+    const diff = attr(receiving, receiver, 'aerial', at) + homeEdge(receiving) - attr(kicking, chaser, 'aerial', at) - homeEdge(kicking);
+    const roll = rng();
+    const drop = clamp(TACTIC_TUNING.aerialDrop - diff * TACTIC_TUNING.aerialSlope, .01, .16);
+    const regain = clamp((restartKick ? TACTIC_TUNING.restartRegain : TACTIC_TUNING.kickRegain) - diff * TACTIC_TUNING.aerialSlope, .01, .26);
+    if (roll < drop) {
+      record(at, 'knockOn', receiving, `${receiver.name} no puede con la pelota alta`, receiver);
+      team = kicking;
+      carrier = atSlot(kicking, 8, at);
+      nextPhase = 'scrum';
+      moment(at, 'scrum');
+    } else if (roll < drop + regain) {
+      carrier = chaser;
+      record(at, 'turnover', kicking, `${chaser.name} gana la pelota en el aire`, chaser);
+      kicking.analysis.turnoversWon++;
+      team = kicking;
+      nextPhase = 'ruck';
+      moment(at, 'ruck');
+    }
   }
   function kickerFor(side: Team): Player {
     return side.lineup.filter(player => activeAt(side, player, second)).reduce((best, player) => attr(side, player, 'goalKicking') > attr(side, best, 'goalKicking') ? player : best);
@@ -640,8 +683,10 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     ball = { x: coord(defender, 22), y: 35 };
     moment(at, 'restart');
     const receiver = other(defender);
-    fly(at + 2, 8, { x: coord(defender, 56 + rng() * 14), y: 18 + rng() * 34 }, actor(receiver, [3, 6, 7, 14], at + 10), 'kick', receiver, 13);
+    const catcher = actor(receiver, [3, 6, 7, 14], at + 10);
+    fly(at + 2, 8, { x: coord(defender, 56 + rng() * 14), y: 18 + rng() * 34 }, catcher, 'kick', receiver, 13);
     nextPhase = 'ruck';
+    aerialContest(at + 10, defender, receiver, catcher, true);
   }
   function touchKick(at: number, attack: Team, defence: Team, penalty: boolean) {
     const kicker = actor(attack, [8, 9, 9, 14], at);
@@ -657,6 +702,7 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     record(at, 'kick', attack, aimTouch ? `${kicker.name} busca el touch` : `${kicker.name} juega al fondo`, kicker);
     fly(at, 9, location, target, 'kick', receiving, 16, aimTouch ? 'lineout' : 'catch');
     nextPhase = aimTouch ? 'lineout' : 'ruck';
+    if (!aimTouch) aerialContest(at + 9, attack, receiving, target, false);
   }
   function scoreTry(at: number, scorer: Player) {
     const attack = team;

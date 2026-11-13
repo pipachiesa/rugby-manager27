@@ -11,9 +11,9 @@ test('schedule is a balanced round robin and players have valid attributes', () 
     assert.equal(fixtures.length,26);
     assert.equal(new Set(fixtures.map(f=>f.homeId===club.id?f.awayId:f.homeId)).size,13);
     assert.equal(club.players.length,90);
-    for(const p of club.players){assert.equal(Object.keys(p.attributes).length,26);for(const n of Object.values(p.attributes)) assert.ok(n>=1&&n<=20);assert.equal(p.fictional,true);}
+    for(const p of club.players){assert.equal(Object.keys(p.attributes).length,27);for(const n of Object.values(p.attributes)) assert.ok(n>=1&&n<=20);assert.equal(p.fictional,true);}
   }
-  assert.equal(Object.keys(ATTRIBUTE_LABELS).length,26);
+  assert.equal(Object.keys(ATTRIBUTE_LABELS).length,27);
 });
 test('match is deterministic, scoring matches the event log and replay', () => {
   const state=createInitialState(42), [home,away]=state.clubs;
@@ -282,4 +282,12 @@ test('actual cards remove the right player from play for ten minutes or until fu
       assert.ok(during.every(f => !f.players.some(p => p.id === card.playerId) && f.carrierId !== card.playerId));
     }
   }
+});
+test('high balls are contested: a better Juego aéreo drops fewer kicks', () => {
+  const state=createInitialState(7), [home,away]=state.clubs;
+  const withAerial=(club:any,v:number)=>({...club,players:club.players.map((p:any)=>({...p,attributes:{...p.attributes,aerial:v}}))});
+  const drops=(h:any,a:any)=>{let n=0;for(let s=0;s<40;s++){const m=generateMatch(h,a,DEFAULT_TACTICS,DEFAULT_TACTICS,900+s);n+=m.events.filter(e=>e.type==='knockOn'&&e.teamId===h.id&&/pelota alta/.test(e.description)).length;}return n;};
+  const sure=drops(withAerial(home,20),withAerial(away,1)), shaky=drops(withAerial(home,1),withAerial(away,20));
+  assert.ok(shaky>0,'some high balls are dropped');
+  assert.ok(sure<shaky,`aerial 20 drops ${sure}, aerial 1 drops ${shaky}`);
 });

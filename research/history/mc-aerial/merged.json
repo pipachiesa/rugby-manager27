@@ -1,0 +1,570 @@
+{
+ "generatedAt": "2026-11-13T02:06:29.000Z",
+ "seasons": 200,
+ "runs": [
+  {
+   "seed0": 5000,
+   "seasons": 20
+  },
+  {
+   "seed0": 5020,
+   "seasons": 20
+  },
+  {
+   "seed0": 5040,
+   "seasons": 20
+  },
+  {
+   "seed0": 5060,
+   "seasons": 20
+  },
+  {
+   "seed0": 5080,
+   "seasons": 20
+  },
+  {
+   "seed0": 5100,
+   "seasons": 20
+  },
+  {
+   "seed0": 5120,
+   "seasons": 20
+  },
+  {
+   "seed0": 5140,
+   "seasons": 20
+  },
+  {
+   "seed0": 5160,
+   "seasons": 20
+  },
+  {
+   "seed0": 5180,
+   "seasons": 20
+  }
+ ],
+ "divisions": {
+  "Top 14": {
+   "spearman": 0.982,
+   "pointsRMSE": 5.6,
+   "rows": [
+    {
+     "id": "newman",
+     "name": "Newman",
+     "meanPos": 1.39,
+     "meanPoints": 100.3,
+     "meanDiff": 466.4,
+     "pFirst": 76,
+     "pTop4": 98,
+     "pBottom2": 0,
+     "realRank": 1,
+     "realPoints": 110
+    },
+    {
+     "id": "casi",
+     "name": "CASI",
+     "meanPos": 2.78,
+     "meanPoints": 86.7,
+     "meanDiff": 292.6,
+     "pFirst": 13.5,
+     "pTop4": 91,
+     "pBottom2": 0,
+     "realRank": 2,
+     "realPoints": 90
+    },
+    {
+     "id": "hindu",
+     "name": "Hindú Club",
+     "meanPos": 3.87,
+     "meanPoints": 79.6,
+     "meanDiff": 210.1,
+     "pFirst": 4.5,
+     "pTop4": 69.5,
+     "pBottom2": 0,
+     "realRank": 3,
+     "realPoints": 89
+    },
+    {
+     "id": "sic",
+     "name": "SIC",
+     "meanPos": 3.96,
+     "meanPoints": 80,
+     "meanDiff": 217.9,
+     "pFirst": 4,
+     "pTop4": 61.5,
+     "pBottom2": 0,
+     "realRank": 5,
+     "realPoints": 86
+    },
+    {
+     "id": "alumni",
+     "name": "Alumni",
+     "meanPos": 4.27,
+     "meanPoints": 77.5,
+     "meanDiff": 191.4,
+     "pFirst": 2,
+     "pTop4": 56.5,
+     "pBottom2": 0,
+     "realRank": 4,
+     "realPoints": 86
+    },
+    {
+     "id": "los-tilos",
+     "name": "Los Tilos",
+     "meanPos": 6.83,
+     "meanPoints": 63,
+     "meanDiff": 27.3,
+     "pFirst": 0,
+     "pTop4": 10,
+     "pBottom2": 0.5,
+     "realRank": 6,
+     "realPoints": 69
+    },
+    {
+     "id": "belgrano-athletic",
+     "name": "Belgrano Athletic",
+     "meanPos": 7.19,
+     "meanPoints": 60.9,
+     "meanDiff": 11.9,
+     "pFirst": 0,
+     "pTop4": 11,
+     "pBottom2": 1.5,
+     "realRank": 7,
+     "realPoints": 58
+    },
+    {
+     "id": "regatas-bella-vista",
+     "name": "Regatas Bella Vista",
+     "meanPos": 8.24,
+     "meanPoints": 56.2,
+     "meanDiff": -47.5,
+     "pFirst": 0,
+     "pTop4": 2,
+     "pBottom2": 1.5,
+     "realRank": 8,
+     "realPoints": 56
+    },
+    {
+     "id": "cuba",
+     "name": "CUBA",
+     "meanPos": 9.89,
+     "meanPoints": 48.1,
+     "meanDiff": -132.4,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 13,
+     "realRank": 9,
+     "realPoints": 51
+    },
+    {
+     "id": "la-plata",
+     "name": "La Plata RC",
+     "meanPos": 10.36,
+     "meanPoints": 45.8,
+     "meanDiff": -150,
+     "pFirst": 0,
+     "pTop4": 0.5,
+     "pBottom2": 14,
+     "realRank": 11,
+     "realPoints": 42
+    },
+    {
+     "id": "buenos-aires-crc",
+     "name": "Buenos Aires C&RC",
+     "meanPos": 10.72,
+     "meanPoints": 43.9,
+     "meanDiff": -180.1,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 29.5,
+     "realRank": 12,
+     "realPoints": 40
+    },
+    {
+     "id": "atletico-del-rosario",
+     "name": "Atlético del Rosario",
+     "meanPos": 10.73,
+     "meanPoints": 43.6,
+     "meanDiff": -184.5,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 22,
+     "realRank": 10,
+     "realPoints": 43
+    },
+    {
+     "id": "los-matreros",
+     "name": "Los Matreros",
+     "meanPos": 10.85,
+     "meanPoints": 43.7,
+     "meanDiff": -185.2,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 19,
+     "realRank": 13,
+     "realPoints": 36
+    },
+    {
+     "id": "champagnat",
+     "name": "Champagnat",
+     "meanPos": 13.95,
+     "meanPoints": 16.7,
+     "meanDiff": -537.3,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 99,
+     "realRank": 14,
+     "realPoints": 15
+    }
+   ]
+  },
+  "Primera A": {
+   "spearman": 1,
+   "pointsRMSE": 4.6,
+   "rows": [
+    {
+     "id": "san-luis",
+     "name": "San Luis",
+     "meanPos": 1.34,
+     "meanPoints": 97.4,
+     "meanDiff": 377.2,
+     "pFirst": 78,
+     "pTop4": 99.5,
+     "pBottom2": 0,
+     "realRank": 1,
+     "realPoints": 105
+    },
+    {
+     "id": "san-cirano",
+     "name": "San Cirano",
+     "meanPos": 3.27,
+     "meanPoints": 81.4,
+     "meanDiff": 204.5,
+     "pFirst": 7,
+     "pTop4": 84,
+     "pBottom2": 0,
+     "realRank": 2,
+     "realPoints": 88
+    },
+    {
+     "id": "lomas-athletic",
+     "name": "Lomas Athletic",
+     "meanPos": 3.45,
+     "meanPoints": 80.7,
+     "meanDiff": 193,
+     "pFirst": 5.5,
+     "pTop4": 78,
+     "pBottom2": 0,
+     "realRank": 3,
+     "realPoints": 85
+    },
+    {
+     "id": "curupayti",
+     "name": "Curupaytí",
+     "meanPos": 3.56,
+     "meanPoints": 80.1,
+     "meanDiff": 194.9,
+     "pFirst": 9,
+     "pTop4": 71.5,
+     "pBottom2": 0,
+     "realRank": 4,
+     "realPoints": 85
+    },
+    {
+     "id": "san-fernando",
+     "name": "San Fernando",
+     "meanPos": 6.29,
+     "meanPoints": 64.9,
+     "meanDiff": 38.5,
+     "pFirst": 0.5,
+     "pTop4": 22.5,
+     "pBottom2": 0.5,
+     "realRank": 5,
+     "realPoints": 74
+    },
+    {
+     "id": "pucara",
+     "name": "Pucará",
+     "meanPos": 6.63,
+     "meanPoints": 63.2,
+     "meanDiff": 23.3,
+     "pFirst": 0,
+     "pTop4": 19.5,
+     "pBottom2": 0,
+     "realRank": 6,
+     "realPoints": 67
+    },
+    {
+     "id": "geba",
+     "name": "Gimnasia y Esgrima (GEBA)",
+     "meanPos": 7.15,
+     "meanPoints": 61,
+     "meanDiff": 8.8,
+     "pFirst": 0,
+     "pTop4": 10,
+     "pBottom2": 1,
+     "realRank": 7,
+     "realPoints": 61
+    },
+    {
+     "id": "hurling",
+     "name": "Hurling",
+     "meanPos": 7.66,
+     "meanPoints": 58.8,
+     "meanDiff": -14,
+     "pFirst": 0,
+     "pTop4": 10.5,
+     "pBottom2": 3,
+     "realRank": 8,
+     "realPoints": 60
+    },
+    {
+     "id": "san-andres",
+     "name": "San Andrés",
+     "meanPos": 8.71,
+     "meanPoints": 53.8,
+     "meanDiff": -57.3,
+     "pFirst": 0,
+     "pTop4": 4,
+     "pBottom2": 5.5,
+     "realRank": 9,
+     "realPoints": 55
+    },
+    {
+     "id": "pueyrredon",
+     "name": "Pueyrredón",
+     "meanPos": 9.99,
+     "meanPoints": 48.1,
+     "meanDiff": -116.7,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 13,
+     "realRank": 10,
+     "realPoints": 48
+    },
+    {
+     "id": "olivos",
+     "name": "Olivos",
+     "meanPos": 10.5,
+     "meanPoints": 46,
+     "meanDiff": -133.9,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 14.5,
+     "realRank": 11,
+     "realPoints": 41
+    },
+    {
+     "id": "deportiva-francesa",
+     "name": "Deportiva Francesa",
+     "meanPos": 11.31,
+     "meanPoints": 41.6,
+     "meanDiff": -178.2,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 35,
+     "realRank": 12,
+     "realPoints": 40
+    },
+    {
+     "id": "san-albano",
+     "name": "San Albano",
+     "meanPos": 11.55,
+     "meanPoints": 41,
+     "meanDiff": -191.7,
+     "pFirst": 0,
+     "pTop4": 0.5,
+     "pBottom2": 35.5,
+     "realRank": 13,
+     "realPoints": 36
+    },
+    {
+     "id": "universitario-la-plata",
+     "name": "Universitario de La Plata",
+     "meanPos": 13.63,
+     "meanPoints": 25.5,
+     "meanDiff": -347.8,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 92,
+     "realRank": 14,
+     "realPoints": 25
+    }
+   ]
+  },
+  "Primera B": {
+   "spearman": 0.987,
+   "pointsRMSE": 4.3,
+   "rows": [
+    {
+     "id": "banco-nacion",
+     "name": "Banco Nación",
+     "meanPos": 2.15,
+     "meanPoints": 87.1,
+     "meanDiff": 245.7,
+     "pFirst": 44.5,
+     "pTop4": 93,
+     "pBottom2": 0,
+     "realRank": 1,
+     "realPoints": 93
+    },
+    {
+     "id": "cu-quilmes",
+     "name": "C.U. de Quilmes",
+     "meanPos": 3.57,
+     "meanPoints": 79.2,
+     "meanDiff": 168.8,
+     "pFirst": 14.5,
+     "pTop4": 71.5,
+     "pBottom2": 0,
+     "realRank": 2,
+     "realPoints": 84
+    },
+    {
+     "id": "liceo-naval",
+     "name": "Liceo Naval",
+     "meanPos": 3.65,
+     "meanPoints": 78.4,
+     "meanDiff": 172.8,
+     "pFirst": 18.5,
+     "pTop4": 69.5,
+     "pBottom2": 0,
+     "realRank": 3,
+     "realPoints": 82
+    },
+    {
+     "id": "don-bosco",
+     "name": "Don Bosco",
+     "meanPos": 3.91,
+     "meanPoints": 77,
+     "meanDiff": 151.6,
+     "pFirst": 10,
+     "pTop4": 62.5,
+     "pBottom2": 0,
+     "realRank": 4,
+     "realPoints": 77
+    },
+    {
+     "id": "manuel-belgrano",
+     "name": "Manuel Belgrano",
+     "meanPos": 5.4,
+     "meanPoints": 71.2,
+     "meanDiff": 99.4,
+     "pFirst": 8.5,
+     "pTop4": 41.5,
+     "pBottom2": 0,
+     "realRank": 5,
+     "realPoints": 75
+    },
+    {
+     "id": "mariano-moreno",
+     "name": "Mariano Moreno",
+     "meanPos": 6.25,
+     "meanPoints": 66.9,
+     "meanDiff": 63.1,
+     "pFirst": 2.5,
+     "pTop4": 28,
+     "pBottom2": 0,
+     "realRank": 6,
+     "realPoints": 72
+    },
+    {
+     "id": "italiano",
+     "name": "Italiano",
+     "meanPos": 7.16,
+     "meanPoints": 63.1,
+     "meanDiff": 25.7,
+     "pFirst": 0.5,
+     "pTop4": 10.5,
+     "pBottom2": 0.5,
+     "realRank": 9,
+     "realPoints": 63
+    },
+    {
+     "id": "san-martin",
+     "name": "San Martín",
+     "meanPos": 7.36,
+     "meanPoints": 62.9,
+     "meanDiff": 25.9,
+     "pFirst": 1,
+     "pTop4": 11.5,
+     "pBottom2": 0.5,
+     "realRank": 7,
+     "realPoints": 65
+    },
+    {
+     "id": "san-patricio",
+     "name": "San Patricio",
+     "meanPos": 7.51,
+     "meanPoints": 61.6,
+     "meanDiff": 15,
+     "pFirst": 0,
+     "pTop4": 11,
+     "pBottom2": 0.5,
+     "realRank": 8,
+     "realPoints": 64
+    },
+    {
+     "id": "argentino",
+     "name": "Argentino de Rugby",
+     "meanPos": 10.15,
+     "meanPoints": 49.7,
+     "meanDiff": -88.4,
+     "pFirst": 0,
+     "pTop4": 0.5,
+     "pBottom2": 6,
+     "realRank": 10,
+     "realPoints": 49
+    },
+    {
+     "id": "delta",
+     "name": "Delta RC",
+     "meanPos": 10.37,
+     "meanPoints": 48.2,
+     "meanDiff": -103.6,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 9,
+     "realRank": 11,
+     "realPoints": 48
+    },
+    {
+     "id": "monte-grande",
+     "name": "Monte Grande",
+     "meanPos": 11.07,
+     "meanPoints": 43.7,
+     "meanDiff": -142.8,
+     "pFirst": 0,
+     "pTop4": 0.5,
+     "pBottom2": 16.5,
+     "realRank": 12,
+     "realPoints": 43
+    },
+    {
+     "id": "liceo-militar",
+     "name": "Liceo Militar",
+     "meanPos": 12.75,
+     "meanPoints": 31.9,
+     "meanDiff": -262.7,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 71.5,
+     "realRank": 13,
+     "realPoints": 28
+    },
+    {
+     "id": "vicentinos",
+     "name": "Vicentinos",
+     "meanPos": 13.72,
+     "meanPoints": 21.9,
+     "meanDiff": -370.1,
+     "pFirst": 0,
+     "pTop4": 0,
+     "pBottom2": 95.5,
+     "realRank": 14,
+     "realPoints": 11
+    }
+   ]
+  }
+ }
+}

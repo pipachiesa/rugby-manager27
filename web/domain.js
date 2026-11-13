@@ -3,7 +3,7 @@ import * as Stats from './player-stats.js';
 export const DIVISIONS = {'top14':'Top 14','primera-a':'Primera A','primera-b':'Primera B'};
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;};
 // Ratings and player data are a retrospective game snapshot, not real contracts or availability.
-export const DATA_VERSION=20;
+export const DATA_VERSION=21;
 export const SIMULATION_DATE='2026-11-10';
 export function ageOnDate(birthDate, referenceDate){
  const valid=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value??''))return false;const d=new Date(value+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===value;};
@@ -193,7 +193,15 @@ export function migrateWorld(world,catalog,returns={players:[]},youth=catalog.yo
   if(touched)notices.push('Los convocados URBA M17 tienen mejor nivel y proyección.');}
  // v20: youth squads of a 2026 league follow the real M17/M19 tables (later seasons have moved on).
  if(version<20&&version>=1&&next.season===2026&&catalog.youthRanks){next=levelYouthByTables(next,catalog.youthRanks);notices.push('Las categorías M17 y M19 de cada club siguen ahora las tablas reales 2026 (Regatas, campeón M17; Newman, campeón M19).');}
+ // v21: new attribute Juego aéreo (high balls), from jumping, handling and positioning like a new player gets it.
+ if(version<21){next=withAerial(next);notices.push('Nuevo atributo: Juego aéreo. Las patadas al fondo, salidas y reinicios ahora se disputan en el aire.');}
  return {...next,dataVersion:Math.max(version,DATA_VERSION),migrationNotice:notices.join(' ')};
+}
+const aerialPlayer=p=>!p?.attributes||p.attributes.aerial!=null?p:{...p,attributes:{...p.attributes,aerial:E.aerialFrom(p.position,p.attributes)}};
+function withAerial(world){
+ return {...world,clubs:world.clubs.map(c=>({...c,players:c.players.map(aerialPlayer)})),
+  returnCandidates:(world.returnCandidates??[]).map(c=>({...c,player:aerialPlayer(c.player)})),
+  ...(world.overseasCareers?{overseasCareers:world.overseasCareers.map(o=>({...o,player:aerialPlayer(o.player)}))}:{})};
 }
 export function enrichRosterIdentities(world,catalog){return migrateWorld(world,catalog,catalog.returns??{players:[]},catalog.youth??null);}
 /**
@@ -670,7 +678,7 @@ export const YOUTH_PLANS={
  Técnica:{text:'Pase, manejo, juego con el pie, visión y técnica.',attrs:['passing','handling','kicking','vision','technique']},
  Física:{text:'Velocidad, aceleración, fuerza, resistencia y agilidad.',attrs:['pace','acceleration','strength','stamina','agility']},
  Contacto:{text:'Tackle, acarreo, ruck, scrum y maul.',attrs:['tackling','carrying','breakdown','scrummaging','maul']},
- Juego:{text:'Decisiones, ubicación, temple, evasión y offload.',attrs:['decisions','positioning','composure','evasion','offload']},
+ Juego:{text:'Decisiones, ubicación, temple, evasión, offload y juego aéreo.',attrs:['decisions','positioning','composure','evasion','offload','aerial']},
 };
 const YOUTH_CHANCE={M17:.45,M19:.4};
 function developYouth(world,round){

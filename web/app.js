@@ -1168,7 +1168,7 @@ function playerEditor(p) {
 const attributeGroups = [
   ['Técnicos',['passing','handling','kicking','goalKicking','tackling','breakdown','scrummaging','lineout','maul','carrying','offload','technique']],
   ['Mentales',['vision','decisions','positioning','discipline','leadership','workRate','composure']],
-  ['Físicos',['pace','acceleration','agility','strength','stamina','jumping','evasion']],
+  ['Físicos',['pace','acceleration','agility','strength','stamina','jumping','aerial','evasion']],
 ];
 const profileRow = (label,value) => '<div><dt>'+esc(label)+'</dt><dd>'+value+'</dd></div>';
 const profileFact = (label,value) => profileRow(label,esc(value ?? '—'));
