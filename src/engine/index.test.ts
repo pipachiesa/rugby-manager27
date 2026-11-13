@@ -1,7 +1,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { readFileSync } from 'node:fs';
-import { createInitialState, generateMatch, simulateFixture, regenerateReplay, getStandings, trainPlayer, ATTRIBUTE_LABELS, DEFAULT_TACTICS, POSITIONS, advanceSeason, completeCurrentAcademyIntake, developmentProfile, developPlayer, canDevelopAttribute, overall, createReturnCandidates, contactReturn, signReturn, projectedReturnPlayer } from './index.ts';
+import { createInitialState, generateMatch, simulateFixture, regenerateReplay, getStandings, trainPlayer, ATTRIBUTE_LABELS, cohortLevel, impliedStrength, DEFAULT_TACTICS, POSITIONS, advanceSeason, completeCurrentAcademyIntake, developmentProfile, developPlayer, canDevelopAttribute, overall, createReturnCandidates, contactReturn, signReturn, projectedReturnPlayer } from './index.ts';
 
 test('schedule is a balanced round robin and players have valid attributes', () => {
   const state=createInitialState(42);
@@ -290,4 +290,11 @@ test('high balls are contested: a better Juego aéreo drops fewer kicks', () => 
   const sure=drops(withAerial(home,20),withAerial(away,1)), shaky=drops(withAerial(home,1),withAerial(away,20));
   assert.ok(shaky>0,'some high balls are dropped');
   assert.ok(sure<shaky,`aerial 20 drops ${sure}, aerial 1 drops ${shaky}`);
+});
+test('M17 classes vary per season, big clubs get golden classes more often, strength follows the XV', () => {
+  const golden=(strength:number)=>Array.from({length:3000},(_,i)=>cohortLevel({id:'c'+i,strength},2027,i)).filter(r=>r.label==='Dorada').length;
+  assert.ok(golden(12.7)>golden(7.6)*2,'big clubs have more golden classes');
+  assert.deepEqual(cohortLevel({id:'newman',strength:12},2028,5),cohortLevel({id:'newman',strength:12},2028,5));
+  const state=createInitialState(42), club=state.clubs[0];
+  assert.ok(Math.abs(impliedStrength(club)-club.strength)<1.5,'a fresh squad implies about its own strength');
 });

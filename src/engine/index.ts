@@ -1084,17 +1084,54 @@ function uncoveredPositions(players: Player[], squad: Squad): number[] {
     return [];
   });
 }
+/**
+ * Every M17 class has its own level (12/11/2026): a normal spread of about ±2 rating points around what the club
+ * promises, and now and then a golden class (+5) or a weak one (-4). Bigger clubs get golden classes more often and
+ * weak ones less (their base is already higher, since it follows the club strength). Deterministic per club and season.
+ */
+export const COHORT_LABELS = ['Floja', 'Normal', 'Buena', 'Muy buena', 'Dorada'] as const;
+export function cohortLevel(club: Pick<Club, 'id' | 'strength'>, season: number, seed: number): { offset: number; label: typeof COHORT_LABELS[number] } {
+  const rng = random(seed ^ hash(`${club.id}/${season}/cohort`));
+  const size = clamp((club.strength - 10) / 2.5, -1.2, 1.2);
+  const golden = clamp(.07 + .05 * size, .02, .14), weak = clamp(.07 - .04 * size, .02, .12);
+  const roll = rng(), spread = (rng() + rng() + rng() - 1.5) * .7;
+  const offset = roll < golden ? 1 + spread * .3 : roll > 1 - weak ? -.8 + spread * .3 : spread;
+  const label = offset >= .85 ? 'Dorada' : offset >= .4 ? 'Muy buena' : offset >= .15 ? 'Buena' : offset > -.4 ? 'Normal' : 'Floja';
+  return { offset, label };
+}
+/**
+ * A club without a manager fills a hole in its XV between seasons: a player of its level arrives (from another club,
+ * back from abroad or from its lower teams). Deterministic per club, season and position.
+ */
+export function replacementPlayer(club: Club, positionIndex: number, season: number, seed: number, names?: NameWeights): Player {
+  const rng = random(seed ^ hash(`${club.id}/${season}/replacement/${positionIndex}`));
+  // index + 15: the Intermedia tier, a notch below a Primera starter, so a hole is filled without lifting the club.
+  const p = makePlayer(club.id, positionIndex + 15, club.strength, rng, 'Plantel superior', names);
+  const taken = new Set(club.players.map(q => slug(q.name)));
+  let name = p.name;
+  for (const firstName of firstNames) { if (!taken.has(slug(name))) break; name = `${firstName} ${p.name.split(' ').slice(1).join(' ')}`; }
+  return { ...p, id: `${club.id}-arrival-${season}-${positionIndex}`, name, age: 22 + Math.floor(rng() * 7), seniorSquad: 'Primera' };
+}
+/** Club strength implied by the current XV: the strength whose promised XV matches it. */
+export function impliedStrength(club: Club): number {
+  const xv = selection(club).slice(0, 15), actual = xv.reduce((n, p) => n + overall(p), 0) / Math.max(1, xv.length);
+  const promised = (strength: number) => POSITIONS.reduce((n, position) => n + expectedOverall(position, strength + seniorSquadAdjustment('Primera')), 0) / 15;
+  let lo = 2, hi = 20;
+  for (let i = 0; i < 30; i++) { const mid = (lo + hi) / 2; if (promised(mid) < actual) lo = mid; else hi = mid; }
+  return (lo + hi) / 2;
+}
 function addAcademyIntake(club: Club, season: number, seed: number, names?: NameWeights, coverM19 = true): Player[] {
   const players = [...club.players];
   const existingIds = new Set(players.map(p => p.id));
   const existingNames = new Set(players.map(p => slug(p.name)));
   const intakeNames = new Set<string>();
   const rng = random(seed ^ hash(`${club.id}/${season}/academy`));
+  const cohort = cohortLevel(club, season, seed);
   function add(index: number, squad: 'M17' | 'M19') {
     const entry = squad === 'M17' ? 'intake' : 'cover';
     const id = `${club.id}-academy-${season}-${squad.toLowerCase()}-${entry}-${index}`;
     if (existingIds.has(id)) return;
-    const p = makePlayer(club.id, index, club.strength, rng, squad, names, intakeNames);
+    const p = makePlayer(club.id, index, club.strength + (squad === 'M17' ? cohort.offset : 0), rng, squad, names, intakeNames);
     let name = p.name;
     for (const firstName of firstNames) {
       if (!existingNames.has(slug(name))) break;
@@ -1103,7 +1140,7 @@ function addAcademyIntake(club: Club, season: number, seed: number, names?: Name
     if (existingNames.has(slug(name))) name = `${name} ${index + 1}`;
     existingIds.add(id);
     existingNames.add(slug(name));
-    players.push({ ...p, id, name, age: squad === 'M17' ? 16 : 19, academyIntakeSeason: season, academyEntry: entry, youthSeasons: 0 });
+    players.push({ ...p, id, name, age: squad === 'M17' ? 16 : 19, academyIntakeSeason: season, academyEntry: entry, youthSeasons: 0, ...(squad === 'M17' ? { academyCohort: cohort.label } : {}) } as Player);
   }
   // Each incoming class has a full XV; older M17 players stay until they graduate.
   for (let index = 0; index < POSITIONS.length; index++) add(index, 'M17');

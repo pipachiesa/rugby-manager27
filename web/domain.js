@@ -859,6 +859,36 @@ export function advanceSeasonWorld(world){
  })}))};
  // New season, new squads: promoted juniors and aged players are spread by level again. The preseason (16 weeks)
  // finishes any retraining in progress.
- const ready=squadTurnover(progressRetraining(rolled,0,16));
+ const ready=evolveClubStrength(replenishSquads(squadTurnover(progressRetraining(rolled,0,16))));
  return {...ready,clubs:ready.clubs.map(assignSeniorGroups)};
+}
+/**
+ * Clubs without a manager fill the holes of their XV between seasons (12/11/2026): for each position whose best
+ * available player is more than REPLENISH_GAP rating points below what the club promises, a player of the club's
+ * level arrives, up to REPLENISH_MAX per club. Without this the big clubs faded on their own (Top 14 XV -1.5 in five
+ * seasons, Hindú -4.4) because retirements and departures to Europe were never replaced.
+ */
+const REPLENISH_GAP=6,REPLENISH_MAX=2;
+function replenishSquads(world){
+ const managed=new Set(world.managedClubs??[]),news=[];
+ const clubs=world.clubs.map(c=>{
+  if(managed.has(c.id))return c;
+  let club=c;const added=[];
+  const ids=E.autoLineup(club),byId=new Map(club.players.map(p=>[p.id,p]));
+  const gaps=E.POSITIONS.map((position,i)=>{const p=byId.get(ids[i]);const promised=E.expectedOverall(position,club.strength+E.seniorSquadAdjustment('Primera'));
+   return {i,gap:promised-(p&&E.canPlay(p,position)?E.overall(p):0)};}).filter(g=>g.gap>REPLENISH_GAP).sort((a,b)=>b.gap-a.gap).slice(0,REPLENISH_MAX);
+  for(const g of gaps){const p=E.replacementPlayer(club,g.i,world.season,world.seed,world.nameWeights);if(club.players.some(q=>q.id===p.id))continue;club={...club,players:[...club.players,p]};added.push(p);}
+  for(const p of added)news.push({round:0,season:world.season,clubId:c.id,kind:'squad',playerId:p.id,text:`${p.name} (${p.position}) se sumó al plantel.`});
+  return added.length?{...club,lineup:undefined}:club;
+ });
+ return {...world,clubs,news:[...(world.news??[]),...news].slice(-2000)};
+}
+/**
+ * Club strength moves slowly with the squad (12/11/2026): each season a quarter of the way towards the strength its
+ * current XV implies, at most 0.3 attribute points (about 1.5 rating points). It sets the level of the next M17
+ * classes, the replacements above and the club objective; matches never read it.
+ */
+const STRENGTH_DRIFT=.25,STRENGTH_STEP=.3;
+function evolveClubStrength(world){
+ return {...world,clubs:world.clubs.map(c=>{const step=Math.max(-STRENGTH_STEP,Math.min(STRENGTH_STEP,(E.impliedStrength(c)-c.strength)*STRENGTH_DRIFT));return {...c,strength:Math.round((c.strength+step)*100)/100};})};
 }

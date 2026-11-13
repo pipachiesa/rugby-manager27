@@ -737,7 +737,8 @@ function academy() {
   // Prospects: the highest ceiling first, then the current level.
   const prospects = [...juniors].sort((a,b)=>(playerProjection(b) ?? overall(b))-(playerProjection(a) ?? overall(a))).slice(0,5);
   const intake=c.players.filter(p=>p.academyIntakeSeason===world().season&&p.academyEntry==='intake');
-  const intakePanel=intake.length?panel('Camada '+world().season,'<div class="academy-intake">'+intake.map(p=>'<button type="button" class="player-name" data-do="player" data-value="'+esc(p.id)+'"><strong>'+esc(p.name)+'</strong><small>'+esc(p.position)+' · '+esc(p.squad)+'</small></button>').join('')+'</div>',tag(intake.length+' incorporaciones','neutral')):'';
+  const cohort=intake.find(p=>p.academyCohort)?.academyCohort;
+  const intakePanel=intake.length?panel('Camada '+world().season+(cohort?' · '+cohort:''),'<div class="academy-intake">'+intake.map(p=>'<button type="button" class="player-name" data-do="player" data-value="'+esc(p.id)+'"><strong>'+esc(p.name)+'</strong><small>'+esc(p.position)+' · '+esc(p.squad)+'</small></button>').join('')+'</div>',tag(intake.length+' incorporaciones','neutral')):'';
   return intro(c.name,'Cantera','Desarrollá juveniles, seguí sus torneos y promovelos al plantel superior.')+editableNotice()+
     '<div class="academy-cards">'+
     ['M19','M17'].map(s=>'<button class="panel academy-card" type="button" data-do="youth" data-value="'+s+'"><small>'+s+'</small><div class="display">'+c.players.filter(p=>p.squad===s).length+'</div><p>'+esc(place(s))+'</p></button>').join('')+
