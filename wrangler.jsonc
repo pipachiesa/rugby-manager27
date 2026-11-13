@@ -3,6 +3,10 @@
   "main": "dist/server/index.js",
   "compatibility_date": "2026-11-12",
   "workers_dev": true,
+  "routes": [
+    { "pattern": "rugbymanager27.app", "custom_domain": true },
+    { "pattern": "www.rugbymanager27.app", "custom_domain": true }
+  ],
   "vars": {
     "IDENTITY_MODE": "accounts"
   },
