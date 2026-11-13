@@ -1656,6 +1656,7 @@ function enterOffline(next='resumen') {
   rememberEntry('offline');
   resetFilters();
   changePage(next);
+  syncCommunity(true);
 }
 async function openLeague(code, loadView=true, next='resumen') {
   if (busy) return;
@@ -1674,6 +1675,20 @@ async function openLeague(code, loadView=true, next='resumen') {
     if (loadView) notify(error.message,true);
     return false;
   } finally { setBusy(false); }
+}
+
+/** Approved community corrections reach the solo game and an open league without reloading the page. */
+let communityStamp = null;
+async function syncCommunity(force=false) {
+  if (offline||!me?.signedIn||entryStage||busy||document.hidden||modalRoot.firstChild||page==='partido'||tacticDraft||lineupDraft) return;
+  try {
+    const {stamp,list=[]}=await request('/api/community?all=1');
+    if (!force&&stamp===communityStamp) return;
+    const first=communityStamp===null; communityStamp=stamp;
+    if (league) { if (first) return; const code=league.code, result=await request('/api/leagues/'+code); if (league?.code===code&&!busy&&!tacticDraft&&!lineupDraft) { setLeague(result); render(); } return; }
+    const next=applyCommunity(demo,list);
+    if (next!==demo) { demo=next; saveDemo(); render(); }
+  } catch {}
 }
 
 async function pollLeague() {
@@ -2140,7 +2155,7 @@ async function boot() {
     }
   }
   render();
-  if (!offline) setInterval(pollLeague,10000);
+  if (!offline) { setInterval(pollLeague,10000); setInterval(syncCommunity,60000); }
 }
 boot().catch(error=>{
   app.innerHTML='<div class="boot">No pudimos abrir Rugby Manager 27.<span>'+esc(error.message)+'</span><a class="btn primary" href="/">Volver a intentar</a></div>';

@@ -128,6 +128,8 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
  // plays for his club or a stats comment. Proposals wait for the admin's approval (email «Ajuste RM27»); approved ones
  // are shared by every league and the latest wins. Contributor identity is stored hashed.
  if(url.pathname==='/api/community'){
+  // ?all=1: every approved correction (without who sent it), so solo games and open leagues can pick them up.
+  if(request.method==='GET'&&url.searchParams.get('all')){const {list}=await loadCommunity(bucket);return json({stamp:list.length?`${list.length}-${list.at(-1).at}`:'0',list:list.map(({playerId,type,value,at})=>({playerId,type,value,at}))});}
   if(request.method==='GET'){const id=url.searchParams.get('playerId')??'';const {list}=await loadCommunity(bucket);
    return json({playerId:id,current:communityFor(list,id),history:list.filter(c=>c.playerId===id).slice(-20).map(({type,value,note,at})=>({type,value,note,at}))});}
   if(request.method!=='POST')return json({error:'Método no permitido'},405);
