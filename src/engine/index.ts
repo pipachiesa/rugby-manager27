@@ -156,6 +156,15 @@ export function withTalent(player: Player): Player {
   const current = overall(player), f = talentFactor(player), scale = (x: number) => Math.round(current + Math.max(0, x - current) * f);
   return { ...player, development: { ...dev, originalProjection: scale(dev.originalProjection), projection: scale(dev.projection), talent: true } };
 }
+/**
+ * How far a player can go past his projection (12/11/2026): usually 3 points, but the projection is an estimate and
+ * some players surprise: 13 % can go 5 points past it, 5 % seven and 2 % ten. Fixed per player; past the projection
+ * growth is slow (headroom in developPlayer), so it takes good seasons and training to get there.
+ */
+export function surpriseMargin(player: Pick<Player, 'id'>): number {
+  const u = random(hash(`${player.id}/surprise`))();
+  return u < .02 ? 10 : u < .07 ? 7 : u < .20 ? 5 : 3;
+}
 export function talentFactor(player: Pick<Player, 'id'>): number {
   const rng = random(hash(`${player.id}/talent`));
   return .45 + 1.1 * (rng() + rng()) / 2;
@@ -166,7 +175,7 @@ export function developmentProfile(player: Player) {
     originalProjection: base.originalProjection,
     projection: Math.max(current, base.projection),
     // Soft ceiling: it rises with the projection, so good seasons keep opening room above the first estimate.
-    ceiling: Math.max(current, Math.min(100, base.projection + 3)),
+    ceiling: Math.max(current, Math.min(100, base.projection + surpriseMargin(player))),
     trainingGains: base.trainingGains,
     seasonTrainingGains: base.seasonTrainingGains,
     trainingSeason: base.trainingSeason,
@@ -210,7 +219,8 @@ export function developPlayer(player: Player, attribute: Attribute, context: Dev
   const playing = clamp(minutes / 1050, 0, 1);
   const scoring = scoringEvidence(player, context.evidence);
   const ageFactor = age < 22 ? 1 : age < 27 ? .88 : age < 32 ? .70 : .52;
-  const distance = current - state.projection;
+  // A surprise player (surpriseMargin above 3) only starts slowing down that much later.
+  const distance = current - state.projection - (surpriseMargin(player) - 3);
   const headroom = clamp(1 - Math.max(0, distance + 2) * .105, .15, 1);
   const specialty = relevant ? 1 : .83;
   const likelihood = context.mode === 'individual' && distance <= -2 && age <= 29
