@@ -1,4 +1,4 @@
-# Tercer Tiempo · RM26
+# Rugby Manager 27 (RM27)
 
 Prototipo web de manager de rugby argentino. La partida de prueba corre en el navegador; las ligas privadas requieren un servidor con identidad y almacenamiento persistente. El código de invitación no otorga por sí solo acceso a un sitio privado.
 
@@ -27,3 +27,21 @@ Los 26 atributos, valoraciones, resultados, fichajes y proyecciones son estimaci
 Los resultados de categorías paralelas, la evolución de jugadores y las probabilidades de fichaje son simulaciones, no predicciones ni datos reales. La visualización 2D reconstruye eventos generados; no es una transmisión. La partida de prueba se reinicia al recargar. La versión pública y el acceso a amigos requieren un despliegue y permisos de sitio que se deben confirmar por separado.
 
 Los scripts de prueba cubren reglas de carrera, formación, datos, estadísticas, temporada, API y persistencia. Las pruebas automatizadas no sustituyen una revisión visual en un navegador real. Ver `PROGRESO_RUGBY_MANAGER.md` y `research/history/engine-weights-report.md` para el estado y las limitaciones de calibración.
+
+## Despliegue directo en Cloudflare
+
+`wrangler.jsonc` configura un Worker `workers.dev`, un bucket R2 dedicado y privado (`BUCKET`) y dos límites aproximados por dirección de conexión. La variable `IDENTITY_MODE=accounts` hace que el Worker público ignore las cabeceras de identidad de Sites y use únicamente las cuentas y sesiones propias. Las cookies de producción son `Secure`, `HttpOnly` y `SameSite=Lax`. Las ligas requieren cuenta y código, con control de membresía y versiones. Los límites de Cloudflare son aproximados y pueden variar por ubicación; no reemplazan una auditoría de seguridad.
+
+Para operar en una cuenta Cloudflare propia con Node 26 y Wrangler 4.161.0:
+
+```sh
+npm run build
+npm exec --yes --package=wrangler@4.161.0 -- wrangler login --device
+npm exec --yes --package=wrangler@4.161.0 -- wrangler whoami
+npm exec --yes --package=wrangler@4.161.0 -- wrangler r2 bucket list
+npm exec --yes --package=wrangler@4.161.0 -- wrangler deploy --dry-run
+```
+
+Verificá la cuenta y que el nombre de bucket indicado en `wrangler.jsonc` no exista. Creá ese bucket dedicado solo cuando R2 esté habilitado y se hayan revisado las condiciones de la cuenta; después ejecutá `npm exec --yes --package=wrangler@4.161.0 -- wrangler deploy`. No habilites un plan o un método de pago automáticamente. El Worker no publica el bucket ni agrega un dominio personalizado.
+
+El almacenamiento de Cloudflare directo es independiente de Sites: las cuentas, ligas y archivos del sitio privado anterior no se trasladan automáticamente. La configuración de Sites permanece separada en `.openai/hosting.json`.

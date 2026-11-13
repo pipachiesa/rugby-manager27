@@ -7,7 +7,7 @@ const keypath=k=>`${dir}/${Buffer.from(k).toString('base64url')}.json`;
 const locks=new Map();
 const bucket={async get(key){try{const body=await readFile(keypath(key),'utf8');return {etag:createHash('sha256').update(body).digest('hex'),json:async()=>JSON.parse(body)};}catch{return null;}},async put(key,body,options={}){
  const before=locks.get(key)||Promise.resolve();let release;const gate=new Promise(r=>release=r);locks.set(key,before.then(()=>gate));await before;
- try{const old=await this.get(key);if(options.onlyIf?.etagMatches&&old?.etag!==options.onlyIf.etagMatches)return null;if(options.onlyIf?.etagDoesNotMatch==='*'&&old)return null;await writeFile(keypath(key),body);return {key};}finally{release();}
+ try{const old=await this.get(key);if(options.onlyIf?.etagMatches&&old?.etag!==options.onlyIf.etagMatches)return null;if((options.onlyIf?.etagDoesNotMatch==='*'||options.onlyIf instanceof Headers&&options.onlyIf.get('if-none-match')==='*')&&old)return null;await writeFile(keypath(key),body);return {key};}finally{release();}
 },async list({prefix,limit=1000}){const files=await readdir(dir);return {objects:files.map(f=>({key:Buffer.from(f.replace(/\.json$/,''),'base64url').toString()})).filter(o=>o.key.startsWith(prefix)).slice(0,limit)};}};
 let workerVersion=-1, workerModule;
 async function getWorker(){const version=(await stat("dist/server/index.js")).mtimeMs;if(!workerModule||version!==workerVersion){workerVersion=version;workerModule=await import(pathToFileURL(process.cwd()+"/dist/server/index.js").href+"?v="+version);}return workerModule;}

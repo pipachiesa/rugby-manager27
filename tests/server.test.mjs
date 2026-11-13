@@ -1,6 +1,6 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';import {handle} from '../server/worker.js';import {mergeResearch} from '../scripts/merge-research.mjs';
 const returns=JSON.parse(await readFile('research/returns.json'));const youth=JSON.parse(await readFile('research/youth.json'));const names=JSON.parse(await readFile('research/names.json'));const ages=JSON.parse(await readFile('research/age-verification.json'));const catalog=mergeResearch(JSON.parse(await readFile('research/catalog.json')),ages,returns);
-function storage(){const data=new Map();return {async get(k){const body=data.get(k);if(!body)return null;return {etag:createHash('sha256').update(body).digest('hex'),json:async()=>JSON.parse(body),text:async()=>body}},async put(k,v,opt={}){const old=data.get(k);const etag=old?createHash('sha256').update(old).digest('hex'):null;if(opt.onlyIf?.etagMatches&&etag!==opt.onlyIf.etagMatches)return null;if(opt.onlyIf?.etagDoesNotMatch==='*'&&old)return null;data.set(k,v);return {key:k}},async delete(k){data.delete(k)},async list({prefix,limit=1000}){return {objects:[...data.keys()].filter(k=>k.startsWith(prefix)).slice(0,limit).map(key=>({key}))}}};}
+function storage(){const data=new Map();return {async get(k){const body=data.get(k);if(!body)return null;return {etag:createHash('sha256').update(body).digest('hex'),json:async()=>JSON.parse(body),text:async()=>body}},async put(k,v,opt={}){const old=data.get(k);const etag=old?createHash('sha256').update(old).digest('hex'):null;if(opt.onlyIf?.etagMatches&&etag!==opt.onlyIf.etagMatches)return null;if((opt.onlyIf?.etagDoesNotMatch==='*'||opt.onlyIf instanceof Headers&&opt.onlyIf.get('if-none-match')==='*')&&old)return null;data.set(k,v);return {key:k}},async delete(k){data.delete(k)},async list({prefix,limit=1000}){return {objects:[...data.keys()].filter(k=>k.startsWith(prefix)).slice(0,limit).map(key=>({key}))}}};}
 function call(bucket,uid,path,method='GET',body,extra={}){const headers={...(uid?{'oai-authenticated-user-id':uid}:{}),...extra};if(method==='POST'){headers['content-type']='application/json';headers.origin??='https://game.test';}return handle(new Request('https://game.test'+path,{method,headers,...(body?{body:JSON.stringify(body)}:{})}),{BUCKET:bucket},{},catalog,returns,youth,names);}
 test('protected league flow, optimistic concurrency, membership and privacy',async()=>{
  const b=storage();assert.equal((await call(b,null,'/api/leagues')).status,401);
@@ -73,4 +73,22 @@ test('accounts: sign up with username and email, sign in by either, session cook
  const second=res.headers.get('set-cookie').split(';')[0];
  const listing=await (await call(b,null,'/api/leagues','GET',undefined,{cookie:second})).json();assert.equal(listing.leagues.length,1,'same account, same leagues');
  await post('/api/auth/logout',{},second);assert.equal((await (await call(b,null,'/api/me','GET',undefined,{cookie:second})).json()).signedIn,false);
+});
+
+test('direct Cloudflare rejects forged identity, limits auth and keeps league data private',async()=>{
+ const b=storage(),allow={limit:async()=>({success:true})};const env={BUCKET:b,IDENTITY_MODE:'accounts',API_RATE_LIMIT:allow,AUTH_RATE_LIMIT:allow};
+ const direct=(path,method='GET',body,headers={})=>handle(new Request('https://rugby.example'+path,{method,headers:{...headers,...(method==='POST'?{origin:'https://rugby.example','content-type':'application/json'}:{})},...(body===undefined?{}:{body:JSON.stringify(body)})}),env,{},catalog,returns,youth,names);
+ assert.equal((await direct('/api/me','GET',undefined,{'oai-authenticated-user-id':'spoofed'})).status,200);
+ assert.equal((await (await direct('/api/me','GET',undefined,{'oai-authenticated-user-id':'spoofed'})).json()).signedIn,false);
+ assert.equal((await direct('/api/leagues','GET',undefined,{'oai-authenticated-user-id':'spoofed'})).status,401);
+ let res=await direct('/api/auth/register','POST',{username:'tester',email:'tester@example.com',password:'clave-segura'});assert.equal(res.status,200);assert.match(res.headers.get('set-cookie'),/Secure/);assert.match(res.headers.get('set-cookie'),/HttpOnly/);assert.match(res.headers.get('set-cookie'),/SameSite=Lax/);
+ const cookie=res.headers.get('set-cookie').split(';')[0];res=await direct('/api/leagues','POST',{clubId:'newman'},{cookie});assert.equal(res.status,201);const l=await res.json();
+ assert.equal((await direct(`/api/leagues/${l.code}`,'GET',undefined,{'oai-authenticated-user-id':'spoofed'})).status,401);
+ env.AUTH_RATE_LIMIT={limit:async()=>({success:false})};assert.equal((await direct('/api/auth/login','POST',{login:'tester',password:'wrong'})).status,429);
+ delete env.API_RATE_LIMIT;assert.equal((await direct('/api/me')).status,503);
+});
+test('chunked oversized JSON is rejected even without content-length',async()=>{
+ const limiter={limit:async()=>({success:true})},env={BUCKET:storage(),IDENTITY_MODE:'accounts',API_RATE_LIMIT:limiter,AUTH_RATE_LIMIT:limiter};
+ const body=JSON.stringify({username:'x'.repeat(5000)});const request=new Request('https://rugby.example/api/auth/register',{method:'POST',headers:{origin:'https://rugby.example','content-type':'application/json'},body});
+ assert.equal(request.headers.has('content-length'),false);assert.equal((await handle(request,env,{},catalog,returns,youth,names)).status,413);
 });

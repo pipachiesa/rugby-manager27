@@ -109,13 +109,40 @@ const views = new Set([...nav.map(([key])=>key), 'partido', 'jugador']);
 
 let catalog, catalogClubs, demo, league, me = {signedIn:false}, savedLeagues = [];
 let demoClubId = store.get('tt-demo-club') || defaultClub;
+let demoManager = '', hasDemoSave = false;
+let entryStage = 'auth', authKind = 'login', leagueListState = 'idle';
+let localProfileName=store.get('tt-local-profile') ?? '';
+const localProfile = () => localProfileName;
+const entryIdentity = () => offline ? localProfile() : me.signedIn ? me.name ?? 'manager' : null;
+const activeEntryKey = 'tt-active-entry';
+const invitationCode = () => {
+  const url=new URL(location.href);
+  const code=(url.searchParams.get('code') ?? url.hash.match(/^#liga\/([a-f0-9]{12})$/i)?.[1] ?? '').toUpperCase();
+  return /^[A-F0-9]{12}$/.test(code)?code:'';
+};
+function readActiveEntry() {
+  try { return JSON.parse(sessionStorage.getItem(activeEntryKey)); } catch { return null; }
+}
+function rememberEntry(mode, code=null) {
+  try {
+    if (mode) sessionStorage.setItem(activeEntryKey,JSON.stringify({mode,code,identity:entryIdentity()}));
+    else sessionStorage.removeItem(activeEntryKey);
+  } catch {}
+}
+function setEntry(stage) {
+  entryStage=stage;
+  if (stage) rememberEntry(null);
+  window.scrollTo({top:0});
+  render();
+  document.querySelector('#entry-title')?.focus();
+}
 let page = 'resumen', mobileOpen = false, busy = false, toastTimer, modalPreviousFocus, replay;
 let profileId = '', profileTab = 'perfil', profileBack = 'plantel';
 let squad = 'Plantel superior', youthSquad = 'M19', positionFilter = '', playerFilter = '';
 let clubSearch = '', clubDivision = 'Todas', explorerDivision = '';
 let tournamentMode = 'Posiciones', selectedDivision, tournamentClub = '', tournamentRound, tournamentCategory = 'Primera';
 let trainPick = '', retrainPick = '', retrainTo = '';
-let tacticDraft, lineupDraft, editVersion, leagueEditing = false, squadSort = {key:'',dir:1};
+let tacticDraft, lineupDraft, editVersion, squadSort = {key:'',dir:1};
 const watchedFixtures = new Map();
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[ch]);
@@ -205,7 +232,8 @@ const playerById = id => currentClub().players.find(p=>p.id===id) ?? world().ret
   world().clubs.find(c=>c.players.some(p=>p.id===id))?.players.find(p=>p.id===id) ??
   world().overseasCareers?.find(c=>c.player.id===id)?.player;
 const overseasDestination = row => [row.destination?.competition,row.destination?.country].filter(Boolean).join(' · ');
-const managerName = () => myMember()?.nickname ?? me.name ?? 'Manager invitado';
+const managerName = () => myMember()?.nickname ?? (demoManager || me.name || localProfile() || 'Mánager');
+const contactFooter = () => '<footer class="contact-footer"><a href="mailto:felipechiesa05@gmail.com">Contacto</a></footer>';
 
 function assignment(fixture) {
   const venue = info(fixture.homeId)?.venue?.name;
@@ -243,8 +271,8 @@ function shell(content) {
     '<div class="clubbar-actions"><button class="icon-btn theme-toggle" type="button" data-do="theme" aria-label="Cambiar a modo '+(dark?'claro':'oscuro')+'">'+icon(dark?'sun':'moon')+'</button>'+
     '<div class="date-display"><small>'+esc(matchDate?matchDate+' '+world().season:world().season)+'</small><strong>'+(Number.isFinite(round)?esc(roundName(round)):'Fin de temporada')+'</strong></div>'+
     (page==='partido'&&replay?'':button(nextLabel,topAction,pending?.id ?? (topAction==='page'?'liga':''),'primary continue',needsReady&&!pending?'check':'right',busy))+'</div></div>'+
-    '<div class="subbar"><strong class="subbar-club">'+esc(c.name)+'</strong><nav class="context-nav" aria-label="'+esc(active[1])+'">'+contextNavigation(active).map(([label,action,value,selected])=>'<button type="button" data-do="'+action+'" data-value="'+esc(value)+'"'+(selected?' class="active" aria-current="page"':'')+'>'+esc(label)+'</button>').join('')+'</nav><span class="subbar-right">'+(league?esc(league.name):'Partida de prueba')+' · '+esc(managerName())+'</span></div></header>'+
-    '<main id="main-content" tabindex="-1" class="content view-'+page+'">'+content+'</main>'+
+    '<div class="subbar"><strong class="subbar-club">'+esc(c.name)+'</strong><nav class="context-nav" aria-label="'+esc(active[1])+'">'+contextNavigation(active).map(([label,action,value,selected])=>'<button type="button" data-do="'+action+'" data-value="'+esc(value)+'"'+(selected?' class="active" aria-current="page"':'')+'>'+esc(label)+'</button>').join('')+'</nav><span class="subbar-right">'+(league?esc(league.name):'Modo offline')+' · '+esc(managerName())+'</span></div></header>'+
+    '<main id="main-content" tabindex="-1" class="content view-'+page+'">'+content+contactFooter()+'</main>'+
     bottomNav()+'</div>';
 }
 
@@ -322,7 +350,7 @@ function dashboard() {
     '<div class="portal-result">'+crest(last.homeId)+'<div><strong>'+last.match.homeScore+' – '+last.match.awayScore+'</strong><small>'+esc(roundLabel(last))+' · '+esc(shortOf(last.homeId))+' / '+esc(shortOf(last.awayId))+'</small></div>'+crest(last.awayId)+'</div>',
     hasReplay(last)?button('Repetición','replay',last.id,'ghost small','play'):'') : '';
   return '<div class="portal-heading"><div><h1>Portal del club</h1><span>'+esc(c.division)+' · Temporada '+world().season+'</span></div>'+
-    (!league?button('Guardar en una liga','page','liga','ghost small','link'):'')+'</div>'+
+    (!league?button('Cambiar de modo','entry-mode','','ghost small','link'):'')+'</div>'+
     '<div class="portal-grid">'+
       '<div class="portal-column" id="portal-inbox" tabindex="-1">'+inboxPanel(c)+panel('Equipos del club','<div class="portal-club-roster">'+rosters+'</div>')+'</div>'+
       '<div class="portal-column" id="portal-match" tabindex="-1">'+fixtureCard(next)+result+upcomingPanel(c,next)+newsPanel(c)+'</div>'+
@@ -885,8 +913,61 @@ function availableClubOptions(selected) {
     .sort((a,b)=>a.name.localeCompare(b.name,'es')).map(c=>option(c.name,c.id,selected)).join('')+'</optgroup>').join('');
 }
 
-// Test game: saved in this browser; it can be started over.
-const demoBox = () => panel('Partida de prueba','<div class="panel-body demo-box"><p>Se guarda sola en este navegador: podés cerrar y seguir después. '+esc(nameOf(demoClubId))+' · temporada '+demo.season+(Number.isFinite(roundOf(demo))?' · fecha '+roundOf(demo):'')+'.</p>'+button('Empezar de nuevo','reset-demo','','ghost small','return',busy)+'</div>')+'<div class="spaced"></div>';
+const demoDescription = () => esc(nameOf(demoClubId))+' · temporada '+demo.season;
+const demoBox = () => panel('Partida offline','<div class="panel-body demo-box"><p>Se guarda en este navegador. '+demoDescription()+'.</p>'+button('Empezar de nuevo','reset-demo','','ghost small','return',busy)+'</div>')+'<div class="spaced"></div>';
+
+function authForm(kind) {
+  const login = kind==='login';
+  return '<form class="panel-body" data-auth="'+kind+'">'+
+    (login?'<div class="field"><label for="log-user">Usuario o mail</label><input id="log-user" name="login" autocomplete="username" required></div>'+
+      '<div class="field"><label for="log-pass">Contraseña</label><input id="log-pass" name="password" type="password" autocomplete="current-password" required></div>':
+      '<div class="field"><label for="reg-user">Usuario</label><input id="reg-user" name="username" minlength="3" maxlength="20" pattern="[A-Za-z0-9_.]{3,20}" autocomplete="username" required></div>'+
+      '<div class="field"><label for="reg-mail">Mail</label><input id="reg-mail" name="email" type="email" autocomplete="email" required></div>'+
+      '<div class="field"><label for="reg-pass">Contraseña</label><input id="reg-pass" name="password" type="password" minlength="8" autocomplete="new-password" required></div>')+
+    '<button type="submit" class="btn primary"'+(busy?' disabled':'')+'>'+icon(login?'link':'check')+(login?'Iniciar sesión':'Crear cuenta')+'</button></form>';
+}
+
+function leagueOptions() {
+  const form = (kind,fields,label)=>'<form class="panel-body" data-league-form="'+kind+'">'+fields+
+    '<div class="field"><label for="'+kind+'-nickname">Nombre del mánager</label><input id="'+kind+'-nickname" name="nickname" maxlength="32" value="'+esc((me.name??'').slice(0,32))+'" required></div>'+
+    '<div class="field"><label for="'+kind+'-club">Club</label><select id="'+kind+'-club" name="clubId">'+availableClubOptions(defaultClub)+'</select></div>'+
+    '<button type="submit" class="btn primary"'+(busy?' disabled':'')+'>'+icon(kind==='create'?'shield':'link')+label+'</button></form>';
+  const create = '<div class="field"><label for="league-name">Nombre de la liga</label><input id="league-name" name="name" maxlength="60" required></div>';
+  const join = '<div class="field"><label for="league-code">Código de invitación</label><input id="league-code" name="code" maxlength="12" pattern="[a-fA-F0-9]{12}" placeholder="12 caracteres" value="'+invitationCode()+'" spellcheck="false" autocapitalize="characters" required></div>';
+  const list = savedLeagues.length?savedLeagues.map(l=>'<div class="member-row">'+crest(l.clubId)+'<div><strong>'+esc(l.name)+'</strong><small>'+esc(nameOf(l.clubId))+'</small></div>'+button('Abrir liga','open-league',l.code,'small','right',busy)+'</div>').join(''):
+    leagueListState==='loading'?'<p class="panel-body">Cargando tus ligas…</p>':leagueListState==='error'?'<div class="panel-body"><p>No se pudieron cargar tus ligas.</p>'+button('Reintentar','retry-leagues','','ghost small','return')+'</div>':
+    empty('Todavía no participás en ninguna liga.','link');
+  return '<div id="saved-leagues">'+panel('Mis ligas',list)+'</div><div class="two-col spaced">'+panel('Crear liga privada',form('create',create,'Crear liga'))+panel('Unirme a una liga',form('join',join,'Unirme'))+'</div>';
+}
+
+function entryScreen() {
+  let title, body;
+  if (entryStage==='auth') {
+    title=offline?'Perfil local':'Iniciá sesión';
+    body=offline?panel('Tu perfil en este navegador','<form class="panel-body" id="local-profile"><div class="field"><label for="local-name">Nombre del perfil</label><input id="local-name" name="nickname" maxlength="32" autocomplete="nickname" required></div><button type="submit" class="btn primary">Continuar</button></form>'):
+      '<div class="entry-auth">'+tabs(['Iniciar sesión','Crear cuenta'],authKind==='login'?'Iniciar sesión':'Crear cuenta','entry-auth','Acceso')+
+      panel(authKind==='login'?'Ingresá a tu cuenta':'Registrá tu cuenta',authForm(authKind))+'</div>';
+  } else if (entryStage==='mode') {
+    title='Elegí cómo jugar';
+    body='<div class="two-col entry-modes">'+
+      panel('Modo offline','<div class="panel-body prose"><p>'+(hasDemoSave?'Tu partida guardada · '+demoDescription()+'.':'Dirigí un club en una partida que se guarda en este navegador.')+'</p>'+
+      button(hasDemoSave?'Continuar partida':'Jugar offline','entry-offline','','primary','play',busy)+'</div>')+
+      panel('Liga con amigos','<div class="panel-body prose"><p>'+(offline?'Las ligas están disponibles en la versión web con servidor.':'Creá una liga privada, unite con un código o retomá una liga existente.')+'</p>'+
+      (offline?'':button('Abrir ligas','entry-online','','primary','team',busy))+'</div>')+'</div>';
+  } else if (entryStage==='offline') {
+    title='Prepará tu partida offline';
+    body=panel('Mánager y club','<form class="panel-body" id="offline-setup"><div class="field"><label for="offline-name">Nombre del mánager</label><input id="offline-name" name="nickname" maxlength="32" value="'+esc((demoManager||me.name||localProfile()||'').slice(0,32))+'" required></div><div class="field"><label for="offline-club">Club</label><select id="offline-club" name="clubId">'+availableClubOptions(demoClubId)+'</select></div><button type="submit" class="btn primary">Entrar al menú</button></form>');
+  } else {
+    title='Liga con amigos';
+    body=leagueOptions();
+  }
+  const controls = entryStage==='auth'?'':entryStage==='mode'?
+    button(offline?'Cambiar perfil':'Cerrar sesión',offline?'reset-local-profile':'logout','','ghost small','close',busy):
+    button('Volver a los modos','entry-mode','','ghost small','return',busy);
+  return '<div class="app-shell modern-manager entry-shell"><header class="clubbar"><div class="clubbar-row"><strong class="entry-brand">Rugby Manager 27</strong>'+
+    '<button class="icon-btn theme-toggle" type="button" data-do="theme" aria-label="Cambiar tema">'+icon(theme()==='dark'?'sun':'moon')+'</button></div></header>'+
+    '<main class="content entry-content"><header class="page-intro"><h1 tabindex="-1" id="entry-title">'+title+'</h1>'+controls+'</header>'+body+contactFooter()+'</main></div>';
+}
 function leaguePage() {
   if (league) {
     const own = myMember(), allReady = league.members.every(m=>m.ready);
@@ -901,29 +982,10 @@ function leaguePage() {
       '<div class="spaced">'+panel('Managers',league.members.map(m=>'<div class="member-row">'+crest(m.clubId)+'<div><strong>'+esc(m.nickname)+(m.isMe?' · Vos':'')+'</strong><small>'+esc(nameOf(m.clubId))+'</small></div>'+tag(m.ready?'Listo':'Preparando',m.ready?'':'neutral')+'</div>').join(''),tag(league.members.length+' / 42','neutral'))+'</div>'+
       '<div class="action-row spaced">'+button('Cambiar de partida','offline','','ghost','right',busy)+'</div>';
   }
-  const label = intro('MULTIJUGADOR PRIVADO','Liga de amigos','Cada persona dirige un club y juega una temporada compartida.',tag('PARTIDA DE PRUEBA','neutral'));
-  if (offline) return label+demoBox()+panel('Jugá online con amigos','<div class="panel-body prose"><p>Para jugar online, abrí la versión con servidor. En esta versión podés dirigir cualquiera de los 42 clubes URBA en la partida de prueba.</p><div class="action-row">'+button('Elegir club','clubs','','ghost','shield')+'</div></div>');
-  if (!me.signedIn) return label+demoBox()+
-    (me.storage==='local'?'<div class="notice blue">Vista previa local. Las ligas creadas acá se guardan en este servidor.</div>':'')+
-    '<div class="two-col">'+panel('Crear cuenta','<form class="panel-body" data-auth="register"><div class="field"><label for="reg-user">Usuario</label><input id="reg-user" name="username" minlength="3" maxlength="20" pattern="[A-Za-z0-9_.]{3,20}" autocomplete="username" required></div>'+
-      '<div class="field"><label for="reg-mail">Mail</label><input id="reg-mail" name="email" type="email" autocomplete="email" required></div>'+
-      '<div class="field"><label for="reg-pass">Contraseña</label><input id="reg-pass" name="password" type="password" minlength="8" autocomplete="new-password" required></div>'+
-      '<button type="submit" class="btn primary"'+(busy?' disabled':'')+'>'+icon('check')+'Crear cuenta</button></form>')+
-    panel('Ya tengo cuenta','<form class="panel-body" data-auth="login"><div class="field"><label for="log-user">Usuario o mail</label><input id="log-user" name="login" autocomplete="username" required></div>'+
-      '<div class="field"><label for="log-pass">Contraseña</label><input id="log-pass" name="password" type="password" autocomplete="current-password" required></div>'+
-      '<button type="submit" class="btn primary"'+(busy?' disabled':'')+'>'+icon('link')+'Entrar</button></form>')+'</div>'+
-    '<p class="training-note spaced">Con la cuenta creás una liga privada o te unís con el código de un amigo. El mail solo sirve para entrar: no se muestra a nadie.</p>';
-  const createFields = '<div class="field"><label for="league-name">Nombre de la liga</label><input id="league-name" name="name" maxlength="60" placeholder="Ej. Los del tercer tiempo" required></div>';
-  const joinFields = '<div class="field"><label for="league-code">Código de invitación</label><input id="league-code" name="code" maxlength="12" pattern="[a-fA-F0-9]{12}" placeholder="12 caracteres" spellcheck="false" autocapitalize="characters" required></div>';
-  const form = (kind,fields,labelText)=>'<form class="panel-body" data-league-form="'+kind+'">'+fields+
-    '<div class="field"><label for="'+kind+'-nickname">Tu nombre de manager</label><input id="'+kind+'-nickname" name="nickname" maxlength="32" value="'+esc((me.name??'').slice(0,32))+'" required></div>'+
-    '<div class="field"><label for="'+kind+'-club">Club</label><select id="'+kind+'-club" name="clubId">'+availableClubOptions(currentId())+'</select></div>'+
-    '<button type="submit" class="btn primary"'+(busy?' disabled':'')+'>'+icon(kind==='create'?'shield':'link')+labelText+'</button></form>';
-  return label+demoBox()+(me.storage==='local'?'<div class="notice blue">Guardado en este servidor local.</div>':'')+'<div class="two-col">'+panel('Crear liga privada',form('create',createFields,'Crear liga'))+
-    panel('Unirme a una liga',form('join',joinFields,'Unirme'))+'</div><div class="spaced">'+
-    panel('Mis ligas',savedLeagues.length?savedLeagues.map(l=>'<div class="member-row">'+crest(l.clubId)+'<div><strong>'+esc(l.name)+'</strong><small>'+esc(nameOf(l.clubId))+' · Liga guardada</small></div>'+button('Abrir liga','open-league',l.code,'small','right',busy)+'</div>').join(''):
-    empty('Tus ligas guardadas van a aparecer acá.', 'link'))+'</div>'+
-    '<p class="training-note spaced">El código permite entrar a la liga.</p>'+(me.account?'<div class="action-row">'+button('Cerrar sesión ('+(me.name ?? '')+')','logout','','ghost small','close',busy)+'</div>':'');
+  const label = intro('MULTIJUGADOR PRIVADO','Liga con amigos','Cada persona dirige un club en una temporada compartida.');
+  if (offline) return label+demoBox()+panel('Liga con amigos','<p class="panel-body">Las ligas están disponibles en la versión web con servidor.</p>')+'<div class="action-row spaced">'+button('Cambiar de modo','entry-mode','','ghost small','right',busy)+'</div>';
+  return label+demoBox()+leagueOptions()+
+    '<div class="action-row spaced">'+button('Cambiar de modo','entry-mode','','ghost small','right',busy)+button('Cerrar sesión','logout','','ghost small','close',busy)+'</div>';
 }
 
 const replayPhases = {
@@ -945,7 +1007,7 @@ function kitStyle(homeId, awayId) {
 }
 const abbr = id => { const n=shortOf(id); return n.length<=4 ? n.toUpperCase() : n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(/\s+/).filter(Boolean).map(w=>w[0]).join('').slice(0,3).toUpperCase() || n.slice(0,3).toUpperCase(); };
 // Advertising boards: the game name, URBA in the middle, the home club and invented local sponsors (no away club).
-const GAME_NAME = 'TERCER TIEMPO';
+const GAME_NAME = 'Rugby Manager 27';
 const SPONSORS = ['SEGUROS LA PAMPA','CERVECERÍA DEL SUR','AGUA DE LOS ANDES','TRANSPORTES DEL OESTE','FERRETERÍA EL PILAR','LA TERCERA PARRILLA'];
 function boards(fixture, side) {
   const home = nameOf(fixture.homeId).toUpperCase();
@@ -1015,6 +1077,7 @@ function replayReport({match,fixture}) {
 const renderers = {resumen:dashboard,jugador:playerPage,plantel:squadPage,medico:medicalPage,tacticas:tacticsPage,entrenamiento:trainingPage,cantera:academy,torneo:tournament,regresos:market,club:clubPage,liga:leaguePage,partido:replayPage};
 function render() {
   if (!catalog || !demo) return;
+  if (entryStage) { app.innerHTML=entryScreen(); return; }
   const notice=league?.world.migrationNotice&&page!=='partido'?'<p class="notice blue">'+esc(league.world.migrationNotice)+'</p>':'';
   app.innerHTML = shell(notice+renderers[page]());
   if (page==='partido'&&replay) setupReplay();
@@ -1508,13 +1571,14 @@ function changePage(next, updateUrl=true) {
   if (page!==next) window.scrollTo({top:0});
   if (updateUrl) {
     const url=new URL(location.href);
+    if (!entryStage) url.searchParams.delete('code');
     url.hash=next==='resumen'?'':next==='jugador'?'jugador/'+encodeURIComponent(profileId)+'/'+profileTab:next;
     try { history.replaceState(null,'',url); } catch {}
   }
   page=next;
   mobileOpen=false;
   render();
-  if (page==='liga'&&me.signedIn&&!league) refreshList();
+  if (!entryStage&&page==='liga'&&me.signedIn&&!league) refreshList();
 }
 
 async function request(path, {data,version}={}) {
@@ -1541,16 +1605,35 @@ function setBusy(value) {
   app.setAttribute('aria-busy',String(value));
 }
 async function refreshList() {
+  if (leagueListState==='loading') return;
+  leagueListState='loading';
   try {
     const {leagues}=await request('/api/leagues');
     savedLeagues=leagues;
-    if (page==='liga'&&!league&&!busy&&!leagueEditing&&!document.activeElement?.closest('[data-league-form]')) render();
+    leagueListState='ready';
+    refreshLeagueList();
   } catch (error) {
-    if (page==='liga'&&me.signedIn&&!league) notify(error.message,true);
+    leagueListState='error';
+    refreshLeagueList();
+    if (entryStage==='online'||page==='liga') notify(error.message,true);
   }
 }
 
-async function openLeague(code, loadView=true) {
+function refreshLeagueList() {
+  const existing = document.querySelector('#saved-leagues');
+  if (!existing) return;
+  const template = document.createElement('template');
+  template.innerHTML=leagueOptions();
+  existing.replaceWith(template.content.querySelector('#saved-leagues'));
+}
+function enterOffline(next='resumen') {
+  setLeague(null);
+  entryStage=null;
+  rememberEntry('offline');
+  resetFilters();
+  changePage(next);
+}
+async function openLeague(code, loadView=true, next='resumen') {
   if (busy) return;
   setBusy(true);
   try {
@@ -1558,16 +1641,19 @@ async function openLeague(code, loadView=true) {
     setLeague(result);
     resetFilters();
     setBusy(false);
-    if (loadView) changePage('liga');
-    else render();
+    entryStage=null;
+    rememberEntry('online',result.code);
+    changePage(next);
+    return true;
   } catch (error) {
     if (!loadView&&(error.status===403||error.status===404)) store.set('tt-last-league',null);
     if (loadView) notify(error.message,true);
+    return false;
   } finally { setBusy(false); }
 }
 
 async function pollLeague() {
-  if (!league||busy||document.hidden||modalRoot.firstChild||page==='partido'||tacticDraft||lineupDraft) return;
+  if (entryStage||!league||busy||document.hidden||modalRoot.firstChild||page==='partido'||tacticDraft||lineupDraft) return;
   const {code,version}=league;
   try {
     const result=await request('/api/leagues/'+code,{version});
@@ -1655,6 +1741,14 @@ document.addEventListener('click',async event=>{
   const {do:action,value}=target.dataset;
   if (busy && ['offline','open-league','choose-club'].includes(action)) return;
   switch (action) {
+    case 'entry-mode':
+      if (!busy) { closeModal(); league=null; resetFilters(); setEntry('mode'); }
+      break;
+    case 'entry-auth': authKind=value==='Crear cuenta'?'register':'login'; render(); break;
+    case 'entry-offline': if (hasDemoSave) enterOffline(); else setEntry('offline'); break;
+    case 'entry-online': if (me.signedIn&&!offline) { setEntry('online'); refreshList(); } break;
+    case 'retry-leagues': refreshList(); break;
+    case 'reset-local-profile': localProfileName=''; store.set('tt-local-profile',null); setEntry('auth'); break;
     case 'page': changePage(value); break;
     case 'portal-section': document.getElementById(value)?.focus(); break;
     case 'portal-squad':
@@ -1694,7 +1788,16 @@ document.addEventListener('click',async event=>{
     case 'inbox': inboxOpen=inboxOpen===value?null:value; markRead(value); render(); break;
     case 'inbox-read-all': for (const i of inboxItems(currentClub())) markRead(i.id); render(); break;
     case 'inbox-all': inboxAll=!inboxAll; render(); break;
-    case 'logout': try { await request('/api/auth/logout',{data:{}}); } catch {} me={signedIn:false,storage:me.storage}; setLeague(null); resetFilters(); savedLeagues=[]; render(); notify('Cerraste la sesión.'); break;
+    case 'logout':
+      if (busy) break;
+      setBusy(true);
+      try {
+        await request('/api/auth/logout',{data:{}});
+        me={signedIn:false,storage:me.storage}; setLeague(null); resetFilters(); savedLeagues=[]; leagueListState='idle';
+        authKind='login'; setBusy(false); setEntry('auth'); notify('Cerraste la sesión.');
+      } catch (error) { notify(error.message,true); }
+      finally { setBusy(false); }
+      break;
     case 'swap': {
       // Tap one player, then another: swap a starter with a starter, or bring in a substitute / squad player.
       const slot = target.dataset.slot===''?undefined:Number(target.dataset.slot), c=currentClub();
@@ -1746,7 +1849,7 @@ document.addEventListener('click',async event=>{
         button('Cancelar','close-modal','','ghost')+button('Borrar y empezar','confirm-reset-demo','','primary','return'));
       break;
     case 'confirm-reset-demo':
-      await resetDemo(bootData.returns,bootData.youth,bootData.names); closeModal(); resetDrafts(); resetFilters(); changePage('resumen'); notify('Empezaste una partida de prueba nueva.'); break;
+      await resetDemo(bootData.returns,bootData.youth,bootData.names); closeModal(); resetDrafts(); resetFilters(); changePage('resumen'); notify('Empezaste una partida offline nueva.'); break;
     case 'skip-replay':
       pauseReplay();
       showModal('¿Mostrar el resultado?','<p>Se mostrará el marcador final y podrás consultar los resultados de la fecha.</p>',
@@ -1757,7 +1860,7 @@ document.addEventListener('click',async event=>{
     case 'match-fixture':
       selectedDivision=replay.fixture.division; tournamentRound=replay.fixture.round; tournamentClub=''; tournamentMode='Fixture'; changePage('torneo'); break;
     case 'open-league': await openLeague(value); break;
-    case 'offline': setLeague(null); resetFilters(); leagueEditing=false; changePage('liga'); break;
+    case 'offline': league=null; resetFilters(); setEntry('mode'); break;
     case 'copy-code':
       try { await navigator.clipboard.writeText(league.code); notify('Código copiado.'); }
       catch { const range=document.createRange(); range.selectNodeContents(target.previousElementSibling); const selection=getSelection(); selection.removeAllRanges(); selection.addRange(range); notify('Seleccionamos el código para que lo puedas copiar.'); }
@@ -1767,7 +1870,6 @@ document.addEventListener('click',async event=>{
 
 document.addEventListener('input',event=>{
   const input=event.target;
-  if (input.closest('[data-league-form]')) leagueEditing=true;
   if (input.id==='player-filter') {playerFilter=input.value; patchPlayers();}
   if (input.id==='market-text') { marketQuery.text=input.value; marketLimit=40; patchMarket(); }
   if (input.id==='club-search') {
@@ -1813,16 +1915,44 @@ document.addEventListener('change',event=>{
 });
 
 document.addEventListener('submit',async event=>{
-  if (event.target.dataset.auth) {
+  const form=event.target;
+  if (form.id==='local-profile'||form.id==='offline-setup') {
     event.preventDefault();
     if (busy) return;
-    const kind=event.target.dataset.auth, data=Object.fromEntries(new FormData(event.target));
+    const fields=new FormData(form), nickname=String(fields.get('nickname')??'').trim();
+    if (!nickname) return notify('Ingresá un nombre para continuar.',true);
+    if (form.id==='local-profile') {
+      localProfileName=nickname;
+      store.set('tt-local-profile',nickname);
+      setEntry('mode');
+      return;
+    }
+    const clubId=fields.get('clubId');
+    if (!demo.clubs.some(c=>c.id===clubId)) return notify('Elegí un club disponible.',true);
+    demoClubId=clubId;
+    demoManager=nickname;
+    store.set('tt-demo-club',clubId);
+    setBusy(true);
+    const saved=await persistDemo();
+    setBusy(false);
+    enterOffline();
+    if (!saved) notify('No se pudo guardar la partida en este navegador.',true);
+    return;
+  }
+  if (form.dataset.auth) {
+    event.preventDefault();
+    if (busy) return;
+    const kind=form.dataset.auth, data=Object.fromEntries(new FormData(form));
+    const submit=event.submitter;
+    if (submit) submit.disabled=true;
     setBusy(true);
     try {
       me={...me,...await request('/api/auth/'+kind,{data})};
-      setBusy(false); notify(kind==='register'?'Cuenta creada. Ya podés crear o unirte a una liga.':'Hola, '+me.name+'.');
-      refreshList(); render();
-    } catch (error) { setBusy(false); notify(error.message,true); }
+      setBusy(false);
+      setEntry('mode');
+      notify(kind==='register'?'Cuenta creada.':'Hola, '+me.name+'.');
+    } catch (error) { notify(error.message,true); }
+    finally { setBusy(false); if (submit) submit.disabled=false; }
     return;
   }
   if (event.target.id==='community-form') {
@@ -1877,10 +2007,11 @@ document.addEventListener('submit',async event=>{
   setBusy(true);
   try {
     setLeague(await request(kind==='create'?'/api/leagues':'/api/leagues/'+code+'/join',{data}));
-    leagueEditing=false;
     resetFilters();
     setBusy(false);
-    changePage('liga');
+    entryStage=null;
+    rememberEntry('online',league.code);
+    changePage('resumen');
     notify(kind==='create'?'Creaste tu liga privada.':'Ya estás en la liga.');
   } catch (error) {
     notify(error.message,true);
@@ -1916,7 +2047,7 @@ function routeFromHash() {
   return views.has(route)?route:'resumen';
 }
 window.addEventListener('hashchange',()=>{
-  if (location.hash==='#main-content') return;
+  if (entryStage||location.hash==='#main-content') return;
   changePage(routeFromHash(),false);
 });
 
@@ -1934,10 +2065,16 @@ async function saveTx(mode, run) {
     tx.oncomplete=()=>{ db.close(); resolve(req?.result); }; tx.onerror=tx.onabort=()=>{ db.close(); reject(tx.error); }; });
 }
 let saveTimer;
+async function persistDemo() {
+  hasDemoSave=true;
+  try {
+    await saveTx('readwrite',store=>store.put({world:demo,clubId:demoClubId,manager:demoManager,savedAt:Date.now()},SAVE_KEY));
+    return true;
+  } catch { return false; }
+}
 function saveDemo() {
-  if (offline&&!window.indexedDB) return;
   clearTimeout(saveTimer);
-  saveTimer=setTimeout(()=>{ saveTx('readwrite',st=>st.put({world:demo,clubId:demoClubId,savedAt:Date.now()},SAVE_KEY)).catch(()=>{}); },300);
+  saveTimer=setTimeout(async()=>{ if (!await persistDemo()) notify('No se pudo guardar la partida en este navegador.',true); },150);
 }
 const loadDemo = () => saveTx('readonly',st=>st.get(SAVE_KEY)).catch(()=>null);
 async function resetDemo(returns,youth,names) {
@@ -1964,18 +2101,23 @@ async function boot() {
   catalogClubs=new Map(catalog.clubs.map(c=>[c.id,c]));
   bootData={returns,youth,names};
   const saved=await loadDemo();
-  try { if (saved?.world?.clubs) { demo=enrichRosterIdentities(saved.world,catalog); if (saved.clubId) demoClubId=saved.clubId; } } catch { demo=undefined; }
+  try { if (saved?.world?.clubs) { demo=enrichRosterIdentities(saved.world,catalog); if (saved.clubId) demoClubId=saved.clubId; demoManager=saved.manager ?? ''; hasDemoSave=true; } } catch { demo=undefined; }
   if (!demo) demo=initialWorld(catalog,2026,returns,youth,names);
   if (!demo.clubs.some(c=>c.id===demoClubId)) demoClubId=defaultClub;
   me=identity;
   const route=routeFromHash();
-  if (route!=='partido') page=route;
+  const next=route==='partido'?'resumen':route;
+  const restored=readActiveEntry();
+  entryStage=entryIdentity()?'mode':'auth';
+  if (entryIdentity()&&!invitationCode()&&restored?.identity===entryIdentity()) {
+    if (restored.mode==='offline'&&hasDemoSave) enterOffline(next);
+    else if (restored.mode==='online'&&me.signedIn&&/^[A-F0-9]{12}$/.test(restored.code ?? '')) {
+      if (!await openLeague(restored.code,false,next)) { setEntry('online'); refreshList(); }
+    }
+  }
   render();
-  const lastCode=store.get('tt-last-league');
-  if (me.signedIn&&lastCode&&/^[A-F0-9]{12}$/.test(lastCode)) await openLeague(lastCode,false);
-  if (page==='liga'&&me.signedIn&&!league) refreshList();
   if (!offline) setInterval(pollLeague,10000);
 }
 boot().catch(error=>{
-  app.innerHTML='<div class="boot">No pudimos abrir Tercer Tiempo.<span>'+esc(error.message)+'</span><a class="btn primary" href="/">Volver a intentar</a></div>';
+  app.innerHTML='<div class="boot">No pudimos abrir Rugby Manager 27.<span>'+esc(error.message)+'</span><a class="btn primary" href="/">Volver a intentar</a></div>';
 });

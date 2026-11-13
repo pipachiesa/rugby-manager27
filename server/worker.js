@@ -4,6 +4,21 @@ const COMMUNITY_KEY='community/contributions',COMMUNITY_DAILY=60,COMMUNITY_MAX=5
 const loadCommunity=async bucket=>{const ob=await bucket.get(COMMUNITY_KEY);return ob?{etag:ob.etag,list:await ob.json()}:{etag:null,list:[]};};
 const json=(d,status=200,extra={})=>new Response(JSON.stringify(d),{status,headers:{'content-type':'application/json;charset=utf-8','cache-control':'no-store',...extra}});
 const digest=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),b=>b.toString(16).padStart(2,'0')).join('');
+class PayloadTooLarge extends Error {}
+class ProtectionUnavailable extends Error {}
+async function readJsonLimited(request,limit){
+ const reader=request.body?.getReader();if(!reader)throw new Error('Solicitud vacía');
+ let size=0;const chunks=[];
+ for(;;){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>limit){await reader.cancel();throw new PayloadTooLarge('Solicitud demasiado grande');}chunks.push(value);}
+ const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
+ try{return JSON.parse(new TextDecoder().decode(bytes));}catch{throw new Error('JSON no válido');}
+}
+async function enforceLimit(request,env,binding){
+ if(env.IDENTITY_MODE!=='accounts')return true;
+ if(!env[binding])throw new ProtectionUnavailable('Protección de acceso no disponible');
+ const address=request.headers.get('cf-connecting-ip')||'unknown';
+ return (await env[binding].limit({key:address})).success;
+}
 // Own accounts: username + email + password. The email is kept only as a SHA-256 hash (to sign in with it and to keep
 // it unique); the password as PBKDF2-SHA-256 with a random salt. Sessions are random tokens in an HttpOnly cookie,
 // stored hashed in R2 for 30 days. Sites identity (oai-authenticated-user-id) still works alongside.
@@ -21,7 +36,7 @@ async function sessionUser(request,env){
 async function handleAuth(request,env,url){
  const bucket=env.BUCKET;if(!bucket)return json({error:'Las cuentas todavía no están disponibles.'},503);
  if(url.pathname==='/api/auth/logout'){const token=cookieOf(request,'tt_session');if(token)await bucket.delete(`sessions/${await digest(token)}`);return json({ok:true},200,{'set-cookie':sessionCookie('x',env,0)});}
- const p=await request.json().catch(()=>({}));
+ const p=await readJsonLimited(request,4096);
  const start=async account=>{const token=hex(crypto.getRandomValues(new Uint8Array(32)));await bucket.put(`sessions/${await digest(token)}`,JSON.stringify({uid:'acct:'+account.id,name:account.username,expires:Date.now()+SESSION_DAYS*86400000}));return json({signedIn:true,name:account.username,account:true},200,{'set-cookie':sessionCookie(token,env)});};
  if(url.pathname==='/api/auth/register'){
   const username=String(p.username||'').trim(),email=String(p.email||'').trim().toLowerCase(),password=String(p.password||'');
@@ -31,8 +46,8 @@ async function handleAuth(request,env,url){
   const emailKey=`accounts/email/${await digest(email)}`,userKey=`accounts/user/${username.toLowerCase()}`;
   if(await bucket.get(emailKey))return json({error:'Ya hay una cuenta con ese mail.'},409);
   const salt=hex(crypto.getRandomValues(new Uint8Array(16))),account={id:hex(crypto.getRandomValues(new Uint8Array(12))),username,salt,hash:await passwordHash(password,salt),createdAt:Date.now()};
-  if(!await bucket.put(userKey,JSON.stringify(account),{onlyIf:{etagDoesNotMatch:'*'}}))return json({error:'Ese usuario ya existe.'},409);
-  if(!await bucket.put(emailKey,username.toLowerCase(),{onlyIf:{etagDoesNotMatch:'*'}})){await bucket.delete(userKey);return json({error:'Ya hay una cuenta con ese mail.'},409);}
+  if(!await bucket.put(userKey,JSON.stringify(account),{onlyIf:new Headers({'If-None-Match':'*'})}))return json({error:'Ese usuario ya existe.'},409);
+  if(!await bucket.put(emailKey,username.toLowerCase(),{onlyIf:new Headers({'If-None-Match':'*'})})){await bucket.delete(userKey);return json({error:'Ya hay una cuenta con ese mail.'},409);}
   return start(account);
  }
  if(url.pathname==='/api/auth/login'){
@@ -52,13 +67,16 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   return new Response(body,{headers:{'content-type':a.type,'cache-control':'no-cache','x-content-type-options':'nosniff','referrer-policy':'strict-origin-when-cross-origin'}});
  }
  try{
+ if(!await enforceLimit(request,env,'API_RATE_LIMIT'))return json({error:'Demasiadas solicitudes. Intentá más tarde.'},429);
  if(url.pathname.startsWith('/api/auth/')){
   if(request.method!=='POST'||request.headers.get('origin')!==url.origin||!request.headers.get('content-type')?.toLowerCase().startsWith('application/json'))return json({error:'Origen o formato no permitido'},403);
   if(Number(request.headers.get('content-length')||0)>4096)return json({error:'Solicitud demasiado grande'},413);
-  return handleAuth(request,env,url);
+  if((url.pathname==='/api/auth/login'||url.pathname==='/api/auth/register')&&!await enforceLimit(request,env,'AUTH_RATE_LIMIT'))return json({error:'Demasiados intentos. Esperá un minuto.'},429);
+  return await handleAuth(request,env,url);
  }
  const session=await sessionUser(request,env);
- const uid=session?.uid??request.headers.get('oai-authenticated-user-id');
+ // Direct public Workers cannot trust identity headers supplied by the visitor.
+ const uid=session?.uid??(env.IDENTITY_MODE==='accounts'?null:request.headers.get('oai-authenticated-user-id'));
  if(url.pathname==='/api/me')return json({signedIn:!!uid,account:!!session,name:session?.name??(uid?(request.headers.get('oai-authenticated-user-full-name')||'Manager'):null),storage:env.LOCAL_DEV?'local':'online'});
  if(!uid)return json({error:'Iniciá sesión para guardar tu liga online.'},401);
  if(!env.BUCKET)return json({error:'El guardado online todavía no está disponible.'},503);
@@ -71,7 +89,7 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   if(request.method==='GET'){const id=url.searchParams.get('playerId')??'';const {list}=await loadCommunity(bucket);
    return json({playerId:id,current:communityFor(list,id),history:list.filter(c=>c.playerId===id).slice(-20).map(({type,value,note,at})=>({type,value,note,at}))});}
   if(request.method!=='POST')return json({error:'Método no permitido'},405);
-  const p=await request.json();const items=(Array.isArray(p.items)?p.items:[]).slice(0,5);
+  const p=await readJsonLimited(request,65536);const items=(Array.isArray(p.items)?p.items:[]).slice(0,5);
   if(!items.length)return json({error:'Completá al menos un dato.'},400);
   if(!catalog.players.some(r=>r.id===p.playerId)&&!(catalog.reserves??[]).some(r=>r.id===p.playerId))return json({error:'Ese jugador no está en el catálogo.'},404);
   const now=Date.now(),entries=items.map(i=>({...validateContribution({...i,playerId:p.playerId,note:p.note},new Date(now)),by:userKey,at:now}));
@@ -79,7 +97,7 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
    const {etag,list}=await loadCommunity(bucket);
    if(list.filter(c=>c.by===userKey&&c.at>now-864e5).length+entries.length>COMMUNITY_DAILY)return json({error:'Llegaste al límite de aportes de hoy.'},429);
    const next=[...list,...entries].slice(-COMMUNITY_MAX);
-   const saved=await bucket.put(COMMUNITY_KEY,JSON.stringify(next),{onlyIf:etag?{etagMatches:etag}:{etagDoesNotMatch:'*'}});
+   const saved=await bucket.put(COMMUNITY_KEY,JSON.stringify(next),{onlyIf:etag?{etagMatches:etag}:new Headers({'If-None-Match':'*'})});
    if(saved)return json({ok:true,current:communityFor(next,p.playerId)});
   }
   return json({error:'Hubo otros aportes al mismo tiempo. Volvé a intentar.'},409);
@@ -90,18 +108,18 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   return json({leagues});
  }
  if(request.method==='POST'&&url.pathname==='/api/leagues'){
-  const p=await request.json();const club=catalog.clubs.find(c=>c.id===p.clubId&&c.competitionId!=='interior-a');if(!club)return json({error:'Elegí un club URBA.'},400);
+  const p=await readJsonLimited(request,65536);const club=catalog.clubs.find(c=>c.id===p.clubId&&c.competitionId!=='interior-a');if(!club)return json({error:'Elegí un club URBA.'},400);
   const owned=await bucket.list({prefix:`members/${userKey}/`,limit:21});if(owned.objects.length>=20)return json({error:'Límite de 20 ligas alcanzado.'},400);
   const bytes=crypto.getRandomValues(new Uint8Array(6));const code=Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();
   const name=String(p.name||'Liga de amigos').trim().slice(0,60),nick=String(p.nickname||'Manager').trim().slice(0,32);
   const league={code,name,ownerId:uid,version:1,createdAt:Date.now(),members:[{userId:uid,nickname:nick,clubId:p.clubId,ready:false}],world:null};const community=(await loadCommunity(bucket)).list;league.world=applyCommunity(initialWorld(catalogWithCommunity(catalog,community),bytes.reduce((s,n)=>s*31+n,0)>>>0,returns,youth,names),community);
-  const created=await bucket.put(`leagues/${code}`,JSON.stringify(league),{onlyIf:{etagDoesNotMatch:'*'}});if(!created)return json({error:'No se pudo reservar el código, intentá de nuevo.'},409);await bucket.put(`members/${userKey}/${code}`,'1');return json(project(league,uid),201);
+  const created=await bucket.put(`leagues/${code}`,JSON.stringify(league),{onlyIf:new Headers({'If-None-Match':'*'})});if(!created)return json({error:'No se pudo reservar el código, intentá de nuevo.'},409);await bucket.put(`members/${userKey}/${code}`,'1');return json(project(league,uid),201);
  }
  const match=url.pathname.match(/^\/api\/leagues\/([A-F0-9]{12})(?:\/(join|action))?$/);if(!match)return json({error:'Ruta no encontrada'},404);
  const code=match[1],obj=await bucket.get(`leagues/${code}`);if(!obj)return json({error:'No encontramos una liga con ese código.'},404);
  const league=await obj.json();league.world=applyCommunity(migrateWorld(league.world,catalog,returns,youth),(await loadCommunity(bucket)).list);const member=league.members.find(m=>m.userId===uid);
  if(request.method==='POST'&&match[2]==='join'){
-  const p=await request.json();if(member){await bucket.put(`members/${userKey}/${code}`,'1');return json(project(league,uid));}
+  const p=await readJsonLimited(request,65536);if(member){await bucket.put(`members/${userKey}/${code}`,'1');return json(project(league,uid));}
   if(league.members.length>=42)return json({error:'Liga completa.'},409);
   if(!league.world.clubs.some(c=>c.id===p.clubId)||league.members.some(m=>m.clubId===p.clubId))return json({error:'El club no está disponible.'},409);
   league.members.push({userId:uid,nickname:String(p.nickname||'Manager').trim().slice(0,32),clubId:p.clubId,ready:false});league.version++;
@@ -113,7 +131,7 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   if(request.headers.get('if-none-match')===String(league.version))return new Response(null,{status:304});return json(project(league,uid),200,{etag:String(league.version)});
  }
  if(request.method!=='POST'||match[2]!=='action')return json({error:'Método no permitido'},405);
- const p=await request.json();if(p.version!==league.version)return json({error:'Otro manager actualizó la liga. Se recargará el estado.'},409);
+ const p=await readJsonLimited(request,65536);if(p.version!==league.version)return json({error:'Otro manager actualizó la liga. Se recargará el estado.'},409);
  if(p.action==='ready'){
   member.ready=!member.ready;
   // When the last manager says ready, the round (or the new season) is played straight away: nobody waits for the
@@ -138,6 +156,6 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
  }
  league.version++;const saved=await bucket.put(`leagues/${code}`,JSON.stringify(league),{onlyIf:{etagMatches:obj.etag}});if(!saved)return json({error:'La liga cambió. Volvé a intentar.'},409);
  return json(project(league,uid));
- }catch(e){return json({error:e instanceof Error?e.message:'No se pudo completar la acción.'},400);}
+ }catch(e){return json({error:e instanceof Error?e.message:'No se pudo completar la acción.'},e instanceof PayloadTooLarge?413:e instanceof ProtectionUnavailable?503:400);}
 }
 function project(l,uid){const mine=l.members.find(m=>m.userId===uid);const world={...l.world,tactics:mine?{[mine.clubId]:l.world.tactics[mine.clubId]}:{}};return {...l,world,ownerId:undefined,isOwner:l.ownerId===uid,myClubId:mine?.clubId,members:l.members.map(m=>({nickname:m.nickname,clubId:m.clubId,ready:m.ready,isMe:m.userId===uid}))};}

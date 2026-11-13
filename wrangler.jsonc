@@ -1,0 +1,33 @@
+{
+  "name": "tercer-tiempo-5bcc6746db3d",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-11-12",
+  "workers_dev": true,
+  "vars": {
+    "IDENTITY_MODE": "accounts"
+  },
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "rm26-ligas-5bcc6746db3d"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "AUTH_RATE_LIMIT",
+      "namespace_id": "548273286724",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    },
+    {
+      "name": "API_RATE_LIMIT",
+      "namespace_id": "957639771806",
+      "simple": {
+        "limit": 180,
+        "period": 60
+      }
+    }
+  ]
+}

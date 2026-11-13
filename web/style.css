@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tercer Tiempo — clean stylesheet (12/11/2026).
+   Rugby Manager 27 — clean stylesheet (12/11/2026).
    One token set, three looks: dark (default), light, and the optional wood backdrop.
    FM-style structure (club-coloured top bar, section tabs, dense data) drawn simply:
    soft cards, sentence-case titles, thin dividers, one accent (the club colour).
@@ -891,3 +891,26 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 @media(max-width:760px){.replay-full .stadium .match-pitch,.replay-full .boards{width:100%;max-width:none;min-width:0}}
 
 .demo-box{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.demo-box p{margin:0;color:var(--ink-2)}
+
+
+.modern-manager .contact-footer{display:flex;justify-content:flex-end;margin-top:28px;padding:12px 0 4px;border-top:1px solid var(--line);font-size:13px}
+.modern-manager .contact-footer a{text-decoration:underline;text-underline-offset:3px}
+.modern-manager .entry-content{max-width:900px;padding-top:36px}
+.entry-brand{font:700 27px/1 'Barlow Condensed',sans-serif;letter-spacing:.3px}
+.modern-manager.entry-shell .clubbar-row{justify-content:space-between}
+.entry-content .page-intro{align-items:center;margin-bottom:15px}
+.entry-content .entry-auth{max-width:430px}
+.entry-content .entry-auth .tabs{margin-bottom:10px}
+.entry-content .panel-body .btn{margin-top:10px}
+.entry-content .entry-modes .panel-body p{min-height:3em}
+.entry-content .entry-modes .panel-body{display:grid;justify-items:start}
+.entry-content .member-row{min-height:51px}
+@media(max-width:760px){
+  .modern-manager .entry-content{padding-top:22px;padding-bottom:30px}
+  .entry-content .page-intro{align-items:flex-start;gap:10px}
+  .entry-content .page-intro h1{font-size:25px}
+  .entry-content .two-col{grid-template-columns:minmax(0,1fr)}
+  .entry-content .entry-modes .panel-body p{min-height:0}
+  .entry-content .btn,.entry-content input,.entry-content select,.entry-content .tab{min-height:44px}
+  .entry-content .btn{white-space:normal}
+}
