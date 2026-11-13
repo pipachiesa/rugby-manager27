@@ -55,7 +55,8 @@ test('community data: corrections wait for the admin email approval, then reach 
  const page=await handle(new Request('https://game.test/api/community/review?id='+ids[0]),{BUCKET:b},{},catalog,returns,youth,names);assert.match(await page.text(),/Aprobar/);
  assert.equal((await handle(new Request('https://game.test/api/community/review',{method:'POST',headers:{origin:'https://evil.test','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams({id:ids[0],decision:'approve'})}),{BUCKET:b},{},catalog,returns,youth,names)).status,200);
  assert.equal((await (await call(b,'dana',`/api/leagues/${l.code}`)).json()).world.clubs.find(c=>c.id===club.id).players.find(x=>x.id===p.id).age,null,'foreign origin cannot approve');
- for(const id of ids)assert.match(await (await review(b,{id,decision:'approve'})).text(),/Aprobado/);
+ assert.match(await (await handle(new Request('https://game.test/api/community/review',{method:'POST',headers:{origin:'null','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams({id:ids[1],decision:'approve'})}),{BUCKET:b},{},catalog,returns,youth,names)).text(),/Aprobado/,'browser with no-referrer posts Origin: null');
+ for(const id of ids.slice(0,1))assert.match(await (await review(b,{id,decision:'approve'})).text(),/Aprobado/);
  assert.match(await (await review(b,{id:ids[0],decision:'approve'})).text(),/ya se resolvió/);
  testEnv={};
  // An existing league (eve is not even a member) picks it up on the next read.

@@ -19,7 +19,8 @@ async function handleReview(request,env,url){
  const item=await ob.json();
  const summary=`<p><strong>${escHtml(item.playerName)}</strong> · ${escHtml(item.clubName)}</p><ul>${item.entries.map(e=>`<li>${escHtml(describeEntry(e))}</li>`).join('')}</ul>${item.note?`<p><small>Nota: ${escHtml(item.note)}</small></p>`:''}<p><small>Enviado por ${escHtml(item.byName)} el ${new Date(item.at).toLocaleString('es-AR',{timeZone:'America/Argentina/Buenos_Aires'})}</small></p>`;
  if(request.method!=='POST')return reviewPage('Ajuste RM27',`<h1>Ajuste RM27</h1>${summary}<form method="post"><input type="hidden" name="id" value="${id}"><input type="hidden" name="decision" value="approve"><button class="ok">Aprobar</button></form><form method="post"><input type="hidden" name="id" value="${id}"><input type="hidden" name="decision" value="reject"><button class="no">Rechazar</button></form>`);
- if(request.headers.get('origin')!==url.origin)return reviewPage('Ajuste RM27','<h1>Origen no permitido</h1>');
+ // The page sends no referrer, so browsers post Origin: null; the 48-character id is what authorizes the decision.
+ const origin=request.headers.get('origin');if(origin&&origin!=='null'&&origin!==url.origin)return reviewPage('Ajuste RM27','<h1>Origen no permitido</h1>');
  if(form.decision==='approve'){
   const now=Date.now(),entries=item.entries.map(e=>({...e,by:item.by,at:now}));
   let saved=false;
