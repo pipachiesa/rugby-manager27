@@ -1492,8 +1492,15 @@ function updatePlayButton() {
   replayNodes.toggle.innerHTML=icon(replay.playing?'pause':'play')+label;
   replayNodes.big?.classList.toggle('show',!replay.playing);
 }
+/** Where an unwatched match was left, so leaving the replay (Portal, any menu, a reload) never restarts it. */
+const replayProgressKey = id => 'tt-replay-pos:'+(league?.code ?? 'demo')+':'+id;
+function saveReplayProgress() {
+  if (!replay) return;
+  store.set(replayProgressKey(replay.fixture.id), replay.known ? '' : String(Math.floor(replay.seen)));
+}
 function pauseReplay() {
   if (!replay) return;
+  saveReplayProgress();
   replay.playing=false;
   cancelAnimationFrame(animation);
   lastFrameTime=undefined;
@@ -1503,6 +1510,7 @@ function finishReplay() {
   replay.second=replay.end;
   replay.seen=replay.end;
   replay.known=true;
+  saveReplayProgress();
   revealMatch(replay.fixture.id);
   pauseReplay();
   drawReplay();
@@ -1555,13 +1563,16 @@ function openReplay(id) {
   if (!fixture) return notify('Ese partido todavía no tiene replay.',true);
   if (!hasReplay(fixture)) return notify('Solo se guarda la repetición de los partidos de clubes con manager.',true);
   if (fixture.id!==pendingReplay()?.id&&!resultVisible(fixture)) return notify('Primero mirá el partido pendiente de tu club.',true);
+  // Same match still open: carry on from where it was left.
+  if (replay?.fixture.id===id&&replay.fixture.match===fixture.match) { replay.playing=false; closeModal(); changePage('partido'); return; }
   try {
     const match=engine.regenerateReplay(world(),id);
     const end=match.frames.at(-1)?.second;
     if (!end||!match.frames[0]?.players.length) throw Error('Replay vacío');
     const names=new Map([fixture.homeId,fixture.awayId].flatMap(clubId=>club(clubId).players.map(p=>[p.id,p.name])));
+    const known=resultVisible(fixture), resume=known?0:Math.min(end-1,Math.max(0,Number(store.get(replayProgressKey(id)))||0));
     replay={fixture,match,names,end,events:[...match.events].sort((a,b)=>a.second-b.second),
-      second:0,seen:0,speed:1,playing:false,known:resultVisible(fixture)};
+      second:resume,seen:resume,speed:1,playing:false,known};
     closeModal();
     changePage('partido');
   } catch {
@@ -1591,7 +1602,7 @@ function changePage(next, updateUrl=true) {
   if (next!=='partido') {
     cancelAnimationFrame(animation);
     replayNodes=null;
-    if (replay) replay.playing=false;
+    if (replay) { saveReplayProgress(); replay.playing=false; }
   }
   if (page!==next) window.scrollTo({top:0});
   if (updateUrl) {
@@ -2158,6 +2169,8 @@ async function boot() {
   render();
   if (!offline) { setInterval(pollLeague,10000); setInterval(syncCommunity,60000); }
 }
+addEventListener('pagehide',()=>{ if (page==='partido') saveReplayProgress(); });
+document.addEventListener('visibilitychange',()=>{ if (document.hidden&&page==='partido') saveReplayProgress(); });
 boot().catch(error=>{
   app.innerHTML='<div class="boot">No pudimos abrir Rugby Manager 27.<span>'+esc(error.message)+'</span><a class="btn primary" href="/">Volver a intentar</a></div>';
 });

@@ -116,6 +116,8 @@ type DevelopmentState = {
   seasonTrainingGains: number;
   trainingSeason?: number;
   seasonAttributes?: Partial<Record<Attribute, number>>;
+  talent?: boolean;
+  seasonIndividualGains?: number;
 };
 type DevelopmentContext = {
   seed: number;
@@ -138,15 +140,33 @@ function developmentState(player: Player): DevelopmentState {
   const positionPeak = Math.max(...attributes.filter(a => ratingWeights[player.position][a]).map(a => player.attributes[a]));
   const legacyHeadroom = clamp((player.potential - positionPeak) * 1.3, 0, 5);
   const expectedGain = age < 18 ? 12 : age < 21 ? 9 : age < 24 ? 6 : age < 28 ? 3 : 1;
-  const originalProjection = clamp(Math.round(current + expectedGain + legacyHeadroom), current, 98);
-  return { originalProjection, projection: originalProjection, trainingGains: 0, seasonTrainingGains: 0 };
+  const originalProjection = clamp(Math.round(current + (expectedGain + legacyHeadroom) * talentFactor(player)), current, 98);
+  return { originalProjection, projection: originalProjection, trainingGains: 0, seasonTrainingGains: 0, talent: true };
+}
+/**
+ * Talent (12/11/2026): how much of the usual room to grow a player has, from 0.45 to 1.55 (mean 1), fixed per player.
+ * An M17 rated 45 projects to about 52 with little talent and about 70 with a lot. The projection is an estimate: good
+ * seasons and individual training move it up (reviewDevelopment), so a player can end above it.
+ */
+/** Saved leagues (data v22): a stored projection of a young player is rescaled by his talent, once. */
+export function withTalent(player: Player): Player {
+  const dev = player.development;
+  if (!dev || dev.talent) return player;
+  if (developmentAge(player) >= 24) return { ...player, development: { ...dev, talent: true } };
+  const current = overall(player), f = talentFactor(player), scale = (x: number) => Math.round(current + Math.max(0, x - current) * f);
+  return { ...player, development: { ...dev, originalProjection: scale(dev.originalProjection), projection: scale(dev.projection), talent: true } };
+}
+export function talentFactor(player: Pick<Player, 'id'>): number {
+  const rng = random(hash(`${player.id}/talent`));
+  return .45 + 1.1 * (rng() + rng()) / 2;
 }
 export function developmentProfile(player: Player) {
   const base = developmentState(player), current = overall(player);
   return {
     originalProjection: base.originalProjection,
     projection: Math.max(current, base.projection),
-    ceiling: Math.max(current, Math.min(100, base.originalProjection + 8)),
+    // Soft ceiling: it rises with the projection, so good seasons keep opening room above the first estimate.
+    ceiling: Math.max(current, Math.min(100, base.projection + 3)),
     trainingGains: base.trainingGains,
     seasonTrainingGains: base.seasonTrainingGains,
     trainingSeason: base.trainingSeason,
@@ -199,15 +219,20 @@ export function developPlayer(player: Player, attribute: Attribute, context: Dev
   if (random(context.seed ^ hash(`${context.season}/${context.round}/${player.id}/${attribute}/${context.mode}`))() >= likelihood) return player;
   const updated = { ...player, attributes: { ...player.attributes, [attribute]: player.attributes[attribute] + 1 } };
   const gains = seasonalGains + 1;
-  const incrementalProjection = (gains % 4 === 0 && age < 26 && (player.squad !== 'Plantel superior' || minutes >= 480)) ? 1 : 0;
+  // The youth plan's weekly growth does not move the projection (it is what the projection already expects): only
+  // individual training and senior growth while playing do, one point every four gains.
+  const individualGains = (sameSeason ? state.seasonIndividualGains ?? 0 : 0) + (context.mode === 'individual' ? 1 : 0);
+  const incrementalProjection = (age < 26 && (context.mode === 'individual' ? individualGains % 4 === 0 : context.mode === 'senior' && gains % 4 === 0 && minutes >= 480)) ? 1 : 0;
   return {
     ...updated,
     development: {
       ...state,
-      projection: Math.min(developmentProfile(player).ceiling, Math.max(overall(updated), state.projection + incrementalProjection)),
+      // The projection does not chase the current level (that ratchet made the ceiling endless): only evidence moves it.
+      projection: Math.min(100, state.projection + incrementalProjection),
       trainingGains: state.trainingGains + 1,
       trainingSeason: context.season,
       seasonTrainingGains: gains,
+      seasonIndividualGains: individualGains,
       seasonAttributes: { ...trainedAttributes, [attribute]: (trainedAttributes[attribute] ?? 0) + 1 },
     },
   };
@@ -231,13 +256,20 @@ function reviewDevelopment(player: Player, evidence: DevelopmentEvidence | undef
     }
   }
   const after = developmentState(progressed);
-  const revision = age <= 26 && strongSeason ? 2 : age <= 25 && gains >= 5 ? 1 : 0;
+  // The projection is revised with the season: playing a lot (minutes and starts, which counts for those who rarely
+  // score), tries and kicked points, and individual training all add to it; a season without minutes adds nothing.
+  const young = age <= 28;
+  const revision = !young ? 0
+    : (strongSeason ? 2 : played >= 480 ? 1 : 0)
+      + (scoringEvidence(player, evidence) >= .7 ? 1 : 0)
+      + ((state.trainingSeason === season ? state.seasonIndividualGains ?? 0 : 0) >= 5 ? 1 : 0);
   return {
     ...progressed,
     development: {
       ...after,
-      projection: Math.min(developmentProfile(player).ceiling, Math.max(overall(progressed), after.projection + revision)),
+      projection: Math.min(100, after.projection + revision),
       seasonTrainingGains: 0,
+      seasonIndividualGains: 0,
       seasonAttributes: {},
       trainingSeason: season + 1,
     },

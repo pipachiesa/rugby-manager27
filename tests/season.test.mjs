@@ -135,7 +135,7 @@ test('v12 raises Primera A/B clubs by the baseline change, keeping each player r
  assert.ok(Math.abs(after.strength-w.clubs.find(c=>c.id===id).strength)<1e-9);
  const diffs=after.players.flatMap((p,i)=>Object.keys(p.attributes).map(k=>p.attributes[k]-before.players[i].attributes[k]));
  assert.ok(diffs.every(d=>d===0||d===1));const mean=diffs.reduce((a,b)=>a+b,0)/diffs.length;assert.ok(mean>.25&&mean<.45,`${mean}`);
- assert.deepEqual(m.clubs.find(c=>c.id===top).players,w.clubs.find(c=>c.id===top).players,'Top 14 untouched');
+ const attrsOf=(x,id)=>x.clubs.find(c=>c.id===id).players.map(p=>[p.id,p.attributes]);assert.deepEqual(attrsOf(m,top),attrsOf(w,top),'Top 14 untouched');
  assert.match(m.migrationNotice,/Primera A y B/);
 });
 test('local market: nearby reserves are keen, starters are not, one contact a round, managed clubs are off limits; training tires',async()=>{
@@ -212,6 +212,6 @@ test('v15 shifts refitted clubs by the strength change and leaves the rest alone
  const w=D.initialWorld(catalog,4,await j('research/returns.json'),await j('research/youth.json'),await j('research/names.json'));
  const m=D.migrateWorld({...w,dataVersion:14},catalog),xv=(world,id)=>{const c=world.clubs.find(c=>c.id===id);return E.effectiveLineup(c).map(i=>c.players.find(p=>p.id===i)).reduce((n,p)=>n+E.overall(p),0)/15;};
  assert.ok(xv(m,'newman')>xv(w,'newman')+1,'Newman goes up');assert.ok(xv(m,'belgrano-athletic')<xv(w,'belgrano-athletic')-1,'Belgrano goes down');
- assert.deepEqual(m.clubs.find(c=>c.id==='los-tilos').players,w.clubs.find(c=>c.id==='los-tilos').players);
+ assert.deepEqual(m.clubs.find(c=>c.id==='los-tilos').players.map(p=>[p.id,p.attributes]),w.clubs.find(c=>c.id==='los-tilos').players.map(p=>[p.id,p.attributes]));
  assert.match(m.migrationNotice,/fuerza de los clubes/);
 });

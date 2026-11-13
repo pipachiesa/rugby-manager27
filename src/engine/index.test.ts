@@ -222,7 +222,8 @@ test('fresh fictional reserve squads obey the hierarchy and training can exceed 
   const developed = developmentProfile(player);
   assert.equal(developed.originalProjection, baseline);
   assert.ok(overall(player) > baseline);
-  assert.ok(overall(player) <= developed.ceiling && developed.ceiling <= baseline + 8);
+  // The ceiling is soft: it follows the projection (+4), which good seasons and training revise upwards.
+  assert.ok(overall(player) <= developed.ceiling && developed.ceiling <= Math.max(baseline + 8, developed.projection + 4));
   assert.equal(canDevelopAttribute({ ...player, attributes: { ...player.attributes, pace: 20 } }, 'pace'), false);
 });
 
