@@ -967,3 +967,9 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 }
 .entry-wide .entry-crests{flex-wrap:nowrap;overflow:hidden;padding-right:48px;max-width:none}
 .entry-wide .entry-crests .crest,.entry-wide .entry-crests .crest-fallback{width:26px;height:28px}
+
+/* Invitation code on top of the Portal (league creator, first visit) */
+.invite-banner{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 16px;margin:0 0 16px;border:1px solid var(--line-strong);border-left:4px solid var(--club);border-radius:var(--radius);background:var(--surface)}
+.invite-banner>div:first-child{flex:1 1 260px;display:grid;gap:4px}
+.invite-banner>div:first-child small{color:var(--ink-2)}
+.invite-banner .code-box{margin:0;flex:0 1 auto}

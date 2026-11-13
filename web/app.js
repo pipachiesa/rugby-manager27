@@ -339,6 +339,18 @@ function standingsTable(division, compact=false, cat='Primera') {
     '<td class="points">'+r.points+'</td><td'+(compact?'':' class="col-d"')+'>'+badge(r.clubId)+'</td></tr>').join('')+'</tbody></table></div>';
 }
 
+/** Invitation code for the league's creator: on top of the Portal the first time they open the league
+ *  (until they close it or reload); afterwards it lives only in Club → Liga. */
+let inviteShownFor = null;
+function inviteBanner() {
+  if (!league?.isOwner) return '';
+  const key='tt-invite-seen:'+league.code;
+  if (inviteShownFor!==league.code) { if (store.get(key)) return ''; store.set(key,'1'); inviteShownFor=league.code; }
+  return '<section class="invite-banner" aria-label="Código de invitación"><div><strong>Invitá a tus amigos</strong><small>Pasales este código: entran a Liga con amigos, ponen «Unirme» y eligen un club libre. Después lo encontrás en Club → Liga.</small></div>'+
+    '<div class="code-box"><strong>'+esc(league.code)+'</strong>'+button('Copiar código','copy-code','','primary small','link')+'</div>'+
+    button('Cerrar','hide-invite','','ghost small')+'</section>';
+}
+
 function dashboard() {
   const c = currentClub(), next = nextMatch(), last = lastMatch();
   const tab = (label,route) => button(label,'page',route,'ghost small','right');
@@ -349,7 +361,7 @@ function dashboard() {
   const result = last ? panel('Último resultado',
     '<div class="portal-result">'+crest(last.homeId)+'<div><strong>'+last.match.homeScore+' – '+last.match.awayScore+'</strong><small>'+esc(roundLabel(last))+' · '+esc(shortOf(last.homeId))+' / '+esc(shortOf(last.awayId))+'</small></div>'+crest(last.awayId)+'</div>',
     hasReplay(last)?button('Repetición','replay',last.id,'ghost small','play'):'') : '';
-  return '<div class="portal-heading"><div><h1>Portal del club</h1><span>'+esc(c.division)+' · Temporada '+world().season+'</span></div>'+
+  return inviteBanner()+'<div class="portal-heading"><div><h1>Portal del club</h1><span>'+esc(c.division)+' · Temporada '+world().season+'</span></div>'+
     (!league?button('Cambiar de modo','entry-mode','','ghost small','link'):'')+'</div>'+
     '<div class="portal-grid">'+
       '<div class="portal-column" id="portal-inbox" tabindex="-1">'+inboxPanel(c)+panel('Equipos del club','<div class="portal-club-roster">'+rosters+'</div>')+'</div>'+
@@ -1150,7 +1162,7 @@ function playerEditor(p) {
     '<label>¿Sigue en el club?<select name="active"><option value="">Sin cambios</option><option value="true">Sí</option><option value="false">No</option></select></label>'+
     '<label>Nivel sugerido (30–95)<input type="number" name="level" min="30" max="95" inputmode="numeric" placeholder="'+overall(p)+'"></label>'+
     '<label class="wide">Comentario de estadísticas<textarea name="stats" maxlength="300" rows="2" placeholder="Ej.: muy buen pateador, rápido, le cuesta el tackle…"></textarea></label>'+
-    '<p class="community-help wide">Lo ven todas las ligas. Nombre, edad y puesto se corrigen enseguida; el nivel sugerido mueve su valoración de a poco.</p>'+
+    '<p class="community-help wide">Cada corrección se revisa antes de aplicarse. Si se aprueba, la ven todas las ligas: nombre, edad y puesto se corrigen enseguida y el nivel sugerido mueve su valoración de a poco.</p>'+
     '<div class="wide action-row">'+button('Cancelar','close-modal','','ghost small')+'<button class="btn primary small" type="submit">'+icon('check')+'Enviar corrección</button></div></form>';
 }
 const attributeGroups = [
@@ -1873,6 +1885,9 @@ document.addEventListener('click',async event=>{
       selectedDivision=replay.fixture.division; tournamentRound=replay.fixture.round; tournamentClub=''; tournamentMode='Fixture'; changePage('torneo'); break;
     case 'open-league': await openLeague(value); break;
     case 'offline': league=null; resetFilters(); setEntry('mode'); break;
+    case 'hide-invite':
+      inviteShownFor=null; render();
+      break;
     case 'copy-code':
       try { await navigator.clipboard.writeText(league.code); notify('Código copiado.'); }
       catch { const range=document.createRange(); range.selectNodeContents(target.previousElementSibling); const selection=getSelection(); selection.removeAllRanges(); selection.addRange(range); notify('Seleccionamos el código para que lo puedas copiar.'); }
@@ -1981,12 +1996,9 @@ document.addEventListener('submit',async event=>{
     try {
       const playerId=event.target.dataset.playerId;
       await request('/api/community',{data:{playerId,items}});
-      if (league) setLeague(await request('/api/leagues/'+league.code));
-      else { const {history=[]}=await request('/api/community?playerId='+encodeURIComponent(playerId)) ?? {}; demo=applyCommunity(demo,history.map(h=>({...h,playerId}))); saveDemo(); }
       closeModal();
       render();
-      const again=currentClub().players.find(x=>x.sourceRecordId===playerId); if (again) showPlayer(again.id);
-      notify('Gracias. El dato ya se aplica en todas las ligas.');
+      notify('Gracias. Lo revisamos y, si se aprueba, se aplica en todas las ligas.');
     } catch (error) { notify(error.message,true); }
     finally { setBusy(false); }
     return;

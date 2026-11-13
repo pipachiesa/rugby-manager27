@@ -1,7 +1,9 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {createHash} from 'node:crypto';import {handle} from '../server/worker.js';import {mergeResearch} from '../scripts/merge-research.mjs';
 const returns=JSON.parse(await readFile('research/returns.json'));const youth=JSON.parse(await readFile('research/youth.json'));const names=JSON.parse(await readFile('research/names.json'));const ages=JSON.parse(await readFile('research/age-verification.json'));const catalog=mergeResearch(JSON.parse(await readFile('research/catalog.json')),ages,returns);
 function storage(){const data=new Map();return {async get(k){const body=data.get(k);if(!body)return null;return {etag:createHash('sha256').update(body).digest('hex'),json:async()=>JSON.parse(body),text:async()=>body}},async put(k,v,opt={}){const old=data.get(k);const etag=old?createHash('sha256').update(old).digest('hex'):null;if(opt.onlyIf?.etagMatches&&etag!==opt.onlyIf.etagMatches)return null;if((opt.onlyIf?.etagDoesNotMatch==='*'||opt.onlyIf instanceof Headers&&opt.onlyIf.get('if-none-match')==='*')&&old)return null;data.set(k,v);return {key:k}},async delete(k){data.delete(k)},async list({prefix,limit=1000}){return {objects:[...data.keys()].filter(k=>k.startsWith(prefix)).slice(0,limit).map(key=>({key}))}}};}
-function call(bucket,uid,path,method='GET',body,extra={}){const headers={...(uid?{'oai-authenticated-user-id':uid}:{}),...extra};if(method==='POST'){headers['content-type']='application/json';headers.origin??='https://game.test';}return handle(new Request('https://game.test'+path,{method,headers,...(body?{body:JSON.stringify(body)}:{})}),{BUCKET:bucket},{},catalog,returns,youth,names);}
+function call(bucket,uid,path,method='GET',body,extra={}){const headers={...(uid?{'oai-authenticated-user-id':uid}:{}),...extra};if(method==='POST'){headers['content-type']='application/json';headers.origin??='https://game.test';}return handle(new Request('https://game.test'+path,{method,headers,...(body?{body:JSON.stringify(body)}:{})}),{BUCKET:bucket,...testEnv},{},catalog,returns,youth,names);}
+let testEnv={};
+const review=(bucket,body)=>handle(new Request('https://game.test/api/community/review',{method:'POST',headers:{origin:'https://game.test','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams(body)}),{BUCKET:bucket},{},catalog,returns,youth,names);
 test('protected league flow, optimistic concurrency, membership and privacy',async()=>{
  const b=storage();assert.equal((await call(b,null,'/api/leagues')).status,401);
  assert.equal((await call(b,'alice','/api/leagues','POST',{clubId:'newman'},{origin:'https://evil.test'})).status,403);
@@ -37,8 +39,8 @@ test('senior categories share a pool and assignment stays within the manager clu
  let r=await call(b,'owner',`/api/leagues/${l.code}/action`,'POST',{version:l.version,action:'assign-senior',playerId:rival.players[0].id,seniorSquad:'Pre A'});assert.equal(r.status,400);
  r=await call(b,'owner',`/api/leagues/${l.code}/action`,'POST',{version:l.version,action:'assign-senior',playerId:club.players[0].id,seniorSquad:'Pre A'});assert.equal(r.status,200);l=await r.json();assert.equal(l.world.clubs.find(c=>c.id==='newman').players[0].seniorSquad,'Pre A');
 });
-test('community data: approximate age, active and position reach every league; new leagues leave out departed players',async()=>{
- const b=storage();let res=await call(b,'dana','/api/leagues','POST',{clubId:'newman'});const l=await res.json();
+test('community data: corrections wait for the admin email approval, then reach every league; new leagues leave out departed players',async()=>{
+ const b=storage(),mails=[];testEnv={ADMIN_EMAIL:'admin@test.com',EMAIL:{send:async m=>{mails.push(m);return {messageId:'x'};}}};let res=await call(b,'dana','/api/leagues','POST',{clubId:'newman'});const l=await res.json();
  const club=l.world.clubs.find(c=>c.id==='banco-nacion')??l.world.clubs.find(c=>c.players.some(p=>!p.fictional&&p.age==null));
  const [p,q]=club.players.filter(x=>!x.fictional&&x.age==null&&x.sourceRecordId);assert.ok(p&&q,'needs real players without age');
  assert.equal((await call(b,null,'/api/community','POST',{playerId:p.sourceRecordId,items:[{type:'age',value:24}]})).status,401);
@@ -46,6 +48,16 @@ test('community data: approximate age, active and position reach every league; n
  assert.equal((await call(b,'eve','/api/community','POST',{playerId:'no-existe',items:[{type:'age',value:24}]})).status,404);
  res=await call(b,'eve','/api/community','POST',{playerId:p.sourceRecordId,items:[{type:'age',value:24},{type:'position',value:'Fullback'}],note:'lo conozco'});assert.equal(res.status,200);
  assert.equal((await call(b,'eve','/api/community','POST',{playerId:q.sourceRecordId,items:[{type:'active',value:false}]})).status,200);
+ // Nothing applies yet: two emails «Ajuste RM27» to the admin, each with its review link.
+ const before=await (await call(b,'dana',`/api/leagues/${l.code}`)).json();assert.equal(before.world.clubs.find(c=>c.id===club.id).players.find(x=>x.id===p.id).age,null);
+ assert.equal(mails.length,2);assert.ok(mails.every(m=>m.subject==='Ajuste RM27'&&m.to==='admin@test.com'));
+ const ids=mails.map(m=>m.text.match(/review\?id=([a-f0-9]{48})/)[1]);
+ const page=await handle(new Request('https://game.test/api/community/review?id='+ids[0]),{BUCKET:b},{},catalog,returns,youth,names);assert.match(await page.text(),/Aprobar/);
+ assert.equal((await handle(new Request('https://game.test/api/community/review',{method:'POST',headers:{origin:'https://evil.test','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams({id:ids[0],decision:'approve'})}),{BUCKET:b},{},catalog,returns,youth,names)).status,200);
+ assert.equal((await (await call(b,'dana',`/api/leagues/${l.code}`)).json()).world.clubs.find(c=>c.id===club.id).players.find(x=>x.id===p.id).age,null,'foreign origin cannot approve');
+ for(const id of ids)assert.match(await (await review(b,{id,decision:'approve'})).text(),/Aprobado/);
+ assert.match(await (await review(b,{id:ids[0],decision:'approve'})).text(),/ya se resolvió/);
+ testEnv={};
  // An existing league (eve is not even a member) picks it up on the next read.
  const after=await (await call(b,'dana',`/api/leagues/${l.code}`)).json();const p2=after.world.clubs.find(c=>c.id===club.id).players.find(x=>x.id===p.id);
  assert.equal(p2.age,24);assert.equal(p2.ageEstimated,true);assert.equal(p2.ageKnown,false);assert.equal(p2.position,'Fullback');

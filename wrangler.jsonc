@@ -10,6 +10,9 @@
   "vars": {
     "IDENTITY_MODE": "accounts"
   },
+  "send_email": [
+    { "name": "EMAIL" }
+  ],
   "r2_buckets": [
     {
       "binding": "BUCKET",
