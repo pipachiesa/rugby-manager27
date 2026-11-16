@@ -1094,22 +1094,36 @@ function replayLines() {
     [[11.3,'5'],[26,'22'],[41.4,'10'],[58.6,'10'],[74,'22'],[88.7,'5']].map(([x,t])=>num(x+(x<50?2.2:-2.2),10.5,t)+num(x+(x<50?2.2:-2.2),59.5,t)).join('')+
     '<span class="grass-logo" style="'+at(50,35)+'">URBA</span>';
 }
-/** Big scoreboard before kick-off and at full time (16/11/2026): crests, names, URBA, division and round. */
+/**
+ * Big match poster before kick-off and at full time (16/11/2026, modelled on the TV posters the user sent): the
+ * division logo on top, «FECHA N · URBA TOP 14», the two names in big condensed type, the date in red, the crests
+ * where the posters put players, and the URBA crest at the bottom.
+ */
+const POSTER_NAMES = {'regatas-bella-vista':'Regatas','atletico-del-rosario':'Atlético Rosario','geba':'GEBA','universitario-la-plata':'Universitario','cu-quilmes':'CU Quilmes','argentino':'Argentino'};
+const posterName = id => POSTER_NAMES[id] ?? nameOf(id).replace(/\s*\(.*\)/,'').replace(/\s+(Club|RC|C&RC|Athletic|de Rugby)$/,'');
+const longDate = iso => iso ? new Intl.DateTimeFormat('es-AR',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}).format(new Date(iso+'T00:00:00Z')) : '';
 function matchCard(stage) {
   const {fixture, match} = replay, final = stage==='final';
   const {venue} = assignment(fixture);
-  const side = id => '<div class="mc-team">'+crest(id)+'<strong>'+esc(nameOf(id))+'</strong></div>';
+  const name = id => { const n=posterName(id); return '<em'+(n.length>11?' class="long"':'')+'>'+esc(n.toUpperCase())+'</em>'; };
+  const competition = fixture.division==='Top 14' ? 'URBA Top 14' : 'URBA '+fixture.division;
+  const label = (fixture.stage ? roundLabel(fixture) : 'Fecha '+fixture.round)+' · '+competition;
+  const badge = fixture.division==='Top 14' ? '<img src="/brand/top14.png" alt="URBA Top 14" class="poster-comp">' : '<span class="poster-comp text">URBA<br><b>'+esc(fixture.division)+'</b></span>';
   const winner = final ? (match.homeScore>match.awayScore?fixture.homeId:match.awayScore>match.homeScore?fixture.awayId:null) : null;
-  const center = final
-    ? '<div class="mc-score"><span>'+match.homeScore+'</span><i>–</i><span>'+match.awayScore+'</span></div><small class="mc-sub">Tries '+match.homeTries+' – '+match.awayTries+(winner?' · Ganó '+esc(shortOf(winner)):' · Empate')+'</small>'
-    : '<div class="mc-vs">VS</div><small class="mc-sub">'+esc(venue ?? '')+'</small>';
+  const middle = final
+    ? '<div class="poster-names"><span>'+name(fixture.homeId)+'</span><span class="poster-score">'+match.homeScore+'<i>–</i>'+match.awayScore+'</span><span>'+name(fixture.awayId)+'</span></div>'+
+      '<p class="poster-date">Final · '+(winner?'ganó '+esc(posterName(winner)):'empate')+'</p><p class="poster-sub">Tries '+match.homeTries+' – '+match.awayTries+'</p>'
+    : '<div class="poster-names"><span>'+name(fixture.homeId)+'</span><span class="poster-vs">vs. '+name(fixture.awayId)+'</span></div>'+
+      '<p class="poster-date">'+esc(longDate(fixture.date) || roundLabel(fixture))+'</p>'+(venue?'<p class="poster-sub">'+esc(venue)+'</p>':'');
   const actions = final
     ? button('Ver el balance','close-final','','ghost','file')+button('Continuar','page','resumen','primary','right')
     : button('Simular rápido','quick-sim','','ghost','bolt')+button('Empezar partido','start-match','','primary','play');
-  return '<div class="match-card'+(final?' final':'')+'" role="dialog" aria-label="'+(final?'Resultado final':'Antes del partido')+'"><div class="mc-inner">'+
-    '<div class="mc-head"><span class="mc-urba">URBA</span><span>'+esc(fixture.division)+' · '+esc(roundLabel(fixture))+'</span>'+(final?'<span class="mc-tag">Final</span>':'')+'</div>'+
-    '<div class="mc-body">'+side(fixture.homeId)+'<div class="mc-center">'+center+'</div>'+side(fixture.awayId)+'</div>'+
-    '<div class="mc-actions">'+actions+'</div></div></div>';
+  return '<div class="match-card'+(final?' final':'')+'" role="dialog" aria-label="'+(final?'Resultado final':'Antes del partido')+'"><div class="poster">'+
+    '<span class="poster-bar top" aria-hidden="true"></span><span class="poster-bar bottom" aria-hidden="true"></span>'+
+    '<div class="poster-crest home">'+crest(fixture.homeId)+'</div><div class="poster-crest away">'+crest(fixture.awayId)+'</div>'+
+    '<div class="poster-center"><div class="poster-logos"><img src="/brand/rm27-64.png" alt="Rugby Manager 27"><i aria-hidden="true"></i>'+badge+'</div>'+
+    '<p class="poster-label">'+esc(label)+'</p>'+middle+
+    '<div class="poster-actions">'+actions+'</div><img class="poster-urba" src="/brand/urba.png" alt="URBA"></div></div></div>';
 }
 function replayPage() {
   if (!replay) return intro('PARTIDOS','Replay 2D','Seleccioná un partido jugado desde el fixture.')+button('Ir al torneo','page','torneo','primary','cup');

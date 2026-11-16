@@ -512,7 +512,9 @@ export function createFixtures(clubs:Club[]):Fixture[] {
     const firstLegStart=fixtures.length;
     for(let round=1;round<rotation.length;round++) {
       for(let i=0;i<rotation.length/2;i++) {
-        let homeId=rotation[i],awayId=rotation[rotation.length-1-i]; if((round+i)%2===0) [homeId,awayId]=[awayId,homeId];
+        // Berger tables (16/11/2026): the fixed team alternates and the rest swap venue every other round, so nobody
+        // plays more than two in a row at home or away (it was 13 and 13 for some clubs).
+        let homeId=rotation[i],awayId=rotation[rotation.length-1-i]; if(round%2===0) [homeId,awayId]=[awayId,homeId];
         if(homeId!=='BYE'&&awayId!=='BYE') fixtures.push({id:`${slug(division)}-${round}-${homeId}-${awayId}`,division,round,homeId,awayId});
       }
       rotation.splice(1,0,rotation.pop()!);

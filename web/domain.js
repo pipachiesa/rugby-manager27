@@ -3,7 +3,7 @@ import * as Stats from './player-stats.js';
 export const DIVISIONS = {'top14':'Top 14','primera-a':'Primera A','primera-b':'Primera B'};
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;};
 // Ratings and player data are a retrospective game snapshot, not real contracts or availability.
-export const DATA_VERSION=22;
+export const DATA_VERSION=23;
 export const SIMULATION_DATE='2026-11-10';
 export function ageOnDate(birthDate, referenceDate){
  const valid=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value??''))return false;const d=new Date(value+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===value;};
@@ -197,6 +197,8 @@ export function migrateWorld(world,catalog,returns={players:[]},youth=catalog.yo
  if(version<21){next=withAerial(next);notices.push('Nuevo atributo: Juego aéreo. Las patadas al fondo, salidas y reinicios ahora se disputan en el aire.');}
  // v22: talent. Young players' stored projections spread out by talent (some project low, others high).
  if(version<22&&version>=1){next={...next,clubs:next.clubs.map(c=>({...c,players:c.players.map(E.withTalent)}))};notices.push('El potencial ahora pesa: cada juvenil tiene su propio techo, que sube con buenas temporadas y entrenamiento.');}
+ // v23: every fixture gets a calendar date (later seasons had none).
+ if(version<23)next=withDates(next);
  return {...next,dataVersion:Math.max(version,DATA_VERSION),migrationNotice:notices.join(' ')};
 }
 const aerialPlayer=p=>!p?.attributes||p.attributes.aerial!=null?p:{...p,attributes:{...p.attributes,aerial:E.aerialFrom(p.position,p.attributes)}};
@@ -205,6 +207,22 @@ function withAerial(world){
   returnCandidates:(world.returnCandidates??[]).map(c=>({...c,player:aerialPlayer(c.player)})),
   ...(world.overseasCareers?{overseasCareers:world.overseasCareers.map(o=>({...o,player:aerialPlayer(o.player)}))}:{})};
 }
+/**
+ * Calendar (16/11/2026): a season copies the real 2026 URBA calendar of each division (Saturdays from mid-March,
+ * with its free weekends: Easter, May 1, the winter break...), moved to the same weekend of the new year. Playoffs:
+ * semifinals a week before the final and the URBA final around 7 November (Top 14's last round + 3 weeks).
+ */
+const CALENDAR_2026={"Top 14":["03-14","03-21","03-28","04-11","04-18","04-25","05-09","05-16","05-23","05-30","06-06","06-20","06-27","07-04","07-11","07-18","08-01","08-15","08-22","08-29","09-05","09-12","09-26","10-03","10-10","10-17"],"Primera A":["03-14","03-21","03-28","04-11","04-18","04-25","05-09","05-16","05-23","06-06","06-13","06-20","07-04","07-11","07-18","08-01","08-15","08-22","08-29","09-05","09-12","09-26","10-03","10-10","10-17","10-24"]};
+CALENDAR_2026["Primera B"]=CALENDAR_2026["Primera A"];
+const addDays=(iso,days)=>new Date(Date.parse(iso+'T00:00:00Z')+days*864e5).toISOString().slice(0,10);
+const seasonShift=season=>7*Math.round((season-2026)*365.2425/7);
+export function fixtureDate(season,division,round,stage){
+ const days=seasonShift(season),list=CALENDAR_2026[division]??CALENDAR_2026['Top 14'];
+ const final=addDays('2026-'+CALENDAR_2026['Top 14'].at(-1),21+days);
+ if(stage==='final')return final;if(stage==='semi')return addDays(final,-7);
+ const md=list[Math.min(list.length,Math.max(1,round))-1];return addDays('2026-'+md,days);
+}
+const withDates=w=>({...w,fixtures:w.fixtures.map(f=>f.date?f:{...f,date:fixtureDate(w.season,f.division,f.round,f.stage)})});
 export function enrichRosterIdentities(world,catalog){return migrateWorld(world,catalog,catalog.returns??{players:[]},catalog.youth??null);}
 /**
  * Community contributions from the managers (trusted private community, no source required): approximate age, whether
@@ -794,9 +812,9 @@ function schedulePlayoffs(w){
  const last=Math.max(...w.fixtures.map(f=>f.round)),added=[],slug=d=>d.toLowerCase().replace(/\s+/g,'-');
  for(const division of Object.keys(PLAYOFF_RULES)){
   const st=playoffState(w,division);if(st.seeds.length<4)continue;
-  if(!st.semis.length){const [a,b,c,d]=st.seeds;added.push(...[[a,d],[b,c]].map(([h,v],i)=>({id:`${slug(division)}-${w.season}-semi-${i+1}`,division,round:last+1,homeId:h,awayId:v,stage:'semi'})));}
+  if(!st.semis.length){const [a,b,c,d]=st.seeds;added.push(...[[a,d],[b,c]].map(([h,v],i)=>({id:`${slug(division)}-${w.season}-semi-${i+1}`,division,round:last+1,homeId:h,awayId:v,stage:'semi',date:fixtureDate(w.season,division,last+1,'semi')})));}
   else if(!st.final&&st.semis.every(f=>f.match)){const [x,y]=st.semis.map(f=>playoffWinner(f,st.seedOf)).sort((p,q)=>st.seedOf(p)-st.seedOf(q));
-   added.push({id:`${slug(division)}-${w.season}-final`,division,round:last+1,homeId:x,awayId:y,stage:'final',neutral:true});}
+   added.push({id:`${slug(division)}-${w.season}-final`,division,round:last+1,homeId:x,awayId:y,stage:'final',neutral:true,date:fixtureDate(w.season,division,last+1,'final')});}
  }
  return added.length?{...w,fixtures:[...w.fixtures,...added]}:w;
 }
@@ -905,7 +923,7 @@ export function advanceSeasonWorld(world){
  })}))};
  // New season, new squads: promoted juniors and aged players are spread by level again. The preseason (16 weeks)
  // finishes any retraining in progress.
- const ready=evolveClubStrength(replenishSquads(squadTurnover(progressRetraining(rolled,0,16))));
+ const ready=withDates(evolveClubStrength(replenishSquads(squadTurnover(progressRetraining(rolled,0,16)))));
  return {...ready,clubs:ready.clubs.map(assignSeniorGroups)};
 }
 /**
