@@ -310,8 +310,8 @@ td.points{font-weight:700}
 .replay-carrier{position:absolute;transform:translate(-50%,-190%);z-index:8;padding:2px 8px;border-radius:99px;background:#000c;color:#fff;font-size:11px;font-weight:600;white-space:nowrap;pointer-events:none}
 .match-pitch{position:relative;overflow:hidden}
 .pitch-dot{position:absolute;display:grid;place-items:center;transform:translate(-50%,-50%);border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px #0008;z-index:5;font-weight:700}
-.match-pitch .pitch-dot.home{background:var(--home-kit,#226e9b);color:var(--home-ink,#fff);border-color:#ffffffd9}
-.match-pitch .pitch-dot.away{background:var(--away-kit,#ad3d50);color:var(--away-ink,#fff);border-color:#000000a6}
+.match-pitch .pitch-dot.home{background:var(--home-bg,var(--home-kit,#226e9b));color:var(--home-ink,#fff);border-color:#ffffffd9}
+.match-pitch .pitch-dot.away{background:var(--away-bg,var(--away-kit,#ad3d50));color:var(--away-ink,#fff);border-color:#000000a6}
 .match-pitch .pitch-dot.carrying{outline:2px solid #ffe066;outline-offset:2px;z-index:6}
 .attr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 18px}
 .attr-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:13px}
@@ -980,3 +980,24 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .formation-manager select,.formation-manager input{min-width:0;flex:1 1 160px;max-width:240px}
 .shirt-slot.off-position .shirt-meta{color:var(--warn)}
 .squad-pick-group{margin:10px 4px 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+
+/* Big scoreboard before kick-off and at full time (16/11/2026) */
+.stadium{position:relative}
+.match-card{position:absolute;inset:0;z-index:20;display:grid;place-items:center;padding:16px;background:radial-gradient(ellipse at center,rgba(8,30,20,.78),rgba(4,12,9,.92));backdrop-filter:blur(2px);animation:mc-in .35s ease-out}
+@keyframes mc-in{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+.mc-inner{width:min(720px,100%);background:linear-gradient(180deg,#123b2a,#0b2419);border:1px solid #2c6a4c;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.45);color:#f4efe2;overflow:hidden}
+.mc-head{display:flex;align-items:center;gap:12px;padding:12px 18px;background:#0a1d14;border-bottom:1px solid #2c6a4c;font:600 14px 'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.mc-urba{padding:3px 9px;border-radius:4px;background:#f4efe2;color:#0b2419;font-weight:800;letter-spacing:.12em}
+.mc-tag{margin-left:auto;padding:3px 9px;border-radius:4px;background:#c9a24a;color:#1a1306;font-weight:800}
+.mc-body{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:26px 18px}
+.mc-team{display:grid;justify-items:center;gap:10px;text-align:center}
+.mc-team img,.mc-team .crest{width:88px;height:88px;object-fit:contain}
+.mc-team strong{font:700 clamp(16px,2.6vw,22px)/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.mc-center{display:grid;justify-items:center;gap:6px;min-width:120px}
+.mc-vs{font:800 44px/1 'Barlow Condensed',sans-serif;color:#c9a24a;letter-spacing:.08em}
+.mc-score{display:flex;align-items:center;gap:12px;font:800 clamp(48px,9vw,76px)/1 'Barlow Condensed',sans-serif}
+.mc-score i{font-style:normal;color:#c9a24a}
+.mc-sub{color:#bcd3c3;text-align:center}
+.mc-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:0 18px 20px}
+.mc-actions .btn.ghost{color:#f4efe2;border-color:#4f7d65}
+@media (max-width:640px){.mc-team img,.mc-team .crest{width:56px;height:56px}.mc-body{padding:18px 10px}.mc-vs{font-size:32px}}

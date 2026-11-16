@@ -1047,12 +1047,25 @@ const hexOk = v => /^#[a-f0-9]{6}$/i.test(v ?? '');
 const rgb = v => [1,3,5].map(i=>parseInt(v.slice(i,i+2),16));
 const colorGap = (a,b) => { const x=rgb(a), y=rgb(b); return Math.hypot(x[0]-y[0],x[1]-y[1],x[2]-y[2]); };
 const inkFor = v => { const [r,g,b]=rgb(v); return (r*299+g*587+b*114)/1000>150?'#16130f':'#ffffff'; };
+// 16/11/2026: the dots wear the real kit design (research/club-kits.json): plain, hoops, stripes or halves. If the
+// two kits look alike the away side wears its alternative kit, else white or black.
+function kitBackground(d) {
+  const [a,b=a] = d.colors;
+  if (d.pattern==='hoops') return 'repeating-linear-gradient(0deg,'+a+' 0 3px,'+b+' 3px 6px)';
+  if (d.pattern==='stripes') return 'repeating-linear-gradient(90deg,'+a+' 0 3px,'+b+' 3px 6px)';
+  if (d.pattern==='halves'||d.pattern==='quarters') return 'linear-gradient(90deg,'+a+' 50%,'+b+' 50%)';
+  return a;
+}
 function kitStyle(homeId, awayId) {
   const h = club(homeId), a = club(awayId);
-  const home = hexOk(h?.color) ? h.color : '#226e9b';
-  let away = hexOk(a?.color) ? a.color : '#ad3d50';
-  if (colorGap(home,away) < 90) away = hexOk(a?.secondaryColor) && colorGap(home,a.secondaryColor) >= 90 ? a.secondaryColor : (colorGap(home,'#f4f1ea')>=90?'#f4f1ea':'#1d1d1f');
-  return '--home-kit:'+home+';--home-ink:'+inkFor(home)+';--away-kit:'+away+';--away-ink:'+inkFor(away);
+  const hd = designOf(h), home = hd.colors[0];
+  let ad = designOf(a);
+  if (colorGap(home,ad.colors[0]) < 90) {
+    const alt = designOf(a,true);
+    ad = alt!==ad && colorGap(home,alt.colors[0]) >= 90 ? alt : {pattern:'plain',colors:[colorGap(home,'#f4f1ea')>=90?'#f4f1ea':'#1d1d1f']};
+  }
+  const away = ad.colors[0];
+  return '--home-kit:'+home+';--home-bg:'+kitBackground(hd)+';--home-ink:'+inkFor(home)+';--away-kit:'+away+';--away-bg:'+kitBackground(ad)+';--away-ink:'+inkFor(away);
 }
 const abbr = id => { const n=shortOf(id); return n.length<=4 ? n.toUpperCase() : n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(/\s+/).filter(Boolean).map(w=>w[0]).join('').slice(0,3).toUpperCase() || n.slice(0,3).toUpperCase(); };
 // Advertising boards: the game name, URBA in the middle, the home club and invented local sponsors (no away club).
@@ -1081,6 +1094,23 @@ function replayLines() {
     [[11.3,'5'],[26,'22'],[41.4,'10'],[58.6,'10'],[74,'22'],[88.7,'5']].map(([x,t])=>num(x+(x<50?2.2:-2.2),10.5,t)+num(x+(x<50?2.2:-2.2),59.5,t)).join('')+
     '<span class="grass-logo" style="'+at(50,35)+'">URBA</span>';
 }
+/** Big scoreboard before kick-off and at full time (16/11/2026): crests, names, URBA, division and round. */
+function matchCard(stage) {
+  const {fixture, match} = replay, final = stage==='final';
+  const {venue} = assignment(fixture);
+  const side = id => '<div class="mc-team">'+crest(id)+'<strong>'+esc(nameOf(id))+'</strong></div>';
+  const winner = final ? (match.homeScore>match.awayScore?fixture.homeId:match.awayScore>match.homeScore?fixture.awayId:null) : null;
+  const center = final
+    ? '<div class="mc-score"><span>'+match.homeScore+'</span><i>–</i><span>'+match.awayScore+'</span></div><small class="mc-sub">Tries '+match.homeTries+' – '+match.awayTries+(winner?' · Ganó '+esc(shortOf(winner)):' · Empate')+'</small>'
+    : '<div class="mc-vs">VS</div><small class="mc-sub">'+esc(venue ?? '')+'</small>';
+  const actions = final
+    ? button('Ver el balance','close-final','','ghost','file')+button('Continuar','page','resumen','primary','right')
+    : button('Simular rápido','quick-sim','','ghost','bolt')+button('Empezar partido','start-match','','primary','play');
+  return '<div class="match-card'+(final?' final':'')+'" role="dialog" aria-label="'+(final?'Resultado final':'Antes del partido')+'"><div class="mc-inner">'+
+    '<div class="mc-head"><span class="mc-urba">URBA</span><span>'+esc(fixture.division)+' · '+esc(roundLabel(fixture))+'</span>'+(final?'<span class="mc-tag">Final</span>':'')+'</div>'+
+    '<div class="mc-body">'+side(fixture.homeId)+'<div class="mc-center">'+center+'</div>'+side(fixture.awayId)+'</div>'+
+    '<div class="mc-actions">'+actions+'</div></div></div>';
+}
 function replayPage() {
   if (!replay) return intro('PARTIDOS','Replay 2D','Seleccioná un partido jugado desde el fixture.')+button('Ir al torneo','page','torneo','primary','cup');
   const {fixture, match} = replay;
@@ -1095,7 +1125,8 @@ function replayPage() {
     [fixture.homeId,fixture.awayId].flatMap(team=>Array.from({length:15},(_,i)=>'<span class="pitch-dot '+(team===fixture.awayId?'away':'home')+'" data-replay-dot="'+esc(team+'|'+(i+1))+'">'+(i+1)+'</span>')).join('')+
     '<span id="replay-ball-shadow" class="replay-ball-shadow" aria-hidden="true"></span><span id="replay-ball" class="ball" aria-hidden="true"></span><span id="replay-carrier" class="replay-carrier" hidden></span>'+
     '<span class="big-play" id="replay-bigplay" aria-hidden="true">'+icon('play')+'</span><div class="replay-flash" id="replay-flash" aria-live="polite"></div></div>'+
-    boards(fixture,'bottom')+'<div class="stand stand-bottom" aria-hidden="true"></div></div>'+
+    boards(fixture,'bottom')+'<div class="stand stand-bottom" aria-hidden="true"></div>'+
+    (replay.intro?matchCard('intro'):replay.showFinal?matchCard('final'):'')+'</div>'+
     '<div class="replay-bar"><button type="button" class="btn small" data-do="toggle-replay">'+icon(replay.playing?'pause':'play')+(replay.playing?'Pausar':'Reproducir')+'</button>'+
       '<span class="replay-now"><strong id="replay-phase">Saque inicial</strong><span id="replay-possession"></span></span>'+
       '<span class="speed-chips">'+[1,2,4].map(x=>'<button type="button" class="chip'+(replay.speed===x?' active':'')+'" data-do="replay-speed" data-value="'+x+'">'+x+'×</button>').join('')+'</span></div>'+
@@ -1537,7 +1568,9 @@ function finishReplay() {
   saveReplayProgress();
   revealMatch(replay.fixture.id);
   pauseReplay();
-  drawReplay();
+  // Big final scoreboard (16/11/2026), also after «Simular rápido» or «Saltar al resultado».
+  replay.intro=false; replay.showFinal=true;
+  if (page==='partido') render(); else drawReplay();
 }
 function animate(time) {
   if (!replay?.playing || page!=='partido') return;
@@ -1596,7 +1629,7 @@ function openReplay(id) {
     const names=new Map([fixture.homeId,fixture.awayId].flatMap(clubId=>club(clubId).players.map(p=>[p.id,p.name])));
     const known=resultVisible(fixture), resume=known?0:Math.min(end-1,Math.max(0,Number(store.get(replayProgressKey(id)))||0));
     replay={fixture,match,names,end,events:[...match.events].sort((a,b)=>a.second-b.second),
-      second:resume,seen:resume,speed:1,playing:false,known};
+      second:resume,seen:resume,speed:1,playing:false,known,intro:!known&&resume===0};
     closeModal();
     changePage('partido');
   } catch {
@@ -1930,7 +1963,10 @@ document.addEventListener('click',async event=>{
     case 'ready': await act('ready'); break;
     case 'advance': await act(Number.isFinite(currentRound())?'advance':'next-season'); break;
     case 'replay': openReplay(value); break;
-    case 'toggle-replay': toggleReplay(); break;
+    case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
+    case 'start-match': if (replay) { replay.intro=false; render(); toggleReplay(); } break;
+    case 'quick-sim': if (replay) finishReplay(); break;
+    case 'close-final': if (replay) { replay.showFinal=false; render(); app.querySelector('#replay-report')?.scrollIntoView({behavior:'smooth'}); } break;
     case 'replay-speed': if (replay) { replay.speed=Number(value); app.querySelectorAll('[data-do="replay-speed"]').forEach(n=>n.classList.toggle('active',n.dataset.value===value)); } break;
     case 'seek-event':
       pauseReplay();
