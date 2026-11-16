@@ -57,11 +57,16 @@ test('fixture results persist, standings count once and replay survives training
   assert.equal(simulateFixture(state,fixture.id),state);
   const rows=getStandings(state,fixture.division);assert.equal(rows.reduce((n,r)=>n+r.played,0),2);
 });
-test('lineups reject out-of-position players and season advances only when complete', async () => {
-  const {setLineup,advanceSeason}=await import('./index.ts');
+test('out-of-position players play at a cost, the bench is saved, and the season advances only when complete', async () => {
+  const {setLineup,advanceSeason,slotOverall,positionPenalty}=await import('./index.ts');
   let state=createInitialState(31);const club=state.clubs[0];const lineup=club.players.slice(0,15).map(p=>p.id);
   state=setLineup(state,club.id,lineup);assert.deepEqual(state.clubs[0].lineup,lineup);
-  [lineup[0],lineup[9]]=[lineup[9],lineup[0]];assert.throws(()=>setLineup(state,club.id,lineup));assert.throws(()=>advanceSeason(state));
+  const prop=club.players[0],flyHalf=club.players[9];
+  [lineup[0],lineup[9]]=[lineup[9],lineup[0]];state=setLineup(state,club.id,lineup,club.players.slice(15,23).map(p=>p.id));
+  assert.deepEqual(state.clubs[0].bench,club.players.slice(15,23).map(p=>p.id));
+  assert.ok(slotOverall(flyHalf,'Pilar izquierdo')<overall({...flyHalf,position:'Pilar izquierdo'}),'a fly-half at prop pays the cost');
+  assert.equal(positionPenalty(prop,'Pilar derecho'),.5);assert.equal(positionPenalty(flyHalf,'Pilar izquierdo'),3);
+  assert.throws(()=>advanceSeason(state));
   const sample=generateMatch(state.clubs[0],state.clubs[1],DEFAULT_TACTICS,DEFAULT_TACTICS,15);
   state={...state,fixtures:state.fixtures.map(f=>({...f,match:{...sample,frames:[]}}))};
   const next=advanceSeason(state);assert.equal(next.season,state.season+1);assert.equal(next.fixtures.length,546);assert.ok(next.fixtures.every(f=>!f.match));

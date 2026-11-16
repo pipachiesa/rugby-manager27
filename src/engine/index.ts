@@ -17,7 +17,7 @@ export type SeniorSquad = 'Primera' | 'Intermedia' | 'Pre A' | 'Pre B';
 export interface Injury { type: string; name: string; weeksOut: number; since: number; season: number; }
 export interface Player { academyClubId?: string; academyIntakeSeason?: number; academyEntry?: 'intake' | 'cover'; youthSeasons?: number; development?: DevelopmentState; trajectory?: { seasons: number; complete: boolean }; seniorSquad?: SeniorSquad; positions?: Position[]; injury?: Injury | null; id: string; name: string; age: number | null; birthDate?: string; ageKnown?: boolean; ageEstimated?: boolean; estimatedBirthDate?: string | null; sourceIds?: string[]; sourceRecordId?: string; position: Position; squad: Squad; attributes: Attributes; potential: number; fitness: number; estimated: boolean; fictional: boolean; }
 export interface ClubDefinition { id?: string; name: string; shortName?: string; division: Division; color: string; secondaryColor: string; strength: number; }
-export interface Club { id: string; name: string; shortName: string; division: Division; color: string; secondaryColor: string; strength: number; players: Player[]; lineup?: string[]; }
+export interface Club { id: string; name: string; shortName: string; division: Division; color: string; secondaryColor: string; strength: number; players: Player[]; lineup?: string[]; bench?: string[]; formations?: { name: string; lineup: string[]; bench: string[] }[]; formation?: string; }
 export interface Tactics { mentality?: 'Ofensiva' | 'Equilibrada' | 'Defensiva'; penalty?: 'Palos' | 'Touch' | 'Según marcador'; attack: '1-3-3-1' | '2-4-2'; defense: 'Drift' | 'Rush'; scrum: 'Estable' | 'Presión'; lineout: 'Seguro' | 'Competir'; maul: 'Evitar' | 'Usar'; kicking: 'Conservador' | 'Territorial'; ruck: 'Rápido' | 'Asegurar'; }
 export const DEFAULT_TACTICS: Tactics = { mentality:'Equilibrada', penalty:'Según marcador', attack:'1-3-3-1', defense:'Drift', scrum:'Estable', lineout:'Seguro', maul:'Usar', kicking:'Territorial', ruck:'Asegurar' };
 export interface Fixture { id: string; division: Division; round: number; homeId: string; awayId: string; match?: MatchResult; stage?: 'semi' | 'final'; neutral?: boolean; }
@@ -362,6 +362,32 @@ export function createPlayerAttributes(position: Position, base: number, seed: s
 export function canPlay(player: Pick<Player, 'position' | 'positions'>, position: Position): boolean {
   return player.position === position || !!player.positions?.includes(position);
 }
+/**
+ * Out of position (16/11/2026): any senior can be picked anywhere, at a cost in attribute points applied to all his
+ * attributes for that match. Close swaps cost little (loosehead to tighthead 0.5, about 2.5 rating points), the same
+ * unit more, forwards to backs a lot (3 points, about 15 rating points).
+ */
+const POSITION_UNIT: Record<Position, string> = { 'Pilar izquierdo': 'front', Hooker: 'front', 'Pilar derecho': 'front', 'Segunda línea': 'lock', Ala: 'back-row', 'Número 8': 'back-row', 'Medio scrum': 'halves', Apertura: 'halves', Centro: 'centres', Wing: 'back-three', Fullback: 'back-three' };
+const NEAR: Record<string, string[]> = { front: [], lock: ['back-row'], 'back-row': ['lock'], halves: ['centres'], centres: ['halves', 'back-three'], 'back-three': ['centres'] };
+export function positionPenalty(player: Pick<Player, 'position' | 'positions'>, position: Position): number {
+  if (canPlay(player, position)) return 0;
+  const a = POSITION_UNIT[player.position], b = POSITION_UNIT[position];
+  if ((player.position === 'Pilar izquierdo' && position === 'Pilar derecho') || (player.position === 'Pilar derecho' && position === 'Pilar izquierdo')) return .5;
+  if (a === b) return player.position === 'Ala' || position === 'Ala' || player.position === 'Wing' || position === 'Wing' ? .5 : 1;
+  if (NEAR[a]?.includes(b)) return 1.2;
+  const forward = (p: Position) => POSITIONS.indexOf(p) < 8;
+  return forward(player.position) === forward(position) ? 2 : 3;
+}
+/** Attributes of a player for one match in a given position (his own, or with the out-of-position cost). */
+export function slotAttributes(player: Pick<Player, 'position' | 'positions' | 'attributes'>, position: Position): Attributes {
+  const cost = positionPenalty(player, position);
+  if (!cost) return player.attributes;
+  return Object.fromEntries(Object.entries(player.attributes).map(([k, v]) => [k, Math.max(1, v - cost)])) as Attributes;
+}
+/** Rating of a player in a position: weighted for that position, after the out-of-position cost. */
+export function slotOverall(player: Pick<Player, 'position' | 'positions' | 'attributes'>, position: Position): number {
+  return overall({ position, attributes: slotAttributes(player, position) });
+}
 /** Default XV: the best available player for each position, natural position first, then a documented second one. */
 export const available = (p: Pick<Player, 'injury'>) => !p.injury;
 export function autoLineup(club: Pick<Club, 'players'>): string[] {
@@ -502,7 +528,8 @@ export function effectiveLineup(club:Club):string[] { return selection(club).sli
 function selection(club:Club):Player[] {
   const senior=club.players.filter(p=>p.squad==='Plantel superior'&&available(p));
   const ids=club.lineup??[];
-  if(ids.length!==15 || new Set(ids).size!==15 || !ids.every(id=>club.players.some(p=>p.id===id))) {
+  // A saved XV survives a player leaving or getting injured: only that slot is filled for the match.
+  if(ids.length!==15 || new Set(ids).size!==15 || !ids.some(id=>senior.some(p=>p.id===id))) {
     const automatic=autoLineup(club).map(id=>senior.find(p=>p.id===id)!);
     return [...automatic,...senior.filter(p=>!automatic.includes(p))];
   }
@@ -579,8 +606,11 @@ const onScale = (n: number) => clamp(Math.round((n - 1) * 100 / 19), 0, 100);
 function prepareTeam(club: Club, tactics: Tactics, rng: Random): Team {
   const chosen = selection(club);
   if (chosen.length < 15) throw new Error('El club necesita 15 jugadores habilitados');
-  const lineup = chosen.slice(0, 15);
-  const bench = [0, 3].map(slot => chosen.slice(15).find(p => p.position === POSITIONS[slot]));
+  // Each starter plays with the attributes of his slot (out-of-position cost included).
+  const lineup = chosen.slice(0, 15).map((p, i) => ({ ...p, attributes: slotAttributes(p, POSITIONS[i]) }));
+  // The saved bench (club.bench) is used first; the engine brings on a prop and a lock in the second half.
+  const savedBench = (club.bench ?? []).map(id => chosen.slice(15).find(p => p.id === id)).filter((p): p is Player => !!p);
+  const bench = [0, 3].map(slot => savedBench.find(p => canPlay(p, POSITIONS[slot])) ?? chosen.slice(15).find(p => p.position === POSITIONS[slot]));
   const fitness = Math.round(lineup.reduce((n, p) => n + p.fitness, 0) / 15);
   // Calibrated against URBA 2016-2026 (research/history): the engine already has more per-match noise than real
   // results, so day form only adds a small ±2 % swing.
@@ -1095,11 +1125,18 @@ export function setTactics(state:LeagueState, clubId:string, tactics:Tactics):Le
 }
 
 /** Sets the starting fifteen in shirt order, checking eligible players and positions. */
-export function setLineup(state:LeagueState, clubId:string, playerIds:string[]):LeagueState {
+export function setLineup(state:LeagueState, clubId:string, playerIds:string[], benchIds?:string[]):LeagueState {
   const club=state.clubs.find(c=>c.id===clubId); if(!club) throw new Error('Club no encontrado');
   if(playerIds.length!==15||new Set(playerIds).size!==15) throw new Error('La formación debe tener 15 jugadores distintos');
-  for(let i=0;i<15;i++) { const p=club.players.find(p=>p.id===playerIds[i]); if(!p||p.squad!=='Plantel superior'||!canPlay(p,POSITIONS[i])||!available(p)) throw new Error(`Jugador no elegible para la posición ${i+1}`); }
-  return {...state,clubs:state.clubs.map(c=>c.id===clubId?{...c,lineup:[...playerIds]}:c)};
+  // Any available senior can start anywhere; out of position he plays with a cost (positionPenalty).
+  for(let i=0;i<15;i++) { const p=club.players.find(p=>p.id===playerIds[i]); if(!p||p.squad!=='Plantel superior'||!available(p)) throw new Error(`Jugador no elegible para la posición ${i+1}`); }
+  let bench=club.bench;
+  if(benchIds){
+    if(benchIds.length>8||new Set(benchIds).size!==benchIds.length||benchIds.some(id=>playerIds.includes(id))) throw new Error('Suplentes no válidos');
+    for(const id of benchIds){const p=club.players.find(p=>p.id===id);if(!p||p.squad!=='Plantel superior') throw new Error('Suplente no elegible');}
+    bench=[...benchIds];
+  }
+  return {...state,clubs:state.clubs.map(c=>c.id===clubId?{...c,lineup:[...playerIds],bench}:c)};
 }
 function advanceAcademyPlayer(player: Player, clubId: string): Player {
   const age = player.age == null ? null : player.age + 1;
@@ -1207,6 +1244,8 @@ const destinations = [
   { country: 'Francia', competition: 'Segunda división profesional' },
   { country: 'Italia', competition: 'Primera división' },
   { country: 'España', competition: 'Primera división' },
+  // 16/11/2026: the Argentine franchise of the Super Rugby Americas also signs URBA players.
+  { country: 'Argentina', competition: 'Super Rugby Americas (Pampas)' },
 ];
 function updateOverseasCareer(career: OverseasCareer, season: number, seed: number): OverseasCareer {
   if (career.status !== 'abroad') return career;
@@ -1275,7 +1314,7 @@ export function advanceSeason(state: LeagueState, evidenceFor?: (playerId: strin
       overseasCareers.push(career);
       abroadIds.add(career.player.id);
       players = players.filter(p => p.id !== career.player.id);
-      news.push({ round: 0, season, clubId: club.id, kind: 'squad', playerId: career.player.id, text: `${career.player.name} se incorporó al rugby de ${career.destination.country} en la partida.` });
+      news.push({ round: 0, season, clubId: club.id, kind: 'squad', playerId: career.player.id, text: career.destination.country === 'Argentina' ? `${career.player.name} firmó con Pampas para el Super Rugby Americas.` : `${career.player.name} se va al rugby de ${career.destination.country} (${career.destination.competition}).` });
     }
     const next = { ...club, division: divisions[club.id] ?? club.division, players, lineup: career && club.lineup?.includes(career.player.id) ? undefined : club.lineup };
     next.players = addAcademyIntake(next, season, state.seed, state.nameWeights);

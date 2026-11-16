@@ -973,3 +973,10 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .invite-banner>div:first-child{flex:1 1 260px;display:grid;gap:4px}
 .invite-banner>div:first-child small{color:var(--ink-2)}
 .invite-banner .code-box{margin:0;flex:0 1 auto}
+
+/* Formation manager (16/11/2026) */
+.formation-manager{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.formation-manager label{font-weight:600}
+.formation-manager select,.formation-manager input{min-width:0;flex:1 1 160px;max-width:240px}
+.shirt-slot.off-position .shirt-meta{color:var(--warn)}
+.squad-pick-group{margin:10px 4px 4px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}

@@ -415,7 +415,22 @@ export function applyClubAction(s,clubId,action,p){
   if(!p.tactics||Object.entries(options).some(([k,v])=>!v.includes(tactics[k])))throw Error('Táctica no válida.');
   return E.setTactics(s,clubId,Object.fromEntries(Object.keys(options).map(k=>[k,tactics[k]])));
  }
- if(action==='lineup')return E.setLineup(s,clubId,p.ids);
+ if(action==='lineup')return E.setLineup(s,clubId,p.ids,Array.isArray(p.bench)?p.bench:undefined);
+ // Formation manager (16/11/2026): named XV + bench, saved over an existing one with the same name, picked to play.
+ if(action==='save-formation'){
+  const name=String(p.name??'').trim().slice(0,30);if(!name)throw Error('Poné un nombre a la formación.');
+  const next=E.setLineup(s,clubId,p.ids,Array.isArray(p.bench)?p.bench:[]),club=next.clubs.find(c=>c.id===clubId);
+  const list=(club.formations??[]).filter(f=>f.name!==name);if(list.length>=10)throw Error('Hasta 10 formaciones guardadas.');
+  return {...next,clubs:next.clubs.map(c=>c.id===clubId?{...c,formations:[...list,{name,lineup:[...club.lineup],bench:[...(club.bench??[])]}],formation:name}:c)};
+ }
+ if(action==='use-formation'){
+  const club=s.clubs.find(c=>c.id===clubId),f=club?.formations?.find(f=>f.name===p.name);if(!f)throw Error('Formación no encontrada.');
+  // Players who left or are injured stay in the saved formation; each match fills their slot.
+  return {...s,clubs:s.clubs.map(c=>c.id===clubId?{...c,lineup:[...f.lineup],bench:[...f.bench],formation:f.name}:c)};
+ }
+ if(action==='delete-formation'){
+  return {...s,clubs:s.clubs.map(c=>c.id===clubId?{...c,formations:(c.formations??[]).filter(f=>f.name!==p.name),formation:c.formation===p.name?undefined:c.formation}:c)};
+ }
  if(action==='promote'){
   const player=c.players.find(x=>x.id===p.playerId);if(!player)throw Error('Jugador no encontrado.');
   if(player.squad!=='M19')throw Error('Solo se promueven jugadores M19 al plantel superior.');
@@ -559,7 +574,9 @@ export function clubObjective(world,clubId){
 // 30 per 1000 match hours: Argentine senior amateur study (30.9, 2019) and England community rugby (CRISP 29.2,
 // 2021-22). Type shares and days lost: research/injuries.json (concussion share and overall rates sourced; most other
 // shares and durations are documented estimates).
-export const INJURY_RATE_PER_1000H=30;
+// 16/11/2026, user's call: the real rate (30) made the game «medio injugable» (about 18 injuries per club and
+// season). Halved for playability, and minor injuries (median four weeks or less) last a quarter less.
+export const INJURY_RATE_PER_1000H=15,MINOR_INJURY_DAYS=.75;
 export const INJURY_TYPES=[
  // [id, name, share, days median, days min, days max, forwards multiplier]
  ["conmocion-cerebral","Conmoción cerebral",0.17,16,12,28,1.0],
@@ -588,7 +605,7 @@ function rollInjury(world,round,player,minutes,forward){
  const [type,name,,med,min,max]=INJURY_TYPES[i];
  // Skewed around the median: half below it, a long tail up to the maximum.
  const u=unit(world.seed,world.season,round,player.id,'days'),days=u<.5?min+(med-min)*u*2:med+(max-med)*((u-.5)*2)**2;
- return {type,name,weeksOut:Math.max(1,Math.ceil(days/7)),since:round,season:world.season};
+ return {type,name,weeksOut:Math.max(1,Math.ceil(days*(med<=28?MINOR_INJURY_DAYS:1)/7)),since:round,season:world.season};
 }
 const FORWARD=new Set(E.POSITIONS.slice(0,8));
 /** Heals one week of every injury, then rolls new injuries for the players of the round just played. */
@@ -627,12 +644,12 @@ export const PARALLEL_CATEGORIES=['Intermedia','Pre A','Pre B','M19','M17'];
 const SENIOR_ORDER=['Primera','Intermedia','Pre A','Pre B'];
 const groupOf=p=>p.squad==='Plantel superior'?(p.seniorSquad??'Primera'):p.squad;
 function categoryTeams(club,matchday){
- const used=new Set(matchday),teams={};
- const pick=(cat,pools)=>{const slots=E.POSITIONS.map(position=>{
-  for(const pool of pools){const p=pool.filter(p=>!used.has(p.id)&&E.available(p)&&E.canPlay(p,position)).sort((a,b)=>E.overall(b)-E.overall(a))[0];if(p){used.add(p.id);return E.overall(p);}}
+ const used=new Set(matchday),teams={},players={};
+ const pick=(cat,pools)=>{const ids=players[cat]=[];const slots=E.POSITIONS.map(position=>{
+  for(const pool of pools){const p=pool.filter(p=>!used.has(p.id)&&E.available(p)&&E.canPlay(p,position)).sort((a,b)=>E.overall(b)-E.overall(a))[0];if(p){used.add(p.id);ids.push(p.id);return E.overall(p);}}
   // Nobody for the position: the best leftover of the group plays out of position, or the slot is a weak fill-in.
   const any=pools[0].filter(p=>!used.has(p.id)&&E.available(p)).sort((a,b)=>E.overall(b)-E.overall(a))[0];
-  if(any){used.add(any.id);return E.overall(any)-6;}return null;});
+  if(any){used.add(any.id);ids.push(any.id);return E.overall(any)-6;}return null;});
   const known=slots.filter(x=>x!==null),base=known.length?known.reduce((a,b)=>a+b,0)/known.length:55;
   teams[cat]=slots.reduce((n,x)=>n+(x??base-10),0)/15;};
  const seniors=club.players.filter(p=>p.squad==='Plantel superior'),by=g=>seniors.filter(p=>groupOf(p)===g);
@@ -640,6 +657,7 @@ function categoryTeams(club,matchday){
  pick('Pre A',[by('Pre A'),by('Pre B'),by('Intermedia')]);
  pick('Pre B',[by('Pre B'),seniors]);
  for(const cat of ['M19','M17'])pick(cat,[club.players.filter(p=>p.squad===cat)]);
+ Object.defineProperty(teams,'players',{value:players});
  return teams;
 }
 const poisson=(lambda,u)=>{let k=0,p=Math.exp(-lambda),c=p;while(u>c&&k<25){k++;p*=lambda/k;c+=p;}return k;};
@@ -652,12 +670,16 @@ function parallelScore(world,fixtureId,cat,rh,ra){
  return [side(ht,'h'),side(at,'a'),ht,at];
 }
 function playParallelRound(world,round){
- const results={...(world.parallel?.results??{})},clubs=Object.fromEntries(world.clubs.map(c=>[c.id,c]));
+ const results={...(world.parallel?.results??{})},clubs=Object.fromEntries(world.clubs.map(c=>[c.id,c])),tired=new Set();
  for(const f of world.fixtures.filter(f=>f.round===round&&f.match&&!f.stage&&!results[f.id])){
   const h=categoryTeams(clubs[f.homeId],f.match.homeLineup??[]),a=categoryTeams(clubs[f.awayId],f.match.awayLineup??[]);
   results[f.id]=Object.fromEntries(PARALLEL_CATEGORIES.map(cat=>[cat,parallelScore(world,f.id,cat,h[cat],a[cat])]));
+  for(const t of [h,a])for(const ids of Object.values(t.players))ids.forEach(id=>tired.add(id));
  }
- return {...world,parallel:{...(world.parallel??{}),season:world.season,results}};
+ // 16/11/2026: playing for Intermedia, Pre A, Pre B, M19 or M17 tires like Primera. The week's recovery already ran
+ // (simulateFixture), so the match costs what a Primera starter's 12 points cost after it: 12 × 0.4.
+ const clubsOut=tired.size?world.clubs.map(c=>c.players.some(p=>tired.has(p.id))?{...c,players:c.players.map(p=>tired.has(p.id)?{...p,fitness:Math.max(35,Math.round(p.fitness-12*.4))}:p)}:c):world.clubs;
+ return {...world,clubs:clubsOut,parallel:{...(world.parallel??{}),season:world.season,results}};
 }
 /** Standings of a parallel category for a division, up to (not including) beforeRound. Same points as Primera. */
 export function parallelStandings(world,division,cat,beforeRound=Infinity){
@@ -813,8 +835,23 @@ export const overall=p=>E.overall(p);
  * Deterministic per seed and season; each case is announced in the news.
  */
 const SQUAD_MAX=66,SQUAD_TARGET=64;
+/**
+ * Why a squad player leaves (16/11/2026, the user wanted a reason, not just «dejó el club»): he quits rugby (studies,
+ * work), moves to a nearby club where he will play more (a club without a manager, same or lower division) or moves
+ * away for work. Deterministic per seed, season and player.
+ */
+const DIVISION_RANK={'Top 14':0,'Primera A':1,'Primera B':2};
+function departureReason(world,club,player,managed){
+ const u=unit(world.seed,world.season,player.id,'leaves');
+ if(u<.45)return {text:['deja el rugby para dedicarse a sus estudios','deja el rugby por trabajo','deja de jugar al rugby'][Math.floor(u/.15)]};
+ // Only to a club with room in its senior squad, so the move never pushes it over the limit.
+ if(u<.85){const options=world.clubs.filter(o=>o.id!==club.id&&!managed.has(o.id)&&DIVISION_RANK[o.division]>=DIVISION_RANK[club.division]&&o.players.filter(p=>p.squad==='Plantel superior').length<SQUAD_TARGET-4)
+   .map(o=>({o,km:clubDistance(world,club.id,o.id)??999})).sort((a,b)=>a.km-b.km).slice(0,4);
+  if(options.length){const to=options[Math.floor(unit(world.seed,world.season,player.id,'to')*options.length)].o;return {to:to.id,text:`se va a ${to.name} (${to.division}) para tener más minutos`};}}
+ return {text:['se muda al interior por trabajo','se va a vivir al exterior'][u<.93?0:1]};
+}
 function squadTurnover(world){
- const news=[];
+ const news=[],moving=[],managed=new Set(world.managedClubs??[]);
  const clubs=world.clubs.map(c=>{
   const xv=new Set(E.autoLineup(c));
   let players=c.players.filter(p=>{
@@ -831,12 +868,18 @@ function squadTurnover(world){
     if(seniors.filter(q=>left.has(q.id)&&q.id!==p.id&&E.canPlay(q,p.position)).length<4)continue;
     out.add(p.id);left.delete(p.id);
    }
-   for(const p of seniors.filter(p=>out.has(p.id)))news.push({round:0,season:world.season,clubId:c.id,kind:'squad',playerId:p.id,text:`${p.name} dejó el club.`});
+   for(const p of seniors.filter(p=>out.has(p.id))){const why=departureReason(world,c,p,managed);if(why.to)moving.push({to:why.to,player:p});
+    news.push({round:0,season:world.season,clubId:c.id,kind:'squad',playerId:p.id,text:`${p.name} ${why.text}.`});}
    players=players.filter(p=>!out.has(p.id));
   }
-  return {...c,players,lineup:(c.lineup??[]).every(id=>players.some(p=>p.id===id))?c.lineup:undefined};
+  // The saved XV is kept even if someone left: his slot is filled for each match until the manager changes it.
+  return {...c,players};
  });
- return {...world,clubs,news:[...(world.news??[]),...news].slice(-2000)};
+ // Players moving to another club join its senior squad (spread by level with the rest at the end of the season).
+ const arriving=clubs.map(c=>{const incoming=moving.filter(m=>m.to===c.id).map(m=>({...m.player,promise:undefined}));
+  for(const p of incoming)news.push({round:0,season:world.season,clubId:c.id,kind:'squad',playerId:p.id,text:`${p.name} llega desde otro club para tener más minutos.`});
+  return incoming.length?{...c,players:[...c.players,...incoming]}:c;});
+ return {...world,clubs:arriving,news:[...(world.news??[]),...news].slice(-2000)};
 }
 export function advanceSeasonWorld(world){
  if(world.fixtures.some(f=>!f.stage&&!f.match))throw Error('Todavía hay partidos pendientes');
