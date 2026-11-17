@@ -1026,17 +1026,66 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .lc-swap select{flex:1;min-width:0}
 .lc-swap svg{width:18px;height:18px;flex:none;color:var(--ink-3)}
 /* Interactive kick at goal (16/11/2026) */
-.kick-game{display:grid;gap:10px}
-.kick-info{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--ink-2)}
-.kick-info b{color:var(--ink)}
-.kick-wind i{display:inline-block;font-style:normal;margin-left:4px}
-.kick-scene{width:100%;max-height:52vh;border-radius:10px;touch-action:none;cursor:crosshair;background:#1f5f3a}
-.kick-help{margin:0;text-align:center;color:var(--ink-2)}
-.kick-result{font:800 28px 'Barlow Condensed',sans-serif;text-transform:uppercase}
-.kick-result.in{color:#3fbf6a}.kick-result.out{color:#e3262b}
-.kick-power{position:relative;height:22px;border-radius:11px;background:linear-gradient(90deg,#c0392b,#e9b949 60%,#c0392b);overflow:hidden}
+/* Interactive kick at goal (17/11/2026): full-screen TV shot from behind the kicker, built from the replay stadium. */
+.kick-stage{position:fixed;inset:0;z-index:120;overflow:hidden;color:#fff;
+  background-color:#2b2f36;background-image:linear-gradient(180deg,#0b0e13 0,#1d232c 18%,#0000 40%),radial-gradient(circle at 3px 3px,var(--home-kit,#c8102e) 1.5px,transparent 2px),radial-gradient(circle at 8px 7px,#e8e2d6 1.3px,transparent 1.8px),radial-gradient(circle at 5px 10px,var(--away-kit,#1d4f8a) 1.4px,transparent 1.9px);
+  background-size:100% 100%,11px 13px,13px 11px,17px 14px}
+.kick-view{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:crosshair}
+.k-world{position:absolute;transform-origin:0 0;transform-style:preserve-3d}
+.k-up,.k-stand{transform-style:preserve-3d}
+.k-ground{position:absolute;inset:0}
+.k-crowd{position:absolute;background-color:#3e434b;background-image:radial-gradient(circle at 3px 3px,var(--home-kit,#c8102e) 1.5px,transparent 2px),radial-gradient(circle at 8px 7px,#e8e2d6 1.3px,transparent 1.8px),radial-gradient(circle at 5px 10px,var(--away-kit,#1d4f8a) 1.4px,transparent 1.9px);background-size:11px 13px,13px 11px,17px 14px}
+.k-apron{position:absolute;background:#2f7a3b;box-shadow:0 0 0 3px #14171b}
+.k-pitch.match-pitch{position:absolute;inset:0;margin:0;border-radius:0;max-height:none;
+  background:repeating-linear-gradient(90deg,#3d9a4a 0 7.14%,#368c43 7.14% 14.28%);box-shadow:inset 0 0 60px #0003}
+.k-pitch .post{display:none}
+.k-pitch .grass-logo{font-size:clamp(40px,8vw,120px)}
+.k-up{position:absolute;width:0;height:0}
+.k-stand.k-face{bottom:5px;transform:rotateX(-64deg)}
+.k-stand{position:absolute;bottom:0;transform-origin:50% 100%;transform:rotateX(-90deg)}
+.k-posts .k-upright{position:absolute;bottom:0;width:max(4px,7%);height:100%;background:linear-gradient(90deg,#d9d9d9,#fff 40%,#cfcfcf);border-radius:2px 2px 0 0}
+.k-posts .k-upright.l{left:0;transform:translateX(-50%)}.k-posts .k-upright.r{right:0;transform:translateX(50%)}
+.k-posts .k-bar{position:absolute;left:0;right:0;height:max(3px,1.4%);background:#fff;box-shadow:0 1px 0 #0003}
+.k-posts .k-pad{position:absolute;bottom:0;width:max(10px,18%);height:16%;background:var(--home-bg,var(--home-kit));border-radius:3px;box-shadow:inset 0 0 0 1px #0004}
+.k-posts .k-pad.l{left:0;transform:translateX(-50%)}.k-posts .k-pad.r{right:0;transform:translateX(50%)}
+.k-boards .boards{height:100%;padding:2px 4px;gap:2px;align-items:stretch}
+.k-boards .board{display:flex;align-items:center;justify-content:center;font-size:clamp(7px,1.2vw,15px)}
+.k-tribune{background-color:#3e434b;background-image:linear-gradient(180deg,#0000,#0005),radial-gradient(circle at 3px 3px,var(--home-kit,#c8102e) 1.5px,transparent 2px),radial-gradient(circle at 8px 7px,#e8e2d6 1.3px,transparent 1.8px),radial-gradient(circle at 5px 10px,var(--away-kit,#1d4f8a) 1.4px,transparent 1.9px),repeating-linear-gradient(180deg,#5b616b 0 6px,#3c4048 6px 7px);background-size:100% 100%,11px 13px,13px 11px,17px 14px,100% 7px}
+.k-dot.pitch-dot{position:absolute;inset:0;transform:none;width:100%;height:100%;font-size:clamp(8px,1vw,12px);font-weight:800;border-width:2px}
+.k-dot.home{background:var(--home-bg,var(--home-kit));color:var(--home-ink);border-color:#ffffffd9}
+.k-dot.away{background:var(--away-bg,var(--away-kit));color:var(--away-ink);border-color:#000000a6}
+.k-kicker .k-dot{outline:2px solid #ffe066;outline-offset:2px}
+.k-kicker{transition:transform .25s ease-in}
+.k-kicker.kicked .k-stand{animation:kick-step .35s ease-in forwards}
+@keyframes kick-step{to{transform:rotateX(-64deg) translateX(60%)}}
+.k-ball{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#efe7d4 55%,#b9a98a);box-shadow:inset 0 0 0 1px #6d5a3a,0 2px 4px #0006}
+.k-tee{position:absolute;left:15%;right:15%;bottom:-12%;height:18%;background:#f39200;border-radius:2px}
+#k-ball.flying .k-tee{display:none}
+#k-ball.flying .k-ball{animation:ball-spin .28s linear infinite}
+@keyframes ball-spin{0%{transform:scaleY(1)}50%{transform:scaleY(.55)}100%{transform:scaleY(1)}}
+.k-shadow{position:absolute;width:18px;height:9px;margin:-4px 0 0 -9px;border-radius:50%;background:#0007;filter:blur(1px)}
+.k-mark{position:absolute;width:0;height:0}
+.kick-aim{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:visible}
+.kick-aim line{filter:drop-shadow(0 2px 3px #000a)}
+.kick-aim.locked line{stroke-dasharray:none}
+.kick-aim.fade line{opacity:0;transition:opacity .4s}
+.kick-hud{position:absolute;top:12px;left:0;right:0;z-index:4;display:grid;justify-items:center;gap:8px;pointer-events:none;padding:0 12px}
+.kick-tv.tv-score{position:static;transform:none}
+.kick-tv .score{font-size:18px;letter-spacing:1.5px}
+.kick-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.kick-chips span{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:4px;background:#000b;font:600 14px/1.2 'Barlow Condensed',sans-serif;letter-spacing:.4px;color:#e8e2d6}
+.kick-chips b{color:#fff;font-weight:800}
+.kick-wind i{display:inline-grid;width:16px;height:16px}
+.kick-wind svg{width:16px;height:16px;color:#ffd34d}
+.kick-stage .replay-flash{z-index:5}
+.kick-panel{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:6;width:min(560px,calc(100% - 24px));display:grid;gap:10px;padding:12px 14px;border-radius:10px;background:#0e1116e6;box-shadow:0 10px 30px #0009;backdrop-filter:blur(4px)}
+.kick-help{margin:0;text-align:center;font-size:14px;color:#e8e2d6}
+.kick-actions{display:flex;justify-content:center;gap:8px}
+.kick-power{position:relative;height:22px;border-radius:11px;background:linear-gradient(90deg,#c0392b,#e9b949 60%,#c0392b);overflow:hidden;box-shadow:inset 0 0 0 2px #0006}
 .kick-zone{position:absolute;top:0;bottom:0;background:#3fbf6acc;border-left:2px solid #fff;border-right:2px solid #fff}
 .kick-needle{position:absolute;top:-2px;bottom:-2px;width:4px;margin-left:-2px;background:#111;box-shadow:0 0 0 2px #fff}
+@media(max-width:640px){.kick-chips span{font-size:12px;padding:3px 7px}.kick-tv .score{font-size:13px}.kick-panel{bottom:10px;padding:10px}}
+@media(prefers-reduced-motion:reduce){#k-ball.flying .k-ball{animation:none}}
 /* Champion and promotion celebration (16/11/2026) */
 .celebration{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:radial-gradient(ellipse at center,rgba(10,30,20,.82),rgba(3,8,6,.94));animation:mc-in .4s ease-out;overflow:hidden}
 .confetti{position:absolute;inset:0;pointer-events:none}
