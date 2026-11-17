@@ -245,7 +245,7 @@ function assignment(fixture) {
 
 function contextNavigation(group) {
   if (page==='jugador') return profileTabs.map(([id,label])=>[label,'profile-tab',id,profileTab===id]);
-  if (group[0]==='regresos') return ['Buscar jugadores','Regresos del exterior'].map(label=>[label,'market-tab',label,marketTab===label]);
+  if (group[0]==='regresos') return MARKET_SEARCH ? ['Buscar jugadores','Regresos del exterior'].map(label=>[label,'market-tab',label,marketTab===label]) : [];
   if (group[0]==='torneo') return ['Posiciones','Fixture'].map(label=>[label,'competition-nav',label,page==='torneo'&&tournamentMode===label]);
   if (group[0]==='resumen') return [];
   return group[2].filter(id=>id!=='jugador').map(id=>[nav.find(([key])=>key===id)[1],'page',id,page===id]);
@@ -857,7 +857,10 @@ function tournament() {
 }
 
 // Local market: players of clubs without a manager. Amateur rugby, nobody is paid: they move for minutes and closeness.
-let marketTab = 'Buscar jugadores', marketLimit = 40;
+// 17/11/2026: the local transfer search is off for now (user's decision); only returns from abroad remain. A scout
+// office would come back with the club budget. The code stays, behind this flag.
+const MARKET_SEARCH = false;
+let marketTab = MARKET_SEARCH ? 'Buscar jugadores' : 'Regresos del exterior', marketLimit = 40;
 const marketQuery = {offer:'',text:'',position:'',division:'',club:'',min:'',distance:'',role:'',sort:'best'};
 const interestTone = x => x>=.45?'r-elite':x>=.25?'r-good':x>=.12?'r-ok':'r-poor';
 const interestLabel = x => x>=.45?'Alto':x>=.25?'Medio':x>=.12?'Bajo':'Muy bajo';
@@ -889,8 +892,8 @@ function marketTable() {
 function patchMarket() { const el=document.querySelector('#market-results'); if (el) { el.innerHTML=marketTable(); const n=document.querySelector('#market-count'); if (n) n.textContent=marketRows().length+' jugadores'; } }
 function market() {
   const c = currentClub();
+  if (!MARKET_SEARCH||marketTab!=='Buscar jugadores') return intro(c.name,'Regresos del exterior','Jugadores del club que juegan afuera y podrían volver.')+returnsMarket();
   const intro_ = intro(c.name,'Mercado','Los jugadores consideran el rol, los minutos y la cercanía del club.');
-  if (marketTab!=='Buscar jugadores') return intro_+returnsMarket();
   const round = currentRound(), t = world().transfers ?? {}, used = t.contacts?.[c.id]===world().season+'-'+round;
   const others = world().clubs.filter(x=>x.id!==c.id&&!(world().managedClubs ?? []).includes(x.id)).sort((a,b)=>a.name.localeCompare(b.name,'es'));
   const sel = (key,label,opts) => '<select data-market="'+key+'" aria-label="'+label+'">'+opts.map(([l,v])=>option(l,v,marketQuery[key])).join('')+'</select>';
