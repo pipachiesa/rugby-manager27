@@ -995,6 +995,135 @@ function unpackTimeline(match: MatchResult): ReplayMoment[] {
     return { second, x: x / 10, y: y / 10, h: h / 10 || undefined, phase, flight, carrierId: ids[carrierIndex], targetId: ids[targetIndex], possessionId: flags & 1 ? match.homeId : match.awayId, homeDirection: flags & 2 ? -1 : 1, homeScore, awayScore };
   });
 }
+/**
+ * Replay shapes (16/11/2026, rewritten after the user found the animation unrealistic: «parece todo un ruck» and the
+ * ball «se queda en el medio»). Purely visual: where each of the 15 shirts stands at a moment, given the phase, who has
+ * the ball, the attacking direction (dir: +1 attacks towards x = 100) and the ball. x runs along the pitch (0-100,
+ * in-goals included), y across (0-70). Index i is the shirt minus one.
+ *  - Open play: a breakdown with two or three bodies, forwards in pods (1-3-3-1 or 2-4-2), backs in a deep diagonal
+ *    line to the open side, wings near the touchlines, full-back deep. The defence: a flat line across the pitch just
+ *    on its side of the ball, with the full-back and a wing back.
+ *  - Scrum: two packs bound 3-4-1, scrum-halves at the feed, back lines five metres back.
+ *  - Lineout: two lines of forwards 5-15 m in from touch, hooker throwing, backs ten metres back.
+ *  - Maul: a moving cluster. Kick: chasers in a line, back three under the ball. Restart: kickers on halfway,
+ *    receivers spread in their half. Kick at goal: kicker at the tee, defence behind its posts.
+ */
+interface ShapeContext { phase?: ReplayPhase; attacking: boolean; dir: number; bx: number; by: number; nx: number; ny: number; tactics: Tactics; second: number; }
+// Each team is placed relative to its own direction: own(d) is d units from the ball towards the team's own goal
+// line, which is where both the attack's support and the defence's line stand.
+function teamShape(c: ShapeContext): [number, number][] {
+  const { phase, attacking, dir, bx, by, tactics } = c;
+  const own = (d: number) => bx - dir * d;
+  const open = by < 35 ? 1 : -1;                     // the open side (more space)
+  const across = (d: number) => clamp(by + open * d, 3, 67);
+  const wobble = (i: number) => Math.sin(c.second / 19 + i * 1.7) * .5;
+  const out: [number, number][] = Array.from({ length: 15 }, () => [bx, by]);
+  const set = (i: number, x: number, y: number) => { out[i] = [x + wobble(i) * .6, clamp(y + wobble(i + 7), 2, 68)]; };
+  const all = Array.from({ length: 15 }, (_, i) => i);
+  const flatLine = (x: number, ids: number[], from = 6, to = 64) => {
+    const n = ids.length;
+    // Staggered a little, and the ends sit a step deeper, as a real line does.
+    ids.forEach((i, k) => { const t = n === 1 ? .5 : k / (n - 1); const y = from + (to - from) * t; set(i, x - dir * ((k % 2) * .9 + Math.abs(t - .5) * 3), y + (by - y) * .25); });
+  };
+  const ownTryLine = dir > 0 ? 8 : 92;
+  if (phase === 'scrum') {
+    const pack: [number, number][] = [[1, -1.6], [1, 0], [1, 1.6], [2.3, -.8], [2.3, .8], [2.1, -2.7], [2.1, 2.7], [3.5, 0]];
+    pack.forEach(([d, w], i) => set(i, own(d), by + w));
+    set(8, own(.4), by + (attacking ? 3 : 3.8) * open);
+    if (attacking) {
+      [9, 11, 12].forEach((i, k) => set(i, own(7 + k * 2.4), across(7 + k * 8)));
+      set(open > 0 ? 13 : 10, own(10), by < 35 ? 63 : 7);
+      set(open > 0 ? 10 : 13, own(7), clamp(by - open * 13, 4, 66));
+      set(14, own(18), across(12));
+    } else {
+      flatLine(own(6), [9, 11, 12, open > 0 ? 13 : 10], by + open * 6, by < 35 ? 60 : 10);
+      set(open > 0 ? 10 : 13, own(9), clamp(by - open * 12, 4, 66));
+      set(14, own(24), across(8));
+    }
+    return out;
+  }
+  if (phase === 'lineout') {
+    const edge = by < 35 ? 0 : 70, inward = by < 35 ? 1 : -1;
+    [0, 2, 3, 4, 5, 6, 7].forEach((i, k) => set(i, own(.8), edge + inward * (5.5 + k * 1.5)));
+    set(1, attacking ? bx : own(1.5), edge + inward * (attacking ? .6 : 3)); // the hooker throws in
+    set(8, own(2), edge + inward * 17);
+    if (attacking) [9, 11, 12, 13].forEach((i, k) => set(i, own(10 + k * 2.5), edge + inward * (24 + k * 9)));
+    else flatLine(own(10), [9, 11, 12, 13], edge + inward * 22, edge + inward * 62);
+    set(10, own(attacking ? 12 : 11), edge + inward * 12);
+    set(14, own(attacking ? 22 : 26), 35);
+    return out;
+  }
+  if (phase === 'restart' || phase === 'halftime' || phase === 'fulltime') {
+    // Kick-off from halfway: the kickers spread on the line, the receivers in their own half.
+    if (attacking) all.forEach((i, k) => set(i, 50 - dir * (i === 9 ? .5 : 1.5), 4 + k * 4.4));
+    else {
+      [0, 1, 2, 3, 4, 5, 6, 7].forEach((i, k) => set(i, 50 - dir * (11 + (k % 2) * 5), 14 + k * 5.8));
+      [8, 9, 11, 12].forEach((i, k) => set(i, 50 - dir * (21 + k * 2), 18 + k * 11));
+      set(10, 50 - dir * 30, 10); set(13, 50 - dir * 30, 60); set(14, 50 - dir * 36, 35);
+    }
+    return out;
+  }
+  if (phase === 'goal') {
+    // Kick at goal: the kicker at the tee, his team behind him, the defence on its own try line.
+    if (attacking) all.forEach((i, k) => set(i, own(12 + (k % 5) * 3), 20 + (k % 8) * 4));
+    else all.forEach((i, k) => set(i, ownTryLine - dir * (1 + (k % 3)), 21 + k * 2));
+    return out;
+  }
+  if (phase === 'try') {
+    // The scorer grounds it; team-mates arrive behind him and the defence trails in between.
+    all.forEach((i, k) => set(i, attacking ? own(4 + (k % 5) * 3) : own(-3 - (k % 4) * 3), by + ((k % 7) - 3) * 4));
+    return out;
+  }
+  if (phase === 'kick') {
+    // Kick: the kicking side chases from the ball's line, the other back three run back under the ball.
+    // The chasers fan out from the kick and close in towards where it will land.
+    if (attacking) all.forEach((i, k) => { const y = 6 + k * 4.2; set(i, own(i < 8 ? 3 + (k % 3) : 1 + (k % 2)), y + (c.ny - y) * .35); });
+    else {
+      flatLine(own(3), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]);
+      set(14, c.nx, c.ny); set(10, c.nx - dir * 4, clamp(c.ny - 12, 4, 66)); set(13, c.nx - dir * 4, clamp(c.ny + 12, 4, 66));
+    }
+    return out;
+  }
+  if (phase === 'maul') {
+    const cluster: [number, number][] = [[0, 0], [.9, -1], [.9, 1], [1.8, -1.6], [1.8, 0], [1.8, 1.6], [2.6, -.8], [2.6, .8]];
+    if (attacking) {
+      cluster.forEach(([d, w], i) => set(i, own(d), by + w));
+      [8, 9, 11, 12].forEach((i, k) => set(i, own(5 + k * 2.4), across(6 + k * 8)));
+      set(10, own(8), across(-12)); set(13, own(9), across(40)); set(14, own(18), across(14));
+    } else {
+      cluster.slice(0, 7).forEach(([d, w], i) => set(i, own(1.6 + d), by + w));
+      flatLine(own(4), [7, 8, 9, 11, 12], by + open * 4, by < 35 ? 58 : 12);
+      set(10, own(7), across(-10)); set(13, own(8), across(44)); set(14, own(20), across(12));
+    }
+    return out;
+  }
+  // Open play: carry, pass, catch, tackle, ruck.
+  const breakdown = phase === 'ruck' || phase === 'tackle';
+  const openWing = open > 0 ? 13 : 10, blindWing = open > 0 ? 10 : 13;
+  if (attacking) {
+    const wide = tactics.attack === '1-3-3-1';
+    if (breakdown) { set(6, own(.9), by - .9); set(5, own(1.1), by + 1); set(8, own(1.6), by + open * .8); }
+    else set(8, own(2.5), by + open * 3);
+    const pods: [number[], number, number][] = wide
+      ? [[[7], 4, -8], [[0, 1, 2], 4.5, 7], [[3, 4, breakdown ? 7 : 5], 5.5, 16], [breakdown ? [] : [6], 4, -14]]
+      : [[[0, 1], 4, -7], [[2, 3, 4, 7], 5, 9], [breakdown ? [] : [5, 6], 4.5, 19]];
+    for (const [ids, depth, w] of pods) ids.forEach((i, k) => set(i, own(depth + k * .8), across(w + (k - (ids.length - 1) / 2) * 2.2)));
+    // Backs: a deep diagonal line to the open side, the blind wing on the short side, full-back deep.
+    [9, 11, 12].forEach((i, k) => set(i, own(5 + k * 2.6), across(9 + k * 8)));
+    set(openWing, own(9), by < 35 ? 64 : 6);
+    set(blindWing, own(7), by < 35 ? Math.max(4, by - 14) : Math.min(66, by + 14));
+    set(14, own(16), across(14));
+  } else {
+    // Defence: two at the breakdown, a flat line on its side of the ball (closer with Rush), wings and full-back back.
+    if (breakdown) { set(6, own(1.3), by - 1); set(5, own(1.3), by + 1); }
+    const lineX = own((breakdown ? 2.6 : 3) - (tactics.defense === 'Rush' && !breakdown ? 1.5 : 0));
+    flatLine(lineX, breakdown ? [0, 1, 2, 3, 4, 7, 8, 9, 11, 12] : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]);
+    set(openWing, lineX - dir * 3, by < 35 ? 60 : 10);
+    set(blindWing, lineX - dir * 8, by < 35 ? 8 : 62);
+    set(14, lineX - dir * 18, across(10));
+  }
+  return out;
+}
 function buildFrames(home: Club, away: Club, match: MatchResult): ReplayFrame[] {
   const track = match.timeline;
   const substitutions = match.events.filter(e => e.type === 'substitution');
@@ -1022,48 +1151,16 @@ function buildFrames(home: Club, away: Club, match: MatchResult): ReplayFrame[] 
         const slot = sub.slot ?? (sub.second < 3900 ? 0 : 1);
         lineup[slot] = sub.playerId;
       }
+      const spots = teamShape({ phase: oldReplay ? undefined : m.phase, attacking, dir, bx, by, nx: next.x, ny: next.y, tactics, second });
       for (let i = 0; i < 15; i++) {
         const id = lineup[i];
         if (cards.some(e => e.playerId === id && e.second <= second && second < (e.returnSecond ?? 4801))) continue;
         const isCarrier = id === m.carrierId;
         const isTarget = id === m.targetId;
-        const forward = i < 8;
-        const setPiece = m.phase === 'scrum' || m.phase === 'maul' || m.phase === 'ruck' || m.phase === 'tackle';
-        const lineout = m.phase === 'lineout';
-        const row = forward ? 0 : i < 10 ? 1 : 2;
-        let dx = -dir * (attacking ? 3 + row * 3.5 : 5 + row * 3.5);
-        let spread = forward ? (i - 3.5) * (tactics.attack === '1-3-3-1' ? 4.3 : 3.1) : (i - 11) * 8;
-        if (setPiece && forward) {
-          dx = -dir * (1 + Math.floor(i / 3) * 1.45);
-          spread = (i % 3 - 1) * 1.65;
-        }
-        if (lineout && forward) {
-          dx = -dir * 2.1;
-          spread = (by < 35 ? 1 : -1) * (4.5 + i * 2.4);
-        }
-        if (m.phase === 'restart') {
-          dx = -dir * (attacking ? 3 + row * 3 : 13 + row * 8);
-          spread = (i - 7) * 4.1;
-        }
-        // Backs at a breakdown (cosmetic, replay only): the attack forms a deep diagonal line out to the open side,
-        // the defence a flat line facing it, wings wide and the full-back deep. Forwards not in the ruck fan out as pods.
-        const openSide = by < 35 ? 1 : -1;
-        if ((m.phase === 'ruck' || m.phase === 'tackle' || m.phase === 'carry' || m.phase === 'pass' || m.phase === 'catch') && !forward) {
-          const order = [0, 1, 4, 2, 3, 4, 5][i - 8], wing = i === 10 || i === 13, fullback = i === 14;
-          const k = wing ? 5 : fullback ? 3 : order;
-          const side = wing ? (i === 10 ? openSide : -openSide) : openSide;
-          dx = attacking ? -dir * (1.5 + k * 1.9) : -dir * 1.8;
-          spread = side * (wing ? 27 : 2.5 + k * 6.2);
-          if (fullback) { dx = -dir * (attacking ? 11 : 17); spread = openSide * 6; }
-          if (i === 8 && attacking) { dx = -dir * 1.2; spread = openSide * 1.5; }
-        }
-        if ((m.phase === 'ruck' || m.phase === 'tackle') && forward && i >= 3 && i !== 7 && (attacking ? i % 2 === 0 : i % 3 === 0)) {
-          dx = -dir * (attacking ? 3.5 : 1.6); spread = (i % 4 < 2 ? openSide : -openSide) * (6 + (i % 3) * 4);
-        }
-        if (!attacking && tactics.defense === 'Rush' && !setPiece) dx += dir * 2;
-        const offset = Math.sin(second / 23 + i * 2) * .65;
-        let x = isCarrier ? bx : isTarget ? next.x : bx + dx + offset;
-        let y = isCarrier ? by : isTarget ? next.y : by + spread;
+        let [x, y] = spots[i];
+        if (isCarrier) { x = bx; y = by; }
+        // The receiver of a pass or kick waits where the ball lands (the next moment).
+        else if (isTarget) { x = next.x; y = next.y; }
         players.push({ id, teamId: side.id, number: i + 1, x: clamp(x, 0, 100), y: clamp(y, 0, 70) });
       }
     }

@@ -1495,7 +1495,9 @@ function drawReplay() {
     node.classList.toggle('carrying',carrying);
     if (carrying) { carrierPosition=point; carrierPlayer=player; }
   });
-  const ground=position(a.ball,b.ball);
+  // The ball is always in someone's hands or in the air (16/11/2026): with a carrier it moves with his dot instead of
+  // sliding on its own between moments, which left it «en el medio» of nobody.
+  const ground=carrierPosition&&!a.flight ? {x:carrierPosition.x+.6,y:carrierPosition.y+.4} : position(a.ball,b.ball);
   const lift=interpolate(a.ball.h ?? 0,b.ball.h ?? 0);
   move(replayNodes.ball,ground);
   move(replayNodes.shadow,ground);
