@@ -17,7 +17,7 @@ export type SeniorSquad = 'Primera' | 'Intermedia' | 'Pre A' | 'Pre B';
 export interface Injury { type: string; name: string; weeksOut: number; since: number; season: number; }
 export interface Player { startStreak?: number; academyClubId?: string; academyIntakeSeason?: number; academyEntry?: 'intake' | 'cover'; youthSeasons?: number; development?: DevelopmentState; trajectory?: { seasons: number; complete: boolean }; seniorSquad?: SeniorSquad; positions?: Position[]; injury?: Injury | null; id: string; name: string; age: number | null; birthDate?: string; ageKnown?: boolean; ageEstimated?: boolean; estimatedBirthDate?: string | null; sourceIds?: string[]; sourceRecordId?: string; position: Position; squad: Squad; attributes: Attributes; potential: number; fitness: number; estimated: boolean; fictional: boolean; }
 export interface ClubDefinition { id?: string; name: string; shortName?: string; division: Division; color: string; secondaryColor: string; strength: number; }
-export interface Club { id: string; name: string; shortName: string; division: Division; color: string; secondaryColor: string; strength: number; players: Player[]; lineup?: string[]; bench?: string[]; formations?: { name: string; lineup: string[]; bench: string[]; captain?: string; kicker?: string }[]; formation?: string; captain?: string; kicker?: string; }
+export interface Club { id: string; name: string; shortName: string; division: Division; color: string; secondaryColor: string; strength: number; players: Player[]; lineup?: string[]; bench?: string[]; formations?: { name: string; lineup: string[]; bench: string[]; captain?: string; kicker?: string }[]; formation?: string; captain?: string; kicker?: string; rivals?: string[]; fans?: string | null; fanMood?: number; }
 export interface Tactics { talk?: 'Ninguna' | 'Calmar' | 'Motivar' | 'Exigir'; mentality?: 'Ofensiva' | 'Equilibrada' | 'Defensiva'; penalty?: 'Palos' | 'Touch' | 'Según marcador'; attack: '1-3-3-1' | '2-4-2'; defense: 'Drift' | 'Rush'; scrum: 'Estable' | 'Presión'; lineout: 'Seguro' | 'Competir'; maul: 'Evitar' | 'Usar'; kicking: 'Conservador' | 'Territorial'; ruck: 'Rápido' | 'Asegurar'; }
 export const DEFAULT_TACTICS: Tactics = { mentality:'Equilibrada', penalty:'Según marcador', attack:'1-3-3-1', defense:'Drift', scrum:'Estable', lineout:'Seguro', maul:'Usar', kicking:'Territorial', ruck:'Asegurar' };
 export interface Fixture { id: string; division: Division; round: number; homeId: string; awayId: string; match?: MatchResult; stage?: 'semi' | 'final'; neutral?: boolean; }
@@ -657,6 +657,13 @@ export function talkEffect(talk: string | undefined, edge: number, halfTime = fa
   if (talk === 'Calmar') return halfTime ? (ahead ? .006 : behind ? -.002 : .003) : .004;
   return 0;
 }
+/**
+ * The home crowd (17/11/2026): fans in a good mood lift the side at home, an angry stand weighs on it. Small, like the
+ * talks: about half a point of margin either way. Draws no random number, so nothing else in the match moves.
+ */
+export function crowdEffect(mood = 0): number {
+  return mood >= 50 ? .005 : mood >= 20 ? .002 : mood <= -45 ? -.006 : mood <= -20 ? -.002 : 0;
+}
 function captainEffect(club: Club, lineup: Player[]): number {
   const captain = lineup.find(p => p.id === club.captain);
   return captain ? (captain.attributes.leadership - 10) * .0006 : 0;
@@ -700,6 +707,7 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
   const home = prepareTeam(homeClub, homeTactics, rng), away = prepareTeam(awayClub, awayTactics, rng);
   const xvRating = (t: Team) => t.lineup.reduce((n, p) => n + overall(p), 0) / 15, gap = xvRating(home) - xvRating(away);
   home.form += talkEffect(homeTactics.talk, gap); away.form += talkEffect(awayTactics.talk, -gap);
+  if (!neutral) home.form += crowdEffect(homeClub.fanMood);
   let homeScore = 0, awayScore = 0, homeTries = 0, awayTries = 0;
   let second = 0, homeDirection = 1, ball: Ball = { x: 50, y: 35 };
   let team = rng() < .5 ? home : away;

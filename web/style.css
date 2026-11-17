@@ -1219,3 +1219,37 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .kg-arrow{stroke:#ffd34d;stroke-width:3.5;stroke-linecap:round}
 .kg-ball{fill:#f4efe2;stroke:#6d5a3a}
 @media(max-width:640px){.kick-gauge{bottom:178px;left:10px}}
+/* Clásicos and the crowd (17/11/2026) */
+.derby-badge{display:flex;align-items:center;justify-content:center;gap:6px;margin:6px 12px 0;padding:5px 10px;border-radius:6px;background:#c8202f26;color:#ff8b8b;font:700 13px 'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.derby-badge svg{width:14px;height:14px}
+.fans-panel{padding:12px 14px;display:grid;gap:6px}
+.fans-panel strong{font:800 18px 'Barlow Condensed',sans-serif;letter-spacing:.02em}
+.fans-panel p{margin:0;font-size:13px;color:var(--ink-2)}
+.fans-panel p b{color:var(--ink)}
+.fans-meter{position:relative;height:8px;border-radius:4px;background:linear-gradient(90deg,#c0392b,#e9b949 50%,#3fbf6a)}
+.fans-meter i{position:absolute;top:-4px;width:4px;height:16px;margin-left:-2px;border-radius:2px;background:var(--ink);box-shadow:0 0 0 2px var(--surface)}
+.fans-panel.angry strong{color:#e3262b}.fans-panel.happy strong{color:#3fbf6a}
+.fans-derby{display:flex;align-items:center;gap:5px}.fans-derby svg{width:14px;height:14px;color:#e3262b}
+.fans-scene{position:fixed;inset:0;z-index:140;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#2a1414 0,#0b0d10 75%)}
+.fans-scene.happy{background:radial-gradient(ellipse at 50% 30%,#14281a 0,#0b0d10 75%)}
+.fans-card{position:relative;z-index:3;width:min(620px,calc(100% - 28px));text-align:center;color:#fff;margin-bottom:22vh;animation:mc-in .4s ease-out}
+.fans-kicker{display:inline-block;padding:2px 10px;border-radius:4px;background:#e3262b;font:800 12px 'Barlow Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.fans-scene.happy .fans-kicker{background:#3fbf6a;color:#08140c}
+.fans-card h2{margin:8px 0 14px;font:900 italic clamp(30px,6vw,58px)/1 'Barlow Condensed',sans-serif;text-transform:uppercase;color:#fff;text-shadow:0 4px 0 #0008}
+.fans-card p{margin:14px auto 16px;max-width:46ch;color:#e8e2d6;font-size:15px}
+.fans-banner{position:relative;padding:18px 14px;border-radius:4px;box-shadow:0 10px 30px #000a;transform-origin:50% 0;animation:trapo 1.6s ease-in-out infinite alternate}
+.fans-banner span{display:inline-block;padding:4px 12px;background:#0b0d10e6;color:#fff;font:900 italic clamp(20px,4.4vw,38px)/1.05 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.fans-scene.angry .fans-banner{animation-duration:.5s}
+@keyframes trapo{from{transform:rotate(-1.4deg) skewX(-2deg)}to{transform:rotate(1.4deg) skewX(2deg)}}
+.fans-stand{position:absolute;left:0;right:0;bottom:0;height:34vh;z-index:2;background:repeating-linear-gradient(180deg,#2b2f36 0 16%,#1d2026 16% 17%);box-shadow:0 -20px 40px #000}
+.fans-stand i{position:absolute;width:3.2%;max-width:34px;aspect-ratio:1/1.5;border-radius:45% 45% 20% 20%;animation:fan-jump .6s ease-in-out infinite alternate}
+.fans-scene.angry .fans-stand i{animation:fan-shake .22s linear infinite alternate}
+.fans-stand i:before{content:'';position:absolute;left:50%;top:-38%;width:58%;aspect-ratio:1;margin-left:-29%;border-radius:50%;background:#d9b99b}
+.fans-scene.angry .fans-stand i:nth-child(3n):after{content:'';position:absolute;left:70%;top:-70%;width:30%;height:45%;border-radius:40%;background:#d9b99b;transform:rotate(18deg)}
+@keyframes fan-jump{to{transform:translateY(-28%)}}
+@keyframes fan-shake{from{transform:translateX(-6%) rotate(-4deg)}to{transform:translateX(6%) rotate(4deg)}}
+.fans-smoke{position:absolute;inset:0;z-index:1;pointer-events:none}
+.fans-smoke b{position:absolute;bottom:20vh;width:30vw;height:30vw;max-width:340px;max-height:340px;border-radius:50%;background:radial-gradient(circle,#55595fcc,transparent 70%);filter:blur(10px);animation:smoke 5s ease-in infinite}
+@keyframes smoke{from{transform:translateY(0) scale(.6);opacity:0}25%{opacity:.9}to{transform:translateY(-55vh) scale(1.5);opacity:0}}
+@media(prefers-reduced-motion:reduce){.fans-stand i,.fans-banner,.fans-smoke b{animation:none}}
+@media(max-width:640px){.fans-card{margin-bottom:26vh}.fans-card p{font-size:14px}.fans-stand{height:30vh}}

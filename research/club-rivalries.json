@@ -1,0 +1,22 @@
+{
+  "researchedAt": "2026-11-17",
+  "note": "Clásicos and supporters' names per club. A rivalry need not be mutual: each club lists its own derbies, most important first. Names of supporters' groups (barras) are not documented in the press for rugby; only the ones given by the user are filled in, the rest stay null and the game shows «La hinchada de <club>». Fill in more by editing this file.",
+  "clubs": [
+    {"id": "regatas-bella-vista", "rivals": ["cuba"], "fans": "La Ola", "source": "usuario (17/11/2026)"},
+    {"id": "cuba", "rivals": ["sic"], "fans": null, "source": "El Gráfico: SIC–CUBA, «un clásico del rugby doméstico que siempre es especial» (elgrafico.com.ar/articulo/rugby/25236). El usuario no sabe si CUBA considera clásico a Regatas: no se agregó."},
+    {"id": "los-matreros", "rivals": ["regatas-bella-vista", "curupayti"], "fans": null, "source": "usuario (Regatas); ESPN: «Los Matreros se llevó el clásico vs Curupaytí» (espndeportes.espn.com/rugby/nota/_/id/11778283)"},
+    {"id": "hurling", "rivals": ["regatas-bella-vista", "curupayti"], "fans": null, "source": "usuario; ESPN, previa fecha 10 del Ascenso URBA: clásico de Hurlingham con Curupaytí (espndeportes.espn.com/rugby/nota/_/id/16801751)"},
+    {"id": "curupayti", "rivals": ["hurling", "los-matreros"], "fans": null, "source": "ESPN (ídem Hurling y Los Matreros)"},
+    {"id": "la-plata", "rivals": ["los-tilos"], "fans": null, "source": "usuario; La Nación: «La Plata le ganó el clásico a Los Tilos» (lanacion.com.ar nid12102024)"},
+    {"id": "los-tilos", "rivals": ["la-plata"], "fans": null, "source": "La Nación (ídem)"},
+    {"id": "casi", "rivals": ["sic"], "fans": null, "source": "El Gráfico: «El CASI se quedó con el clásico 136 de San Isidro» (elgrafico.com.ar/articulo/rugby/64781); RugbyPass: Superclásico del rugby argentino"},
+    {"id": "sic", "rivals": ["casi", "cuba"], "fans": null, "source": "El Gráfico (clásico de San Isidro y SIC–CUBA)"},
+    {"id": "alumni", "rivals": ["belgrano-athletic"], "fans": null, "source": "ESPN: Belgrano recibió «a su clásico rival, Alumni» (espndeportes.espn.com/rugby/nota/_/id/14350637)"},
+    {"id": "belgrano-athletic", "rivals": ["alumni"], "fans": null, "source": "ESPN (ídem)"},
+    {"id": "hindu", "rivals": ["buenos-aires-crc"], "fans": null, "source": "ESPN: Hindú «en el clásico ante Buenos Aires» (resumen Top 14 2026)"},
+    {"id": "buenos-aires-crc", "rivals": ["atletico-del-rosario", "hindu"], "fans": null, "source": "La Capital: Atlético del Rosario–Buenos Aires, «el clásico más antiguo del rugby argentino» (lacapital.com.ar/c10258432); ESPN (Hindú)"},
+    {"id": "atletico-del-rosario", "rivals": ["buenos-aires-crc"], "fans": null, "source": "La Capital (ídem)"},
+    {"id": "newman", "rivals": ["champagnat"], "fans": null, "source": "ESPN y La Nación: Newman–Champagnat, «el clásico entre colegios» (espndeportes.espn.com/rugby/nota/_/id/13990759)"},
+    {"id": "champagnat", "rivals": ["newman"], "fans": null, "source": "ESPN y La Nación (ídem)"}
+  ]
+}

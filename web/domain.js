@@ -3,7 +3,7 @@ import * as Stats from './player-stats.js';
 export const DIVISIONS = {'top14':'Top 14','primera-a':'Primera A','primera-b':'Primera B'};
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;};
 // Ratings and player data are a retrospective game snapshot, not real contracts or availability.
-export const DATA_VERSION=24;
+export const DATA_VERSION=25;
 export const SIMULATION_DATE='2026-11-10';
 export function ageOnDate(birthDate, referenceDate){
  const valid=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value??''))return false;const d=new Date(value+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===value;};
@@ -229,6 +229,8 @@ export function migrateWorld(world,catalog,returns={players:[]},youth=catalog.yo
  // v23: every fixture gets a calendar date (later seasons had none).
  if(version<23)next=withDates(next);
  // v24: what the position says a player is bad at (no more hookers who kick goals) and more room for young players.
+ // v25: clásicos and the supporters (research/club-rivalries.json).
+ if(version<25)next={...next,clubs:withRivalries(next.clubs,catalog)};
  if(version<24&&version>=1){next={...next,clubs:next.clubs.map(c=>({...c,players:c.players.map(p=>{
   const attributes=E.capPrejudice(p.position,p.attributes),dev=p.development,age=p.age??(p.squad==='M17'?16:p.squad==='M19'?18:null);
   if(!dev||age==null||age>=26)return {...p,attributes};
@@ -453,6 +455,7 @@ export function initialWorld(catalog,seed=2026,returns={players:[]},youth={playe
  s.clubs=levelYouthByTables(s,catalog.youthRanks).clubs;
  const withM17=attachSelectedM17(s,youth,true);s.clubs=withM17.clubs;s.urbaM17Revision=withM17.urbaM17Revision;
  s.clubs=uniqueFictionalNames(s,catalog).clubs.map(E.boundGeneratedReserves);
+ s.clubs=withRivalries(s.clubs,catalog);
  // What the position says a player is bad at, after every levelling step (also data v24 for saved leagues).
  s.clubs=s.clubs.map(c=>({...c,players:c.players.map(p=>({...p,attributes:E.capPrejudice(p.position,p.attributes)}))}));
  const official=catalog.fixtures.filter(f=>DIVISIONS[f.competitionId]&&Number.isInteger(f.round)&&f.homeClubId&&f.awayClubId);
@@ -936,6 +939,44 @@ function checkPromises(s,round){
  });
  return {...s,clubs,news:[...(s.news??[]),...news].slice(-2000)};
 }
+/**
+ * Clásicos and supporters (17/11/2026). Each club lists its own derbies (a rivalry need not be mutual) and the name of
+ * its barra when known (research/club-rivalries.json). The crowd's mood, from −100 to 100, moves after every round:
+ * a win +8, a loss −8, a clásico won +18 and lost −22; from round 6, a side below its board objective loses 3 more
+ * a round and one on target gains 1; it drifts 10 % back to calm. Below −45 the barra protests and above 55 it
+ * celebrates (at most once every five rounds) (news, and a scene in the Portal). The home crowd's mood nudges the side's form (engine crowdEffect).
+ */
+const withRivalries=(clubs,catalog)=>clubs.map(c=>{const r=catalog?.clubs?.find(x=>x.id===c.id);return {...c,rivals:r?.rivals??c.rivals??[],fans:r?.fans??c.fans??null,fanMood:c.fanMood??0};});
+export const fansName=c=>c?.fans??`La hinchada de ${c?.name??''}`;
+export function isDerby(world,f){
+ const h=world.clubs.find(c=>c.id===f.homeId),a=world.clubs.find(c=>c.id===f.awayId);
+ return !!(h?.rivals?.includes(f.awayId)||a?.rivals?.includes(f.homeId));
+}
+const PROTEST_CHANTS=['¡Jueguen por la camiseta!','¡Despiértense, que esto no es un picado!','¡Pongan huevo, que la hinchada no se va!','¡Esta camiseta se defiende!'];
+const PARTY_CHANTS=['¡Vamos, vamos, que esta tarde tenemos que ganar!','¡Dale campeón!','¡Esta es la hinchada que te quiere ver campeón!'];
+function updateFans(s,current){
+ const played=s.fixtures.filter(f=>f.round===current&&f.match);
+ if(!played.length)return s;
+ const news=[],newsRound=current;
+ const clubs=s.clubs.map(c=>{
+  const f=played.find(x=>x.homeId===c.id||x.awayId===c.id);if(!f)return c;
+  const mine=f.homeId===c.id?f.match.homeScore:f.match.awayScore,theirs=f.homeId===c.id?f.match.awayScore:f.match.homeScore;
+  const rival=f.homeId===c.id?f.awayId:f.homeId,derby=(c.rivals??[]).includes(rival);
+  let d=mine>theirs?(derby?18:8):mine<theirs?(derby?-22:-8):0;
+  if(!f.stage&&current>=6){const o=clubObjective(s,c.id),pos=E.getStandings(s,c.division).findIndex(r=>r.clubId===c.id)+1;if(pos>0)d+=pos>o.target?-3:1;}
+  const before=c.fanMood??0,mood=Math.max(-100,Math.min(100,Math.round(before*.9+d)));
+  const name=fansName(c),other=s.clubs.find(x=>x.id===rival);
+  const pick=(list,k)=>list[hash(`${s.seed}-${s.season}-${current}-${c.id}-${k}`)%list.length];
+  if(derby&&mine!==theirs)news.push({round:newsRound,season:s.season,clubId:c.id,kind:'fans',mood:mine>theirs?'derby-win':'derby-loss',text:mine>theirs?`${name} festeja el clásico ante ${other?.name}: «¡${pick(['El clásico es nuestro','Se ganó el clásico, se ganó','Esto es un clásico, esto se gana'],'d')}!».`:`${name} no perdona la derrota en el clásico ante ${other?.name}.`});
+  const recent=(s.news??[]).some(n=>n.kind==='fans'&&n.protest&&n.clubId===c.id&&n.season===s.season&&n.round>current-5);
+  if(recent){}
+  else if(before>-45&&mood<=-45)news.push({round:newsRound,season:s.season,clubId:c.id,kind:'fans',mood:'angry',protest:true,chant:pick(PROTEST_CHANTS,'p'),text:`${name} se manifestó en la tribuna: «${pick(PROTEST_CHANTS,'p')}».`});
+  else if(before<55&&mood>=55)news.push({round:newsRound,season:s.season,clubId:c.id,kind:'fans',mood:'happy',protest:true,chant:pick(PARTY_CHANTS,'h'),text:`${name} está eufórica: «${pick(PARTY_CHANTS,'h')}».`});
+  // The mood before this round, so a Portal with this round's replay still pending does not give the result away.
+  return {...c,fanMood:mood,fanMoodBefore:before,fanMoodRound:current};
+ });
+ return {...s,clubs,news:[...(s.news??[]),...news].slice(-2000)};
+}
 export function advanceWorld(s,keep){
  s=schedulePlayoffs(s);
  const current=roundOf(s);if(!Number.isFinite(current))throw Error('La temporada terminó.');
@@ -945,6 +986,7 @@ export function advanceWorld(s,keep){
  s=Stats.recordPlayerStats(s);
  s=slimMatches(progressRetraining(developYouth(applyInjuries(playParallelRound(s,current),current),current),current,1,injured),keep);
  s=checkPromises(s,current);
+ s=updateFans(s,current);
  // Match inputs (for live changes) are kept only for the round just played.
  s={...s,fixtures:s.fixtures.map(f=>f.match?.inputs&&f.round<current?{...f,match:(({inputs,...m})=>m)(f.match)}:f)};
  s=schedulePlayoffs(s);
@@ -1034,6 +1076,8 @@ export function advanceSeasonWorld(world){
  // New season, new squads: promoted juniors and aged players are spread by level again. The preseason (16 weeks)
  // finishes any retraining in progress.
  const ready=withDates(evolveClubStrength(replenishSquads(squadTurnover(progressRetraining(rolled,0,16)))));
+ // A new season calms the crowd: half of the mood carries over.
+ ready.clubs=ready.clubs.map(c=>c.fanMood?{...c,fanMood:Math.round(c.fanMood*.5)}:c);
  return {...ready,clubs:ready.clubs.map(assignSeniorGroups)};
 }
 /**

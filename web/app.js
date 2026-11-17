@@ -1,6 +1,6 @@
 import * as engine from './engine.js';
 import { playerCareerStats } from './player-stats.js';
-import { DIVISIONS, initialWorld, roundOf, applyClubAction, advanceWorld, advanceSeasonWorld, overall, ageOnDate, enrichRosterIdentities, trajectoryLabel as stageLabel, PARALLEL_CATEGORIES, parallelStandings, playoffState, seasonMoves, PLAYOFF_RULES, applyCommunity, clubObjective, marketPlayers, transferInterest, TRAINING_FATIGUE, playerRole, SQUAD_LIMIT, YOUTH_PLANS, retrainOptions, MAX_RETRAINING, hasReplay } from './domain.js';
+import { isDerby, fansName, DIVISIONS, initialWorld, roundOf, applyClubAction, advanceWorld, advanceSeasonWorld, overall, ageOnDate, enrichRosterIdentities, trajectoryLabel as stageLabel, PARALLEL_CATEGORIES, parallelStandings, playoffState, seasonMoves, PLAYOFF_RULES, applyCommunity, clubObjective, marketPlayers, transferInterest, TRAINING_FATIGUE, playerRole, SQUAD_LIMIT, YOUTH_PLANS, retrainOptions, MAX_RETRAINING, hasReplay } from './domain.js';
 
 const app = document.querySelector('#app');
 const modalRoot = document.querySelector('#modal-root');
@@ -305,6 +305,7 @@ function fixtureCard(fixture) {
   return panel('Próximo partido',
     '<div class="fixture-teams"><div class="fixture-team">'+crest(fixture.homeId)+'<strong>'+esc(shortOf(fixture.homeId))+'</strong></div><div class="versus">VS<small>FECHA '+fixture.round+'</small></div><div class="fixture-team">'+crest(fixture.awayId)+'<strong>'+esc(shortOf(fixture.awayId))+'</strong></div></div>'+
     '<div class="match-meta">'+[date,venue ?? nameOf(fixture.homeId)].filter(Boolean).map(esc).join(' · ')+'<br>'+(referee?'Árbitro · '+esc(referee):'')+'</div>'+
+    (isDerby(world(),fixture)?'<p class="derby-badge">'+icon('bolt')+'Clásico: más presión en la cancha y en la tribuna</p>':'')+
     (fixture.match?button('Continuar','replay',fixture.id,'primary','play'):button('Preparar el partido','page','tacticas','ghost','field')), tag(fixture.division,'neutral'), 'match-card');
 }
 
@@ -402,7 +403,7 @@ function dashboard() {
       '<div class="portal-column" id="portal-inbox" tabindex="-1">'+inboxPanel(c)+panel('Equipos del club','<div class="portal-club-roster">'+rosters+'</div>')+'</div>'+
       '<div class="portal-column" id="portal-match" tabindex="-1">'+fixtureCard(next)+result+roundSummaryPanel(c)+upcomingPanel(c,next)+newsPanel(c)+'</div>'+
       '<div class="portal-column">'+panel(c.division,standingsTable(c.division,true),tab('Tabla','torneo'),'portal-standings')+playerLeadersPanel(c)+categoriesPanel(c)+playoffBracket(c.division)+'</div>'+
-      '<div class="portal-column">'+rivalPanel(c,next)+weekPanel(c)+'</div>'+
+      '<div class="portal-column">'+fansPanel(c,next)+rivalPanel(c,next)+weekPanel(c)+'</div>'+
     '</div>';
 }
 
@@ -483,7 +484,7 @@ function showRivalReport(rid) {
 // Inbox: board, staff and assistant messages. Read state is kept per browser.
 const readSet = () => { try { return new Set(JSON.parse(store.get('tt-read') ?? '[]')); } catch { return new Set(); } };
 const markRead = id => { const r=readSet(); r.add(id); store.set('tt-read', JSON.stringify([...r].slice(-400))); };
-const NEWS_FROM = {injury:['Cuerpo médico','medic'],recovery:['Cuerpo médico','check'],training:['Preparador físico','pulse'],youth:['Coordinador de juveniles','grow'],squad:['Secretaría del club','team'],transfer:['Mánager deportivo','swap'],promise:['Mánager deportivo','inbox']};
+const NEWS_FROM = {fans:['Hinchada','team'],injury:['Cuerpo médico','medic'],recovery:['Cuerpo médico','check'],training:['Preparador físico','pulse'],youth:['Coordinador de juveniles','grow'],squad:['Secretaría del club','team'],transfer:['Mánager deportivo','swap'],promise:['Mánager deportivo','inbox']};
 function inboxItems(c) {
   const season=world().season, cutoff=pendingReplay()?.round ?? Infinity, items=[], obj=clubObjective(world(),c.id);
   items.push({id:'board-'+c.id+'-'+season,round:0,from:'Comisión directiva',glyph:'shield',title:'Objetivo '+season+': '+obj.text.toLowerCase(),body:'Exigencia '+obj.level.toLowerCase()+'. El plantel es el '+obj.rank+'º más fuerte de '+c.division+' y esperamos que termines '+(obj.target===2?'1º o 2º':'entre los '+obj.target+' primeros')+'. Contamos con vos.'});
@@ -1164,7 +1165,7 @@ function matchCard(stage) {
   const {venue} = assignment(fixture);
   const name = id => { const n=posterName(id); return '<em'+(n.length>11?' class="long"':'')+'>'+esc(n.toUpperCase())+'</em>'; };
   const competition = fixture.division==='Top 14' ? 'URBA Top 14' : 'URBA '+fixture.division;
-  const label = (fixture.stage ? roundLabel(fixture) : 'Fecha '+fixture.round)+' · '+competition;
+  const label = (isDerby(world(),fixture)?'Clásico · ':'')+(fixture.stage ? roundLabel(fixture) : 'Fecha '+fixture.round)+' · '+competition;
   const badge = fixture.division==='Top 14' ? '<img src="/brand/top14.png" alt="URBA Top 14" class="poster-comp">' : '<span class="poster-comp text">URBA<br><b>'+esc(fixture.division)+'</b></span>';
   const winner = final ? (match.homeScore>match.awayScore?fixture.homeId:match.awayScore>match.homeScore?fixture.awayId:null) : null;
   const middle = final
@@ -1253,6 +1254,36 @@ function flagBackground(d) {
   if (d.pattern==='sash') return 'linear-gradient(135deg,'+a+' 40%,'+b+' 40% 60%,'+a+' 60%)';
   return 'linear-gradient(180deg,'+a+' 70%,'+b+' 70%)';
 }
+/** The crowd (17/11/2026): mood shown without spoiling a round whose replay is still pending. */
+function shownMood(c) { const p=pendingReplay(); return p&&c.fanMoodRound!=null&&c.fanMoodRound>=p.round ? (c.fanMoodBefore ?? 0) : (c.fanMood ?? 0); }
+const moodLabel = m => m>=55?['Eufórica','happy']:m>=20?['Contenta','good']:m>-20?['Tranquila','calm']:m>-45?['Inquieta','uneasy']:['Enojada','angry'];
+function fansPanel(c, next) {
+  const m=shownMood(c), [label,tone]=moodLabel(m);
+  const effect=m>=50?'De local, la gente empuja: el equipo rinde un poco más.':m>=20?'La gente acompaña de local.':m<=-45?'De local, la tribuna en contra pesa en el equipo.':m<=-20?'Hay murmullos en la tribuna: un par de derrotas más y se enoja.':'La tribuna espera resultados.';
+  const rivals=(c.rivals ?? []).map(id=>nameOf(id)).join(' y ');
+  const derbyNext=world().fixtures.find(f=>!f.match&&(f.homeId===c.id||f.awayId===c.id)&&isDerby(world(),f));
+  return panel('Hinchada','<div class="fans-panel '+tone+'"><strong>'+esc(fansName(c))+'</strong>'+
+    '<div class="fans-meter"><i style="left:'+((m+100)/2)+'%"></i></div><p><b>'+label+'</b> · '+esc(effect)+'</p>'+
+    (rivals?'<p class="fans-derby">'+icon('bolt')+'Clásico: '+esc(rivals)+(derbyNext?' · próximo en la fecha '+derbyNext.round:'')+'</p>':'')+'</div>');
+}
+function fansScene() {
+  const c=currentClub(), cutoff=pendingReplay()?.round ?? Infinity;
+  const n=(world().news ?? []).filter(n=>n.kind==='fans'&&n.protest&&n.clubId===c.id&&n.season===world().season&&n.round<cutoff).at(-1);
+  if (!n) return '';
+  const key='tt-fans:'+(league?.code ?? 'demo')+':'+n.season+':'+n.round+':'+n.mood;
+  if (store.get(key)) return '';
+  const d=designOf(c), angry=n.mood==='angry', [a,b=a]=d.colors;
+  const crowd=Array.from({length:90},(_,i)=>'<i style="left:'+((i*7.3)%100).toFixed(1)+'%;bottom:'+(Math.floor(i/18)*16)+'%;background:'+[a,b,a,'#e8e2d6'][i%4]+';animation-delay:'+(-(i*.13)%1.2).toFixed(2)+'s"></i>').join('');
+  const smoke=Array.from({length:7},(_,i)=>'<b style="left:'+(8+i*13)+'%;animation-delay:'+(-i*.7)+'s;'+(angry?'':'background:radial-gradient(circle,'+[a,b][i%2]+'cc,transparent 70%)')+'"></b>').join('');
+  const title=angry?esc(fansName(c))+' se manifiesta':esc(fansName(c))+' está de fiesta';
+  const sub=angry?'La tribuna está enojada con los resultados'+(clubObjective(world(),c.id)?.text?' (el objetivo es «'+esc(clubObjective(world(),c.id).text.toLowerCase())+'»)':'')+'. Mientras siga así, de local el equipo juega con la gente en contra.':'La gente está con el equipo: de local, rinde un poco más.';
+  return '<div class="fans-scene '+(angry?'angry':'happy')+'" role="dialog" aria-label="'+title+'" style="--fan-a:'+a+';--fan-b:'+b+'">'+
+    '<div class="fans-smoke" aria-hidden="true">'+smoke+'</div>'+
+    '<div class="fans-card"><span class="fans-kicker">'+(angry?'Tribuna':'Fiesta en la tribuna')+'</span><h2>'+title+'</h2>'+
+    '<div class="fans-banner" style="background:'+flagBackground(d)+'"><span>'+esc(n.chant ?? '')+'</span></div><p>'+sub+'</p>'+
+    button(angry?'Entendido':'¡Vamos!','close-fans',key,'primary',angry?'check':'trophy')+'</div>'+
+    '<div class="fans-stand" aria-hidden="true">'+crowd+'</div></div>';
+}
 function celebrationOverlay() {
   const c=celebrations()[0]; if (!c) return '';
   const d=designOf(club(c.clubId)), bg=flagBackground(d), colors=[...d.colors,'#e9b949','#ffffff'];
@@ -1268,7 +1299,7 @@ function render() {
   if (!catalog || !demo) return;
   if (entryStage) { app.innerHTML=entryScreen(); return; }
   const notice=league?.world.migrationNotice&&page!=='partido'?'<p class="notice blue">'+esc(league.world.migrationNotice)+'</p>':'';
-  app.innerHTML = shell(notice+renderers[page]())+(page==='resumen'?celebrationOverlay():'');
+  app.innerHTML = shell(notice+renderers[page]())+(page==='resumen'?(celebrationOverlay()||fansScene()):'');
   if (page==='partido'&&replay) setupReplay();
 }
 
@@ -1853,8 +1884,10 @@ function kickPressure(f, e) {
   const diff=Math.abs(before(f.homeId)-before(f.awayId)), minute=e.second/60;
   const late=minute>=60&&diff<=7?1+.4*Math.min(1,(minute-60)/20)*(diff<=3?1:.7):1;
   const [big,label]=f.stage==='final'?(f.division==='Top 14'?[1.35,'Final de la URBA']:[1.3,'Final por el ascenso']):f.stage==='semi'?[1.15,'Semifinal']:f.round>=23?[1.05,'Final del torneo']:[1,''];
-  const total=Math.min(1.8,late*big);
-  return {total, label: total<1.05?'':late>1.05&&big>1?label+' · final cerrado':late>1.05?'Final cerrado':label};
+  // A clásico weighs more: ×1.2 on top (17/11/2026).
+  const derby=isDerby(world(),f), total=Math.min(1.8,late*big*(derby?1.2:1));
+  const parts=[derby?'Clásico':'',big>1?label:'',late>1.05?'final cerrado':''].filter(Boolean);
+  return {total, label: total<1.05?'':parts.join(' · ')};
 }
 function openKickGame(e) {
   pauseReplay();
@@ -2470,6 +2503,7 @@ document.addEventListener('click',async event=>{
     case 'advance': await act(Number.isFinite(currentRound())?'advance':'next-season'); break;
     case 'replay': openReplay(value); break;
     case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
+    case 'close-fans': store.set(value,'1'); render(); break;
     case 'close-celebration': store.set('tt-celebrated:'+(league?.code ?? 'demo')+':'+world().season+':'+value,'1'); render(); break;
     case 'round-team': showRoundTeam(); break;
     case 'live-changes': showLiveChanges(); break;

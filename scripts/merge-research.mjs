@@ -22,7 +22,7 @@ export function mergeResearch(catalog,verification={players:[]},returns={players
 /** Club grounds (research/club-locations.json, for transfer distances) and URBA titles (research/club-honours.json). */
 export async function addClubExtras(catalog,readFile){
  const read=f=>readFile(f,'utf8').then(JSON.parse).catch(()=>({clubs:[]}));
- const [locations,honours,kits]=await Promise.all([read('research/club-locations.json'),read('research/club-honours.json'),read('research/club-kits.json')]);
+ const [locations,honours,kits,rivalries]=await Promise.all([read('research/club-locations.json'),read('research/club-honours.json'),read('research/club-kits.json'),read('research/club-rivalries.json')]);
  const reserves=await readFile('research/reserves.json','utf8').then(JSON.parse).catch(()=>null);
  // Real 2026 youth tables (URBA M17 and M19, Grupo II): club rank per category, for the youth squads' level.
  const youthTables=await readFile('research/urba-youth-tables-2026.json','utf8').then(JSON.parse).catch(()=>null);
@@ -34,6 +34,8 @@ export async function addClubExtras(catalog,readFile){
   if(h)c.honours={urbaTitles:h.urbaTitles,lastTitle:h.lastTitle};
   // Flat 2D kit design (pattern and colours) researched per club: research/club-kits.json.
   const k=kits.clubs.find(x=>x.id===c.id);if(k)c.kitDesign={home:k.home,away:k.away??null};
+  // Clásicos and the name of the supporters (research/club-rivalries.json, 17/11/2026).
+  const r=rivalries.clubs.find(x=>x.id===c.id);if(r){c.rivals=r.rivals;c.fans=r.fans??null;}
   // Crests saved locally as 128 px PNG (public/crests), instead of hotlinking urba.org.ar.
   if(await readFile(`public/crests/${c.id}.png`).then(()=>true,()=>false))c.crest={...c.crest,localPath:`/crests/${c.id}.png`};
  }
