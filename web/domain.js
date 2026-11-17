@@ -3,7 +3,7 @@ import * as Stats from './player-stats.js';
 export const DIVISIONS = {'top14':'Top 14','primera-a':'Primera A','primera-b':'Primera B'};
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;};
 // Ratings and player data are a retrospective game snapshot, not real contracts or availability.
-export const DATA_VERSION=25;
+export const DATA_VERSION=26;
 export const SIMULATION_DATE='2026-11-10';
 export function ageOnDate(birthDate, referenceDate){
  const valid=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value??''))return false;const d=new Date(value+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===value;};
@@ -230,7 +230,8 @@ export function migrateWorld(world,catalog,returns={players:[]},youth=catalog.yo
  if(version<23)next=withDates(next);
  // v24: what the position says a player is bad at (no more hookers who kick goals) and more room for young players.
  // v25: clásicos and the supporters (research/club-rivalries.json).
- if(version<25)next={...next,clubs:withRivalries(next.clubs,catalog)};
+ // v26: names of the barras confirmed later (SIC, Hindú, CUBA) reach saved leagues too.
+ if(version<26)next={...next,clubs:withRivalries(next.clubs,catalog)};
  if(version<24&&version>=1){next={...next,clubs:next.clubs.map(c=>({...c,players:c.players.map(p=>{
   const attributes=E.capPrejudice(p.position,p.attributes),dev=p.development,age=p.age??(p.squad==='M17'?16:p.squad==='M19'?18:null);
   if(!dev||age==null||age>=26)return {...p,attributes};
