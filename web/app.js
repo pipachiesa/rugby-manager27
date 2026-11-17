@@ -1096,6 +1096,17 @@ function kitBackground(d) {
   if (d.pattern==='halves'||d.pattern==='quarters') return 'linear-gradient(90deg,'+a+' 50%,'+b+' 50%)';
   return a;
 }
+/**
+ * Shirt numbers in the replay and the kick (17/11/2026): the user's choice for the clubs he named, otherwise white or
+ * black, whichever stands out more against every colour of the shirt (hoops and halves have two). An outline in the
+ * opposite tone keeps them readable on any stripe.
+ */
+const NUMBER_COLORS = {'regatas-bella-vista':'#ffffff','los-matreros':'#111111',cuba:'#ffffff',newman:'#f2c230',casi:'#e3262b',sic:'#e3262b',hindu:'#ffffff',hurling:'#ffffff'};
+const lum = v => { const [r,g,b]=rgb(v); return (r*299+g*587+b*114)/1000; };
+function numberInk(id, design) {
+  const ink = NUMBER_COLORS[id] ?? (Math.min(...design.colors.map(c=>Math.abs(255-lum(c)))) >= Math.min(...design.colors.map(c=>lum(c))) ? '#ffffff' : '#111111');
+  return {ink, edge: lum(ink) > 150 ? '#000000cc' : '#ffffffcc'};
+}
 function kitStyle(homeId, awayId) {
   const h = club(homeId), a = club(awayId);
   const hd = designOf(h), home = hd.colors[0];
@@ -1105,7 +1116,10 @@ function kitStyle(homeId, awayId) {
     ad = alt!==ad && colorGap(home,alt.colors[0]) >= 90 ? alt : {pattern:'plain',colors:[colorGap(home,'#f4f1ea')>=90?'#f4f1ea':'#1d1d1f']};
   }
   const away = ad.colors[0];
-  return '--home-kit:'+home+';--home-bg:'+kitBackground(hd)+';--home-ink:'+inkFor(home)+';--away-kit:'+away+';--away-bg:'+kitBackground(ad)+';--away-ink:'+inkFor(away);
+  // The away side wearing its alternate or a plain change shirt keeps the automatic number colour.
+  const hn = numberInk(homeId, hd), an = ad===designOf(a) ? numberInk(awayId, ad) : numberInk('', ad);
+  return '--home-kit:'+home+';--home-bg:'+kitBackground(hd)+';--home-ink:'+inkFor(home)+';--away-kit:'+away+';--away-bg:'+kitBackground(ad)+';--away-ink:'+inkFor(away)+
+    ';--home-num:'+hn.ink+';--home-num-edge:'+hn.edge+';--away-num:'+an.ink+';--away-num-edge:'+an.edge;
 }
 const abbr = id => { const n=shortOf(id); return n.length<=4 ? n.toUpperCase() : n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,'').split(/\s+/).filter(Boolean).map(w=>w[0]).join('').slice(0,3).toUpperCase() || n.slice(0,3).toUpperCase(); };
 // Advertising boards: the game name, URBA in the middle, the home club and invented local sponsors (no away club).

@@ -1174,3 +1174,7 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 }
 @media(max-width:640px){.live-score .crest,.live-score .crest-fallback{display:none}.live-fab{font-size:13px;padding:8px 14px;bottom:5%}}
 @media(max-width:640px){.replay-bar{flex-wrap:wrap}.replay-bar .replay-now{order:5;flex-basis:100%}}
+/* Shirt numbers readable on any kit (17/11/2026) */
+.match-pitch .pitch-dot.home,.k-dot.home{color:var(--home-num,var(--home-ink,#fff));text-shadow:0 0 2px var(--home-num-edge,#000a),0 0 2px var(--home-num-edge,#000a),0 0 1px var(--home-num-edge,#000a)}
+.match-pitch .pitch-dot.away,.k-dot.away{color:var(--away-num,var(--away-ink,#fff));text-shadow:0 0 2px var(--away-num-edge,#000a),0 0 2px var(--away-num-edge,#000a),0 0 1px var(--away-num-edge,#000a)}
+.match-pitch .pitch-dot,.k-dot.pitch-dot{font-weight:900}
