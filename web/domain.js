@@ -456,8 +456,14 @@ export function applyClubAction(s,clubId,action,p){
   if(done.length+swaps.length>8)throw Error('Ya usaste '+done.length+' de los 8 cambios.');
   for(const x of swaps)if(done.some(e=>e.playerId===x.in))throw Error('Ese jugador ya entró.');
   const tactics=Object.fromEntries(Object.entries(p.tactics??{}).filter(([k,v])=>k in E.DEFAULT_TACTICS&&typeof v==='string'&&v.length<=20));
-  if(!swaps.length&&!Object.keys(tactics).length)throw Error('No hay cambios para hacer.');
-  let next=E.replayWithChanges(s,f.id,[...(f.match.changes??[]),{second,clubId,...(Object.keys(tactics).length?{tactics}:{}),...(swaps.length?{swaps}:{})}]);
+  // Interactive kick at goal: the result of a kick at goal of the manager's own team at that exact second.
+  let kick;
+  if(p.kick){const e=f.match.events.find(e=>e.second===second&&e.teamId===clubId&&(e.type==='conversion'||e.type==='penalty'));
+   if(!e)throw Error('No hay una patada a los palos tuya en ese momento.');
+   if((f.match.changes??[]).some(c=>c.kick?.second===second&&c.clubId===clubId))throw Error('Esa patada ya se pateó.');
+   kick={second,scored:p.kick.scored===true};}
+  if(!swaps.length&&!Object.keys(tactics).length&&!kick)throw Error('No hay cambios para hacer.');
+  let next=E.replayWithChanges(s,f.id,[...(f.match.changes??[]),{second,clubId,...(Object.keys(tactics).length?{tactics}:{}),...(swaps.length?{swaps}:{}),...(kick?{kick}:{})}]);
   // Player statistics of that match are recorded again.
   const st=next.playerStats?.seasons?.[next.season];
   if(st&&st[f.id]){const {[f.id]:_,...rest}=st;next={...next,playerStats:{...next.playerStats,seasons:{...next.playerStats.seasons,[next.season]:rest}}};next=Stats.recordPlayerStats(next);}

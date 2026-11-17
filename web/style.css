@@ -1025,3 +1025,15 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .lc-swap{display:flex;align-items:center;gap:8px;margin:6px 0}
 .lc-swap select{flex:1;min-width:0}
 .lc-swap svg{width:18px;height:18px;flex:none;color:var(--ink-3)}
+/* Interactive kick at goal (16/11/2026) */
+.kick-game{display:grid;gap:10px}
+.kick-info{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--ink-2)}
+.kick-info b{color:var(--ink)}
+.kick-wind i{display:inline-block;font-style:normal;margin-left:4px}
+.kick-scene{width:100%;max-height:52vh;border-radius:10px;touch-action:none;cursor:crosshair;background:#1f5f3a}
+.kick-help{margin:0;text-align:center;color:var(--ink-2)}
+.kick-result{font:800 28px 'Barlow Condensed',sans-serif;text-transform:uppercase}
+.kick-result.in{color:#3fbf6a}.kick-result.out{color:#e3262b}
+.kick-power{position:relative;height:22px;border-radius:11px;background:linear-gradient(90deg,#c0392b,#e9b949 60%,#c0392b);overflow:hidden}
+.kick-zone{position:absolute;top:0;bottom:0;background:#3fbf6acc;border-left:2px solid #fff;border-right:2px solid #fff}
+.kick-needle{position:absolute;top:-2px;bottom:-2px;width:4px;margin-left:-2px;background:#111;box-shadow:0 0 0 2px #fff}

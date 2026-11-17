@@ -26,7 +26,7 @@ export interface MatchEvent { minute: number; second: number; type: EventType; t
 export interface ReplayPlayer { id: string; teamId: string; number: number; x: number; y: number; }
 export interface ReplayFrame { second: number; players: ReplayPlayer[]; ball: { x: number; y: number; h?: number }; homeScore: number; awayScore: number; possessionId: string; phase?: ReplayPhase; carrierId?: string; targetId?: string; flight?: 'pass'|'kick'; homeDirection?: number; }
 export interface ReplayMoment { second:number; possessionId:string; x:number; y:number; homeScore:number; awayScore:number; h?:number; phase?:ReplayPhase; carrierId?:string; targetId?:string; flight?:'pass'|'kick'; homeDirection?:number; }
-export interface MatchChange { second: number; clubId: string; tactics?: Partial<Tactics>; swaps?: { out: string; in: string }[]; }
+export interface MatchChange { second: number; clubId: string; tactics?: Partial<Tactics>; swaps?: { out: string; in: string }[]; kick?: { second: number; scored: boolean }; }
 export interface MatchInputs { home: { players: Player[]; lineup: string[]; bench: string[] }; away: { players: Player[]; lineup: string[]; bench: string[] }; }
 export interface MatchResult { changes?: MatchChange[]; inputs?: MatchInputs; homeId: string; awayId: string; homeScore: number; awayScore: number; events: MatchEvent[]; frames: ReplayFrame[]; homeTries: number; awayTries: number; seed: number; homeTactics: Tactics; awayTactics: Tactics; timeline: ReplayMoment[]; homeLineup: string[]; awayLineup: string[]; cardEventsTracked?: boolean; replayTrack?: PackedMoment[]; analysis?: { home: TeamAnalysis; away: TeamAnalysis }; }
 export interface Standing { clubId: string; played: number; won: number; drawn: number; lost: number; pointsFor: number; pointsAgainst: number; tries: number; bonus: number; points: number; }
@@ -746,7 +746,11 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     const skill = attr(team, kicker, 'goalKicking', at);
     const composure = attr(team, kicker, 'composure', at);
     const p = .82 + (skill - 13) * .034 + (composure - 11) * .012 - (distance - 23) * .009 - margin * .005 - (type === 'dropGoal' ? .31 : 0);
-    const scored = chance(p, .07, .95);
+    let scored = chance(p, .07, .95);
+    // A kick the manager took himself (interactive kick at goal) replaces the engine's result; the random draw above
+    // is still made, so the rest of the match stays in step.
+    const forced = forcedKicks.get(team.club.id + '@' + (at + 6));
+    if (forced !== undefined) scored = forced;
     const label = type === 'conversion' ? (scored ? 'Conversión' : 'Conversión fallada') : type === 'penalty' ? (scored ? 'Penal' : 'Penal fallado') : (scored ? 'Drop' : 'Drop fallado');
     // Preserve the kick origin in the log and show points only after the ball reaches the posts.
     const origin = ball;
@@ -829,6 +833,7 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
 
   const benchIds = { home: home.bench.map(p => p?.id ?? ''), away: away.bench.map(p => p?.id ?? '') };
   const queue = [...changes].sort((a, b) => a.second - b.second), gone = new Set<string>();
+  const forcedKicks = new Map(changes.filter(c => c.kick).map(c => [c.clubId + '@' + c.kick!.second, c.kick!.scored]));
   let applied = 0;
   function applyChanges(at: number) {
     while (applied < queue.length && queue[applied].second <= at) {

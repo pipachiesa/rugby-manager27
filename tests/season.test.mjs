@@ -229,3 +229,17 @@ test('live changes: same match up to the change, then the new tactics and player
  assert.throws(()=>D.applyClubAction(next,club,'live-change',{fixtureId:f.id,second:1500,tactics:{mentality:'Defensiva'}}),/más adelante/);
  assert.throws(()=>D.applyClubAction({...w,managedClubs:[club,f.awayId]},club,'live-change',{fixtureId:f.id,second:2000,tactics:{mentality:'Ofensiva'}}),/otro manager/);
 });
+test('interactive kick at goal: the manager\'s result replaces the engine\'s and the match carries on from there',async()=>{
+ const {readFile}=await import('node:fs/promises');const D=await import('../web/domain.js');
+ const j=async p=>JSON.parse(await readFile(p,'utf8'));
+ let w=D.initialWorld(await j('research/catalog.json'),8,await j('research/returns.json'),await j('research/youth.json'),await j('research/names.json'));
+ let f,club,e;
+ for(const x of w.fixtures.filter(x=>x.round===1)){club=x.homeId;w=D.advanceWorld(w,new Set(w.fixtures.filter(y=>y.round===1).flatMap(y=>[y.homeId])));break;}
+ for(const x of w.fixtures.filter(x=>x.round===1)){e=x.match.events.find(ev=>(ev.type==='conversion'||ev.type==='penalty')&&ev.teamId===x.homeId&&ev.points>0);if(e){f=x;club=x.homeId;break;}}
+ assert.ok(e,'a home kick at goal that went over');
+ const next=D.applyClubAction(w,club,'live-change',{fixtureId:f.id,second:e.second,kick:{second:e.second,scored:false}});
+ const m=next.fixtures.find(x=>x.id===f.id).match,before=ev=>JSON.stringify(ev.filter(x=>x.second<e.second));
+ assert.equal(before(m.events),before(f.match.events));
+ assert.equal(m.events.find(x=>x.second===e.second&&x.teamId===club).points,0,'the kick is now missed');
+ assert.throws(()=>D.applyClubAction(next,club,'live-change',{fixtureId:f.id,second:e.second,kick:{second:e.second,scored:true}}),/ya se pateó/);
+});

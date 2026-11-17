@@ -1608,6 +1608,93 @@ async function applyLiveChanges() {
   replay=null; openReplay(id);
   if (replay) { notify('Cambios aplicados desde el minuto '+clock(second)+'.'); toggleReplay(); }
 }
+/**
+ * Interactive kicks at goal (16/11/2026): when your team kicks at goal in the replay of your own unfinished match, the
+ * replay stops and you can kick it yourself. You draw the direction once, then stop a power bar that runs faster the
+ * worse the kicker; the wind pushes the ball. The result replaces the engine's (a live change, so the match carries on
+ * from there; against a friend, only from where he has watched).
+ */
+const kicksAsked = new Set();
+function pendingKick() {
+  if (!replay||replay.known||!replay.match.inputs) return null;
+  const f=replay.fixture, mine=currentId(); if (f.homeId!==mine&&f.awayId!==mine) return null;
+  return replay.match.events.find(e=>(e.type==='conversion'||e.type==='penalty')&&e.teamId===mine&&replay.second>=e.second-6&&replay.second<e.second&&
+    !kicksAsked.has(f.id+'@'+e.second)&&!(replay.match.changes ?? []).some(c=>c.kick?.second===e.second)) ?? null;
+}
+const windOf = id => { let h=0; for (const ch of id) h=(h*31+ch.charCodeAt(0))>>>0; const speed=(h%25), angle=((h>>>5)%360)*Math.PI/180; return {speed,cross:Math.cos(angle)*speed,along:Math.sin(angle)*speed}; };
+let kickGame=null;
+function openKickGame(e) {
+  pauseReplay();
+  const f=replay.fixture, inputs=replay.match.inputs[f.homeId===currentId()?'home':'away'];
+  const kicker=inputs.players.find(p=>p.id===e.playerId), skill=kicker?.attributes.goalKicking ?? 10;
+  const dist=Math.round(Math.min(Math.hypot(100-e.x,e.y-35),Math.hypot(e.x,e.y-35)));
+  const lateral=e.y-35, wind=windOf(f.id);
+  const cx=Math.max(16,Math.min(84,50-lateral*Math.min(1.6,55/Math.max(dist,8)))), half=Math.max(3,Math.min(13,170/Math.max(dist,8)));
+  kickGame={e,f,skill,dist,wind,cx,half,stage:'aim',aim:null,power:0,need:Math.max(28,Math.min(97,32+dist*1.15-wind.along*.9)),zone:3+skill*.42,period:.75+skill*.07,t0:0,raf:0,result:null};
+  const kickerName=esc(kicker?.name ?? 'el pateador');
+  showModal((e.type==='conversion'?'Conversión':'Penal a los palos')+' · '+kickerName,
+    '<div class="kick-game"><div class="kick-info"><span>A '+dist+' m</span><span>Patada a los palos: <b>'+skill+'</b></span><span class="kick-wind">Viento '+Math.round(wind.speed)+' km/h <i style="transform:rotate('+Math.round(Math.atan2(-wind.along,wind.cross)*180/Math.PI)+'deg)">➜</i></span></div>'+
+    '<svg class="kick-scene" id="kick-scene" viewBox="0 0 100 120" preserveAspectRatio="xMidYMid meet">'+
+      '<defs><linearGradient id="kg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d7a4c"/><stop offset="1" stop-color="#1f5f3a"/></linearGradient></defs>'+
+      '<rect width="100" height="120" fill="#cfe3ee"/><path d="M0 26 L100 26 L100 120 L0 120Z" fill="url(#kg)"/>'+
+      '<line x1="0" y1="26" x2="100" y2="26" stroke="#fff" stroke-width=".5"/>'+
+      '<g stroke="#fff" stroke-width="1.2" stroke-linecap="round"><line x1="'+(kickGame.cx-kickGame.half)+'" y1="4" x2="'+(kickGame.cx-kickGame.half)+'" y2="26"/><line x1="'+(kickGame.cx+kickGame.half)+'" y1="4" x2="'+(kickGame.cx+kickGame.half)+'" y2="26"/><line x1="'+(kickGame.cx-kickGame.half)+'" y1="18" x2="'+(kickGame.cx+kickGame.half)+'" y2="18"/></g>'+
+      '<line id="kick-arrow" x1="50" y1="108" x2="50" y2="108" stroke="#ffd34d" stroke-width="1.4" stroke-dasharray="2 1.4" marker-end="url(#ka)"/>'+
+      '<defs><marker id="ka" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#ffd34d"/></marker></defs>'+
+      '<ellipse id="kick-ball" cx="50" cy="108" rx="2.2" ry="3" fill="#f4efe2" stroke="#7a5b2e" stroke-width=".5"/></svg>'+
+    '<p class="kick-help" id="kick-help">Dibujá la dirección: arrastrá desde la pelota hacia los palos. Una sola vez.</p>'+
+    '<div class="kick-power" id="kick-power" hidden><div class="kick-zone" style="left:'+(kickGame.need-kickGame.zone)+'%;width:'+(kickGame.zone*2)+'%"></div><div class="kick-needle" id="kick-needle"></div></div></div>',
+    button('Que patee él','kick-auto','','ghost')+button('¡Patear!','kick-stop','','primary','bolt'), true);
+  const scene=modalRoot.querySelector('#kick-scene'), arrow=modalRoot.querySelector('#kick-arrow');
+  const toScene=ev=>{ const r=scene.getBoundingClientRect(); return {x:(ev.clientX-r.left)/r.width*100,y:(ev.clientY-r.top)/r.height*120}; };
+  let dragging=false;
+  scene.addEventListener('pointerdown',ev=>{ if (kickGame?.stage!=='aim') return; dragging=true; scene.setPointerCapture(ev.pointerId); });
+  scene.addEventListener('pointermove',ev=>{ if (!dragging) return; const p=toScene(ev); arrow.setAttribute('x2',p.x); arrow.setAttribute('y2',Math.min(100,p.y)); });
+  scene.addEventListener('pointerup',ev=>{
+    if (!dragging||kickGame?.stage!=='aim') return; dragging=false;
+    const p=toScene(ev); if (p.y>100) { arrow.setAttribute('x2',50); arrow.setAttribute('y2',108); return; }
+    kickGame.aim=Math.atan2(p.x-50,108-p.y); kickGame.stage='power';
+    modalRoot.querySelector('#kick-help').textContent='Ahora frená la barra en la zona verde: tocá «¡Patear!» o la cancha.';
+    modalRoot.querySelector('#kick-power').hidden=false; kickGame.t0=performance.now(); powerLoop();
+  });
+  // The click that ends the drag must not also stop the bar.
+  scene.addEventListener('click',()=>{ if (kickGame?.stage==='power'&&performance.now()-kickGame.t0>350) stopKick(); });
+}
+function powerLoop() {
+  if (!kickGame||kickGame.stage!=='power') return;
+  const t=(performance.now()-kickGame.t0)/1000/kickGame.period, x=1-Math.abs((t%2)-1);
+  kickGame.power=x*100; const n=modalRoot.querySelector('#kick-needle'); if (n) n.style.left=kickGame.power+'%';
+  kickGame.raf=requestAnimationFrame(powerLoop);
+}
+function stopKick() {
+  const g=kickGame; if (!g||g.stage!=='power') return;
+  cancelAnimationFrame(g.raf); g.stage='flight';
+  const short=g.power<g.need-g.zone, extra=Math.max(0,g.power-(g.need+g.zone));
+  const drift=g.wind.cross*.32*(g.dist/30)+extra*.12*Math.sign(g.wind.cross || 1);
+  const xLand=50+Math.tan(g.aim)*82+drift, inside=Math.abs(xLand-g.cx)<=g.half*.9;
+  g.result=!short&&inside;
+  // Animate the ball: up the arrow, bending with the wind, short of the bar if under-hit.
+  const ball=modalRoot.querySelector('#kick-ball'), endY=short?30+ (g.need-g.zone-g.power)*.5:10, t0=performance.now();
+  (function fly(now){ const k=Math.min(1,(now-t0)/1100), e=1-(1-k)*(1-k);
+    const x=50+(xLand-50)*e+Math.sin(k*Math.PI)*g.wind.cross*.05, y=108+(endY-108)*e;
+    ball.setAttribute('cx',x); ball.setAttribute('cy',y); ball.setAttribute('rx',2.2*(1-.6*e)); ball.setAttribute('ry',3*(1-.6*e));
+    if (k<1) requestAnimationFrame(fly); else {
+      modalRoot.querySelector('#kick-help').innerHTML='<strong class="kick-result '+(g.result?'in':'out')+'">'+(g.result?'¡Adentro!':short?'Le faltó potencia':'¡Afuera!')+'</strong>';
+      const foot=modalRoot.querySelector('.modal-foot, footer'); if (foot) foot.innerHTML=button('Seguir el partido','kick-done','','primary','play');
+    } })(t0);
+}
+async function finishKick(auto=false) {
+  const g=kickGame; kickGame=null; if (!g) { closeModal(); return; }
+  cancelAnimationFrame(g.raf);
+  kicksAsked.add(g.f.id+'@'+g.e.second);
+  closeModal();
+  if (auto||g.result===null) { toggleReplay(); return; }
+  const id=g.f.id, from=Math.max(0,g.e.second-6);
+  if (!await act('live-change',{fixtureId:id,second:g.e.second,kick:{second:g.e.second,scored:g.result}})) { toggleReplay(); return; }
+  store.set(replayProgressKey(id),String(from));
+  replay=null; openReplay(id);
+  if (replay) toggleReplay();
+}
 function updatePlayButton() {
   if (!replayNodes?.toggle) return;
   app.querySelector('.live-btn')?.toggleAttribute('hidden',!liveChangeAllowed());
@@ -1658,6 +1745,8 @@ function animate(time) {
     replay.second=Math.min(replay.end,replay.second+elapsed*replayClockRate*replay.speed);
     replay.seen=Math.max(replay.second,replay.seen);
     reportWatch();
+    const kick=pendingKick();
+    if (kick) { replay.second=Math.max(replay.second,kick.second-6); drawReplay(); openKickGame(kick); return; }
   }
   lastFrameTime=time;
   if (replay.second>=replay.end) { finishReplay(); return; }
@@ -1962,7 +2051,7 @@ document.addEventListener('click',async event=>{
     case 'clubs': showClubs(); break;
     case 'explorer': showClubs(true); break;
     case 'club-preview': showClubPreview(value); break;
-    case 'close-modal': closeModal(); break;
+    case 'close-modal': if (kickGame) { await finishKick(true); break; } closeModal(); break;
     case 'choose-club':
       if (league) { showClubPreview(value); break; }
       demoClubId=value; store.set('tt-demo-club',value); saveDemo(); resetFilters(); closeModal(); changePage('resumen'); break;
@@ -2056,6 +2145,9 @@ document.addEventListener('click',async event=>{
     case 'replay': openReplay(value); break;
     case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
     case 'live-changes': showLiveChanges(); break;
+    case 'kick-stop': if (kickGame?.stage==='power') stopKick(); else if (kickGame?.stage==='aim') notify('Primero dibujá la dirección.',true); break;
+    case 'kick-auto': await finishKick(true); break;
+    case 'kick-done': await finishKick(false); break;
     case 'apply-live': await applyLiveChanges(); break;
     case 'start-match': if (replay) { replay.intro=false; render(); toggleReplay(); } break;
     case 'quick-sim': if (replay) finishReplay(); break;
@@ -2245,7 +2337,7 @@ document.addEventListener('submit',async event=>{
 
 document.addEventListener('keydown',event=>{
   if (!modalRoot.firstChild) return;
-  if (event.key==='Escape') closeModal();
+  if (event.key==='Escape') { if (kickGame) finishKick(true); else closeModal(); }
   if (event.key!=='Tab') return;
   const focusable=[...modalRoot.querySelectorAll('button:not(:disabled), input, select, a[href]')];
   if (event.shiftKey&&document.activeElement===focusable[0]) { event.preventDefault(); focusable.at(-1)?.focus(); }
