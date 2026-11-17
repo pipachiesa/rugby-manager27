@@ -462,8 +462,12 @@ export function applyClubAction(s,clubId,action,p){
    if(!e)throw Error('No hay una patada a los palos tuya en ese momento.');
    if((f.match.changes??[]).some(c=>c.kick?.second===second&&c.clubId===clubId))throw Error('Esa patada ya se pateó.');
    kick={second,scored:p.kick.scored===true};}
-  if(!swaps.length&&!Object.keys(tactics).length&&!kick)throw Error('No hay cambios para hacer.');
-  let next=E.replayWithChanges(s,f.id,[...(f.match.changes??[]),{second,clubId,...(Object.keys(tactics).length?{tactics}:{}),...(swaps.length?{swaps}:{}),...(kick?{kick}:{})}]);
+  // Half-time team talk: once per match, from half-time on.
+  const talk=['Calmar','Motivar','Exigir'].includes(p.talk)?p.talk:undefined;
+  if(talk&&second<2400)throw Error('La charla del entretiempo es desde el minuto 40.');
+  if(talk&&(f.match.changes??[]).some(c=>c.clubId===clubId&&c.talk))throw Error('Ya diste la charla del entretiempo.');
+  if(!swaps.length&&!Object.keys(tactics).length&&!kick&&!talk)throw Error('No hay cambios para hacer.');
+  let next=E.replayWithChanges(s,f.id,[...(f.match.changes??[]),{second,clubId,...(Object.keys(tactics).length?{tactics}:{}),...(swaps.length?{swaps}:{}),...(kick?{kick}:{}),...(talk?{talk}:{})}]);
   // Player statistics of that match are recorded again.
   const st=next.playerStats?.seasons?.[next.season];
   if(st&&st[f.id]){const {[f.id]:_,...rest}=st;next={...next,playerStats:{...next.playerStats,seasons:{...next.playerStats.seasons,[next.season]:rest}}};next=Stats.recordPlayerStats(next);}
@@ -471,16 +475,22 @@ export function applyClubAction(s,clubId,action,p){
  }
  if(action==='lineup')return E.setLineup(s,clubId,p.ids,Array.isArray(p.bench)?p.bench:undefined);
  // Formation manager (16/11/2026): named XV + bench, saved over an existing one with the same name, picked to play.
+ // Captain and goal kicker (16/11/2026): any senior of the club; empty clears the choice.
+ if(action==='set-roles'){
+  const club=s.clubs.find(c=>c.id===clubId),ok=id=>!id||club.players.some(x=>x.id===id&&x.squad==='Plantel superior');
+  if(!ok(p.captain)||!ok(p.kicker))throw Error('Jugador no válido.');
+  return {...s,clubs:s.clubs.map(c=>c.id===clubId?{...c,captain:p.captain||undefined,kicker:p.kicker||undefined}:c)};
+ }
  if(action==='save-formation'){
   const name=String(p.name??'').trim().slice(0,30);if(!name)throw Error('Poné un nombre a la formación.');
   const next=E.setLineup(s,clubId,p.ids,Array.isArray(p.bench)?p.bench:[]),club=next.clubs.find(c=>c.id===clubId);
   const list=(club.formations??[]).filter(f=>f.name!==name);if(list.length>=10)throw Error('Hasta 10 formaciones guardadas.');
-  return {...next,clubs:next.clubs.map(c=>c.id===clubId?{...c,formations:[...list,{name,lineup:[...club.lineup],bench:[...(club.bench??[])]}],formation:name}:c)};
+  return {...next,clubs:next.clubs.map(c=>c.id===clubId?{...c,formations:[...list,{name,lineup:[...club.lineup],bench:[...(club.bench??[])],captain:club.captain,kicker:club.kicker}],formation:name}:c)};
  }
  if(action==='use-formation'){
   const club=s.clubs.find(c=>c.id===clubId),f=club?.formations?.find(f=>f.name===p.name);if(!f)throw Error('Formación no encontrada.');
   // Players who left or are injured stay in the saved formation; each match fills their slot.
-  return {...s,clubs:s.clubs.map(c=>c.id===clubId?{...c,lineup:[...f.lineup],bench:[...f.bench],formation:f.name}:c)};
+  return {...s,clubs:s.clubs.map(c=>c.id===clubId?{...c,lineup:[...f.lineup],bench:[...f.bench],formation:f.name,...(f.captain?{captain:f.captain}:{}),...(f.kicker?{kicker:f.kicker}:{})}:c)};
  }
  if(action==='delete-formation'){
   return {...s,clubs:s.clubs.map(c=>c.id===clubId?{...c,formations:(c.formations??[]).filter(f=>f.name!==p.name),formation:c.formation===p.name?undefined:c.formation}:c)};
@@ -863,6 +873,30 @@ export function seasonMoves(w){
  for(const id of [b.table[0]?.clubId,b.winner??b.table[1]?.clubId].filter(Boolean))moves[id]='Primera A';
  return moves;
 }
+/**
+ * Promises (16/11/2026): a player signed with a promised role (market «rol ofrecido») checks it every round. Not
+ * getting it (and not injured) adds one broken round, getting it takes one off. At 3 he complains in the news, at 6
+ * he asks to leave and goes at the end of the season (squadTurnover). XV: starting; Primera: in the Primera group;
+ * Intermedia: Primera or Intermedia.
+ */
+const PROMISE_OK={XV:(p,xv)=>xv.has(p.id),Primera:(p,xv)=>xv.has(p.id)||p.seniorSquad==='Primera',Intermedia:(p,xv)=>xv.has(p.id)||p.seniorSquad==='Primera'||p.seniorSquad==='Intermedia'};
+const ROLE_TEXT={XV:'ser titular',Primera:'jugar en Primera',Intermedia:'jugar en Intermedia'};
+function checkPromises(s,round){
+ const news=[];
+ const clubs=s.clubs.map(c=>{
+  if(!c.players.some(p=>p.promise&&PROMISE_OK[p.promise.role]))return c;
+  const f=s.fixtures.find(f=>f.round===round&&f.match&&(f.homeId===c.id||f.awayId===c.id));if(!f)return c;
+  const xv=new Set((f.homeId===c.id?f.match.homeLineup:f.match.awayLineup).slice(0,15));
+  return {...c,players:c.players.map(p=>{
+   const ok=p.promise&&PROMISE_OK[p.promise.role];if(!ok||p.injury)return p;
+   const missed=ok(p,xv)?Math.max(0,(p.promise.missed??0)-1):(p.promise.missed??0)+1;
+   if(missed===3&&(p.promise.missed??0)<3)news.push({round,season:s.season,clubId:c.id,kind:'promise',playerId:p.id,text:`${p.name} reclama: le prometiste ${ROLE_TEXT[p.promise.role]} y no se está cumpliendo.`});
+   if(missed===6&&(p.promise.missed??0)<6)news.push({round,season:s.season,clubId:c.id,kind:'promise',playerId:p.id,text:`${p.name} pide irse: no le cumpliste la promesa. Se va a fin de temporada si no cambia.`});
+   return {...p,promise:{...p.promise,missed}};
+  })};
+ });
+ return {...s,clubs,news:[...(s.news??[]),...news].slice(-2000)};
+}
 export function advanceWorld(s,keep){
  s=schedulePlayoffs(s);
  const current=roundOf(s);if(!Number.isFinite(current))throw Error('La temporada terminó.');
@@ -871,6 +905,7 @@ export function advanceWorld(s,keep){
  s=E.autoPlayRound(s);
  s=Stats.recordPlayerStats(s);
  s=slimMatches(progressRetraining(developYouth(applyInjuries(playParallelRound(s,current),current),current),current,1,injured),keep);
+ s=checkPromises(s,current);
  // Match inputs (for live changes) are kept only for the round just played.
  s={...s,fixtures:s.fixtures.map(f=>f.match?.inputs&&f.round<current?{...f,match:(({inputs,...m})=>m)(f.match)}:f)};
  s=schedulePlayoffs(s);
@@ -912,6 +947,9 @@ function squadTurnover(world){
   const xv=new Set(E.autoLineup(c));
   let players=c.players.filter(p=>{
    if(p.squad!=='Plantel superior')return true;
+   // A broken promise (6+ rounds) ends with the player leaving for a nearby club.
+   if((p.promise?.missed??0)>=6){const why=departureReason({...world,seed:world.seed+1},c,p,managed);if(why.to)moving.push({to:why.to,player:p});
+    news.push({round:0,season:world.season,clubId:c.id,kind:'squad',playerId:p.id,text:`${p.name} se va: no le cumpliste lo prometido${why.to?` (${why.text.replace(/^se va a /,'a ')})`:''}.`});return false;}
    const chance=p.age!=null?Math.min(.9,Math.max(0,(p.age-32)*.15)):(!p.fictional&&(p.trajectory?.seasons??0)>=9?.2:0);
    if(!chance||unit(world.seed,world.season,p.id,'retire')>=chance)return true;
    news.push({round:0,season:world.season,clubId:c.id,kind:'squad',playerId:p.id,text:`${p.name} se retiró${p.age!=null?` a los ${p.age} años`:''}.`});return false;});

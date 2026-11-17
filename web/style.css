@@ -1055,3 +1055,20 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 @media (prefers-reduced-motion:reduce){.flag span,.flag-crest img,.confetti i{animation:none}}
 .flag-crest>*{width:36%!important;height:auto!important;max-width:150px;aspect-ratio:1;object-fit:contain}
 .flag-crest .crest-holder img.crest{width:100%!important;height:auto!important}.flag-crest .crest-holder{display:grid}
+.roles-bar .chemistry{position:relative;display:inline-flex;align-items:center;gap:6px;margin-left:auto;padding:6px 10px 10px;font-size:13px;color:var(--ink-2)}
+.roles-bar .chemistry b{color:var(--ink)}
+.roles-bar .chemistry i{position:absolute;left:10px;bottom:3px;height:3px;max-width:calc(100% - 20px);border-radius:2px;background:var(--good)}
+/* Round summary (16/11/2026) */
+.round-results{display:grid;gap:2px;padding:6px 12px}
+.round-row{display:grid;grid-template-columns:20px 1fr auto 1fr 20px;align-items:center;gap:8px;padding:4px 0;font-size:13px}
+.round-row em{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.round-row em.rh{text-align:right}
+.round-row img,.round-row .crest{width:20px;height:20px}
+.round-row strong{font-variant-numeric:tabular-nums}
+.round-row.mine{font-weight:700;color:var(--ink)}
+.round-star{display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid var(--line)}
+.round-star svg{width:22px;height:22px;color:#e9b949}
+.round-star small{display:block;color:var(--ink-3)}
+.round-team{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
+.round-team>div{display:grid;grid-template-columns:24px 1fr;column-gap:8px;padding:6px 8px;border:1px solid var(--line);border-radius:8px}
+.round-team b{grid-row:span 2;font:800 18px 'Barlow Condensed',sans-serif;color:var(--ink-3)}
+.round-team small{color:var(--ink-3)}

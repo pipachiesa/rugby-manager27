@@ -84,6 +84,7 @@ const navigation = [
 const profileTabs = [['perfil','Perfil'],['desarrollo','Desarrollo'],['estadisticas','Estadísticas'],['trayectoria','Trayectoria']];
 // [key, label, group, [[option, what it does], ...]]. Each option has a cost and a benefit (TACTIC_TUNING in the engine).
 const tacticsConfig = [
+  ['talk','Charla previa','juego',[['Ninguna','Sin charla especial.'],['Calmar','Tranquilidad y orden: suma un poco siempre.'],['Motivar','Rinde más si llegan como punto, contra uno mejor.'],['Exigir','Rinde más si son favoritos; contra uno mejor puede pesar.']]],
   ['mentality','Mentalidad','juego',[['Ofensiva','Pelota en la mano y a lo ancho: más quiebres, más errores de manejo y menos patadas.'],['Equilibrada','Lee cada fase según el terreno. Es el plan base.'],['Defensiva','Patea para ganar terreno y juega cerrado: menos errores y menos quiebres.']]],
   ['attack','Estructura de ataque','juego',[['1-3-3-1','Abrí la cancha con pods de tres forwards.'],['2-4-2','Agrupá cuatro forwards en el medio y jugá más cerrado.']]],
   ['defense','Sistema defensivo','juego',[['Drift','Cerrá de adentro hacia afuera, sin regalar espacio a la espalda.'],['Rush','Salí a presionar la línea de pase: corta el avance, pero concede penales y espacio si la línea no está coordinada.']]],
@@ -351,6 +352,40 @@ function inviteBanner() {
     button('Cerrar','hide-invite','','ghost small')+'</section>';
 }
 
+/**
+ * Round summary (16/11/2026): the last round you have seen in your division, with every result, the player of the
+ * round and a team of the round. Scored from the match log: points, tries (+5 more), turnovers won (+3), and +2 for
+ * being on the winning side; the team of the round takes the best starter in each shirt.
+ */
+function roundSummary(c) {
+  const cutoff=pendingReplay()?.round ?? Infinity;
+  const played=world().fixtures.filter(f=>f.division===c.division&&f.match&&!f.stage&&f.round<cutoff);
+  if (!played.length) return null;
+  const round=Math.max(...played.map(f=>f.round)), games=played.filter(f=>f.round===round);
+  const score=new Map(), who=new Map();
+  for (const f of games) {
+    const m=f.match, won=m.homeScore>m.awayScore?f.homeId:m.awayScore>m.homeScore?f.awayId:null;
+    [[f.homeId,m.homeLineup],[f.awayId,m.awayLineup]].forEach(([clubId,ids])=>(ids ?? []).slice(0,15).forEach((id,i)=>{ if (!id) return; who.set(id,{clubId,slot:i}); score.set(id,(score.get(id) ?? 0)+(clubId===won?2:0)); }));
+    for (const e of m.events ?? []) if (e.playerId&&who.has(e.playerId)) score.set(e.playerId,(score.get(e.playerId) ?? 0)+(e.points ?? 0)+(e.type==='try'?5:0)+(e.type==='turnover'?3:0));
+  }
+  const playerOf=id=>club(who.get(id)?.clubId)?.players.find(p=>p.id===id);
+  const rank=ids=>ids.sort((a,b)=>(score.get(b) ?? 0)-(score.get(a) ?? 0)||overall(playerOf(b) ?? {position:'Wing',attributes:{}})-overall(playerOf(a) ?? {position:'Wing',attributes:{}}));
+  const star=rank([...score.keys()].filter(playerOf))[0];
+  const team=engine.POSITIONS.map((_,i)=>rank([...who.keys()].filter(id=>who.get(id).slot===i&&playerOf(id)))[0]);
+  return {round,games,star,team,score,who,playerOf};
+}
+function roundSummaryPanel(c) {
+  const r=roundSummary(c); if (!r) return '';
+  const star=r.star&&r.playerOf(r.star);
+  return panel('Resumen · '+roundName(r.round,c.division),
+    '<div class="round-results">'+r.games.map(f=>'<div class="round-row'+(f.homeId===c.id||f.awayId===c.id?' mine':'')+'">'+crest(f.homeId)+'<em class="rh">'+esc(shortOf(f.homeId))+'</em><strong>'+f.match.homeScore+' – '+f.match.awayScore+'</strong><em>'+esc(shortOf(f.awayId))+'</em>'+crest(f.awayId)+'</div>').join('')+'</div>'+
+    (star?'<div class="round-star">'+icon('trophy')+'<span><small>Figura de la fecha</small><strong>'+esc(star.name)+'</strong> · '+esc(shortOf(r.who.get(r.star).clubId))+' · '+esc(star.position)+'</span></div>':''),
+    button('Equipo de la fecha','round-team',String(r.round),'ghost small','team'));
+}
+function showRoundTeam() {
+  const r=roundSummary(currentClub()); if (!r) return;
+  showModal('Equipo de la '+roundName(r.round).toLowerCase(),'<div class="round-team">'+r.team.map((id,i)=>{ const p=id&&r.playerOf(id); return '<div><b>'+(i+1)+'</b><span>'+(p?esc(p.name):'—')+'</span><small>'+(p?esc(shortOf(r.who.get(id).clubId)):'')+'</small></div>'; }).join('')+'</div>',button('Cerrar','close-modal','','primary'));
+}
 function dashboard() {
   const c = currentClub(), next = nextMatch(), last = lastMatch();
   const tab = (label,route) => button(label,'page',route,'ghost small','right');
@@ -365,7 +400,7 @@ function dashboard() {
     (!league?button('Cambiar de modo','entry-mode','','ghost small','link'):'')+'</div>'+
     '<div class="portal-grid">'+
       '<div class="portal-column" id="portal-inbox" tabindex="-1">'+inboxPanel(c)+panel('Equipos del club','<div class="portal-club-roster">'+rosters+'</div>')+'</div>'+
-      '<div class="portal-column" id="portal-match" tabindex="-1">'+fixtureCard(next)+result+upcomingPanel(c,next)+newsPanel(c)+'</div>'+
+      '<div class="portal-column" id="portal-match" tabindex="-1">'+fixtureCard(next)+result+roundSummaryPanel(c)+upcomingPanel(c,next)+newsPanel(c)+'</div>'+
       '<div class="portal-column">'+panel(c.division,standingsTable(c.division,true),tab('Tabla','torneo'),'portal-standings')+playerLeadersPanel(c)+categoriesPanel(c)+playoffBracket(c.division)+'</div>'+
       '<div class="portal-column">'+rivalPanel(c,next)+weekPanel(c)+'</div>'+
     '</div>';
@@ -448,7 +483,7 @@ function showRivalReport(rid) {
 // Inbox: board, staff and assistant messages. Read state is kept per browser.
 const readSet = () => { try { return new Set(JSON.parse(store.get('tt-read') ?? '[]')); } catch { return new Set(); } };
 const markRead = id => { const r=readSet(); r.add(id); store.set('tt-read', JSON.stringify([...r].slice(-400))); };
-const NEWS_FROM = {injury:['Cuerpo médico','medic'],recovery:['Cuerpo médico','check'],training:['Preparador físico','pulse'],youth:['Coordinador de juveniles','grow'],squad:['Secretaría del club','team'],transfer:['Mánager deportivo','swap']};
+const NEWS_FROM = {injury:['Cuerpo médico','medic'],recovery:['Cuerpo médico','check'],training:['Preparador físico','pulse'],youth:['Coordinador de juveniles','grow'],squad:['Secretaría del club','team'],transfer:['Mánager deportivo','swap'],promise:['Mánager deportivo','inbox']};
 function inboxItems(c) {
   const season=world().season, cutoff=pendingReplay()?.round ?? Infinity, items=[], obj=clubObjective(world(),c.id);
   items.push({id:'board-'+c.id+'-'+season,round:0,from:'Comisión directiva',glyph:'shield',title:'Objetivo '+season+': '+obj.text.toLowerCase(),body:'Exigencia '+obj.level.toLowerCase()+'. El plantel es el '+obj.rank+'º más fuerte de '+c.division+' y esperamos que termines '+(obj.target===2?'1º o 2º':'entre los '+obj.target+' primeros')+'. Contamos con vos.'});
@@ -717,7 +752,7 @@ function benchFor(c, ids) {
 }
 function tacticsPage() {
   const c = currentClub(), seniors = c.players.filter(p=>p.squad==='Plantel superior');
-  const t = {...engine.DEFAULT_TACTICS, ...(tacticDraft ?? world().tactics[c.id] ?? {})}, ids = lineupDraft ?? lineup(c);
+  const t = {talk:'Ninguna', ...engine.DEFAULT_TACTICS, ...(tacticDraft ?? world().tactics[c.id] ?? {})}, ids = lineupDraft ?? lineup(c);
   const pending = tacticDraft || lineupDraft || benchDraft, colors = kitColors(c);
   const byId = id => seniors.find(p=>p.id===id);
   const bench = benchFor(c, ids);
@@ -730,6 +765,11 @@ function tacticsPage() {
     '<input id="formation-name" maxlength="30" placeholder="Nombre (ej. Titular)" value="'+esc(formationName || c.formation || '')+'">'+
     button('Guardar formación','save-formation','','primary small','check',!editable()||busy)+
     (c.formation?button('Borrar','delete-formation',c.formation,'ghost small','close',!editable()||busy):'')+'</div>';
+  // Captain, goal kicker and XV chemistry (16/11/2026).
+  const xvPlayers = ids.map(byId).filter(Boolean), chem = Math.round((engine.chemistryOf(xvPlayers)+.002)/.008*100);
+  const rolePick = (id,label,value) => '<label for="'+id+'">'+label+'</label><select id="'+id+'"'+(!editable()||busy?' disabled':'')+'><option value="">Automático</option>'+xvPlayers.map(p=>option(p.name+' · '+(positionAbbr[p.position] ?? p.position)+' · '+(id==='role-kicker'?'pie '+p.attributes.goalKicking:'liderazgo '+p.attributes.leadership),p.id,value)).join('')+'</select>';
+  const rolesBar = '<div class="formation-manager roles-bar">'+rolePick('role-captain','Capitán',c.captain ?? '')+rolePick('role-kicker','Pateador',c.kicker ?? '')+
+    '<span class="chemistry" title="Los titulares que repiten fecha a fecha juegan mejor juntos">Química del XV <b>'+chem+'%</b><i style="width:'+chem+'%"></i></span></div>';
   const pickedSlot = swapPick?.slot, pickedId = swapPick?.id;
   const level = Math.round(ids.map((id,i)=>byId(id)?engine.slotOverall(byId(id),engine.POSITIONS[i]):0).reduce((n,x)=>n+x,0)/15);
   const summary = [t.mentality ?? 'Equilibrada', t.attack, t.defense, 'Pie '+t.kicking.toLowerCase(), 'Penales: '+t.penalty].join(' · ');
@@ -739,7 +779,7 @@ function tacticsPage() {
   return '<header class="page-intro tactics-head"><div><h1>Formación</h1><p>'+esc(summary)+'</p></div><div class="action-row">'+
       button('Tácticas','tactics-panel','','primary','target')+'</div></header>'+editableNotice()+
     (pending?'<div class="notice unsaved save-bar"><span>Cambios sin guardar</span><span class="action-row">'+button('Descartar','discard-tactics','','ghost small')+(tacticDraft?button('Guardar tácticas','save-tactics','','primary small','check',!editable()||busy):'')+(lineupDraft||benchDraft?button('Guardar XV y suplentes','save-lineup','','primary small','check',!editable()||busy):'')+'</span></div>':'')+
-    formationBar+
+    formationBar+rolesBar+
     '<div class="formation-layout"><section class="formation-board">'+
       '<div class="board-top"><span>'+icon('field')+' XV titular · nivel '+level+'</span><small>'+(swapPick?'Elegí con quién cambiarlo':'Tocá una camiseta y después otra o un suplente para cambiarlos')+'</small></div>'+
       '<div class="rugby-pitch">'+pitchLines()+'<span class="pitch-brand">'+esc(c.shortName ?? c.name)+'</span>'+
@@ -1596,6 +1636,8 @@ function flash(e) {
   clearTimeout(flash.timer); flash.timer=setTimeout(()=>{ box.className='replay-flash'; },e.type==='try'?2600:1900);
 }
 /** Live changes are possible on the paused replay of your own unfinished match against a club without a manager. */
+// Same as liveChangeAllowed but while the replay is still running (half-time stop).
+function liveChangeAllowedAt() { if (!replay) return false; const was=replay.playing; replay.playing=false; const ok=liveChangeAllowed(); replay.playing=was; return ok; }
 function liveChangeAllowed() {
   if (!replay||replay.known||replay.playing||replay.intro||!replay.match.inputs) return false;
   const f=replay.fixture, mine=currentId();
@@ -1624,6 +1666,8 @@ function showLiveChanges() {
     '<select data-swap-in="'+k+'"><option value="">Entra…</option>'+bench.map(id=>option((inputs.players.find(p=>p.id===id)?.name ?? id)+pos(id),id,'')).join('')+'</select></div>').join('');
   showModal('Cambios en el minuto '+clock(replay.second),
     '<p class="training-note">El partido sigue igual hasta acá; desde este momento juega con los cambios.</p>'+
+    (replay.second>=2400&&!(replay.match.changes ?? []).some(c=>c.clubId===currentId()&&c.talk)?'<h4>Charla del entretiempo</h4><div class="lc-grid"><div class="field"><select id="lc-talk"><option value="">Sin charla</option>'+
+      [['Calmar','Calmar: ordena, suma si van ganando'],['Motivar','Motivar: levanta si van perdiendo'],['Exigir','Exigir: no aflojar si van ganando']].map(([v,l])=>option(l,v,'')).join('')+'</select></div></div>':'')+
     '<h4>Tácticas</h4><div class="lc-grid">'+tacticRows+'</div>'+
     '<h4>Jugadores <small>· quedan '+left+' de 8 cambios; el que sale no vuelve a entrar</small></h4>'+(bench.length&&left?swapRows:'<p class="training-note">No quedan cambios.</p>'),
     button('Cancelar','close-modal','','ghost')+button('Aplicar cambios','apply-live','','primary','check'), true);
@@ -1635,10 +1679,11 @@ async function applyLiveChanges() {
   const tactics={}; modalRoot.querySelectorAll('[data-tactic]').forEach(el=>{ if (el.value!==base[el.dataset.tactic]) tactics[el.dataset.tactic]=el.value; });
   const swaps=[0,1,2].map(k=>({out:modalRoot.querySelector('[data-swap-out="'+k+'"]')?.value,in:modalRoot.querySelector('[data-swap-in="'+k+'"]')?.value})).filter(x=>x.out&&x.in);
   if (new Set(swaps.map(x=>x.in)).size!==swaps.length||new Set(swaps.map(x=>x.out)).size!==swaps.length) return notify('Cada jugador puede salir o entrar una sola vez.',true);
-  if (!swaps.length&&!Object.keys(tactics).length) return notify('No elegiste ningún cambio.',true);
+  const talk=modalRoot.querySelector('#lc-talk')?.value || undefined;
+  if (!swaps.length&&!Object.keys(tactics).length&&!talk) return notify('No elegiste ningún cambio.',true);
   const second=Math.floor(replay.second), id=f.id;
   closeModal();
-  if (!await act('live-change',{fixtureId:id,second,tactics,swaps})) return;
+  if (!await act('live-change',{fixtureId:id,second,tactics,swaps,talk})) return;
   // Reopen the regenerated match at the same second and keep playing.
   store.set(replayProgressKey(id),String(second));
   replay=null; openReplay(id);
@@ -1781,6 +1826,9 @@ function animate(time) {
     replay.second=Math.min(replay.end,replay.second+elapsed*replayClockRate*replay.speed);
     replay.seen=Math.max(replay.second,replay.seen);
     reportWatch();
+    // Half-time: stop once so you can give the team talk and make changes.
+    const ht=replay.fixture.id+'@ht';
+    if (replay.second>=2400&&replay.second<2460&&!kicksAsked.has(ht)&&liveChangeAllowedAt()) { kicksAsked.add(ht); replay.second=2400; drawReplay(); showLiveChanges(); notify('Entretiempo: charla y cambios.'); return; }
     const kick=pendingKick();
     if (kick) { replay.second=Math.max(replay.second,kick.second-6); drawReplay(); openKickGame(kick); return; }
   }
@@ -2181,6 +2229,7 @@ document.addEventListener('click',async event=>{
     case 'replay': openReplay(value); break;
     case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
     case 'close-celebration': store.set('tt-celebrated:'+(league?.code ?? 'demo')+':'+world().season+':'+value,'1'); render(); break;
+    case 'round-team': showRoundTeam(); break;
     case 'live-changes': showLiveChanges(); break;
     case 'kick-stop': if (kickGame?.stage==='power') stopKick(); else if (kickGame?.stage==='aim') notify('Primero dibujá la dirección.',true); break;
     case 'kick-auto': await finishKick(true); break;
@@ -2247,6 +2296,7 @@ document.addEventListener('change',event=>{
   if (input.id==='fixture-round') { tournamentRound=Number(input.value); render(); }
   if (input.id==='formation-pick'&&input.value) { formationName=input.value; act('use-formation',{name:input.value}).then(ok=>ok&&notify('Juega la formación «'+input.value+'».')); return; }
   if (input.id==='formation-name') formationName=input.value;
+  if (input.id==='role-captain'||input.id==='role-kicker') { const c=currentClub(); act('set-roles',{captain:input.id==='role-captain'?input.value:(c.captain ?? ''),kicker:input.id==='role-kicker'?input.value:(c.kicker ?? '')}).then(ok=>ok&&notify(input.id==='role-captain'?'Capitán elegido.':'Pateador elegido.')); return; }
   if (input.id==='retrain-player') { retrainPick=input.value; retrainTo=''; render(); }
   if (input.id==='retrain-to') { retrainTo=input.value; render(); }
   if (input.id==='replay-speed'&&replay) replay.speed=Number(input.value);

@@ -243,3 +243,24 @@ test('interactive kick at goal: the manager\'s result replaces the engine\'s and
  assert.equal(m.events.find(x=>x.second===e.second&&x.teamId===club).points,0,'the kick is now missed');
  assert.throws(()=>D.applyClubAction(next,club,'live-change',{fixtureId:f.id,second:e.second,kick:{second:e.second,scored:true}}),/ya se pateó/);
 });
+test('captain, kicker, talks, chemistry and promises',async()=>{
+ const {readFile}=await import('node:fs/promises');const D=await import('../web/domain.js');const E=await import('../web/engine.js');
+ const j=async p=>JSON.parse(await readFile(p,'utf8'));
+ let w=D.initialWorld(await j('research/catalog.json'),3,await j('research/returns.json'),await j('research/youth.json'),await j('research/names.json'));
+ const club=w.clubs.find(c=>c.division==='Top 14'),xv=E.autoLineup(club),flanker=club.players.find(p=>p.id===xv[5]);
+ w=D.applyClubAction(w,club.id,'set-roles',{captain:xv[1],kicker:flanker.id});
+ assert.equal(w.clubs.find(c=>c.id===club.id).kicker,flanker.id);
+ assert.throws(()=>D.applyClubAction(w,club.id,'set-roles',{captain:'nadie'}));
+ // The chosen kicker takes every kick at goal while on the pitch.
+ const rival=w.clubs.find(c=>c.id!==club.id&&c.division==='Top 14');
+ const m=E.generateMatch(w.clubs.find(c=>c.id===club.id),rival,E.DEFAULT_TACTICS,E.DEFAULT_TACTICS,99,false);
+ const kicks=m.events.filter(e=>(e.type==='conversion'||e.type==='penalty')&&e.teamId===club.id&&e.second<3600);
+ assert.ok(kicks.every(e=>e.playerId===flanker.id),'the chosen kicker kicks');
+ assert.ok(E.talkEffect('Motivar',-5)>E.talkEffect('Motivar',5));assert.ok(E.talkEffect('Exigir',-20,true)<0);
+ assert.ok(E.chemistryOf(Array.from({length:15},()=>({startStreak:6})))>E.chemistryOf(Array.from({length:15},()=>({startStreak:0}))));
+ // A promised starter left out complains after three rounds.
+ const signed=club.players.find(p=>!xv.includes(p.id)&&p.squad==='Plantel superior');
+ w={...w,clubs:w.clubs.map(c=>c.id===club.id?{...c,players:c.players.map(p=>p.id===signed.id?{...p,promise:{role:'XV',season:w.season}}:p)}:c)};
+ for(let r=0;r<3;r++)w=D.advanceWorld(w,new Set([club.id]));
+ assert.ok(w.news.some(n=>n.kind==='promise'&&n.playerId===signed.id),'he complains');
+});

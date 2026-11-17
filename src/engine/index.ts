@@ -15,10 +15,10 @@ export type Division = 'Top 14' | 'Primera A' | 'Primera B';
 export type Squad = 'Plantel superior' | 'M19' | 'M17';
 export type SeniorSquad = 'Primera' | 'Intermedia' | 'Pre A' | 'Pre B';
 export interface Injury { type: string; name: string; weeksOut: number; since: number; season: number; }
-export interface Player { academyClubId?: string; academyIntakeSeason?: number; academyEntry?: 'intake' | 'cover'; youthSeasons?: number; development?: DevelopmentState; trajectory?: { seasons: number; complete: boolean }; seniorSquad?: SeniorSquad; positions?: Position[]; injury?: Injury | null; id: string; name: string; age: number | null; birthDate?: string; ageKnown?: boolean; ageEstimated?: boolean; estimatedBirthDate?: string | null; sourceIds?: string[]; sourceRecordId?: string; position: Position; squad: Squad; attributes: Attributes; potential: number; fitness: number; estimated: boolean; fictional: boolean; }
+export interface Player { startStreak?: number; academyClubId?: string; academyIntakeSeason?: number; academyEntry?: 'intake' | 'cover'; youthSeasons?: number; development?: DevelopmentState; trajectory?: { seasons: number; complete: boolean }; seniorSquad?: SeniorSquad; positions?: Position[]; injury?: Injury | null; id: string; name: string; age: number | null; birthDate?: string; ageKnown?: boolean; ageEstimated?: boolean; estimatedBirthDate?: string | null; sourceIds?: string[]; sourceRecordId?: string; position: Position; squad: Squad; attributes: Attributes; potential: number; fitness: number; estimated: boolean; fictional: boolean; }
 export interface ClubDefinition { id?: string; name: string; shortName?: string; division: Division; color: string; secondaryColor: string; strength: number; }
-export interface Club { id: string; name: string; shortName: string; division: Division; color: string; secondaryColor: string; strength: number; players: Player[]; lineup?: string[]; bench?: string[]; formations?: { name: string; lineup: string[]; bench: string[] }[]; formation?: string; }
-export interface Tactics { mentality?: 'Ofensiva' | 'Equilibrada' | 'Defensiva'; penalty?: 'Palos' | 'Touch' | 'Según marcador'; attack: '1-3-3-1' | '2-4-2'; defense: 'Drift' | 'Rush'; scrum: 'Estable' | 'Presión'; lineout: 'Seguro' | 'Competir'; maul: 'Evitar' | 'Usar'; kicking: 'Conservador' | 'Territorial'; ruck: 'Rápido' | 'Asegurar'; }
+export interface Club { id: string; name: string; shortName: string; division: Division; color: string; secondaryColor: string; strength: number; players: Player[]; lineup?: string[]; bench?: string[]; formations?: { name: string; lineup: string[]; bench: string[]; captain?: string; kicker?: string }[]; formation?: string; captain?: string; kicker?: string; }
+export interface Tactics { talk?: 'Ninguna' | 'Calmar' | 'Motivar' | 'Exigir'; mentality?: 'Ofensiva' | 'Equilibrada' | 'Defensiva'; penalty?: 'Palos' | 'Touch' | 'Según marcador'; attack: '1-3-3-1' | '2-4-2'; defense: 'Drift' | 'Rush'; scrum: 'Estable' | 'Presión'; lineout: 'Seguro' | 'Competir'; maul: 'Evitar' | 'Usar'; kicking: 'Conservador' | 'Territorial'; ruck: 'Rápido' | 'Asegurar'; }
 export const DEFAULT_TACTICS: Tactics = { mentality:'Equilibrada', penalty:'Según marcador', attack:'1-3-3-1', defense:'Drift', scrum:'Estable', lineout:'Seguro', maul:'Usar', kicking:'Territorial', ruck:'Asegurar' };
 export interface Fixture { id: string; division: Division; round: number; homeId: string; awayId: string; match?: MatchResult; stage?: 'semi' | 'final'; neutral?: boolean; }
 export type EventType = 'try' | 'conversion' | 'penalty' | 'dropGoal' | 'turnover' | 'kick' | 'lineout' | 'scrum' | 'substitution' | 'knockOn' | 'infringement' | 'yellowCard' | 'redCard' | 'halfTime' | 'fullTime';
@@ -26,8 +26,9 @@ export interface MatchEvent { minute: number; second: number; type: EventType; t
 export interface ReplayPlayer { id: string; teamId: string; number: number; x: number; y: number; }
 export interface ReplayFrame { second: number; players: ReplayPlayer[]; ball: { x: number; y: number; h?: number }; homeScore: number; awayScore: number; possessionId: string; phase?: ReplayPhase; carrierId?: string; targetId?: string; flight?: 'pass'|'kick'; homeDirection?: number; }
 export interface ReplayMoment { second:number; possessionId:string; x:number; y:number; homeScore:number; awayScore:number; h?:number; phase?:ReplayPhase; carrierId?:string; targetId?:string; flight?:'pass'|'kick'; homeDirection?:number; }
-export interface MatchChange { second: number; clubId: string; tactics?: Partial<Tactics>; swaps?: { out: string; in: string }[]; kick?: { second: number; scored: boolean }; }
-export interface MatchInputs { home: { players: Player[]; lineup: string[]; bench: string[] }; away: { players: Player[]; lineup: string[]; bench: string[] }; }
+export interface MatchChange { talk?: 'Calmar' | 'Motivar' | 'Exigir'; second: number; clubId: string; tactics?: Partial<Tactics>; swaps?: { out: string; in: string }[]; kick?: { second: number; scored: boolean }; }
+type SideInputs = { players: Player[]; lineup: string[]; bench: string[]; captain?: string; kicker?: string };
+export interface MatchInputs { home: SideInputs; away: SideInputs; }
 export interface MatchResult { changes?: MatchChange[]; inputs?: MatchInputs; homeId: string; awayId: string; homeScore: number; awayScore: number; events: MatchEvent[]; frames: ReplayFrame[]; homeTries: number; awayTries: number; seed: number; homeTactics: Tactics; awayTactics: Tactics; timeline: ReplayMoment[]; homeLineup: string[]; awayLineup: string[]; cardEventsTracked?: boolean; replayTrack?: PackedMoment[]; analysis?: { home: TeamAnalysis; away: TeamAnalysis }; }
 export interface Standing { clubId: string; played: number; won: number; drawn: number; lost: number; pointsFor: number; pointsAgainst: number; tries: number; bonus: number; points: number; }
 export interface ReturnCandidate { origin?: 'documented' | 'simulated'; id:string; homeClubId:string; player:Player; status:'monitoring'|'ready'|'signed'; note:string; willingness:number|null; contactable:boolean; lastContactRound?:number; }
@@ -607,6 +608,31 @@ const lineoutSkill = (team: Team, second: number) =>
 const maulSkill = (team: Team, second: number) => unit(team, pack, { maul: 5, strength: 3, technique: 2 }, second);
 const allShirts = [...pack, ...backline];
 const onScale = (n: number) => clamp(Math.round((n - 1) * 100 / 19), 0, 100);
+/**
+ * Small, deterministic form effects (16/11/2026), on top of the random day form (DAY_FORM ±2 %):
+ *  - chemistry: starters who keep their place round after round (player.startStreak) play better together, from
+ *    -0.2 % for a brand-new XV to +0.6 % for one unchanged for six rounds;
+ *  - captain: his leadership (1-20) moves the team ±0.6 %;
+ *  - team talk before kick-off (tactics.talk) and at half-time (a live change), by the situation: «Motivar» lifts an
+ *    underdog or a side behind, «Exigir» keeps a favourite or a side ahead switched on but can weigh on one behind,
+ *    «Calmar» is a safe small lift that suits a side ahead.
+ */
+export function chemistryOf(lineup: Pick<Player, 'startStreak'>[]): number {
+  const avg = lineup.reduce((n, p) => n + Math.min(6, p.startStreak ?? 0), 0) / Math.max(1, lineup.length);
+  return -.002 + .008 * avg / 6;
+}
+export function talkEffect(talk: string | undefined, edge: number, halfTime = false): number {
+  // edge: rating gap before kick-off, or the score margin at half-time (positive: your side is better or ahead).
+  const ahead = halfTime ? edge > 7 : edge > 2, behind = halfTime ? edge < -7 : edge < -2, wayBehind = halfTime && edge < -14;
+  if (talk === 'Motivar') return behind ? .012 : ahead ? .002 : .006;
+  if (talk === 'Exigir') return ahead ? (halfTime ? .008 : .010) : wayBehind || (!halfTime && behind) ? -.006 : .005;
+  if (talk === 'Calmar') return halfTime ? (ahead ? .006 : behind ? -.002 : .003) : .004;
+  return 0;
+}
+function captainEffect(club: Club, lineup: Player[]): number {
+  const captain = lineup.find(p => p.id === club.captain);
+  return captain ? (captain.attributes.leadership - 10) * .0006 : 0;
+}
 function prepareTeam(club: Club, tactics: Tactics, rng: Random): Team {
   const chosen = selection(club);
   if (chosen.length < 15) throw new Error('El club necesita 15 jugadores habilitados');
@@ -618,7 +644,7 @@ function prepareTeam(club: Club, tactics: Tactics, rng: Random): Team {
   const fitness = Math.round(lineup.reduce((n, p) => n + p.fitness, 0) / 15);
   // Calibrated against URBA 2016-2026 (research/history): the engine already has more per-match noise than real
   // results, so day form only adds a small ±2 % swing.
-  const form = (rng() + rng() - 1) * DAY_FORM;
+  const form = (rng() + rng() - 1) * DAY_FORM + chemistryOf(lineup) + captainEffect(club, lineup);
   // Report skill with a fit XV on a neutral day; fitness and match form are shown separately.
   const analysis: TeamAnalysis = { openPlay: 0, scrum: 0, lineout: 0, maul: 0, kicking: 0, discipline: 0, fitness, dayForm: roundOne(form * 100), phases: 0, territory: 50, turnoversWon: 0, metresGained: 0 };
   const team: Team = { club, tactics, lineup: lineup.map(p => ({ ...p, fitness: 100 })), startingIds: lineup.map(p => p.id), bench, form: 0, analysis, territorialPhases: 0, replacementStart: new Map(), suspendedUntil: new Map() };
@@ -644,6 +670,8 @@ function prepareTeam(club: Club, tactics: Tactics, rng: Random): Team {
 export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tactics = DEFAULT_TACTICS, awayTactics: Tactics = DEFAULT_TACTICS, seed = 26, includeFrames = true, neutral = false, changes: MatchChange[] = []): MatchResult {
   const rng = random(seed), events: MatchEvent[] = [], timeline: ReplayMoment[] = [];
   const home = prepareTeam(homeClub, homeTactics, rng), away = prepareTeam(awayClub, awayTactics, rng);
+  const xvRating = (t: Team) => t.lineup.reduce((n, p) => n + overall(p), 0) / 15, gap = xvRating(home) - xvRating(away);
+  home.form += talkEffect(homeTactics.talk, gap); away.form += talkEffect(awayTactics.talk, -gap);
   let homeScore = 0, awayScore = 0, homeTries = 0, awayTries = 0;
   let second = 0, homeDirection = 1, ball: Ball = { x: 50, y: 35 };
   let team = rng() < .5 ? home : away;
@@ -738,6 +766,9 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     }
   }
   function kickerFor(side: Team): Player {
+    // The manager's chosen kicker takes them while he is on the pitch; otherwise the best kicker on it.
+    const chosen = side.lineup.find(p => p.id === side.club.kicker && activeAt(side, p, second));
+    if (chosen) return chosen;
     return side.lineup.filter(player => activeAt(side, player, second)).reduce((best, player) => attr(side, player, 'goalKicking') > attr(side, best, 'goalKicking') ? player : best);
   }
   function goal(at: number, type: 'conversion' | 'penalty' | 'dropGoal', distance: number, margin: number) {
@@ -840,6 +871,7 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
       const change = queue[applied++], side = change.clubId === home.club.id ? home : change.clubId === away.club.id ? away : undefined;
       if (!side) continue;
       if (change.tactics) side.tactics = { ...side.tactics, ...change.tactics };
+      if (change.talk) { const margin = side === home ? homeScore - awayScore : awayScore - homeScore; side.form += talkEffect(change.talk, margin, true); }
       for (const swap of change.swaps ?? []) {
         const slot = side.lineup.findIndex(p => p.id === swap.out);
         const incoming = side.club.players.find(p => p.id === swap.in);
@@ -1208,20 +1240,20 @@ function buildFrames(home: Club, away: Club, match: MatchResult): ReplayFrame[] 
 }
 
 /** The 23 a club takes to a match, as they were (used to replay it with live changes). */
-export function matchInputs(club: Club): { players: Player[]; lineup: string[]; bench: string[] } {
+export function matchInputs(club: Club): SideInputs {
   const chosen = selection(club), xv = chosen.slice(0, 15), rest = chosen.slice(15);
   const saved = (club.bench ?? []).map(id => rest.find(p => p.id === id)).filter((p): p is Player => !!p);
   const engineBench = [0, 3].map(slot => saved.find(p => canPlay(p, POSITIONS[slot])) ?? rest.find(p => p.position === POSITIONS[slot]));
   const bench = [...new Set([...engineBench, ...saved, ...rest].filter((p): p is Player => !!p))].slice(0, 8);
-  const slim = (p: Player): Player => ({ id: p.id, name: p.name, position: p.position, positions: p.positions, squad: 'Plantel superior', seniorSquad: p.seniorSquad, attributes: p.attributes, fitness: p.fitness, injury: null, age: p.age, potential: p.potential, estimated: p.estimated, fictional: p.fictional });
-  return { players: [...xv, ...bench].map(slim), lineup: xv.map(p => p.id), bench: bench.map(p => p.id) };
+  const slim = (p: Player): Player => ({ startStreak: p.startStreak, id: p.id, name: p.name, position: p.position, positions: p.positions, squad: 'Plantel superior', seniorSquad: p.seniorSquad, attributes: p.attributes, fitness: p.fitness, injury: null, age: p.age, potential: p.potential, estimated: p.estimated, fictional: p.fictional });
+  return { players: [...xv, ...bench].map(slim), lineup: xv.map(p => p.id), bench: bench.map(p => p.id), captain: club.captain, kicker: club.kicker };
 }
 /** Plays a stored match again with the manager's live changes; identical up to the first change. */
 export function replayWithChanges(state: LeagueState, fixtureId: string, changes: MatchChange[]): LeagueState {
   const fixture = state.fixtures.find(f => f.id === fixtureId);
   if (!fixture?.match?.inputs) throw new Error('Este partido no admite cambios.');
   const { inputs } = fixture.match;
-  const clubOf = (id: string, side: MatchInputs['home']): Club => { const c = state.clubs.find(x => x.id === id)!; return { ...c, players: side.players, lineup: side.lineup, bench: side.bench }; };
+  const clubOf = (id: string, side: MatchInputs['home']): Club => { const c = state.clubs.find(x => x.id === id)!; return { ...c, players: side.players, lineup: side.lineup, bench: side.bench, captain: side.captain, kicker: side.kicker }; };
   const full = generateMatch(clubOf(fixture.homeId, inputs.home), clubOf(fixture.awayId, inputs.away), fixture.match.homeTactics, fixture.match.awayTactics, fixture.match.seed, false, fixture.neutral === true, changes);
   const match = { ...full, timeline: [], replayTrack: packTimeline(full), inputs };
   return { ...state, fixtures: state.fixtures.map(f => f.id === fixtureId ? { ...f, match } : f) };
@@ -1237,7 +1269,8 @@ export function simulateFixture(state:LeagueState, fixtureId:string, tacticsByCl
   // A match costs 12 points (a replacement 4); the seven days until the next round recover 60 % of the deficit.
   // A starter every week settles around 92 %: rotation helps, but a full week of rest is not a collapse.
   const weekly=(f:number,loss:number)=>clamp(Math.round(100-.4*(100-f+loss)),35,100);
-  const clubs=state.clubs.map(c=>c.id!==home.id&&c.id!==away.id?c:{...c,players:c.players.map(p=>({...p,fitness:weekly(p.fitness,played.has(p.id)?12:benches.has(p.id)?4:0)}))});
+  // Consecutive starts (chemistry): a starter adds one, anyone else in the senior squad goes back to zero.
+  const clubs=state.clubs.map(c=>c.id!==home.id&&c.id!==away.id?c:{...c,players:c.players.map(p=>({...p,fitness:weekly(p.fitness,played.has(p.id)?12:benches.has(p.id)?4:0),...(p.squad==='Plantel superior'?{startStreak:played.has(p.id)?Math.min(10,(p.startStreak??0)+1):0}:{})}))});
   return {...state,clubs,fixtures:state.fixtures.map(f=>f.id===fixtureId?{...f,match}:f)};
 }
 export function autoPlayRound(state:LeagueState):LeagueState {const next=state.fixtures.filter(f=>!f.match).reduce((n,f)=>Math.min(n,f.round),Infinity);return state.fixtures.filter(f=>f.round===next&&!f.match).reduce((s,f)=>simulateFixture(s,f.id),state);}
