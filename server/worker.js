@@ -160,7 +160,21 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   const league={code,name,ownerId:uid,version:1,createdAt:Date.now(),members:[{userId:uid,nickname:nick,clubId:p.clubId,ready:false}],world:null};const community=(await loadCommunity(bucket)).list;league.world=applyCommunity(initialWorld(catalogWithCommunity(catalog,community),bytes.reduce((s,n)=>s*31+n,0)>>>0,returns,youth,names),community);
   const created=await bucket.put(`leagues/${code}`,JSON.stringify(league),{onlyIf:new Headers({'If-None-Match':'*'})});if(!created)return json({error:'No se pudo reservar el código, intentá de nuevo.'},409);await bucket.put(`members/${userKey}/${code}`,'1');return json(project(league,uid),201);
  }
- const match=url.pathname.match(/^\/api\/leagues\/([A-F0-9]{12})(?:\/(join|action))?$/);if(!match)return json({error:'Ruta no encontrada'},404);
+ const match=url.pathname.match(/^\/api\/leagues\/([A-F0-9]{12})(?:\/(join|action|watch))?$/);if(!match)return json({error:'Ruta no encontrada'},404);
+ // Replay progress (16/11/2026): how far each manager has watched his latest matches, so a live change never alters
+ // what the rival manager already saw. Stored apart (watch/<code>) so it never bumps the league version.
+ if(request.method==='POST'&&match[2]==='watch'){
+  if(!await bucket.get(`members/${userKey}/${match[1]}`))return json({error:'No sos miembro de esta liga.'},403);
+  const p=await readJsonLimited(request,4096),fid=String(p.fixtureId??'').slice(0,120),sec=Math.max(0,Math.min(4800,Math.floor(Number(p.second)||0)));
+  for(let attempt=0;attempt<3;attempt++){
+   const ob=await bucket.get(`watch/${match[1]}`),data=ob?await ob.json():{};
+   if((data[fid]?.[userKey]??-1)>=sec)return json({ok:true});
+   const next={...data,[fid]:{...(data[fid]??{}),[userKey]:sec}};
+   for(const k of Object.keys(next).slice(0,-40))delete next[k];
+   if(await bucket.put(`watch/${match[1]}`,JSON.stringify(next),{onlyIf:ob?{etagMatches:ob.etag}:new Headers({'If-None-Match':'*'})}))return json({ok:true});
+  }
+  return json({ok:false},409);
+ }
  const code=match[1],obj=await bucket.get(`leagues/${code}`);if(!obj)return json({error:'No encontramos una liga con ese código.'},404);
  const league=await obj.json();league.world=applyCommunity(migrateWorld(league.world,catalog,returns,youth),(await loadCommunity(bucket)).list);const member=league.members.find(m=>m.userId===uid);
  if(request.method==='POST'&&match[2]==='join'){
@@ -197,6 +211,10 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   league.world=advanceSeasonWorld(league.world);for(const m of league.members)m.ready=false;
  }else{
   if(member.ready)return json({error:'Quitá tu estado de listo para editar el equipo.'},409);
+  // Live change against another manager: allowed only from the point his replay has reached (never trust the client).
+  delete p.__rivalSeen;
+  if(p.action==='live-change'){const f=league.world.fixtures.find(x=>x.id===p.fixtureId),rival=f&&(f.homeId===member.clubId?f.awayId:f.homeId),rm=league.members.find(m=>m.clubId===rival);
+   if(rm){const ob=await bucket.get(`watch/${code}`),data=ob?await ob.json():{};p.__rivalSeen=data[f.id]?.[await digest(rm.userId)]??0;}}
   league.world=applyClubAction({...league.world,managedClubs:league.members.map(m=>m.clubId)},member.clubId,p.action,p);
  }
  league.version++;const saved=await bucket.put(`leagues/${code}`,JSON.stringify(league),{onlyIf:{etagMatches:obj.etag}});if(!saved)return json({error:'La liga cambió. Volvé a intentar.'},409);

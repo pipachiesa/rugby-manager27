@@ -1564,8 +1564,7 @@ function liveChangeAllowed() {
   if (!replay||replay.known||replay.playing||replay.intro||!replay.match.inputs) return false;
   const f=replay.fixture, mine=currentId();
   if (f.homeId!==mine&&f.awayId!==mine) return false;
-  const rival=f.homeId===mine?f.awayId:f.homeId;
-  return !(league?.members ?? []).some(m=>m.clubId===rival) && replay.second>=(replay.match.changes?.at(-1)?.second ?? 0);
+  return replay.second>=(replay.match.changes?.at(-1)?.second ?? 0);
 }
 function onFieldAt(side, second) {
   const ids=[...(side==='home'?replay.match.homeLineup:replay.match.awayLineup).slice(0,15)], team=side==='home'?replay.fixture.homeId:replay.fixture.awayId;
@@ -1574,7 +1573,7 @@ function onFieldAt(side, second) {
 }
 function showLiveChanges() {
   pauseReplay();
-  if (!liveChangeAllowed()) return notify('Solo podés hacer cambios en pausa, en tu partido sin terminar y contra un club sin manager.',true);
+  if (!liveChangeAllowed()) return notify('Solo podés hacer cambios en pausa y en tu partido sin terminar.',true);
   const f=replay.fixture, side=f.homeId===currentId()?'home':'away', inputs=replay.match.inputs[side];
   const t={...engine.DEFAULT_TACTICS,...(side==='home'?replay.match.homeTactics:replay.match.awayTactics)};
   for (const c of replay.match.changes ?? []) if (c.clubId===currentId()&&c.tactics) Object.assign(t,c.tactics);
@@ -1582,6 +1581,7 @@ function showLiveChanges() {
   const name=id=>esc(inputs.players.find(p=>p.id===id)?.name ?? replay.names.get(id) ?? '—');
   const pos=id=>{ const p=inputs.players.find(p=>p.id===id); return p?' · '+(positionAbbr[p.position] ?? p.position):''; };
   const bench=inputs.bench.filter(id=>!field.includes(id)&&!used.has(id));
+  const team=side==='home'?f.homeId:f.awayId, made=replay.match.events.filter(e=>e.type==='substitution'&&e.teamId===team&&e.second<=replay.second).length, left=Math.max(0,8-made);
   const tacticRows=tacticsConfig.filter(([key])=>['mentality','attack','defense','kicking','ruck'].includes(key)).map(([key,label,,options])=>
     '<div class="field"><label for="lc-'+key+'">'+esc(label)+'</label><select id="lc-'+key+'" data-tactic="'+key+'">'+options.map(([v])=>option(v,v,t[key])).join('')+'</select></div>').join('');
   const swapRows=[0,1,2].map(k=>'<div class="lc-swap"><select data-swap-out="'+k+'"><option value="">Sale…</option>'+field.map((id,i)=>option((i+1)+'. '+(inputs.players.find(p=>p.id===id)?.name ?? replay.names.get(id) ?? id),id,'')).join('')+'</select>'+icon('swap')+
@@ -1589,7 +1589,7 @@ function showLiveChanges() {
   showModal('Cambios en el minuto '+clock(replay.second),
     '<p class="training-note">El partido sigue igual hasta acá; desde este momento juega con los cambios.</p>'+
     '<h4>Tácticas</h4><div class="lc-grid">'+tacticRows+'</div>'+
-    '<h4>Jugadores</h4>'+(bench.length?swapRows:'<p class="training-note">No quedan suplentes.</p>'),
+    '<h4>Jugadores <small>· quedan '+left+' de 8 cambios; el que sale no vuelve a entrar</small></h4>'+(bench.length&&left?swapRows:'<p class="training-note">No quedan cambios.</p>'),
     button('Cancelar','close-modal','','ghost')+button('Aplicar cambios','apply-live','','primary','check'), true);
 }
 async function applyLiveChanges() {
@@ -1620,6 +1620,17 @@ const replayProgressKey = id => 'tt-replay-pos:'+(league?.code ?? 'demo')+':'+id
 function saveReplayProgress() {
   if (!replay) return;
   store.set(replayProgressKey(replay.fixture.id), replay.known ? '' : String(Math.floor(replay.seen)));
+  reportWatch();
+}
+// Online: tell the server how far you have watched your match (so your rival cannot change what you already saw).
+let lastWatchReport=0;
+function reportWatch(force=false) {
+  if (!league||!replay) return;
+  const f=replay.fixture; if (f.homeId!==currentId()&&f.awayId!==currentId()) return;
+  const second=Math.floor(replay.known?4800:replay.seen);
+  if (!force&&second-lastWatchReport<90) return;
+  lastWatchReport=second;
+  fetch('/api/leagues/'+league.code+'/watch',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({fixtureId:f.id,second}),keepalive:true}).catch(()=>{});
 }
 function pauseReplay() {
   if (!replay) return;
@@ -1646,6 +1657,7 @@ function animate(time) {
     const elapsed=Math.min(.1,(time-lastFrameTime)/1000);
     replay.second=Math.min(replay.end,replay.second+elapsed*replayClockRate*replay.speed);
     replay.seen=Math.max(replay.second,replay.seen);
+    reportWatch();
   }
   lastFrameTime=time;
   if (replay.second>=replay.end) { finishReplay(); return; }
@@ -1830,11 +1842,22 @@ async function syncCommunity(force=false) {
 }
 
 async function pollLeague() {
-  if (entryStage||!league||busy||document.hidden||modalRoot.firstChild||page==='partido'||tacticDraft||lineupDraft||benchDraft) return;
+  if (entryStage||!league||busy||document.hidden||modalRoot.firstChild||tacticDraft||lineupDraft||benchDraft) return;
   const {code,version}=league;
   try {
     const result=await request('/api/leagues/'+code,{version});
     if (!result||busy||league?.code!==code||league.version!==version||tacticDraft||lineupDraft) return;
+    if (page==='partido') {
+      // Watching a match: only the rival's live changes to this same match matter; the rest waits until you leave.
+      const id=replay?.fixture.id, fresh=result.world.fixtures.find(f=>f.id===id)?.match;
+      if (!replay||!fresh||JSON.stringify(fresh.changes ?? [])===JSON.stringify(replay.match.changes ?? [])) return;
+      const second=replay.second, playing=replay.playing, by=fresh.changes.at(-1);
+      setLeague(result); store.set(replayProgressKey(id),String(Math.floor(second)));
+      replay=null; openReplay(id);
+      if (replay&&playing) toggleReplay();
+      notify((by?.clubId===currentId()?'Se aplicaron cambios':'Tu rival hizo cambios')+' desde el minuto '+clock(by?.second ?? second)+'.');
+      return;
+    }
     const oldRound=currentRound(), oldSeason=world().season;
     setLeague(result);
     if (world().season!==oldSeason) resetFilters();

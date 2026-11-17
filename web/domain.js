@@ -441,13 +441,20 @@ export function applyClubAction(s,clubId,action,p){
   if(!f?.match||(f.homeId!==clubId&&f.awayId!==clubId))throw Error('Partido no encontrado.');
   if(!f.match.inputs)throw Error('Este partido ya no admite cambios.');
   const rival=f.homeId===clubId?f.awayId:f.homeId;
-  if((s.managedClubs??[]).includes(rival))throw Error('No se puede cambiar un partido contra el club de otro manager.');
   const second=Math.round(Number(p.second)),last=(f.match.changes??[]).at(-1)?.second??0;
   if(!Number.isFinite(second)||second<=0||second>=4740)throw Error('Minuto no válido.');
-  if(second<last)throw Error('Ya hiciste un cambio más adelante en el partido.');
+  // Against another manager (online league): only from where his replay has got to, reported by the server.
+  if((s.managedClubs??[]).includes(rival)){if(typeof p.__rivalSeen!=='number')throw Error('No se puede cambiar un partido contra el club de otro manager.');
+   if(second<p.__rivalSeen)throw Error('Tu rival ya vio ese momento del partido: hacé el cambio desde el minuto '+Math.floor(p.__rivalSeen/60)+' en adelante.');}
+  if(second<last)throw Error('Ya hay un cambio más adelante en el partido.');
   const side=f.homeId===clubId?f.match.inputs.home:f.match.inputs.away,used=new Set((f.match.changes??[]).filter(c=>c.clubId===clubId).flatMap(c=>(c.swaps??[]).map(x=>x.in)));
   const swaps=(Array.isArray(p.swaps)?p.swaps:[]).slice(0,8).map(x=>({out:String(x.out),in:String(x.in)}));
   for(const x of swaps)if(!side.bench.includes(x.in)||used.has(x.in))throw Error('Ese suplente no está disponible.');
+  // URBA rules (Reglamento de Competencias, art. 8; World Rugby Law 3): up to 8 replacements, not rolling — a player
+  // replaced for tactical reasons does not come back.
+  const team=f.homeId===clubId?f.homeId:f.awayId,done=f.match.events.filter(e=>e.type==='substitution'&&e.teamId===team&&e.second<=second);
+  if(done.length+swaps.length>8)throw Error('Ya usaste '+done.length+' de los 8 cambios.');
+  for(const x of swaps)if(done.some(e=>e.playerId===x.in))throw Error('Ese jugador ya entró.');
   const tactics=Object.fromEntries(Object.entries(p.tactics??{}).filter(([k,v])=>k in E.DEFAULT_TACTICS&&typeof v==='string'&&v.length<=20));
   if(!swaps.length&&!Object.keys(tactics).length)throw Error('No hay cambios para hacer.');
   let next=E.replayWithChanges(s,f.id,[...(f.match.changes??[]),{second,clubId,...(Object.keys(tactics).length?{tactics}:{}),...(swaps.length?{swaps}:{})}]);

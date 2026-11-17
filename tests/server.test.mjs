@@ -105,3 +105,16 @@ test('chunked oversized JSON is rejected even without content-length',async()=>{
  const body=JSON.stringify({username:'x'.repeat(5000)});const request=new Request('https://rugby.example/api/auth/register',{method:'POST',headers:{origin:'https://rugby.example','content-type':'application/json'},body});
  assert.equal(request.headers.has('content-length'),false);assert.equal((await handle(request,env,{},catalog,returns,youth,names)).status,413);
 });
+test('online live changes against a friend only from where he has watched; up to 8 replacements',async()=>{
+ const b=storage();let res=await call(b,'ana','/api/leagues','POST',{clubId:'newman'});let l=await res.json();
+ const f=l.world.fixtures.find(x=>x.round===1&&(x.homeId==='newman'||x.awayId==='newman'));const rival=f.homeId==='newman'?f.awayId:f.homeId;
+ l=await (await call(b,'beto',`/api/leagues/${l.code}/join`,'POST',{clubId:rival})).json();
+ for(const u of ['ana','beto']){const cur=await (await call(b,u,`/api/leagues/${l.code}`)).json();await call(b,u,`/api/leagues/${l.code}/action`,'POST',{version:cur.version,action:'ready'});}
+ l=await (await call(b,'ana',`/api/leagues/${l.code}`)).json();const m=l.world.fixtures.find(x=>x.id===f.id).match;assert.ok(m.inputs,'the latest match keeps its inputs');
+ assert.equal((await call(b,'beto',`/api/leagues/${l.code}/watch`,'POST',{fixtureId:f.id,second:3000})).status,200);
+ assert.equal((await call(b,'outsider',`/api/leagues/${l.code}/watch`,'POST',{fixtureId:f.id,second:10})).status,403);
+ res=await call(b,'ana',`/api/leagues/${l.code}/action`,'POST',{version:l.version,action:'live-change',fixtureId:f.id,second:2000,tactics:{mentality:'Ofensiva'},__rivalSeen:0});
+ assert.equal(res.status,400);assert.match((await res.json()).error,/ya vio/);
+ res=await call(b,'ana',`/api/leagues/${l.code}/action`,'POST',{version:l.version,action:'live-change',fixtureId:f.id,second:3060,tactics:{mentality:'Ofensiva'}});
+ assert.equal(res.status,200);const after=await res.json();assert.equal(after.world.fixtures.find(x=>x.id===f.id).match.changes.length,1);
+});

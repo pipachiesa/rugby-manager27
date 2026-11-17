@@ -799,8 +799,9 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     for (const side of [home, away]) {
       const player = side.bench[index];
       // A slot already changed by the manager during the match keeps his choice.
-      if (!player || side.replacementStart.has(player.id) || side.replacementStart.has(side.lineup[slot].id) || !activeAt(side, side.lineup[slot], at)) continue;
+      if (!player || side.replacementStart.has(player.id) || side.replacementStart.has(side.lineup[slot].id) || gone.has(player.id) || side.replacementStart.size >= 8 || !activeAt(side, side.lineup[slot], at)) continue;
       if (carrier?.id === side.lineup[slot].id) carrier = player;
+      gone.add(side.lineup[slot].id);
       side.lineup[slot] = player;
       side.replacementStart.set(player.id, at);
       record(at, 'substitution', side, `Ingresa ${player.name} por ${side.club.players.find(p => p.id === side.startingIds[slot])?.name ?? 'su compañero'}`, player, 0, slot);
@@ -837,7 +838,7 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
       for (const swap of change.swaps ?? []) {
         const slot = side.lineup.findIndex(p => p.id === swap.out);
         const incoming = side.club.players.find(p => p.id === swap.in);
-        if (slot < 0 || !incoming || gone.has(incoming.id) || side.lineup.some(p => p.id === incoming.id) || !activeAt(side, side.lineup[slot], at)) continue;
+        if (slot < 0 || !incoming || gone.has(incoming.id) || side.lineup.some(p => p.id === incoming.id) || !activeAt(side, side.lineup[slot], at) || side.replacementStart.size >= 8) continue;
         const leaving = side.lineup[slot];
         gone.add(leaving.id);
         if (carrier?.id === leaving.id) carrier = undefined;
