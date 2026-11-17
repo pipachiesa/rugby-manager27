@@ -883,8 +883,8 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 /* Replay pitch: real proportions (116 × 70 m with in-goals), as wide as the screen height allows; the crowd fills the sides */
 .replay-full .stadium{max-width:none;width:100%;
   background-color:#3e434b;background-image:radial-gradient(circle at 3px 3px,var(--home-kit,#c8102e) 1.5px,transparent 2px),radial-gradient(circle at 8px 7px,#e8e2d6 1.3px,transparent 1.8px),radial-gradient(circle at 5px 10px,var(--away-kit,#1d4f8a) 1.4px,transparent 1.9px);background-size:11px 13px,13px 11px,17px 14px}
-.replay-full .stadium .match-pitch{aspect-ratio:116/70;width:min(100%,calc((100vh - 400px) * 116 / 70));min-width:min(100%,520px);max-height:none;min-height:0;margin:0 auto;box-shadow:0 0 0 6px #0003,0 10px 30px #0007}
-.replay-full .boards{max-width:min(100%,calc((100vh - 400px) * 116 / 70));min-width:min(100%,520px);margin:0 auto}
+.replay-full .stadium .match-pitch{aspect-ratio:116/70;width:min(100%,calc((100vh - 250px) * 116 / 70));min-width:min(100%,520px);max-height:none;min-height:0;margin:0 auto;box-shadow:0 0 0 6px #0003,0 10px 30px #0007}
+.replay-full .boards{max-width:min(100%,calc((100vh - 250px) * 116 / 70));min-width:min(100%,520px);margin:0 auto}
 .line-num{position:absolute;transform:translate(-50%,-50%);font:700 clamp(10px,1.3vw,18px) 'Barlow Condensed',sans-serif;color:#ffffffb8;pointer-events:none;z-index:1}
 .grass-logo{position:absolute;transform:translate(-50%,-50%);font:800 clamp(22px,4vw,56px) 'Barlow Condensed',sans-serif;letter-spacing:.2em;color:#ffffff26;pointer-events:none;z-index:1;fill:none}
 .post{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 0 0 2px #0003;z-index:2}
@@ -1018,3 +1018,5 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .poster-names em.long{font-size:.72em}
 .match-card.final .poster-names{font-size:clamp(26px,5.2vw,60px)}
 .match-card{overflow:auto}
+/* 16/11/2026: more pitch, less crowd on a computer */
+@media(min-width:761px){.replay-full .stand{height:14px}}

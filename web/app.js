@@ -1143,7 +1143,8 @@ function replayPage() {
     (replay.intro?matchCard('intro'):replay.showFinal?matchCard('final'):'')+'</div>'+
     '<div class="replay-bar"><button type="button" class="btn small" data-do="toggle-replay">'+icon(replay.playing?'pause':'play')+(replay.playing?'Pausar':'Reproducir')+'</button>'+
       '<span class="replay-now"><strong id="replay-phase">Saque inicial</strong><span id="replay-possession"></span></span>'+
-      '<span class="speed-chips">'+[1,2,4].map(x=>'<button type="button" class="chip'+(replay.speed===x?' active':'')+'" data-do="replay-speed" data-value="'+x+'">'+x+'×</button>').join('')+'</span></div>'+
+      // 16/11/2026: only normal and fast; «2×» plays at four times the normal pace, as the user asked for a quick one.
+      '<span class="speed-chips">'+[[1,'1×'],[4,'2×']].map(([x,l])=>'<button type="button" class="chip'+(replay.speed===x?' active':'')+'" data-do="replay-speed" data-value="'+x+'">'+l+'</button>').join('')+'</span></div>'+
     '<p class="commentary" id="replay-commentary"></p><div class="events feed" id="match-events"></div><p class="replay-seek-help" id="replay-seek-help" hidden></p></section>'+
     '<div id="replay-report"></div>';
 }
