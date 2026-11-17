@@ -3,7 +3,7 @@ import * as Stats from './player-stats.js';
 export const DIVISIONS = {'top14':'Top 14','primera-a':'Primera A','primera-b':'Primera B'};
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;};
 // Ratings and player data are a retrospective game snapshot, not real contracts or availability.
-export const DATA_VERSION=27;
+export const DATA_VERSION=28;
 export const SIMULATION_DATE='2026-11-10';
 export function ageOnDate(birthDate, referenceDate){
  const valid=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value??''))return false;const d=new Date(value+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===value;};
@@ -232,7 +232,7 @@ export function migrateWorld(world,catalog,returns={players:[]},youth=catalog.yo
  // v25: clásicos and the supporters (research/club-rivalries.json).
  // v26: names of the barras confirmed later (SIC, Hindú, CUBA) reach saved leagues too.
  // v26–v27: names of the barras added later reach saved leagues too.
- if(version<27)next={...next,clubs:withRivalries(next.clubs,catalog)};
+ if(version<28)next={...next,clubs:withRivalries(next.clubs,catalog)};
  if(version<24&&version>=1){next={...next,clubs:next.clubs.map(c=>({...c,players:c.players.map(p=>{
   const attributes=E.capPrejudice(p.position,p.attributes),dev=p.development,age=p.age??(p.squad==='M17'?16:p.squad==='M19'?18:null);
   if(!dev||age==null||age>=26)return {...p,attributes};
@@ -949,7 +949,7 @@ function checkPromises(s,round){
  * celebrates (at most once every five rounds) (news, and a scene in the Portal). The home crowd's mood nudges the side's form (engine crowdEffect).
  */
 const withRivalries=(clubs,catalog)=>clubs.map(c=>{const r=catalog?.clubs?.find(x=>x.id===c.id);return {...c,rivals:r?.rivals??c.rivals??[],fans:r?.fans??c.fans??null,fanMood:c.fanMood??0};});
-export const fansName=c=>c?.fans??`La hinchada de ${c?.name??''}`;
+export const fansName=c=>c?.fans??`Hinchada de ${c?.name??''}`;
 export function isDerby(world,f){
  const h=world.clubs.find(c=>c.id===f.homeId),a=world.clubs.find(c=>c.id===f.awayId);
  return !!(h?.rivals?.includes(f.awayId)||a?.rivals?.includes(f.homeId));

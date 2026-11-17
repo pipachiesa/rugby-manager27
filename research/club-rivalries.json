@@ -1,6 +1,6 @@
 {
   "researchedAt": "2026-11-17",
-  "note": "Clásicos and supporters' names per club. A rivalry need not be mutual: each club lists its own derbies, most important first. Names of supporters' groups (barras) are not documented in the press for rugby; only the ones given by the user are filled in, the rest stay null and the game shows «La hinchada de <club>». Fill in more by editing this file. 17/11/2026: names confirmed in the press or the club's own site for SIC, Hindú and CUBA; La Ola (Regatas) from the user. Also from the user (17/11): Newman «La Barra del Timbal», Alumni «LBDI», Los Matreros «LMDM», Champagnat «La Champastone» and Belgrano Athletic «Los Marrones» (provisional). Still unknown after searching: CASI, Los Tilos, La Plata, Buenos Aires C&RC and Atlético del Rosario.",
+  "note": "Clásicos and supporters' names per club. A rivalry need not be mutual: each club lists its own derbies, most important first. Names of supporters' groups (barras) are not documented in the press for rugby; only the ones given by the user are filled in, the rest stay null and the game shows «La hinchada de <club>». Fill in more by editing this file. 17/11/2026: names confirmed in the press or the club's own site for SIC, Hindú and CUBA; La Ola (Regatas) from the user. Also from the user (17/11): Newman «La Barra del Timbal», Alumni «LBDI», Los Matreros «LMDM», Champagnat «La Champastone» and Belgrano Athletic «Los Marrones» (provisional). CASI «La N° 1» and La Plata «La Pandilla de Gonnet» from the user too. Unknown, shown as «Hinchada de <club>» (user's choice): Los Tilos, Buenos Aires C&RC and Atlético del Rosario.",
   "clubs": [
     {
       "id": "regatas-bella-vista",
@@ -50,8 +50,8 @@
       "rivals": [
         "los-tilos"
       ],
-      "fans": null,
-      "source": "usuario; La Nación: «La Plata le ganó el clásico a Los Tilos» (lanacion.com.ar nid12102024)"
+      "fans": "La Pandilla de Gonnet",
+      "source": "usuario; La Nación: «La Plata le ganó el clásico a Los Tilos» (lanacion.com.ar nid12102024) | Hinchada: usuario (17/11/2026)"
     },
     {
       "id": "los-tilos",
@@ -66,8 +66,8 @@
       "rivals": [
         "sic"
       ],
-      "fans": null,
-      "source": "El Gráfico: «El CASI se quedó con el clásico 136 de San Isidro» (elgrafico.com.ar/articulo/rugby/64781); RugbyPass: Superclásico del rugby argentino"
+      "fans": "La N° 1",
+      "source": "El Gráfico: «El CASI se quedó con el clásico 136 de San Isidro» (elgrafico.com.ar/articulo/rugby/64781); RugbyPass: Superclásico del rugby argentino | Hinchada: usuario (17/11/2026)"
     },
     {
       "id": "sic",

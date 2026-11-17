@@ -16,7 +16,8 @@ test('clásicos are one-sided when the data says so, and the crowd reacts to res
  assert.ok(D.isDerby(w,{homeId:'cuba',awayId:'regatas-bella-vista'}),'Regatas counts CUBA as its clásico');
  assert.ok(D.isDerby(w,{homeId:'los-matreros',awayId:'regatas-bella-vista'}),'Los Matreros counts Regatas');
  assert.ok(!D.isDerby(w,{homeId:'newman',awayId:'casi'}));
- assert.equal(D.fansName(w.clubs.find(c=>c.id==='casi')),'La hinchada de '+w.clubs.find(c=>c.id==='casi').name);
+ assert.equal(D.fansName(w.clubs.find(c=>c.id==='casi')),'La N° 1');
+ assert.equal(D.fansName(w.clubs.find(c=>c.id==='los-tilos')),'Hinchada de '+w.clubs.find(c=>c.id==='los-tilos').name);
  for(let r=0;r<26;r++)w=D.advanceWorld(w,new Set());
  const moods=w.clubs.map(c=>c.fanMood);
  assert.ok(moods.some(m=>m>=20)&&moods.some(m=>m<=-20),'moods spread both ways');
