@@ -1197,3 +1197,25 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .kick-hud{left:12px;right:auto;justify-items:start;padding:0;max-width:calc(100% - 24px)}
 .kick-chips{justify-content:flex-start}
 @media(max-width:640px){.kick-hud{top:8px;left:8px;gap:5px}.kick-tv .clock{display:none}}
+/* Kick controls: direction, height and a Virtua Tennis power bar (17/11/2026) */
+.kick-meter{position:absolute;right:max(16px,4vw);top:50%;transform:translateY(-50%);z-index:6;width:30px;height:min(46vh,340px);border-radius:16px;background:#0e1116d9;box-shadow:0 0 0 3px #f4f1ea,0 10px 30px #0009;overflow:hidden}
+.kick-meter[hidden]{display:none}
+.kick-meter i{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(0deg,#3fbf6a 0,#e9b949 60%,#e3262b 100%);background-size:100% min(46vh,340px);background-position:bottom}
+.kick-meter b{position:absolute;top:6px;left:0;right:0;text-align:center;font:800 10px/1 'Barlow Condensed',sans-serif;letter-spacing:.05em;color:#fff;text-shadow:0 1px 2px #000;z-index:1}
+.kick-meter:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,#0000 0 calc(25% - 1px),#ffffff40 calc(25% - 1px) 25%);z-index:1}
+.kick-steps{display:flex;justify-content:center;gap:6px;margin:0;padding:0;list-style:none;counter-reset:k}
+.kick-steps li{counter-increment:k;display:flex;align-items:center;gap:5px;padding:3px 10px 3px 4px;border-radius:999px;background:#ffffff14;color:#aab3bd;font:700 13px 'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.kick-steps li:before{content:counter(k);display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#ffffff26;color:#fff;font-size:11px}
+.kick-steps li.on{background:#ffd34d;color:#1b1407}.kick-steps li.on:before{background:#1b1407;color:#ffd34d}
+.kick-steps li.done{color:#e8e2d6}.kick-steps li.done:before{content:'✓';background:#3fbf6a}
+.kick-aim line#kick-arrow{stroke-dasharray:none;filter:drop-shadow(0 2px 3px #000a)}
+@media(max-width:640px){.kick-meter{right:10px;width:24px;height:min(38vh,260px)}.kick-steps li{font-size:11px;padding:2px 8px 2px 3px}}
+.kick-gauge{position:absolute;left:max(12px,3vw);bottom:150px;z-index:6;width:min(240px,46vw);height:auto;background:#0e1116d9;border-radius:10px;box-shadow:0 0 0 2px #ffffff30,0 10px 30px #0009}
+.kick-gauge[hidden]{display:none}
+.kick-gauge text{font:800 9px 'Barlow Condensed',sans-serif;letter-spacing:.08em;fill:#aab3bd}
+.kg-ground{stroke:#3fbf6a;stroke-width:2}
+.kg-post{stroke:#fff;stroke-width:2}
+.kg-arc{fill:none;stroke:#ffffff30;stroke-width:1;stroke-dasharray:2 3}
+.kg-arrow{stroke:#ffd34d;stroke-width:3.5;stroke-linecap:round}
+.kg-ball{fill:#f4efe2;stroke:#6d5a3a}
+@media(max-width:640px){.kick-gauge{bottom:178px;left:10px}}

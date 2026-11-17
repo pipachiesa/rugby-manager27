@@ -1819,8 +1819,39 @@ function kickScene(g) {
     marks+defence+mates+crowdFar+sides+boardsFar+posts+
     up(-1.6,-1.7,dot(side,kickerNo),'k-kicker',face)+
     '<div class="k-up k-shadow-wrap" id="k-shadow" style="'+at(e.x,e.y)+'"><span class="k-shadow"></span></div>'+
+    '<div class="k-up" id="k-tip" style="'+at(e.x,e.y)+'"><span class="k-mark"></span></div>'+
     '<div class="k-up" id="k-ball" style="'+at(e.x,e.y)+';transform:rotateZ('+(-g.R+g.Y)+'deg)">'+stand(Math.max(14,m(.24)),Math.max(20,m(.34)),'<span class="k-ball"></span><span class="k-tee"></span>','k-face')+'</div>'+
   '</div>';
+}
+/*
+ * Kick at goal controls (17/11/2026, user's design): three stops with one button.
+ *  1. Direction: an arrow from the ball sweeps across the width of the pitch past the posts; stopping it aims there.
+ *  2. Height: the same arrow swings from low to high; stopping it sets the launch angle (5°–75°).
+ *  3. Power: a vertical bar like Virtua Tennis fills up and down; at the top it is full power, at the bottom the ball
+ *     does not get anywhere near.
+ * The ball then flies with real physics (speed, angle, gravity and a cross wind): it scores if it crosses the try line
+ * between the uprights (a ball's width of margin) and above the 3 m bar. The arrows and the bar run faster with a weak
+ * kicker and under pressure (late in a close match, a semi-final or a final).
+ */
+const KICK_STEPS = {dir:{base:.8,label:'Frenar la dirección',help:'La flecha barre la cancha: frenala apuntando a la H.'},
+  height:{base:.75,label:'Frenar la altura',help:'Ahora la flecha sube y baja: frenala para darle altura.'},
+  power:{base:.62,label:'¡Patear!',help:'Frená la barra arriba de todo para la máxima potencia.'}};
+// Side view for the height: the ball, the posts at their real distance (bar at 3 m) and an arrow from flat to vertical.
+function kickGauge(g) {
+  const k=118/Math.max(10,g.dist), x=16+g.dist*k, bar=88-3*k, top=Math.max(8,88-13*k);
+  return '<svg class="kick-gauge" id="kick-gauge" viewBox="0 0 160 100" hidden aria-hidden="true"><text x="8" y="14">ALTURA</text>'+
+    '<line x1="4" y1="88" x2="156" y2="88" class="kg-ground"/>'+
+    '<line x1="'+x+'" y1="88" x2="'+x+'" y2="'+top+'" class="kg-post"/><line x1="'+(x-5)+'" y1="'+bar+'" x2="'+(x+5)+'" y2="'+bar+'" class="kg-post"/>'+
+    '<path d="M16 88 A62 62 0 0 1 '+(16+62*Math.cos(75*Math.PI/180)).toFixed(1)+' '+(88-62*Math.sin(75*Math.PI/180)).toFixed(1)+'" class="kg-arc"/>'+
+    '<line id="kg-arrow" x1="16" y1="88" x2="78" y2="88" class="kg-arrow" marker-end="url(#ka)"/><circle cx="16" cy="88" r="3.5" class="kg-ball"/></svg>';
+}
+function kickPressure(f, e) {
+  const before=side=>replay.match.events.filter(x=>x.second<e.second&&x.teamId===side).reduce((n,x)=>n+(x.points ?? 0),0);
+  const diff=Math.abs(before(f.homeId)-before(f.awayId)), minute=e.second/60;
+  const late=minute>=60&&diff<=7?1+.4*Math.min(1,(minute-60)/20)*(diff<=3?1:.7):1;
+  const [big,label]=f.stage==='final'?(f.division==='Top 14'?[1.35,'Final de la URBA']:[1.3,'Final por el ascenso']):f.stage==='semi'?[1.15,'Semifinal']:f.round>=23?[1.05,'Final del torneo']:[1,''];
+  const total=Math.min(1.8,late*big);
+  return {total, label: total<1.05?'':late>1.05&&big>1?label+' · final cerrado':late>1.05?'Final cerrado':label};
 }
 function openKickGame(e) {
   pauseReplay();
@@ -1830,55 +1861,124 @@ function openKickGame(e) {
   const dist=Math.round(Math.hypot(goalFw,postLat)), wind=windOf(f.id);
   // Wind in the kick frame: cross > 0 pushes to the right of the screen, along > 0 helps the kick.
   const w={speed:wind.speed,cross:wind.cross,along:wind.along};
-  // 17/11/2026: the camera looks from the ball at the posts, like TV, so a wide conversion keeps both in the frame.
+  // The camera looks from the ball at the posts, like TV, so a wide conversion keeps both in the frame.
   const Y=Math.atan2(postLat,goalFw)*180/Math.PI;
-  // Pressure: in the last 20 minutes of a close match the bar runs up to 40 % faster.
-  const before=side=>replay.match.events.filter(x=>x.second<e.second&&x.teamId===side).reduce((n,x)=>n+(x.points ?? 0),0);
-  const diff=Math.abs(before(f.homeId)-before(f.awayId)), minute=e.second/60;
-  const pressure=minute>=60&&diff<=7?1+.4*Math.min(1,(minute-60)/20)*(diff<=3?1:.7):1;
-  kickGame={e,f,inputs,kicker,skill,dist,goalFw,postLat,wind:w,dir,R:dir>0?-90:90,Y,S:16,stage:'aim',aim:null,power:0,pressure,
-    need:Math.max(28,Math.min(97,32+dist*1.15-w.along*.9)),zone:3+skill*.42,period:(.5+skill*.035)/pressure,t0:0,raf:0,result:null};
+  const pressure=kickPressure(f,e);
+  // Weak kickers get faster arrows and bar: skill 5 ×1.2, 10 ×1.05, 15 ×0.9, 20 ×0.75.
+  const speed=(1.35-skill*.03)*pressure.total;
+  kickGame={e,f,inputs,kicker,skill,dist,goalFw,postLat,wind:w,dir,R:dir>0?-90:90,Y,S:16,stage:'dir',aim:0,elev:30,power:0,pressure:pressure.total,speed,t0:0,raf:0,result:null};
   const g=kickGame, label=e.type==='conversion'?'Conversión':'Penal a los palos';
   const windDeg=Math.round(Math.atan2(-w.along,w.cross)*180/Math.PI);
   modalPreviousFocus ??= document.activeElement;
   modalRoot.innerHTML='<div class="kick-stage" role="dialog" aria-modal="true" aria-label="'+label+'" style="'+kitStyle(f.homeId,f.awayId)+crowdColors(f.homeId)+'">'+
     '<div class="kick-view" id="kick-view"></div>'+
-    '<svg class="kick-aim" id="kick-aim" aria-hidden="true"><defs><marker id="ka" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#ffd34d"/></marker></defs><line id="kick-arrow" stroke="#ffd34d" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 7" marker-end="url(#ka)" hidden/></svg>'+
+    '<svg class="kick-aim" id="kick-aim" aria-hidden="true"><defs><marker id="ka" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#ffd34d"/></marker></defs>'+
+      '<line id="kick-guide" stroke="#ffd34d" stroke-width="2" stroke-dasharray="6 6" opacity=".55" hidden/><line id="kick-arrow" stroke="#ffd34d" stroke-width="5" stroke-linecap="round" marker-end="url(#ka)"/></svg>'+
     '<div class="kick-hud"><div class="scoreboard tv-score kick-tv"><span class="tv-team '+(mine?'home':'away')+'">'+crest(currentId())+'<strong>'+esc(abbr(currentId()))+'</strong></span>'+
       '<span class="score">'+esc(label.toUpperCase())+'</span><span class="clock">'+esc(kicker?.name ?? 'Pateador')+'</span></div>'+
-      '<div class="kick-chips"><span><b>'+dist+' m</b> a los palos</span><span>Pie <b>'+skill+'</b></span>'+(pressure>1.08?'<span class="kick-pressure">Presión: final cerrado</span>':'')+'<span class="kick-wind">'+(w.speed<1?'Sin viento':'Viento <b>'+Math.round(w.speed)+' km/h</b> <i style="transform:rotate('+windDeg+'deg)">'+icon('right')+'</i>')+'</span></div></div>'+
+      '<div class="kick-chips"><span><b>'+dist+' m</b> a los palos</span><span>Pie <b>'+skill+'</b></span>'+(pressure.label?'<span class="kick-pressure">Presión: '+esc(pressure.label.toLowerCase())+'</span>':'')+'<span class="kick-wind">'+(w.speed<1?'Sin viento':'Viento <b>'+Math.round(w.speed)+' km/h</b> <i style="transform:rotate('+windDeg+'deg)">'+icon('right')+'</i>')+'</span></div></div>'+
+    kickGauge(g)+
+    '<div class="kick-meter" id="kick-meter" hidden aria-hidden="true"><i id="kick-fill"></i><b>MÁX</b></div>'+
     '<div class="replay-flash" id="kick-flash"></div>'+
-    '<div class="kick-panel"><p class="kick-help" id="kick-help">Arrastrá desde la pelota hacia los palos para apuntar. Se apunta una sola vez.</p>'+
-      '<div class="kick-power" id="kick-power" hidden><div class="kick-zone" style="left:'+(g.need-g.zone)+'%;width:'+(g.zone*2)+'%"></div><div class="kick-needle" id="kick-needle"></div></div>'+
-      '<div class="kick-actions" id="kick-actions">'+button('Que patee él','kick-auto','','ghost')+button('¡Patear!','kick-stop','','primary','bolt')+'</div></div>'+
+    '<div class="kick-panel"><ol class="kick-steps" id="kick-steps"><li class="on">Dirección</li><li>Altura</li><li>Potencia</li></ol><p class="kick-help" id="kick-help">'+KICK_STEPS.dir.help+'</p>'+
+      '<div class="kick-actions" id="kick-actions">'+button('Que patee él','kick-auto','','ghost')+button(KICK_STEPS.dir.label,'kick-stop','','primary','bolt')+'</div></div>'+
   '</div>';
   app.inert=true;
   const view=modalRoot.querySelector('#kick-view');
   view.innerHTML=kickScene(g);
   placeKickCamera();
   window.addEventListener('resize',placeKickCamera);
-  const aim=modalRoot.querySelector('#kick-aim'), arrow=modalRoot.querySelector('#kick-arrow');
-  const ballAt=()=>{ const r=modalRoot.querySelector('#k-mark-b').getBoundingClientRect(); return {x:r.left,y:r.top}; };
-  let dragging=false;
+  view.addEventListener('click',()=>{ if (kickGame&&['dir','height','power'].includes(kickGame.stage)&&performance.now()-kickGame.t0>250) stopKick(); });
   const stage=modalRoot.querySelector('.kick-stage');
-  view.addEventListener('pointerdown',ev=>{ if (kickGame?.stage!=='aim') return; dragging=true; view.setPointerCapture(ev.pointerId); const b=ballAt(); arrow.setAttribute('x1',b.x); arrow.setAttribute('y1',b.y); arrow.setAttribute('x2',b.x); arrow.setAttribute('y2',b.y); arrow.removeAttribute('hidden'); });
-  view.addEventListener('pointermove',ev=>{ if (!dragging) return; arrow.setAttribute('x2',ev.clientX); arrow.setAttribute('y2',ev.clientY); });
-  view.addEventListener('pointerup',ev=>{
-    if (!dragging||kickGame?.stage!=='aim') return; dragging=false;
-    const b=ballAt(), l=modalRoot.querySelector('#k-mark-l').getBoundingClientRect(), r=modalRoot.querySelector('#k-mark-r').getBoundingClientRect();
-    if (b.y-ev.clientY<30) { arrow.setAttribute('hidden',''); notify('Arrastrá hacia los palos.',true); return; }
-    // Where the drawn line crosses the try line, in metres from the middle of the posts.
-    const d={x:ev.clientX-b.x,y:ev.clientY-b.y}, s2={x:r.left-l.left,y:r.top-l.top}, w2={x:l.left-b.x,y:l.top-b.y};
-    const den=d.x*s2.y-d.y*s2.x, t=den?(w2.x*s2.y-w2.y*s2.x)/den:0, u=den?(w2.x*d.y-w2.y*d.x)/den:.5;
-    if (!(t>0)) { arrow.setAttribute('hidden',''); notify('Arrastrá hacia los palos.',true); return; }
-    g.aim=Math.max(-40,Math.min(40,(u-.5)*5.6));
-    arrow.setAttribute('x2',b.x+d.x*t); arrow.setAttribute('y2',b.y+d.y*t); aim.classList.add('locked');
-    g.stage='power';
-    modalRoot.querySelector('#kick-help').textContent='Ahora frená la barra en la zona verde: tocá «¡Patear!» o la cancha.';
-    modalRoot.querySelector('#kick-power').hidden=false; g.t0=performance.now(); powerLoop();
-  });
-  view.addEventListener('click',()=>{ if (kickGame?.stage==='power'&&performance.now()-kickGame.t0>350) stopKick(); });
+  stage.addEventListener('keydown',ev=>{ if (ev.code==='Space'&&kickGame&&['dir','height','power'].includes(kickGame.stage)) { ev.preventDefault(); stopKick(); } });
   stage.querySelector('[data-do="kick-stop"]')?.focus();
+  g.t0=performance.now(); kickLoop();
+}
+// Kick frame (metres from the ball: forward to the posts, lateral to the right, up) → pixels on the 3D pitch.
+function kickPx(g, fw, lat) { const S=g.S, x=g.e.x+g.dir*fw, y=g.e.y+g.dir*lat; return {left:(7+x*.86)/100*116*S, top:y/70*70*S}; }
+function placeTip(g, fw, lat, z) {
+  const tip=modalRoot.querySelector('#k-tip'); if (!tip) return null;
+  const p=kickPx(g,fw,lat); tip.style.left=p.left+'px'; tip.style.top=p.top+'px'; tip.style.transform='rotateZ('+(-g.R+g.Y)+'deg) translateZ('+(z*g.S)+'px)';
+  const r=tip.firstElementChild.getBoundingClientRect(); return {x:r.left,y:r.top};
+}
+const tri = t => 1-Math.abs((t%2)-1); // 0 → 1 → 0 …
+function kickLoop() {
+  const g=kickGame; if (!g||!['dir','height','power'].includes(g.stage)) return;
+  const t=(performance.now()-g.t0)/1000/(KICK_STEPS[g.stage].base/g.speed);
+  const ball=modalRoot.querySelector('#k-mark-b')?.getBoundingClientRect(), arrow=modalRoot.querySelector('#kick-arrow');
+  if (g.stage==='dir') {
+    // Across the width: 11 m either side of the posts at the try line, starting from one side.
+    g.aim=-11+22*tri(t);
+    const tip=placeTip(g,g.goalFw,g.postLat+g.aim,0);
+    // The arrow starts a little ahead of the ball, so the ball stays in sight above it.
+    if (tip&&ball) { const dx=tip.x-ball.left, dy=tip.y-ball.top, n=Math.hypot(dx,dy)||1, gap=Math.min(22,n*.3);
+      arrow.setAttribute('x1',ball.left+dx/n*gap); arrow.setAttribute('y1',ball.top+dy/n*gap); arrow.setAttribute('x2',tip.x); arrow.setAttribute('y2',tip.y); }
+  } else if (g.stage==='height') {
+    g.elev=5+70*tri(t);
+    // Seen from behind, a rising arrow barely moves on screen: the height arrow lives in a side view (kickGauge).
+    const th=g.elev*Math.PI/180, ga=modalRoot.querySelector('#kg-arrow');
+    if (ga) { ga.setAttribute('x2',(16+62*Math.cos(th)).toFixed(1)); ga.setAttribute('y2',(88-62*Math.sin(th)).toFixed(1)); }
+  } else {
+    g.power=tri(t);
+    const fill=modalRoot.querySelector('#kick-fill'); if (fill) fill.style.height=(g.power*100)+'%';
+  }
+  g.raf=requestAnimationFrame(kickLoop);
+}
+function stopKick() {
+  const g=kickGame; if (!g||!['dir','height','power'].includes(g.stage)) return;
+  cancelAnimationFrame(g.raf);
+  const steps=[...modalRoot.querySelectorAll('#kick-steps li')], next={dir:'height',height:'power'}[g.stage];
+  if (next) {
+    if (g.stage==='dir') { // keep the chosen line as a guide
+      const guide=modalRoot.querySelector('#kick-guide'), a=modalRoot.querySelector('#kick-arrow');
+      ['x1','y1','x2','y2'].forEach(k=>guide.setAttribute(k,a.getAttribute(k))); guide.removeAttribute('hidden');
+    }
+    g.stage=next; g.t0=performance.now();
+    steps.forEach((li,i)=>{ li.classList.toggle('done',i<(next==='height'?1:2)); li.classList.toggle('on',i===(next==='height'?1:2)); });
+    modalRoot.querySelector('#kick-help').textContent=KICK_STEPS[next].help;
+    const b=modalRoot.querySelector('[data-do="kick-stop"]'); if (b) b.lastChild.textContent=KICK_STEPS[next].label;
+    if (next==='height') { modalRoot.querySelector('#kick-gauge').removeAttribute('hidden'); modalRoot.querySelector('#kick-arrow').setAttribute('hidden',''); }
+    if (next==='power') modalRoot.querySelector('#kick-meter').hidden=false;
+    kickLoop(); return;
+  }
+  g.stage='flight'; steps.forEach(li=>{ li.classList.add('done'); li.classList.remove('on'); });
+  const fl=kickFlight(g); g.flight={...fl,t:0};
+  modalRoot.querySelector('#kick-aim').classList.add('fade');
+  modalRoot.querySelector('.k-kicker')?.classList.add('kicked');
+  const t0=performance.now();
+  (function fly(now){ if (!kickGame) return; const t=Math.min(fl.tEnd,(now-t0)/1000*1.15); g.flight.t=t; drawKickBall(t);
+    if (t<fl.tEnd) { g.raf=requestAnimationFrame(fly); return; }
+    g.result=fl.scored;
+    const home=g.f.homeId===currentId(), box=modalRoot.querySelector('#kick-flash');
+    box.className='replay-flash show is-kick '+(home?'home':'away')+(g.result?'':' missed');
+    box.innerHTML='<strong>'+(g.result?'¡ADENTRO!':!fl.reaches?'LE FALTÓ':fl.wide?'¡AFUERA!':'¡ABAJO!')+'</strong><small>'+esc((g.kicker?.name ?? '')+' · '+g.dist+' m')+'</small>';
+    modalRoot.querySelector('#kick-help').textContent=g.result?(g.e.type==='conversion'?'Suman 2 puntos.':'Suman 3 puntos.'):!fl.reaches?'Le faltó potencia: no llegó a la línea.':fl.wide?'Se fue '+(fl.latLine<0?'a la izquierda':'a la derecha')+'.':'Pasó por abajo del travesaño: le faltó altura.';
+    modalRoot.querySelector('#kick-actions').innerHTML=button('Seguir el partido','kick-done','','primary','play');
+    modalRoot.querySelector('[data-do="kick-done"]')?.focus();
+  })(t0);
+}
+/**
+ * Flight with gravity: launch speed from power (6 m/s at the bottom of the bar, up to 23–28 m/s at the top depending
+ * on the kicker's goal kicking), angle from the height arrow (5°–75°: too steep and it falls short), a tail or head wind on the speed and a cross wind that
+ * bends it sideways. Scores between the uprights (2.8 m each side plus a little margin) and above the 3 m bar.
+ */
+function kickFlight(g) {
+  const G=9.8, vmax=26*(.88+g.skill*.012), v=Math.max(3,6+(vmax-6)*g.power+g.wind.along/3.6*.25);
+  const th=g.elev*Math.PI/180, latAim=g.postLat+g.aim, D=Math.hypot(g.goalFw,latAim);
+  const vh=v*Math.cos(th), vz=v*Math.sin(th), tLand=2*vz/G, tLine=D/vh;
+  const a=g.wind.cross/3.6*.3; // sideways drift, m/s²
+  const reaches=vh*tLand>=D, zLine=vz*tLine-G*tLine*tLine/2;
+  const latLine=g.aim+.5*a*tLine*tLine, wide=Math.abs(latLine)>3.05;
+  const scored=reaches&&!wide&&zLine>=3;
+  const tEnd=reaches?Math.min(tLand,(D+16)/vh):tLand;
+  return {v,vh,vz,D,latAim,a,reaches,zLine,latLine,wide,scored,tEnd};
+}
+function drawKickBall(t) {
+  const g=kickGame; if (!g?.flight) return;
+  const f=g.flight, s=f.vh*t, z=Math.max(0,f.vz*t-4.9*t*t), fw=s*g.goalFw/f.D, lat=s*f.latAim/f.D+.5*f.a*t*t;
+  const p=kickPx(g,fw,lat), ball=modalRoot.querySelector('#k-ball'), sh=modalRoot.querySelector('#k-shadow');
+  if (ball) { ball.style.left=p.left+'px'; ball.style.top=p.top+'px'; ball.style.transform='rotateZ('+(-g.R+g.Y)+'deg) translateZ('+(z*g.S)+'px)'; ball.classList.toggle('flying',t>0&&t<f.tEnd); }
+  if (sh) { sh.style.left=p.left+'px'; sh.style.top=p.top+'px'; sh.style.opacity=String(Math.max(.15,.6-z*.03)); }
 }
 // Fit the shot: the ball low in the screen, the posts in the upper third, both centred.
 function placeKickCamera() {
@@ -1901,51 +2001,7 @@ function placeKickCamera() {
   set(S,x);
   const mid=()=>{ const l=view.querySelector('#k-mark-l').getBoundingClientRect(), r=view.querySelector('#k-mark-r').getBoundingClientRect(); return (l.left+r.left)/2-view.getBoundingClientRect().left; };
   for (let i=0;i<2;i++) { x+=(vw/2-(ax+mid())/2)*.9; set(S,x); }
-  if (g.flight) drawKickBall(g.flight.at);
-}
-function powerLoop() {
-  if (!kickGame||kickGame.stage!=='power') return;
-  const t=(performance.now()-kickGame.t0)/1000/kickGame.period, x=1-Math.abs((t%2)-1);
-  kickGame.power=x*100; const n=modalRoot.querySelector('#kick-needle'); if (n) n.style.left=kickGame.power+'%';
-  kickGame.raf=requestAnimationFrame(powerLoop);
-}
-// Ball position in the kick frame at progress k (0–1): along the aim, bent by the wind, up in an arc.
-function kickPoint(g,k) {
-  const {F,reach,startLat,lineLat,drift,peak}=g.flight, fw=reach*k, u=fw/F;
-  return {fw, lat:startLat+(lineLat-startLat)*u+drift*u*u, z:peak*4*k*(1-k)};
-}
-function drawKickBall(k) {
-  const g=kickGame; if (!g) return;
-  const p=kickPoint(g,k), S=g.S, e=g.e, W=116*S, H=70*S;
-  const x=e.x+g.dir*p.fw, y=e.y+g.dir*p.lat, left=(7+x*.86)/100*W, top=y/70*H;
-  const ball=modalRoot.querySelector('#k-ball'), sh=modalRoot.querySelector('#k-shadow');
-  if (ball) { ball.style.left=left+'px'; ball.style.top=top+'px'; ball.style.transform='rotateZ('+(-g.R+g.Y)+'deg) translateZ('+(p.z*S)+'px)'; ball.classList.toggle('flying',k>0&&k<1); }
-  if (sh) { sh.style.left=left+'px'; sh.style.top=top+'px'; sh.style.opacity=String(Math.max(.15,.6-p.z*.03)); }
-}
-function stopKick() {
-  const g=kickGame; if (!g||g.stage!=='power') return;
-  cancelAnimationFrame(g.raf); g.stage='flight';
-  const short=g.power<g.need-g.zone, extra=Math.max(0,g.power-(g.need+g.zone));
-  const drift=g.wind.cross*.06*(g.dist/30)+extra*.05*Math.sign(g.wind.cross || 1);
-  const F=g.goalFw, landLat=g.aim+drift;
-  g.result=!short&&Math.abs(landLat)<=3.05;
-  const reach=short?F*Math.max(.5,Math.min(.93,.45+.5*g.power/Math.max(1,g.need-g.zone))):F+14;
-  const tLine=F/reach, peak=short?reach*.28:Math.max(F*.3,5/(4*Math.min(.99,tLine)*(1-Math.min(.99,tLine))));
-  // lineLat: where the aim crosses the try line (posts at postLat); the drift bends it on top.
-  g.flight={F,reach,startLat:0,lineLat:g.postLat+g.aim,drift,peak,at:0};
-  modalRoot.querySelector('#kick-power').hidden=true;
-  modalRoot.querySelector('#kick-aim').classList.add('fade');
-  modalRoot.querySelector('.k-kicker')?.classList.add('kicked');
-  const t0=performance.now(), dur=1300+F*18;
-  (function fly(now){ const k=Math.min(1,(now-t0)/dur); if (!kickGame) return; g.flight.at=k; drawKickBall(k);
-    if (k<1) { g.raf=requestAnimationFrame(fly); return; }
-    const home=g.f.homeId===currentId(), box=modalRoot.querySelector('#kick-flash');
-    box.className='replay-flash show is-kick '+(home?'home':'away')+(g.result?'':' missed');
-    box.innerHTML='<strong>'+(g.result?'¡ADENTRO!':short?'LE FALTÓ':'¡AFUERA!')+'</strong><small>'+esc((g.kicker?.name ?? '')+' · '+g.dist+' m')+'</small>';
-    modalRoot.querySelector('#kick-help').textContent=g.result?(g.e.type==='conversion'?'Suman 2 puntos.':'Suman 3 puntos.'):short?'Le faltó potencia.':'Se fue '+(landLat<0?'a la izquierda':'a la derecha')+'.';
-    modalRoot.querySelector('#kick-actions').innerHTML=button('Seguir el partido','kick-done','','primary','play');
-    modalRoot.querySelector('[data-do="kick-done"]')?.focus();
-  })(t0);
+  if (g.flight) drawKickBall(g.flight.t);
 }
 async function finishKick(auto=false) {
   const g=kickGame; kickGame=null; if (!g) { closeModal(); return; }
@@ -2414,7 +2470,7 @@ document.addEventListener('click',async event=>{
     case 'close-celebration': store.set('tt-celebrated:'+(league?.code ?? 'demo')+':'+world().season+':'+value,'1'); render(); break;
     case 'round-team': showRoundTeam(); break;
     case 'live-changes': showLiveChanges(); break;
-    case 'kick-stop': if (kickGame?.stage==='power') stopKick(); else if (kickGame?.stage==='aim') notify('Primero dibujá la dirección.',true); break;
+    case 'kick-stop': stopKick(); break;
     case 'kick-auto': await finishKick(true); break;
     case 'kick-done': await finishKick(false); break;
     case 'apply-live': await applyLiveChanges(); break;
