@@ -1768,13 +1768,14 @@ function pendingKick() {
 }
 const windOf = id => { let h=0; for (const ch of id) h=(h*31+ch.charCodeAt(0))>>>0; const speed=(h%25), angle=((h>>>5)%360)*Math.PI/180; return {speed,cross:Math.cos(angle)*speed,along:Math.sin(angle)*speed}; };
 let kickGame=null;
+// The home crowd: mostly the home club's two colours, a few white shirts and a handful of away fans.
+const crowdColors = id => { const d=designOf(club(id)), a=d.colors[0], b=d.colors[1] ?? d.collar ?? inkFor(a); return ';--crowd-a:'+a+';--crowd-b:'+b; };
 /*
  * 17/11/2026: the kick is a full-screen TV shot from behind the kicker, built from the replay's own stadium (striped
  * grass, the same markings, crowd, advertising boards and shirt dots) tilted in 3D, with real posts standing up. The
  * pitch is placed in metres: engine x 0–100 between try lines (1 m each), y 0–70 across. The «kick frame» has the
  * ball at its origin, forward towards the posts and lateral to the right of the screen.
  */
-const KICK_TILT = 64;
 // The replay markings with widths in metres: a fixed pixel width does not survive the 3D tilt.
 const kickLines = () => replayLines()
   .replace(/stroke-width="([\d.]+)" vector-effect="non-scaling-stroke"/g,(_,w)=>'stroke-width="'+(+w*.1).toFixed(3)+'"')
@@ -1790,22 +1791,32 @@ function kickScene(g) {
   const mine=f.homeId===currentId(), side=mine?'home':'away', foe=mine?'away':'home';
   const goalFw=Math.abs((dir>0?100:0)-e.x), postLat=dir*(35-e.y);
   const m=v=>v*S;
+  // How far behind the ball the ground and stands reach: never as near the camera as the camera itself.
+  const back=Math.min(28,.7*Math.round((g.P ?? 700)/S));
   const face=g.Y;
   const dot=(cls,n)=>stand(Math.max(14,m(.9)),Math.max(14,m(.9)),'<span class="pitch-dot k-dot '+cls+'">'+n+'</span>','k-face');
   // Kicking team a few metres behind the ball, the defence on and behind its try line under the posts.
-  const mates=[1,2,3,4,5,6,7,8,9,11,12,13,14,15].map((n,i)=>up(-9-(i%2)*2.5,(i-6.5)*2.4,dot(side,n),'',face)).join('');
+  const mates=[1,2,3,4,5,6,7,8,9,11,12,13,14,15].map((n,i)=>up(-9-(i%2)*2.5,Math.max(Math.min(-dir*e.y,dir*(70-e.y))+3,Math.min(Math.max(-dir*e.y,dir*(70-e.y))-3,(i-6.5)*2.4)),dot(side,n),'',face)).join('');
   const kickerNo=(g.inputs.lineup ?? []).indexOf(g.kicker?.id)+1 || 10;
   const defence=Array.from({length:15},(_,i)=>up(goalFw+1.5+(i%3)*2.2,postLat+(i-7)*1.9,dot(foe,i+1),'',face)).join('');
   const posts=up(goalFw,postLat,stand(m(5.6),m(13),'<i class="k-upright l"></i><i class="k-upright r"></i><i class="k-bar" style="bottom:'+m(3)+'px"></i><i class="k-pad l"></i><i class="k-pad r"></i>','k-posts'));
   const boardsFar=up(goalFw+m(0)+14,postLat,stand(m(84),Math.max(12,m(1.1)),boards(f,'top'),'k-boards'));
-  const crowdFar=up(goalFw+17,postLat,stand(m(150),m(26),'','k-tribune'));
+  // 17/11/2026: a 3D ground, open terraces (no roof) behind the posts and along both touchlines, full of home fans,
+  // with advertising boards in front of each one. Raked planes that rise away from the pitch.
+  const terrace=(w,h,cls='')=>stand(m(w),m(h),'<i class="k-steps"></i>','k-terrace k-rake '+cls);
+  const crowdFar=up(goalFw+17,postLat,terrace(170,30,'far'));
+  const lat0=-dir*e.y, lat70=dir*(70-e.y), leftLine=Math.min(lat0,lat70), rightLine=Math.max(lat0,lat70);
+  const sideLen=goalFw+22+back, sideMid=(goalFw+22-back)/2;
+  const sides=up(sideMid,rightLine+9,terrace(sideLen,24),'',90)+up(sideMid,leftLine-9,terrace(sideLen,24),'',-90)+
+    up(sideMid,rightLine+5,stand(m(sideLen),Math.max(10,m(1)),boards(f,'bottom'),'k-boards'),'',90)+
+    up(sideMid,leftLine-5,stand(m(sideLen),Math.max(10,m(1)),boards(f,'top'),'k-boards'),'',-90);
   const marks=up(goalFw,postLat-2.8,'<span class="k-mark" id="k-mark-l"></span>')+up(goalFw,postLat+2.8,'<span class="k-mark" id="k-mark-r"></span>')+up(0,0,'<span class="k-mark" id="k-mark-b"></span>');
   return '<div class="k-world" id="k-world" style="width:'+W+'px;height:'+H+'px">'+
     // The flat ground only from a few metres behind the ball: anything nearer than the camera breaks the 3D render.
-    '<div class="k-ground" style="clip-path:'+(dir>0?'inset(-40% -40% -40% '+(bx-m(10))+'px)':'inset(-40% '+(W-bx-m(10))+'px -40% -40%)')+'">'+
+    '<div class="k-ground" style="clip-path:'+(dir>0?'inset(-40% -40% -40% '+(bx-m(back))+'px)':'inset(-40% '+(W-bx-m(back))+'px -40% -40%)')+'">'+
     '<div class="k-crowd" style="inset:'+(-m(14))+'px"></div><div class="k-apron" style="inset:'+(-m(5))+'px"></div>'+
     '<div class="pitch match-pitch k-pitch">'+kickLines()+'</div></div>'+
-    marks+defence+mates+crowdFar+boardsFar+posts+
+    marks+defence+mates+crowdFar+sides+boardsFar+posts+
     up(-1.6,-1.7,dot(side,kickerNo),'k-kicker',face)+
     '<div class="k-up k-shadow-wrap" id="k-shadow" style="'+at(e.x,e.y)+'"><span class="k-shadow"></span></div>'+
     '<div class="k-up" id="k-ball" style="'+at(e.x,e.y)+';transform:rotateZ('+(-g.R+g.Y)+'deg)">'+stand(Math.max(14,m(.24)),Math.max(20,m(.34)),'<span class="k-ball"></span><span class="k-tee"></span>','k-face')+'</div>'+
@@ -1830,7 +1841,7 @@ function openKickGame(e) {
   const g=kickGame, label=e.type==='conversion'?'Conversión':'Penal a los palos';
   const windDeg=Math.round(Math.atan2(-w.along,w.cross)*180/Math.PI);
   modalPreviousFocus ??= document.activeElement;
-  modalRoot.innerHTML='<div class="kick-stage" role="dialog" aria-modal="true" aria-label="'+label+'" style="'+kitStyle(f.homeId,f.awayId)+'">'+
+  modalRoot.innerHTML='<div class="kick-stage" role="dialog" aria-modal="true" aria-label="'+label+'" style="'+kitStyle(f.homeId,f.awayId)+crowdColors(f.homeId)+'">'+
     '<div class="kick-view" id="kick-view"></div>'+
     '<svg class="kick-aim" id="kick-aim" aria-hidden="true"><defs><marker id="ka" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#ffd34d"/></marker></defs><line id="kick-arrow" stroke="#ffd34d" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 7" marker-end="url(#ka)" hidden/></svg>'+
     '<div class="kick-hud"><div class="scoreboard tv-score kick-tv"><span class="tv-team '+(mine?'home':'away')+'">'+crest(currentId())+'<strong>'+esc(abbr(currentId()))+'</strong></span>'+
@@ -1873,17 +1884,23 @@ function openKickGame(e) {
 function placeKickCamera() {
   const g=kickGame, view=modalRoot.querySelector('#kick-view'); if (!g||!view) return;
   const vw=view.clientWidth, vh=view.clientHeight, ax=vw/2, ay=vh*(vw<640?.66:.7);
-  const set=(S,x)=>{ g.S=S; view.innerHTML=kickScene(g); const w=view.querySelector('#k-world'), e=g.e;
+  // The tilt is fixed; the scale puts the posts in the upper third. On a long kick that pulled the camera far back
+  // (it looked shot from a blimp), so the camera stays within 30 m: the posts then sit a little higher, nearer the
+  // horizon, and the 3D stands fill the rest.
+  const P=Math.round(vh*.95), T=62; g.P=P;
+  const set=(S,x)=>{ g.T=T; g.S=S; view.innerHTML=kickScene(g); const w=view.querySelector('#k-world'), e=g.e;
     const bx=(7+e.x*.86)/100*116*S, by=e.y/70*70*S;
     w.style.left=x+'px'; w.style.top=ay+'px';
-    w.style.transform='rotateX('+KICK_TILT+'deg) rotateZ('+(g.R-g.Y)+'deg) translate('+(-bx)+'px,'+(-by)+'px)'; };
-  view.style.perspective=Math.round(vh*.95)+'px'; view.style.perspectiveOrigin='50% '+Math.round(vh*.25)+'px';
+    w.style.transform='rotateX('+T+'deg) rotateZ('+(g.R-g.Y)+'deg) translate('+(-bx)+'px,'+(-by)+'px)'; };
+  view.style.setProperty('--tilt',T);
+  view.style.perspective=P+'px'; view.style.perspectiveOrigin='50% '+Math.round(vh*.22)+'px';
   const postsY=()=>view.querySelector('#k-mark-l').getBoundingClientRect().top-view.getBoundingClientRect().top;
   let lo=2, hi=80, x=ax;
-  for (let i=0;i<14;i++) { const mid=(lo+hi)/2; set(mid,x); if (postsY()>vh*(vw<640?.3:.32)) lo=mid; else hi=mid; }
-  set(lo,x);
+  for (let i=0;i<12;i++) { const mid=(lo+hi)/2; set(mid,x); if (postsY()>vh*(vw<640?.3:.32)) lo=mid; else hi=mid; }
+  const S=Math.max(lo,P/34);
+  set(S,x);
   const mid=()=>{ const l=view.querySelector('#k-mark-l').getBoundingClientRect(), r=view.querySelector('#k-mark-r').getBoundingClientRect(); return (l.left+r.left)/2-view.getBoundingClientRect().left; };
-  for (let i=0;i<2;i++) { x+=(vw/2-(ax+mid())/2)*.9; set(lo,x); }
+  for (let i=0;i<2;i++) { x+=(vw/2-(ax+mid())/2)*.9; set(S,x); }
   if (g.flight) drawKickBall(g.flight.at);
 }
 function powerLoop() {
