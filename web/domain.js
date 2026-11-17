@@ -3,7 +3,7 @@ import * as Stats from './player-stats.js';
 export const DIVISIONS = {'top14':'Top 14','primera-a':'Primera A','primera-b':'Primera B'};
 const hash=s=>{let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;};
 // Ratings and player data are a retrospective game snapshot, not real contracts or availability.
-export const DATA_VERSION=23;
+export const DATA_VERSION=24;
 export const SIMULATION_DATE='2026-11-10';
 export function ageOnDate(birthDate, referenceDate){
  const valid=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value??''))return false;const d=new Date(value+'T00:00:00Z');return Number.isFinite(d.getTime())&&d.toISOString().slice(0,10)===value;};
@@ -39,7 +39,35 @@ export function careerStage(p){
  const t=p?.trajectory;if(!t?.seasons||!t.complete)return null;
  return t.seasons<=1?'rising':t.seasons<=3?'growing':t.seasons<=5?'prime':t.seasons<=6?'steady':'declining';
 }
-const GROWTH_EVERY={rising:12,growing:20,prime:40};
+/**
+ * Senior growth while playing (17/11/2026). Before, a senior only grew in the club plan's attribute, one round in 12–40,
+ * and with «Equilibrado» that was stamina, which counts for nothing in most positions: a 22-year-old centre who played
+ * every match ended the season where he started. Now, after each round, a young senior can gain a point in an
+ * attribute that counts for his position (the plan's attribute weighs more), with a chance that grows with the minutes
+ * he has played this season. The projection still brakes him near his ceiling (developPlayer).
+ * About +3 to +4 a season at 19–23 playing every match, +1 without playing, +1 to +2 at 24–27.
+ */
+const SENIOR_GROWTH={rising:.24,growing:.2,prime:.07};
+const PLAN_ATTRIBUTE={Equilibrado:'stamina',Ataque:'passing',Defensa:'tackling',Formaciones:'scrummaging'};
+function seniorGrowth(s,current){
+ const rounds=Math.max(1,Math.min(current,26));
+ const clubs=s.clubs.map(c=>{const focus=PLAN_ATTRIBUTE[s.training?.[c.id]||'Equilibrado'];let changed=false;
+  const players=c.players.map(p=>{
+   if(p.squad!=='Plantel superior'||p.injury)return p;// juniors follow the youth plan
+   const rate=SENIOR_GROWTH[careerStage(p)];if(!rate)return p;
+   const evidence=Stats.playerDevelopmentEvidence(s,p.id),share=Math.min(1,(evidence?.minutes??0)/(80*rounds));
+   if(unit(s.seed,current,p.id,'grow')>=rate*(.25+.75*share))return p;
+   const w=E.ratingWeights[p.position]??{};
+   const options=Object.keys(p.attributes).map(a=>[a,(w[a]??0)+(a===focus?3:0)]).filter(([a,n])=>n>0&&E.canDevelopAttribute(p,a,s.season));
+   if(!options.length)return p;
+   let pick=unit(s.seed,current,p.id,'attr')*options.reduce((n,[,x])=>n+x,0),attr=options[0][0];
+   for(const [a,n] of options){if((pick-=n)<0){attr=a;break;}}
+   const next=E.developPlayer(p,attr,{seed:s.seed,season:s.season,round:current,mode:'senior',evidence});
+   if(next!==p)changed=true;return next;
+  });
+  return changed?{...c,players}:c;});
+ return {...s,clubs};
+}
 const trajectoryFields=(record,gameSeasons=0)=>{const t=record?.trajectory;if(!t)return {trajectory:null};
  const trajectory={seasons:t.seasons+gameSeasons,firstSeason:t.firstSeason,unknownSeasons:t.unknownSeasons??0,primeraASeasons:t.primeraASeasons??0,officialSeasons:t.officialSeasons??0,pressSeasons:t.pressSeasons??0,gameSeasons};
  return {trajectory:{...trajectory,complete:trajectoryComplete(trajectory)}};};
@@ -60,12 +88,13 @@ const PEDIGREE_SHARE=.75;
 function levelWithFloors(club,catalog){
  const floors=club.players.map(p=>[p,!p.fictional&&p.squad==='Plantel superior'?catalog.players.find(x=>x.id===p.sourceRecordId)?.quality?.floor:0]).filter(([,f])=>f);
  E.levelClubSquad(club);
- if(!floors.length)return club;
+ if(!floors.length){for(const p of club.players)p.attributes=E.capPrejudice(p.position,p.attributes);return club;}
  // Three quarters of what the floors add to the XV stay with the club (in-game its internationals play every round; in the
  // results used for calibration they often missed rounds with their franchise); the rest comes from the others.
  const xv=new Set(E.autoLineup(club)),excess=floors.filter(([p])=>xv.has(p.id)).reduce((n,[p,f])=>n+Math.max(0,f-E.overall(p)),0)/15;
  for(const [p,f] of floors)p.attributes=raiseToFloor(p,f);
  E.levelClubSquad(club,PEDIGREE_SHARE*excess);
+ for(const p of club.players)p.attributes=E.capPrejudice(p.position,p.attributes);
  for(const [p,f] of floors)p.attributes=raiseToFloor(p,f);
  return club;
 }
@@ -199,6 +228,13 @@ export function migrateWorld(world,catalog,returns={players:[]},youth=catalog.yo
  if(version<22&&version>=1){next={...next,clubs:next.clubs.map(c=>({...c,players:c.players.map(E.withTalent)}))};notices.push('El potencial ahora pesa: cada juvenil tiene su propio techo, que sube con buenas temporadas y entrenamiento.');}
  // v23: every fixture gets a calendar date (later seasons had none).
  if(version<23)next=withDates(next);
+ // v24: what the position says a player is bad at (no more hookers who kick goals) and more room for young players.
+ if(version<24&&version>=1){next={...next,clubs:next.clubs.map(c=>({...c,players:c.players.map(p=>{
+  const attributes=E.capPrejudice(p.position,p.attributes),dev=p.development,age=p.age??(p.squad==='M17'?16:p.squad==='M19'?18:null);
+  if(!dev||age==null||age>=26)return {...p,attributes};
+  const old=age<18?12:age<21?9:age<24?6:3,extra=Math.max(0,Math.round((E.expectedGainAt(age)-old)*E.talentFactor(p)));
+  return {...p,attributes,development:{...dev,projection:Math.min(100,dev.projection+extra),originalProjection:Math.min(100,dev.originalProjection+extra)}};
+ })}))};notices.push('Los atributos ahora respetan el puesto (un hooker ya no patea como un apertura) y los jóvenes tienen más margen para crecer.');}
  return {...next,dataVersion:Math.max(version,DATA_VERSION),migrationNotice:notices.join(' ')};
 }
 const aerialPlayer=p=>!p?.attributes||p.attributes.aerial!=null?p:{...p,attributes:{...p.attributes,aerial:E.aerialFrom(p.position,p.attributes)}};
@@ -305,7 +341,8 @@ function qualityAttributes(r,position,base,seed){
 }
 /** Lift attributes one point at a time, round-robin from the lowest, until the overall reaches the floor. */
 function raiseToFloor(p,floor){
- const a={...p.attributes},keys=Object.keys(a);
+ // 17/11/2026: only attributes that count for his position (before, a Puma hooker's goal kicking went up to 15).
+ const a={...p.attributes},w=E.ratingWeights[p.position]??{},keys=Object.keys(a).filter(k=>w[k]);
  for(let i=0;i<keys.length*20&&E.overall({...p,attributes:a})<floor;i++){const k=keys.filter(k=>a[k]<20).sort((x,y)=>a[x]-a[y]||x.localeCompare(y))[0];if(!k)break;a[k]++;}
  return a;
 }
@@ -416,6 +453,8 @@ export function initialWorld(catalog,seed=2026,returns={players:[]},youth={playe
  s.clubs=levelYouthByTables(s,catalog.youthRanks).clubs;
  const withM17=attachSelectedM17(s,youth,true);s.clubs=withM17.clubs;s.urbaM17Revision=withM17.urbaM17Revision;
  s.clubs=uniqueFictionalNames(s,catalog).clubs.map(E.boundGeneratedReserves);
+ // What the position says a player is bad at, after every levelling step (also data v24 for saved leagues).
+ s.clubs=s.clubs.map(c=>({...c,players:c.players.map(p=>({...p,attributes:E.capPrejudice(p.position,p.attributes)}))}));
  const official=catalog.fixtures.filter(f=>DIVISIONS[f.competitionId]&&Number.isInteger(f.round)&&f.homeClubId&&f.awayClubId);
  if(official.length===546&&official.every(f=>s.clubs.some(c=>c.id===f.homeClubId)&&s.clubs.some(c=>c.id===f.awayClubId)))s.fixtures=official.map(f=>({id:`${f.competitionId}-${f.round}-${f.homeClubId}-${f.awayClubId}`,division:DIVISIONS[f.competitionId],round:f.round,homeId:f.homeClubId,awayId:f.awayClubId,date:f.date,refereeId:f.refereeId,sourceIds:f.sourceIds}));
  // Same name at the candidate's origin club = same person; a namesake at another club is someone else.
@@ -909,12 +948,7 @@ export function advanceWorld(s,keep){
  // Match inputs (for live changes) are kept only for the round just played.
  s={...s,fixtures:s.fixtures.map(f=>f.match?.inputs&&f.round<current?{...f,match:(({inputs,...m})=>m)(f.match)}:f)};
  s=schedulePlayoffs(s);
- const clubs=s.clubs.map(c=>{const focus=s.training?.[c.id]||'Equilibrado';const attr={Equilibrado:'stamina',Ataque:'passing',Defensa:'tackling',Formaciones:'scrummaging'}[focus];return {...c,players:c.players.map(p=>{
-  if(p.squad!=='Plantel superior')return p;// juniors follow the youth plan
-  const every=GROWTH_EVERY[careerStage(p)];
-  if(!every||hash(`${s.seed}-${current}-${p.id}`)%every!==0||!E.canDevelopAttribute(p,attr))return p;
-  return E.developPlayer(p,attr,{seed:s.seed,season:s.season,round:current,mode:'senior',evidence:Stats.playerDevelopmentEvidence(s,p.id)});
- })};});return {...s,clubs};
+ return seniorGrowth(s,current);
 }
 export const overall=p=>E.overall(p);
 /**

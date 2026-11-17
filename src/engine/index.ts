@@ -142,7 +142,7 @@ function developmentState(player: Player): DevelopmentState {
   const current = overall(player);
   const positionPeak = Math.max(...attributes.filter(a => ratingWeights[player.position][a]).map(a => player.attributes[a]));
   const legacyHeadroom = clamp((player.potential - positionPeak) * 1.3, 0, 5);
-  const expectedGain = age < 18 ? 12 : age < 21 ? 9 : age < 24 ? 6 : age < 28 ? 3 : 1;
+  const expectedGain = expectedGainAt(age);
   const originalProjection = clamp(Math.round(current + (expectedGain + legacyHeadroom) * talentFactor(player)), current, 98);
   return { originalProjection, projection: originalProjection, trainingGains: 0, seasonTrainingGains: 0, talent: true };
 }
@@ -168,6 +168,13 @@ export function surpriseMargin(player: Pick<Player, 'id'>): number {
   const u = random(hash(`${player.id}/surprise`))();
   return u < .02 ? 10 : u < .07 ? 7 : u < .20 ? 5 : 3;
 }
+/**
+ * Room to grow the projection expects at each age (17/11/2026, wider than before: a 21-year-old rated 70 had about 4
+ * points left). Multiplied by talent (0.45–1.55). Exported for the data migration v24.
+ */
+export function expectedGainAt(age: number): number {
+  return age < 18 ? 13 : age < 21 ? 11 : age < 24 ? 8.5 : age < 26 ? 5 : age < 28 ? 3 : 1;
+}
 export function talentFactor(player: Pick<Player, 'id'>): number {
   const rng = random(hash(`${player.id}/talent`));
   return .45 + 1.1 * (rng() + rng()) / 2;
@@ -187,7 +194,7 @@ export function developmentProfile(player: Player) {
 }
 function seasonalLimit(player: Player): number {
   const age = developmentAge(player);
-  return player.squad !== 'Plantel superior' ? 15 : age <= 21 ? 9 : age <= 24 ? 7 : age <= 29 ? 5 : 3;
+  return player.squad !== 'Plantel superior' ? 15 : age <= 21 ? 12 : age <= 24 ? 10 : age <= 29 ? 6 : 3;
 }
 function individualAttributeLimit(player: Player): number {
   const age = developmentAge(player);
@@ -273,7 +280,7 @@ function reviewDevelopment(player: Player, evidence: DevelopmentEvidence | undef
   // score), tries and kicked points, and individual training all add to it; a season without minutes adds nothing.
   const young = age <= 28;
   const revision = !young ? 0
-    : (strongSeason ? 2 : played >= 480 ? 1 : 0)
+    : (strongSeason ? (age <= 23 ? 3 : 2) : played >= 480 ? 1 : 0)
       + (scoringEvidence(player, evidence) >= .7 ? 1 : 0)
       + ((state.trainingSeason === season ? state.seasonIndividualGains ?? 0 : 0) >= 5 ? 1 : 0);
   return {
@@ -304,6 +311,27 @@ const role: Record<Position, Profile> = {
   Centro: { strength: 1.5, carrying: 1.7, tackling: 1.2, passing: .6, offload: 1.3 },
   Fullback: { positioning: 2, kicking: 2.3, goalKicking: 3.4, jumping: 1.2, handling: 1.3 },
 };
+/** The shape a position gives each attribute (group plus role), the same one new players are generated with. */
+export function positionProfile(position: Position): Profile {
+  const group = POSITIONS.indexOf(position) < 8 ? forwards : backs;
+  return Object.fromEntries(attributes.map(a => [a, (group[a] ?? 0) + (role[position][a] ?? 0)])) as Profile;
+}
+/**
+ * What a position says a player is bad at (17/11/2026: there were hookers who kicked like a fly-half). Attributes the
+ * position marks down by 2 or more cannot sit more than 4 points above what his own level and position expect; the
+ * position's strengths are untouched. A real exception (a forward who kicks goals) still fits inside those 4 points.
+ */
+export function capPrejudice(position: Position, a: Attributes): Attributes {
+  // His level comes only from attributes the position does not mark down, so capping twice changes nothing.
+  const profile = positionProfile(position), keys = attributes.filter(k => k !== 'aerial'), fair = keys.filter(k => (profile[k] ?? 0) > -2);
+  const base = fair.reduce((n, k) => n + a[k] - (profile[k] ?? 0), 0) / fair.length;
+  const out = { ...a };
+  for (const k of keys) {
+    const p = profile[k] ?? 0;
+    if (p <= -2) out[k] = Math.min(out[k], clamp(Math.round(base + p + 4), 1, 20));
+  }
+  return out;
+}
 function createAttributes(position: Position, base: number, rng: () => number): Attributes {
   const group = POSITIONS.indexOf(position) < 8 ? forwards : backs;
   const generated = Object.fromEntries(attributes.filter(attr => attr !== 'aerial').map(attr => [attr, clamp(Math.round(base + (group[attr] ?? 0) + (role[position][attr] ?? 0) + (rng() + rng() - 1) * 2.7), 1, 20)])) as Attributes;

@@ -1158,7 +1158,7 @@ function matchCard(stage) {
   const actions = final
     ? button('Ver el balance','close-final','','ghost','file')+button('Continuar','page','resumen','primary','right')
     : button('Simular rápido','quick-sim','','ghost','bolt')+button('Empezar partido','start-match','','primary','play');
-  return '<div class="match-card'+(final?' final':'')+'" role="dialog" aria-label="'+(final?'Resultado final':'Antes del partido')+'"><div class="poster">'+
+  return '<div class="poster-card'+(final?' final':'')+'" role="dialog" aria-label="'+(final?'Resultado final':'Antes del partido')+'"><div class="poster">'+
     '<span class="poster-bar top" aria-hidden="true"></span><span class="poster-bar bottom" aria-hidden="true"></span>'+
     '<div class="poster-crest home">'+crest(fixture.homeId)+'</div><div class="poster-crest away">'+crest(fixture.awayId)+'</div>'+
     '<div class="poster-center"><div class="poster-logos"><img src="/brand/rm27-64.png" alt="Rugby Manager 27"><i aria-hidden="true"></i>'+badge+'</div>'+
@@ -1178,11 +1178,11 @@ function replayPage() {
     // One dot per shirt (team + number). A player sent off or in the sin bin is missing from some frames: his dot hides.
     [fixture.homeId,fixture.awayId].flatMap(team=>Array.from({length:15},(_,i)=>'<span class="pitch-dot '+(team===fixture.awayId?'away':'home')+'" data-replay-dot="'+esc(team+'|'+(i+1))+'">'+(i+1)+'</span>')).join('')+
     '<span id="replay-ball-shadow" class="replay-ball-shadow" aria-hidden="true"></span><span id="replay-ball" class="ball" aria-hidden="true"></span><span id="replay-carrier" class="replay-carrier" hidden></span>'+
-    '<span class="big-play" id="replay-bigplay" aria-hidden="true">'+icon('play')+'</span><div class="replay-flash" id="replay-flash" aria-live="polite"></div></div>'+
+    '<span class="big-play" id="replay-bigplay" aria-hidden="true">'+icon('play')+'</span><button type="button" class="live-fab live-btn" data-do="live-changes" hidden>'+icon('swap')+'Cambios y tácticas</button><div class="replay-flash" id="replay-flash" aria-live="polite"></div></div>'+
     boards(fixture,'bottom')+'<div class="stand stand-bottom" aria-hidden="true"></div>'+
     (replay.intro?matchCard('intro'):replay.showFinal?matchCard('final'):'')+'</div>'+
     '<div class="replay-bar"><button type="button" class="btn small" data-do="toggle-replay">'+icon(replay.playing?'pause':'play')+(replay.playing?'Pausar':'Reproducir')+'</button>'+
-      button('Cambios','live-changes','','ghost small live-btn','swap')+
+      button('Hacer cambios','live-changes','','primary small live-btn','swap')+
       '<span class="replay-now"><strong id="replay-phase">Saque inicial</strong><span id="replay-possession"></span></span>'+
       // 16/11/2026: only normal and fast; «2×» plays at four times the normal pace, as the user asked for a quick one.
       '<span class="speed-chips">'+[[1,'1×'],[4,'2×']].map(([x,l])=>'<button type="button" class="chip'+(replay.speed===x?' active':'')+'" data-do="replay-speed" data-value="'+x+'">'+l+'</button>').join('')+'</span></div>'+
@@ -1649,41 +1649,91 @@ function onFieldAt(side, second) {
   for (const e of replay.match.events) if (e.type==='substitution'&&e.teamId===team&&e.second<=second&&e.slot!==undefined&&e.playerId) ids[e.slot]=e.playerId;
   return ids;
 }
-function showLiveChanges() {
-  pauseReplay();
-  if (!liveChangeAllowed()) return notify('Solo podés hacer cambios en pausa y en tu partido sin terminar.',true);
+/**
+ * Live changes (17/11/2026, redesigned: the user found them hard to see). A full screen with the same formation pitch
+ * as Tácticas: the 15 on the field in their places and the unused substitutes below. Tap a player on the field, then a
+ * substitute (or the other way round): the swap shows on the shirt. Tactics and the half-time talk sit beside it.
+ */
+let liveDraft=null;
+function liveContext() {
   const f=replay.fixture, side=f.homeId===currentId()?'home':'away', inputs=replay.match.inputs[side];
   const t={...engine.DEFAULT_TACTICS,...(side==='home'?replay.match.homeTactics:replay.match.awayTactics)};
   for (const c of replay.match.changes ?? []) if (c.clubId===currentId()&&c.tactics) Object.assign(t,c.tactics);
   const field=onFieldAt(side,replay.second), used=new Set((replay.match.changes ?? []).flatMap(c=>(c.swaps ?? []).map(x=>x.in)));
-  const name=id=>esc(inputs.players.find(p=>p.id===id)?.name ?? replay.names.get(id) ?? '—');
-  const pos=id=>{ const p=inputs.players.find(p=>p.id===id); return p?' · '+(positionAbbr[p.position] ?? p.position):''; };
+  const team=side==='home'?f.homeId:f.awayId, made=replay.match.events.filter(e=>e.type==='substitution'&&e.teamId===team&&e.second<=replay.second).length;
   const bench=inputs.bench.filter(id=>!field.includes(id)&&!used.has(id));
-  const team=side==='home'?f.homeId:f.awayId, made=replay.match.events.filter(e=>e.type==='substitution'&&e.teamId===team&&e.second<=replay.second).length, left=Math.max(0,8-made);
-  const tacticRows=tacticsConfig.filter(([key])=>['mentality','attack','defense','kicking','ruck'].includes(key)).map(([key,label,,options])=>
-    '<div class="field"><label for="lc-'+key+'">'+esc(label)+'</label><select id="lc-'+key+'" data-tactic="'+key+'">'+options.map(([v])=>option(v,v,t[key])).join('')+'</select></div>').join('');
-  const swapRows=[0,1,2].map(k=>'<div class="lc-swap"><select data-swap-out="'+k+'"><option value="">Sale…</option>'+field.map((id,i)=>option((i+1)+'. '+(inputs.players.find(p=>p.id===id)?.name ?? replay.names.get(id) ?? id),id,'')).join('')+'</select>'+icon('swap')+
-    '<select data-swap-in="'+k+'"><option value="">Entra…</option>'+bench.map(id=>option((inputs.players.find(p=>p.id===id)?.name ?? id)+pos(id),id,'')).join('')+'</select></div>').join('');
-  showModal('Cambios en el minuto '+clock(replay.second),
-    '<p class="training-note">El partido sigue igual hasta acá; desde este momento juega con los cambios.</p>'+
-    (replay.second>=2400&&!(replay.match.changes ?? []).some(c=>c.clubId===currentId()&&c.talk)?'<h4>Charla del entretiempo</h4><div class="lc-grid"><div class="field"><select id="lc-talk"><option value="">Sin charla</option>'+
-      [['Calmar','Calmar: ordena, suma si van ganando'],['Motivar','Motivar: levanta si van perdiendo'],['Exigir','Exigir: no aflojar si van ganando']].map(([v,l])=>option(l,v,'')).join('')+'</select></div></div>':'')+
-    '<h4>Tácticas</h4><div class="lc-grid">'+tacticRows+'</div>'+
-    '<h4>Jugadores <small>· quedan '+left+' de 8 cambios; el que sale no vuelve a entrar</small></h4>'+(bench.length&&left?swapRows:'<p class="training-note">No quedan cambios.</p>'),
-    button('Cancelar','close-modal','','ghost')+button('Aplicar cambios','apply-live','','primary','check'), true);
+  return {f,side,inputs,t,field,bench,left:Math.max(0,8-made),talkOpen:replay.second>=2400&&!(replay.match.changes ?? []).some(c=>c.clubId===currentId()&&c.talk)};
+}
+function showLiveChanges() {
+  pauseReplay();
+  if (!liveChangeAllowed()) return notify('Solo podés hacer cambios en pausa y en tu partido sin terminar.',true);
+  liveDraft={swaps:[],tactics:{},talk:'',pick:null};
+  modalPreviousFocus ??= document.activeElement;
+  app.inert=true;
+  renderLiveChanges();
+}
+function renderLiveChanges() {
+  if (!liveDraft||!replay) return;
+  const x=liveContext(), c=currentClub(), colors=kitColors(c), byId=id=>x.inputs.players.find(p=>p.id===id);
+  const maxSwaps=Math.min(3,x.left), outs=new Map(liveDraft.swaps.map(s=>[s.out,s.in])), ins=new Set(liveDraft.swaps.map(s=>s.in));
+  const t={...x.t,...liveDraft.tactics};
+  const shirtFor=(id,n,slot,kind)=>{
+    const incoming=kind==='field'&&outs.get(id), p=byId(incoming||id), pos=slot!=null?engine.POSITIONS[slot]:null;
+    const rating=p?(pos?engine.slotOverall(p,pos):overall(p)):0, off=p&&pos&&!engine.canPlay(p,pos);
+    const picked=liveDraft.pick?.id===id, gone=kind==='bench'&&ins.has(id);
+    return '<button type="button" class="shirt-slot'+(picked?' selected':'')+(incoming?' swapped':'')+(gone?' used':'')+'" data-do="lc-pick" data-value="'+esc(id)+'" data-kind="'+kind+'"'+(gone?' disabled':'')+'>'+
+      shirt(n,colors[0],colors[1])+(incoming?'<span class="lc-in">'+icon('swap')+'</span>':'')+
+      '<span class="shirt-name">'+esc((p?.name ?? '—').split(' ').slice(-1)[0])+'</span>'+
+      (p?'<span class="shirt-meta"><b class="'+ratingTone(rating)+'">'+rating+'</b>'+(positionAbbr[p.position] ?? '')+(off?' ⇄':'')+'</span>':'')+'</button>';
+  };
+  const swapList=liveDraft.swaps.length?'<ul class="lc-list">'+liveDraft.swaps.map(s=>'<li><span class="in">▲ '+esc(byId(s.in)?.name ?? '')+'</span><span class="out">▼ '+esc(byId(s.out)?.name ?? '')+'</span><button type="button" class="icon-btn" data-do="lc-undo" data-value="'+esc(s.out)+'" aria-label="Deshacer">'+icon('close')+'</button></li>').join('')+'</ul>':'';
+  const help=!x.left?'No quedan cambios.':liveDraft.pick?'Ahora tocá '+(liveDraft.pick.kind==='field'?'el suplente que entra':'el jugador que sale')+'.':liveDraft.swaps.length>=maxSwaps?'Llegaste al máximo de cambios de esta vez.':'Tocá un jugador de la cancha y después un suplente.';
+  const tactic=([key,label,,options])=>'<div class="tactic-option"><label>'+esc(label)+'</label><div class="segmented" role="group" aria-label="'+esc(label)+'">'+
+    options.map(([v])=>'<button type="button" class="'+(t[key]===v?'active':'')+'" aria-pressed="'+(t[key]===v)+'" data-do="lc-tactic" data-value="'+esc(key+'|'+v)+'">'+esc(v)+'</button>').join('')+'</div></div>';
+  const talks=[['','Sin charla'],['Calmar','Calmar'],['Motivar','Motivar'],['Exigir','Exigir']];
+  const changed=liveDraft.swaps.length+Object.keys(liveDraft.tactics).length+(liveDraft.talk?1:0);
+  modalRoot.innerHTML='<div class="live-stage" role="dialog" aria-modal="true" aria-label="Cambios" style="'+kitStyle(x.f.homeId,x.f.awayId)+'">'+
+    '<header class="live-head"><div><span class="live-badge">'+icon('swap')+' Cambios</span><h2>Minuto '+clock(replay.second)+'</h2>'+
+      '<p>Hasta acá el partido no cambia; desde este momento juega con lo que elijas.</p></div>'+
+      '<div class="live-score">'+crest(x.f.homeId)+'<b>'+esc(abbr(x.f.homeId))+'</b><strong>'+esc(document.querySelector('#replay-score')?.textContent ?? '')+'</strong><b>'+esc(abbr(x.f.awayId))+'</b>'+crest(x.f.awayId)+'</div></header>'+
+    '<div class="live-body"><section class="formation-board">'+
+      '<div class="board-top"><span>'+icon('field')+' En la cancha</span><small>Quedan <b>'+x.left+'</b> de 8 cambios · el que sale no vuelve</small></div>'+
+      '<p class="lc-help">'+esc(help)+'</p>'+
+      '<div class="rugby-pitch">'+pitchLines()+'<span class="pitch-brand">'+esc(c.shortName ?? c.name)+'</span>'+
+        x.field.map((id,i)=>{const [px,py]=shirtSpots[i];return '<div class="shirt-spot" style="left:'+px+'%;top:'+py+'%">'+shirtFor(id,i+1,i,'field')+'</div>';}).join('')+'</div>'+
+      '<div class="bench-row"><h4>Suplentes</h4><div class="bench-line">'+(x.bench.length?x.bench.map((id,k)=>shirtFor(id,16+k,null,'bench')).join(''):'<p class="training-note">No quedan suplentes.</p>')+'</div></div>'+
+    '</section><aside class="live-side">'+
+      (swapList?'<h4>Cambios elegidos</h4>'+swapList:'')+
+      (x.talkOpen?'<h4>Charla del entretiempo</h4><div class="segmented talk-pick">'+talks.map(([v,l])=>'<button type="button" class="'+(liveDraft.talk===v?'active':'')+'" data-do="lc-talk" data-value="'+v+'">'+l+'</button>').join('')+'</div>'+
+        '<p class="training-note">Calmar ordena y suma si van ganando; Motivar levanta si van perdiendo; Exigir sostiene al que va ganando.</p>':'')+
+      '<h4>Tácticas</h4>'+tacticsConfig.filter(([key])=>['mentality','attack','defense','kicking','ruck'].includes(key)).map(tactic).join('')+
+    '</aside></div>'+
+    '<footer class="live-foot">'+button('Cancelar','close-modal','','ghost')+button(changed?'Aplicar '+changed+(changed===1?' cambio':' cambios'):'Aplicar cambios','apply-live','','primary','check',!changed)+'</footer></div>';
+}
+function liveAction(kind, value, el) {
+  if (!liveDraft) return;
+  const x=liveContext();
+  if (kind==='tactic') { const [k,v]=value.split('|'); if (v===x.t[k]) delete liveDraft.tactics[k]; else liveDraft.tactics[k]=v; }
+  else if (kind==='talk') liveDraft.talk=value;
+  else if (kind==='undo') liveDraft.swaps=liveDraft.swaps.filter(s=>s.out!==value);
+  else if (kind==='pick') {
+    const where=el.dataset.kind, pick=liveDraft.pick;
+    if (where==='field'&&liveDraft.swaps.some(s=>s.out===value)) { liveDraft.swaps=liveDraft.swaps.filter(s=>s.out!==value); liveDraft.pick=null; }
+    else if (!pick||pick.kind===where) liveDraft.pick=pick?.id===value?null:{id:value,kind:where};
+    else {
+      if (liveDraft.swaps.length>=Math.min(3,x.left)) { notify('Ya elegiste '+liveDraft.swaps.length+' cambios: aplicalos y después podés hacer más.',true); liveDraft.pick=null; }
+      else { const out=where==='field'?value:pick.id, inn=where==='bench'?value:pick.id; liveDraft.swaps.push({out,in:inn}); liveDraft.pick=null; }
+    }
+  }
+  renderLiveChanges();
 }
 async function applyLiveChanges() {
-  const f=replay.fixture, side=f.homeId===currentId()?'home':'away';
-  const base={...engine.DEFAULT_TACTICS,...(side==='home'?replay.match.homeTactics:replay.match.awayTactics)};
-  for (const c of replay.match.changes ?? []) if (c.clubId===currentId()&&c.tactics) Object.assign(base,c.tactics);
-  const tactics={}; modalRoot.querySelectorAll('[data-tactic]').forEach(el=>{ if (el.value!==base[el.dataset.tactic]) tactics[el.dataset.tactic]=el.value; });
-  const swaps=[0,1,2].map(k=>({out:modalRoot.querySelector('[data-swap-out="'+k+'"]')?.value,in:modalRoot.querySelector('[data-swap-in="'+k+'"]')?.value})).filter(x=>x.out&&x.in);
-  if (new Set(swaps.map(x=>x.in)).size!==swaps.length||new Set(swaps.map(x=>x.out)).size!==swaps.length) return notify('Cada jugador puede salir o entrar una sola vez.',true);
-  const talk=modalRoot.querySelector('#lc-talk')?.value || undefined;
+  if (!liveDraft) return;
+  const f=replay.fixture, {swaps,tactics,talk}=liveDraft;
   if (!swaps.length&&!Object.keys(tactics).length&&!talk) return notify('No elegiste ningún cambio.',true);
   const second=Math.floor(replay.second), id=f.id;
-  closeModal();
-  if (!await act('live-change',{fixtureId:id,second,tactics,swaps,talk})) return;
+  liveDraft=null; closeModal();
+  if (!await act('live-change',{fixtureId:id,second,tactics,swaps,talk:talk||undefined})) return;
   // Reopen the regenerated match at the same second and keep playing.
   store.set(replayProgressKey(id),String(second));
   replay=null; openReplay(id);
@@ -1726,11 +1776,12 @@ function kickScene(g) {
   const mine=f.homeId===currentId(), side=mine?'home':'away', foe=mine?'away':'home';
   const goalFw=Math.abs((dir>0?100:0)-e.x), postLat=dir*(35-e.y);
   const m=v=>v*S;
+  const face=g.Y;
   const dot=(cls,n)=>stand(Math.max(14,m(.9)),Math.max(14,m(.9)),'<span class="pitch-dot k-dot '+cls+'">'+n+'</span>','k-face');
   // Kicking team a few metres behind the ball, the defence on and behind its try line under the posts.
-  const mates=[1,2,3,4,5,6,7,8,9,11,12,13,14,15].map((n,i)=>up(-9-(i%2)*2.5,(i-6.5)*2.4,dot(side,n))).join('');
+  const mates=[1,2,3,4,5,6,7,8,9,11,12,13,14,15].map((n,i)=>up(-9-(i%2)*2.5,(i-6.5)*2.4,dot(side,n),'',face)).join('');
   const kickerNo=(g.inputs.lineup ?? []).indexOf(g.kicker?.id)+1 || 10;
-  const defence=Array.from({length:15},(_,i)=>up(goalFw+1.5+(i%3)*2.2,postLat+(i-7)*1.9,dot(foe,i+1))).join('');
+  const defence=Array.from({length:15},(_,i)=>up(goalFw+1.5+(i%3)*2.2,postLat+(i-7)*1.9,dot(foe,i+1),'',face)).join('');
   const posts=up(goalFw,postLat,stand(m(5.6),m(13),'<i class="k-upright l"></i><i class="k-upright r"></i><i class="k-bar" style="bottom:'+m(3)+'px"></i><i class="k-pad l"></i><i class="k-pad r"></i>','k-posts'));
   const boardsFar=up(goalFw+m(0)+14,postLat,stand(m(84),Math.max(12,m(1.1)),boards(f,'top'),'k-boards'));
   const crowdFar=up(goalFw+17,postLat,stand(m(150),m(26),'','k-tribune'));
@@ -1741,9 +1792,9 @@ function kickScene(g) {
     '<div class="k-crowd" style="inset:'+(-m(14))+'px"></div><div class="k-apron" style="inset:'+(-m(5))+'px"></div>'+
     '<div class="pitch match-pitch k-pitch">'+kickLines()+'</div></div>'+
     marks+defence+mates+crowdFar+boardsFar+posts+
-    up(-1.6,-1.7,dot(side,kickerNo),'k-kicker')+
+    up(-1.6,-1.7,dot(side,kickerNo),'k-kicker',face)+
     '<div class="k-up k-shadow-wrap" id="k-shadow" style="'+at(e.x,e.y)+'"><span class="k-shadow"></span></div>'+
-    '<div class="k-up" id="k-ball" style="'+at(e.x,e.y)+';transform:rotateZ('+(-g.R)+'deg)">'+stand(Math.max(14,m(.24)),Math.max(20,m(.34)),'<span class="k-ball"></span><span class="k-tee"></span>','k-face')+'</div>'+
+    '<div class="k-up" id="k-ball" style="'+at(e.x,e.y)+';transform:rotateZ('+(-g.R+g.Y)+'deg)">'+stand(Math.max(14,m(.24)),Math.max(20,m(.34)),'<span class="k-ball"></span><span class="k-tee"></span>','k-face')+'</div>'+
   '</div>';
 }
 function openKickGame(e) {
@@ -1754,8 +1805,14 @@ function openKickGame(e) {
   const dist=Math.round(Math.hypot(goalFw,postLat)), wind=windOf(f.id);
   // Wind in the kick frame: cross > 0 pushes to the right of the screen, along > 0 helps the kick.
   const w={speed:wind.speed,cross:wind.cross,along:wind.along};
-  kickGame={e,f,inputs,kicker,skill,dist,goalFw,postLat,wind:w,dir,R:dir>0?-90:90,S:16,stage:'aim',aim:null,power:0,
-    need:Math.max(28,Math.min(97,32+dist*1.15-w.along*.9)),zone:3+skill*.42,period:.75+skill*.07,t0:0,raf:0,result:null};
+  // 17/11/2026: the camera looks from the ball at the posts, like TV, so a wide conversion keeps both in the frame.
+  const Y=Math.atan2(postLat,goalFw)*180/Math.PI;
+  // Pressure: in the last 20 minutes of a close match the bar runs up to 40 % faster.
+  const before=side=>replay.match.events.filter(x=>x.second<e.second&&x.teamId===side).reduce((n,x)=>n+(x.points ?? 0),0);
+  const diff=Math.abs(before(f.homeId)-before(f.awayId)), minute=e.second/60;
+  const pressure=minute>=60&&diff<=7?1+.4*Math.min(1,(minute-60)/20)*(diff<=3?1:.7):1;
+  kickGame={e,f,inputs,kicker,skill,dist,goalFw,postLat,wind:w,dir,R:dir>0?-90:90,Y,S:16,stage:'aim',aim:null,power:0,pressure,
+    need:Math.max(28,Math.min(97,32+dist*1.15-w.along*.9)),zone:3+skill*.42,period:(.5+skill*.035)/pressure,t0:0,raf:0,result:null};
   const g=kickGame, label=e.type==='conversion'?'Conversión':'Penal a los palos';
   const windDeg=Math.round(Math.atan2(-w.along,w.cross)*180/Math.PI);
   modalPreviousFocus ??= document.activeElement;
@@ -1764,7 +1821,7 @@ function openKickGame(e) {
     '<svg class="kick-aim" id="kick-aim" aria-hidden="true"><defs><marker id="ka" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#ffd34d"/></marker></defs><line id="kick-arrow" stroke="#ffd34d" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 7" marker-end="url(#ka)" hidden/></svg>'+
     '<div class="kick-hud"><div class="scoreboard tv-score kick-tv"><span class="tv-team '+(mine?'home':'away')+'">'+crest(currentId())+'<strong>'+esc(abbr(currentId()))+'</strong></span>'+
       '<span class="score">'+esc(label.toUpperCase())+'</span><span class="clock">'+esc(kicker?.name ?? 'Pateador')+'</span></div>'+
-      '<div class="kick-chips"><span><b>'+dist+' m</b> a los palos</span><span>Pie <b>'+skill+'</b></span><span class="kick-wind">'+(w.speed<1?'Sin viento':'Viento <b>'+Math.round(w.speed)+' km/h</b> <i style="transform:rotate('+windDeg+'deg)">'+icon('right')+'</i>')+'</span></div></div>'+
+      '<div class="kick-chips"><span><b>'+dist+' m</b> a los palos</span><span>Pie <b>'+skill+'</b></span>'+(pressure>1.08?'<span class="kick-pressure">Presión: final cerrado</span>':'')+'<span class="kick-wind">'+(w.speed<1?'Sin viento':'Viento <b>'+Math.round(w.speed)+' km/h</b> <i style="transform:rotate('+windDeg+'deg)">'+icon('right')+'</i>')+'</span></div></div>'+
     '<div class="replay-flash" id="kick-flash"></div>'+
     '<div class="kick-panel"><p class="kick-help" id="kick-help">Arrastrá desde la pelota hacia los palos para apuntar. Se apunta una sola vez.</p>'+
       '<div class="kick-power" id="kick-power" hidden><div class="kick-zone" style="left:'+(g.need-g.zone)+'%;width:'+(g.zone*2)+'%"></div><div class="kick-needle" id="kick-needle"></div></div>'+
@@ -1786,9 +1843,11 @@ function openKickGame(e) {
     const b=ballAt(), l=modalRoot.querySelector('#k-mark-l').getBoundingClientRect(), r=modalRoot.querySelector('#k-mark-r').getBoundingClientRect();
     if (b.y-ev.clientY<30) { arrow.setAttribute('hidden',''); notify('Arrastrá hacia los palos.',true); return; }
     // Where the drawn line crosses the try line, in metres from the middle of the posts.
-    const cross=b.x+(ev.clientX-b.x)*(l.top-b.y)/(ev.clientY-b.y);
-    g.aim=((cross-l.left)/Math.max(1,r.left-l.left)-.5)*5.6;
-    arrow.setAttribute('x2',cross); arrow.setAttribute('y2',l.top); aim.classList.add('locked');
+    const d={x:ev.clientX-b.x,y:ev.clientY-b.y}, s2={x:r.left-l.left,y:r.top-l.top}, w2={x:l.left-b.x,y:l.top-b.y};
+    const den=d.x*s2.y-d.y*s2.x, t=den?(w2.x*s2.y-w2.y*s2.x)/den:0, u=den?(w2.x*d.y-w2.y*d.x)/den:.5;
+    if (!(t>0)) { arrow.setAttribute('hidden',''); notify('Arrastrá hacia los palos.',true); return; }
+    g.aim=Math.max(-40,Math.min(40,(u-.5)*5.6));
+    arrow.setAttribute('x2',b.x+d.x*t); arrow.setAttribute('y2',b.y+d.y*t); aim.classList.add('locked');
     g.stage='power';
     modalRoot.querySelector('#kick-help').textContent='Ahora frená la barra en la zona verde: tocá «¡Patear!» o la cancha.';
     modalRoot.querySelector('#kick-power').hidden=false; g.t0=performance.now(); powerLoop();
@@ -1803,7 +1862,7 @@ function placeKickCamera() {
   const set=(S,x)=>{ g.S=S; view.innerHTML=kickScene(g); const w=view.querySelector('#k-world'), e=g.e;
     const bx=(7+e.x*.86)/100*116*S, by=e.y/70*70*S;
     w.style.left=x+'px'; w.style.top=ay+'px';
-    w.style.transform='rotateX('+KICK_TILT+'deg) rotateZ('+g.R+'deg) translate('+(-bx)+'px,'+(-by)+'px)'; };
+    w.style.transform='rotateX('+KICK_TILT+'deg) rotateZ('+(g.R-g.Y)+'deg) translate('+(-bx)+'px,'+(-by)+'px)'; };
   view.style.perspective=Math.round(vh*.95)+'px'; view.style.perspectiveOrigin='50% '+Math.round(vh*.25)+'px';
   const postsY=()=>view.querySelector('#k-mark-l').getBoundingClientRect().top-view.getBoundingClientRect().top;
   let lo=2, hi=80, x=ax;
@@ -1829,7 +1888,7 @@ function drawKickBall(k) {
   const p=kickPoint(g,k), S=g.S, e=g.e, W=116*S, H=70*S;
   const x=e.x+g.dir*p.fw, y=e.y+g.dir*p.lat, left=(7+x*.86)/100*W, top=y/70*H;
   const ball=modalRoot.querySelector('#k-ball'), sh=modalRoot.querySelector('#k-shadow');
-  if (ball) { ball.style.left=left+'px'; ball.style.top=top+'px'; ball.style.transform='rotateZ('+(-g.R)+'deg) translateZ('+(p.z*S)+'px)'; ball.classList.toggle('flying',k>0&&k<1); }
+  if (ball) { ball.style.left=left+'px'; ball.style.top=top+'px'; ball.style.transform='rotateZ('+(-g.R+g.Y)+'deg) translateZ('+(p.z*S)+'px)'; ball.classList.toggle('flying',k>0&&k<1); }
   if (sh) { sh.style.left=left+'px'; sh.style.top=top+'px'; sh.style.opacity=String(Math.max(.15,.6-p.z*.03)); }
 }
 function stopKick() {
@@ -1838,7 +1897,7 @@ function stopKick() {
   const short=g.power<g.need-g.zone, extra=Math.max(0,g.power-(g.need+g.zone));
   const drift=g.wind.cross*.06*(g.dist/30)+extra*.05*Math.sign(g.wind.cross || 1);
   const F=g.goalFw, landLat=g.aim+drift;
-  g.result=!short&&Math.abs(landLat)<=2.7;
+  g.result=!short&&Math.abs(landLat)<=3.05;
   const reach=short?F*Math.max(.5,Math.min(.93,.45+.5*g.power/Math.max(1,g.need-g.zone))):F+14;
   const tLine=F/reach, peak=short?reach*.28:Math.max(F*.3,5/(4*Math.min(.99,tLine)*(1-Math.min(.99,tLine))));
   // lineLat: where the aim crosses the try line (posts at postLat); the drift bends it on top.
@@ -1871,7 +1930,7 @@ async function finishKick(auto=false) {
 }
 function updatePlayButton() {
   if (!replayNodes?.toggle) return;
-  app.querySelector('.live-btn')?.toggleAttribute('hidden',!liveChangeAllowed());
+  app.querySelectorAll('.live-btn').forEach(b=>b.toggleAttribute('hidden',!liveChangeAllowed()));
   const label=replay.playing?'Pausar':replay.second>=replay.end?'Volver a reproducir':'Reproducir';
   replayNodes.toggle.innerHTML=icon(replay.playing?'pause':'play')+label;
   replayNodes.big?.classList.toggle('show',!replay.playing);
@@ -2228,7 +2287,7 @@ document.addEventListener('click',async event=>{
     case 'clubs': showClubs(); break;
     case 'explorer': showClubs(true); break;
     case 'club-preview': showClubPreview(value); break;
-    case 'close-modal': if (kickGame) { await finishKick(true); break; } closeModal(); break;
+    case 'close-modal': if (kickGame) { await finishKick(true); break; } liveDraft=null; closeModal(); break;
     case 'choose-club':
       if (league) { showClubPreview(value); break; }
       demoClubId=value; store.set('tt-demo-club',value); saveDemo(); resetFilters(); closeModal(); changePage('resumen'); break;
@@ -2328,6 +2387,10 @@ document.addEventListener('click',async event=>{
     case 'kick-auto': await finishKick(true); break;
     case 'kick-done': await finishKick(false); break;
     case 'apply-live': await applyLiveChanges(); break;
+    case 'lc-pick': liveAction('pick',value,target); break;
+    case 'lc-tactic': liveAction('tactic',value,target); break;
+    case 'lc-talk': liveAction('talk',value,target); break;
+    case 'lc-undo': liveAction('undo',value,target); break;
     case 'start-match': if (replay) { replay.intro=false; render(); toggleReplay(); } break;
     case 'quick-sim': if (replay) finishReplay(); break;
     case 'close-final': if (replay) { replay.showFinal=false; render(); app.querySelector('#replay-report')?.scrollIntoView({behavior:'smooth'}); } break;

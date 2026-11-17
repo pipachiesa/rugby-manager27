@@ -28,7 +28,7 @@ test('saved 2026 and 2027 worlds migrate once without deleting existing players 
 });
 test('later career saves do not fabricate missing players or duplicate existing identities',()=>{
  const older=D.initialWorld(catalog,12,returns,prior,names);older.dataVersion=17;delete older.urbaM17Revision;older.season=2028;older.simulationDate='2028-11-10';
- const rec=records[0],current=older.clubs.find(c=>c.id===rec.clubId),other=older.clubs.find(c=>c.id!==rec.clubId);const real={...current.players[0],id:`existing-${rec.id}`,name:rec.name,fictional:false,sourceRecordId:rec.id,attributes:{...current.players[0].attributes,pace:19}};other.players.push(real);
- const after=D.migrateWorld(older,catalog,returns,youth),all=players(after),matches=all.filter(x=>x.player.sourceRecordId===rec.id);assert.equal(matches.length,1);assert.equal(matches[0].clubId,other.id);assert.equal(matches[0].player.attributes.pace,19);
+ const rec=records[0],current=older.clubs.find(c=>c.id===rec.clubId),other=older.clubs.find(c=>c.id!==rec.clubId);const real={...current.players[0],id:`existing-${rec.id}`,name:rec.name,fictional:false,sourceRecordId:rec.id,attributes:{...current.players[0].attributes,leadership:19}};other.players.push(real);
+ const after=D.migrateWorld(older,catalog,returns,youth),all=players(after),matches=all.filter(x=>x.player.sourceRecordId===rec.id);assert.equal(matches.length,1);assert.equal(matches[0].clubId,other.id);assert.equal(matches[0].player.attributes.leadership,19);
  assert.ok(records.slice(1).every(r=>!all.some(x=>x.player.sourceRecordId===r.id)));
 });

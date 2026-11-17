@@ -1,0 +1,312 @@
+{
+ "seeds": 2,
+ "seasons": 2,
+ "juveniles": {
+  "M17": {
+   "alto": {
+    "n": 1066,
+    "media": 4.81,
+    "p10": 3,
+    "p50": 5,
+    "p90": 7
+   },
+   "medio": {
+    "n": 1065,
+    "media": 4.43,
+    "p10": 2,
+    "p50": 4,
+    "p90": 6
+   },
+   "bajo": {
+    "n": 1064,
+    "media": 3.92,
+    "p10": 2,
+    "p50": 4,
+    "p90": 6
+   }
+  },
+  "M19": {
+   "alto": {
+    "n": 1005,
+    "media": 4.37,
+    "p10": 2,
+    "p50": 4,
+    "p90": 6
+   },
+   "medio": {
+    "n": 1004,
+    "media": 3.96,
+    "p10": 2,
+    "p50": 4,
+    "p90": 6
+   },
+   "bajo": {
+    "n": 1002,
+    "media": 3.59,
+    "p10": 2,
+    "p50": 3,
+    "p90": 6
+   }
+  }
+ },
+ "plantelSuperiorPorEdad": {
+  "30-32": {
+   "n": 839,
+   "media": -0.12,
+   "p10": -1,
+   "p50": 0,
+   "p90": 0
+  },
+  "sin edad": {
+   "n": 3504,
+   "media": 0.21,
+   "p10": 0,
+   "p50": 0,
+   "p90": 1
+  },
+  "veterano sin edad": {
+   "n": 139,
+   "media": -0.6,
+   "p10": -1,
+   "p50": -1,
+   "p90": 0
+  },
+  "27-29": {
+   "n": 1634,
+   "media": 0.33,
+   "p10": 0,
+   "p50": 0,
+   "p90": 1
+  },
+  "23-26": {
+   "n": 1892,
+   "media": 0.85,
+   "p10": 0,
+   "p50": 0,
+   "p90": 2
+  },
+  "19-22": {
+   "n": 1043,
+   "media": 1.36,
+   "p10": 0,
+   "p50": 1,
+   "p90": 3
+  },
+  "33+": {
+   "n": 115,
+   "media": -0.57,
+   "p10": -2,
+   "p50": 0,
+   "p90": 0
+  }
+ },
+ "grandes30mas": {
+  "n": 22,
+  "media": -0.95,
+  "p10": -2,
+  "p50": -1,
+  "p90": 0
+ },
+ "europa": {
+  "porTemporada": {
+   "n": 4,
+   "media": 5.25,
+   "p10": 5,
+   "p50": 5,
+   "p90": 6
+  },
+  "elegibles": {
+   "n": 4,
+   "media": 9.5,
+   "p10": 4,
+   "p50": 14,
+   "p90": 16
+  },
+  "probabilidad": 0.553,
+  "ejemplos": [
+   {
+    "name": "Jerónimo Ulloa",
+    "age": 26,
+    "ov": 75,
+    "from": "newman",
+    "to": "Francia"
+   },
+   {
+    "name": "Santiago Pernas",
+    "age": 24,
+    "ov": 80,
+    "from": "alumni",
+    "to": "Argentina"
+   },
+   {
+    "name": "Timoteo Silva",
+    "age": 22,
+    "ov": 77,
+    "from": "sic",
+    "to": "Francia"
+   },
+   {
+    "name": "Juan Penoucos",
+    "age": 23,
+    "ov": 87,
+    "from": "belgrano-athletic",
+    "to": "Argentina"
+   },
+   {
+    "name": "Marcelo Toledo",
+    "age": 25,
+    "ov": 78,
+    "from": "regatas-bella-vista",
+    "to": "Italia"
+   },
+   {
+    "name": "Faustino Santarelli",
+    "age": 25,
+    "ov": 78,
+    "from": "newman",
+    "to": "Argentina"
+   },
+   {
+    "name": "Eliseo Chiavassa",
+    "age": 25,
+    "ov": 75,
+    "from": "los-tilos",
+    "to": "Italia"
+   },
+   {
+    "name": "Jerónimo Sorondo",
+    "age": 22,
+    "ov": 80,
+    "from": "belgrano-athletic",
+    "to": "Argentina"
+   },
+   {
+    "name": "Marcos Camerlinckx",
+    "age": 24,
+    "ov": 78,
+    "from": "regatas-bella-vista",
+    "to": "Argentina"
+   },
+   {
+    "name": "Agustín Fraga",
+    "age": 26,
+    "ov": 79,
+    "from": "cuba",
+    "to": "España"
+   },
+   {
+    "name": "Ramón Fuentes",
+    "age": 25,
+    "ov": 74,
+    "from": "alumni",
+    "to": "España"
+   },
+   {
+    "name": "Ignacio Bottazzini",
+    "age": 25,
+    "ov": 76,
+    "from": "sic",
+    "to": "Italia"
+   }
+  ]
+ },
+ "divisionesXV": {
+  "Top 14": [
+   63.94,
+   64.4
+  ],
+  "Primera A": [
+   55.79,
+   56.19
+  ],
+  "Primera B": [
+   47.96,
+   48.63
+  ]
+ },
+ "carreraM17": {
+  "alto": {
+   "n": 420,
+   "margenInicial": 23.09,
+   "inicio": 30.76,
+   "fin": 40.31,
+   "crecimiento": {
+    "n": 420,
+    "media": 9.55,
+    "p10": 7,
+    "p50": 10,
+    "p90": 12
+   }
+  },
+  "medio": {
+   "n": 420,
+   "margenInicial": 17.77,
+   "inicio": 27.4,
+   "fin": 36.15,
+   "crecimiento": {
+    "n": 420,
+    "media": 8.75,
+    "p10": 6,
+    "p50": 9,
+    "p90": 12
+   }
+  },
+  "bajo": {
+   "n": 420,
+   "margenInicial": 13.16,
+   "inicio": 27.33,
+   "fin": 35.04,
+   "crecimiento": {
+    "n": 420,
+    "media": 7.71,
+    "p10": 5,
+    "p50": 8,
+    "p90": 11
+   }
+  }
+ },
+ "clubesXV": {
+  "newman": [
+   69.67,
+   70.07,
+   69.67,
+   70.13
+  ],
+  "casi": [
+   68.2,
+   69.53,
+   68.2,
+   69
+  ],
+  "sic": [
+   67.53,
+   69.27,
+   67.53,
+   69.13
+  ],
+  "alumni": [
+   65.73,
+   65.53,
+   65.73,
+   65.47
+  ],
+  "hindu": [
+   66.47,
+   66.93,
+   66.47,
+   65.2
+  ],
+  "regatas-bella-vista": [
+   64.93,
+   64.53,
+   64.93,
+   64.07
+  ],
+  "champagnat": [
+   56.93,
+   57.2,
+   56.93,
+   55.73
+  ]
+ }
+}
