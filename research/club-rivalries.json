@@ -1,6 +1,6 @@
 {
   "researchedAt": "2026-11-17",
-  "note": "Clásicos and supporters' names per club. A rivalry need not be mutual: each club lists its own derbies, most important first. Names of supporters' groups (barras) are not documented in the press for rugby; only the ones given by the user are filled in, the rest stay null and the game shows «La hinchada de <club>». Fill in more by editing this file. 17/11/2026: names confirmed in the press or the club's own site for SIC, Hindú and CUBA; La Ola (Regatas) from the user. Seen but not confirmed, left out: Newman «La Barra del Timbal» (TikTok only), Belgrano Athletic «Orgullo Marrón» (a YouTube title, maybe a slogan).",
+  "note": "Clásicos and supporters' names per club. A rivalry need not be mutual: each club lists its own derbies, most important first. Names of supporters' groups (barras) are not documented in the press for rugby; only the ones given by the user are filled in, the rest stay null and the game shows «La hinchada de <club>». Fill in more by editing this file. 17/11/2026: names confirmed in the press or the club's own site for SIC, Hindú and CUBA; La Ola (Regatas) from the user. Also from the user (17/11): Newman «La Barra del Timbal», Alumni «LBDI», Los Matreros «LMDM», Champagnat «La Champastone» and Belgrano Athletic «Los Marrones» (provisional). Still unknown after searching: CASI, Los Tilos, La Plata, Buenos Aires C&RC and Atlético del Rosario.",
   "clubs": [
     {
       "id": "regatas-bella-vista",
@@ -24,8 +24,8 @@
         "regatas-bella-vista",
         "curupayti"
       ],
-      "fans": null,
-      "source": "usuario (Regatas); ESPN: «Los Matreros se llevó el clásico vs Curupaytí» (espndeportes.espn.com/rugby/nota/_/id/11778283)"
+      "fans": "LMDM",
+      "source": "usuario (Regatas); ESPN: «Los Matreros se llevó el clásico vs Curupaytí» (espndeportes.espn.com/rugby/nota/_/id/11778283) | Hinchada: usuario (17/11/2026)"
     },
     {
       "id": "hurling",
@@ -83,16 +83,16 @@
       "rivals": [
         "belgrano-athletic"
       ],
-      "fans": null,
-      "source": "ESPN: Belgrano recibió «a su clásico rival, Alumni» (espndeportes.espn.com/rugby/nota/_/id/14350637)"
+      "fans": "LBDI",
+      "source": "ESPN: Belgrano recibió «a su clásico rival, Alumni» (espndeportes.espn.com/rugby/nota/_/id/14350637) | Hinchada: usuario (17/11/2026)"
     },
     {
       "id": "belgrano-athletic",
       "rivals": [
         "alumni"
       ],
-      "fans": null,
-      "source": "ESPN (ídem)"
+      "fans": "Los Marrones",
+      "source": "ESPN (ídem) | Hinchada: usuario (17/11/2026) — provisorio, el usuario no conoce el nombre"
     },
     {
       "id": "hindu",
@@ -124,16 +124,16 @@
       "rivals": [
         "champagnat"
       ],
-      "fans": null,
-      "source": "ESPN y La Nación: Newman–Champagnat, «el clásico entre colegios» (espndeportes.espn.com/rugby/nota/_/id/13990759)"
+      "fans": "La Barra del Timbal",
+      "source": "ESPN y La Nación: Newman–Champagnat, «el clásico entre colegios» (espndeportes.espn.com/rugby/nota/_/id/13990759) | Hinchada: usuario (17/11/2026)"
     },
     {
       "id": "champagnat",
       "rivals": [
         "newman"
       ],
-      "fans": null,
-      "source": "ESPN y La Nación (ídem)"
+      "fans": "La Champastone",
+      "source": "ESPN y La Nación (ídem) | Hinchada: usuario (17/11/2026)"
     }
   ]
 }
