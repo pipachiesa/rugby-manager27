@@ -433,6 +433,29 @@ export function applyClubAction(s,clubId,action,p){
   if(!p.tactics||Object.entries(options).some(([k,v])=>!v.includes(tactics[k])))throw Error('Táctica no válida.');
   return E.setTactics(s,clubId,Object.fromEntries(Object.keys(options).map(k=>[k,tactics[k]])));
  }
+ // Live changes (16/11/2026): from the paused replay of his own latest match, a manager changes tactics or brings on
+ // bench players from that second; the match is played again identically up to it. Not against another manager's club
+ // (it would change his result too), never before an earlier change, only while the match keeps its inputs (one round).
+ if(action==='live-change'){
+  const f=s.fixtures.find(x=>x.id===p.fixtureId);
+  if(!f?.match||(f.homeId!==clubId&&f.awayId!==clubId))throw Error('Partido no encontrado.');
+  if(!f.match.inputs)throw Error('Este partido ya no admite cambios.');
+  const rival=f.homeId===clubId?f.awayId:f.homeId;
+  if((s.managedClubs??[]).includes(rival))throw Error('No se puede cambiar un partido contra el club de otro manager.');
+  const second=Math.round(Number(p.second)),last=(f.match.changes??[]).at(-1)?.second??0;
+  if(!Number.isFinite(second)||second<=0||second>=4740)throw Error('Minuto no válido.');
+  if(second<last)throw Error('Ya hiciste un cambio más adelante en el partido.');
+  const side=f.homeId===clubId?f.match.inputs.home:f.match.inputs.away,used=new Set((f.match.changes??[]).filter(c=>c.clubId===clubId).flatMap(c=>(c.swaps??[]).map(x=>x.in)));
+  const swaps=(Array.isArray(p.swaps)?p.swaps:[]).slice(0,8).map(x=>({out:String(x.out),in:String(x.in)}));
+  for(const x of swaps)if(!side.bench.includes(x.in)||used.has(x.in))throw Error('Ese suplente no está disponible.');
+  const tactics=Object.fromEntries(Object.entries(p.tactics??{}).filter(([k,v])=>k in E.DEFAULT_TACTICS&&typeof v==='string'&&v.length<=20));
+  if(!swaps.length&&!Object.keys(tactics).length)throw Error('No hay cambios para hacer.');
+  let next=E.replayWithChanges(s,f.id,[...(f.match.changes??[]),{second,clubId,...(Object.keys(tactics).length?{tactics}:{}),...(swaps.length?{swaps}:{})}]);
+  // Player statistics of that match are recorded again.
+  const st=next.playerStats?.seasons?.[next.season];
+  if(st&&st[f.id]){const {[f.id]:_,...rest}=st;next={...next,playerStats:{...next.playerStats,seasons:{...next.playerStats.seasons,[next.season]:rest}}};next=Stats.recordPlayerStats(next);}
+  return next;
+ }
  if(action==='lineup')return E.setLineup(s,clubId,p.ids,Array.isArray(p.bench)?p.bench:undefined);
  // Formation manager (16/11/2026): named XV + bench, saved over an existing one with the same name, picked to play.
  if(action==='save-formation'){
@@ -784,7 +807,7 @@ export function slimMatches(world,keep){
  if(!keep)return world;
  return {...world,fixtures:world.fixtures.map(f=>{const m=f.match;
   if(!m||keep.has(f.homeId)||keep.has(f.awayId)||m.slim)return f;
-  const {replayTrack,timeline,frames,...rest}=m;
+  const {replayTrack,timeline,frames,inputs,...rest}=m;
   return {...f,match:{...rest,events:(m.events??[]).filter(e=>e.points!==undefined&&e.points>0),timeline:[],frames:[],slim:true}};
  })};
 }
@@ -835,6 +858,8 @@ export function advanceWorld(s,keep){
  s=E.autoPlayRound(s);
  s=Stats.recordPlayerStats(s);
  s=slimMatches(progressRetraining(developYouth(applyInjuries(playParallelRound(s,current),current),current),current,1,injured),keep);
+ // Match inputs (for live changes) are kept only for the round just played.
+ s={...s,fixtures:s.fixtures.map(f=>f.match?.inputs&&f.round<current?{...f,match:(({inputs,...m})=>m)(f.match)}:f)};
  s=schedulePlayoffs(s);
  const clubs=s.clubs.map(c=>{const focus=s.training?.[c.id]||'Equilibrado';const attr={Equilibrado:'stamina',Ataque:'passing',Defensa:'tackling',Formaciones:'scrummaging'}[focus];return {...c,players:c.players.map(p=>{
   if(p.squad!=='Plantel superior')return p;// juniors follow the youth plan

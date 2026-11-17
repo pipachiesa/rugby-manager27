@@ -215,3 +215,17 @@ test('v15 shifts refitted clubs by the strength change and leaves the rest alone
  assert.deepEqual(m.clubs.find(c=>c.id==='los-tilos').players.map(p=>[p.id,p.attributes]),w.clubs.find(c=>c.id==='los-tilos').players.map(p=>[p.id,p.attributes]));
  assert.match(m.migrationNotice,/fuerza de los clubes/);
 });
+test('live changes: same match up to the change, then the new tactics and players; never against another manager',async()=>{
+ const {readFile}=await import('node:fs/promises');const D=await import('../web/domain.js');
+ const j=async p=>JSON.parse(await readFile(p,'utf8'));
+ let w=D.initialWorld(await j('research/catalog.json'),5,await j('research/returns.json'),await j('research/youth.json'),await j('research/names.json'));
+ const f0=w.fixtures.find(f=>f.round===1),club=f0.homeId;
+ w=D.advanceWorld(w,new Set([club]));
+ const f=w.fixtures.find(x=>x.id===f0.id),m=f.match,out=m.inputs.home.lineup[1],inn=m.inputs.home.bench.find(id=>!m.inputs.home.lineup.includes(id));
+ const next=D.applyClubAction(w,club,'live-change',{fixtureId:f.id,second:2000,tactics:{mentality:'Ofensiva'},swaps:[{out,in:inn}]});
+ const n=next.fixtures.find(x=>x.id===f.id).match,before=e=>JSON.stringify(e.filter(x=>x.second<2000));
+ assert.equal(before(n.events),before(m.events),'nothing changes before the change');
+ assert.ok(n.events.some(e=>e.type==='substitution'&&e.playerId===inn&&e.second>=2000));
+ assert.throws(()=>D.applyClubAction(next,club,'live-change',{fixtureId:f.id,second:1500,tactics:{mentality:'Defensiva'}}),/más adelante/);
+ assert.throws(()=>D.applyClubAction({...w,managedClubs:[club,f.awayId]},club,'live-change',{fixtureId:f.id,second:2000,tactics:{mentality:'Ofensiva'}}),/otro manager/);
+});

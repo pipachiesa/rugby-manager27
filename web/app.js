@@ -1142,6 +1142,7 @@ function replayPage() {
     boards(fixture,'bottom')+'<div class="stand stand-bottom" aria-hidden="true"></div>'+
     (replay.intro?matchCard('intro'):replay.showFinal?matchCard('final'):'')+'</div>'+
     '<div class="replay-bar"><button type="button" class="btn small" data-do="toggle-replay">'+icon(replay.playing?'pause':'play')+(replay.playing?'Pausar':'Reproducir')+'</button>'+
+      button('Cambios','live-changes','','ghost small live-btn','swap')+
       '<span class="replay-now"><strong id="replay-phase">Saque inicial</strong><span id="replay-possession"></span></span>'+
       // 16/11/2026: only normal and fast; «2×» plays at four times the normal pace, as the user asked for a quick one.
       '<span class="speed-chips">'+[[1,'1×'],[4,'2×']].map(([x,l])=>'<button type="button" class="chip'+(replay.speed===x?' active':'')+'" data-do="replay-speed" data-value="'+x+'">'+l+'</button>').join('')+'</span></div>'+
@@ -1558,8 +1559,58 @@ function flash(e) {
   box.innerHTML=(e.type!=='try'?'<span class="kick-arc" aria-hidden="true"><i></i></span>':'')+'<strong>'+label+'</strong><small>'+esc([who,shortOf(e.teamId)].filter(Boolean).join(' · '))+'</small>';
   clearTimeout(flash.timer); flash.timer=setTimeout(()=>{ box.className='replay-flash'; },e.type==='try'?2600:1900);
 }
+/** Live changes are possible on the paused replay of your own unfinished match against a club without a manager. */
+function liveChangeAllowed() {
+  if (!replay||replay.known||replay.playing||replay.intro||!replay.match.inputs) return false;
+  const f=replay.fixture, mine=currentId();
+  if (f.homeId!==mine&&f.awayId!==mine) return false;
+  const rival=f.homeId===mine?f.awayId:f.homeId;
+  return !(league?.members ?? []).some(m=>m.clubId===rival) && replay.second>=(replay.match.changes?.at(-1)?.second ?? 0);
+}
+function onFieldAt(side, second) {
+  const ids=[...(side==='home'?replay.match.homeLineup:replay.match.awayLineup).slice(0,15)], team=side==='home'?replay.fixture.homeId:replay.fixture.awayId;
+  for (const e of replay.match.events) if (e.type==='substitution'&&e.teamId===team&&e.second<=second&&e.slot!==undefined&&e.playerId) ids[e.slot]=e.playerId;
+  return ids;
+}
+function showLiveChanges() {
+  pauseReplay();
+  if (!liveChangeAllowed()) return notify('Solo podés hacer cambios en pausa, en tu partido sin terminar y contra un club sin manager.',true);
+  const f=replay.fixture, side=f.homeId===currentId()?'home':'away', inputs=replay.match.inputs[side];
+  const t={...engine.DEFAULT_TACTICS,...(side==='home'?replay.match.homeTactics:replay.match.awayTactics)};
+  for (const c of replay.match.changes ?? []) if (c.clubId===currentId()&&c.tactics) Object.assign(t,c.tactics);
+  const field=onFieldAt(side,replay.second), used=new Set((replay.match.changes ?? []).flatMap(c=>(c.swaps ?? []).map(x=>x.in)));
+  const name=id=>esc(inputs.players.find(p=>p.id===id)?.name ?? replay.names.get(id) ?? '—');
+  const pos=id=>{ const p=inputs.players.find(p=>p.id===id); return p?' · '+(positionAbbr[p.position] ?? p.position):''; };
+  const bench=inputs.bench.filter(id=>!field.includes(id)&&!used.has(id));
+  const tacticRows=tacticsConfig.filter(([key])=>['mentality','attack','defense','kicking','ruck'].includes(key)).map(([key,label,,options])=>
+    '<div class="field"><label for="lc-'+key+'">'+esc(label)+'</label><select id="lc-'+key+'" data-tactic="'+key+'">'+options.map(([v])=>option(v,v,t[key])).join('')+'</select></div>').join('');
+  const swapRows=[0,1,2].map(k=>'<div class="lc-swap"><select data-swap-out="'+k+'"><option value="">Sale…</option>'+field.map((id,i)=>option((i+1)+'. '+(inputs.players.find(p=>p.id===id)?.name ?? replay.names.get(id) ?? id),id,'')).join('')+'</select>'+icon('swap')+
+    '<select data-swap-in="'+k+'"><option value="">Entra…</option>'+bench.map(id=>option((inputs.players.find(p=>p.id===id)?.name ?? id)+pos(id),id,'')).join('')+'</select></div>').join('');
+  showModal('Cambios en el minuto '+clock(replay.second),
+    '<p class="training-note">El partido sigue igual hasta acá; desde este momento juega con los cambios.</p>'+
+    '<h4>Tácticas</h4><div class="lc-grid">'+tacticRows+'</div>'+
+    '<h4>Jugadores</h4>'+(bench.length?swapRows:'<p class="training-note">No quedan suplentes.</p>'),
+    button('Cancelar','close-modal','','ghost')+button('Aplicar cambios','apply-live','','primary','check'), true);
+}
+async function applyLiveChanges() {
+  const f=replay.fixture, side=f.homeId===currentId()?'home':'away';
+  const base={...engine.DEFAULT_TACTICS,...(side==='home'?replay.match.homeTactics:replay.match.awayTactics)};
+  for (const c of replay.match.changes ?? []) if (c.clubId===currentId()&&c.tactics) Object.assign(base,c.tactics);
+  const tactics={}; modalRoot.querySelectorAll('[data-tactic]').forEach(el=>{ if (el.value!==base[el.dataset.tactic]) tactics[el.dataset.tactic]=el.value; });
+  const swaps=[0,1,2].map(k=>({out:modalRoot.querySelector('[data-swap-out="'+k+'"]')?.value,in:modalRoot.querySelector('[data-swap-in="'+k+'"]')?.value})).filter(x=>x.out&&x.in);
+  if (new Set(swaps.map(x=>x.in)).size!==swaps.length||new Set(swaps.map(x=>x.out)).size!==swaps.length) return notify('Cada jugador puede salir o entrar una sola vez.',true);
+  if (!swaps.length&&!Object.keys(tactics).length) return notify('No elegiste ningún cambio.',true);
+  const second=Math.floor(replay.second), id=f.id;
+  closeModal();
+  if (!await act('live-change',{fixtureId:id,second,tactics,swaps})) return;
+  // Reopen the regenerated match at the same second and keep playing.
+  store.set(replayProgressKey(id),String(second));
+  replay=null; openReplay(id);
+  if (replay) { notify('Cambios aplicados desde el minuto '+clock(second)+'.'); toggleReplay(); }
+}
 function updatePlayButton() {
   if (!replayNodes?.toggle) return;
+  app.querySelector('.live-btn')?.toggleAttribute('hidden',!liveChangeAllowed());
   const label=replay.playing?'Pausar':replay.second>=replay.end?'Volver a reproducir':'Reproducir';
   replayNodes.toggle.innerHTML=icon(replay.playing?'pause':'play')+label;
   replayNodes.big?.classList.toggle('show',!replay.playing);
@@ -1981,6 +2032,8 @@ document.addEventListener('click',async event=>{
     case 'advance': await act(Number.isFinite(currentRound())?'advance':'next-season'); break;
     case 'replay': openReplay(value); break;
     case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
+    case 'live-changes': showLiveChanges(); break;
+    case 'apply-live': await applyLiveChanges(); break;
     case 'start-match': if (replay) { replay.intro=false; render(); toggleReplay(); } break;
     case 'quick-sim': if (replay) finishReplay(); break;
     case 'close-final': if (replay) { replay.showFinal=false; render(); app.querySelector('#replay-report')?.scrollIntoView({behavior:'smooth'}); } break;

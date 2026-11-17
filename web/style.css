@@ -1020,3 +1020,8 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .match-card{overflow:auto}
 /* 16/11/2026: more pitch, less crowd on a computer */
 @media(min-width:761px){.replay-full .stand{height:14px}}
+/* Live changes during a match (16/11/2026) */
+.lc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px 12px;margin-bottom:12px}
+.lc-swap{display:flex;align-items:center;gap:8px;margin:6px 0}
+.lc-swap select{flex:1;min-width:0}
+.lc-swap svg{width:18px;height:18px;flex:none;color:var(--ink-3)}

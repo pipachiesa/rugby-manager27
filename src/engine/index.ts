@@ -26,7 +26,9 @@ export interface MatchEvent { minute: number; second: number; type: EventType; t
 export interface ReplayPlayer { id: string; teamId: string; number: number; x: number; y: number; }
 export interface ReplayFrame { second: number; players: ReplayPlayer[]; ball: { x: number; y: number; h?: number }; homeScore: number; awayScore: number; possessionId: string; phase?: ReplayPhase; carrierId?: string; targetId?: string; flight?: 'pass'|'kick'; homeDirection?: number; }
 export interface ReplayMoment { second:number; possessionId:string; x:number; y:number; homeScore:number; awayScore:number; h?:number; phase?:ReplayPhase; carrierId?:string; targetId?:string; flight?:'pass'|'kick'; homeDirection?:number; }
-export interface MatchResult { homeId: string; awayId: string; homeScore: number; awayScore: number; events: MatchEvent[]; frames: ReplayFrame[]; homeTries: number; awayTries: number; seed: number; homeTactics: Tactics; awayTactics: Tactics; timeline: ReplayMoment[]; homeLineup: string[]; awayLineup: string[]; cardEventsTracked?: boolean; replayTrack?: PackedMoment[]; analysis?: { home: TeamAnalysis; away: TeamAnalysis }; }
+export interface MatchChange { second: number; clubId: string; tactics?: Partial<Tactics>; swaps?: { out: string; in: string }[]; }
+export interface MatchInputs { home: { players: Player[]; lineup: string[]; bench: string[] }; away: { players: Player[]; lineup: string[]; bench: string[] }; }
+export interface MatchResult { changes?: MatchChange[]; inputs?: MatchInputs; homeId: string; awayId: string; homeScore: number; awayScore: number; events: MatchEvent[]; frames: ReplayFrame[]; homeTries: number; awayTries: number; seed: number; homeTactics: Tactics; awayTactics: Tactics; timeline: ReplayMoment[]; homeLineup: string[]; awayLineup: string[]; cardEventsTracked?: boolean; replayTrack?: PackedMoment[]; analysis?: { home: TeamAnalysis; away: TeamAnalysis }; }
 export interface Standing { clubId: string; played: number; won: number; drawn: number; lost: number; pointsFor: number; pointsAgainst: number; tries: number; bonus: number; points: number; }
 export interface ReturnCandidate { origin?: 'documented' | 'simulated'; id:string; homeClubId:string; player:Player; status:'monitoring'|'ready'|'signed'; note:string; willingness:number|null; contactable:boolean; lastContactRound?:number; }
 export interface OverseasCareer {
@@ -634,7 +636,12 @@ function prepareTeam(club: Club, tactics: Tactics, rng: Random): Team {
  * Bernoulli draws decide infringements, execution, retention and kicks; independent draws vary metres.
  * Field position changes later choices and opportunities. There is no roll for a final score or winner.
  */
-export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tactics = DEFAULT_TACTICS, awayTactics: Tactics = DEFAULT_TACTICS, seed = 26, includeFrames = true, neutral = false): MatchResult {
+/**
+ * Live changes (16/11/2026): a manager pauses the replay and changes tactics or brings on bench players from that
+ * second. The match is played again with the same seed: nothing before the change differs (changes draw no random
+ * number), and from then on the new tactics and players count. Applied at the start of the next phase.
+ */
+export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tactics = DEFAULT_TACTICS, awayTactics: Tactics = DEFAULT_TACTICS, seed = 26, includeFrames = true, neutral = false, changes: MatchChange[] = []): MatchResult {
   const rng = random(seed), events: MatchEvent[] = [], timeline: ReplayMoment[] = [];
   const home = prepareTeam(homeClub, homeTactics, rng), away = prepareTeam(awayClub, awayTactics, rng);
   let homeScore = 0, awayScore = 0, homeTries = 0, awayTries = 0;
@@ -791,7 +798,8 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     const slot = [0, 3][index];
     for (const side of [home, away]) {
       const player = side.bench[index];
-      if (!player || side.replacementStart.has(player.id) || !activeAt(side, side.lineup[slot], at)) continue;
+      // A slot already changed by the manager during the match keeps his choice.
+      if (!player || side.replacementStart.has(player.id) || side.replacementStart.has(side.lineup[slot].id) || !activeAt(side, side.lineup[slot], at)) continue;
       if (carrier?.id === side.lineup[slot].id) carrier = player;
       side.lineup[slot] = player;
       side.replacementStart.set(player.id, at);
@@ -818,11 +826,34 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
     moment(at, 'ruck');
   }
 
+  const benchIds = { home: home.bench.map(p => p?.id ?? ''), away: away.bench.map(p => p?.id ?? '') };
+  const queue = [...changes].sort((a, b) => a.second - b.second), gone = new Set<string>();
+  let applied = 0;
+  function applyChanges(at: number) {
+    while (applied < queue.length && queue[applied].second <= at) {
+      const change = queue[applied++], side = change.clubId === home.club.id ? home : change.clubId === away.club.id ? away : undefined;
+      if (!side) continue;
+      if (change.tactics) side.tactics = { ...side.tactics, ...change.tactics };
+      for (const swap of change.swaps ?? []) {
+        const slot = side.lineup.findIndex(p => p.id === swap.out);
+        const incoming = side.club.players.find(p => p.id === swap.in);
+        if (slot < 0 || !incoming || gone.has(incoming.id) || side.lineup.some(p => p.id === incoming.id) || !activeAt(side, side.lineup[slot], at)) continue;
+        const leaving = side.lineup[slot];
+        gone.add(leaving.id);
+        if (carrier?.id === leaving.id) carrier = undefined;
+        side.lineup[slot] = { ...incoming, attributes: slotAttributes(incoming, POSITIONS[slot]), fitness: 100 };
+        side.replacementStart.set(incoming.id, at);
+        side.bench = side.bench.map(b => b?.id === incoming.id ? undefined : b);
+        record(at, 'substitution', side, `Ingresa ${incoming.name} por ${leaving.name}`, incoming, 0, slot);
+      }
+    }
+  }
   restart(0, team);
   for (let half = 0; half < 2; half++) {
     const end = (half + 1) * 2400;
     second = half * 2400 + 11;
     while (second + 28 < end) {
+      applyChanges(second);
       const duration = 26 + Math.floor(rng() * 19);
       if (second + Math.max(duration, 39) >= end) break;
       if (half === 1 && second >= 3600) substitution(second, 0);
@@ -960,13 +991,13 @@ export function generateMatch(homeClub: Club, awayClub: Club, homeTactics: Tacti
   }
   record(4800, 'fullTime', undefined, 'Final del partido');
   moment(4800, 'fulltime');
-  const homeLineup = [...home.startingIds, ...home.bench.map(p => p?.id ?? '')];
-  const awayLineup = [...away.startingIds, ...away.bench.map(p => p?.id ?? '')];
+  const homeLineup = [...home.startingIds, ...benchIds.home];
+  const awayLineup = [...away.startingIds, ...benchIds.away];
   for (const side of [home, away]) {
     side.analysis.territory = Math.round(100 * side.territorialPhases / (side.analysis.phases || 1));
     side.analysis.metresGained = Math.round(side.analysis.metresGained);
   }
-  const result: MatchResult = { homeId: homeClub.id, awayId: awayClub.id, homeScore, awayScore, homeTries, awayTries, seed, events, frames: [], homeTactics: { ...homeTactics }, awayTactics: { ...awayTactics }, timeline, homeLineup, awayLineup, cardEventsTracked: true, analysis: { home: home.analysis, away: away.analysis } };
+  const result: MatchResult = { homeId: homeClub.id, awayId: awayClub.id, homeScore, awayScore, homeTries, awayTries, seed, events, frames: [], homeTactics: { ...homeTactics }, awayTactics: { ...awayTactics }, timeline, homeLineup, awayLineup, cardEventsTracked: true, analysis: { home: home.analysis, away: away.analysis }, ...(changes.length ? { changes: queue } : {}) };
   if (includeFrames) result.frames = buildFrames(homeClub, awayClub, result);
   return result;
 }
@@ -1170,11 +1201,31 @@ function buildFrames(home: Club, away: Club, match: MatchResult): ReplayFrame[] 
   });
 }
 
+/** The 23 a club takes to a match, as they were (used to replay it with live changes). */
+export function matchInputs(club: Club): { players: Player[]; lineup: string[]; bench: string[] } {
+  const chosen = selection(club), xv = chosen.slice(0, 15), rest = chosen.slice(15);
+  const saved = (club.bench ?? []).map(id => rest.find(p => p.id === id)).filter((p): p is Player => !!p);
+  const engineBench = [0, 3].map(slot => saved.find(p => canPlay(p, POSITIONS[slot])) ?? rest.find(p => p.position === POSITIONS[slot]));
+  const bench = [...new Set([...engineBench, ...saved, ...rest].filter((p): p is Player => !!p))].slice(0, 8);
+  const slim = (p: Player): Player => ({ id: p.id, name: p.name, position: p.position, positions: p.positions, squad: 'Plantel superior', seniorSquad: p.seniorSquad, attributes: p.attributes, fitness: p.fitness, injury: null, age: p.age, potential: p.potential, estimated: p.estimated, fictional: p.fictional });
+  return { players: [...xv, ...bench].map(slim), lineup: xv.map(p => p.id), bench: bench.map(p => p.id) };
+}
+/** Plays a stored match again with the manager's live changes; identical up to the first change. */
+export function replayWithChanges(state: LeagueState, fixtureId: string, changes: MatchChange[]): LeagueState {
+  const fixture = state.fixtures.find(f => f.id === fixtureId);
+  if (!fixture?.match?.inputs) throw new Error('Este partido no admite cambios.');
+  const { inputs } = fixture.match;
+  const clubOf = (id: string, side: MatchInputs['home']): Club => { const c = state.clubs.find(x => x.id === id)!; return { ...c, players: side.players, lineup: side.lineup, bench: side.bench }; };
+  const full = generateMatch(clubOf(fixture.homeId, inputs.home), clubOf(fixture.awayId, inputs.away), fixture.match.homeTactics, fixture.match.awayTactics, fixture.match.seed, false, fixture.neutral === true, changes);
+  const match = { ...full, timeline: [], replayTrack: packTimeline(full), inputs };
+  return { ...state, fixtures: state.fixtures.map(f => f.id === fixtureId ? { ...f, match } : f) };
+}
 export function simulateFixture(state:LeagueState, fixtureId:string, tacticsByClub:Record<string,Tactics>={}):LeagueState {
   const fixture=state.fixtures.find(f=>f.id===fixtureId); if(!fixture) throw new Error('Partido no encontrado'); if(fixture.match) return state;
   const home=state.clubs.find(c=>c.id===fixture.homeId), away=state.clubs.find(c=>c.id===fixture.awayId); if(!home||!away) throw new Error('Club no encontrado');
   const fullMatch=generateMatch(home,away,tacticsByClub[home.id]??state.tactics[home.id],tacticsByClub[away.id]??state.tactics[away.id],state.seed^hash(fixture.id)^hash(String(state.season)),false,fixture.neutral===true);
-  const match={...fullMatch,timeline:[],replayTrack:packTimeline(fullMatch)};
+  // The 23 of each side are kept with the match so it can be replayed with live changes (dropped a round later).
+  const match={...fullMatch,timeline:[],replayTrack:packTimeline(fullMatch),inputs:{home:matchInputs(home),away:matchInputs(away)}};
   const played=new Set([...match.homeLineup.slice(0,15),...match.awayLineup.slice(0,15)]);
   const benches=new Set([match.homeLineup[15],match.homeLineup[16],match.awayLineup[15],match.awayLineup[16]]);
   // A match costs 12 points (a replacement 4); the seven days until the next round recover 60 % of the deficit.
