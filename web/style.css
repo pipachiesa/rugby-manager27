@@ -1037,3 +1037,21 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 .kick-power{position:relative;height:22px;border-radius:11px;background:linear-gradient(90deg,#c0392b,#e9b949 60%,#c0392b);overflow:hidden}
 .kick-zone{position:absolute;top:0;bottom:0;background:#3fbf6acc;border-left:2px solid #fff;border-right:2px solid #fff}
 .kick-needle{position:absolute;top:-2px;bottom:-2px;width:4px;margin-left:-2px;background:#111;box-shadow:0 0 0 2px #fff}
+/* Champion and promotion celebration (16/11/2026) */
+.celebration{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:radial-gradient(ellipse at center,rgba(10,30,20,.82),rgba(3,8,6,.94));animation:mc-in .4s ease-out;overflow:hidden}
+.confetti{position:absolute;inset:0;pointer-events:none}
+.confetti i{position:absolute;top:-4%;width:8px;height:14px;border-radius:2px;opacity:.95;animation:confetti-fall linear infinite}
+@keyframes confetti-fall{0%{transform:translateY(-5vh) rotate(0)}100%{transform:translateY(110vh) rotate(720deg)}}
+.celebration-card{position:relative;display:grid;justify-items:center;gap:10px;text-align:center;color:#f4efe2;max-width:560px}
+.celebration-card h2{margin:6px 0 0;font:900 italic clamp(34px,7vw,64px)/1 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em;color:#e9b949;text-shadow:0 4px 18px rgba(0,0,0,.5)}
+.celebration-card p{margin:0 0 6px;font-size:18px}
+.flag-pole{position:relative;padding-left:10px;border-left:6px solid #d8d2c4;height:min(250px,36vh)}
+.flag{position:relative;display:flex;width:min(380px,74vw);height:min(220px,32vh);filter:drop-shadow(0 12px 20px rgba(0,0,0,.45))}
+.flag span{flex:1;height:100%;animation:flag-wave 1.4s ease-in-out infinite}
+@keyframes flag-wave{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(7%) scaleY(.96)}}
+.flag-crest{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.flag-crest img,.flag-crest .crest{width:34%;height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));animation:flag-wave 1.4s ease-in-out infinite;animation-delay:-.7s}
+.celebration:not(.big) .celebration-card h2{font-size:clamp(28px,5vw,46px)}
+@media (prefers-reduced-motion:reduce){.flag span,.flag-crest img,.confetti i{animation:none}}
+.flag-crest>*{width:36%!important;height:auto!important;max-width:150px;aspect-ratio:1;object-fit:contain}
+.flag-crest .crest-holder img.crest{width:100%!important;height:auto!important}.flag-crest .crest-holder{display:grid}

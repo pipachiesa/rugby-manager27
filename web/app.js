@@ -1,6 +1,6 @@
 import * as engine from './engine.js';
 import { playerCareerStats } from './player-stats.js';
-import { DIVISIONS, initialWorld, roundOf, applyClubAction, advanceWorld, advanceSeasonWorld, overall, ageOnDate, enrichRosterIdentities, trajectoryLabel as stageLabel, PARALLEL_CATEGORIES, parallelStandings, playoffState, PLAYOFF_RULES, applyCommunity, clubObjective, marketPlayers, transferInterest, TRAINING_FATIGUE, playerRole, SQUAD_LIMIT, YOUTH_PLANS, retrainOptions, MAX_RETRAINING, hasReplay } from './domain.js';
+import { DIVISIONS, initialWorld, roundOf, applyClubAction, advanceWorld, advanceSeasonWorld, overall, ageOnDate, enrichRosterIdentities, trajectoryLabel as stageLabel, PARALLEL_CATEGORIES, parallelStandings, playoffState, seasonMoves, PLAYOFF_RULES, applyCommunity, clubObjective, marketPlayers, transferInterest, TRAINING_FATIGUE, playerRole, SQUAD_LIMIT, YOUTH_PLANS, retrainOptions, MAX_RETRAINING, hasReplay } from './domain.js';
 
 const app = document.querySelector('#app');
 const modalRoot = document.querySelector('#modal-root');
@@ -1170,12 +1170,48 @@ function replayReport({match,fixture}) {
     rows.map(([key,label])=>'<tr><th scope="row">'+label+'</th><td>'+value(key,home[key])+'</td><td>'+value(key,away[key])+'</td></tr>').join('')+'</tbody></table></div><p class="training-note spaced">El XV, el estado físico y el plan de juego influyen en el rendimiento. La forma del día añade variación propia del partido. Son indicadores de esta simulación.</p>':''))+'</div>';
 }
 
+/**
+ * Celebrations (16/11/2026): when the season is over (playoffs played, your last match watched), the Portal shows the
+ * URBA champion with its flag waving and confetti in its colours, and your own promotion if it happened. Once per
+ * season and event, remembered per browser.
+ */
+function celebrations() {
+  const w=world();
+  if (!w.fixtures.length||w.fixtures.some(f=>!f.match)||pendingReplay()) return [];
+  const champ=playoffState(w,'Top 14').winner; if (!champ) return [];
+  const mine=currentId(), list=[{key:'champion-'+champ,clubId:champ,title:champ===mine?'¡Campeones de la URBA!':'Campeón URBA '+w.season,sub:champ===mine?nameOf(champ)+' gana el Top 14 '+w.season:nameOf(champ)+' ganó la final del Top 14',big:champ===mine}];
+  const rank={'Top 14':0,'Primera A':1,'Primera B':2}, from=club(mine)?.division, to=seasonMoves(w)[mine];
+  if (to&&rank[to]<rank[from]) {
+    const first=engine.getStandings(w,from)[0]?.clubId===mine;
+    list.push({key:'promotion-'+mine,clubId:mine,title:'¡Ascenso!',sub:nameOf(mine)+(first?' campeón de '+from+' y':'')+' juega el '+to+' '+(w.season+1),big:true});
+  }
+  const seen=k=>store.get('tt-celebrated:'+(league?.code ?? 'demo')+':'+w.season+':'+k);
+  return list.filter(c=>!seen(c.key));
+}
+function flagBackground(d) {
+  const [a,b=a,c3=b]=d.colors;
+  if (d.pattern==='hoops') return 'repeating-linear-gradient(180deg,'+a+' 0 16.6%,'+b+' 16.6% 33.3%'+(c3!==b?','+c3+' 33.3% 50%':'')+')';
+  if (d.pattern==='stripes') return 'repeating-linear-gradient(90deg,'+a+' 0 12.5%,'+b+' 12.5% 25%)';
+  if (d.pattern==='halves'||d.pattern==='quarters') return 'linear-gradient(90deg,'+a+' 50%,'+b+' 50%)';
+  if (d.pattern==='sash') return 'linear-gradient(135deg,'+a+' 40%,'+b+' 40% 60%,'+a+' 60%)';
+  return 'linear-gradient(180deg,'+a+' 70%,'+b+' 70%)';
+}
+function celebrationOverlay() {
+  const c=celebrations()[0]; if (!c) return '';
+  const d=designOf(club(c.clubId)), bg=flagBackground(d), colors=[...d.colors,'#e9b949','#ffffff'];
+  // The flag is cut in vertical slices that rise and fall one after another, so it ripples like cloth.
+  const slices=Array.from({length:16},(_,i)=>'<span style="background:'+bg+';background-size:1600% 100%;background-position:'+(i/15*100)+'% 0;animation-delay:'+(-i*.09)+'s"></span>').join('');
+  const confetti=Array.from({length:70},(_,i)=>'<i style="left:'+((i*37)%100)+'%;background:'+colors[i%colors.length]+';animation-delay:'+(-(i*.23)%4).toFixed(2)+'s;animation-duration:'+(3+(i%5)*.5)+'s"></i>').join('');
+  return '<div class="celebration'+(c.big?' big':'')+'" role="dialog" aria-label="'+esc(c.title)+'"><div class="confetti" aria-hidden="true">'+confetti+'</div>'+
+    '<div class="celebration-card"><div class="flag-pole"><div class="flag">'+slices+'<div class="flag-crest">'+crest(c.clubId)+'</div></div></div>'+
+    '<h2>'+esc(c.title)+'</h2><p>'+esc(c.sub)+'</p>'+button('¡Vamos!','close-celebration',c.key,'primary','trophy')+'</div></div>';
+}
 const renderers = {resumen:dashboard,jugador:playerPage,plantel:squadPage,medico:medicalPage,tacticas:tacticsPage,entrenamiento:trainingPage,cantera:academy,torneo:tournament,regresos:market,club:clubPage,liga:leaguePage,partido:replayPage};
 function render() {
   if (!catalog || !demo) return;
   if (entryStage) { app.innerHTML=entryScreen(); return; }
   const notice=league?.world.migrationNotice&&page!=='partido'?'<p class="notice blue">'+esc(league.world.migrationNotice)+'</p>':'';
-  app.innerHTML = shell(notice+renderers[page]());
+  app.innerHTML = shell(notice+renderers[page]())+(page==='resumen'?celebrationOverlay():'');
   if (page==='partido'&&replay) setupReplay();
 }
 
@@ -2144,6 +2180,7 @@ document.addEventListener('click',async event=>{
     case 'advance': await act(Number.isFinite(currentRound())?'advance':'next-season'); break;
     case 'replay': openReplay(value); break;
     case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
+    case 'close-celebration': store.set('tt-celebrated:'+(league?.code ?? 'demo')+':'+world().season+':'+value,'1'); render(); break;
     case 'live-changes': showLiveChanges(); break;
     case 'kick-stop': if (kickGame?.stage==='power') stopKick(); else if (kickGame?.stage==='aim') notify('Primero dibujá la dirección.',true); break;
     case 'kick-auto': await finishKick(true); break;
