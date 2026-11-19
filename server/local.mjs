@@ -1,11 +1,11 @@
 import {createServer} from 'node:http';
-import {readFile,writeFile,mkdir,readdir,stat} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,readdir,stat,unlink} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 const dir='.local-data';await mkdir(dir,{recursive:true});
 const keypath=k=>`${dir}/${Buffer.from(k).toString('base64url')}.json`;
 const locks=new Map();
-const bucket={async get(key){try{const body=await readFile(keypath(key),'utf8');return {etag:createHash('sha256').update(body).digest('hex'),json:async()=>JSON.parse(body)};}catch{return null;}},async put(key,body,options={}){
+const bucket={async delete(key){try{await unlink(keypath(key));}catch{}},async get(key){try{const body=await readFile(keypath(key),'utf8');return {etag:createHash('sha256').update(body).digest('hex'),json:async()=>JSON.parse(body)};}catch{return null;}},async put(key,body,options={}){
  const before=locks.get(key)||Promise.resolve();let release;const gate=new Promise(r=>release=r);locks.set(key,before.then(()=>gate));await before;
  try{const old=await this.get(key);if(options.onlyIf?.etagMatches&&old?.etag!==options.onlyIf.etagMatches)return null;if((options.onlyIf?.etagDoesNotMatch==='*'||options.onlyIf instanceof Headers&&options.onlyIf.get('if-none-match')==='*')&&old)return null;await writeFile(keypath(key),body);return {key};}finally{release();}
 },async list({prefix,limit=1000}){const files=await readdir(dir);return {objects:files.map(f=>({key:Buffer.from(f.replace(/\.json$/,''),'base64url').toString()})).filter(o=>o.key.startsWith(prefix)).slice(0,limit)};}};

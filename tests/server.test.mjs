@@ -118,3 +118,20 @@ test('online live changes against a friend only from where he has watched; up to
  res=await call(b,'ana',`/api/leagues/${l.code}/action`,'POST',{version:l.version,action:'live-change',fixtureId:f.id,second:3060,tactics:{mentality:'Ofensiva'}});
  assert.equal(res.status,200);const after=await res.json();assert.equal(after.world.fixtures.find(x=>x.id===f.id).match.changes.length,1);
 });
+// 18/11/2026: solo games saved to the account, several per user, private, never overwritten by an older copy.
+test('solo games are saved to the account: list, open, keep the newest, limit and delete',async()=>{
+ const b=storage(),save=(uid,id,savedAt,extra={})=>call(b,uid,'/api/saves/'+id,'POST',{meta:{clubId:'regatas-bella-vista',manager:'Felipe',season:2027,round:5,savedAt},data:'H4sI-test',...extra});
+ assert.equal((await call(b,null,'/api/saves')).status,401);
+ assert.equal((await save('felipe','abc123',1000)).status,200);
+ let list=await (await call(b,'felipe','/api/saves')).json();assert.equal(list.saves.length,1);assert.equal(list.saves[0].clubId,'regatas-bella-vista');
+ assert.deepEqual((await (await call(b,'otro','/api/saves')).json()).saves,[],'another account sees nothing');
+ assert.equal((await call(b,'otro','/api/saves/abc123')).status,404);
+ const got=await (await call(b,'felipe','/api/saves/abc123')).json();assert.equal(got.data,'H4sI-test');assert.equal(got.meta.round,5);
+ assert.equal((await save('felipe','abc123',500)).status,409,'an older copy from another device does not overwrite');
+ assert.equal((await save('felipe','abc123',2000)).status,200);
+ for(const id of ['bbbb2','cccc3','dddd4','eeee5'])assert.equal((await save('felipe',id,3000)).status,200);
+ assert.equal((await save('felipe','ffff6',4000)).status,400,'five games per account');
+ assert.equal((await call(b,'felipe','/api/saves/bbbb2/delete','POST',{})).status,200);
+ list=await (await call(b,'felipe','/api/saves')).json();assert.equal(list.saves.length,4);assert.ok(!list.saves.some(m=>m.id==='bbbb2'));
+ assert.equal((await save('felipe','ffff6',4000)).status,200,'room again after deleting');
+});

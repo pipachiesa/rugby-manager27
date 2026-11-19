@@ -1253,3 +1253,11 @@ tr.highlight.z-playoff td:first-child,tr.highlight.z-up td:first-child,tr.highli
 @keyframes smoke{from{transform:translateY(0) scale(.6);opacity:0}25%{opacity:.9}to{transform:translateY(-55vh) scale(1.5);opacity:0}}
 @media(prefers-reduced-motion:reduce){.fans-stand i,.fans-banner,.fans-smoke b{animation:none}}
 @media(max-width:640px){.fans-card{margin-bottom:26vh}.fans-card p{font-size:14px}.fans-stand{height:30vh}}
+/* Mis partidas (18/11/2026) */
+.solo-saves{display:grid}
+.solo-save{display:grid;grid-template-columns:40px 1fr auto auto;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.solo-save:last-child{border-bottom:0}
+.solo-save .crest-holder{display:grid;place-items:center;width:36px}.solo-save .crest,.solo-save .crest-fallback{width:36px;height:40px;object-fit:contain}
+.solo-save strong{display:block;font-size:15px}
+.solo-save small{display:block;color:var(--ink-2);font-size:12px}
+@media(max-width:640px){.solo-save{grid-template-columns:32px 1fr auto auto;gap:8px;padding:9px 10px}}

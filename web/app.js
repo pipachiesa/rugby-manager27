@@ -185,7 +185,7 @@ const option = (label,value,selected) => '<option value="'+esc(value)+'"'+(value
 const tabs = (items,active,action,label='Sección') => '<div class="tabs" role="group" aria-label="'+esc(label)+'">'+items.map(item=>'<button class="tab '+(item===active?'active':'')+'" type="button" aria-pressed="'+(item===active)+'" data-do="'+action+'" data-value="'+esc(item)+'">'+esc(item)+'</button>').join('')+'</div>';
 const clubMatches = (id=currentId()) => world().fixtures.filter(f=>f.homeId===id||f.awayId===id).sort((a,b)=>a.round-b.round);
 function watched() {
-  const key = 'tt-watched-v1:'+ (league?.code ?? 'demo') + ':' + world().season + ':' + currentId();
+  const key = 'tt-watched-v1:'+ (league?.code ?? soloId) + ':' + world().season + ':' + currentId();
   if (!watchedFixtures.has(key)) {
     let saved = [];
     try { saved = JSON.parse(store.get(key) ?? '[]'); } catch {}
@@ -267,7 +267,7 @@ function shell(content) {
   const clubInk = lum(clubColor) > .36 ? '#16130f' : '#ffffff';
   return '<a class="skip-link" href="#main-content">Saltar al contenido</a><div class="app-shell modern-manager" style="--club:'+clubColor+';--club-ink:'+clubInk+'">'+
     '<header class="clubbar"><div class="clubbar-row">'+
-    '<button class="clubbar-crest" data-do="clubs" type="button" aria-label="'+(league?'Ver clubes':'Cambiar de club')+'" title="'+esc(c.name)+'">'+crest(c.id)+'</button>'+
+    '<button class="clubbar-crest" data-do="explorer" type="button" aria-label="Ver clubes" title="'+esc(c.name)+'">'+crest(c.id)+'</button>'+
     '<nav class="mainnav" aria-label="Menú principal">'+navigation.map(([id,label])=>'<button type="button" class="mainnav-item'+(active[0]===id?' active':'')+'" data-do="page" data-value="'+id+'"'+(active[0]===id?' aria-current="true"':'')+'>'+esc(label)+'</button>').join('')+'</nav>'+
     '<div class="clubbar-actions"><button class="icon-btn theme-toggle" type="button" data-do="theme" aria-label="Cambiar a modo '+(dark?'claro':'oscuro')+'">'+icon(dark?'sun':'moon')+'</button>'+
     '<div class="date-display"><small>'+esc(matchDate?matchDate+' '+world().season:world().season)+'</small><strong>'+(Number.isFinite(round)?esc(roundName(round)):'Fin de temporada')+'</strong></div>'+
@@ -995,7 +995,7 @@ function availableClubOptions(selected) {
 }
 
 const demoDescription = () => esc(nameOf(demoClubId))+' · temporada '+demo.season;
-const demoBox = () => panel('Partida offline','<div class="panel-body demo-box"><p>Se guarda en este navegador. '+demoDescription()+'.</p>'+button('Empezar de nuevo','reset-demo','','ghost small','return',busy)+'</div>')+'<div class="spaced"></div>';
+const demoBox = () => panel('Partida individual','<div class="panel-body demo-box"><p>'+demoDescription()+'. '+(cloudSaves()?'Se guarda en tu cuenta y en este navegador.':'Se guarda en este navegador.')+'</p>'+button('Mis partidas','go-saves','','ghost small','return',busy)+'</div>')+'<div class="spaced"></div>';
 
 function authForm(kind) {
   const login = kind==='login';
@@ -1033,12 +1033,18 @@ function entryScreen() {
     const card = (action, glyph, heading, text, cta, disabled=false) => '<button type="button" class="entry-choice" data-do="'+action+'"'+(disabled||busy?' disabled':'')+'>'+
       '<span class="entry-choice-icon">'+icon(glyph)+'</span><span class="entry-choice-text"><strong>'+heading+'</strong><small>'+text+'</small></span><span class="entry-choice-cta">'+cta+icon('right')+'</span></button>';
     body='<div class="entry-modes">'+
-      card('entry-offline','shield',hasDemoSave?'Seguir mi partida':'Partida individual',hasDemoSave?esc(demoDescription())+'. Se guarda en este navegador.':'Elegí un club y jugá a tu ritmo. Se guarda en este navegador.',hasDemoSave?'Continuar':'Empezar')+
+      card('entry-offline','shield',soloSaves.length?'Mis partidas':'Partida individual',soloSaves.length?soloSaves.length+(soloSaves.length===1?' partida guardada':' partidas guardadas')+(cloudSaves()?' en tu cuenta':' en este navegador')+'.':'Elegí un club y jugá a tu ritmo.'+(cloudSaves()?' Se guarda en tu cuenta.':' Se guarda en este navegador.'),soloSaves.length?'Abrir':'Empezar')+
       card('entry-online','team','Liga con amigos',offline?'Disponible en la versión con servidor.':'Cada uno dirige su club. La fecha se juega cuando todos están listos.','Abrir ligas',offline)+
       '</div>';
   } else if (entryStage==='offline') {
-    title='Elegí tu club';
-    body=panel('Mánager y club','<form class="panel-body" id="offline-setup"><div class="field"><label for="offline-name">Nombre del mánager</label><input id="offline-name" name="nickname" maxlength="32" value="'+esc((demoManager||me.name||localProfile()||'').slice(0,32))+'" required></div><div class="field"><label for="offline-club">Club</label><select id="offline-club" name="clubId">'+availableClubOptions(demoClubId)+'</select></div><button type="submit" class="btn primary">Entrar al menú</button></form>');
+    title=soloSaves.length?'Mis partidas':'Elegí tu club';
+    const when = t => t ? new Intl.DateTimeFormat('es-AR',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(t)) : '';
+    const list = soloSaves.length ? panel('Partidas guardadas','<div class="solo-saves">'+soloSaves.map(m=>'<div class="solo-save">'+crest(m.clubId)+
+      '<span><strong>'+esc(nameOf(m.clubId))+'</strong><small>'+esc([m.manager,'Temporada '+(m.season ?? ''),m.round?'Fecha '+m.round:''].filter(Boolean).join(' · '))+'</small>'+
+      '<small>'+(m.cloud?'En tu cuenta':'Solo en este navegador')+' · '+esc(when(m.savedAt))+'</small></span>'+
+      button('Jugar','open-solo',m.id,'primary small','play',busy)+button('','delete-solo',m.id,'ghost small','close',busy)+'</div>').join('')+'</div>')+'<div class="spaced"></div>' : '';
+    const full = soloSaves.length>=SOLO_SLOTS;
+    body=list+panel('Nueva partida',full?'<p class="panel-body">Llegaste a '+SOLO_SLOTS+' partidas. Borrá una para empezar otra.</p>':'<form class="panel-body" id="offline-setup"><div class="field"><label for="offline-name">Nombre del mánager</label><input id="offline-name" name="nickname" maxlength="32" value="'+esc((demoManager||me.name||localProfile()||'').slice(0,32))+'" required></div><div class="field"><label for="offline-club">Club</label><select id="offline-club" name="clubId">'+availableClubOptions(demoClubId)+'</select></div><button type="submit" class="btn primary">Empezar partida</button></form>');
   } else {
     title='Liga con amigos';
     body=leagueOptions();
@@ -1243,7 +1249,7 @@ function celebrations() {
     const first=engine.getStandings(w,from)[0]?.clubId===mine;
     list.push({key:'promotion-'+mine,clubId:mine,title:'¡Ascenso!',sub:nameOf(mine)+(first?' campeón de '+from+' y':'')+' juega el '+to+' '+(w.season+1),big:true});
   }
-  const seen=k=>store.get('tt-celebrated:'+(league?.code ?? 'demo')+':'+w.season+':'+k);
+  const seen=k=>store.get('tt-celebrated:'+(league?.code ?? soloId)+':'+w.season+':'+k);
   return list.filter(c=>!seen(c.key));
 }
 function flagBackground(d) {
@@ -1270,7 +1276,7 @@ function fansScene() {
   const c=currentClub(), cutoff=pendingReplay()?.round ?? Infinity;
   const n=(world().news ?? []).filter(n=>n.kind==='fans'&&n.protest&&n.clubId===c.id&&n.season===world().season&&n.round<cutoff).at(-1);
   if (!n) return '';
-  const key='tt-fans:'+(league?.code ?? 'demo')+':'+n.season+':'+n.round+':'+n.mood;
+  const key='tt-fans:'+(league?.code ?? soloId)+':'+n.season+':'+n.round+':'+n.mood;
   if (store.get(key)) return '';
   const d=designOf(c), angry=n.mood==='angry', [a,b=a]=d.colors;
   const crowd=Array.from({length:90},(_,i)=>'<i style="left:'+((i*7.3)%100).toFixed(1)+'%;bottom:'+(Math.floor(i/18)*16)+'%;background:'+[a,b,a,'#e8e2d6'][i%4]+';animation-delay:'+(-(i*.13)%1.2).toFixed(2)+'s"></i>').join('');
@@ -1568,7 +1574,7 @@ function showClubPreview(id) {
     '<div class="action-row spaced">'+tag('Fuerza '+strength(c)+'/100','neutral')+
     (c.competitionId==='interior-a'?tag('Disponible para explorar','blue'):'')+'</div>'+
     (c.venue?.name?'<p class="spaced">'+esc(c.venue.name)+'</p>':''),
-    button('Volver al catálogo','explorer','','ghost','right')+(c.competitionId!=='interior-a'&&!league?button('Dirigir este club','choose-club',id,'primary','shield'):''));
+    button('Volver al catálogo','explorer','','ghost','right'));
 }
 
 let animation, replayNodes, lastFrameTime;
@@ -2059,7 +2065,7 @@ function updatePlayButton() {
   replayNodes.big?.classList.toggle('show',!replay.playing);
 }
 /** Where an unwatched match was left, so leaving the replay (Portal, any menu, a reload) never restarts it. */
-const replayProgressKey = id => 'tt-replay-pos:'+(league?.code ?? 'demo')+':'+id;
+const replayProgressKey = id => 'tt-replay-pos:'+(league?.code ?? soloId)+':'+id;
 function saveReplayProgress() {
   if (!replay) return;
   store.set(replayProgressKey(replay.fixture.id), replay.known ? '' : String(Math.floor(replay.seen)));
@@ -2251,7 +2257,7 @@ function refreshLeagueList() {
 function enterOffline(next='resumen') {
   setLeague(null);
   entryStage=null;
-  rememberEntry('offline');
+  rememberEntry('offline',soloId);
   resetFilters();
   changePage(next);
   syncCommunity(true);
@@ -2390,10 +2396,16 @@ document.addEventListener('click',async event=>{
   if (busy && ['offline','open-league','choose-club'].includes(action)) return;
   switch (action) {
     case 'entry-mode':
+      if (!league&&!entryStage) await flushCloud();
       if (!busy) { closeModal(); league=null; resetFilters(); setEntry('mode'); }
       break;
     case 'entry-auth': authKind=value==='Crear cuenta'?'register':'login'; render(); break;
-    case 'entry-offline': if (hasDemoSave) enterOffline(); else setEntry('offline'); break;
+    case 'entry-offline': setEntry('offline'); refreshSaves().then(()=>{ if (entryStage==='offline') render(); }); break;
+    case 'open-solo': await openSolo(value); break;
+    case 'delete-solo': { const m=soloSaves.find(x=>x.id===value);
+      showModal('¿Borrar esta partida?','<p>Se borra '+esc(nameOf(m?.clubId))+(m?.season?', temporada '+m.season:'')+' de este navegador'+(m?.cloud?' y de tu cuenta':'')+'. No se puede deshacer.</p>',
+        button('Cancelar','close-modal','','ghost')+button('Borrar','confirm-delete-solo',value,'primary','close')); break; }
+    case 'confirm-delete-solo': closeModal(); setBusy(true); await deleteSolo(value); setBusy(false); notify('Partida borrada.'); render(); break;
     case 'entry-online': if (me.signedIn&&!offline) { setEntry('online'); refreshList(); } break;
     case 'retry-leagues': refreshList(); break;
     case 'reset-local-profile': localProfileName=''; store.set('tt-local-profile',null); setEntry('auth'); break;
@@ -2407,13 +2419,12 @@ document.addEventListener('click',async event=>{
     case 'mobile': mobileOpen=!mobileOpen; render(); break;
     case 'theme': setTheme(theme()==='dark'?'light':'dark'); render(); break;
     case 'medical-filter': medicalFilter=value; render(); break;
-    case 'clubs': showClubs(); break;
+    case 'clubs': showClubs(true); break;
     case 'explorer': showClubs(true); break;
     case 'club-preview': showClubPreview(value); break;
     case 'close-modal': if (kickGame) { await finishKick(true); break; } liveDraft=null; closeModal(); break;
-    case 'choose-club':
-      if (league) { showClubPreview(value); break; }
-      demoClubId=value; store.set('tt-demo-club',value); saveDemo(); resetFilters(); closeModal(); changePage('resumen'); break;
+    // 18/11/2026: the club is chosen when a game starts; changing it mid-game is a new game (Mis partidas).
+    case 'choose-club': showClubPreview(value); break;
     case 'player': showPlayer(value); break;
     case 'profile-tab': if (profileTabs.some(([id])=>id===value)) { profileTab=value; changePage('jugador'); } break;
     case 'profile-back': changePage(profileBack); break;
@@ -2504,7 +2515,7 @@ document.addEventListener('click',async event=>{
     case 'replay': openReplay(value); break;
     case 'toggle-replay': if (replay?.intro||replay?.showFinal) break; toggleReplay(); break;
     case 'close-fans': store.set(value,'1'); render(); break;
-    case 'close-celebration': store.set('tt-celebrated:'+(league?.code ?? 'demo')+':'+world().season+':'+value,'1'); render(); break;
+    case 'close-celebration': store.set('tt-celebrated:'+(league?.code ?? soloId)+':'+world().season+':'+value,'1'); render(); break;
     case 'round-team': showRoundTeam(); break;
     case 'live-changes': showLiveChanges(); break;
     case 'kick-stop': stopKick(); break;
@@ -2522,12 +2533,7 @@ document.addEventListener('click',async event=>{
     case 'seek-event':
       pauseReplay();
       seekReplay(replay?.events[Number(value)]?.second); break;
-    case 'reset-demo':
-      showModal('¿Empezar de nuevo?','<p>Se borra la partida de prueba guardada en este navegador: resultados, plantel, estadísticas y temporadas. Las ligas con amigos no se tocan.</p>',
-        button('Cancelar','close-modal','','ghost')+button('Borrar y empezar','confirm-reset-demo','','primary','return'));
-      break;
-    case 'confirm-reset-demo':
-      await resetDemo(bootData.returns,bootData.youth,bootData.names); closeModal(); resetDrafts(); resetFilters(); changePage('resumen'); notify('Empezaste una partida offline nueva.'); break;
+    case 'go-saves': await flushCloud(); closeModal(); league=null; resetFilters(); setEntry('offline'); refreshSaves().then(()=>{ if (entryStage==='offline') render(); }); break;
     case 'skip-replay':
       pauseReplay();
       showModal('¿Mostrar el resultado?','<p>Se mostrará el marcador final y podrás consultar los resultados de la fecha.</p>',
@@ -2613,6 +2619,10 @@ document.addEventListener('submit',async event=>{
     }
     const clubId=fields.get('clubId');
     if (!demo.clubs.some(c=>c.id===clubId)) return notify('Elegí un club disponible.',true);
+    if (soloSaves.length>=SOLO_SLOTS) return notify('Podés tener hasta '+SOLO_SLOTS+' partidas. Borrá una para empezar otra.',true);
+    // A new game always gets its own slot: it never writes over another.
+    soloId=newSoloId(); watchedFixtures.clear();
+    demo=initialWorld(catalog,2026,bootData.returns,bootData.youth,bootData.names);
     demoClubId=clubId;
     demoManager=nickname;
     store.set('tt-demo-club',clubId);
@@ -2732,9 +2742,13 @@ window.addEventListener('hashchange',()=>{
   changePage(routeFromHash(),false);
 });
 
-// The test game (no league) is saved in this browser (IndexedDB: a season weighs several MB, too much for
-// localStorage) after every change, and restored on load. Saves are per browser; leagues stay on the server.
-const SAVE_DB = 'tercer-tiempo', SAVE_STORE = 'saves', SAVE_KEY = 'demo';
+// Solo games (18/11/2026). Several per account: each is kept in this browser (IndexedDB, one entry per game, so a
+// reload is instant) and, when signed in, in the account (/api/saves, gzipped), so another device or a browser that
+// cleared its storage finds it. Before, there was a single game per browser: on another device it looked deleted.
+// The old single save keeps the id «demo» (and its watched-replay keys).
+const SAVE_DB = 'tercer-tiempo', SAVE_STORE = 'saves', SOLO_SLOTS = 5;
+let soloId = 'demo', soloSaves = [], savesLoaded = false;
+const localKey = id => id==='demo' ? 'demo' : 'slot:'+id;
 function saveDb() {
   return new Promise((resolve,reject)=>{ try { const open=indexedDB.open(SAVE_DB,1);
     open.onupgradeneeded=()=>open.result.createObjectStore(SAVE_STORE);
@@ -2745,11 +2759,26 @@ async function saveTx(mode, run) {
   return new Promise((resolve,reject)=>{ const tx=db.transaction(SAVE_STORE,mode), req=run(tx.objectStore(SAVE_STORE));
     tx.oncomplete=()=>{ db.close(); resolve(req?.result); }; tx.onerror=tx.onabort=()=>{ db.close(); reject(tx.error); }; });
 }
-let saveTimer;
+const soloMeta = () => { const f=demo.fixtures.find(x=>!x.match); return {id:soloId,clubId:demoClubId,manager:demoManager,season:demo.season,round:f?.round ?? null,date:f?.date ?? '',savedAt:Date.now()}; };
+async function gzip64(value) {
+  const stream=new Blob([JSON.stringify(value)]).stream().pipeThrough(new CompressionStream('gzip'));
+  const bytes=new Uint8Array(await new Response(stream).arrayBuffer()); let bin='';
+  for (let i=0;i<bytes.length;i+=0x8000) bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));
+  return btoa(bin);
+}
+async function gunzip64(text) {
+  const bytes=Uint8Array.from(atob(text),c=>c.charCodeAt(0));
+  return JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
+}
+const cloudSaves = () => me?.signedIn && !offline && typeof CompressionStream==='function';
+let saveTimer, cloudTimer, cloudBusy=false, cloudAgain=false;
 async function persistDemo() {
   hasDemoSave=true;
+  const meta=soloMeta();
   try {
-    await saveTx('readwrite',store=>store.put({world:demo,clubId:demoClubId,manager:demoManager,savedAt:Date.now()},SAVE_KEY));
+    await saveTx('readwrite',store=>store.put({id:soloId,owner:entryIdentity(),world:demo,clubId:demoClubId,manager:demoManager,savedAt:meta.savedAt},localKey(soloId)));
+    soloSaves=[meta,...soloSaves.filter(m=>m.id!==soloId)];
+    scheduleCloud();
     return true;
   } catch { return false; }
 }
@@ -2757,14 +2786,68 @@ function saveDemo() {
   clearTimeout(saveTimer);
   saveTimer=setTimeout(async()=>{ if (!await persistDemo()) notify('No se pudo guardar la partida en este navegador.',true); },150);
 }
-const loadDemo = () => saveTx('readonly',st=>st.get(SAVE_KEY)).catch(()=>null);
-async function resetDemo(returns,youth,names) {
-  clearTimeout(saveTimer);
-  await saveTx('readwrite',st=>st.delete(SAVE_KEY)).catch(()=>{});
-  try { for (let i=localStorage.length-1;i>=0;i--) { const k=localStorage.key(i); if (k?.startsWith('tt-watched-v1:demo:')) localStorage.removeItem(k); } } catch {}
-  watchedFixtures.clear();
-  demo=initialWorld(catalog,2026,returns,youth,names);
+// Upload to the account a few seconds after the last change (a season weighs a few hundred KB gzipped).
+function scheduleCloud(delay=4000) { if (!cloudSaves()) return; clearTimeout(cloudTimer); cloudTimer=setTimeout(uploadSolo,delay); }
+async function uploadSolo() {
+  if (!cloudSaves()||!demo||league) return;
+  if (cloudBusy) { cloudAgain=true; return; }
+  cloudBusy=true;
+  try {
+    const meta=soloMeta(), id=soloId;
+    const result=await request('/api/saves/'+id,{data:{meta,data:await gzip64({world:demo,clubId:demoClubId,manager:demoManager})}});
+    soloSaves=[{...result.meta,cloud:true},...soloSaves.filter(m=>m.id!==id)];
+  } catch (error) {
+    if (error.status===409) notify('Esta partida tiene una versión más nueva en otro dispositivo. Abrila desde «Mis partidas».',true);
+    else if (error.status===400) notify(error.message,true);
+  } finally { cloudBusy=false; if (cloudAgain) { cloudAgain=false; scheduleCloud(1000); } }
 }
+async function flushCloud() { clearTimeout(cloudTimer); await uploadSolo(); }
+// Every game this browser or the account knows, newest first.
+async function refreshSaves() {
+  const local=await saveTx('readonly',st=>st.getAll()).catch(()=>[]) ?? [];
+  const metas=new Map();
+  // Games of another account on this browser stay out of the list (the old single save has no owner).
+  for (const v of local) { if (!v?.world?.clubs||(v.owner&&v.owner!==entryIdentity())) continue; const id=v.id ?? 'demo', f=v.world.fixtures?.find(x=>!x.match);
+    metas.set(id,{id,clubId:v.clubId,manager:v.manager ?? '',season:v.world.season,round:f?.round ?? null,date:f?.date ?? '',savedAt:v.savedAt ?? 0,local:true}); }
+  if (cloudSaves()) {
+    try { for (const m of (await request('/api/saves')).saves ?? []) { const l=metas.get(m.id); metas.set(m.id,{...m,local:!!l,localAt:l?.savedAt ?? 0,cloud:true,savedAt:Math.max(m.savedAt,l?.savedAt ?? 0)}); } }
+    catch { notify('No pudimos leer las partidas de tu cuenta; se muestran las de este navegador.',true); }
+  }
+  soloSaves=[...metas.values()].sort((a,b)=>b.savedAt-a.savedAt);
+  savesLoaded=true;
+  hasDemoSave=soloSaves.length>0;
+  return soloSaves;
+}
+// Opens a game: the copy in this browser, or the account's if it is newer (another device played it).
+async function openSolo(id, next='resumen') {
+  setBusy(true);
+  try {
+    let saved=await saveTx('readonly',st=>st.get(localKey(id))).catch(()=>null);
+    const meta=soloSaves.find(m=>m.id===id);
+    if (cloudSaves()&&meta?.cloud&&(!saved||(meta.savedAt>(saved.savedAt ?? 0)))) {
+      const remote=await request('/api/saves/'+id);
+      saved={...(await gunzip64(remote.data)),savedAt:remote.meta.savedAt,id};
+      await saveTx('readwrite',st=>st.put({...saved,owner:entryIdentity()},localKey(id))).catch(()=>{});
+    }
+    if (!saved?.world?.clubs) throw new Error('No encontramos esa partida.');
+    // A save that fails to open is never replaced by a new game: it stays where it is.
+    demo=enrichRosterIdentities(saved.world,catalog);
+    soloId=id; demoClubId=saved.clubId ?? demoClubId; demoManager=saved.manager ?? ''; hasDemoSave=true;
+    watchedFixtures.clear();
+    if (cloudSaves()&&!meta?.cloud) scheduleCloud(500);
+    setBusy(false);
+    enterOffline(next);
+    return true;
+  } catch (error) { setBusy(false); notify(error.message || 'No pudimos abrir la partida.',true); return false; }
+}
+async function deleteSolo(id) {
+  await saveTx('readwrite',st=>st.delete(localKey(id))).catch(()=>{});
+  if (cloudSaves()) await request('/api/saves/'+id+'/delete',{data:{}}).catch(()=>{});
+  try { for (let i=localStorage.length-1;i>=0;i--) { const k=localStorage.key(i); if (k&&k.includes(':'+id+':')&&k.startsWith('tt-')) localStorage.removeItem(k); } } catch {}
+  soloSaves=soloSaves.filter(m=>m.id!==id);
+  hasDemoSave=soloSaves.length>0;
+}
+const newSoloId = () => Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 let bootData;
 
 async function boot() {
@@ -2781,17 +2864,17 @@ async function boot() {
   catalog={...data,returns,youth};
   catalogClubs=new Map(catalog.clubs.map(c=>[c.id,c]));
   bootData={returns,youth,names};
-  const saved=await loadDemo();
-  try { if (saved?.world?.clubs) { demo=enrichRosterIdentities(saved.world,catalog); if (saved.clubId) demoClubId=saved.clubId; demoManager=saved.manager ?? ''; hasDemoSave=true; } } catch { demo=undefined; }
-  if (!demo) demo=initialWorld(catalog,2026,returns,youth,names);
+  // The games are listed in «Mis partidas»; the one open in this tab is reopened on reload.
+  demo=initialWorld(catalog,2026,returns,youth,names);
   if (!demo.clubs.some(c=>c.id===demoClubId)) demoClubId=defaultClub;
   me=identity;
+  await refreshSaves();
   const route=routeFromHash();
   const next=route==='partido'?'resumen':route;
   const restored=readActiveEntry();
   entryStage=entryIdentity()?'mode':'auth';
   if (entryIdentity()&&!invitationCode()&&restored?.identity===entryIdentity()) {
-    if (restored.mode==='offline'&&hasDemoSave) enterOffline(next);
+    if (restored.mode==='offline'&&soloSaves.some(m=>m.id===(restored.code ?? 'demo'))) await openSolo(restored.code ?? 'demo',next);
     else if (restored.mode==='online'&&me.signedIn&&/^[A-F0-9]{12}$/.test(restored.code ?? '')) {
       if (!await openLeague(restored.code,false,next)) { setEntry('online'); refreshList(); }
     }
@@ -2800,6 +2883,7 @@ async function boot() {
   if (!offline) { setInterval(pollLeague,10000); setInterval(syncCommunity,60000); }
 }
 addEventListener('pagehide',()=>{ if (page==='partido') saveReplayProgress(); });
+document.addEventListener('visibilitychange',()=>{ if (document.hidden&&!league&&!entryStage) flushCloud(); });
 document.addEventListener('visibilitychange',()=>{ if (document.hidden&&page==='partido') saveReplayProgress(); });
 boot().catch(error=>{
   app.innerHTML='<div class="boot">No pudimos abrir Rugby Manager 27.<span>'+esc(error.message)+'</span><a class="btn primary" href="/">Volver a intentar</a></div>';

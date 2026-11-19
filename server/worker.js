@@ -46,6 +46,8 @@ const json=(d,status=200,extra={})=>new Response(JSON.stringify(d),{status,heade
 const digest=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),b=>b.toString(16).padStart(2,'0')).join('');
 class PayloadTooLarge extends Error {}
 class ProtectionUnavailable extends Error {}
+const SAVE_SLOTS=5,SAVE_MAX_BYTES=24*1024*1024;
+async function saveIndex(bucket,userKey){const o=await bucket.get(`saves/${userKey}/index`);try{return o?await o.json():[];}catch{return [];}}
 async function readJsonLimited(request,limit){
  const reader=request.body?.getReader();if(!reader)throw new Error('Solicitud vacía');
  let size=0;const chunks=[];
@@ -122,7 +124,7 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
  if(!uid)return json({error:'Iniciá sesión para guardar tu liga online.'},401);
  if(!env.BUCKET)return json({error:'El guardado online todavía no está disponible.'},503);
  if(request.method==='POST'&&(request.headers.get('origin')!==url.origin||!request.headers.get('content-type')?.toLowerCase().startsWith('application/json')))return json({error:'Origen o formato no permitido'},403);
- if(request.method==='POST'&&Number(request.headers.get('content-length')||0)>65536)return json({error:'Solicitud demasiado grande'},413);
+ if(request.method==='POST'&&!url.pathname.startsWith('/api/saves/')&&Number(request.headers.get('content-length')||0)>65536)return json({error:'Solicitud demasiado grande'},413);
  const userKey=await digest(uid), bucket=env.BUCKET;
  // Community data: any signed-in manager can propose a name, approximate age, position, whether a real player still
  // plays for his club or a stats comment. Proposals wait for the admin's approval (email «Ajuste RM27»); approved ones
@@ -146,6 +148,26 @@ export async function handle(request,env,assets,catalog,returns,youth,names={}){
   await bucket.put(PENDING+item.id,JSON.stringify(item));
   const emailed=await notifyAdmin(env,url,item);
   return json({ok:true,pending:true,emailed});
+ }
+ // Solo games saved to the account (18/11/2026): before, they lived only in one browser, so another device (or a
+ // browser that clears its storage) showed none. Up to SAVE_SLOTS per account; the world travels gzipped in base64.
+ if(url.pathname==='/api/saves'&&request.method==='GET')return json({saves:await saveIndex(bucket,userKey)});
+ const saveMatch=url.pathname.match(/^\/api\/saves\/([a-z0-9]{4,24})(\/delete)?$/);
+ if(saveMatch){
+  const [,id,del]=saveMatch,key=`saves/${userKey}/${id}`,index=await saveIndex(bucket,userKey);
+  if(request.method==='GET'){const o=await bucket.get(key);if(!o)return json({error:'No se encontró la partida.'},404);return json(await o.json());}
+  if(request.method!=='POST')return json({error:'Método no permitido'},405);
+  if(del){await bucket.delete(key);await bucket.put(`saves/${userKey}/index`,JSON.stringify(index.filter(m=>m.id!==id)));return json({ok:true});}
+  const p=await readJsonLimited(request,SAVE_MAX_BYTES);
+  if(typeof p.data!=='string'||!p.meta)return json({error:'Partida no válida.'},400);
+  if(!index.some(m=>m.id===id)&&index.length>=SAVE_SLOTS)return json({error:`Podés tener hasta ${SAVE_SLOTS} partidas. Borrá una para empezar otra.`},400);
+  const clean=v=>String(v??'').slice(0,60);
+  const meta={id,clubId:clean(p.meta.clubId),manager:clean(p.meta.manager),season:Number(p.meta.season)||null,round:Number(p.meta.round)||null,date:clean(p.meta.date),savedAt:Number(p.meta.savedAt)||Date.now(),size:p.data.length};
+  // A save from another device that is older than the stored one is refused, so a stale tab cannot undo progress.
+  const stored=index.find(m=>m.id===id);if(stored&&stored.savedAt>meta.savedAt&&!p.force)return json({error:'Hay una versión más nueva de esta partida.',newer:stored},409);
+  await bucket.put(key,JSON.stringify({meta,data:p.data}));
+  await bucket.put(`saves/${userKey}/index`,JSON.stringify([...index.filter(m=>m.id!==id),meta].sort((a,b)=>b.savedAt-a.savedAt)));
+  return json({ok:true,meta});
  }
  if(request.method==='GET'&&url.pathname==='/api/leagues'){
   const list=await bucket.list({prefix:`members/${userKey}/`});const leagues=[];
